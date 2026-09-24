@@ -247,7 +247,7 @@ function commit(action,details={},origin=tabNames[tab]){try{session=AOP.transact
 function kpi(label,value,note='',cls=''){return '<div class="kpi '+cls+'"><span>'+esc(label)+'</span><strong>'+esc(value)+'</strong><small>'+esc(note)+'</small></div>';}
 function coverage(field){const groups=new Map();for(const r of result.rows){const n=r[field]||'Blank / unassessed',g=groups.get(n)||{n:0,v:0};g.n++;g.v+=r.cost||0;groups.set(n,g);}return '<table><thead><tr><th>'+esc(field==='decisionBand'?'Decision Band':'Overall AOP decision')+'</th><th>Rows</th><th>Requested</th></tr></thead><tbody>'+[...groups].map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+v.n+'</td><td>'+money(v.v)+'</td></tr>').join('')+'</tbody></table>';}
 function workflow(){return '<div class="workflow"><button data-tab="demand" class="step '+(tab==='demand'?'current':'')+'">1 · Demand Overview</button><button data-tab="scenario" class="step '+(tab==='scenario'?'current':'')+'">2 · Program Scenarios</button><button data-tab="ew" class="step '+(tab==='ew'?'current':'')+'">3 · Enterprise Wide</button><button data-tab="bu" class="step '+(tab==='bu'?'current':'')+'">4 · BU Led</button><button data-tab="operations" class="step '+(tab==='operations'?'current':'')+'">5 · Operations</button><button data-tab="overview" class="step '+(tab==='overview'?'current':'')+' '+(session.status==='Finalised'?'done':'')+'">6 · One Portfolio</button></div>';}
-function render(){if(pointerRenderHold){result=AOP.solve(session.data,session.settings,session.overrides,session.reviews);window.__aop={session,result,tab,pending};renderPending=true;return;}renderPending=false;hideBubble();const scroll=[...document.querySelectorAll('.tablebox')].map(x=>({top:x.scrollTop,left:x.scrollLeft}));result=AOP.solve(session.data,session.settings,session.overrides,session.reviews);$('#tabs').innerHTML=Object.entries(tabNames).map(([k,v])=>'<button data-tab="'+k+'" class="'+(tab===k?'active':'')+'">'+v+'</button>').join('');$('#workflow').innerHTML=workflow();$('#status').textContent=session.name+' · '+session.status+' · r'+session.revision+' · '+(session.savedAt?'Saved':'Unsaved draft')+' · Source '+session.data.version;$('#main').innerHTML=tab==='scenario'?scenario():tab==='demand'?window.renderDemandOverview(session,result):tab==='operations'?window.renderOperationsTab():stream(tab);document.querySelectorAll('.tablebox').forEach((x,i)=>{if(scroll[i]){x.scrollTop=scroll[i].top;x.scrollLeft=scroll[i].left;}});document.querySelectorAll('[data-group-check]').forEach(x=>{const rs=AOP.filter(result.rows.filter(r=>r.stream===tab),session.filters[tab]).filter(r=>(r.org||'Organisation not supplied')===x.dataset.groupCheck&&r.cost>0);x.checked=rs.length>0&&rs.every(r=>r.final>0);x.indeterminate=rs.some(r=>r.final>0)&&rs.some(r=>!r.final);});window.__aop={session,result,tab,pending};}
+function render(){if(pointerRenderHold){result=AOP.solve(session.data,session.settings,session.overrides,session.reviews);result.rows.forEach(function(r){r.platform=(window.normalizePlatform||function(p){return p;})(r.platform||'')||r.platform||'';});window.__aop={session,result,tab,pending};renderPending=true;return;}renderPending=false;hideBubble();const scroll=[...document.querySelectorAll('.tablebox')].map(x=>({top:x.scrollTop,left:x.scrollLeft}));result=AOP.solve(session.data,session.settings,session.overrides,session.reviews);result.rows.forEach(function(r){r.platform=(window.normalizePlatform||function(p){return p;})(r.platform||'')||r.platform||'';});$('#tabs').innerHTML=Object.entries(tabNames).map(([k,v])=>'<button data-tab="'+k+'" class="'+(tab===k?'active':'')+'">'+v+'</button>').join('');$('#workflow').innerHTML=workflow();$('#status').textContent=session.name+' · '+session.status+' · r'+session.revision+' · '+(session.savedAt?'Saved':'Unsaved draft')+' · Source '+session.data.version;$('#main').innerHTML=tab==='scenario'?scenario():tab==='demand'?window.renderDemandOverview(session,result):tab==='operations'?window.renderOperationsTab():stream(tab);document.querySelectorAll('.tablebox').forEach((x,i)=>{if(scroll[i]){x.scrollTop=scroll[i].top;x.scrollLeft=scroll[i].left;}});document.querySelectorAll('[data-group-check]').forEach(x=>{const rs=AOP.filter(result.rows.filter(r=>r.stream===tab),session.filters[tab]).filter(r=>(r.org||'Organisation not supplied')===x.dataset.groupCheck&&r.cost>0);x.checked=rs.length>0&&rs.every(r=>r.final>0);x.indeterminate=rs.some(r=>r.final>0)&&rs.some(r=>!r.final);});window.__aop={session,result,tab,pending};}
 function allocationSelection(funded,demand,fundable){return '<div class="allocation-selection" style="white-space:nowrap;font-size:13px;line-height:1.5;margin-top:6px"><strong class="selected-amount" style="color:var(--prot)">'+money(funded)+'</strong> funded of '+money(fundable!==undefined?fundable:demand)+' Demand</div>';}
 function allocationKpi(){return '<div class="kpi allocation-kpi"><span>Allocated AOP</span><strong id="displayed-lever-total" data-exact="'+result.totals.allocation+'">'+money(result.totals.allocation)+'</strong><small>of '+money(session.settings.budget)+' Total AOP</small><b id="funded-aop" data-exact="'+result.totals.allocation+'">'+result.totals.count+' programmes funded</b><small>'+(result.totals.over>0?'Over by '+money(result.totals.over):'Within budget')+'</small></div>';}
 function reconciliation(){return '<details id="allocation-reconciliation"><summary>Selected limits and funded demand</summary><p>The displayed lever total adds the rounded amounts on the five controls. It is not funded spend: unused capacity can pass to a later stage, and eligible whole requests may not fill a selected limit.</p><table><thead><tr><th>Funding stage</th><th>Selected limit (M€)</th><th>Funded (M€)</th><th>Unfilled limit (M€)</th></tr></thead><tbody>'+result.stages.map((s,i)=>'<tr data-stage-summary="'+i+'" data-funded="'+s.allocation+'"><td>'+esc(s.name)+'</td><td title="Exact '+result.selection.amounts[i]+' M€">'+dec(result.selection.amounts[i])+'</td><td title="Exact '+s.allocation+' M€">'+dec(s.allocation)+'</td><td>'+dec(Math.max(0,result.selection.amounts[i]-s.allocation))+'</td></tr>').join('')+'</tbody><tfoot><tr><th>Funded portfolio</th><td></td><td data-funded-total="'+result.totals.allocation+'">'+dec(result.totals.allocation)+'</td><td>'+dec(result.totals.available)+' budget unspent</td></tr></tfoot></table><p>Funding follows source evidence, eligibility, whole-program fit and recorded manual decisions. The tables below contain the funded amounts and reasons for each unfunded request.</p></details>';}
@@ -379,26 +379,64 @@ function fmt(v,d){return v==null||isNaN(v)?'-':Number(v).toFixed(d===undefined?1
 function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'):''}
 
 // ---- IT Dept code to Platform mapping ----
+// Canonical platform names used consistently across program demand and operations
 var DEPT_PLATFORM={
-  'AN3':'IT-Security,Risk&Compliance','AN4':'IT-Infrastructure Services','AN5':'IT-Infrastructure Services',
-  'AN6':'Unallocated','AN7':'IT-Infrastructure Services','AN8':'IT-Infrastructure Services',
-  'AX9':'IT-Services&Solutions IT','B69+':'Unallocated','B72':'Unallocated',
-  'BL8':'IT-Commercial IT','BL9':'IT-Integrated Supply Chain and Finance',
-  'BM0':'IT-Group Functions and Hyperautomation','BM1':'IT-Innovation and Digital',
-  'I91':'IT-Ent.Architecture,Data&Integration',
+  'AN3':'Security, Risk & Compliance','AN4':'Infrastructure Services','AN5':'Infrastructure Services',
+  'AN6':'Unallocated','AN7':'Infrastructure Services','AN8':'Infrastructure Services',
+  'AX9':'Services & Solutions IT','B69+':'Unallocated','B72':'Unallocated',
+  'BL8':'Commercial IT','BL9':'Integrated Supply Chain & Finance',
+  'BM0':'Group Functions & Hyperautomation','BM1':'Innovation and Digital',
+  'I91':'Enterprise Architecture, Data & Integration',
   'AI Services':'Unallocated','AI Svcs':'Unallocated','Transfers':'Unallocated'
 };
+// Normalize any platform name variant to the canonical form
+function normalizePlatform(p){
+  if(!p)return '';
+  var m={'it-commercial it':'Commercial IT','commercial it':'Commercial IT',
+    'it-ent.architecture,data&integration':'Enterprise Architecture, Data & Integration',
+    'it-ent. architecture,data&integration':'Enterprise Architecture, Data & Integration',
+    'enterprise architecture, data & integration':'Enterprise Architecture, Data & Integration',
+    'ent. architecture, data & integration':'Enterprise Architecture, Data & Integration',
+    'ent.architecture,data&integration':'Enterprise Architecture, Data & Integration',
+    'it-group functions and hyperautomation':'Group Functions & Hyperautomation',
+    'group functions and hyperautomation':'Group Functions & Hyperautomation',
+    'group functions & hyperautomation it':'Group Functions & Hyperautomation',
+    'group functions & hyperautomation':'Group Functions & Hyperautomation',
+    'it-infrastructure services':'Infrastructure Services',
+    'infrastructure services – projects':'Infrastructure Services',
+    'infrastructure services - projects':'Infrastructure Services',
+    'infrastructure services':'Infrastructure Services',
+    'it-innovation and digital':'Innovation and Digital',
+    'innovation and digital it':'Innovation and Digital',
+    'innovation and digital':'Innovation and Digital',
+    'it-integrated supply chain and finance':'Integrated Supply Chain & Finance',
+    'integrated supply chain and finance':'Integrated Supply Chain & Finance',
+    'integrated supply chain & finance':'Integrated Supply Chain & Finance',
+    'it-security,risk&compliance':'Security, Risk & Compliance',
+    'it-security, risk & compliance':'Security, Risk & Compliance',
+    'security, risk & compliance':'Security, Risk & Compliance',
+    'security,risk&compliance':'Security, Risk & Compliance',
+    'it-services&solutions it':'Services & Solutions IT',
+    'services & solutions it':'Services & Solutions IT',
+    'services&solutions it':'Services & Solutions IT',
+    'greater china it':'Greater China IT',
+    'mergers, acquisitions & divestments':'Mergers, Acquisitions & Divestments',
+    'portfolio it':'Portfolio IT',
+    'unallocated':'Unallocated','not supplied':'Not supplied'};
+  return m[p.toLowerCase().trim()]||p;
+}
+window.normalizePlatform=normalizePlatform;
 var SVC_PLATFORM_MAP={"SE002096":"IT-Infrastructure Services","SE002097":"IT-Infrastructure Services","SE002098":"IT-Infrastructure Services","SE002099":"IT-Infrastructure Services","1007580":"IT-Infrastructure Services","1007582":"IT-Infrastructure Services","1007589":"IT-Infrastructure Services","1007640":"IT-Infrastructure Services","SE002100":"IT-Infrastructure Services","SE002101":"IT-Infrastructure Services","SE002102":"IT-Infrastructure Services","1007587":"IT-Infrastructure Services","1007602":"IT-Infrastructure Services","1007636":"IT-Infrastructure Services","1007864":"Unallocated","1007865":"Unallocated","1007573":"IT-Infrastructure Services","1007574":"IT-Infrastructure Services","1007575":"IT-Infrastructure Services","1007577":"IT-Infrastructure Services","1007578":"IT-Infrastructure Services","1007583":"IT-Infrastructure Services","1007590":"IT-Infrastructure Services","1007591":"IT-Infrastructure Services","SE002108":"Unallocated","SE002109":"Unallocated","1007613":"Unallocated","1007595":"IT-Services&Solutions IT","1007596":"IT-Services&Solutions IT","1007597":"IT-Services&Solutions IT","1007598":"IT-Services&Solutions IT","1007599":"IT-Services&Solutions IT","1007600":"IT-Services&Solutions IT","1007601":"IT-Services&Solutions IT","1007603":"IT-Services&Solutions IT","1007604":"IT-Services&Solutions IT","1007605":"IT-Services&Solutions IT","1007606":"IT-Services&Solutions IT","1007607":"IT-Services&Solutions IT","1007609":"IT-Services&Solutions IT","1007610":"IT-Services&Solutions IT","1007611":"IT-Services&Solutions IT","1007612":"IT-Services&Solutions IT","1007641":"IT-Services&Solutions IT","1007744":"IT-Services&Solutions IT","1007747":"IT-Services&Solutions IT","1007804":"IT-Services&Solutions IT","1007844":"IT-Services&Solutions IT","1008056":"Unallocated","1008055":"Unallocated","1008052":"Unallocated","1008051":"Unallocated","1008050":"Unallocated","1008049":"Unallocated","1008048":"Unallocated","1007999":"Unallocated","1007614":"IT-Commercial IT","1007615":"IT-Commercial IT","1007616":"IT-Commercial IT","1007617":"IT-Commercial IT","1007618":"IT-Commercial IT","1007619":"IT-Commercial IT","1007620":"IT-Commercial IT","1007621":"IT-Commercial IT","1007622":"IT-Commercial IT","1007623":"IT-Commercial IT","1007624":"IT-Commercial IT","1007625":"IT-Commercial IT","1007626":"IT-Commercial IT","1007627":"IT-Commercial IT","1007628":"IT-Commercial IT","1007629":"IT-Commercial IT","1007631":"IT-Commercial IT","1007632":"IT-Commercial IT","1007676":"IT-Integrated Supply Chain and Finance","1007677":"IT-Integrated Supply Chain and Finance","1007678":"IT-Integrated Supply Chain and Finance","1007679":"IT-Integrated Supply Chain and Finance","1007680":"IT-Integrated Supply Chain and Finance","1007681":"IT-Integrated Supply Chain and Finance","1007682":"IT-Integrated Supply Chain and Finance","1007683":"IT-Integrated Supply Chain and Finance","1007684":"IT-Integrated Supply Chain and Finance","1007685":"IT-Integrated Supply Chain and Finance","1007686":"IT-Integrated Supply Chain and Finance","1007687":"IT-Integrated Supply Chain and Finance","1007688":"IT-Integrated Supply Chain and Finance","1007689":"IT-Integrated Supply Chain and Finance","1007690":"IT-Integrated Supply Chain and Finance","1007691":"IT-Integrated Supply Chain and Finance","1007692":"IT-Integrated Supply Chain and Finance","1007693":"IT-Integrated Supply Chain and Finance","1007694":"IT-Integrated Supply Chain and Finance","1007695":"IT-Integrated Supply Chain and Finance","1007696":"IT-Group Functions and Hyperautomation","1007697":"IT-Group Functions and Hyperautomation","1007698":"IT-Group Functions and Hyperautomation","1007699":"IT-Group Functions and Hyperautomation","1007700":"IT-Group Functions and Hyperautomation","1007701":"IT-Group Functions and Hyperautomation","1007702":"IT-Group Functions and Hyperautomation","1007703":"IT-Group Functions and Hyperautomation","1007704":"IT-Group Functions and Hyperautomation","1007705":"IT-Group Functions and Hyperautomation","1007706":"IT-Group Functions and Hyperautomation","1007707":"IT-Group Functions and Hyperautomation","1007708":"IT-Group Functions and Hyperautomation","1007709":"IT-Group Functions and Hyperautomation","1007710":"IT-Group Functions and Hyperautomation","1007711":"IT-Group Functions and Hyperautomation","1007712":"IT-Group Functions and Hyperautomation","1007713":"IT-Group Functions and Hyperautomation","1007714":"IT-Group Functions and Hyperautomation","1007715":"IT-Group Functions and Hyperautomation","1007716":"IT-Group Functions and Hyperautomation","1007717":"IT-Group Functions and Hyperautomation","1007718":"IT-Group Functions and Hyperautomation","1007719":"IT-Group Functions and Hyperautomation","1007720":"IT-Group Functions and Hyperautomation","1007721":"IT-Group Functions and Hyperautomation","1007722":"IT-Group Functions and Hyperautomation","1007723":"IT-Group Functions and Hyperautomation","1007724":"IT-Group Functions and Hyperautomation","1007725":"IT-Group Functions and Hyperautomation","1007726":"IT-Group Functions and Hyperautomation","1007727":"IT-Innovation and Digital","1007728":"IT-Innovation and Digital","1007729":"IT-Innovation and Digital","1007730":"IT-Innovation and Digital","1007731":"IT-Innovation and Digital","1007732":"IT-Innovation and Digital","1007733":"IT-Innovation and Digital","1007734":"IT-Innovation and Digital","1007735":"IT-Innovation and Digital","1007736":"IT-Innovation and Digital","1007737":"IT-Innovation and Digital","1007738":"IT-Innovation and Digital","1007739":"IT-Innovation and Digital","1007740":"IT-Innovation and Digital","1007741":"IT-Innovation and Digital","1007742":"IT-Innovation and Digital","1007743":"IT-Innovation and Digital","1007745":"IT-Innovation and Digital","1007746":"IT-Innovation and Digital","1007748":"IT-Innovation and Digital","1007749":"IT-Innovation and Digital","1007750":"IT-Innovation and Digital","1007751":"IT-Innovation and Digital","1007752":"IT-Innovation and Digital","1007753":"IT-Innovation and Digital","1007754":"IT-Innovation and Digital","1007755":"IT-Innovation and Digital","1007756":"IT-Innovation and Digital","1007757":"IT-Innovation and Digital","1007758":"IT-Innovation and Digital","1007759":"IT-Ent.Architecture,Data&Integration","1007760":"IT-Ent.Architecture,Data&Integration","1007761":"IT-Ent.Architecture,Data&Integration","1007762":"IT-Ent.Architecture,Data&Integration","1007763":"IT-Ent.Architecture,Data&Integration","1007764":"IT-Ent.Architecture,Data&Integration","1007765":"IT-Ent.Architecture,Data&Integration","1007766":"IT-Ent.Architecture,Data&Integration","1007767":"IT-Ent.Architecture,Data&Integration","1007768":"IT-Ent.Architecture,Data&Integration","1007769":"IT-Ent.Architecture,Data&Integration","1007770":"IT-Ent.Architecture,Data&Integration","1007771":"IT-Ent.Architecture,Data&Integration","1007772":"IT-Ent.Architecture,Data&Integration","1007773":"IT-Ent.Architecture,Data&Integration","1007774":"IT-Security,Risk&Compliance","B69NEW2":"Unallocated"};
 function deptToPlatform(deptCode){
   if(!deptCode)return '';
   var codes=String(deptCode).split('/');
-  for(var i=0;i<codes.length;i++){var p=DEPT_PLATFORM[codes[i].trim()];if(p)return p;}
+  for(var i=0;i<codes.length;i++){var p=DEPT_PLATFORM[codes[i].trim()];if(p)return normalizePlatform(p);}
   return 'Unallocated';
 }
 function svcToPlatform(serviceId){
   if(!serviceId)return '';
   var p=SVC_PLATFORM_MAP[String(serviceId).trim()];
-  return p||'';
+  return p?normalizePlatform(p):'';
 }
 
 // ---- v3.5-style checkbox filter builder (org-level rows) ----
@@ -705,9 +743,12 @@ window.renderOperationsTab=function(){
   h+='<section class="panel"><h2>Organisation Total Cost of Ownership</h2>';
 
   // Filter + Sort — Platform mapping from Bill of IT Platform Service List
-  var tcoPlatMap={'Precision Diagnosis':'IT-Commercial IT','Image Guided Therapy':'IT-Services&Solutions IT',
-    'Connected Care':'IT-Commercial IT','EI':'IT-Commercial IT','Personal Health':'IT-Commercial IT',
-    'Int. Property & Standards':'IT-Group Functions and Hyperautomation','Innovation & Design':'IT-Innovation and Digital'};
+  var tcoPlatMap={
+    'Precision Diagnosis':'Commercial IT','Image Guided Therapy':'Services & Solutions IT',
+    'Connected Care':'Commercial IT','EI':'Commercial IT','Personal Health':'Commercial IT',
+    'Int. Property & Standards':'Group Functions & Hyperautomation','Innovation & Design':'Innovation and Digital',
+    'Regions (allocated to BUs)':'Unallocated','Functions & CoEs (allocated to BUs)':'Unallocated'
+  };
   var tcoFilterData=tco.filter(function(t){return !t.bu.startsWith('- ');}).map(function(t){
     return {org:t.bu.trim(),platform:tcoPlatMap[t.bu.trim()]||'Unallocated'};
   });
@@ -732,7 +773,7 @@ window.renderOperationsTab=function(){
     var ownPct=total>0?Math.round(t.ownConsumption/total*100)+'%':'';
     var regPct=total>0?Math.round(t.regionAlloc/total*100)+'%':'';
     var funcPct=total>0?Math.round(t.functionAlloc/total*100)+'%':'';
-    var buPlat=tcoPlatMap[t.bu.trim()]||'Unallocated';
+    var buPlat=normalizePlatform(tcoPlatMap[t.bu.trim()]||'Unallocated');
 
     if(!isChild){
       cg=gid;

@@ -89,6 +89,15 @@ Engine schema 3→4. Two build phases (A+B) in single release.
 - **Tab 6 (Allocation Table)**: Added Organisation and Platform filter bar with full "X of Y" total row support. 35 organisations, 2 filter dimensions, cascading counts.
 - **Tabs 3, 4, 6**: Removed notice text blocks ("Changes made here update..." and "One Portfolio: Program + Operations...")
 
+### Platform Name Standardization + TCO/Allocation Filter Fix
+- **Canonical platform names** defined centrally in `normalizePlatform()` — strips "IT-" prefix, harmonizes all variants
+- **Program demand** normalized at render time: "Innovation and Digital IT" → "Innovation and Digital", "Group Functions & Hyperautomation IT" → "Group Functions & Hyperautomation", etc.
+- **Operations** normalized via `deptToPlatform()` and `svcToPlatform()` — all "IT-" prefixes removed
+- **TCO table** platMap updated to canonical names — filter now shows correct platform options
+- **Allocation table** platform filter now shows 8 normalized platforms matching rest of dashboard
+- **Service Catalog** all 9 platforms verified with canonical names: Commercial IT, Enterprise Architecture Data & Integration, Group Functions & Hyperautomation, Infrastructure Services, Innovation and Digital, Integrated Supply Chain & Finance, Security Risk & Compliance, Services & Solutions IT, Unallocated
+- Q: Why 167 vs 174 services? The embedded ops snapshot was built from an earlier file. The 23 Sep update adds 7 new services (SE002xxx IDs). Needs a full ops data rebuild to close gap.
+
 ### Layout and Platform Mapping Refinements
 
 #### Funding Prioritization Gate (Tab 2)
