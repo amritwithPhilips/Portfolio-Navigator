@@ -4,8 +4,9 @@ Project root: `C:/Users/320126040/Documents/Codex/AOP2027`.
 Authoritative input: `AOP 2027 Demand/15926_IT AOP2027 Demand.xlsx`.
 Output data: `AOP 2027 Modeler/Data file/`.
 Memory index: `Memory/AOP2027-Demand-Context.md`.
-Dashboard: `AOP 2027 Modeler/AOP2027-OnePortfolio-v4.5.html`.
-PRD: `PRD/AOP2027-OnePortfolio-PRD-v4.5b.docx`.
+Dashboard: `AOP 2027 Modeler/AOP2027-OnePortfolio-v4.7.html`.
+PRD: `PRD/AOP2027-Modeler-PRD-v4.0.docx` (supersedes v3.2).
+Requirements: `PRD/AOP2027-Modeler-Detailed-Requirements-v4.0.docx` (supersedes v3.2).
 
 Retain exact original workbook bytes plus complete rows and formulas in AOP2027-Complete-Workbook-Snapshot.json. Workbook schema: sourceFile, sourceHash (full SHA-256), originalBase64, sheets [{name, rows, formulas keyed by A1 address}].
 
