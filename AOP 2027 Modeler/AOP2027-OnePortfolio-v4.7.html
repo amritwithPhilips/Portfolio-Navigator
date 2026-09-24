@@ -528,13 +528,13 @@ function applyFilters(tid){
       }
     } else if(tid==='svcCatalog'){
       var vis27=0,vis26=0;
-      dataRows.forEach(function(r){if(r.style.display!=='none'){var c=r.querySelectorAll('td');vis27+=parseFloat((c[3]||{}).textContent)||0;vis26+=parseFloat((c[5]||{}).textContent)||0;}});
-      [3,5].forEach(function(i){if(tc[i]&&!tc[i].dataset.orig)tc[i].dataset.orig=tc[i].textContent;});
+      dataRows.forEach(function(r){if(r.style.display!=='none'){var c=r.querySelectorAll('td');vis27+=parseFloat((c[3]||{}).textContent)||0;vis26+=parseFloat((c[4]||{}).textContent)||0;}});
+      [3,4].forEach(function(i){if(tc[i]&&!tc[i].dataset.orig)tc[i].dataset.orig=tc[i].textContent;});
       if(hasFilter){
         tc[3].textContent=vis27.toFixed(1)+' of '+tc[3].dataset.orig;
-        tc[5].textContent=vis26.toFixed(1)+' of '+tc[5].dataset.orig;
+        tc[4].textContent=vis26.toFixed(1)+' of '+tc[4].dataset.orig;
       } else {
-        [3,5].forEach(function(i){if(tc[i]&&tc[i].dataset.orig)tc[i].textContent=tc[i].dataset.orig;});
+        [3,4].forEach(function(i){if(tc[i]&&tc[i].dataset.orig)tc[i].textContent=tc[i].dataset.orig;});
       }
     } else if(tid==='allocTbl'){
       var visAllocF=0,visAllocO=0,visAllocT=0;
@@ -704,83 +704,76 @@ window.renderOperationsTab=function(){
 
   h+='<section class="panel"><h2>Organisation Total Cost of Ownership</h2>';
 
-  // Filter + Sort (EW style)
-  // Build filter data with platform mapping for TCO clusters
+  // Filter + Sort — Platform mapping from Bill of IT Platform Service List
+  var tcoPlatMap={'Precision Diagnosis':'IT-Commercial IT','Image Guided Therapy':'IT-Services&Solutions IT',
+    'Connected Care':'IT-Commercial IT','EI':'IT-Commercial IT','Personal Health':'IT-Commercial IT',
+    'Int. Property & Standards':'IT-Group Functions and Hyperautomation','Innovation & Design':'IT-Innovation and Digital'};
   var tcoFilterData=tco.filter(function(t){return !t.bu.startsWith('- ');}).map(function(t){
-    // Map TCO cluster names to platforms (approximate: based on which IT platforms serve them)
-    var platMap={'Precision Diagnosis':'Commercial IT','Image Guided Therapy':'Services & Solutions IT',
-      'Connected Care':'Commercial IT','EI':'Commercial IT','Personal Health':'Commercial IT',
-      'Int. Property & Standards':'Group Functions and Hyperautomation','Innovation & Design':'Innovation and Digital IT'};
-    return {org:t.bu.trim(),platform:platMap[t.bu.trim()]||''};
+    return {org:t.bu.trim(),platform:tcoPlatMap[t.bu.trim()]||'Unallocated'};
   });
   h+=buildFilterBar('tcoTbl',tcoFilterData,[{key:'org',label:'Organisation'},{key:'platform',label:'Platform'}],
     [{v:'total-desc',l:'AOP2027 Costs (High→Low)'},{v:'total-asc',l:'AOP2027 Costs (Low→High)'}]);
 
-  // Table using burf-table class (matches EW tab exactly)
   h+='<div class="tablebox burf-tablebox" style="max-height:none"><table class="portfolio burf-table" id="tcoTbl"><thead><tr>';
   h+='<th class="identity">Organisation</th>';
-  h+='<th>AOP2027 Costs M€</th>';
-  h+='<th>Own Consumption (M€ | %)</th>';
-  h+='<th>Regions to BU (M€ | %)</th>';
-  h+='<th>Functions & CoEs (M€ | %)</th>';
-  h+='<th>Δ vs AOP2026 M€</th>';
+  h+='<th style="text-align:center">AOP2027 Costs M€</th>';
+  h+='<th style="text-align:center">Own Consumption (M€ | %)</th>';
+  h+='<th style="text-align:center">Regions to BU (M€ | %)</th>';
+  h+='<th style="text-align:center">Functions & CoEs (M€ | %)</th>';
+  h+='<th style="text-align:center">Δ vs AOP2026 M€</th>';
   h+='</tr></thead><tbody>';
 
   var cg=null, expanded=new Set();
   tco.forEach(function(t,i){
     var isChild=t.bu.startsWith('- ')||t.bu.startsWith(' -');
     var gid='ops|'+encodeURIComponent(t.bu.trim());
-    var d=t.deltaVsAOP2026||0,clr=d>=0?'var(--prot)':'var(--weak)';
+    var d=t.deltaVsAOP2026||0,clr=d>0?'var(--weak)':d<0?'var(--prot)':'var(--text2)';
     var total=t.totalBU||0;
     var ownPct=total>0?Math.round(t.ownConsumption/total*100)+'%':'';
     var regPct=total>0?Math.round(t.regionAlloc/total*100)+'%':'';
     var funcPct=total>0?Math.round(t.functionAlloc/total*100)+'%':'';
+    var buPlat=tcoPlatMap[t.bu.trim()]||'Unallocated';
 
     if(!isChild){
       cg=gid;
-      // Count children
       var childCount=0;
       for(var j=i+1;j<tco.length;j++){if(tco[j].bu.startsWith('- ')||tco[j].bu.startsWith(' -'))childCount++;else break;}
 
-      h+='<tr class="burf-summary" data-group-summary="'+esc(gid)+'" data-organisation="'+esc(t.bu.trim())+'" data-org="'+esc(t.bu.trim())+'">';
+      h+='<tr class="burf-summary" data-group-summary="'+esc(gid)+'" data-organisation="'+esc(t.bu.trim())+'" data-org="'+esc(t.bu.trim())+'" data-platform="'+esc(buPlat)+'">';
       h+='<td class="identity"><button class="burf-toggle" data-collapse="'+esc(gid)+'" aria-expanded="false"><span class="triangle">▶</span>'+esc(t.bu.trim())+'</button> <span class="group-count">('+childCount+' sub-orgs)</span></td>';
-      h+='<td class="num"><strong>'+fmt(total)+'</strong></td>';
-      h+='<td class="num">'+fmt(t.ownConsumption)+' <small style="color:var(--text3)">'+ownPct+'</small></td>';
-      h+='<td class="num">'+fmt(t.regionAlloc)+' <small style="color:var(--text3)">'+regPct+'</small></td>';
-      h+='<td class="num">'+fmt(t.functionAlloc)+' <small style="color:var(--text3)">'+funcPct+'</small></td>';
-      h+='<td class="num" style="color:'+clr+'">'+(d>=0?'+':'')+fmt(d)+'</td></tr>';
+      h+='<td class="num" style="text-align:center"><strong>'+fmt(total)+'</strong></td>';
+      h+='<td class="num" style="text-align:center">'+fmt(t.ownConsumption)+' <small style="color:var(--text3)">'+ownPct+'</small></td>';
+      h+='<td class="num" style="text-align:center">'+fmt(t.regionAlloc)+' <small style="color:var(--text3)">'+regPct+'</small></td>';
+      h+='<td class="num" style="text-align:center">'+fmt(t.functionAlloc)+' <small style="color:var(--text3)">'+funcPct+'</small></td>';
+      h+='<td class="num" style="text-align:center;color:'+clr+'">'+(d>0?'+':'')+fmt(d)+'</td></tr>';
     } else {
       var subName=t.bu.replace(/^[\s-]+/,'').trim();
       var svcs=getSvcs(subName);
 
-      // Sub-org summary row (hidden by default, like program rows in EW)
-      h+='<tr class="program-row hidden" data-group="'+esc(cg)+'" data-org="'+esc(cg)+'">';
+      h+='<tr class="program-row hidden" data-group="'+esc(cg)+'" data-org="'+esc(cg)+'" data-platform="'+esc(buPlat)+'">';
       h+='<td class="identity" style="padding-left:28px"><button class="burf-toggle" data-collapse="svc|'+esc(subName)+'" aria-expanded="false"><span class="triangle">▶</span>'+esc(subName)+'</button> <span class="group-count">('+svcs.length+' services)</span></td>';
-      h+='<td class="num">'+fmt(total)+'</td>';
-      h+='<td class="num" style="color:var(--text2)">'+fmt(t.ownConsumption)+' <small style="color:var(--text3)">'+ownPct+'</small></td>';
-      h+='<td class="num" style="color:var(--text2)">'+fmt(t.regionAlloc)+' <small style="color:var(--text3)">'+regPct+'</small></td>';
-      h+='<td class="num" style="color:var(--text2)">'+fmt(t.functionAlloc)+' <small style="color:var(--text3)">'+funcPct+'</small></td>';
-      h+='<td class="num" style="color:'+clr+'">'+(d>=0?'+':'')+fmt(d)+'</td></tr>';
+      h+='<td class="num" style="text-align:center">'+fmt(total)+'</td>';
+      h+='<td class="num" style="text-align:center;color:var(--text2)">'+fmt(t.ownConsumption)+' <small style="color:var(--text3)">'+ownPct+'</small></td>';
+      h+='<td class="num" style="text-align:center;color:var(--text2)">'+fmt(t.regionAlloc)+' <small style="color:var(--text3)">'+regPct+'</small></td>';
+      h+='<td class="num" style="text-align:center;color:var(--text2)">'+fmt(t.functionAlloc)+' <small style="color:var(--text3)">'+funcPct+'</small></td>';
+      h+='<td class="num" style="text-align:center;color:'+clr+'">'+(d>0?'+':'')+fmt(d)+'</td></tr>';
 
-      // Service rows (hidden by default, level 3)
       svcs.forEach(function(s){
         h+='<tr class="program-row hidden" data-group="svc|'+esc(subName)+'" style="background:#f9fbfe">';
         h+='<td style="padding-left:56px;font-size:11px;color:var(--text2)">'+esc(s.n)+'</td>';
-        h+='<td class="num" style="font-size:11px">'+fmt(s.c,1)+'</td>';
+        h+='<td class="num" style="text-align:center;font-size:11px">'+fmt(s.c,1)+'</td>';
         h+='<td colspan="4"></td></tr>';
       });
     }
   });
 
-  // Regions and Functions summary rows
   h+='<tr class="burf-summary"><td class="identity"><strong>Regions (allocated to BUs)</strong></td>';
-  h+='<td class="num"><strong>63.5</strong></td><td class="num">63.5</td><td class="num">-63.5</td><td></td><td></td></tr>';
+  h+='<td class="num" style="text-align:center"><strong>63.5</strong></td><td class="num" style="text-align:center">63.5</td><td class="num" style="text-align:center">-63.5</td><td></td><td></td></tr>';
   h+='<tr class="burf-summary"><td class="identity"><strong>Functions & CoEs (allocated to BUs)</strong></td>';
-  h+='<td class="num"><strong>88.5</strong></td><td class="num">88.5</td><td></td><td class="num">-88.5</td><td></td></tr>';
+  h+='<td class="num" style="text-align:center"><strong>88.5</strong></td><td class="num" style="text-align:center">88.5</td><td></td><td class="num" style="text-align:center">-88.5</td><td></td></tr>';
 
-  // Total
   h+='<tr class="summary-total" data-total="1"><td class="identity"><strong>Total</strong></td>';
-  h+='<td class="num"><strong>469.7</strong></td><td class="num">469.7</td><td class="num">127.1</td><td class="num">177.0</td><td></td></tr>';
+  h+='<td class="num" style="text-align:center"><strong>469.7</strong></td><td class="num" style="text-align:center">469.7</td><td class="num" style="text-align:center">127.1</td><td class="num" style="text-align:center">177.0</td><td></td></tr>';
 
   h+='</tbody></table></div></section>';
 
@@ -794,32 +787,35 @@ window.renderOperationsTab=function(){
     [{v:'total-desc',l:'AOP2027 Costs (High→Low)'},{v:'total-asc',l:'AOP2027 Costs (Low→High)'}]);
 
   h+='<div class="tablebox" style="max-height:500px"><table class="it" id="svcCatalog"><thead><tr>';
-  h+='<th>Service ID</th><th style="width:25%">Service Name</th><th>Platform</th>';
-  h+='<th class="num">AOP2027 Costs M€</th><th class="num">2027 Demand Estimate</th>';
-  h+='<th class="num">AOP2026 Costs M€</th><th class="num">2026 Demand Estimate</th>';
+  h+='<th>Service ID</th><th style="width:25%">Service Name</th><th>Platform Name</th>';
+  h+='<th class="num">AOP2027 Costs M€</th><th class="num">AOP2026 Costs M€</th>';
+  h+='<th class="num">Δ vs AOP2026 M€</th>';
   h+='</tr></thead><tbody>';
 
   svcs.sort(function(a,b){return b.cost2027-a.cost2027;}).forEach(function(s){
     var plat=svcToPlatform(s.serviceId)||deptToPlatform(s.dept);
     var delta=s.cost2027-s.cost2026;
+    var dClr=delta>0?'var(--weak)':delta<0?'var(--prot)':'var(--text2)';
     h+='<tr data-platform="'+esc(plat)+'" data-org="'+esc(s.dept)+'">';
     h+='<td style="font-size:11px">'+esc(s.serviceId)+'</td>';
     h+='<td style="font-size:11px;max-width:250px">'+esc(s.name)+'</td>';
     h+='<td style="font-size:11px">'+esc(plat)+'</td>';
     h+='<td class="num">'+fmt(s.cost2027)+'</td>';
-    h+='<td class="num" style="color:var(--text2)">—</td>';
     h+='<td class="num">'+fmt(s.cost2026)+'</td>';
-    h+='<td class="num" style="color:var(--text2)">—</td>';
+    h+='<td class="num" style="color:'+dClr+'">'+(delta>0?'+':'')+fmt(delta)+'</td>';
     h+='</tr>';
   });
 
   var svcTotal27=svcs.reduce(function(s,v){return s+v.cost2027;},0);
   var svcTotal26=svcs.reduce(function(s,v){return s+v.cost2026;},0);
+  var svcDelta=svcTotal27-svcTotal26;
+  var svcDClr=svcDelta>0?'var(--weak)':svcDelta<0?'var(--prot)':'var(--text2)';
   h+='<tr data-total="1" style="background:var(--lt);font-weight:700"><td></td><td>Total</td><td></td>';
-  h+='<td class="num">'+fmt(svcTotal27)+'</td><td></td>';
-  h+='<td class="num">'+fmt(svcTotal26)+'</td><td></td></tr>';
+  h+='<td class="num">'+fmt(svcTotal27)+'</td>';
+  h+='<td class="num">'+fmt(svcTotal26)+'</td>';
+  h+='<td class="num" style="color:'+svcDClr+'">'+(svcDelta>0?'+':'')+fmt(svcDelta)+'</td></tr>';
   h+='</tbody></table></div>';
-  h+='<p class="muted" style="font-size:10px">Demand Estimates to be populated from Bill of IT consumption data. Platform derived from IT Dept code mapping.</p>';
+  h+='<p class="muted" style="font-size:10px">Platform mapping from Bill of IT Platform Service List. 14 services from AI Services, Regions, B72 and Transfers depts are marked Unallocated.</p>';
   h+='</section>';
 
   // Attach collapse handlers for ops table
