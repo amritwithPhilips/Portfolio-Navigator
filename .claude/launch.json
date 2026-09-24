@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "modeler",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", ".", "-p", "8765", "--cors", "-c-1"],
+      "port": 8765
+    },
+    {
+      "name": "one-portfolio",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", ".", "-p", "8766", "--cors", "-c-1"],
+      "port": 8766
+    },
+    {
+      "name": "v45",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8767", "--directory", "AOP 2027 Modeler"],
+      "port": 8767
+    },
+    {
+      "name": "v44",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8770", "--directory", "AOP 2027 Modeler"],
+      "port": 8770
+    },
+    {
+      "name": "v47",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8771", "--directory", "AOP 2027 Modeler"],
+      "port": 8771
+    },
+    {
+      "name": "v5",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8772", "--directory", "AOP 2027 Modeler"],
+      "port": 8772
+    }
+  ]
+}

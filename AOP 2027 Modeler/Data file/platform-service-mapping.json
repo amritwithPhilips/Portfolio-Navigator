@@ -1,0 +1,1411 @@
+{
+  "services": [
+    {
+      "sid": "SE002096",
+      "name": "Data Center Operations",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN4",
+      "cost_k": 1757.26930559746
+    },
+    {
+      "sid": "SE002097",
+      "name": "Data Center in a Box",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN4",
+      "cost_k": 9634.72132484847
+    },
+    {
+      "sid": "SE002098",
+      "name": "Google Cloud Hosting Services",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN4",
+      "cost_k": 653.4362881563
+    },
+    {
+      "sid": "SE002099",
+      "name": "Azure Cloud Hosting Services",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN4",
+      "cost_k": 4981.34718275995
+    },
+    {
+      "sid": "SE002100",
+      "name": "AWS Cloud Hosting Services",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN4",
+      "cost_k": 1428.3668408567
+    },
+    {
+      "sid": "SE002247",
+      "name": "DACH R&D Labs & Infra - Local",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN5",
+      "cost_k": 0
+    },
+    {
+      "sid": "SE002111",
+      "name": "Global R&D Labs & Infra support",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN5",
+      "cost_k": 1615.96370446619
+    },
+    {
+      "sid": "SE002113",
+      "name": "USA R&D Labs & Infra - Local",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN5",
+      "cost_k": 714.753604215261
+    },
+    {
+      "sid": "SE002112",
+      "name": "EMEA R&D Labs & Infra - Local",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN5",
+      "cost_k": 1688.65176684239
+    },
+    {
+      "sid": "SE002114",
+      "name": "IND R&D Labs & Infra - Local",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN5",
+      "cost_k": 944.296301514177
+    },
+    {
+      "sid": "SE002102",
+      "name": "Mobile Telephony - with Data & Voice Subscription and Standard Corporate-owned Mobile Device (CORP)",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN7",
+      "cost_k": 9939.29029018284
+    },
+    {
+      "sid": "SE002103",
+      "name": "Mobile Telephony - with Data & Voice Subscription only. Employees (BYOD)",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN7",
+      "cost_k": 315.14178920298
+    },
+    {
+      "sid": "SE002104",
+      "name": "Secure Internet (Proxy)",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN7",
+      "cost_k": 1229.35681241348
+    },
+    {
+      "sid": "SE002107",
+      "name": "Secure Internet (VPN)",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN7",
+      "cost_k": 600.215384884229
+    },
+    {
+      "sid": "SE002101",
+      "name": "Network Connectivity - Non-Business Critical",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN7",
+      "cost_k": 2554.49958786083
+    },
+    {
+      "sid": "SE002106",
+      "name": "Network Connectivity - Business Critical",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN7",
+      "cost_k": 23750.8598620145
+    },
+    {
+      "sid": "SE002108",
+      "name": "Local Applications",
+      "platform": "Unallocated",
+      "dept": "B72",
+      "cost_k": 4582.36245690287
+    },
+    {
+      "sid": "SE002109",
+      "name": "Local Support",
+      "platform": "Unallocated",
+      "dept": "B72",
+      "cost_k": 10164.7424591673
+    },
+    {
+      "sid": "SE002088",
+      "name": "Standard Collaboration & Workplace Services",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 46266.4697810489
+    },
+    {
+      "sid": "SE002089",
+      "name": "Special - Digital Productivity and Collaboration",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 91.2284377994177
+    },
+    {
+      "sid": "SE002090",
+      "name": "Special - Power Platform",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 1004.68664957176
+    },
+    {
+      "sid": "SE002091",
+      "name": "Special - Design Content and Knowledge Tool",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 2780.1385332477
+    },
+    {
+      "sid": "SE002092",
+      "name": "Special - Business Intelligence & Analytics",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 630.02994478964
+    },
+    {
+      "sid": "SE002094",
+      "name": "Specialist Digital Workplace",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 8076.52200312228
+    },
+    {
+      "sid": "SE002095",
+      "name": "Standard Digital Workplace",
+      "platform": "IT-Infrastructure Services",
+      "dept": "AN8",
+      "cost_k": 22518.2715236745
+    },
+    {
+      "sid": "SE002145",
+      "name": "Salesforce IGTD",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 66.7235257205334
+    },
+    {
+      "sid": "SE002146",
+      "name": "Seismic",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 1616.88147680816
+    },
+    {
+      "sid": "SE002147",
+      "name": "Vistex",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 696.231486053734
+    },
+    {
+      "sid": "SE002148",
+      "name": "Anaplan",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 2245.33321933661
+    },
+    {
+      "sid": "SE002149",
+      "name": "Appcloud",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 137.829561068225
+    },
+    {
+      "sid": "SE002150",
+      "name": "CCRM",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 274.46976927288
+    },
+    {
+      "sid": "SE002151",
+      "name": "Salesforce Appcloud",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 69.1665119784017
+    },
+    {
+      "sid": "SE002152",
+      "name": "CRM Analytics",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 104.945973092658
+    },
+    {
+      "sid": "SE002153",
+      "name": "QUIP",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 108.942907261674
+    },
+    {
+      "sid": "SE002154",
+      "name": "SalesForce",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 18830.2274951138
+    },
+    {
+      "sid": "SE002155",
+      "name": "Sofon",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 1689.66087895677
+    },
+    {
+      "sid": "SE002156",
+      "name": "PST",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 1053.54581873865
+    },
+    {
+      "sid": "SE002157",
+      "name": "ICON",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 190.120622765279
+    },
+    {
+      "sid": "SE002158",
+      "name": "Conga",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 9315.74740634512
+    },
+    {
+      "sid": "SE002159",
+      "name": "Zuora",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 1160.31336371673
+    },
+    {
+      "sid": "SE002160",
+      "name": "ServiceNow",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 3426.72981393337
+    },
+    {
+      "sid": "SE002161",
+      "name": "CIT_AI",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 288.139546167684
+    },
+    {
+      "sid": "SE002162",
+      "name": "Microsoft Dynamics",
+      "platform": "IT-Commercial IT",
+      "dept": "BL8",
+      "cost_k": 228.422938944313
+    },
+    {
+      "sid": "SE002231",
+      "name": "One BI",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 2889.44040087579
+    },
+    {
+      "sid": "SE002232",
+      "name": "De-identification",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 229.708962970182
+    },
+    {
+      "sid": "SE002240",
+      "name": "Winshuttle",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 270.003959225412
+    },
+    {
+      "sid": "SE002241",
+      "name": "Every Angle for MP1",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 357.16224312032
+    },
+    {
+      "sid": "SE002242",
+      "name": "Qlik Platform as a Service",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 2985.16287854266
+    },
+    {
+      "sid": "SE002235",
+      "name": "O2C Analytics",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 4167.49897823462
+    },
+    {
+      "sid": "SE002243",
+      "name": "Power BI Analytics",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 117.615807832276
+    },
+    {
+      "sid": "SE002239",
+      "name": "EDI as a service",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 1004.83213935244
+    },
+    {
+      "sid": "SE002233",
+      "name": "EADI Insights Ops- Commercial IT",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 1534.66982493234
+    },
+    {
+      "sid": "SE002236",
+      "name": "EADI Insights Ops- Central",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 73.298332829265
+    },
+    {
+      "sid": "SE002238",
+      "name": "Workbench as a Service",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 1625.45703711517
+    },
+    {
+      "sid": "SE002234",
+      "name": "ITaaP",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 2493.91344773277
+    },
+    {
+      "sid": "SE002317",
+      "name": "Data Quality",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 326.0
+    },
+    {
+      "sid": "SE002201",
+      "name": "Process Intelligence",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 642.362443826445
+    },
+    {
+      "sid": "SE002182",
+      "name": "Automation Platforms",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 5317.41073606245
+    },
+    {
+      "sid": "SE002184",
+      "name": "Business Continuity Management Platform",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 347.22199552111
+    },
+    {
+      "sid": "SE002188",
+      "name": "Analytics Operations Support for Real Estate",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 152.39860946556
+    },
+    {
+      "sid": "SE002189",
+      "name": "Philips Access Controll System - PACS",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 887.755111693676
+    },
+    {
+      "sid": "SE002190",
+      "name": "Workday - Employee Lifecycle Management Platform",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 2800.6049374307
+    },
+    {
+      "sid": "SE002191",
+      "name": "Risk and Compliance application for Internal Audit",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 494.314881814734
+    },
+    {
+      "sid": "SE002194",
+      "name": "Legal Compliance & Operations Applications",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 1061.75636978425
+    },
+    {
+      "sid": "SE002197",
+      "name": "People AI Agent",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 439.545841532945
+    },
+    {
+      "sid": "SE002198",
+      "name": "EasyGenerator - Assima - Learning Platform",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 204.210121572132
+    },
+    {
+      "sid": "SE002199",
+      "name": "Talent Acquisition",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 555.930052131747
+    },
+    {
+      "sid": "SE002200",
+      "name": "Philips Process Architecture and Framework Platform",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 2009.72354793425
+    },
+    {
+      "sid": "SE002206",
+      "name": "Risk and Compliance Applications",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 967.964388301682
+    },
+    {
+      "sid": "SE002208",
+      "name": "ServiceNow - Enterprise Lifecycle Management Platform",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 4863.00161054182
+    },
+    {
+      "sid": "SE002210",
+      "name": "Sustainability Application",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 282.808349744923
+    },
+    {
+      "sid": "SE002181",
+      "name": "Audit Management",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 87.0076786268454
+    },
+    {
+      "sid": "SE002183",
+      "name": "Software Validation (NPSS)",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 916.302960480806
+    },
+    {
+      "sid": "SE002185",
+      "name": "CAPA NextGen",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 445.032330143173
+    },
+    {
+      "sid": "SE002186",
+      "name": "Complaint Handling",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 2552.542398657
+    },
+    {
+      "sid": "SE002193",
+      "name": "Learning Management Solution",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 1632.65797745018
+    },
+    {
+      "sid": "SE002196",
+      "name": "Kairos",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 283.554406765512
+    },
+    {
+      "sid": "SE002202",
+      "name": "PSQ Analytics",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 320.046641768116
+    },
+    {
+      "sid": "SE002205",
+      "name": "Regulatory Information Management (RIMSys)",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 385.693412486247
+    },
+    {
+      "sid": "SE002207",
+      "name": "UDI Registration",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 361.09264862495
+    },
+    {
+      "sid": "SE002249",
+      "name": "Calibration Management",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 255.543431495744
+    },
+    {
+      "sid": "1007721",
+      "name": "Regulations and Standards Workflow (NCRS)",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 520.039587741936
+    },
+    {
+      "sid": "1007709",
+      "name": "Job Catalog",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 520.039587741936
+    },
+    {
+      "sid": "1007726",
+      "name": "Supplier Quality - SCAR",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 520.039587741936
+    },
+    {
+      "sid": "1007712",
+      "name": "NonConformance",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 520.039587741936
+    },
+    {
+      "sid": "1007720",
+      "name": "QMS Role Selection (Lumen)",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 520.039587741936
+    },
+    {
+      "sid": "1007704",
+      "name": "Customer Feedback Management",
+      "platform": "IT-Group Functions and Hyperautomation",
+      "dept": "BM0",
+      "cost_k": 520.039587741936
+    },
+    {
+      "sid": "SE002119",
+      "name": "Consumer Care",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 215.504619958072
+    },
+    {
+      "sid": "SE002129",
+      "name": "Hardware Engineering Tools",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 12271.4164878875
+    },
+    {
+      "sid": "SE002131",
+      "name": "Intellectual Property Tools",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": -1.12358533333333
+    },
+    {
+      "sid": "SE002130",
+      "name": "Experience Design",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 837.952151500426
+    },
+    {
+      "sid": "SE002132",
+      "name": "Intellectual Property & Experience Design",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 422.852770329933
+    },
+    {
+      "sid": "SE002133",
+      "name": "Content Management - ST4",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 280.342201301363
+    },
+    {
+      "sid": "SE002134",
+      "name": "PLM - Windchill",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 6117.18265037757
+    },
+    {
+      "sid": "SE002137",
+      "name": "Software Engineering Tools GitHub-ADS",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 3632.00195259807
+    },
+    {
+      "sid": "SE002138",
+      "name": "Complaints & Defect Management",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 36.8410159726187
+    },
+    {
+      "sid": "SE002139",
+      "name": "Portfolio Investment Management",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 4110.55674130778
+    },
+    {
+      "sid": "SE002141",
+      "name": "Claims & Evidence Management",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 1138.18910527325
+    },
+    {
+      "sid": "SE002142",
+      "name": "Claims Management Tools",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 257.158568032682
+    },
+    {
+      "sid": "SE002115",
+      "name": "Requirements, Test & Risk Management",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 1131.22914238552
+    },
+    {
+      "sid": "SE002116",
+      "name": "Mobile App development",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 82.4404636404477
+    },
+    {
+      "sid": "SE002117",
+      "name": "Marketing & Sales Content",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 1984.1699043867
+    },
+    {
+      "sid": "SE002118",
+      "name": "Online Marketing - CRM HS",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 595.074901802278
+    },
+    {
+      "sid": "SE002120",
+      "name": "Online Marketing - CRM PH",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 2123.52222288077
+    },
+    {
+      "sid": "SE002121",
+      "name": "Online Marketing - Social",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 248.518661771528
+    },
+    {
+      "sid": "SE002122",
+      "name": "Online Marketing - Analytics",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 1308.34706714085
+    },
+    {
+      "sid": "SE002123",
+      "name": "Online Marketing - Mobile Apps",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 148.679744975965
+    },
+    {
+      "sid": "SE002124",
+      "name": "Digital Services",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 2836.65067777853
+    },
+    {
+      "sid": "SE002126",
+      "name": "Online Marketing - Channel Partner",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 45.0008698421117
+    },
+    {
+      "sid": "SE002127",
+      "name": "Online Marketing - Ecommerce",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 2636.01285460283
+    },
+    {
+      "sid": "SE002128",
+      "name": "Online Marketing - Subscriptions",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 645.290036992108
+    },
+    {
+      "sid": "SE002135",
+      "name": "CfLM - Configit",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 1086.7335675412
+    },
+    {
+      "sid": "SE002136",
+      "name": "Software Engineering Tools Others",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 6556.43114361001
+    },
+    {
+      "sid": "SE002140",
+      "name": "Clinical Study Management & execution",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 2904.30062540899
+    },
+    {
+      "sid": "SE002143",
+      "name": "Online Marketing - Ratings & Reviews",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 1645.30350732483
+    },
+    {
+      "sid": "SE002144",
+      "name": "Events",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 10.4412447974939
+    },
+    {
+      "sid": "SE001166",
+      "name": "PIL Philips Voice Cloud",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 1944.42530896422
+    },
+    {
+      "sid": "SE002216",
+      "name": "Professional Services Automation (PSA)",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 1210.6521062942
+    },
+    {
+      "sid": "SE002219",
+      "name": "Mize Incenter",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 1206.69920649523
+    },
+    {
+      "sid": "SE002220",
+      "name": "B2B ServiceCloud - KCS",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 57.1534334058863
+    },
+    {
+      "sid": "SE002224",
+      "name": "PIL Education",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 291.725130201589
+    },
+    {
+      "sid": "SE002225",
+      "name": "OneMobile",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 101.884995532011
+    },
+    {
+      "sid": "SE002226",
+      "name": "OneEMS",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 174.122647913022
+    },
+    {
+      "sid": "SE002227",
+      "name": "B2B ServiceCloud ServiceMax",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 5367.56162958147
+    },
+    {
+      "sid": "SE002228",
+      "name": "GCS Operations",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 838.362811910936
+    },
+    {
+      "sid": "SE002229",
+      "name": "Philips Voice Cloud (HIPAA)",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 786.650524946431
+    },
+    {
+      "sid": "SE002214",
+      "name": "HC Whiskey",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 104.146699581384
+    },
+    {
+      "sid": "SE002215",
+      "name": "License Entitlement Management (LEM)",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 1793.7303919011
+    },
+    {
+      "sid": "SE002217",
+      "name": "QLAB Sustain Service",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 59.8458890034449
+    },
+    {
+      "sid": "SE002218",
+      "name": "Entitlement Management & Orchestration (EM&O)",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 313.816676941393
+    },
+    {
+      "sid": "SE002222",
+      "name": "HC Customer Services",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 340.318812382337
+    },
+    {
+      "sid": "SE002223",
+      "name": "Planning SPM",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 704.710773544799
+    },
+    {
+      "sid": "1008037",
+      "name": "CDP Inhouse Operations",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 300.0
+    },
+    {
+      "sid": "1008036",
+      "name": "GSE Operations",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 20.0
+    },
+    {
+      "sid": "1008035",
+      "name": "SRC Operations",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 500.0
+    },
+    {
+      "sid": "1008033",
+      "name": "Service KM AI Search",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 3094.0
+    },
+    {
+      "sid": "1007997",
+      "name": "CS Portal 1.0",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 750.0
+    },
+    {
+      "sid": "SE002163",
+      "name": "Accounting, Reporting & Internal Control",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 837.851841591962
+    },
+    {
+      "sid": "SE002165",
+      "name": "Business Core ERP - HS",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 8584.49413763069
+    },
+    {
+      "sid": "SE002166",
+      "name": "Business Core ERP - Monitoring",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 1655.09733382
+    },
+    {
+      "sid": "SE002167",
+      "name": "Business Core ERP - PD",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 1358.66987068527
+    },
+    {
+      "sid": "SE002168",
+      "name": "Business Core ERP - PH",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 3012.74703342736
+    },
+    {
+      "sid": "SE002169",
+      "name": "Business Core ERP - SRC",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 2762.57602453139
+    },
+    {
+      "sid": "SE002173",
+      "name": "Financial Planning & Analysis",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 2020.10883327794
+    },
+    {
+      "sid": "SE002174",
+      "name": "Group Tax",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 318.607248952399
+    },
+    {
+      "sid": "SE002175",
+      "name": "Group Treasury",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 1352.03489311682
+    },
+    {
+      "sid": "SE002176",
+      "name": "Manufacturing",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 6552.49214767007
+    },
+    {
+      "sid": "SE002178",
+      "name": "Planning - HS",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 3594.0721781549
+    },
+    {
+      "sid": "SE002179",
+      "name": "Planning - PH",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 3750.54512961327
+    },
+    {
+      "sid": "SE002180",
+      "name": "Procurement",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 4126.99907360371
+    },
+    {
+      "sid": "SE002164",
+      "name": "Accounting, Reporting & Internal Control (BCS)",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 3118.08203441398
+    },
+    {
+      "sid": "SE002170",
+      "name": "Deliver - Order Creation & Orchestration",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 634.982741633872
+    },
+    {
+      "sid": "SE002171",
+      "name": "Deliver - Transport Management",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 3242.78779880504
+    },
+    {
+      "sid": "SE002172",
+      "name": "Expense Management",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 1050.88541142529
+    },
+    {
+      "sid": "SE002177",
+      "name": "Philips Trade Compliance",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 965.061510449211
+    },
+    {
+      "sid": "SE002245",
+      "name": "Business Core ERP - PD (CC)",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 1296.40758755556
+    },
+    {
+      "sid": "1007803",
+      "name": "Business Document Services",
+      "platform": "IT-Integrated Supply Chain and Finance",
+      "dept": "BL9",
+      "cost_k": 617.289672
+    },
+    {
+      "sid": "SE002125",
+      "name": "Online Marketing - Website",
+      "platform": "IT-Innovation and Digital",
+      "dept": "BM1",
+      "cost_k": 5152.80556780711
+    },
+    {
+      "sid": "1007613",
+      "name": "Local Cloud Hosting Greater China",
+      "platform": "Unallocated",
+      "dept": "B72",
+      "cost_k": 2613.6553055126
+    },
+    {
+      "sid": "SE002221",
+      "name": "OLC - archive",
+      "platform": "IT-Services&Solutions IT",
+      "dept": "AX9",
+      "cost_k": 92.4177769479179
+    },
+    {
+      "sid": "1007849",
+      "name": "Master Data Management",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 3377.77688040493
+    },
+    {
+      "sid": "1007850",
+      "name": "Azure Data Lake as a Service",
+      "platform": "IT-Ent.Architecture,Data&Integration",
+      "dept": "I91",
+      "cost_k": 9970.18715878862
+    },
+    {
+      "sid": "1007863",
+      "name": "IT Security",
+      "platform": "IT-Security,Risk&Compliance",
+      "dept": "AN3",
+      "cost_k": 10497.2957686247
+    },
+    {
+      "sid": "1007864",
+      "name": "Regions IT",
+      "platform": "Unallocated",
+      "dept": "AN6",
+      "cost_k": 15968.5109083494
+    },
+    {
+      "sid": "1007865",
+      "name": "Central Departments (CIO, Portfolio, Vendor & SAM)",
+      "platform": "Unallocated",
+      "dept": "B69+",
+      "cost_k": 8893.75467114872
+    },
+    {
+      "sid": "1008056",
+      "name": "GenAI Foundation & Services",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 4800.30765458922
+    },
+    {
+      "sid": "1008055",
+      "name": "IGTS GenAI Bot Services",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 50.5653793157672
+    },
+    {
+      "sid": "1008052",
+      "name": "AI Tools - Microsoft Co-work",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 460.75044464
+    },
+    {
+      "sid": "1008051",
+      "name": "AI Tools - Claude",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 3400.0
+    },
+    {
+      "sid": "1008050",
+      "name": "AI Tools - ChatGPT",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 3400.0
+    },
+    {
+      "sid": "1008049",
+      "name": "AI Tools - Copilot Studio",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 460.75044464
+    },
+    {
+      "sid": "1008048",
+      "name": "AI Tools - Copilot",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 4954.52564721037
+    },
+    {
+      "sid": "1007999",
+      "name": "DEX AI Services",
+      "platform": "Unallocated",
+      "dept": "AI Svcs",
+      "cost_k": 8315.0
+    },
+    {
+      "sid": "B69NEW2",
+      "name": "Transfer in New services",
+      "platform": "Unallocated",
+      "dept": "Transfers",
+      "cost_k": 12900.0
+    }
+  ],
+  "dept_platform": {
+    "AN3": "IT-Security,Risk&Compliance",
+    "AN4": "IT-Infrastructure Services",
+    "AN5": "IT-Infrastructure Services",
+    "AN7": "IT-Infrastructure Services",
+    "AN8": "IT-Infrastructure Services",
+    "AX9": "IT-Services&Solutions IT",
+    "BL8": "IT-Commercial IT",
+    "BL9": "IT-Integrated Supply Chain and Finance",
+    "BM0": "IT-Group Functions and Hyperautomation",
+    "BM1": "IT-Innovation and Digital",
+    "I91": "IT-Ent.Architecture,Data&Integration"
+  },
+  "svc_platform": {
+    "SE002096": "IT-Infrastructure Services",
+    "SE002097": "IT-Infrastructure Services",
+    "SE002098": "IT-Infrastructure Services",
+    "SE002099": "IT-Infrastructure Services",
+    "SE002100": "IT-Infrastructure Services",
+    "SE002247": "IT-Infrastructure Services",
+    "SE002111": "IT-Infrastructure Services",
+    "SE002113": "IT-Infrastructure Services",
+    "SE002112": "IT-Infrastructure Services",
+    "SE002114": "IT-Infrastructure Services",
+    "SE002102": "IT-Infrastructure Services",
+    "SE002103": "IT-Infrastructure Services",
+    "SE002104": "IT-Infrastructure Services",
+    "SE002107": "IT-Infrastructure Services",
+    "SE002101": "IT-Infrastructure Services",
+    "SE002106": "IT-Infrastructure Services",
+    "SE002108": "Unallocated",
+    "SE002109": "Unallocated",
+    "SE002088": "IT-Infrastructure Services",
+    "SE002089": "IT-Infrastructure Services",
+    "SE002090": "IT-Infrastructure Services",
+    "SE002091": "IT-Infrastructure Services",
+    "SE002092": "IT-Infrastructure Services",
+    "SE002094": "IT-Infrastructure Services",
+    "SE002095": "IT-Infrastructure Services",
+    "SE002145": "IT-Commercial IT",
+    "SE002146": "IT-Commercial IT",
+    "SE002147": "IT-Commercial IT",
+    "SE002148": "IT-Commercial IT",
+    "SE002149": "IT-Commercial IT",
+    "SE002150": "IT-Commercial IT",
+    "SE002151": "IT-Commercial IT",
+    "SE002152": "IT-Commercial IT",
+    "SE002153": "IT-Commercial IT",
+    "SE002154": "IT-Commercial IT",
+    "SE002155": "IT-Commercial IT",
+    "SE002156": "IT-Commercial IT",
+    "SE002157": "IT-Commercial IT",
+    "SE002158": "IT-Commercial IT",
+    "SE002159": "IT-Commercial IT",
+    "SE002160": "IT-Commercial IT",
+    "SE002161": "IT-Commercial IT",
+    "SE002162": "IT-Commercial IT",
+    "SE002231": "IT-Ent.Architecture,Data&Integration",
+    "SE002232": "IT-Ent.Architecture,Data&Integration",
+    "SE002240": "IT-Ent.Architecture,Data&Integration",
+    "SE002241": "IT-Ent.Architecture,Data&Integration",
+    "SE002242": "IT-Ent.Architecture,Data&Integration",
+    "SE002235": "IT-Ent.Architecture,Data&Integration",
+    "SE002243": "IT-Ent.Architecture,Data&Integration",
+    "SE002239": "IT-Ent.Architecture,Data&Integration",
+    "SE002233": "IT-Ent.Architecture,Data&Integration",
+    "SE002236": "IT-Ent.Architecture,Data&Integration",
+    "SE002238": "IT-Ent.Architecture,Data&Integration",
+    "SE002234": "IT-Ent.Architecture,Data&Integration",
+    "SE002317": "IT-Ent.Architecture,Data&Integration",
+    "SE002201": "IT-Group Functions and Hyperautomation",
+    "SE002182": "IT-Group Functions and Hyperautomation",
+    "SE002184": "IT-Group Functions and Hyperautomation",
+    "SE002188": "IT-Group Functions and Hyperautomation",
+    "SE002189": "IT-Group Functions and Hyperautomation",
+    "SE002190": "IT-Group Functions and Hyperautomation",
+    "SE002191": "IT-Group Functions and Hyperautomation",
+    "SE002194": "IT-Group Functions and Hyperautomation",
+    "SE002197": "IT-Group Functions and Hyperautomation",
+    "SE002198": "IT-Group Functions and Hyperautomation",
+    "SE002199": "IT-Group Functions and Hyperautomation",
+    "SE002200": "IT-Group Functions and Hyperautomation",
+    "SE002206": "IT-Group Functions and Hyperautomation",
+    "SE002208": "IT-Group Functions and Hyperautomation",
+    "SE002210": "IT-Group Functions and Hyperautomation",
+    "SE002181": "IT-Group Functions and Hyperautomation",
+    "SE002183": "IT-Group Functions and Hyperautomation",
+    "SE002185": "IT-Group Functions and Hyperautomation",
+    "SE002186": "IT-Group Functions and Hyperautomation",
+    "SE002193": "IT-Group Functions and Hyperautomation",
+    "SE002196": "IT-Group Functions and Hyperautomation",
+    "SE002202": "IT-Group Functions and Hyperautomation",
+    "SE002205": "IT-Group Functions and Hyperautomation",
+    "SE002207": "IT-Group Functions and Hyperautomation",
+    "SE002249": "IT-Group Functions and Hyperautomation",
+    "1007721": "IT-Group Functions and Hyperautomation",
+    "1007709": "IT-Group Functions and Hyperautomation",
+    "1007726": "IT-Group Functions and Hyperautomation",
+    "1007712": "IT-Group Functions and Hyperautomation",
+    "1007720": "IT-Group Functions and Hyperautomation",
+    "1007704": "IT-Group Functions and Hyperautomation",
+    "SE002119": "IT-Innovation and Digital",
+    "SE002129": "IT-Innovation and Digital",
+    "SE002131": "IT-Innovation and Digital",
+    "SE002130": "IT-Innovation and Digital",
+    "SE002132": "IT-Innovation and Digital",
+    "SE002133": "IT-Innovation and Digital",
+    "SE002134": "IT-Innovation and Digital",
+    "SE002137": "IT-Innovation and Digital",
+    "SE002138": "IT-Innovation and Digital",
+    "SE002139": "IT-Innovation and Digital",
+    "SE002141": "IT-Innovation and Digital",
+    "SE002142": "IT-Innovation and Digital",
+    "SE002115": "IT-Innovation and Digital",
+    "SE002116": "IT-Innovation and Digital",
+    "SE002117": "IT-Innovation and Digital",
+    "SE002118": "IT-Innovation and Digital",
+    "SE002120": "IT-Innovation and Digital",
+    "SE002121": "IT-Innovation and Digital",
+    "SE002122": "IT-Innovation and Digital",
+    "SE002123": "IT-Innovation and Digital",
+    "SE002124": "IT-Innovation and Digital",
+    "SE002126": "IT-Innovation and Digital",
+    "SE002127": "IT-Innovation and Digital",
+    "SE002128": "IT-Innovation and Digital",
+    "SE002135": "IT-Innovation and Digital",
+    "SE002136": "IT-Innovation and Digital",
+    "SE002140": "IT-Innovation and Digital",
+    "SE002143": "IT-Innovation and Digital",
+    "SE002144": "IT-Innovation and Digital",
+    "SE001166": "IT-Services&Solutions IT",
+    "SE002216": "IT-Services&Solutions IT",
+    "SE002219": "IT-Services&Solutions IT",
+    "SE002220": "IT-Services&Solutions IT",
+    "SE002224": "IT-Services&Solutions IT",
+    "SE002225": "IT-Services&Solutions IT",
+    "SE002226": "IT-Services&Solutions IT",
+    "SE002227": "IT-Services&Solutions IT",
+    "SE002228": "IT-Services&Solutions IT",
+    "SE002229": "IT-Services&Solutions IT",
+    "SE002214": "IT-Services&Solutions IT",
+    "SE002215": "IT-Services&Solutions IT",
+    "SE002217": "IT-Services&Solutions IT",
+    "SE002218": "IT-Services&Solutions IT",
+    "SE002222": "IT-Services&Solutions IT",
+    "SE002223": "IT-Services&Solutions IT",
+    "1008037": "IT-Services&Solutions IT",
+    "1008036": "IT-Services&Solutions IT",
+    "1008035": "IT-Services&Solutions IT",
+    "1008033": "IT-Services&Solutions IT",
+    "1007997": "IT-Services&Solutions IT",
+    "SE002163": "IT-Integrated Supply Chain and Finance",
+    "SE002165": "IT-Integrated Supply Chain and Finance",
+    "SE002166": "IT-Integrated Supply Chain and Finance",
+    "SE002167": "IT-Integrated Supply Chain and Finance",
+    "SE002168": "IT-Integrated Supply Chain and Finance",
+    "SE002169": "IT-Integrated Supply Chain and Finance",
+    "SE002173": "IT-Integrated Supply Chain and Finance",
+    "SE002174": "IT-Integrated Supply Chain and Finance",
+    "SE002175": "IT-Integrated Supply Chain and Finance",
+    "SE002176": "IT-Integrated Supply Chain and Finance",
+    "SE002178": "IT-Integrated Supply Chain and Finance",
+    "SE002179": "IT-Integrated Supply Chain and Finance",
+    "SE002180": "IT-Integrated Supply Chain and Finance",
+    "SE002164": "IT-Integrated Supply Chain and Finance",
+    "SE002170": "IT-Integrated Supply Chain and Finance",
+    "SE002171": "IT-Integrated Supply Chain and Finance",
+    "SE002172": "IT-Integrated Supply Chain and Finance",
+    "SE002177": "IT-Integrated Supply Chain and Finance",
+    "SE002245": "IT-Integrated Supply Chain and Finance",
+    "1007803": "IT-Integrated Supply Chain and Finance",
+    "SE002125": "IT-Innovation and Digital",
+    "1007613": "Unallocated",
+    "SE002221": "IT-Services&Solutions IT",
+    "1007849": "IT-Ent.Architecture,Data&Integration",
+    "1007850": "IT-Ent.Architecture,Data&Integration",
+    "1007863": "IT-Security,Risk&Compliance",
+    "1007864": "Unallocated",
+    "1007865": "Unallocated",
+    "1008056": "Unallocated",
+    "1008055": "Unallocated",
+    "1008052": "Unallocated",
+    "1008051": "Unallocated",
+    "1008050": "Unallocated",
+    "1008049": "Unallocated",
+    "1008048": "Unallocated",
+    "1007999": "Unallocated",
+    "B69NEW2": "Unallocated"
+  }
+}

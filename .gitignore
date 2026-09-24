@@ -1,0 +1,17 @@
+# Temp files
+~$*
+*.tmp
+node_modules/
+__pycache__/
+*.pyc
+
+# Large binary source files (tracked externally)
+AOP 2027 Demand/*.xlsx
+
+# Pre-release backup versions
+*-pre-*.html
+AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v4.0.html
+AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v4.1.html
+
+# IDE/local settings
+.claude/settings.local.json
