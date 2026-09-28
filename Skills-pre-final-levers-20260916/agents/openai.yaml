@@ -1,0 +1,4 @@
+interface:
+  display_name: "AOP Prioritization"
+  short_description: "Prioritize AOP demand from the 15926 source"
+  default_prompt: "Use $aop-prioritization to refresh the AOP 2027 model from the authoritative 15926 demand workbook."

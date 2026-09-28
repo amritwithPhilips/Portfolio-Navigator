@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path'),A=require('./engine.js');
+const root=path.resolve(__dirname,'../..'),out=path.join(root,'output/modeler-v3');
+const raw=fs.readFileSync(path.join(out,'Data file/AOP2027-Complete-Workbook-Snapshot.json'),'utf8'),data=A.normalize(JSON.parse(raw)),session=A.createSession(data),result=A.solve(data,session.settings);
+const css=['app.css','ui.css','sticky.css'].map(x=>fs.readFileSync(path.join(__dirname,x),'utf8')).join('\n');
+const scripts=['engine.js','workbook.js','app.js'].map(x=>fs.readFileSync(path.join(__dirname,x),'utf8')).join('\n');
+fs.writeFileSync(path.join(out,'AOP2027-IT-Portfolio-Scenario-Modelling.html'),'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AOP 2027 | Philips IT Portfolio Scenario Modelling</title><style>'+css+'</style></head><body><header class="hdr"><h1>Philips · AOP 2027 IT Portfolio Scenario Modelling</h1><span class="tag">Evidence-led portfolio</span><span class="right" id="status"></span></header><nav class="tabs" id="tabs" aria-label="Portfolio tabs"></nav><div id="workflow"></div><main id="main"></main><dialog id="modal"><button id="close-modal" aria-label="Close program details">Close ×</button><div id="modal-body"></div></dialog><div id="toast" role="status" hidden></div><script type="application/json" id="source-data">'+raw.replace(/</g,'\\u003c')+'</script><script>'+scripts.replace(/<\/script/gi,'<\\/script')+'</script></body></html>');
+fs.writeFileSync(path.join(out,'Data file/AOP2027-Normalized-Demand.json'),JSON.stringify({...data,workbook:undefined},null,2));
+fs.writeFileSync(path.join(out,'Data file/AOP2027-Default-Scenario.json'),JSON.stringify(session));
+fs.writeFileSync(path.join(out,'Data file/AOP2027-Default-Results.json'),JSON.stringify(result,null,2));
+console.log(JSON.stringify({records:data.records.length,totals:result.totals,stages:result.stages},null,2));

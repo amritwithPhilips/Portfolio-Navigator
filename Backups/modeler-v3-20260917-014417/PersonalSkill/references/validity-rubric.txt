@@ -1,0 +1,28 @@
+Step A validity criteria: 1 = unsubstantiated assertion, 5 = fully validated, objective mandate.  Step B risk factors: 1 = low / distant, 5 = severe / imminent.  Each scale is anchored only to its own factor.							
+							
+Step A — Validity criteria  (higher = stronger, objective mandate)							
+#	Factor	Weight	1 — Unsubstantiated	2 — Weak	3 — Partial	4 — Strong	5 — Fully validated
+1	"Named authority & instrument
+Can we point to the actual law, regulation, or tax rule that requires this — chapter and verse?"	25%	No source given — the 'must-do' is stated verbally, with no law, regulation, tax rule, or regulator instruction behind it.	Only a broad area is named (e.g. 'GDPR' or 'local tax rules') — no specific article, clause, or obligation.	A specific rule is named, but the exact clause that obliges us — or which authority issued it — isn't pinned down yet.	The specific rule and clause are cited and the issuing authority is identified, but this hasn't been independently confirmed yet.	We can cite the exact rule, clause, and issuing authority, and it can be checked against the official source.
+2	"Mandatory, not discretionary
+Does the rule genuinely force this, or is it really our own choice or best practice?"	30%	It's our choice — framed as best practice or 'we should'; there's no obligation to act.	Mostly our choice — one of several acceptable readings; we could meet the aim another way.	There's a real obligation, but what we've chosen to do goes beyond the minimum the rule demands.	It's required, with only limited, documented room for how we implement it.	The rule compels exactly this — not doing it is a breach; there's no discretion.
+3	"Applicability confirmed (Legal / Compliance / Tax)
+Has someone qualified (Legal / Compliance / Tax) confirmed the rule really applies to this specific part of Philips?"	25%	Not checked — we're assuming it applies to this entity, country, or process.	The requesting team believes it applies, but Legal / Compliance / Tax haven't reviewed it.	It probably applies; a Legal / Compliance / Tax review has been asked for but hasn't come back.	Legal / Compliance / Tax confirm it applies, with a few small scoping questions still open.	Legal / Compliance / Tax confirm in writing that it applies to this exact entity, country, and process.
+4	"Independent second-line validation
+Has an independent team — not the sponsor — formally signed this off?"	20%	No independent check — the sponsor or requesting team simply asserts it.	The sponsor has provided backing material, but no independent team has reviewed it.	A control function has looked at it informally, but there's no formal sign-off.	Formally reviewed and documented by Legal / Compliance / Tax / Internal Audit, with a few minor caveats.	Formally signed off by the accountable independent team, with the evidence on file.
+							
+Scope discipline  (higher = tighter scope; feeds the scope challenge)							
+#	Factor	Weight	1 — Heavy gold-plating	2 — Exceeds mandate	3 — Mostly aligned	4 — Compliance + minor	5 — Minimum viable
+1	"Minimum-viable scope
+Are we doing only what the rule requires, or adding 'nice-to-have' extras on top?"	—	Lots of extras — the scope bundles in significant optional features or modernisation on top of the rule ('gold-plating').	Several extras — the scope goes beyond the rule in a number of areas not needed for compliance.	Mostly lean — only a few extras beyond the minimum remain.	Lean — scope is limited to compliance, with small, justified allowances.	Exactly the minimum — only what's needed to meet the rule, nothing more.
+							
+Step B — Risk factors  (higher = greater exposure / urgency)							
+#	Factor	Weight	1 — Low / distant	2 — Minor	3 — Moderate	4 — Major	5 — Severe / imminent
+1	"Impact — how serious the consequence is if we don't comply
+If we don't comply, how serious is the consequence?"	—	Minor internal issue only — no outside consequence.	Small fine or advisory notice — limited clean-up.	Meaningful fine, a reportable finding, or a limited restriction on the business.	Large fine, temporary loss of a licence or certification, or a real hit to customers or the market.	Severe — criminal liability, loss of a licence, a product or market withdrawal, or a patient-safety / major data-breach exposure.
+2	"Likelihood — how likely it is to happen if we don't act
+How likely is it to actually happen if we don't act?"	—	Very unlikely — only theoretical, with no history and no oversight.	Unlikely — possible, but no sign of any audit or enforcement.	Possible — there's general enforcement in this area and periodic audits.	Likely — an audit or inspection is scheduled, or we've had findings on this before.	Almost certain — active enforcement, an open finding, or automatic detection of a hard reporting obligation.
+3	"Deadline — how close the mandatory date is
+How soon is the date by which we must comply?"	—	No set deadline, or more than two years away.	Between one and two years away.	Between six months and a year away.	Less than six months away.	Overdue, or under three months away — we're at or near breach.
+							
+Risk exposure = Impact × Likelihood on a 1–25 scale — Low 1–4, Medium 5–9, High 10–14, Critical 15–25.   Priority: P1 Immediate (Critical exposure, or deadline under 6 months); P2 Scheduled (High exposure, or 6–12 months); P3 Plan within the compliance window.							

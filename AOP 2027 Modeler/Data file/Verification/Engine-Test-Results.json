@@ -1,0 +1,96 @@
+{
+  "executed": "2026-09-17T04:05:03.749Z",
+  "ruleVersion": "3.2.0",
+  "tests": 22,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "509 rows, exact demand, whitespace blanks and stage reconciliation",
+      "status": "PASS"
+    },
+    {
+      "name": "All source cells and formula metadata preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "Decision coverage and numeric benefit counts reconcile",
+      "status": "PASS"
+    },
+    {
+      "name": "No decommissioning in Hygiene or Carryover after priority precedence",
+      "status": "PASS"
+    },
+    {
+      "name": "Whole-program funding and portfolio tolerance at all presets and envelope boundaries",
+      "status": "PASS"
+    },
+    {
+      "name": "LFR ringfence and approved exceptions receive correct stage",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual exclusion does not silently refill or alter others",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual additions are additive and retain over-budget variance",
+      "status": "PASS"
+    },
+    {
+      "name": "Manual partial scope retains source ratio and rejects invalid amount",
+      "status": "PASS"
+    },
+    {
+      "name": "Enterprise Wide and BU Led decisions are independently editable",
+      "status": "PASS"
+    },
+    {
+      "name": "Global lever changes retain program decisions without approval checkpoints",
+      "status": "PASS"
+    },
+    {
+      "name": "Evidence reviews can be recorded from either portfolio stream",
+      "status": "PASS"
+    },
+    {
+      "name": "Finalisation freezes edits and fork is editable without conference checkpoints",
+      "status": "PASS"
+    },
+    {
+      "name": "Undo preserves event history and restores the shared portfolio",
+      "status": "PASS"
+    },
+    {
+      "name": "Blank, zero, missing and high benefit eligibility are distinct",
+      "status": "PASS"
+    },
+    {
+      "name": "Contain hold, mandatory warning and unresolved priority handling",
+      "status": "PASS"
+    },
+    {
+      "name": "Refresh changed evidence holds decisions and blocks finalisation until resolved",
+      "status": "PASS"
+    },
+    {
+      "name": "Portable source validation rejects tampered source records",
+      "status": "PASS"
+    },
+    {
+      "name": "Incomplete session is rejected while legacy conference metadata is ignored",
+      "status": "PASS"
+    },
+    {
+      "name": "Over-budget portfolio can finalise directly with visible variance",
+      "status": "PASS"
+    },
+    {
+      "name": "Filter OR within a field and AND across fields; no financial mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "Settings reject invalid weights, coverage and thresholds",
+      "status": "PASS"
+    }
+  ]
+}

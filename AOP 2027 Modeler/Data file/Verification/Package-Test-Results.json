@@ -1,0 +1,39 @@
+{
+  "static_workbook_rows": 509,
+  "static_row_financial_parity": "PASS",
+  "reconciliation_formulas": "PASS",
+  "browser_export_rows": 509,
+  "browser_final_scenario_parity": "PASS",
+  "AOP2027-Modeler-PRD-v3.2": {
+    "pages": 12,
+    "content_checks": "PASS"
+  },
+  "AOP2027-Modeler-Detailed-Requirements-v3.2": {
+    "pages": 18,
+    "content_checks": "PASS"
+  },
+  "Engine-Test-Results.json": {
+    "failures": 0,
+    "status": "PASS"
+  },
+  "Browser-Test-Results.json": {
+    "failures": 0,
+    "status": "PASS"
+  },
+  "Interaction-Test-Results-v3.2.json": {
+    "failures": 0,
+    "status": "PASS"
+  },
+  "Refresh-Test-Results-v3.2.json": {
+    "failures": 0,
+    "status": "PASS"
+  },
+  "Scenario-Outcomes-v3.2.json": {
+    "failures": 0,
+    "status": "PASS"
+  },
+  "Skill-Test-Results.json": {
+    "failures": 0,
+    "status": "PASS"
+  }
+}

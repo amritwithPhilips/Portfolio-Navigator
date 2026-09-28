@@ -1,0 +1,961 @@
+{
+  "executed": "2026-09-17T04:04:58.206Z",
+  "ruleVersion": "3.2.0",
+  "sourceFile": "15926_IT AOP2027 Demand.xlsx",
+  "sourceHash": "4ca3c6d4295996c1ff3062d22679ef272ee88a38a6050e112014e5ce25e2ba89",
+  "baselineRows": 509,
+  "baselineRequested": 279.595,
+  "cases": 13,
+  "failed": 0,
+  "outcomes": [
+    {
+      "scenario": "Protect commitments",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 99.996,
+      "unfunded": 179.599,
+      "available": 0.004,
+      "over": 0,
+      "fundedPrograms": 147,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Tighten carryover evidence",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 3,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 94.521,
+      "unfunded": 185.074,
+      "available": 5.479,
+      "over": 0,
+      "fundedPrograms": 143,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 3.096
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Release sustain capacity",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 96.396,
+      "unfunded": 183.199,
+      "available": 3.604,
+      "over": 0,
+      "fundedPrograms": 145,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 9.24975,
+          "allocated": 8.733
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Zero envelope",
+      "settings": {
+        "budget": 0,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 0,
+      "unfunded": 279.595,
+      "available": 0,
+      "over": 0,
+      "fundedPrograms": 0,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 0
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 0
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 0,
+          "allocated": 0
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 0
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 0
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "50 M envelope",
+      "settings": {
+        "budget": 50,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 52.455,
+      "unfunded": 227.14,
+      "available": 0,
+      "over": 2.455,
+      "fundedPrograms": 76,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 5,
+          "allocated": 5.245
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 0.2
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 0.16
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "200 M envelope",
+      "settings": {
+        "budget": 200,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 110.483,
+      "unfunded": 169.112,
+      "available": 89.517,
+      "over": 0,
+      "fundedPrograms": 175,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 20,
+          "allocated": 20.984
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "AOP basis reservations",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "aop",
+          "pct": 25
+        },
+        "sustain": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 5
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 82.259,
+      "unfunded": 197.336,
+      "available": 17.741,
+      "over": 0,
+      "fundedPrograms": 131,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 25,
+          "allocated": 24.132
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 10,
+          "allocated": 10.233
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 5,
+          "allocated": 5.245
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Carryover threshold 1.0x",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 1,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 103.026,
+      "unfunded": 176.569,
+      "available": 0,
+      "over": 3.026,
+      "fundedPrograms": 151,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 11.601
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Carryover threshold 5.0x plus",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 5,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 91.625,
+      "unfunded": 187.97,
+      "available": 8.375,
+      "over": 0,
+      "fundedPrograms": 138,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 0.2
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Merit floor 0",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 0,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 104.796,
+      "unfunded": 174.799,
+      "available": 0,
+      "over": 4.796,
+      "fundedPrograms": 155,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 38.878
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Merit floor 90",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 90,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 68.278,
+      "unfunded": 211.317,
+      "available": 31.722,
+      "over": 0,
+      "fundedPrograms": 98,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 2.36
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "No whole-program tolerance",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 99.486,
+      "unfunded": 180.109,
+      "available": 0.514,
+      "over": 0,
+      "fundedPrograms": 147,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 9.987
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    },
+    {
+      "scenario": "Maximum whole-program tolerance",
+      "settings": {
+        "budget": 100,
+        "tolerance": 5,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "hygiene": {
+          "basis": "aop",
+          "pct": 10
+        },
+        "carry": 2,
+        "merit": 45,
+        "weights": [
+          50,
+          25,
+          15,
+          10
+        ]
+      },
+      "requested": 279.595,
+      "allocated": 99.996,
+      "unfunded": 179.599,
+      "available": 0.004,
+      "over": 0,
+      "fundedPrograms": 147,
+      "missingRequests": 46,
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 34.517,
+          "target": 34.517,
+          "allocated": 34.517
+        },
+        {
+          "name": "Sustain Engineering",
+          "demand": 12.333,
+          "target": 12.333,
+          "allocated": 12.333
+        },
+        {
+          "name": "Hygiene",
+          "demand": 34.902,
+          "target": 10,
+          "allocated": 10.497
+        },
+        {
+          "name": "Carryover",
+          "demand": 97.375,
+          "target": null,
+          "allocated": 8.571
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 100.468,
+          "target": null,
+          "allocated": 34.078
+        }
+      ],
+      "assertions": [
+        "Portfolio tolerance respected",
+        "Whole programs only",
+        "Decommissioning excluded from Hygiene",
+        "Competitive stages require numeric positive benefits"
+      ],
+      "status": "PASS"
+    }
+  ]
+}

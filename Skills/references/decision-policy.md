@@ -1,4 +1,4 @@
-# Decision policy | 4.5.0 | 22 September 2026
+# Decision policy | 5.2.0 | 25 September 2026
 
 ## Priority order (four priorities)
 
@@ -17,9 +17,9 @@ P1 and P2 contain only demand that passes strict evidence gates. Ineligible prog
 
 Missing name, nonpositive/missing request, unresolved mandatory priority or unknown Overall AOP decision holds automatic funding. Blank decision fields stay Unassessed and do not alone invent eligibility or adverse decisions. Contain requires a source/reviewed condition for discretionary allocation.
 
-P3 programmes are exempt from the benefit requirement and the 5.0x review hold to ensure Change & Sustain demand is funded first without evidence friction.
+P3 programmes are exempt from the benefit requirement and the 10.0x review hold to ensure Change & Sustain demand is funded first without evidence friction.
 
-Default merit maxima are 50.0 Benefit, 25.0 Submitted Priority, 15.0 Captured Consequence, 10.0 Decision Band. Benefit tiers: below 1.0x = 0.0; at least 1.0x = 20.0; 2.0x = 30.0; 3.0x = 40.0; 5.0x = 50.0. Submitted Must Do = 25.0, Must Have = 18.0, Deprioritised = 5.0, blank/unrecognised = 0.0. Healthy = 10.0, Contain = 6.0, blank/other = 0.0.
+Default merit maxima are 40.0 Benefit, 25.0 Submitted Priority, 15.0 Captured Consequence, 10.0 Decision Band, 10.0 Payback. Five components with weights [40,25,15,10,10]. Benefit tiers: below 1.0x = 0.0; 1-3x = 15.0; 3-5x = 25.0; 5-7x = 35.0; 7x+ = 50.0. Hybrid benefit scoring: quantitative ratio first, then revenue/productivity block, then qualitative fallback (max 30 of 50 points). Payback tiers: <=1yr = 10.0; <=2yr = 8.0; <=3yr = 6.0; <=5yr = 4.0; >5yr/missing = 0.0. Submitted Must Do = 25.0, Must Have = 18.0, Deprioritised = 5.0, blank/unrecognised = 0.0. Healthy = 10.0, Contain = 6.0, blank/other = 0.0.
 
 Captured Consequence uses only Impact and Cost of Not Doing, Problem Statement and Scope. No evidence = 0.0; contextual evidence = 5.0; explicit harm plus affected activity/stakeholder = 10.0; that evidence plus quantified impact or enterprise reach = 15.0. A reviewed tier needs source evidence and an inline rationale.
 
@@ -37,10 +37,32 @@ Four presets: Optimal Segmentation (100% bucket P1/P3/P4, 0x carry), Protect Com
 
 ## Shared scenario state
 
-One shared scenario contains source/version, settings, reviews, overrides and event history. Three scenario types: Default (Vanilla, data-backed only), Leadership (manual adjustments logged), Conference (consolidated final position). Automatic results computed first; manual overrides applied afterwards.
+One shared scenario with settings, reviews, overrides, trade-offs and event history. Scenario types removed in v5.x. New Working Version performs a full reset: Optimal preset, empty overrides, empty reviews, empty trade-offs, cleared decision log. Automatic results computed first; manual overrides applied afterwards.
 
 Enterprise Wide and BU Led are independently editable views of the same portfolio. Finalise from One Portfolio. A finalised financial state is immutable; fork it to create a new draft. Changed-source overrides are held pending inline review.
 
+## ExCo accountability hierarchy (v5.2)
+
+16 ExCo members mapped to all 35 organisation values via `EXCO_HIERARCHY` and `ORG_TO_EXCO` engine constants. Every enriched row carries an `exco` field. The `excoOf()` function handles fuzzy matching.
+
+ExCo is a first-class filter dimension on all programme tabs (cascading ExCo->Org->Platform). ExCo grouping drives the Demand Split table (Tab 1) and Trade-off Cockpit (Tabs 3/4).
+
+## Hard/Soft benefit classification (v5.2)
+
+`classifyBenefit()` determines each programme's benefit class:
+- **Hard**: benefit > 0 AND area in {Revenue Increase, Productivity Savings, Cost Avoidance, Process simplification/efficiency gain}.
+- **Soft**: benefit > 0 AND area in {Compliance/Keeping the lights on, Security} or other areas.
+- Fields: `benefitClass`, `benefitClassLabel`, `benefitFlag`.
+- ALL benefit displays show Hard/Soft separately, never combined.
+
+## Total AOP protection (v5.2)
+
+Total AOP changes ONLY when the user manually edits the budget input field. The ExCo Trade-off Cockpit Apply button includes/excludes P4 programmes by merit score without modifying Total AOP. The "On top off AOP" KPI shows the delta between actual allocation and user-set budget.
+
+## ExCo Trade-off mechanics (v5.2)
+
+The Trade-off Cockpit (Tabs 3/4, below filters, default closed) shows per-ExCo leader: Requested, Funded, Gap, % Funded, Hard Benefits, Soft Benefits, Trade-off Budget input, Delta, Progs/Benefits impact. Apply includes/excludes P4 programmes ranked by merit. Reset clears all entered values. Negative deltas supported (enter target below current funded to exclude lowest-merit P4 programmes). All trade-off decisions are logged.
+
 ## Source data fields extracted
 
-The engine extracts 22 fields from the source workbook including three new fields added in v4.5: lfrYear (col K: LFR & Compliancy Year), lfrName (col L: LFR & Compliancy Name), baselined (col P: Carry Over Baselined). These enable the evidence-gated classification.
+The engine extracts 26 fields from the source workbook including fields added across v4.5-v5.2: lfrYear (col K: LFR & Compliancy Year), lfrName (col L: LFR & Compliancy Name), baselined (col P: Carry Over Baselined). v5.2 adds: exco, benefitClass, benefitClassLabel, benefitFlag. These enable the evidence-gated classification.

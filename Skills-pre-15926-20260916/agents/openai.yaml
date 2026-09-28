@@ -1,0 +1,4 @@
+interface:
+  display_name: "AOP Prioritization"
+  short_description: "Prioritize Philips AOP demand with traceable funding rules"
+  default_prompt: "Use $aop-prioritization to update the Philips AOP portfolio using the approved scoring, funding and scenario rules."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AOP 2027 Prioritization"
+  short_description: "Traceable AOP funding and CIO conference decisions"
+  default_prompt: "Use $aop-prioritization to review or update the AOP 2027 portfolio with the current source, shared rule engine and Function/EW then BU Led conference flow."

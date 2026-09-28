@@ -63,6 +63,7 @@ function normalize(workbook){
   const ix={item:locate(['item no.']),plan:locate(['planisware id']),org:locate(['organization setting demand [bu, region, coe]']),name:locate(['initiative name']),type:locate(['type']),newCarry:locate(['new initiative or carry-over']),category:locate(['category']),platform:locate(['leading it platform']),area:locate(['investment area']),cost:locate(['it investment requested 2027 [k€]','it investment requested 2027 [keur]']),benefit:locate(['quantified benefits (in k€)','quantified benefits (in keur)']),benefitDetails:locate(['quantified benefits (details)']),impact:locate(['impact and cost of not doing']),problem:locate(['problem statement']),scope:locate(['scope']),dependency:locate(['dependency','dependency (item no & explaination)']),overall:locate(['overall aop decision']),remarks:locate(['remarks / evidence'],false),lfrYear:locate(['lfr & compliancy year'],false),lfrName:locate(['lfr & compliancy (name)','lfr & compliancy name'],false),baselined:locate(['carry over baselined'],false),payback:locate(['payback period','payback','payback (years)'],false)};
   ix.band=locate(['decision band','waste'],true,i=>key(header[i])==='decision band'||key(sub[i]).includes('band'));
   ix.priority=locate(['priority'],true,i=>i<ix.problem);
+  const allocCols=[];if(key(sheetName)==='ew'){const usedIdxs=new Set(Object.values(ix));for(let ci=0;ci<header.length;ci++){if(usedIdxs.has(ci))continue;const hh=clean(header[ci]),sk=key(clean(sub[ci]||''));if(hh&&(sk==='%'||sk==='pct'||sk==='percent'||sk.includes('alloc%')||sk.includes('alloc %')))allocCols.push({buName:hh,colIdx:ci});}}
   const labels=header.map((h,i)=>(clean(h)||'Column '+(i+1))+(clean(sub[i])?' / '+clean(sub[i]):'')+' ['+col(i)+']');
   mappings.push({sheet:sh.name,fields:ix,sourceHeaders:labels});
   for(let i=3;i<sh.rows.length;i++){
@@ -77,6 +78,7 @@ function normalize(workbook){
    // Compare decision-relevant evidence only. Preserve the complete row separately for traceability.
    // This prevents formula-cache or unrelated source-column recalculation from holding valid decisions.
    r.fingerprint=materialFingerprint(r);
+   if(allocCols.length){const allocs={};for(const ac of allocCols){const pct=numberCell(row[ac.colIdx]??null);if(pct!==null&&pct>=0&&pct<=100)allocs[ac.buName]=round(pct);}if(Object.keys(allocs).length)r.allocations=allocs;}
    records.push(r);
   }
  }
@@ -491,7 +493,7 @@ window._v43sort=function(tid,val){
   // Find column index by keyword in header
   var ths=Array.from(tbl.querySelectorAll('thead th'));
   var idx=-1;
-  var keyMap={demand:'program demand',ops:'operations',total:'total it',benefit:'benefit',merit:'score',invest:'requested'};
+  var keyMap={demand:'program demand',ops:'operations',total:'total it',benefit:'benefit',merit:'score',invest:'requested',funded:'program funded',buled:'bu led',ew:'ew charges'};
   var searchTerm=(keyMap[key]||key).toLowerCase();
   for(var i=0;i<ths.length;i++){
     if(ths[i].textContent.toLowerCase().includes(searchTerm)){idx=i;break;}
@@ -575,16 +577,25 @@ function applyFilters(tid){
         [3,4].forEach(function(i){if(tc[i]&&tc[i].dataset.orig)tc[i].textContent=tc[i].dataset.orig;});
       }
     } else if(tid==='allocTbl'){
-      var visAllocF=0,visAllocO=0,visAllocT=0;
-      dataRows.forEach(function(r){if(r.style.display!=='none'){var c=r.querySelectorAll('td');visAllocF+=parseFloat((c[2]||{}).textContent)||0;var ot=(c[3]||{}).textContent||'';visAllocO+=ot==='—'?0:(parseFloat(ot)||0);visAllocT+=parseFloat((c[4]||{}).textContent)||0;}});
-      [1,2,3,4].forEach(function(i){if(tc[i]&&!tc[i].dataset.orig)tc[i].dataset.orig=tc[i].textContent;});
+      var visBU=0,visEW=0,visAllocOps=0,visAllocTot=0;
+      dataRows.forEach(function(r){if(r.style.display!=='none'){
+        visBU+=parseFloat(r.dataset.buled)||0;
+        visEW+=parseFloat(r.dataset.ew)||0;
+        visAllocOps+=parseFloat(r.dataset.ops)||0;
+        visAllocTot+=parseFloat(r.dataset.total)||0;
+      }});
+      var colBU=totalRow?totalRow.querySelector('[data-col="buled"]'):null;
+      var colEW=totalRow?totalRow.querySelector('[data-col="ew"]'):null;
+      var colAllocOps=totalRow?totalRow.querySelector('[data-col="ops"]'):null;
+      var colAllocTot=totalRow?totalRow.querySelector('[data-col="total"]'):null;
+      [colBU,colEW,colAllocOps,colAllocTot].forEach(function(c){if(c&&!c.dataset.orig)c.dataset.orig=c.textContent;});
       if(hasFilter){
-        tc[1].textContent=visCount+' of '+tc[1].dataset.orig;
-        tc[2].textContent=visAllocF.toFixed(1)+' of '+tc[2].dataset.orig;
-        tc[3].textContent=(visAllocO>0?visAllocO.toFixed(1):'0.0')+' of '+tc[3].dataset.orig;
-        tc[4].textContent=visAllocT.toFixed(1)+' of '+tc[4].dataset.orig;
+        if(colBU)colBU.textContent=visBU.toFixed(1)+' of '+(colBU.dataset.orig||'');
+        if(colEW)colEW.textContent=visEW.toFixed(1)+' of '+(colEW.dataset.orig||'');
+        if(colAllocOps)colAllocOps.textContent=visAllocOps.toFixed(1)+' of '+(colAllocOps.dataset.orig||'');
+        if(colAllocTot)colAllocTot.textContent=visAllocTot.toFixed(1)+' of '+(colAllocTot.dataset.orig||'');
       } else {
-        [1,2,3,4].forEach(function(i){if(tc[i]&&tc[i].dataset.orig)tc[i].textContent=tc[i].dataset.orig;});
+        [colBU,colEW,colAllocOps,colAllocTot].forEach(function(c){if(c&&c.dataset.orig)c.textContent=c.dataset.orig;});
       }
     } else {
       if(tc[1]){if(!tc[1].dataset.orig)tc[1].dataset.orig=tc[1].textContent;tc[1].textContent=hasFilter?visCount+' of '+tc[1].dataset.orig:tc[1].dataset.orig;}
@@ -944,11 +955,27 @@ new MutationObserver(function(muts){
     var orgD={};
     all.forEach(function(r){
       var k=r.org||'Unassigned';
-      if(!orgD[k])orgD[k]={count:0,demand:0,funded:0};
-      orgD[k].count++;
+      if(!orgD[k])orgD[k]={demand:0,buFunded:0,ewCharge:0};
       orgD[k].demand+=r.cost||0;
-      orgD[k].funded+=r.final||0;
+      if(r.stream==='bu')orgD[k].buFunded+=r.final||0;
     });
+    // Compute EW charges to BUs using allocation % columns (present in live consolidated workbook).
+    // When % columns are absent (older workbook), ewCharge stays 0 and a notice is shown instead.
+    var ewFundedRows=funded.filter(function(r){return r.stream==='ew';});
+    var hasAllocPct=ewFundedRows.some(function(r){return r.allocations&&Object.keys(r.allocations).length>0;});
+    var totalEWAlloc=ewFundedRows.reduce(function(s,r){return s+r.final;},0);
+    if(hasAllocPct){
+      ewFundedRows.forEach(function(r){
+        if(!r.allocations)return;
+        Object.keys(r.allocations).forEach(function(buName){
+          var pct=r.allocations[buName];
+          if(!(pct>0))return;
+          var strip=function(s){return s.toLowerCase().replace(/[^a-z0-9]/g,'');};
+          var matchKey=Object.keys(orgD).find(function(k){return strip(k).includes(strip(buName))||strip(buName).includes(strip(k));});
+          if(matchKey)orgD[matchKey].ewCharge+=Math.round(r.final*pct/100*1e6)/1e6;
+        });
+      });
+    }
 
     // Collect dominant platform per org for allocation filter
     var allocOrgPlat={};
@@ -963,40 +990,70 @@ new MutationObserver(function(muts){
       allocOrgPlat[k]=best;
     });
 
+    var OPS_TOTAL=469.7; // Comparable AOP2027 operations total M€
     var ah='<section class="panel" id="alloc-sec"><h2>Organisation IT Cost Allocation: Program + Operations</h2>';
-    ah+='<p class="muted" style="font-size:11px">What each Organisation will be charged: Program AOP allocation + Operations TCO.</p>';
+    // Finance QA — run inline when AOPDataQA is available
+    if(typeof AOPDataQA!=='undefined'&&AOPDataQA.validateFinance){
+      var fqa=AOPDataQA.validateFinance(aop.result,OPS_TOTAL);
+      ah+=AOPDataQA.renderFinanceQA(fqa);
+    }
+    if(!hasAllocPct&&totalEWAlloc>0){
+      ah+='<div class="qa-report" style="margin:4px 0 8px"><div class="qa-header"><span class="qa-badge qa-warn">EW Allocation % Missing</span><span class="qa-summary">Connect the live consolidated workbook to show per-BU EW charges. EW funded total: <strong>'+fmt(totalEWAlloc)+' M€</strong> shown as a summary line below.</span></div></div>';
+    }
+    ah+='<p class="muted" style="font-size:11px">BU Led: programs where this organisation is the requesting BU. '+(hasAllocPct?'EW Charges to BUs: EW-stream costs allocated using source percentage columns (Type 2 logic — amounts recalculate automatically when the prioritised total changes).':'')+' Operations from Comparable AOP2027 Bill of IT. Grand total = Operations AOP + Prioritised Programme AOP.</p>';
 
     // Filter bar (org + platform) + sort
     var allocFilterRows=Object.keys(orgD).filter(function(k){return orgD[k].demand>0||getOps(k).total>0;}).map(function(k){return {org:k,platform:allocOrgPlat[k]||''};});
-    ah+=buildFilterBar('allocTbl',allocFilterRows,[{key:'org',label:'Organisation'},{key:'platform',label:'Platform'}],
-      [{v:'funded-desc',l:'Program Funded (High→Low)'},{v:'ops-desc',l:'Operations (High→Low)'},{v:'total-desc',l:'Total IT (High→Low)'}]);
+    var sortOpts=[{v:'buled-desc',l:'BU Led (High→Low)'},{v:'buled-asc',l:'BU Led (Low→High)'}];
+    if(hasAllocPct){sortOpts.push({v:'ew-desc',l:'EW Charges (High→Low)'});sortOpts.push({v:'ew-asc',l:'EW Charges (Low→High)'});}
+    sortOpts.push({v:'ops-desc',l:'Operations (High→Low)'},{v:'total-desc',l:'Total IT Charge (High→Low)'});
+    ah+=buildFilterBar('allocTbl',allocFilterRows,[{key:'org',label:'Organisation'},{key:'platform',label:'Platform'}],sortOpts);
 
     ah+='<div class="tablebox"><table class="ao it" id="allocTbl"><thead><tr>';
-    ah+='<th>Organisation</th><th class="num">Programs</th><th class="num">Program Funded M€</th>';
-    ah+='<th class="num">Operations Cost M€</th><th class="num">Total IT Charge M€</th>';
+    ah+='<th>Organisation</th><th class="num">BU Led (M€)</th>';
+    if(hasAllocPct)ah+='<th class="num">EW Charges to BUs (M€)</th>';
+    ah+='<th class="num">Operations Cost (M€)</th><th class="num">Total IT Charge (M€)</th>';
     ah+='</tr></thead><tbody>';
 
     var entries=Object.entries(orgD).filter(function(e){
       return e[1].demand>0||getOps(e[0]).total>0;
     }).sort(function(a,b){
-      var ta=a[1].funded+getOps(a[0]).total;
-      var tb=b[1].funded+getOps(b[0]).total;
+      var ta=a[1].buFunded+a[1].ewCharge+getOps(a[0]).total;
+      var tb=b[1].buFunded+b[1].ewCharge+getOps(b[0]).total;
       return tb-ta;
     });
-    var gF=0,gO=0;
+    var gBU=0,gEW=0,gO=0;
     entries.forEach(function(e){
       var k=e[0],d=e[1];
       var opsCost=getOps(k).total;
-      var total=d.funded+opsCost;
-      gF+=d.funded;gO+=opsCost;
+      var total=d.buFunded+d.ewCharge+opsCost;
+      gBU+=d.buFunded;gEW+=d.ewCharge;gO+=opsCost;
       var plat=allocOrgPlat[k]||'';
-      ah+='<tr data-org="'+esc(k)+'" data-platform="'+esc(plat)+'"><td><strong>'+esc(k)+'</strong></td><td class="num">'+d.count+'</td>';
-      ah+='<td class="num">'+fmt(d.funded)+'</td><td class="num">'+(opsCost>0?fmt(opsCost):'—')+'</td>';
-      ah+='<td class="tc num">'+fmt(total)+'</td></tr>';
+      ah+='<tr data-org="'+esc(k)+'" data-platform="'+esc(plat)+'" data-buled="'+d.buFunded+'" data-ew="'+d.ewCharge+'" data-ops="'+opsCost+'" data-total="'+total+'">';
+      ah+='<td><strong>'+esc(k)+'</strong></td>';
+      ah+='<td class="num" data-col="buled">'+fmt(d.buFunded)+'</td>';
+      if(hasAllocPct)ah+='<td class="num" data-col="ew">'+(d.ewCharge>0?fmt(d.ewCharge):'—')+'</td>';
+      ah+='<td class="num" data-col="ops">'+(opsCost>0?fmt(opsCost):'—')+'</td>';
+      ah+='<td class="tc num" data-col="total">'+fmt(total)+'</td></tr>';
     });
-    ah+='<tr data-total="1" style="background:var(--lt);font-weight:700"><td>Grand Total</td><td class="num">'+entries.length+'</td>';
-    ah+='<td class="num">'+fmt(gF)+'</td><td class="num">469.7</td>';
-    ah+='<td class="tc num">'+fmt(gF+469.7)+'</td></tr>';
+    // Show EW total as a separate allocation line when per-BU % are not yet available
+    if(!hasAllocPct&&totalEWAlloc>0){
+      ah+='<tr style="background:#f0f4ff;font-style:italic"><td colspan="'+(hasAllocPct?4:3)+'">Enterprise-Wide allocation (per-BU split pending allocation % from live workbook)</td>';
+      ah+='<td class="num">'+fmt(totalEWAlloc)+'</td></tr>';
+    }
+    var gPrograms=gBU+(hasAllocPct?gEW:totalEWAlloc);
+    var gGrand=gPrograms+OPS_TOTAL;
+    // Reconciliation check: verify grand total = total IT AOP
+    var expectedGrand=OPS_TOTAL+totalAlloc;
+    var reconcileOk=Math.abs(gGrand-expectedGrand)<0.01;
+    var reconcileNote=reconcileOk?'':' ⚠ Reconciliation gap: '+Math.abs(gGrand-expectedGrand).toFixed(3)+' M€ — verify EW allocation % cover all funded EW programmes';
+    ah+='<tr data-total="1" style="background:var(--lt);font-weight:700">';
+    ah+='<td>Grand Total'+(reconcileOk?'':' <span style="color:var(--weak);font-size:11px" title="'+reconcileNote+'">⚠</span>')+'</td>';
+    ah+='<td class="num" data-col="buled">'+fmt(gBU)+'</td>';
+    if(hasAllocPct)ah+='<td class="num" data-col="ew">'+fmt(gEW)+'</td>';
+    ah+='<td class="num" data-col="ops">'+OPS_TOTAL+'</td>';
+    ah+='<td class="tc num" data-col="total">'+fmt(gGrand)+'</td></tr>';
+    if(!reconcileOk)ah+='<tr><td colspan="'+(hasAllocPct?5:4)+'" style="color:var(--weak);font-size:11px;padding:4px 8px">'+reconcileNote+'</td></tr>';
     ah+='</tbody></table></div></section>';
 
     // Insert before coverage
@@ -1009,5 +1066,74 @@ new MutationObserver(function(muts){
   });
 }).observe(document.getElementById('main')||document.body,{childList:true});
 
+})();
+
+// Finance QA harness — validates allocation reconciliation for ExCo review.
+// Injected after all other modules so it can wrap without changing existing code.
+window.AOPDataQA=window.AOPDataQA||{};
+(function(){
+var round=function(x){return Math.round((x+1e-10)*1e6)/1e6;};
+window.AOPDataQA.validateFinance=function(result,opsTotal){
+  var checks=[],add=function(n,sev,status,detail){checks.push({name:n,severity:sev,status:status,detail:detail});};
+  var rows=result.rows;
+  var ewF=rows.filter(function(r){return r.stream==='ew'&&r.final>0;});
+  var buF=rows.filter(function(r){return r.stream==='bu'&&r.final>0;});
+  var totalEW=round(ewF.reduce(function(s,r){return s+r.final;},0));
+  var totalBU=round(buF.reduce(function(s,r){return s+r.final;},0));
+  var programAlloc=result.totals.allocation;
+  var streamSum=round(totalEW+totalBU);
+  var streamOk=Math.abs(streamSum-programAlloc)<0.001;
+  add('EW + BU streams = Programme allocation','critical',streamOk?'PASS':'FAIL',
+    'EW '+totalEW.toFixed(3)+' + BU '+totalBU.toFixed(3)+' = '+streamSum.toFixed(3)+' M€ (expected '+programAlloc.toFixed(3)+')'+(streamOk?'':' — GAP: '+Math.abs(streamSum-programAlloc).toFixed(6)+' M€'));
+  var withPct=ewF.filter(function(r){return r.allocations&&Object.keys(r.allocations).length>0;});
+  add('EW allocation % present on funded programmes','warning',withPct.length>0?'PASS':'WARN',
+    ewF.length===0?'No funded EW programmes':withPct.length+' of '+ewF.length+' funded EW programmes have allocation % ('+Math.round(withPct.length/Math.max(ewF.length,1)*100)+'%)');
+  if(withPct.length>0){
+    var pctErrors=withPct.filter(function(r){
+      var s=Object.values(r.allocations).reduce(function(a,b){return a+b;},0);
+      return Math.abs(s-100)>1;
+    });
+    add('EW allocation % sums to 100% per programme','critical',pctErrors.length===0?'PASS':'FAIL',
+      pctErrors.length===0?'All '+withPct.length+' programmes sum to 100%':
+      pctErrors.length+' programme(s) with % not summing to 100%: '+
+      pctErrors.slice(0,5).map(function(r){var s=Object.values(r.allocations).reduce(function(a,b){return a+b;},0);return r.id+' (sum='+s.toFixed(1)+'%)';}).join(', '));
+    var distEW=round(withPct.reduce(function(s,r){var tot=Object.values(r.allocations).reduce(function(a,b){return a+b;},0);return s+r.final*(tot/100);},0));
+    var distOk=Math.abs(distEW-totalEW)<0.01;
+    add('EW charges distributed to BUs = total EW allocation','critical',distOk?'PASS':'WARN',
+      'Distributed '+distEW.toFixed(3)+' M€, EW funded '+totalEW.toFixed(3)+' M€'+(distOk?'':' — check all allocation % columns are mapped'));
+  }
+  if(typeof opsTotal==='number'&&isFinite(opsTotal)){
+    var grand=round(programAlloc+opsTotal);
+    add('Grand total = Programme AOP + Operations AOP','critical','PASS',
+      'Programme '+programAlloc.toFixed(3)+' + Operations '+opsTotal.toFixed(3)+' = '+grand.toFixed(3)+' M€');
+  } else {
+    add('Grand total validation','info','WARN','opsTotal not provided — pass the operations total M€ to validate');
+  }
+  var negFinal=rows.filter(function(r){return r.final<0;});
+  add('No negative funded amounts','critical',negFinal.length===0?'PASS':'FAIL',
+    negFinal.length===0?'All final amounts >= 0':negFinal.length+' row(s) have negative funded amounts');
+  var hasFail=checks.some(function(c){return c.status==='FAIL';});
+  var hasWarn=checks.some(function(c){return c.status==='WARN';});
+  var grandTotal=typeof opsTotal==='number'?round(programAlloc+opsTotal):null;
+  return {status:hasFail?'FAIL':hasWarn?'WARN':'PASS',checks:checks,totals:{buAlloc:totalBU,ewAlloc:totalEW,programAlloc:programAlloc,opsTotal:opsTotal||null,grandTotal:grandTotal}};
+};
+window.AOPDataQA.renderFinanceQA=function(qa){
+  if(!qa)return '';
+  var badge=qa.status==='PASS'?'qa-pass':qa.status==='WARN'?'qa-warn':'qa-fail';
+  var t=qa.totals;
+  var h='<div class="qa-report" style="margin:8px 0;padding:8px 12px;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0">';
+  h+='<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">';
+  h+='<span style="font-weight:700;padding:2px 8px;border-radius:4px;font-size:12px;'+(qa.status==='PASS'?'background:#d1fae5;color:#065f46':qa.status==='WARN'?'background:#fef3c7;color:#92400e':'background:#fee2e2;color:#991b1b')+'">Finance QA: '+qa.status+'</span>';
+  if(t.grandTotal!==null){h+='<span style="font-size:12px;color:#475569">Programme <strong>'+t.programAlloc.toFixed(1)+'</strong> M€ (BU <strong>'+t.buAlloc.toFixed(1)+'</strong> + EW <strong>'+t.ewAlloc.toFixed(1)+'</strong>) + Ops <strong>'+(t.opsTotal||0).toFixed(1)+'</strong> = Grand Total <strong>'+t.grandTotal.toFixed(1)+'</strong> M€</span>';}
+  h+='</div>';
+  h+='<details style="margin-top:6px"><summary style="font-size:11px;color:#64748b;cursor:pointer">'+qa.checks.filter(function(c){return c.status==='PASS';}).length+' passed · '+qa.checks.filter(function(c){return c.status==='WARN';}).length+' warnings · '+qa.checks.filter(function(c){return c.status==='FAIL';}).length+' failed (expand)</summary>';
+  h+='<table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:11px"><thead><tr style="background:#f1f5f9"><th style="padding:4px 8px;text-align:left">Check</th><th>Severity</th><th>Status</th><th style="text-align:left">Detail</th></tr></thead><tbody>';
+  qa.checks.forEach(function(c){
+    var bg=c.status==='PASS'?'#f0fdf4':c.status==='WARN'?'#fffbeb':'#fef2f2';
+    h+='<tr style="background:'+bg+'"><td style="padding:3px 8px">'+c.name+'</td><td style="text-align:center">'+c.severity+'</td><td style="text-align:center;font-weight:700">'+(c.status==='PASS'?'✓':c.status==='WARN'?'⚠':'✗')+' '+c.status+'</td><td style="padding:3px 8px">'+c.detail+'</td></tr>';
+  });
+  h+='</tbody></table></details></div>';
+  return h;
+};
 })();
 </script></body></html>

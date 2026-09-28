@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AOP2027 Modeler QA Suite</title>
+<style>
+:root{--dk:#00126e;--blue:#2563eb;--lt:#e6efff;--mist:#e5e7eb;--card:#fff;--border:#d1d5db;--text:#1e293b;--text2:#64748b;--text3:#94a3b8;--pass:#059669;--fail:#dc2626;--warn:#d97706;--bg:#f8fafc;--passbg:#dcfce7;--failbg:#fee2e2;--warnbg:#fef9c4;--nabg:#f3f4f6;--skbg:#ede9fe;--sk:#6d28d9}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);font-size:13px;line-height:1.5}
+header{background:var(--dk);color:#fff;padding:20px 32px}
+header h1{font-size:20px;font-weight:700;letter-spacing:.5px}
+header p{opacity:.7;font-size:12px;margin-top:4px}
+
+/* Reviewer bar */
+.reviewer-bar{background:#fff;border-bottom:2px solid var(--dk);padding:14px 32px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.reviewer-bar label{font-size:12px;font-weight:600;color:var(--dk)}
+.reviewer-bar input,.reviewer-bar select{padding:6px 12px;border:1px solid var(--border);border-radius:4px;font-size:12px;background:#fff}
+.reviewer-bar input[type=text]{width:200px}
+.reviewer-bar .spacer{flex:1}
+.reviewer-bar button{padding:7px 16px;border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:var(--dk);color:#fff}
+.reviewer-bar button:hover{opacity:.9}
+.reviewer-bar .btn-sec{background:#fff;color:var(--dk)}
+.reviewer-bar .btn-warn{background:var(--fail);border-color:var(--fail)}
+
+/* Progress bar */
+.progress-strip{padding:10px 32px;background:#fff;border-bottom:1px solid var(--mist);display:flex;gap:20px;align-items:center;font-size:12px}
+.progress-bar{flex:1;height:8px;background:var(--mist);border-radius:4px;overflow:hidden}
+.progress-fill{height:100%;background:var(--pass);border-radius:4px;transition:width .3s}
+.progress-stats span{font-weight:700}
+.progress-stats .s-pass{color:var(--pass)}.progress-stats .s-fail{color:var(--fail)}.progress-stats .s-warn{color:var(--warn)}.progress-stats .s-skip{color:var(--sk)}
+
+/* Tabs */
+.tabs{display:flex;gap:0;background:#fff;border-bottom:1px solid var(--mist);padding:0 32px;overflow-x:auto}
+.tabs button{padding:10px 16px;font-size:12px;font-weight:600;border:none;background:none;color:var(--text2);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;position:relative}
+.tabs button.active{color:var(--dk);border-bottom-color:var(--dk);background:var(--lt)}
+.tabs button:hover{background:var(--lt)}
+.tabs .tab-badge{position:absolute;top:4px;right:4px;width:8px;height:8px;border-radius:50%;display:none}
+.tabs .tab-badge.has-fail{display:block;background:var(--fail)}
+.tabs .tab-badge.all-done{display:block;background:var(--pass)}
+.tabs .tab-badge.partial{display:block;background:var(--warn)}
+
+/* Main */
+main{padding:24px 32px;max-width:1100px}
+section{display:none}section.active{display:block}
+.sec-intro{background:var(--lt);border:1px solid #c7d2fe;border-radius:8px;padding:14px 18px;margin-bottom:20px;font-size:12px;color:var(--dk)}
+.sec-intro strong{display:block;margin-bottom:4px;font-size:13px}
+
+/* Checkpoint */
+.checkpoint{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden;transition:border-color .2s}
+.checkpoint.status-pass{border-left:4px solid var(--pass)}
+.checkpoint.status-fail{border-left:4px solid var(--fail)}
+.checkpoint.status-partial{border-left:4px solid var(--warn)}
+.checkpoint.status-skip{border-left:4px solid var(--sk)}
+.cp-header{padding:14px 18px;display:flex;align-items:flex-start;gap:14px}
+.cp-num{font-size:11px;font-weight:700;color:var(--text3);min-width:28px;padding-top:1px}
+.cp-body{flex:1}
+.cp-title{font-weight:700;font-size:13px;color:var(--dk);margin-bottom:4px}
+.cp-desc{font-size:12px;color:var(--text2);line-height:1.5}
+.cp-expected{font-size:11px;color:var(--text3);margin-top:6px;padding:6px 10px;background:#f8fafc;border-radius:4px;border:1px solid var(--mist)}
+.cp-expected strong{color:var(--dk);font-size:11px}
+.cp-controls{display:flex;gap:6px;align-items:flex-start;flex-shrink:0;padding-top:2px}
+.cp-controls button{padding:5px 12px;border:1px solid var(--border);border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;background:#fff;color:var(--text2);transition:all .15s}
+.cp-controls button:hover{background:var(--lt)}
+.cp-controls button.sel-pass{background:var(--passbg);color:var(--pass);border-color:var(--pass)}
+.cp-controls button.sel-fail{background:var(--failbg);color:var(--fail);border-color:var(--fail)}
+.cp-controls button.sel-partial{background:var(--warnbg);color:var(--warn);border-color:var(--warn)}
+.cp-controls button.sel-skip{background:var(--skbg);color:var(--sk);border-color:var(--sk)}
+.cp-notes{padding:0 18px 14px 60px}
+.cp-notes textarea{width:100%;padding:8px 12px;border:1px solid var(--border);border-radius:4px;font-size:12px;font-family:inherit;resize:vertical;min-height:48px;line-height:1.5}
+.cp-notes textarea:focus{border-color:var(--blue);outline:none}
+.cp-notes textarea::placeholder{color:var(--text3)}
+
+/* Summary */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:24px}
+.sum-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center}
+.sum-card .num{font-size:22px;font-weight:800}.sum-card label{font-size:11px;color:var(--text2);display:block;margin-top:4px}
+.sum-card.sc-pass .num{color:var(--pass)}.sum-card.sc-fail .num{color:var(--fail)}.sum-card.sc-warn .num{color:var(--warn)}.sum-card.sc-skip .num{color:var(--sk)}
+
+/* Collation view */
+.collation-card{background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:16px;overflow:hidden}
+.collation-card h3{background:var(--dk);color:#fff;padding:10px 16px;font-size:13px;font-weight:600}
+.collation-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.collation-tbl th{background:#f1f5f9;padding:8px 12px;text-align:left;font-weight:600;font-size:11px;color:var(--dk)}
+.collation-tbl td{padding:7px 12px;border-bottom:1px solid var(--mist);vertical-align:top}
+.collation-tbl tr:nth-child(even){background:#fafbfd}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700}
+.tag-pass{background:var(--passbg);color:var(--pass)}.tag-fail{background:var(--failbg);color:var(--fail)}.tag-partial{background:var(--warnbg);color:var(--warn)}.tag-skip{background:var(--skbg);color:var(--sk)}.tag-none{background:var(--nabg);color:var(--text3)}
+
+footer{text-align:center;padding:20px;color:var(--text3);font-size:11px;border-top:1px solid var(--mist);margin-top:30px}
+@media print{.reviewer-bar,.tabs,.cp-controls,.progress-strip{display:none!important}section{display:block!important}.cp-notes textarea{border:none;background:var(--lt);min-height:auto}header{padding:10px 16px}}
+</style>
+</head>
+<body>
+
+<header>
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>
+<h1>AOP2027 Modeler QA Suite</h1>
+<p>Manual validation checklist for the IT Portfolio Scenario Modeller. Review each checkpoint, mark status, add notes. Export and share your review.</p>
+</div>
+<a href="file:///C:/Users/320126040/Documents/Codex/AOP2027/AOP%202027%20Demand/AOP2027-Data-Extract.html" target="_blank" style="background:#fff;color:var(--dk);padding:8px 18px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;border:2px solid rgba(255,255,255,.3)">Open Data Extract</a>
+</div>
+</header>
+
+<div class="reviewer-bar">
+<label>Reviewer</label><input type="text" id="reviewer-name" placeholder="Your name" oninput="save()">
+<label>Date</label><input type="date" id="review-date" oninput="save()">
+<label>Version</label>
+<select id="review-version" onchange="save()">
+<option value="v5.2.1">v5.2.1 (Scenario Modeller)</option>
+<option value="v5.2.0">v5.2.0</option>
+<option value="v4.7">v4.7 (One Portfolio)</option>
+<option value="other">Other</option>
+</select>
+<div class="spacer"></div>
+<button class="btn-sec" onclick="importReview()">Import Review</button>
+<button onclick="exportReview()">Export Review</button>
+<button class="btn-sec" onclick="exportCSV()">Export CSV</button>
+<button class="btn-warn" onclick="clearAll()" title="Reset all checkpoints">Reset</button>
+</div>
+
+<div class="progress-strip">
+<span>Progress:</span>
+<div class="progress-bar"><div class="progress-fill" id="pbar" style="width:0%"></div></div>
+<span class="progress-stats" id="pstats"></span>
+</div>
+
+<div class="tabs" id="tabs"></div>
+<main id="main"></main>
+<footer>AOP2027 Modeler QA Suite — Export your completed review as JSON or CSV and share with the team. <a href="file:///C:/Users/320126040/Documents/Codex/AOP2027/AOP%202027%20Demand/AOP2027-Data-Extract.html" target="_blank" style="color:var(--blue)">Open Data Extract</a></footer>
+
+<input type="file" id="file-input" accept=".json" style="display:none" onchange="handleImport(event)">
+
+<script>
+const esc=s=>s==null?'':String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const STORE_KEY='aop2027-human-qa';
+
+const SECTIONS=[
+{id:'overview',tab:'Summary',intro:'Review overall dashboard state. Open the modeller and compare these high-level numbers.',checks:[
+  {title:'Page loads without errors',desc:'Open the dashboard HTML in a browser. No console errors, no blank sections.',expected:'All tabs render. Console shows no red errors.'},
+  {title:'Version number visible',desc:'Check the version label in the header or footer matches the file name.',expected:'Version string matches (e.g. v5.2.1).'},
+  {title:'KPI row renders correctly',desc:'Tab 1 (Demand Overview): all KPI tiles show values with correct labels and M€ units.',expected:'Total IT AOP, Program Demand, Operations, IT AOP 2026 all show numeric values.'},
+  {title:'EW total = 111.7 M€',desc:'Tab 1 or Summary: Enterprise Wide total demand.',expected:'111.7 M€ (±0.1). Cross-check with Data Extract.'},
+  {title:'BU total = 170.6 M€',desc:'Tab 1 or Summary: BU Led total demand.',expected:'170.6 M€ (±0.1). Cross-check with Data Extract.'},
+  {title:'Programme total = 282.3 M€',desc:'Sum of EW + BU demand across the dashboard.',expected:'282.3 M€ (±0.1). Matches Data Extract.'},
+  {title:'Operations 2027 = 469.7 M€',desc:'Operations tab or KPI tile.',expected:'469.7 M€ (±0.1).'},
+  {title:'Programme count = 523',desc:'Total items across EW (180) + BU (343).',expected:'523 total. Verify on scenario or demand table row count.'}
+]},
+{id:'scenario',tab:'Scenario Tab',intro:'Tab 2 — Scenario controls, levers, presets, bubble chart. Test interactivity.',checks:[
+  {title:'Default preset loads (Optimal Segmentation)',desc:'On page load / fresh session, the Optimal Segmentation preset is active (blue button).',expected:'Optimal button highlighted. Budget = 100 M€. Merit = 45.'},
+  {title:'Budget input works',desc:'Change Total AOP to 80. Observe funded count and allocation update.',expected:'Allocation decreases. Funded count drops. No errors.'},
+  {title:'Tolerance slider works',desc:'Set tolerance to 5%. Allocation can now exceed budget by up to 5%.',expected:'Allocation ≤ budget × 1.05.'},
+  {title:'Merit floor changes funding',desc:'Change merit from 45 to 0. More Stage 3 items should become funded.',expected:'Funded count increases. Change to 90 — count decreases.'},
+  {title:'Lever 1 (LFR) adjustable',desc:'Adjust the LFR allocation slider/input. Stage 0 allocation should change.',expected:'Stage 0 allocation matches lever setting. No console errors.'},
+  {title:'Lever 3 (Sustain) basis switch',desc:'Switch Sustain between bucket / AOP / amount modes.',expected:'Allocation amount adjusts correctly. No NaN or blank values.'},
+  {title:'Lever 4 (Value) adjustable',desc:'Change Value allocation. Stage 3 funding should respond.',expected:'Stage 3 allocation decreases with lower value allocation.'},
+  {title:'Protect preset',desc:'Click "Protect commitments" preset button.',expected:'Carry threshold = 2. Value = 10% AOP. Settings update in all levers.'},
+  {title:'Evidence preset',desc:'Click "Tighten carryover evidence" preset button.',expected:'Carry = 3. Sustain = 75% bucket. Value = 15% AOP.'},
+  {title:'Capacity preset',desc:'Click "Release sustain capacity" preset button.',expected:'LFR = 44%. Sustain = 75%. Value = 20% AOP.'},
+  {title:'Bubble chart renders',desc:'Chart appears with items plotted. Axes labelled. Legend visible.',expected:'Coloured circles by stage. Hover shows tooltip with item details.'},
+  {title:'Bubble chart Y-axis toggle',desc:'If toggle exists, switch between Requested and Benefits Y-axis.',expected:'Chart updates. No overlap issues. Legend adjusts.'},
+  {title:'Weights editable',desc:'Change Benefit weight from 40 to 50, reduce another. Apply.',expected:'Weights sum to 100. Scores recalculate. Rankings may shift.'},
+  {title:'Undo works',desc:'After making a change, click Undo.',expected:'Previous state restored. Events log shows undo entry.'}
+]},
+{id:'ew-tab',tab:'EW Stream',intro:'Tab 3 — Enterprise Wide programmes. Check table, filters, trade-off, scoring.',checks:[
+  {title:'EW table shows 180 rows',desc:'Count programme rows in the EW table (excluding header/total).',expected:'180 rows. Total row at bottom.'},
+  {title:'EW requested total = 111.7 M€',desc:'Check the Total row or KPI for requested demand.',expected:'111.7 M€ (±0.1).'},
+  {title:'Filters work (ExCo → Org → Platform)',desc:'Select an ExCo leader. Org dropdown should narrow. Platform narrows further.',expected:'Cascading filters. Row count updates. Totals update.'},
+  {title:'Filter clears correctly',desc:'Click "Clear All" or deselect all filters.',expected:'Full 180 rows restored. Totals return to full values.'},
+  {title:'Programme detail on row click',desc:'Click or hover on a programme row. Detail/expand should show.',expected:'Expanded view shows scoring breakdown, evidence, status.'},
+  {title:'Funding status column',desc:'Check that funded programmes show green, not-funded show red/grey.',expected:'Colours consistent. Partial scope shows amber.'},
+  {title:'Manual include/exclude',desc:'Select an unfunded programme. Include it manually.',expected:'Status changes to Funded. Total allocation increases.'},
+  {title:'Manual exclude a funded item',desc:'Select a funded programme. Exclude it.',expected:'Status changes to Excluded. Total allocation decreases.'},
+  {title:'Trade-off cockpit opens',desc:'Enter a target budget for an ExCo leader in the trade-off panel.',expected:'Delta calculated. Impact preview shows +/- programmes.'},
+  {title:'Trade-off Apply',desc:'Click Apply on the trade-off panel.',expected:'Programmes included/excluded. Totals update. No console errors.'},
+  {title:'Summary line below chart',desc:'Check "X / Y Programmes funded for N M€..." text.',expected:'Numbers match filter state. Updates on filter change.'},
+  {title:'Benefits columns (Hard/Soft)',desc:'Check the Hard Benefits and Soft Benefits columns or KPI.',expected:'Hard = financial (Revenue, Productivity, Cost Avoidance). Soft = qualitative.'}
+]},
+{id:'bu-tab',tab:'BU Stream',intro:'Tab 4 — BU Led programmes. Same depth as EW, verify BU-specific fields.',checks:[
+  {title:'BU table shows 343 rows',desc:'Count programme rows in the BU table.',expected:'343 rows. Total row at bottom.'},
+  {title:'BU requested total = 170.6 M€',desc:'Check the Total row or KPI for requested demand.',expected:'170.6 M€ (±0.1).'},
+  {title:'Payback column present',desc:'BU items show Payback field (not RoI/LFR which are EW-only).',expected:'Payback column visible. Values shown where available.'},
+  {title:'Filters work on BU tab',desc:'Apply ExCo / Org / Platform filters.',expected:'Cascading correctly. Row count and totals update.'},
+  {title:'BU organisations distinct from EW',desc:'Some orgs appear only in BU (e.g. Greater China, regional orgs).',expected:'Org filter shows BU-specific organisations.'},
+  {title:'Stage distribution visible',desc:'Stage column or colour coding shows Stage 2/3 assignments.',expected:'Most BU items in Stage 2 (Sustain) or Stage 3 (Value).'},
+  {title:'Manual override on BU item',desc:'Include/exclude a BU programme. Check it persists across tabs.',expected:'Override persists when switching to Overview or Scenario tab.'},
+  {title:'Trade-off on BU tab',desc:'Enter trade-off values for BU stream ExCo leaders.',expected:'Impact preview correct. Apply works without errors.'}
+]},
+{id:'ops-tab',tab:'Operations Tab',intro:'Tab 5 — Operations services, TCO by organisation, service catalog.',checks:[
+  {title:'Operations KPIs correct',desc:'Total 2027: 469.7 M€, 2026 Run-Rate: 470.7 M€, Δ: -1.0 M€.',expected:'All 3 KPI values match. Own/Regions/Functions split shown.'},
+  {title:'TCO table renders',desc:'Organisation hierarchy table with parent BUs and sub-orgs.',expected:'7 parent BUs with expandable sub-orgs. All columns populated.'},
+  {title:'TCO expand/collapse',desc:'Click a parent BU row. Sub-orgs should expand below.',expected:'Sub-org rows appear. Costs sum to parent row total.'},
+  {title:'TCO deltas coloured correctly',desc:'Positive delta = red, negative = green, zero = neutral.',expected:'Colour matches sign. No incorrect colours.'},
+  {title:'Service catalog table',desc:'167 services listed with Service ID, dept, platform, costs.',expected:'167 rows. Cost 2026 and 2027 columns populated.'},
+  {title:'Platform filter on operations',desc:'Filter by Platform. Services and TCO rows filter consistently.',expected:'Both tables filter to same platform.'},
+  {title:'Service cost sort',desc:'Sort services by Cost 2027 descending.',expected:'Highest cost service first. Numbers decrease down the table.'},
+  {title:'All prices 1 decimal',desc:'Scan M€ columns across Operations tab.',expected:'All prices show exactly 1 decimal place (e.g. 49.1, not 49.12345).'}
+]},
+{id:'overview-tab',tab:'One Portfolio (Tab 6)',intro:'Tab 6 — Grand total view, export functionality, finalisation.',checks:[
+  {title:'Grand total = Programme + Operations',desc:'Total IT AOP = Programme AOP (funded) + Operations AOP.',expected:'Sum matches. Shown in KPI tile.'},
+  {title:'Programme/Operations split shown',desc:'KPI or summary shows F&R and BU split of Programme AOP.',expected:'"F&R X | BU Y M€" format. Values sum to Programme total.'},
+  {title:'Funded programme count matches',desc:'Count of funded programmes shown in KPI.',expected:'Matches count from Scenario tab.'},
+  {title:'Export full portfolio',desc:'Click export. Download an Excel file. Open it.',expected:'.xlsx file downloads. Contains 4+ sheets (Summary, Portfolio, Scoring, Settings).'},
+  {title:'Excel totals match dashboard',desc:'In exported Excel, check Programme total and funded amount.',expected:'Exact match with dashboard values.'},
+  {title:'Finalise scenario',desc:'Click "Finalise scenario" button.',expected:'Status changes to Finalised. Further edits blocked (except Fork).'},
+  {title:'New working version',desc:'After finalising, click "New working version".',expected:'Resets to Draft. Optimal preset. All overrides cleared.'},
+  {title:'Portable JSON export/import',desc:'Export portable scenario JSON. Import it in a fresh session.',expected:'All settings, overrides, reviews restored exactly.'}
+]},
+{id:'scoring-val',tab:'Scoring Validation',intro:'Verify scoring logic produces correct results. Compare with Data Extract scoring tab.',checks:[
+  {title:'Top scorer matches Data Extract',desc:'Open Data Extract Scoring tab. Find the highest-scored item. Check the same item in the modeller.',expected:'Same ID has the same total score (within 0.1).'},
+  {title:'Score breakdown visible',desc:'Expand a programme. Check the 5 scoring components are shown.',expected:'Benefit, Priority, Consequence, Band, Payback — all shown with raw + weighted values.'},
+  {title:'Must Do → Priority 25',desc:'Find a "Must Do" programme. Check priority score component.',expected:'Raw = 25, Weighted = 25.0 (full weight).'},
+  {title:'Benefit/RoI scoring correct',desc:'Find an item with known RoI (e.g. 5.0x). Check benefit score.',expected:'5.0x → raw 35. Cross-check Data Extract.'},
+  {title:'Stage 0 items always funded',desc:'In any budget > 0 scenario, all Stage 0 (Legal/Compliance) items should be funded.',expected:'12 Stage 0 items all show Funded status.'},
+  {title:'Stage 3 merit floor applies',desc:'Items below merit floor (default 45) in Stage 3 should show "Below advanced merit floor" hold.',expected:'Held items not funded unless manually included.'},
+  {title:'Qualitative benefit items scored',desc:'Find an item with no quantitative benefit but text evidence. Check scoring.',expected:'Qualitative tier shown (general/specific/quantified-non-financial). Points ≤ 30.'},
+  {title:'Decision Band scoring',desc:'Find a "Healthy" item (10 pts) and a "Contain" item (6 pts). Verify.',expected:'Healthy → raw 10. Contain → raw 6. Blank → 0.'}
+]},
+{id:'mapping-val',tab:'Mapping & Data',intro:'Verify platform mappings, organisation hierarchy, and data consistency.',checks:[
+  {title:'All platforms canonical',desc:'Check platform column/filter across tabs. No raw "IT-*" prefixed names.',expected:'Only canonical names: Commercial IT, Infrastructure Services, etc.'},
+  {title:'Platform filter consistent across tabs',desc:'Select "Innovation and Digital" on Tab 3. Check same platform on Tab 4, Tab 5.',expected:'Same items/services appear under this platform everywhere.'},
+  {title:'ExCo mapping complete',desc:'Every organisation maps to an ExCo leader. No "Unknown" or blank ExCo.',expected:'All 35 orgs mapped. Filter by ExCo shows expected organisations.'},
+  {title:'TCO sub-org → data key correct',desc:'Expand a TCO parent. Sub-org names match expected (CT/AMI, MR, ULS, etc.).',expected:'Sub-orgs match Data Extract SUBORG_KEYS mapping.'},
+  {title:'Cross-tab organisation totals',desc:'Sum of Org X demand on EW + BU tabs should match Org X total on demand overview.',expected:'Per-org totals reconcile within 0.1 M€.'},
+  {title:'No missing platforms',desc:'Check if any programme has blank or "Not supplied" platform.',expected:'Count matches Data Extract. Any blanks are known/expected.'},
+  {title:'CCB exceptions in Stage 0',desc:'EW-11, EW-65, EW-71 are all in Stage 0 (Legal & Compliance).',expected:'All 3 present in Stage 0 regardless of other fields.'},
+  {title:'Benefits Hard/Soft classification',desc:'Investment areas "Revenue Increase", "Productivity Savings", "Cost Avoidance" → Hard. Others → Soft.',expected:'Classification matches throughout EW and BU tables.'}
+]},
+{id:'ux-edge',tab:'UX & Edge Cases',intro:'User experience, responsiveness, visual polish, and boundary conditions.',checks:[
+  {title:'Tab navigation works',desc:'Click each tab (1-6). Content switches. Active tab highlighted.',expected:'All 6 tabs switch correctly. No blank or broken tab.'},
+  {title:'No visual overflow',desc:'At default window size (1440px), no horizontal scrollbar on any tab.',expected:'Content fits. Tables have internal scroll if needed.'},
+  {title:'Dark text on white background readable',desc:'All text has sufficient contrast. No light-grey on white issues.',expected:'Body text clear. Labels readable. Numbers crisp.'},
+  {title:'Filter dropdowns close on selection',desc:'Open a filter. Select an option. Dropdown should auto-close.',expected:'Filter closes after selection.'},
+  {title:'Zero-cost items disabled',desc:'Items with cost = 0 or null should not be includable.',expected:'Checkbox/button disabled. No accidental funding of zero-cost items.'},
+  {title:'Negative delta formatting',desc:'Where Δ values appear (TCO, operations), negatives show green, positives red.',expected:'Colour convention consistent everywhere.'},
+  {title:'Sorting works on tables',desc:'Click a column header. Rows reorder correctly.',expected:'Ascending/descending toggle. Numeric sort on number columns.'},
+  {title:'Browser back/forward safe',desc:'Navigate away and return. Session state preserved.',expected:'Scenario, overrides, filters all restored.'},
+  {title:'Large text in cells truncated',desc:'Long programme names or descriptions truncated with ellipsis.',expected:'Tooltip shows full text on hover. No table layout break.'},
+  {title:'Print layout',desc:'Open print preview (Ctrl+P). Check layout.',expected:'Reasonable layout. Controls hidden. Data tables readable.'}
+]},
+{id:'feedback',tab:'Overall Feedback',intro:'Provide your overall assessment, top issues, recommendations, and confidence rating. This section is included in all exports.',checks:[
+  {title:'Overall quality rating',desc:'Rate the overall quality and readiness of the modeller on a scale. Use notes for your rating: Excellent / Good / Adequate / Needs Work / Not Ready.',expected:'A clear overall verdict with justification.'},
+  {title:'Top 3 issues found',desc:'Summarise the most critical issues you encountered during this review. Reference the section and checkpoint number.',expected:'Prioritised list of defects or concerns, most critical first.'},
+  {title:'Data accuracy assessment',desc:'Are the numbers, totals, and calculations correct? Did anything not match the Data Extract?',expected:'Statement on whether financial data is trustworthy for ExCo presentation.'},
+  {title:'Usability assessment',desc:'How intuitive are the controls, filters, and navigation? Any confusing workflows?',expected:'Feedback on user experience from a first-time or occasional user perspective.'},
+  {title:'Missing features or gaps',desc:'Is anything missing that you expected to see? Any functionality gaps for the intended audience?',expected:'List of desired features or information not currently available.'},
+  {title:'Recommendations for next iteration',desc:'What should be prioritised for the next version? Quick wins vs. larger improvements.',expected:'Actionable recommendations with rough priority (high/medium/low).'}
+]}
+];
+
+let state={reviewer:'',date:'',version:'v5.2.1',checks:{}};
+
+function initState(){
+  const saved=localStorage.getItem(STORE_KEY);
+  if(saved)try{state=JSON.parse(saved);}catch(e){}
+  document.getElementById('reviewer-name').value=state.reviewer||'';
+  document.getElementById('review-date').value=state.date||new Date().toISOString().slice(0,10);
+  document.getElementById('review-version').value=state.version||'v5.2.1';
+  if(!state.checks)state.checks={};
+}
+
+function save(){
+  state.reviewer=document.getElementById('reviewer-name').value;
+  state.date=document.getElementById('review-date').value;
+  state.version=document.getElementById('review-version').value;
+  SECTIONS.forEach(sec=>{
+    sec.checks.forEach((c,i)=>{
+      const id=sec.id+'-'+i;
+      const note=document.getElementById('note-'+id);
+      if(note)state.checks[id]={...state.checks[id],note:note.value};
+    });
+  });
+  localStorage.setItem(STORE_KEY,JSON.stringify(state));
+  updateProgress();
+  updateTabBadges();
+}
+
+function setStatus(secId,idx,status){
+  const id=secId+'-'+idx;
+  state.checks[id]=state.checks[id]||{};
+  state.checks[id].status=state.checks[id].status===status?'':status;
+  save();
+  renderCheckpoint(secId,idx);
+}
+
+function renderTabs(){
+  const tabsEl=document.getElementById('tabs');
+  const mainEl=document.getElementById('main');
+  let tabH='',secH='';
+  SECTIONS.forEach((sec,si)=>{
+    tabH+='<button data-tab="'+sec.id+'" '+(si===0?'class="active"':'')+' onclick="switchTab(\''+sec.id+'\')">'+esc(sec.tab)+' <span class="tab-badge" id="badge-'+sec.id+'"></span></button>';
+  });
+  tabsEl.innerHTML=tabH;
+  SECTIONS.forEach((sec,si)=>{
+    secH+='<section id="sec-'+sec.id+'" '+(si===0?'class="active"':'')+'>';
+    secH+='<div class="sec-intro"><strong>'+esc(sec.tab)+'</strong>'+esc(sec.intro)+'</div>';
+    sec.checks.forEach((c,i)=>{
+      const id=sec.id+'-'+i;
+      secH+='<div class="checkpoint" id="cp-'+id+'">';
+      secH+='<div class="cp-header">';
+      secH+='<span class="cp-num">'+(i+1)+'</span>';
+      secH+='<div class="cp-body"><div class="cp-title">'+esc(c.title)+'</div><div class="cp-desc">'+esc(c.desc)+'</div>';
+      secH+='<div class="cp-expected"><strong>Expected:</strong> '+esc(c.expected)+'</div></div>';
+      secH+='<div class="cp-controls">';
+      secH+='<button id="btn-pass-'+id+'" onclick="setStatus(\''+sec.id+'\','+i+',\'pass\')">Pass</button>';
+      secH+='<button id="btn-fail-'+id+'" onclick="setStatus(\''+sec.id+'\','+i+',\'fail\')">Fail</button>';
+      secH+='<button id="btn-partial-'+id+'" onclick="setStatus(\''+sec.id+'\','+i+',\'partial\')">Partial</button>';
+      secH+='<button id="btn-skip-'+id+'" onclick="setStatus(\''+sec.id+'\','+i+',\'skip\')">Skip</button>';
+      secH+='</div></div>';
+      const isFeedback=sec.id==='feedback';
+      secH+='<div class="cp-notes"><textarea id="note-'+id+'" placeholder="'+(isFeedback?'Enter your detailed feedback here...':'Notes, observations, evidence...')+'" style="'+(isFeedback?'min-height:100px':'')+'" oninput="save()"></textarea></div>';
+      secH+='</div>';
+    });
+    secH+='</section>';
+  });
+  mainEl.innerHTML=secH;
+  restoreState();
+}
+
+function restoreState(){
+  SECTIONS.forEach(sec=>{
+    sec.checks.forEach((c,i)=>{
+      const id=sec.id+'-'+i;
+      const d=state.checks[id];
+      if(d){
+        if(d.note)document.getElementById('note-'+id).value=d.note;
+        if(d.status)renderCheckpoint(sec.id,i);
+      }
+    });
+  });
+  updateProgress();
+  updateTabBadges();
+}
+
+function renderCheckpoint(secId,idx){
+  const id=secId+'-'+idx;
+  const d=state.checks[id]||{};
+  const el=document.getElementById('cp-'+id);
+  el.className='checkpoint'+(d.status?' status-'+d.status:'');
+  ['pass','fail','partial','skip'].forEach(s=>{
+    const btn=document.getElementById('btn-'+s+'-'+id);
+    btn.className=d.status===s?'sel-'+s:'';
+  });
+}
+
+function switchTab(id){
+  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.tabs button[data-tab="'+id+'"]').classList.add('active');
+  document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+}
+
+function updateProgress(){
+  let total=0,done=0,pass=0,fail=0,partial=0,skip=0;
+  SECTIONS.forEach(sec=>{
+    sec.checks.forEach((c,i)=>{
+      total++;const d=state.checks[sec.id+'-'+i];
+      if(d&&d.status){done++;if(d.status==='pass')pass++;if(d.status==='fail')fail++;if(d.status==='partial')partial++;if(d.status==='skip')skip++;}
+    });
+  });
+  const pct=total?Math.round(done/total*100):0;
+  document.getElementById('pbar').style.width=pct+'%';
+  document.getElementById('pbar').style.background=fail>0?'var(--fail)':'var(--pass)';
+  document.getElementById('pstats').innerHTML='<span class="s-pass">'+pass+' pass</span> · <span class="s-fail">'+fail+' fail</span> · <span class="s-warn">'+partial+' partial</span> · <span class="s-skip">'+skip+' skip</span> · '+done+'/'+total+' ('+pct+'%)';
+}
+
+function updateTabBadges(){
+  SECTIONS.forEach(sec=>{
+    let total=sec.checks.length,done=0,fails=0;
+    sec.checks.forEach((c,i)=>{const d=state.checks[sec.id+'-'+i];if(d&&d.status){done++;if(d.status==='fail')fails++;}});
+    const badge=document.getElementById('badge-'+sec.id);
+    badge.className='tab-badge';
+    if(fails>0)badge.classList.add('has-fail');
+    else if(done===total)badge.classList.add('all-done');
+    else if(done>0)badge.classList.add('partial');
+  });
+}
+
+function buildDetailedLog(){
+  const log={
+    meta:{tool:'AOP2027 Modeler QA Suite',exportedAt:new Date().toISOString(),reviewer:state.reviewer||'',date:state.date||'',version:state.version||'',dataExtract:'file:///C:/Users/320126040/Documents/Codex/AOP2027/AOP%202027%20Demand/AOP2027-Data-Extract.html'},
+    summary:{total:0,reviewed:0,pass:0,fail:0,partial:0,skip:0,pending:0,completionPct:0},
+    sections:[],
+    defects:[],
+    overallFeedback:{}
+  };
+  SECTIONS.forEach(sec=>{
+    const section={id:sec.id,tab:sec.tab,description:sec.intro,checks:[],counts:{pass:0,fail:0,partial:0,skip:0,pending:0}};
+    sec.checks.forEach((c,i)=>{
+      const id=sec.id+'-'+i;
+      const d=state.checks[id]||{};
+      const status=d.status||'pending';
+      const entry={number:i+1,title:c.title,description:c.desc,expected:c.expected,status:status,notes:d.note||''};
+      section.checks.push(entry);
+      section.counts[status]++;
+      log.summary.total++;
+      if(status!=='pending'){log.summary.reviewed++;log.summary[status]++;}
+      else log.summary.pending++;
+      if(status==='fail'||status==='partial'){
+        log.defects.push({section:sec.tab,checkpoint:i+1,title:c.title,severity:status==='fail'?'FAIL':'PARTIAL',expected:c.expected,notes:d.note||''});
+      }
+      if(sec.id==='feedback'&&d.note){log.overallFeedback[c.title]=d.note;}
+    });
+    log.sections.push(section);
+  });
+  log.summary.completionPct=log.summary.total?Math.round(log.summary.reviewed/log.summary.total*100):0;
+  log.defects.sort((a,b)=>a.severity==='FAIL'&&b.severity!=='FAIL'?-1:a.severity!=='FAIL'&&b.severity==='FAIL'?1:0);
+  return log;
+}
+
+function exportReview(){
+  const log=buildDetailedLog();
+  const blob=new Blob([JSON.stringify(log,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  const reviewer=(state.reviewer||'reviewer').replace(/\s+/g,'-').toLowerCase();
+  a.download='AOP2027-QA-Review-'+reviewer+'-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+}
+
+function exportCSV(){
+  const q=s=>('"'+String(s||'').replace(/"/g,'""')+'"');
+  let rows=[['Section','#','Checkpoint','Description','Expected','Status','Severity','Notes','Reviewer','Date','Version']];
+  SECTIONS.forEach(sec=>{
+    sec.checks.forEach((c,i)=>{
+      const d=state.checks[sec.id+'-'+i]||{};
+      const status=d.status||'pending';
+      const severity=status==='fail'?'CRITICAL':status==='partial'?'MINOR':status==='pass'?'OK':status==='skip'?'SKIPPED':'PENDING';
+      rows.push([sec.tab,i+1,c.title,c.desc,c.expected,status,severity,d.note||'',state.reviewer||'',state.date||'',state.version||'']);
+    });
+  });
+  // Defect summary rows
+  rows.push([]);rows.push(['--- DEFECT SUMMARY ---']);
+  rows.push(['Section','#','Checkpoint','Severity','Expected','Reviewer Notes']);
+  SECTIONS.forEach(sec=>{
+    sec.checks.forEach((c,i)=>{
+      const d=state.checks[sec.id+'-'+i]||{};
+      if(d.status==='fail'||d.status==='partial'){
+        rows.push([sec.tab,i+1,c.title,d.status==='fail'?'CRITICAL':'MINOR',c.expected,d.note||'']);
+      }
+    });
+  });
+  // Overall feedback
+  const fb=SECTIONS.find(s=>s.id==='feedback');
+  if(fb){
+    rows.push([]);rows.push(['--- OVERALL FEEDBACK ---']);
+    fb.checks.forEach((c,i)=>{
+      const d=state.checks['feedback-'+i]||{};
+      if(d.note)rows.push([c.title,'','','',d.note]);
+    });
+  }
+  const csv=rows.map(r=>Array.isArray(r)?r.map(q).join(','):q(r[0]||r)).join('\n');
+  const blob=new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download='AOP2027-QA-Suite-'+(state.reviewer||'review').replace(/\s+/g,'-')+'-'+new Date().toISOString().slice(0,10)+'.csv';a.click();
+}
+
+function importReview(){document.getElementById('file-input').click();}
+function handleImport(e){
+  const file=e.target.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=function(ev){
+    try{
+      const imported=JSON.parse(ev.target.result);
+      if(imported.checks){
+        state=imported;
+        document.getElementById('reviewer-name').value=state.reviewer||'';
+        document.getElementById('review-date').value=state.date||'';
+        document.getElementById('review-version').value=state.version||'v5.2.1';
+        restoreState();
+        save();
+        alert('Review imported: '+(state.reviewer||'Unknown reviewer')+' ('+state.date+')');
+      }else{alert('Invalid review file.');}
+    }catch(err){alert('Could not parse file: '+err.message);}
+  };
+  reader.readAsText(file);
+  e.target.value='';
+}
+
+function clearAll(){
+  if(!confirm('Reset all checkpoints and notes? This cannot be undone.'))return;
+  state.checks={};
+  localStorage.removeItem(STORE_KEY);
+  SECTIONS.forEach(sec=>{
+    sec.checks.forEach((c,i)=>{
+      const id=sec.id+'-'+i;
+      const note=document.getElementById('note-'+id);if(note)note.value='';
+      document.getElementById('cp-'+id).className='checkpoint';
+      ['pass','fail','partial','skip'].forEach(s=>{document.getElementById('btn-'+s+'-'+id).className='';});
+    });
+  });
+  updateProgress();updateTabBadges();
+}
+
+initState();
+renderTabs();
+</script>
+</body>
+</html>

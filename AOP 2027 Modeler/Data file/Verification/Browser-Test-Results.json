@@ -1,0 +1,48 @@
+{
+  "executed": "2026-09-17T04:06:09.863Z",
+  "tests": 10,
+  "failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "Initial source and four tabs render",
+      "status": "PASS"
+    },
+    {
+      "name": "BU Led editing is available without a conference checkpoint",
+      "status": "PASS"
+    },
+    {
+      "name": "EW inline exclusion updates shared total without dialog",
+      "status": "PASS"
+    },
+    {
+      "name": "Program detail popup is read-only and closes",
+      "status": "PASS"
+    },
+    {
+      "name": "BU inline edit and direct finalisation update the shared scenario",
+      "status": "PASS"
+    },
+    {
+      "name": "Excel export is real ZIP workbook and portable snapshot restores",
+      "status": "PASS"
+    },
+    {
+      "name": "Refresh reads complete original XLSX with parity and preview",
+      "status": "PASS"
+    },
+    {
+      "name": "Cascading multi-select filters and filtered Excel reconcile",
+      "status": "PASS"
+    },
+    {
+      "name": "Browser storage saves and restores exact working revision",
+      "status": "PASS"
+    },
+    {
+      "name": "Responsive layout retains tabs and no page-level overflow",
+      "status": "PASS"
+    }
+  ]
+}

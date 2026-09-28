@@ -36,6 +36,42 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8772", "--directory", "AOP 2027 Modeler"],
       "port": 8772
+    },
+    {
+      "name": "v51-review",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8780", "--directory", "AOP 2027 Modeler"],
+      "port": 8780
+    },
+    {
+      "name": "v52",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8774", "--directory", "AOP 2027 Modeler"],
+      "port": 8774
+    },
+    {
+      "name": "v52-aopilot",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8776", "--directory", "AOP 2027 Modeler"],
+      "port": 8776
+    },
+    {
+      "name": "v53",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8781", "--directory", "AOP 2027 Modeler"],
+      "port": 8781
+    },
+    {
+      "name": "v54",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8782", "--directory", "AOP 2027 Modeler"],
+      "port": 8782
+    },
+    {
+      "name": "data-extract",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8775", "--directory", "AOP 2027 Demand"],
+      "port": 8775
     }
   ]
 }

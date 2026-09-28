@@ -1,8 +1,8 @@
-# Executive explanation | v4.5
+# Executive explanation | v5.2
 
 Use one evidence-backed portfolio to make AOP trade-offs visible. Start with the source demand, set the planning envelope, classify demand into four evidence-gated priorities, then use benefits and merit to prioritise within each priority. Keep funding decisions separate from requested demand and evidence quality.
 
-The current source requests 279.6 M€: 111.7 M€ Enterprise Wide and 167.9 M€ BU Led. Its approved envelope is not supplied. There are 509 demand rows; 46 have no requested amount; 280 have no Decision Band and 280 have no Overall AOP decision. These gaps remain visible.
+The current source (AOP 2027 Consolidated Live.xlsx) requests 285.1 M EUR: ~112 M EUR Functions & Regions and ~173 M EUR BU Led. There are 472 demand rows (after enterprise-wide charging exclusion). Each programme is mapped to one of 16 accountable ExCo members.
 
 ## Four-priority classification (eligible-only buckets)
 
@@ -16,6 +16,13 @@ P4 (Value Based Portfolio): All remaining demand including new features, AI, dec
 
 ## Decision flow
 
-Leadership first sets the funding position in Program AOP Scenarios using four levers. Enterprise Wide and BU Led independently review and adjust programme selections. Operations shows the pre-aligned 469.7 M€ cost structure. One Portfolio brings Programme and Operations together for final sign-off, showing each Organisation's total IT charge.
+Leadership first sets the funding position in Program AOP Scenarios using four levers (LFR verified demand, carry-over RoI threshold, sustain %, value %). The ExCo Trade-off Cockpit on Tabs 3 (Functions & Regions) and 4 (BU Led) enables per-ExCo leader funding negotiations — enter a target budget per leader, see the delta, and Apply to include/exclude P4 programmes by merit WITHOUT changing Total AOP. Functions & Regions and BU Led independently review and adjust programme selections. Operations shows the pre-aligned 469.7 M EUR cost structure. One Portfolio brings Programme and Operations together for final sign-off, with Finalise and New Working Version controls.
 
-Three scenario types: Default (data-backed only), Leadership (captures BU preferences), Conference (consolidated final position after sign-off).
+## ExCo-level discussion workflow (v5.2)
+
+1. **Set envelope**: Agree Total AOP in Program AOP Scenarios (Tab 2).
+2. **Review ExCo demand**: Tab 1 ExCo Demand Split shows each leader's requested, prioritised, gap, % funded, hard/soft benefits.
+3. **Trade-off by ExCo**: On Tabs 3/4, open the ExCo Trade-off Cockpit. Enter a target budget for each ExCo leader to model increases (unlock more P4 programmes) or reductions (exclude lowest-merit P4).
+4. **Apply trade-offs**: Apply button adjusts programme selections by merit. Total AOP is protected. "On top off AOP" KPI shows any delta.
+5. **Review benefits**: ALL benefit displays show Hard/Soft separately. Chart summary: "Committed: X Hard . Y Soft".
+6. **Finalise**: From One Portfolio (Tab 6). New Working Version resets to Optimal Segmentation with clean state.

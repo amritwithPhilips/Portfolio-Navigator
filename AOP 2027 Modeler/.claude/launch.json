@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "C:/Users/320126040/Documents/Codex/AOP2027/AOP 2027 Modeler", "-p", "8092", "-c-1", "--cors"],
+      "port": 8092,
+      "url": "http://localhost:8092/AOP2027-OnePortfolio-Dashboard.html"
+    },
+    {
+      "name": "v51",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["http-server", "C:/Users/320126040/Documents/Codex/AOP2027/AOP 2027 Modeler", "-p", "8093", "-c-1", "--cors"],
+      "port": 8093,
+      "url": "http://localhost:8093/AOP2027-IT-Portfolio-Scenario-Modelling-v5.1.html"
+    }
+  ]
+}

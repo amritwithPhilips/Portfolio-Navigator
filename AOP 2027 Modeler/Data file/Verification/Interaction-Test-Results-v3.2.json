@@ -1,0 +1,87 @@
+{
+  "tests": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Navigation follows Scenario, Enterprise Wide, BU Led, Overview",
+      "status": "PASS"
+    },
+    {
+      "name": "Scenario sections use the required default open and collapsed states",
+      "status": "PASS"
+    },
+    {
+      "name": "Prioritized demand has BUR, Platform and Priority multi-select filters",
+      "status": "PASS"
+    },
+    {
+      "name": "Median and average helper handle odd/even/zero/missing populations",
+      "status": "PASS"
+    },
+    {
+      "name": "ew: collapsed BURF financial totals and average merits reconcile",
+      "status": "PASS"
+    },
+    {
+      "name": "ew: actual median and configured merit labels visible and correct",
+      "status": "PASS"
+    },
+    {
+      "name": "ew: mouse hover and keyboard focus show program details",
+      "status": "PASS"
+    },
+    {
+      "name": "bu: collapsed BURF financial totals and average merits reconcile",
+      "status": "PASS"
+    },
+    {
+      "name": "bu: actual median and configured merit labels visible and correct",
+      "status": "PASS"
+    },
+    {
+      "name": "bu: mouse hover and keyboard focus show program details",
+      "status": "PASS"
+    },
+    {
+      "name": "overview: collapsed BURF financial totals and average merits reconcile",
+      "status": "PASS"
+    },
+    {
+      "name": "overview: actual median and configured merit labels visible and correct",
+      "status": "PASS"
+    },
+    {
+      "name": "overview: mouse hover and keyboard focus show program details",
+      "status": "PASS"
+    },
+    {
+      "name": "Opening one group shows children without changing funding or events",
+      "status": "PASS"
+    },
+    {
+      "name": "Inline edit updates group totals and retains its expanded state",
+      "status": "PASS"
+    },
+    {
+      "name": "Filtering recalculates median and group summary on matching programs",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty filter result displays no fabricated median",
+      "status": "PASS"
+    },
+    {
+      "name": "Reload resets all demand groups to collapsed while restoring decisions",
+      "status": "PASS"
+    },
+    {
+      "name": "Sticky first header stays aligned during vertical and horizontal table scroll",
+      "status": "PASS"
+    },
+    {
+      "name": "Desktop and narrow widths contain tables without page overflow",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

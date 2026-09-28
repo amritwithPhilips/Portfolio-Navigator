@@ -92,6 +92,43 @@ preview_eval with contents of qa-harness.js
 | 24 | Gate cards | 5 cards (Gate 0 + 4 priorities) |
 | 25 | All 6 tabs | demand, scenario, ew, bu, operations, overview |
 
+### 11. PMI Exclusion (v5.4) (4 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 30 | PMI excluded from budget | All type="PMI" programmes have isPmi=true and status "Funded (PMI On Top)" |
+| 31 | PMI not in stage totals | Stage demand totals exclude PMI rows |
+| 32 | PMI KPI on Tab 2 | "PMI On Top" KPI card shows correct count and amount |
+| 33 | PMI note on Tab 6 | PMI notice banner present with total |
+
+### 12. ROI Hold Removal (v5.4) (2 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 39 | No 10x funding holds | Zero programmes held by "Benefit claim above 10.0x" — should be warning only |
+| 40 | High-ratio warning | Programmes with ratio > 10x show warning text (not hold) in popup |
+
+### 13. Ops Cost by ExCo (v5.4) (2 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 41 | Laura Matz IT ops cost | Tab 1 ExCo table shows Laura Matz Ops Cost = 18.0 M€ |
+| 42 | Ops total = 469.7 M€ | Sum of all ExCo Ops Cost values in Tab 1 = 469.7 M€ |
+
+### 14. Organisation Mapping (v5.4) (5 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 34 | CoE Marketing ExCo | All "CoE Marketing – HS" rows map to Julia Strandberg |
+| 35 | Greater China merged | Zero rows with org "Greater China (GRC)" — all renamed to "Greater China" |
+| 36 | IR merged | Zero rows with "International Regions (IR) - Overall" or "International Regions (IR)" — all "International Regions" |
+| 37 | North America merged | Zero rows with "North America (NAR)" — all "North America" |
+| 38 | Lever 2 denominator | Carry Over lever shows "funded of X M€ Demand" where X = total carry demand (not confirmed-only) |
+
+### 13. Benefits Classification (v5.4) (4 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 26 | Hard = Productivity + Revenue only | All Hard-classified programmes have Investment Area containing "Productivity" or "Revenue Increase" |
+| 27 | Cost Avoidance = Soft | All programmes with area "Cost Avoidance" and benefit > 0 are classified Soft |
+| 28 | Process simplification = Soft | All programmes with area containing "Process simplification" and benefit > 0 are classified Soft |
+| 29 | Hard + Soft totals | Hard 159 programmes (12,308.0 M€), Soft 140 programmes (9,806.2 M€) with current 28 Sep data |
+
 ---
 
 ## Manual Visual Checks (ExCo Readiness)
@@ -122,6 +159,30 @@ These cannot be automated and require human review:
 - [ ] BUR, Platform, Priority filters work with cascading counts
 - [ ] Expand/collapse groups works
 - [ ] Programme click opens detail modal with merit score breakdown table
+
+### PMI and Mapping (v5.4)
+- [ ] Tab 1 launches as default tab (not Tab 2)
+- [ ] Tab 1: "Total IT AOP Demand" text (not "Total IT Budget")
+- [ ] Tab 2: PMI KPI card visible showing PMI count and total
+- [ ] Tab 2: PMI notice banner below KPIs
+- [ ] Tab 2 Lever 2: shows "funded of ~109 M€ Demand" (total carry demand, NOT 16.8 M€)
+- [ ] Tab 4: CoE Marketing programmes show ExCo = Julia Strandberg (not Deeptha Khanna)
+- [ ] Tab 3/4 filters: no "Greater China (GRC)" — only "Greater China"
+- [ ] Tab 3/4 filters: no "International Regions (IR) - Overall" — only "International Regions"
+- [ ] Tab 3/4 filters: no "North America (NAR)" — only "North America"
+- [ ] Tab 6: PMI notice banner with total portfolio including PMI
+- [ ] PMI programmes do not appear in BU allocation totals
+
+### Benefits Classification (v5.4)
+- [ ] Tab 1 Committed Benefits KPI shows Hard and Soft separately
+- [ ] Tab 1 ExCo split table: Hard/Soft columns reflect new classification (Hard = Productivity + Revenue only)
+- [ ] Tab 3 (F&R) Committed Benefits KPI: Hard and Soft values match engine totals
+- [ ] Tab 4 (BU Led) Committed Benefits KPI: Hard and Soft values match engine totals
+- [ ] Tab 6 Committed Benefits KPI matches programme-level sum
+- [ ] Programme popup: Cost Avoidance programmes show "Soft Benefit" label (not Hard)
+- [ ] Programme popup: Process simplification programmes show "Soft Benefit" label (not Hard)
+- [ ] Programme popup: Productivity/Revenue programmes show "Hard Benefit" label
+- [ ] Excel export: benefitClass column shows "soft" for Cost Avoidance and Process simplification rows
 
 ### Cross-Tab
 - [ ] Switch to Enterprise Wide — stream KPIs and bubble chart render

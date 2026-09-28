@@ -1,4 +1,4 @@
-# BURF organisation view | v4.6
+# BURF organisation view | v5.2
 
 ## What a BURF is
 
@@ -7,6 +7,23 @@ BURF stands for Business Unit, Region or Function — the organisational entity 
 Examples: Precision Diagnosis, Image Guided Therapy, Connected Care, Personal Health, Innovation & Design, North America Region, International Region, Greater China Region.
 
 ## How tables are organised by BURF
+
+## ExCo accountability hierarchy (v5.2)
+
+Above the BURF level, every organisation maps to one of 16 ExCo members. The Demand Split table on Tab 1 and the Trade-off Cockpit on Tabs 3/4 use collapsible ExCo groups:
+
+```
+▶ Julia Strandberg (CC)  (28/55)    Requested 22.1   Prioritised 12.4   Gap 9.7   82% Funded   Hard 15.2   Soft 3.1
+  ├── HPM              (12/25)    8.2              4.8               3.4
+  ├── AM&D             (9/18)     7.1              4.2               2.9
+  └── SRC              (7/12)     6.8              3.4               3.4
+```
+
+Each ExCo row shows: programme count, requested M EUR, prioritised M EUR, gap M EUR, % funded, hard benefits, soft benefits, and operations cost (Tab 1 only).
+
+16 ExCo members mapped to all 35 organisation values:
+- **BU Leaders (10)**: Deeptha Khanna (PH), Shez Partovi (EI/I&D), Julia Strandberg (Connected Care: HPM, AM&D, SRC), Jie Xue (PD: CT, DXR, MR, PDU), Bert van Meurs (IGT-S, IGT-D, STO), Wim Appelo (ISC, STET-ISC), Ozlem Fidanci (IR, H&S), Jeff DiLullo (NAM), Ling Liu (GCR), Charlotte Hanneman (Finance, Security).
+- **Enterprise Function Leaders (6)**: Laura Matz (IT), Heidy Schein (People), Steve C de Baca (PS&Q), Carla Silva Peron (Medical), Filip Koek (Audit), Marnix van Ginneken (Legal, Comms, IP&S).
 
 All programme tables (EW, BU, Overview, Prioritized, Unfunded) use a **collapsible BURF group** layout:
 
@@ -32,7 +49,8 @@ Each collapsed BURF row aggregates its child programmes:
 | **Requested (M€)** | Sum of all children's requested amounts | `15.2` with "Avg 0.6" |
 | **Prioritised (M€)** | Sum of funded amounts | `8.4` with "Avg 0.3" |
 | **Unfunded (M€)** | Sum of unfunded gaps | `6.8` with "Avg 0.3" |
-| **Benefits (M€)** | Sum of submitted benefit claims | `120.5` with "Avg 4.8" |
+| **Hard Benefits (M€)** | Sum of hard benefit claims | `85.2` with "Avg 3.4" |
+| **Soft Benefits (M€)** | Sum of soft benefit claims | `35.3` with "Avg 1.4" |
 | **Evidence** | Count with numeric benefit claims | `18 of 25 numeric claims` |
 | **Funding status** | Funded/unfunded split + holds | `12 funded · 13 unfunded; 2 partial scope` |
 
@@ -81,9 +99,11 @@ Operations BURFs are **BU clusters**, not individual programme submitters. Each 
 
 ## BURF in Demand Overview
 
-The `Demand Split by Organisation` table on Tab 1 shows each BURF's:
-- Programme demand count and M€
+The `ExCo Demand Split` table on Tab 1 (v5.2) replaces the flat organisation list with collapsible ExCo groups. Each ExCo row shows:
+- Programme count, requested M€, prioritised M€, gap M€
+- % funded (colour-coded)
+- Hard benefits and soft benefits (separately)
 - Operations cost (from TCO, at cluster level)
-- Total IT demand (programme + operations)
+Click to expand constituent organisations.
 
 This is the quickest way to see which organisations have the largest combined IT footprint.

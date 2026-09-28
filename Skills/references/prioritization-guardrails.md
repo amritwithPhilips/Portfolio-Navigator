@@ -1,4 +1,4 @@
-# Understanding data through prioritization rules and guardrails | v4.6
+# Understanding data through prioritization rules and guardrails | v5.2
 
 ## How to read a programme's funding outcome
 
@@ -29,7 +29,7 @@ Even within the correct priority, a programme can be **held** from automatic fun
 | Overall AOP decision needs mapping | Unrecognised decision text | Source must use standard values |
 | Contain condition needs review | Contain band without recorded condition | Inline evidence review |
 | Numeric benefits missing | P3/P4 with no benefit figure | Source must supply benefits |
-| Benefit claim above 5.0x | Ratio > 5.0x without review | Inline evidence review |
+| Benefit claim above 10.0x | Ratio > 10.0x without review | Inline evidence review |
 | Below Carryover threshold | P2 carry-over below RoI slider | Adjust slider or accept manually |
 | Below advanced merit floor | P4 below configured merit threshold | Adjust floor or accept manually |
 
@@ -58,12 +58,13 @@ Programmes are funded as **whole initiatives** in ranking order. A programme is 
 
 Merit is a 0–100 composite score used for ranking within priorities:
 
-| Component | Max points | Tiers |
-|-----------|-----------|-------|
-| **Submitted Benefit** (50%) | 50.0 | 0 (<1x), 20 (≥1x), 30 (≥2x), 40 (≥3x), 50 (≥5x) |
-| **Submitted Priority** (25%) | 25.0 | Must Do 25, Must Have 18, Deprioritised 5, blank 0 |
-| **Captured Consequence** (15%) | 15.0 | 0 (none), 5 (context), 10 (explicit harm), 15 (quantified/enterprise) |
-| **Decision Band** (10%) | 10.0 | Healthy 10, Contain 6, blank 0 |
+| Component | Weight | Max points | Tiers |
+|-----------|--------|-----------|-------|
+| **Submitted Benefit** (40%) | 40 | 50.0 | 0 (<1x), 15 (1-3x), 25 (3-5x), 35 (5-7x), 50 (>=7x). Hybrid: quantitative ratio -> revenue/productivity block -> qualitative fallback (max 30) |
+| **Submitted Priority** (25%) | 25 | 25.0 | Must Do 25, Must Have 18, Deprioritised 5, blank 0 |
+| **Captured Consequence** (15%) | 15 | 15.0 | 0 (none), 5 (context), 10 (explicit harm), 15 (quantified/enterprise) |
+| **Decision Band** (10%) | 10 | 10.0 | Healthy 10, Contain 6, blank 0 |
+| **Payback** (10%) | 10 | 10.0 | <=1yr 10, <=2yr 8, <=3yr 6, <=5yr 4, >5yr/missing 0 |
 
 Each component: `raw_points / max_points × configured_weight`. Total = sum of weighted components.
 
@@ -83,6 +84,17 @@ Each component: `raw_points / max_points × configured_weight`. Total = sum of w
 1. **No silent refill**: Excluding a funded programme does not automatically fund the next one. The freed budget appears as "Open to prioritisation."
 2. **No zero substitution**: Missing requests and benefits stay as missing — never treated as zero.
 3. **No inferred decisions**: Blank Decision Band and blank Overall AOP decision are "Unassessed" — the engine does not guess.
-4. **Whole-programme tolerance**: The 5% default tolerance allows a slightly oversized programme to be funded rather than wasted budget.
+4. **Whole-programme tolerance**: The 0% default tolerance (changed from 5% in v4.5) allows a slightly oversized programme to be funded rather than wasted budget.
 5. **Carry-over cap**: P2 carry-overs are funded at min(Requested, Baselined), not full request — preventing overstatement of business-case-justified amounts.
 6. **Immutable finalisation**: A finalised scenario cannot be edited. Fork it to create a new draft.
+7. **Total AOP protection**: Total AOP changes ONLY when the user manually edits the budget input. ExCo trade-off Apply buttons include/exclude programmes by merit without modifying Total AOP. The "On top off AOP" KPI shows any delta between actual allocation and the user-set budget.
+8. **ExCo trade-off constraints**: Trade-off budget inputs affect only P4 programmes within the selected ExCo leader's demand. Negative deltas (target below current funded) exclude lowest-merit P4 programmes. All trade-off decisions are logged. Reset clears all entered values.
+
+## Hard/Soft benefit separation (v5.2)
+
+All benefit displays across all tabs show Hard and Soft benefits separately, never as combined totals:
+
+- **Hard benefits**: Revenue Increase, Productivity Savings, Cost Avoidance, Process simplification/efficiency gain. Quantifiable financial outcomes.
+- **Soft benefits**: Compliance/Keeping the lights on, Security, and all other areas. Qualitative value and risk avoidance.
+
+KPIs show Hard (green) / Soft (amber). Chart summary: "Committed: X Hard . Y Soft". Bubble tooltips show benefit classification. ExCo Demand Split and Trade-off Cockpit both display Hard/Soft columns.

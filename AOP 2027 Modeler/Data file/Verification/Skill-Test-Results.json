@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "method": "Dependency-free equivalent checks; supplied validator could not import PyYAML",
+  "frontmatter": "PASS",
+  "reference_links": "PASS",
+  "agent_metadata": "PASS",
+  "engine_parity": "PASS"
+}

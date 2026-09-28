@@ -1,0 +1,1429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AOP 2027 | Philips IT One Portfolio Dashboard</title>
+<style>
+@font-face{font-family:'Neue Frutiger World';src:local('Neue Frutiger World'),local('Frutiger');font-weight:400}
+:root{
+  --blue:#0B5ED7;--dk:#00126E;--lt:#BDF0FF;--bg:#FAFBFC;--card:#FFFFFF;
+  --border:#D5DAE0;--mist:#E8EDF2;--text:#1A1F2B;--text2:#4A5568;--text3:#8895A7;
+  --prot:#008800;--protbg:#ADFFB5;--disc:#FCA708;--discbg:#FCFCC2;--weak:#D43F44;--weakbg:#FFDEDB;
+  --stage1:#00126E;--stage2:#0B5ED7;--stage3:#008BA3;--stage4:#226EB0;--stage5:#70ADE0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:13px/1.5 'Neue Frutiger World','Frutiger',Calibri,'Segoe UI',Arial,sans-serif}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;border:1px solid var(--border);border-radius:4px;background:white;padding:7px 12px;color:var(--dk)}
+button:hover{border-color:var(--blue)}
+button.primary{background:var(--blue);border-color:var(--blue);color:white}
+button.dark{background:var(--dk);color:white;border-color:var(--dk)}
+input[type=number],input[type=text],select{border:1px solid var(--border);border-radius:4px;padding:5px 7px;background:white;color:var(--text)}
+input[type=range]{accent-color:var(--blue);width:100%;height:18px}
+h1,h2,h3,p{margin-top:0}
+h2{font-size:17px;color:var(--dk);margin-bottom:10px}
+h3{font-size:14px;color:var(--dk);margin-bottom:8px}
+p{margin-bottom:9px}
+a{color:var(--blue)}
+
+/* Header */
+.hdr{background:var(--blue);padding:12px 24px;display:flex;align-items:center;gap:16px;color:#fff;flex-wrap:wrap}
+.hdr h1{font-size:17px;font-weight:300;margin:0;white-space:nowrap}
+.hdr .tag{font-size:10px;border:1px solid rgba(255,255,255,.4);border-radius:3px;padding:2px 6px;margin-left:4px}
+.hdr .subtitle{font-size:11px;opacity:.75;margin-left:auto}
+
+/* Workflow bar */
+.workflow{background:var(--dk);display:flex;padding:0;margin:0;list-style:none}
+.workflow li{flex:1;text-align:center;padding:8px 4px;font-size:11px;color:rgba(255,255,255,.6);cursor:pointer;border-bottom:3px solid transparent;transition:all .15s;position:relative}
+.workflow li:hover{color:rgba(255,255,255,.9)}
+.workflow li.active{color:#fff;border-bottom-color:var(--lt);background:rgba(255,255,255,.08)}
+.workflow li .step-num{display:inline-block;width:18px;height:18px;line-height:18px;border-radius:50%;background:rgba(255,255,255,.15);font-size:10px;margin-right:4px}
+.workflow li.active .step-num{background:var(--lt);color:var(--dk)}
+
+/* Tabs */
+.tabs{display:flex;background:white;border-bottom:1px solid var(--border);padding:0 20px;gap:0;overflow-x:auto}
+.tabs button{border:none;border-radius:0;background:none;padding:10px 16px;font-size:12px;font-weight:600;color:var(--text2);border-bottom:2px solid transparent;white-space:nowrap}
+.tabs button:hover{color:var(--dk)}
+.tabs button.active{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* Main container */
+.main{padding:20px 24px;max-width:1600px;margin:0 auto}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* Cards / KPIs */
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative}
+.kpi .label{font-size:11px;color:var(--text3);margin-bottom:4px;text-transform:uppercase;letter-spacing:.3px}
+.kpi .value{font-size:22px;font-weight:700;color:var(--dk)}
+.kpi .sub{font-size:11px;color:var(--text2);margin-top:2px}
+.kpi.accent{border-left:4px solid var(--blue)}
+.kpi.green{border-left:4px solid var(--prot)}
+.kpi.amber{border-left:4px solid var(--disc)}
+.kpi.red{border-left:4px solid var(--weak)}
+
+/* Section cards */
+.section{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:20px}
+.section h2{display:flex;align-items:center;gap:8px}
+.section h2 .badge{font-size:10px;background:var(--mist);padding:2px 8px;border-radius:10px;font-weight:400}
+
+/* Tables */
+.tbl-wrap{overflow-x:auto;margin:0 -4px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+table th{position:sticky;top:0;background:var(--dk);color:#fff;padding:8px 10px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap;z-index:2}
+table td{padding:7px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+table tr:hover td{background:rgba(11,94,215,.03)}
+table .num{text-align:right;font-variant-numeric:tabular-nums}
+table .right{text-align:right}
+table .center{text-align:center}
+table .indent{padding-left:28px;color:var(--text2)}
+
+/* Status pills */
+.pill{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;white-space:nowrap}
+.pill-green{background:var(--protbg);color:var(--prot)}
+.pill-amber{background:var(--discbg);color:#8B6914}
+.pill-red{background:var(--weakbg);color:var(--weak)}
+.pill-blue{background:var(--lt);color:var(--dk)}
+
+/* Fund bar */
+.fund-bar{display:flex;height:36px;border-radius:6px;overflow:hidden;margin:12px 0}
+.fund-bar div{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;transition:flex .3s;min-width:0;overflow:hidden;white-space:nowrap;padding:0 6px}
+
+/* Filters row */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+.filters label{font-size:11px;color:var(--text2)}
+.filters select{font-size:12px;padding:4px 8px}
+.filters input[type=text]{font-size:12px;padding:4px 8px;width:200px}
+
+/* Scenario presets */
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.presets button{font-size:11px;padding:5px 10px}
+.presets button.selected{background:var(--dk);color:white;border-color:var(--dk)}
+
+/* Slider row */
+.slider-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px}
+.slider-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:12px}
+.slider-card .s-label{font-size:11px;color:var(--text2);margin-bottom:4px}
+.slider-card .s-value{font-size:16px;font-weight:700;color:var(--dk);margin-bottom:6px}
+
+/* Collapsible */
+details{margin-bottom:8px}
+details summary{cursor:pointer;font-weight:600;padding:6px 0;font-size:13px;color:var(--dk)}
+details summary:hover{color:var(--blue)}
+
+/* Conference */
+.agenda-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border)}
+.agenda-item .time{font-weight:700;color:var(--blue);min-width:60px;font-size:12px}
+.agenda-item .desc{flex:1}
+.agenda-item .desc h4{margin:0 0 2px;font-size:13px}
+.agenda-item .desc p{margin:0;font-size:12px;color:var(--text2)}
+
+/* Export button */
+.export-btn{position:fixed;bottom:20px;right:20px;z-index:100;background:var(--dk);color:white;border:none;padding:10px 16px;border-radius:6px;font-size:12px;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.export-btn:hover{background:var(--blue)}
+
+/* Tooltip */
+.tooltip{position:absolute;background:rgba(26,31,43,.92);color:#fff;padding:8px 12px;border-radius:6px;font-size:11px;pointer-events:none;z-index:200;max-width:280px;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+
+/* Finance recommended table */
+.fin-table th{background:var(--blue)}
+.fin-table td{font-weight:500}
+.fin-table tr:last-child td{font-weight:700;background:rgba(11,94,215,.05)}
+
+/* Bubble chart */
+.bubble-chart{width:100%;height:380px;background:white;border:1px solid var(--border);border-radius:6px;position:relative;overflow:visible}
+
+/* Sortable */
+th.sortable{cursor:pointer;user-select:none}
+th.sortable:hover{background:rgba(255,255,255,.1)}
+th.sortable::after{content:' \25B4\25BE';font-size:8px;opacity:.5}
+th.sortable.asc::after{content:' \25B4';opacity:1}
+th.sortable.desc::after{content:' \25BE';opacity:1}
+
+/* Responsive */
+@media(max-width:1200px){
+  .main{padding:16px}
+  .kpi-row{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Loading */
+.loading{text-align:center;padding:60px;color:var(--text3)}
+.loading .spin{display:inline-block;width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px;height:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--text3)}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="hdr">
+  <h1>AOP 2027 <span style="opacity:.5">|</span> Philips IT One Portfolio Dashboard</h1>
+  <span class="tag">v2.0</span>
+  <span class="subtitle" id="headerSubtitle">Scenario: Optimal Segmentation | Status: Draft | Source: Sep 2026</span>
+</div>
+
+<!-- Workflow bar -->
+<ol class="workflow" id="workflow">
+  <li class="active" data-tab="0"><span class="step-num">1</span>Review One Portfolio</li>
+  <li data-tab="1"><span class="step-num">2</span>Set Program Scenarios</li>
+  <li data-tab="2"><span class="step-num">3</span>Review Enterprise Wide</li>
+  <li data-tab="3"><span class="step-num">4</span>Review BU Led</li>
+  <li data-tab="4"><span class="step-num">5</span>Review Operations</li>
+  <li data-tab="5"><span class="step-num">6</span>Conference Prep</li>
+</ol>
+
+<!-- Tab buttons -->
+<div class="tabs" id="tabBar">
+  <button class="active" data-tab="0">One Portfolio</button>
+  <button data-tab="1">Program Scenarios</button>
+  <button data-tab="2">Enterprise Wide</button>
+  <button data-tab="3">BU Led</button>
+  <button data-tab="4">Operations</button>
+  <button data-tab="5">Conferences</button>
+</div>
+
+<!-- Main content -->
+<div class="main" id="app">
+  <div class="loading" id="loadingMsg"><div class="spin"></div><p style="margin-top:12px">Loading portfolio data...</p></div>
+</div>
+
+<!-- Export button -->
+<button class="export-btn" onclick="exportCSV()" title="Export current view as CSV">&#x2913; Export CSV</button>
+
+<script>
+// =========================================================================
+// GLOBALS
+// =========================================================================
+let DATA = null;
+let currentTab = 0;
+let scenarioState = {
+  budget: 100,
+  sliders: { legalBudget: 15, sustainHygieneBudget: 20, carryBudget: 50, valueBudget: 15 },
+  preset: 'optimal'
+};
+
+const STAGE_COLORS = ['#00126E','#0B5ED7','#008BA3','#226EB0','#70ADE0'];
+const STAGE_NAMES = ['Legal & Compliance','Sustain Engineering','Hygiene','Carryover','Value Based'];
+
+// =========================================================================
+// DATA LOADING
+// =========================================================================
+async function loadData(){
+  try {
+    const r = await fetch('Data%20file/AOP2027-OnePortfolio-Data.json');
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    DATA = await r.json();
+    document.getElementById('loadingMsg').style.display='none';
+    buildAllTabs();
+    switchTab(0);
+  } catch(e){
+    document.getElementById('loadingMsg').innerHTML = '<p style="color:var(--weak)">Failed to load data: '+e.message+'</p><p style="font-size:12px">Ensure AOP2027-OnePortfolio-Data.json is in the Data file/ subfolder.</p>';
+  }
+}
+
+// =========================================================================
+// UTILITY FUNCTIONS
+// =========================================================================
+function fmt(v,d=1){ if(v==null||isNaN(v)) return '-'; return Number(v).toFixed(d); }
+function fmtE(v,d=1){ return fmt(v,d)+' M€'; }
+function pct(v,t){ return t?((v/t)*100).toFixed(1)+'%':'0%'; }
+function esc(s){ if(!s) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function pillClass(status){
+  if(!status) return 'pill-blue';
+  const s=status.toLowerCase();
+  if(s.includes('funded')||s.includes('green')||s==='funded') return 'pill-green';
+  if(s.includes('partial')||s.includes('amber')) return 'pill-amber';
+  return 'pill-red';
+}
+
+function makeKPI(label,value,sub,cls=''){
+  return `<div class="kpi ${cls}"><div class="label">${esc(label)}</div><div class="value">${value}</div>${sub?'<div class="sub">'+sub+'</div>':''}</div>`;
+}
+
+// =========================================================================
+// MERIT SCORING
+// =========================================================================
+function meritScore(p){
+  let score = 0;
+  // Benefit component (max 50)
+  const ratio = (p.benefit && p.cost > 0) ? p.benefit / p.cost : 0;
+  if(ratio >= 5) score += 50;
+  else if(ratio >= 3) score += 40;
+  else if(ratio >= 2) score += 30;
+  else if(ratio >= 1) score += 20;
+  else score += 0;
+
+  // Priority component (max 25)
+  const pri = (p.priority||'').toLowerCase().trim();
+  if(pri === 'must do') score += 25;
+  else if(pri === 'must have') score += 18;
+  else if(pri === 'deprioritised') score += 5;
+
+  // Consequence component (max 15)
+  const imp = (p.impact||'');
+  if(imp.length > 100) score += 15;
+  else if(imp.length > 50) score += 10;
+  else if(imp.length > 0) score += 5;
+
+  // Decision Band (max 10)
+  const db = (p.decisionBand||'').toUpperCase();
+  if(db === 'HEALTHY') score += 10;
+  else if(db === 'CONTAIN') score += 6;
+
+  return score;
+}
+
+// =========================================================================
+// STAGE CLASSIFICATION
+// =========================================================================
+const CCB_EXCEPTION_ORGS = ['finance','group functions','group functions & hyperautomation it','integrated supply chain','integrated supply chain & finance','isc'];
+
+function isLFR(p){
+  const cat = (p.category||'').toLowerCase();
+  const overall = (p.overall||'').toUpperCase();
+  return cat.includes('legal fiscal') || cat.includes('regulatory') || cat.includes('compliancy') ||
+         overall.includes('MUST-DO') || overall.includes('P1') || overall.includes('P2');
+}
+
+function hasLFREvidence(p){
+  return !!(p.lfrYear && p.lfrYear.trim()) && !!(p.lfrName && p.lfrName.trim());
+}
+
+function isCCBException(p){
+  const org = (p.org||'').toLowerCase();
+  const plat = (p.platform||'').toLowerCase();
+  return CCB_EXCEPTION_ORGS.some(e => org.includes(e) || plat.includes(e));
+}
+
+function lfrPriority(p){
+  const overall = (p.overall||'').toUpperCase();
+  if(overall.includes('P1')) return 0;
+  if(overall.includes('P2')) return 1;
+  return 2;
+}
+
+function lfrSortKey(p){
+  const pri = lfrPriority(p);
+  const evidence = hasLFREvidence(p) ? 0 : 1;
+  const ccb = isCCBException(p) ? 1 : 0;
+  return pri * 1000 + evidence * 100 + ccb * 10 - (p.merit || 0);
+}
+
+function hasEvidence(p){
+  return (p.benefit != null && p.benefit > 0) || (p.impact && p.impact.length > 10);
+}
+
+function classifyStage(p){
+  const cat = (p.category||'').toLowerCase();
+  const nc = (p.newCarry||'').toLowerCase();
+
+  // Stage 0: True LFRs
+  if(isLFR(p)) return 0;
+
+  // Stage 1: Sustain Engineering
+  if(nc.includes('change & sustain')) return 1;
+
+  // Stage 2: Hygiene (CI and Upgrades & Enhancements)
+  if(cat === 'continuous improvement' || cat.includes('continous improvement') ||
+     cat === 'upgrades & enhancements') return 2;
+
+  // Stage 3: Carryover — must be explicit carry-over, not decommissioning
+  if(nc.includes('carry over') && !cat.includes('decomm') && !cat.includes('replatform')) return 3;
+
+  // Stage 4: Value Based — everything else including decomm/replatforming and AI
+  return 4;
+}
+
+// =========================================================================
+// ALLOCATION ENGINE
+// =========================================================================
+function runAllocation(){
+  const allPrograms = [...DATA.program.ew, ...DATA.program.bu];
+  const budget = scenarioState.budget;
+  const {legalBudget, sustainHygieneBudget, carryBudget, valueBudget} = scenarioState.sliders;
+
+  // Classify and score all programs
+  const programs = allPrograms.map(p => ({
+    ...p,
+    stage: classifyStage(p),
+    merit: meritScore(p),
+    funded: false,
+    allocStage: -1,
+    holdReason: '',
+    _lfrSortKey: 0
+  }));
+
+  // Compute LFR sort keys
+  programs.filter(p=>p.stage===0).forEach(p=>{ p._lfrSortKey = lfrSortKey(p); });
+
+  // Stage demands
+  const stageDemands = [0,0,0,0,0];
+  programs.forEach(p => { stageDemands[p.stage] += p.cost; });
+
+  // Stage budget caps (directional from finance recommendation)
+  const stageCaps = [
+    Math.min(legalBudget, budget),
+    Math.min(sustainHygieneBudget, budget),
+    0, // Hygiene shares the sustainHygiene budget (see below)
+    Math.min(carryBudget, budget),
+    Math.min(valueBudget, budget)
+  ];
+
+  let remaining = budget;
+
+  // ── STAGE 0: TRUE LFRs (directional €15M) ──
+  // P1 obligations first, then P2, then CCB exceptions
+  // Within each tier: prefer records with LFR name/year evidence
+  const lfrCap = Math.min(stageCaps[0], remaining);
+  const lfrPrograms = programs.filter(p=>p.stage===0).sort((a,b)=>a._lfrSortKey - b._lfrSortKey);
+  let usedLfr = 0;
+  lfrPrograms.forEach(p=>{
+    if(!hasEvidence(p) && !isLFR(p)){
+      p.holdReason = 'Missing evidence — held for explicit review';
+      return;
+    }
+    if(usedLfr + p.cost <= lfrCap + 0.001){
+      p.funded = true;
+      p.allocStage = 0;
+      usedLfr += p.cost;
+    }
+  });
+  remaining -= usedLfr;
+
+  // ── STAGE 1+2: SUSTAIN + HYGIENE (directional €20M) ──
+  // Fund full eligible Sustain first; remaining to Hygiene
+  const shCap = Math.min(stageCaps[1], remaining);
+  let usedSH = 0;
+
+  // Sustain first
+  const sustainPgms = programs.filter(p=>p.stage===1).sort((a,b)=>b.merit-a.merit);
+  sustainPgms.forEach(p=>{
+    if(!hasEvidence(p)){
+      p.holdReason = 'Missing evidence — held for explicit review';
+      return;
+    }
+    if(usedSH + p.cost <= shCap + 0.001){
+      p.funded = true;
+      p.allocStage = 1;
+      usedSH += p.cost;
+    }
+  });
+
+  // Hygiene with remaining Sustain+Hygiene budget
+  const hygienePgms = programs.filter(p=>p.stage===2).sort((a,b)=>b.merit-a.merit);
+  hygienePgms.forEach(p=>{
+    if(!hasEvidence(p)){
+      p.holdReason = 'Missing evidence — held for explicit review';
+      return;
+    }
+    if(usedSH + p.cost <= shCap + 0.001){
+      p.funded = true;
+      p.allocStage = 2;
+      usedSH += p.cost;
+    }
+  });
+  remaining -= usedSH;
+
+  // ── STAGE 3: CARRYOVERS (directional €50M) ──
+  // Must be data-backed (benefit or payback or impact evidence)
+  const carryCap = Math.min(stageCaps[3], remaining);
+  const carryPgms = programs.filter(p=>p.stage===3).sort((a,b)=>{
+    // Rank by: benefit ratio desc, then payback presence, then impact strength, then merit
+    const rA = (a.benefit && a.cost>0) ? a.benefit/a.cost : 0;
+    const rB = (b.benefit && b.cost>0) ? b.benefit/b.cost : 0;
+    if(rB !== rA) return rB - rA;
+    const pA = a.payback ? 1 : 0;
+    const pB = b.payback ? 1 : 0;
+    if(pB !== pA) return pB - pA;
+    return b.merit - a.merit;
+  });
+  let usedCarry = 0;
+  carryPgms.forEach(p=>{
+    const dataEvidence = (p.benefit != null && p.benefit > 0) || (p.payback && p.payback.trim()) || (p.impact && p.impact.length > 10);
+    if(!dataEvidence){
+      p.holdReason = 'Missing data-backed evidence (benefit/payback/impact) — held for explicit review';
+      return;
+    }
+    if(usedCarry + p.cost <= carryCap + 0.001){
+      p.funded = true;
+      p.allocStage = 3;
+      usedCarry += p.cost;
+    }
+  });
+  remaining -= usedCarry;
+
+  // ── STAGE 4: VALUE BASED / LARGE IMPACTFUL (directional €15M) ──
+  // Strongest evidence in remaining capacity
+  const valueCap = Math.min(stageCaps[4], remaining);
+  const valuePgms = programs.filter(p=>p.stage===4).sort((a,b)=>{
+    // Evidence strength first, then merit
+    const eA = ((a.benefit!=null&&a.benefit>0)?2:0) + ((a.impact&&a.impact.length>30)?1:0);
+    const eB = ((b.benefit!=null&&b.benefit>0)?2:0) + ((b.impact&&b.impact.length>30)?1:0);
+    if(eB !== eA) return eB - eA;
+    return b.merit - a.merit;
+  });
+  let usedValue = 0;
+  valuePgms.forEach(p=>{
+    if(!hasEvidence(p)){
+      p.holdReason = 'Missing evidence — held for explicit review';
+      return;
+    }
+    if(usedValue + p.cost <= valueCap + 0.001){
+      p.funded = true;
+      p.allocStage = 4;
+      usedValue += p.cost;
+    }
+  });
+
+  // Calculate totals
+  const funded = programs.filter(p=>p.funded);
+  const unfunded = programs.filter(p=>!p.funded);
+  const held = programs.filter(p=>!p.funded && p.holdReason);
+  const stageAllocated = [0,0,0,0,0];
+  funded.forEach(p => { stageAllocated[p.allocStage] += p.cost; });
+
+  return { programs, funded, unfunded, held, stageDemands, stageAllocated, budget };
+}
+
+// =========================================================================
+// TAB SWITCHING
+// =========================================================================
+function switchTab(idx){
+  currentTab = idx;
+  document.querySelectorAll('.tabs button').forEach((b,i)=>{
+    b.classList.toggle('active', i===idx);
+  });
+  document.querySelectorAll('.workflow li').forEach((li,i)=>{
+    li.classList.toggle('active', i===idx);
+  });
+  document.querySelectorAll('.tab-content').forEach((tc,i)=>{
+    tc.classList.toggle('active', i===idx);
+  });
+}
+
+// Tab bar click handlers
+document.getElementById('tabBar').addEventListener('click', e=>{
+  const btn = e.target.closest('button[data-tab]');
+  if(btn) switchTab(+btn.dataset.tab);
+});
+document.getElementById('workflow').addEventListener('click', e=>{
+  const li = e.target.closest('li[data-tab]');
+  if(li) switchTab(+li.dataset.tab);
+});
+
+// =========================================================================
+// BUILD ALL TABS
+// =========================================================================
+function buildAllTabs(){
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <div class="tab-content active" id="tab0"></div>
+    <div class="tab-content" id="tab1"></div>
+    <div class="tab-content" id="tab2"></div>
+    <div class="tab-content" id="tab3"></div>
+    <div class="tab-content" id="tab4"></div>
+    <div class="tab-content" id="tab5"></div>
+  `;
+  buildTab0();
+  buildTab1();
+  buildTab2();
+  buildTab3();
+  buildTab4();
+  buildTab5();
+}
+
+// =========================================================================
+// TAB 0: ONE PORTFOLIO
+// =========================================================================
+function buildTab0(){
+  const el = document.getElementById('tab0');
+  const allProgs = [...DATA.program.ew, ...DATA.program.bu];
+  const res = runAllocation();
+  const fundedCount = res.funded.length;
+  const totalAllocated = res.funded.reduce((s,p)=>s+p.cost,0);
+  const totalBudget = DATA.meta.opsTotal2027 + scenarioState.budget;
+
+  // Build ranked backlog
+  const ranked = res.programs.sort((a,b)=> b.funded - a.funded || b.merit - a.merit);
+
+  let html = '';
+
+  const heldCount = res.held ? res.held.length : 0;
+  const heldCost = res.held ? res.held.reduce((s,p)=>s+p.cost,0) : 0;
+
+  // KPI row
+  html += `<div class="kpi-row">
+    ${makeKPI('Total IT Budget', fmtE(totalBudget,1), 'Program + Operations', 'accent')}
+    ${makeKPI('Program AOP', fmtE(scenarioState.budget,1), 'Target envelope ('+scenarioState.preset+')', 'accent')}
+    ${makeKPI('Operations', fmtE(DATA.meta.opsTotal2027,1), 'Pre-aligned AOP 2027', 'accent')}
+    ${makeKPI('Funded / Total', fundedCount+' / '+allProgs.length, fmt(totalAllocated,1)+' M€ of '+fmt(DATA.meta.programTotal,1)+' M€ demand', 'green')}
+    ${makeKPI('Held for Evidence', heldCount, fmt(heldCost,1)+' M€ pending evidence', heldCount>0?'amber':'green')}
+    ${makeKPI('Evidence Gap', 'Payback & Benefits', 'Due 24 Sep 2026', 'red')}
+  </div>`;
+
+  // Finance Recommended 100M Scenario
+  html += `<div class="section">
+    <h2>Finance Recommended 100M Scenario <span class="badge">Segmentation</span></h2>
+    <div class="tbl-wrap">
+    <table class="fin-table">
+      <tr><th>High Level Segmentation</th><th class="num">Demand F&amp;R</th><th class="num">Demand BU-Led</th><th class="num">Total Demand</th><th class="num">Potential Spread to 100M</th></tr>
+      <tr><td>1. True LFRs</td><td class="num">€12M</td><td class="num">€8M</td><td class="num">€20M</td><td class="num">€15M</td></tr>
+      <tr><td>2. High-value project carry-overs</td><td class="num">€23M</td><td class="num">€97M</td><td class="num">€120M</td><td class="num">€50M</td></tr>
+      <tr><td>3. Small changes, sustain, tech debt</td><td class="num">€22M</td><td class="num">€0M</td><td class="num">€23M</td><td class="num">€20M</td></tr>
+      <tr><td>4. Large impactful projects (&gt;€200K)</td><td class="num">€45M</td><td class="num">€54M</td><td class="num">€99M</td><td class="num">€15M</td></tr>
+      <tr><td><strong>Total</strong></td><td class="num"><strong>€102M</strong></td><td class="num"><strong>€159M</strong></td><td class="num"><strong>€262M</strong></td><td class="num"><strong>€100M</strong></td></tr>
+    </table>
+    </div>
+    <div style="margin-top:12px"><strong>100M Spread Visualization</strong></div>
+    <div class="fund-bar">
+      <div style="flex:15;background:${STAGE_COLORS[0]}" title="True LFRs: 15M">LFRs 15M</div>
+      <div style="flex:50;background:${STAGE_COLORS[1]}" title="High-value carry-overs: 50M">Carry-overs 50M</div>
+      <div style="flex:20;background:${STAGE_COLORS[2]}" title="Small changes/sustain: 20M">Sustain 20M</div>
+      <div style="flex:15;background:${STAGE_COLORS[3]}" title="Large impactful: 15M">Large 15M</div>
+    </div>
+  </div>`;
+
+  // Ranked Program Backlog
+  html += `<div class="section">
+    <h2>Ranked Program Backlog <span class="badge">${ranked.length} programs</span></h2>
+    <div class="tbl-wrap">
+    <table id="tblBacklog">
+      <tr><th class="sortable" data-col="rank">#</th><th class="sortable" data-col="id">ID</th><th class="sortable" data-col="name">Program Name</th><th class="sortable" data-col="org">BURF</th><th class="sortable num" data-col="cost">Requested M€</th><th class="sortable" data-col="status">Status</th><th>Cost of Not Doing</th><th class="sortable num" data-col="benefit">Benefits M€</th><th class="sortable num" data-col="merit">Score</th></tr>`;
+
+  ranked.forEach((p,i)=>{
+    const status = p.funded ? 'Funded' : (p.holdReason ? 'Held' : 'Unfunded');
+    const pillCls = p.funded ? 'pill-green' : (p.holdReason ? 'pill-amber' : 'pill-red');
+    const costOfNot = !p.funded ? esc(p.holdReason || p.impact || '-') : '';
+    html += `<tr>
+      <td class="num">${i+1}</td>
+      <td>${esc(p.id)}</td>
+      <td>${esc(p.name)}</td>
+      <td>${esc(p.org)}</td>
+      <td class="num">${fmt(p.cost)}</td>
+      <td><span class="pill ${pillCls}">${status}</span>${p.holdReason?'<br><small style="color:var(--disc);font-size:10px">Evidence gap</small>':''}</td>
+      <td style="max-width:200px;font-size:11px;color:var(--text2)">${costOfNot}</td>
+      <td class="num">${p.benefit!=null?fmt(p.benefit):'-'}</td>
+      <td class="num">${p.merit}</td>
+    </tr>`;
+  });
+
+  html += `</table></div></div>`;
+
+  // BU-Level Combined View
+  html += `<div class="section">
+    <h2>BU-Level Combined View <span class="badge">Program + Operations TCO</span></h2>`;
+
+  // Aggregate program demand by org
+  const buProgramDemand = {};
+  const buProgramFunded = {};
+  allProgs.forEach(p=>{
+    const key = p.org || 'Unassigned';
+    buProgramDemand[key] = (buProgramDemand[key]||0) + p.cost;
+  });
+  res.funded.forEach(p=>{
+    const key = p.org || 'Unassigned';
+    buProgramFunded[key] = (buProgramFunded[key]||0) + p.cost;
+  });
+
+  // TCO by BU (top-level only)
+  const tcoTop = DATA.operations.tco.filter(t=>!t.bu.startsWith('-') && !t.bu.startsWith(' '));
+
+  html += `<div class="tbl-wrap"><table>
+    <tr><th>BU / Function</th><th class="num">Program Demand M€</th><th class="num">Program Funded M€</th><th class="num">Operations TCO M€</th><th class="num">Total IT Spend M€</th><th class="num">Delta vs AOP2026 M€</th></tr>`;
+
+  tcoTop.forEach(t=>{
+    const demand = buProgramDemand[t.bu] || 0;
+    const funded = buProgramFunded[t.bu] || 0;
+    const total = funded + t.totalBU;
+    html += `<tr>
+      <td><strong>${esc(t.bu)}</strong></td>
+      <td class="num">${fmt(demand)}</td>
+      <td class="num">${fmt(funded)}</td>
+      <td class="num">${fmt(t.totalBU)}</td>
+      <td class="num">${fmt(total)}</td>
+      <td class="num" style="color:${t.deltaVsAOP2026>=0?'var(--prot)':'var(--weak)'}">${t.deltaVsAOP2026>=0?'+':''}${fmt(t.deltaVsAOP2026)}</td>
+    </tr>`;
+  });
+
+  html += `</table></div></div>`;
+  el.innerHTML = html;
+  attachSortHandlers('tblBacklog');
+}
+
+// =========================================================================
+// TAB 1: PROGRAM SCENARIOS
+// =========================================================================
+function buildTab1(){
+  const el = document.getElementById('tab1');
+  el.innerHTML = '<div id="scenarioContent"></div>';
+  renderScenario();
+}
+
+function renderScenario(){
+  const el = document.getElementById('scenarioContent');
+  if(!el) return;
+  const res = runAllocation();
+  const totalAllocated = res.funded.reduce((s,p)=>s+p.cost,0);
+  const totalBenefit = res.funded.reduce((s,p)=>s+(p.benefit||0),0);
+  const avgMerit = res.funded.length ? (res.funded.reduce((s,p)=>s+p.merit,0)/res.funded.length) : 0;
+  const unfundedCost = res.unfunded.reduce((s,p)=>s+p.cost,0);
+
+  let html = '';
+
+  const heldInScenario = res.held ? res.held.length : 0;
+  const heldCostScenario = res.held ? res.held.reduce((s,p)=>s+p.cost,0) : 0;
+
+  // KPI row
+  html += `<div class="kpi-row">
+    ${makeKPI('Total Budget', fmtE(scenarioState.budget,1), 'Program AOP', 'accent')}
+    ${makeKPI('Allocated', fmtE(totalAllocated,1), pct(totalAllocated,scenarioState.budget)+' of budget', 'green')}
+    ${makeKPI('Remaining', fmtE(Math.max(0,scenarioState.budget-totalAllocated),1), 'Unallocated', totalAllocated>=scenarioState.budget?'green':'amber')}
+    ${makeKPI('Funded', res.funded.length, 'programs', 'green')}
+    ${makeKPI('Held', heldInScenario, fmtE(heldCostScenario,1)+' pending evidence', heldInScenario>0?'amber':'green')}
+    ${makeKPI('Avg Merit', fmt(avgMerit,0), 'of funded programs', 'accent')}
+  </div>`;
+
+  // Fund bar
+  html += `<div class="section"><h2>Funding Allocation by Stage</h2>`;
+  html += `<div class="fund-bar">`;
+  for(let i=0;i<5;i++){
+    const w = scenarioState.budget>0 ? (res.stageAllocated[i]/scenarioState.budget)*100 : 0;
+    if(w > 0.5){
+      html += `<div style="flex:${w.toFixed(1)};background:${STAGE_COLORS[i]}" title="${STAGE_NAMES[i]}: ${fmt(res.stageAllocated[i])} M€">${STAGE_NAMES[i].split(' ')[0]} ${fmt(res.stageAllocated[i])}</div>`;
+    }
+  }
+  html += `</div>`;
+
+  // Stage summary
+  html += `<table style="margin-top:8px"><tr><th>Stage</th><th class="num">Demand M€</th><th class="num">Allocated M€</th><th class="num">Programs</th><th class="num">Fill Rate</th></tr>`;
+  for(let i=0;i<5;i++){
+    const cnt = res.funded.filter(p=>p.allocStage===i).length;
+    html += `<tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:${STAGE_COLORS[i]};vertical-align:middle;margin-right:6px"></span>${STAGE_NAMES[i]}</td><td class="num">${fmt(res.stageDemands[i])}</td><td class="num">${fmt(res.stageAllocated[i])}</td><td class="num">${cnt}</td><td class="num">${pct(res.stageAllocated[i],res.stageDemands[i])}</td></tr>`;
+  }
+  html += `</table></div>`;
+
+  // Budget input and sliders
+  html += `<div class="section"><h2>Scenario Controls</h2>`;
+
+  // Budget input
+  html += `<div style="margin-bottom:12px;display:flex;align-items:center;gap:12px">
+    <label style="font-weight:600;font-size:12px">Total AOP Budget (M€):</label>
+    <input type="number" id="budgetInput" value="${scenarioState.budget}" min="0" max="500" step="1" style="width:90px" onchange="scenarioState.budget=+this.value;renderScenario();buildTab0()">
+  </div>`;
+
+  // Presets
+  html += `<div class="presets">
+    <button class="${scenarioState.preset==='optimal'?'selected':''}" onclick="applyPreset('optimal')">Optimal Segmentation (Recommended)</button>
+    <button class="${scenarioState.preset==='protect'?'selected':''}" onclick="applyPreset('protect')">Protect Commitments</button>
+    <button class="${scenarioState.preset==='tighten'?'selected':''}" onclick="applyPreset('tighten')">Tighten Carryover Evidence</button>
+    <button class="${scenarioState.preset==='release'?'selected':''}" onclick="applyPreset('release')">Release Sustain Capacity</button>
+  </div>`;
+
+  // Allocation logic description
+  html += `<div style="background:var(--lt);border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:11px;line-height:1.5">
+    <strong>Allocation Logic:</strong>
+    <strong>LFRs</strong>: P1 obligations first, then P2, with preference for records having LFR name/year evidence. CCB exceptions for Finance, GF and ISC are partially funded.
+    <strong>Sustain + Hygiene</strong>: Full eligible Sustain first; remaining to Hygiene.
+    <strong>Carryovers</strong>: Ranked by benefit ratio, payback and consequence evidence. Must be data-backed.
+    <strong>Value/Large</strong>: Strongest evidence-backed choices in remaining capacity.
+    <strong>Missing evidence</strong>: Held outside automatic selection — can be explicitly included with rationale.
+  </div>`;
+
+  // Directional budget sliders
+  const sl = scenarioState.sliders;
+  const total4 = sl.legalBudget + sl.sustainHygieneBudget + sl.carryBudget + sl.valueBudget;
+  html += `<div class="slider-row">
+    <div class="slider-card">
+      <div class="s-label">True LFRs (Directional M€)</div>
+      <div class="s-value" id="legalVal">${sl.legalBudget}M€</div>
+      <input type="range" min="0" max="${scenarioState.budget}" step="1" value="${sl.legalBudget}" oninput="scenarioState.sliders.legalBudget=+this.value;document.getElementById('legalVal').textContent=this.value+'M€';renderScenario();buildTab0()">
+      <div style="font-size:10px;color:var(--text2);margin-top:2px">P1→P2 priority; LFR name/year evidence preference; CCB partial funding</div>
+    </div>
+    <div class="slider-card">
+      <div class="s-label">Sustain + Hygiene (Directional M€)</div>
+      <div class="s-value" id="sustainVal">${sl.sustainHygieneBudget}M€</div>
+      <input type="range" min="0" max="${scenarioState.budget}" step="1" value="${sl.sustainHygieneBudget}" oninput="scenarioState.sliders.sustainHygieneBudget=+this.value;document.getElementById('sustainVal').textContent=this.value+'M€';renderScenario();buildTab0()">
+      <div style="font-size:10px;color:var(--text2);margin-top:2px">Full Sustain funded first; remainder to Hygiene (CI + Upgrades)</div>
+    </div>
+    <div class="slider-card">
+      <div class="s-label">High-Value Carryovers (Directional M€)</div>
+      <div class="s-value" id="carryVal">${sl.carryBudget}M€</div>
+      <input type="range" min="0" max="${scenarioState.budget}" step="1" value="${sl.carryBudget}" oninput="scenarioState.sliders.carryBudget=+this.value;document.getElementById('carryVal').textContent=this.value+'M€';renderScenario();buildTab0()">
+      <div style="font-size:10px;color:var(--text2);margin-top:2px">Ranked by benefit/cost ratio, payback and consequence. Data-backed only.</div>
+    </div>
+    <div class="slider-card">
+      <div class="s-label">Value / Large Impactful (Directional M€)</div>
+      <div class="s-value" id="valueVal">${sl.valueBudget}M€</div>
+      <input type="range" min="0" max="${scenarioState.budget}" step="1" value="${sl.valueBudget}" oninput="scenarioState.sliders.valueBudget=+this.value;document.getElementById('valueVal').textContent=this.value+'M€';renderScenario();buildTab0()">
+      <div style="font-size:10px;color:var(--text2);margin-top:2px">Strongest evidence-backed choices in remaining capacity</div>
+    </div>
+  </div>`;
+  html += `<p style="font-size:11px;color:var(--text2);margin-top:4px">Directional budget sum: <strong>${total4}M€</strong> of ${scenarioState.budget}M€. Each stage allocates whole programs until its cap or demand is reached. Historical split context: EW ~€35M / Regions ~€5M / BU ~€60M.</p>`;
+  html += `</div>`;
+
+  // Funded programs table (grouped by BURF)
+  html += `<div class="section"><h2>Funded Programs <span class="badge">${res.funded.length} programs | ${fmtE(totalAllocated,1)}</span></h2>`;
+
+  const fundedByOrg = {};
+  res.funded.sort((a,b)=>b.merit-a.merit).forEach(p=>{
+    const org = p.org || 'Unassigned';
+    if(!fundedByOrg[org]) fundedByOrg[org] = [];
+    fundedByOrg[org].push(p);
+  });
+
+  Object.keys(fundedByOrg).sort().forEach(org=>{
+    const progs = fundedByOrg[org];
+    const orgCost = progs.reduce((s,p)=>s+p.cost,0);
+    html += `<details open><summary>${esc(org)} <span class="badge">${progs.length} programs | ${fmtE(orgCost,1)}</span></summary>`;
+    html += `<table><tr><th>ID</th><th>Name</th><th>Stage</th><th class="num">Cost M€</th><th class="num">Benefit M€</th><th class="num">Merit</th><th>Priority</th></tr>`;
+    progs.forEach(p=>{
+      html += `<tr><td>${esc(p.id)}</td><td>${esc(p.name)}</td><td><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${STAGE_COLORS[p.allocStage]};margin-right:4px;vertical-align:middle"></span>${STAGE_NAMES[p.allocStage]}</td><td class="num">${fmt(p.cost)}</td><td class="num">${p.benefit!=null?fmt(p.benefit):'-'}</td><td class="num">${p.merit}</td><td>${esc(p.priority)}</td></tr>`;
+    });
+    html += `</table></details>`;
+  });
+  html += `</div>`;
+
+  // Held for evidence review
+  const held = res.unfunded.filter(p=>p.holdReason);
+  if(held.length){
+    html += `<div class="section"><h2 style="color:var(--disc)">Held for Evidence Review <span class="badge">${held.length} programs | ${fmtE(held.reduce((s,p)=>s+p.cost,0),1)}</span></h2>`;
+    html += `<p style="font-size:11px;color:var(--text2);margin-bottom:8px">These programs are held outside automatic selection due to missing evidence. They can be explicitly included in the EW or BU tab, recording the rationale, accountable leader and unresolved evidence.</p>`;
+    html += `<div class="tbl-wrap"><table id="tblHeld"><tr><th class="sortable" data-col="id">ID</th><th class="sortable" data-col="name">Name</th><th>BURF</th><th class="sortable" data-col="stage">Stage</th><th class="sortable num" data-col="cost">Cost M€</th><th>Hold Reason</th><th class="sortable num" data-col="merit">Merit</th></tr>`;
+    held.sort((a,b)=>b.cost-a.cost).forEach(p=>{
+      html += `<tr><td>${esc(p.id)}</td><td>${esc(p.name)}</td><td>${esc(p.org)}</td><td>${STAGE_NAMES[p.stage]}</td><td class="num">${fmt(p.cost)}</td><td style="font-size:11px;color:var(--disc)">${esc(p.holdReason)}</td><td class="num">${p.merit}</td></tr>`;
+    });
+    html += `</table></div></div>`;
+  }
+
+  // Unfunded programs table (budget exceeded, not evidence gap)
+  const unfundedBudget = res.unfunded.filter(p=>!p.holdReason);
+  html += `<div class="section"><h2 style="color:var(--weak)">Unfunded Programs (Budget Exceeded) <span class="badge">${unfundedBudget.length} programs | ${fmtE(unfundedBudget.reduce((s,p)=>s+p.cost,0),1)}</span></h2>`;
+  html += `<div class="tbl-wrap"><table id="tblUnfunded"><tr><th class="sortable" data-col="id">ID</th><th class="sortable" data-col="name">Name</th><th>BURF</th><th class="sortable" data-col="stage">Stage</th><th class="sortable num" data-col="cost">Cost M€</th><th class="sortable num" data-col="benefit">Benefit M€</th><th class="sortable num" data-col="merit">Merit</th><th>Cost of Not Doing</th></tr>`;
+  unfundedBudget.sort((a,b)=>b.merit-a.merit).forEach(p=>{
+    html += `<tr><td>${esc(p.id)}</td><td>${esc(p.name)}</td><td>${esc(p.org)}</td><td>${STAGE_NAMES[p.stage]}</td><td class="num">${fmt(p.cost)}</td><td class="num">${p.benefit!=null?fmt(p.benefit):'-'}</td><td class="num">${p.merit}</td><td style="max-width:200px;font-size:11px;color:var(--text2)">${esc((p.impact||'').substring(0,150))}</td></tr>`;
+  });
+  html += `</table></div></div>`;
+
+  el.innerHTML = html;
+  attachSortHandlers('tblUnfunded');
+}
+
+function applyPreset(name){
+  scenarioState.preset = name;
+  switch(name){
+    case 'optimal':
+      // Finance recommended: LFR 15, Sustain+Hygiene 20, Carryovers 50, Value/Large 15
+      scenarioState.sliders = {legalBudget:15,sustainHygieneBudget:20,carryBudget:50,valueBudget:15};
+      scenarioState.budget = 100;
+      break;
+    case 'protect':
+      // Protect all commitments: maximize LFR and Sustain, compress Value
+      scenarioState.sliders = {legalBudget:20,sustainHygieneBudget:23,carryBudget:50,valueBudget:7};
+      scenarioState.budget = 100;
+      break;
+    case 'tighten':
+      // Tighten carryover: reduce carry, give more to evidence-backed value
+      scenarioState.sliders = {legalBudget:15,sustainHygieneBudget:20,carryBudget:40,valueBudget:25};
+      scenarioState.budget = 100;
+      break;
+    case 'release':
+      // Release sustain: reduce sustain+hygiene, give to carryover
+      scenarioState.sliders = {legalBudget:15,sustainHygieneBudget:12,carryBudget:58,valueBudget:15};
+      scenarioState.budget = 100;
+      break;
+  }
+  const presetLabels = {optimal:'Optimal Segmentation (Recommended)',protect:'Protect Commitments',tighten:'Tighten Carryover Evidence',release:'Release Sustain Capacity'};
+  document.getElementById('headerSubtitle').textContent = 'Scenario: '+presetLabels[name]+' | Status: Draft | Source: Sep 2026';
+  renderScenario();
+  buildTab0();
+}
+
+// =========================================================================
+// TAB 2: ENTERPRISE WIDE
+// =========================================================================
+function buildTab2(){
+  const el = document.getElementById('tab2');
+  const ew = DATA.program.ew.map(p=>({...p, merit: meritScore(p), stage: classifyStage(p)}));
+  const res = runAllocation();
+  const fundedIds = new Set(res.funded.filter(p=>p.stream==='ew').map(p=>p.id));
+
+  const totalDemand = ew.reduce((s,p)=>s+p.cost,0);
+  const totalAllocated = res.funded.filter(p=>p.stream==='ew').reduce((s,p)=>s+p.cost,0);
+  const totalBenefit = ew.reduce((s,p)=>s+(p.benefit||0),0);
+  const avgMerit = ew.length ? (ew.reduce((s,p)=>s+p.merit,0)/ew.length) : 0;
+  const meritFloor = res.funded.filter(p=>p.stream==='ew').length ? Math.min(...res.funded.filter(p=>p.stream==='ew').map(p=>p.merit)) : 0;
+
+  // Unique filter values
+  const orgs = [...new Set(ew.map(p=>p.org).filter(Boolean))].sort();
+  const platforms = [...new Set(ew.map(p=>p.platform).filter(Boolean))].sort();
+  const categories = [...new Set(ew.map(p=>p.category).filter(Boolean))].sort();
+  const priorities = [...new Set(ew.map(p=>p.priority).filter(Boolean))].sort();
+
+  let html = '';
+
+  // KPIs
+  html += `<div class="kpi-row">
+    ${makeKPI('EW Demand', fmtE(totalDemand,1), ew.length+' programs', 'accent')}
+    ${makeKPI('EW Allocated', fmtE(totalAllocated,1), pct(totalAllocated,totalDemand)+' of demand', 'green')}
+    ${makeKPI('Delta', fmtE(totalDemand-totalAllocated,1), 'Unfunded gap', 'red')}
+    ${makeKPI('Merit Floor', meritFloor, 'Minimum funded score', 'accent')}
+    ${makeKPI('Benefits Gap', 'TBD', 'Pending evidence', 'amber')}
+    ${makeKPI('Total Benefits', fmtE(totalBenefit,1), 'If fully funded', 'green')}
+  </div>`;
+
+  // Filters
+  html += `<div class="filters" id="ewFilters">
+    <label>Org:</label><select id="ewFOrg" onchange="filterEW()"><option value="">All</option>${orgs.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Platform:</label><select id="ewFPlat" onchange="filterEW()"><option value="">All</option>${platforms.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Category:</label><select id="ewFCat" onchange="filterEW()"><option value="">All</option>${categories.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Priority:</label><select id="ewFPri" onchange="filterEW()"><option value="">All</option>${priorities.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Status:</label><select id="ewFStatus" onchange="filterEW()"><option value="">All</option><option value="funded">Funded</option><option value="unfunded">Unfunded</option></select>
+  </div>`;
+
+  // Bubble chart
+  html += `<div class="section"><h2>Merit vs Cost Bubble Chart</h2>
+    <svg id="ewBubbleChart" class="bubble-chart" viewBox="0 0 800 380"></svg>
+  </div>`;
+
+  // Grouped table
+  html += `<div class="section"><h2>Enterprise Wide Programs <span class="badge">${ew.length}</span></h2>
+    <div class="tbl-wrap"><table id="tblEW">
+    <tr><th class="sortable" data-col="id">ID</th><th class="sortable" data-col="name">Name</th><th>Category</th><th class="sortable num" data-col="cost">Requested M€</th><th class="sortable num" data-col="benefit">Benefits M€</th><th class="sortable num" data-col="merit">Score</th><th>Priority</th><th>Status</th></tr>`;
+
+  // Group by org
+  const byOrg = {};
+  ew.forEach(p=>{
+    const key = p.org || 'Unassigned';
+    if(!byOrg[key]) byOrg[key] = [];
+    byOrg[key].push(p);
+  });
+
+  Object.keys(byOrg).sort().forEach(org=>{
+    const progs = byOrg[org].sort((a,b)=>b.merit-a.merit);
+    const orgCost = progs.reduce((s,p)=>s+p.cost,0);
+    html += `<tr style="background:var(--mist)"><td colspan="8" style="font-weight:700;padding:10px">${esc(org)} <span class="badge">${progs.length} | ${fmtE(orgCost)}</span></td></tr>`;
+    progs.forEach(p=>{
+      const isFunded = fundedIds.has(p.id);
+      html += `<tr class="ew-row" data-org="${esc(p.org)}" data-plat="${esc(p.platform)}" data-cat="${esc(p.category)}" data-pri="${esc(p.priority)}" data-status="${isFunded?'funded':'unfunded'}">
+        <td>${esc(p.id)}</td><td>${esc(p.name)}</td><td>${esc(p.category)}</td>
+        <td class="num">${fmt(p.cost)}</td><td class="num">${p.benefit!=null?fmt(p.benefit):'-'}</td>
+        <td class="num">${p.merit}</td><td>${esc(p.priority)}</td>
+        <td><span class="pill ${isFunded?'pill-green':'pill-red'}">${isFunded?'Funded':'Unfunded'}</span></td>
+      </tr>`;
+    });
+  });
+  html += `</table></div></div>`;
+
+  el.innerHTML = html;
+  drawBubbleChart('ewBubbleChart', ew, fundedIds);
+  attachSortHandlers('tblEW');
+}
+
+function filterEW(){
+  const org = document.getElementById('ewFOrg').value;
+  const plat = document.getElementById('ewFPlat').value;
+  const cat = document.getElementById('ewFCat').value;
+  const pri = document.getElementById('ewFPri').value;
+  const status = document.getElementById('ewFStatus').value;
+  document.querySelectorAll('#tblEW .ew-row').forEach(row=>{
+    let show = true;
+    if(org && row.dataset.org !== org) show = false;
+    if(plat && row.dataset.plat !== plat) show = false;
+    if(cat && row.dataset.cat !== cat) show = false;
+    if(pri && row.dataset.pri !== pri) show = false;
+    if(status && row.dataset.status !== status) show = false;
+    row.style.display = show ? '' : 'none';
+  });
+}
+
+// =========================================================================
+// TAB 3: BU LED
+// =========================================================================
+function buildTab3(){
+  const el = document.getElementById('tab3');
+  const bu = DATA.program.bu.map(p=>({...p, merit: meritScore(p), stage: classifyStage(p)}));
+  const res = runAllocation();
+  const fundedIds = new Set(res.funded.filter(p=>p.stream==='bu').map(p=>p.id));
+
+  const totalDemand = bu.reduce((s,p)=>s+p.cost,0);
+  const totalAllocated = res.funded.filter(p=>p.stream==='bu').reduce((s,p)=>s+p.cost,0);
+  const totalBenefit = bu.reduce((s,p)=>s+(p.benefit||0),0);
+  const avgMerit = bu.length ? (bu.reduce((s,p)=>s+p.merit,0)/bu.length) : 0;
+  const meritFloor = res.funded.filter(p=>p.stream==='bu').length ? Math.min(...res.funded.filter(p=>p.stream==='bu').map(p=>p.merit)) : 0;
+
+  const orgs = [...new Set(bu.map(p=>p.org).filter(Boolean))].sort();
+  const platforms = [...new Set(bu.map(p=>p.platform).filter(Boolean))].sort();
+  const categories = [...new Set(bu.map(p=>p.category).filter(Boolean))].sort();
+  const priorities = [...new Set(bu.map(p=>p.priority).filter(Boolean))].sort();
+
+  let html = '';
+
+  html += `<div class="kpi-row">
+    ${makeKPI('BU Led Demand', fmtE(totalDemand,1), bu.length+' programs', 'accent')}
+    ${makeKPI('BU Led Allocated', fmtE(totalAllocated,1), pct(totalAllocated,totalDemand)+' of demand', 'green')}
+    ${makeKPI('Delta', fmtE(totalDemand-totalAllocated,1), 'Unfunded gap', 'red')}
+    ${makeKPI('Merit Floor', meritFloor, 'Minimum funded score', 'accent')}
+    ${makeKPI('Benefits Gap', 'TBD', 'Pending evidence', 'amber')}
+    ${makeKPI('Total Benefits', fmtE(totalBenefit,1), 'If fully funded', 'green')}
+  </div>`;
+
+  html += `<div class="filters" id="buFilters">
+    <label>Org:</label><select id="buFOrg" onchange="filterBU()"><option value="">All</option>${orgs.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Platform:</label><select id="buFPlat" onchange="filterBU()"><option value="">All</option>${platforms.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Category:</label><select id="buFCat" onchange="filterBU()"><option value="">All</option>${categories.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Priority:</label><select id="buFPri" onchange="filterBU()"><option value="">All</option>${priorities.map(o=>'<option value="'+esc(o)+'">'+esc(o)+'</option>').join('')}</select>
+    <label>Status:</label><select id="buFStatus" onchange="filterBU()"><option value="">All</option><option value="funded">Funded</option><option value="unfunded">Unfunded</option></select>
+  </div>`;
+
+  html += `<div class="section"><h2>Merit vs Cost Bubble Chart</h2>
+    <svg id="buBubbleChart" class="bubble-chart" viewBox="0 0 800 380"></svg>
+  </div>`;
+
+  html += `<div class="section"><h2>BU Led Programs <span class="badge">${bu.length}</span></h2>
+    <div class="tbl-wrap"><table id="tblBU">
+    <tr><th class="sortable" data-col="id">ID</th><th class="sortable" data-col="name">Name</th><th>Category</th><th class="sortable num" data-col="cost">Requested M€</th><th class="sortable num" data-col="benefit">Benefits M€</th><th class="sortable num" data-col="merit">Score</th><th>Priority</th><th>Payback</th><th>Status</th></tr>`;
+
+  const byOrg = {};
+  bu.forEach(p=>{
+    const key = p.org || 'Unassigned';
+    if(!byOrg[key]) byOrg[key] = [];
+    byOrg[key].push(p);
+  });
+
+  Object.keys(byOrg).sort().forEach(org=>{
+    const progs = byOrg[org].sort((a,b)=>b.merit-a.merit);
+    const orgCost = progs.reduce((s,p)=>s+p.cost,0);
+    html += `<tr style="background:var(--mist)"><td colspan="9" style="font-weight:700;padding:10px">${esc(org)} <span class="badge">${progs.length} | ${fmtE(orgCost)}</span></td></tr>`;
+    progs.forEach(p=>{
+      const isFunded = fundedIds.has(p.id);
+      html += `<tr class="bu-row" data-org="${esc(p.org)}" data-plat="${esc(p.platform)}" data-cat="${esc(p.category)}" data-pri="${esc(p.priority)}" data-status="${isFunded?'funded':'unfunded'}">
+        <td>${esc(p.id)}</td><td>${esc(p.name)}</td><td>${esc(p.category)}</td>
+        <td class="num">${fmt(p.cost)}</td><td class="num">${p.benefit!=null?fmt(p.benefit):'-'}</td>
+        <td class="num">${p.merit}</td><td>${esc(p.priority)}</td><td>${esc(p.payback||'')}</td>
+        <td><span class="pill ${isFunded?'pill-green':'pill-red'}">${isFunded?'Funded':'Unfunded'}</span></td>
+      </tr>`;
+    });
+  });
+  html += `</table></div></div>`;
+
+  el.innerHTML = html;
+  drawBubbleChart('buBubbleChart', bu, fundedIds);
+  attachSortHandlers('tblBU');
+}
+
+function filterBU(){
+  const org = document.getElementById('buFOrg').value;
+  const plat = document.getElementById('buFPlat').value;
+  const cat = document.getElementById('buFCat').value;
+  const pri = document.getElementById('buFPri').value;
+  const status = document.getElementById('buFStatus').value;
+  document.querySelectorAll('#tblBU .bu-row').forEach(row=>{
+    let show = true;
+    if(org && row.dataset.org !== org) show = false;
+    if(plat && row.dataset.plat !== plat) show = false;
+    if(cat && row.dataset.cat !== cat) show = false;
+    if(pri && row.dataset.pri !== pri) show = false;
+    if(status && row.dataset.status !== status) show = false;
+    row.style.display = show ? '' : 'none';
+  });
+}
+
+// =========================================================================
+// BUBBLE CHART
+// =========================================================================
+function drawBubbleChart(svgId, programs, fundedIds){
+  const svg = document.getElementById(svgId);
+  if(!svg) return;
+  const W = 800, H = 380, PAD = {top:20,right:30,bottom:45,left:55};
+  const cw = W - PAD.left - PAD.right;
+  const ch = H - PAD.top - PAD.bottom;
+
+  const maxMerit = 100;
+  const costs = programs.map(p=>p.cost).filter(c=>c>0);
+  const maxCost = Math.max(...costs, 1);
+  const minCost = Math.min(...costs, 0.01);
+
+  function xScale(merit){ return PAD.left + (merit/maxMerit)*cw; }
+  function yScale(cost){
+    if(cost <= 0) cost = 0.01;
+    const logMin = Math.log10(minCost);
+    const logMax = Math.log10(maxCost);
+    const logVal = Math.log10(cost);
+    const t = logMax > logMin ? (logVal - logMin)/(logMax - logMin) : 0.5;
+    return PAD.top + ch - t*ch;
+  }
+  function rScale(cost){ return Math.max(4, Math.min(25, Math.sqrt(cost)*8)); }
+
+  let svgContent = '';
+
+  // Grid lines
+  for(let i=0;i<=5;i++){
+    const x = PAD.left + (i/5)*cw;
+    svgContent += `<line x1="${x}" y1="${PAD.top}" x2="${x}" y2="${PAD.top+ch}" stroke="#e8edf2" stroke-width="1"/>`;
+    svgContent += `<text x="${x}" y="${H-8}" text-anchor="middle" font-size="10" fill="#8895a7">${(i*20)}</text>`;
+  }
+  for(let i=0;i<=4;i++){
+    const y = PAD.top + (i/4)*ch;
+    svgContent += `<line x1="${PAD.left}" y1="${y}" x2="${PAD.left+cw}" y2="${y}" stroke="#e8edf2" stroke-width="1"/>`;
+    const costVal = Math.pow(10, Math.log10(maxCost) - (i/4)*(Math.log10(maxCost)-Math.log10(minCost)));
+    svgContent += `<text x="${PAD.left-8}" y="${y+4}" text-anchor="end" font-size="10" fill="#8895a7">${fmt(costVal,1)}</text>`;
+  }
+
+  // Axis labels
+  svgContent += `<text x="${PAD.left+cw/2}" y="${H-2}" text-anchor="middle" font-size="11" fill="#4a5568">Merit Score</text>`;
+  svgContent += `<text x="14" y="${PAD.top+ch/2}" text-anchor="middle" font-size="11" fill="#4a5568" transform="rotate(-90,14,${PAD.top+ch/2})">Cost M€ (log)</text>`;
+
+  // Bubbles
+  programs.forEach(p => {
+    if(p.cost <= 0) return;
+    const cx = xScale(p.merit);
+    const cy = yScale(p.cost);
+    const r = rScale(p.cost);
+    const isFunded = fundedIds.has(p.id);
+    const color = isFunded ? 'var(--blue)' : 'var(--weak)';
+    const opacity = isFunded ? 0.7 : 0.4;
+    svgContent += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}" opacity="${opacity}" stroke="${isFunded?'var(--dk)':'var(--weak)'}" stroke-width="1">
+      <title>${esc(p.id)}: ${esc(p.name)}\nCost: ${fmt(p.cost)} M€ | Merit: ${p.merit}\nStatus: ${isFunded?'Funded':'Unfunded'}</title>
+    </circle>`;
+  });
+
+  svg.innerHTML = svgContent;
+}
+
+// =========================================================================
+// TAB 4: OPERATIONS
+// =========================================================================
+function buildTab4(){
+  const el = document.getElementById('tab4');
+  const services = DATA.operations.services;
+  const tco = DATA.operations.tco;
+  const uniqueDepts = [...new Set(services.map(s=>s.dept).filter(Boolean))].sort();
+  const uniqueTbmTypes = [...new Set(services.map(s=>s.tbmType).filter(Boolean))].sort();
+
+  const totalOps2027 = services.reduce((s,v)=>s+v.cost2027,0);
+  const totalOps2026 = services.reduce((s,v)=>s+v.cost2026,0);
+
+  let html = '';
+
+  // KPIs
+  html += `<div class="kpi-row">
+    ${makeKPI('Total Operations 2027', fmtE(DATA.meta.opsTotal2027,1), 'AOP 2027', 'accent')}
+    ${makeKPI('vs 2026 Run-Rate', fmtE(DATA.meta.opsTotal2026,1), 'Delta: '+fmtE(DATA.meta.opsTotal2027-DATA.meta.opsTotal2026,1), DATA.meta.opsTotal2027<DATA.meta.opsTotal2026?'green':'amber')}
+    ${makeKPI('Services', services.length, 'In catalog', 'accent')}
+    ${makeKPI('IT Departments', uniqueDepts.length, 'Unique departments', 'accent')}
+  </div>`;
+
+  // BU Total Cost of Ownership
+  html += `<div class="section"><h2>BU Total Cost of Ownership</h2>`;
+  html += `<div class="tbl-wrap"><table id="tblTCO">
+    <tr><th>BU / Cluster</th><th class="num">AOP2026 M€</th><th class="num">Own Consumption M€</th><th class="num">Region Alloc M€</th><th class="num">Function Alloc M€</th><th class="num">Total BU AOP2027 M€</th><th class="num">Delta vs AOP2026 M€</th><th style="width:200px">Cost Components</th></tr>`;
+
+  tco.forEach(t => {
+    const isSub = t.bu.startsWith('-') || t.bu.startsWith(' -');
+    const buName = isSub ? t.bu.replace(/^[\s-]+/,'') : t.bu;
+    const total = t.ownConsumption + t.regionAlloc + t.functionAlloc;
+    const barW = 180;
+    const ownW = total>0 ? (t.ownConsumption/total)*barW : 0;
+    const regW = total>0 ? (t.regionAlloc/total)*barW : 0;
+    const funW = total>0 ? (t.functionAlloc/total)*barW : 0;
+
+    html += `<tr>
+      <td ${isSub?'class="indent"':'style="font-weight:700"'}>${esc(buName)}</td>
+      <td class="num">${fmt(t.aop2026)}</td>
+      <td class="num">${fmt(t.ownConsumption)}</td>
+      <td class="num">${fmt(t.regionAlloc)}</td>
+      <td class="num">${fmt(t.functionAlloc)}</td>
+      <td class="num" style="font-weight:700">${fmt(t.totalBU)}</td>
+      <td class="num" style="color:${t.deltaVsAOP2026>=0?'var(--prot)':'var(--weak)'}">${t.deltaVsAOP2026>=0?'+':''}${fmt(t.deltaVsAOP2026)}</td>
+      <td>
+        <div style="display:flex;height:16px;border-radius:3px;overflow:hidden;background:var(--mist)">
+          ${ownW>0?'<div style="width:'+ownW+'px;background:#00126E" title="Own: '+fmt(t.ownConsumption)+'"></div>':''}
+          ${regW>0?'<div style="width:'+regW+'px;background:#0B5ED7" title="Region: '+fmt(t.regionAlloc)+'"></div>':''}
+          ${funW>0?'<div style="width:'+funW+'px;background:#008BA3" title="Function: '+fmt(t.functionAlloc)+'"></div>':''}
+        </div>
+        <div style="font-size:9px;color:var(--text3);margin-top:2px">
+          <span style="color:#00126E">■</span> Own
+          <span style="color:#0B5ED7;margin-left:4px">■</span> Region
+          <span style="color:#008BA3;margin-left:4px">■</span> Function
+        </div>
+      </td>
+    </tr>`;
+  });
+  html += `</table></div></div>`;
+
+  // Service Catalog
+  html += `<div class="section"><h2>Service Catalog <span class="badge">${services.length} services</span></h2>`;
+  html += `<div class="filters">
+    <label>Search:</label><input type="text" id="svcSearch" placeholder="Search services..." oninput="filterServices()">
+    <label>IT Dept:</label><select id="svcDept" onchange="filterServices()"><option value="">All</option>${uniqueDepts.map(d=>'<option value="'+esc(d)+'">'+esc(d)+'</option>').join('')}</select>
+    <label>TBM Type:</label><select id="svcTbm" onchange="filterServices()"><option value="">All</option>${uniqueTbmTypes.map(d=>'<option value="'+esc(d)+'">'+esc(d)+'</option>').join('')}</select>
+    <label>Group by:</label><select id="svcGroup" onchange="buildServiceTable()"><option value="none">None</option><option value="dept">IT Department</option><option value="tbmType">TBM Type</option></select>
+  </div>`;
+  html += `<div id="svcTableWrap"></div>`;
+  html += `</div>`;
+
+  el.innerHTML = html;
+  buildServiceTable();
+}
+
+function buildServiceTable(){
+  const wrap = document.getElementById('svcTableWrap');
+  if(!wrap) return;
+  const services = DATA.operations.services;
+  const groupBy = document.getElementById('svcGroup')?.value || 'none';
+
+  let html = `<div class="tbl-wrap"><table id="tblSvc">
+    <tr><th class="sortable" data-col="serviceId">Service ID</th><th class="sortable" data-col="name">Name</th><th>IT Dept</th><th>TBM Type</th><th>TBM Category</th><th class="sortable num" data-col="cost2026">2026 Cost M€</th><th class="sortable num" data-col="cost2027">AOP2027 Cost M€</th><th class="sortable num" data-col="delta">Delta M€</th></tr>`;
+
+  if(groupBy === 'none'){
+    services.forEach(s => {
+      const delta = s.cost2027 - s.cost2026;
+      html += `<tr class="svc-row" data-dept="${esc(s.dept)}" data-tbm="${esc(s.tbmType)}" data-search="${esc((s.name+' '+s.serviceId+' '+s.description).toLowerCase())}">
+        <td>${esc(s.serviceId)}</td><td>${esc(s.name)}</td><td>${esc(s.dept)}</td><td>${esc(s.tbmType)}</td><td>${esc(s.tbmCategory)}</td>
+        <td class="num">${fmt(s.cost2026,3)}</td><td class="num">${fmt(s.cost2027,3)}</td>
+        <td class="num" style="color:${delta>=0?'var(--prot)':'var(--weak)'}">${delta>=0?'+':''}${fmt(delta,3)}</td>
+      </tr>`;
+    });
+  } else {
+    const groups = {};
+    services.forEach(s => {
+      const key = s[groupBy] || 'Unassigned';
+      if(!groups[key]) groups[key] = [];
+      groups[key].push(s);
+    });
+    Object.keys(groups).sort().forEach(g => {
+      const items = groups[g];
+      const grpCost = items.reduce((s,v)=>s+v.cost2027,0);
+      html += `<tr style="background:var(--mist)"><td colspan="8" style="font-weight:700;padding:10px">${esc(g)} <span class="badge">${items.length} services | ${fmtE(grpCost,3)}</span></td></tr>`;
+      items.forEach(s => {
+        const delta = s.cost2027 - s.cost2026;
+        html += `<tr class="svc-row" data-dept="${esc(s.dept)}" data-tbm="${esc(s.tbmType)}" data-search="${esc((s.name+' '+s.serviceId+' '+s.description).toLowerCase())}">
+          <td>${esc(s.serviceId)}</td><td>${esc(s.name)}</td><td>${esc(s.dept)}</td><td>${esc(s.tbmType)}</td><td>${esc(s.tbmCategory)}</td>
+          <td class="num">${fmt(s.cost2026,3)}</td><td class="num">${fmt(s.cost2027,3)}</td>
+          <td class="num" style="color:${delta>=0?'var(--prot)':'var(--weak)'}">${delta>=0?'+':''}${fmt(delta,3)}</td>
+        </tr>`;
+      });
+    });
+  }
+  html += `</table></div>`;
+  wrap.innerHTML = html;
+  attachSortHandlers('tblSvc');
+}
+
+function filterServices(){
+  const search = (document.getElementById('svcSearch')?.value||'').toLowerCase();
+  const dept = document.getElementById('svcDept')?.value||'';
+  const tbm = document.getElementById('svcTbm')?.value||'';
+  document.querySelectorAll('#tblSvc .svc-row').forEach(row=>{
+    let show = true;
+    if(search && !row.dataset.search.includes(search)) show = false;
+    if(dept && row.dataset.dept !== dept) show = false;
+    if(tbm && row.dataset.tbm !== tbm) show = false;
+    row.style.display = show ? '' : 'none';
+  });
+}
+
+// =========================================================================
+// TAB 5: CONFERENCES
+// =========================================================================
+function buildTab5(){
+  const el = document.getElementById('tab5');
+  let html = '';
+
+  // Functions Conference
+  html += `<div class="section">
+    <h2>Functions Conference (Enterprise-Wide)</h2>
+
+    <h3>Agenda</h3>
+    <div class="agenda-item"><div class="time">10 min</div><div class="desc"><h4>1. Demand Overview</h4><p>AOP 2026 allocation, AOP 2027 Buckets, Funding types</p></div></div>
+    <div class="agenda-item"><div class="time">30 min</div><div class="desc"><h4>2. Enterprise Wide Prioritization Scenario</h4><p>Scenarios with committed impact, Trade-off logic</p></div></div>
+    <div class="agenda-item"><div class="time">10 min</div><div class="desc"><h4>3. Operations Overview</h4><p>Scope and consumptions with allocations</p></div></div>
+    <div class="agenda-item"><div class="time">10 min</div><div class="desc"><h4>4. Summary | Enterprise-Wide AOP 2027</h4><p>Final Program + Operations, Committed Impact</p></div></div>
+
+    <h3 style="margin-top:18px">Attendees</h3>
+    <div class="tbl-wrap"><table>
+      <tr><th>Function</th><th>Global Portfolio Leader</th><th>Platform Lead</th></tr>
+      <tr><td>Greater China (GRC)</td><td>YiQiu Chen</td><td></td></tr>
+      <tr><td>Innovation and Design</td><td>Steven Spiele</td><td>Michael Baumhackl</td></tr>
+      <tr><td>Medical Office</td><td>Astrid Smeets</td><td>Michael Baumhackl</td></tr>
+      <tr><td>Patient Safety &amp; Quality (PSQ)</td><td>Philipp Ebbinghaus</td><td>Saumya</td></tr>
+      <tr><td>People Function</td><td>Caroline Lippe (Nico Steyaert)</td><td>Saumya</td></tr>
+      <tr><td>Finance</td><td>Dick Overeem</td><td>Martine Vleeshouwers</td></tr>
+      <tr><td>Group Security</td><td>Gal Gnainsky</td><td>Saumya</td></tr>
+      <tr><td>ESG &amp; Legal, Health &amp; Safety</td><td>Martijn Niekus</td><td>Saumya</td></tr>
+      <tr><td>Intellectual Property &amp; Standards</td><td>Rob Caals</td><td>Saumya</td></tr>
+      <tr><td>Communications &amp; Brand</td><td>Dennis Agusi</td><td>Michael Baumhackl</td></tr>
+      <tr><td>Internal Audit</td><td>Martijn Niekus</td><td>Saumya</td></tr>
+      <tr><td>Information Technology (IT)</td><td>Ryan Kennedy</td><td>Saumya</td></tr>
+      <tr><td>International Market (IM)</td><td>Gunter Koeppen</td><td></td></tr>
+      <tr><td>North America (NAM)</td><td>Ryan Kennedy</td><td></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:18px">Per-Function Portfolio Briefing</h3>
+    <div id="functionBriefings"></div>
+  </div>`;
+
+  // BU Led Conference
+  html += `<div class="section">
+    <h2>BU Led Conference</h2>
+
+    <h3>Agenda</h3>
+    <div class="agenda-item"><div class="time">10 min</div><div class="desc"><h4>1. Demand Overview</h4><p>AOP 2026, AOP 2027 Buckets, Approved priorities</p></div></div>
+    <div class="agenda-item"><div class="time">30 min</div><div class="desc"><h4>2. BU Led Prioritization Scenario</h4><p>BU Led demand with committed impact, Cross-BU portfolio</p></div></div>
+    <div class="agenda-item"><div class="time">10 min</div><div class="desc"><h4>3. Operations Overview</h4><p>Scope and consumptions for BU Led priorities</p></div></div>
+    <div class="agenda-item"><div class="time">10 min</div><div class="desc"><h4>4. Summary | AOP 2027</h4><p>Final One Portfolio BU Led + Enterprise AOP</p></div></div>
+
+    <h3 style="margin-top:18px">Attendees</h3>
+    <div class="tbl-wrap"><table>
+      <tr><th>BU</th><th>BU Representative</th><th>Prime Contact BU &amp; IT</th><th>Supporting IT Platform Lead</th></tr>
+      <tr><td>PH</td><td>Dominique Oh</td><td>Victoria Noelle</td><td>Michael Baumhackl</td></tr>
+      <tr><td>EI and I&amp;D</td><td>Christina Murphy</td><td>Vishwanathan Krishnamoorthy</td><td>Michael Baumhackl</td></tr>
+      <tr><td>HPM, CC, S&amp;RC</td><td>Ajay Parkhe / Michael Meissner</td><td></td><td>Ryan Kennedy</td></tr>
+      <tr><td>PD</td><td>Maria Claudia Renjifo</td><td></td><td>Ryan Kennedy</td></tr>
+      <tr><td>IGT</td><td>Mark Stoffels</td><td>Tom van Rooij / Douglas Simpson</td><td>Ryan Kennedy</td></tr>
+      <tr><td>Service transformation</td><td></td><td>Roel van Driel / Alexander v.Boetzelaer</td><td>Ryan Kennedy</td></tr>
+      <tr><td>COO &amp; ISC transformation</td><td></td><td>Otto te Walvaart</td><td>Martine Vleeshouwers</td></tr>
+      <tr><td>IR</td><td>Minh Nguyen</td><td></td><td>Gunter Koeppen</td></tr>
+      <tr><td>NAM</td><td>Joe Donlan</td><td></td><td>Ryan Kennedy</td></tr>
+      <tr><td>GCR</td><td>Kent Cheng</td><td></td><td>YiQui Chen</td></tr>
+      <tr><td>Finance</td><td>N.A.</td><td></td><td>Martine Vleeshouwers</td></tr>
+    </table></div>
+  </div>`;
+
+  el.innerHTML = html;
+
+  // Build per-function briefings
+  buildFunctionBriefings();
+}
+
+function buildFunctionBriefings(){
+  const container = document.getElementById('functionBriefings');
+  if(!container) return;
+
+  const res = runAllocation();
+  const fundedIds = new Set(res.funded.filter(p=>p.stream==='ew').map(p=>p.id));
+
+  // Map function names to org values in EW data
+  const functionMap = {
+    'Greater China (GRC)': ['Greater China'],
+    'Innovation and Design': ['Innovation and Design Business Operations'],
+    'Medical Office': ['Medical Office'],
+    'Patient Safety & Quality (PSQ)': ['Patient Safety & Quality'],
+    'People Function': ['People function'],
+    'Finance': ['Finance'],
+    'Group Security': ['Group Security'],
+    'ESG & Legal, Health & Safety': ['Legal', 'Health & Safety'],
+    'Intellectual Property & Standards': ['Intellectual Property & Standards (IP&S)'],
+    'Communications & Brand': ['Communications & Brand'],
+    'Internal Audit': ['Internal Audit '],
+    'Information Technology (IT)': ['Information Technology '],
+    'International Market (IM)': ['International Regions (IR) - Overall'],
+    'North America (NAM)': ['North America']
+  };
+
+  let html = '';
+  Object.keys(functionMap).forEach(func => {
+    const orgKeys = functionMap[func];
+    const progs = DATA.program.ew.filter(p => orgKeys.some(k => p.org && p.org.includes(k)));
+    if(progs.length === 0) return;
+
+    const totalCost = progs.reduce((s,p)=>s+p.cost,0);
+    const fundedProgs = progs.filter(p=>fundedIds.has(p.id));
+    const fundedCost = fundedProgs.reduce((s,p)=>s+p.cost,0);
+
+    html += `<details><summary>${esc(func)} <span class="badge">${progs.length} programs | ${fmtE(totalCost)} demand | ${fmtE(fundedCost)} funded</span></summary>`;
+    html += `<table><tr><th>ID</th><th>Name</th><th class="num">Cost M€</th><th class="num">Benefit M€</th><th>Priority</th><th>Status</th></tr>`;
+    progs.sort((a,b)=>meritScore(b)-meritScore(a)).forEach(p=>{
+      const isFunded = fundedIds.has(p.id);
+      html += `<tr><td>${esc(p.id)}</td><td>${esc(p.name)}</td><td class="num">${fmt(p.cost)}</td><td class="num">${p.benefit!=null?fmt(p.benefit):'-'}</td><td>${esc(p.priority)}</td><td><span class="pill ${isFunded?'pill-green':'pill-red'}">${isFunded?'Funded':'Unfunded'}</span></td></tr>`;
+    });
+    html += `</table></details>`;
+  });
+
+  container.innerHTML = html;
+}
+
+// =========================================================================
+// SORTABLE TABLE HEADERS
+// =========================================================================
+function attachSortHandlers(tableId){
+  const table = document.getElementById(tableId);
+  if(!table) return;
+  table.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', function(){
+      const col = this.dataset.col;
+      const isAsc = this.classList.contains('asc');
+      // Reset all
+      table.querySelectorAll('th.sortable').forEach(h=>{h.classList.remove('asc','desc')});
+      this.classList.add(isAsc?'desc':'asc');
+
+      const tbody = table.querySelector('tbody') || table;
+      const rows = Array.from(tbody.querySelectorAll('tr')).filter(r=>r.querySelector('td'));
+      const colIdx = Array.from(th.parentElement.children).indexOf(th);
+      const isNum = th.classList.contains('num');
+      const dir = isAsc ? -1 : 1;
+
+      rows.sort((a,b)=>{
+        let va = a.children[colIdx]?.textContent?.trim() || '';
+        let vb = b.children[colIdx]?.textContent?.trim() || '';
+        if(isNum){
+          va = parseFloat(va.replace(/[^\d.\-]/g,'')) || 0;
+          vb = parseFloat(vb.replace(/[^\d.\-]/g,'')) || 0;
+          return (va - vb) * dir;
+        }
+        return va.localeCompare(vb) * dir;
+      });
+
+      rows.forEach(r => tbody.appendChild(r));
+    });
+  });
+}
+
+// =========================================================================
+// CSV EXPORT
+// =========================================================================
+function exportCSV(){
+  const tabNames = ['OnePortfolio','ProgramScenarios','EnterpriseWide','BULed','Operations','Conferences'];
+  const tabEl = document.querySelector('.tab-content.active');
+  if(!tabEl) return;
+
+  // Find the first visible table
+  const table = tabEl.querySelector('table');
+  if(!table){
+    alert('No table data found in current view.');
+    return;
+  }
+
+  let csv = '';
+  const rows = table.querySelectorAll('tr');
+  rows.forEach(row=>{
+    const cells = row.querySelectorAll('th, td');
+    const vals = Array.from(cells).map(c=>{
+      let v = c.textContent.trim().replace(/"/g,'""');
+      return '"'+v+'"';
+    });
+    csv += vals.join(',') + '\n';
+  });
+
+  const blob = new Blob(['﻿'+csv], {type:'text/csv;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'AOP2027-'+tabNames[currentTab]+'-export.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// =========================================================================
+// INIT
+// =========================================================================
+loadData();
+</script>
+</body>
+</html>
