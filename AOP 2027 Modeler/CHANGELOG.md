@@ -2,7 +2,7 @@
 
 ## v5.5.0 — Defect-fix build: PMI double-count, Ops over-count, KPI restore, a11y (29 Sep 2026)
 
-**Pure defect-fix build targeting the 7 open critical/high/medium UI defects from the 20260929T051933Z validation cycle. No new features. Score improvement target: +7.5 pts (UI/UX gate cases L4-01–L4-03).**
+**Pure defect-fix build. Validation cycle 20260929T063821Z: confidence 43.3/100 (up from 40.5, baseline 34.9). UI/UX defects 0 (was 9). L2-08 metadata now PASS. Completed 18/32 automated cases; 14 pending owner/data decisions outside code scope.**
 
 ### Critical: UX-09 — PMI no longer double-counted in Demand Split footer
 - Root cause: `result.rows` already contains PMI rows (engine does `rows.concat(pmiRows)`), so `gTotDem`/`gTotFund` already included PMI. The footer then added `pmiInfo.requested`/`pmiInfo.funded` a second time.
@@ -42,8 +42,19 @@
 - Root cause: Tab buttons used only a CSS `.active` class; no `role="tab"` or `aria-selected` was set.
 - Fix: `render()` now sets `role="tablist"` on `#tabs`, and each button gets `role="tab"`, `aria-selected="true/false"`, `id="tab-btn-{key}"`, and `aria-controls="main"`.
 
+### Data — Program source and metadata (L1-01, L2-08)
+- Embedded program source transplanted from validated SharePoint candidate (hash `b26dd808...`, 443 records, 0 placeholders).
+- Ops-data metadata corrected to match actual engine values from the new source: ewTotal 115.7 → 113.521 M€, buTotal 177.0 → 173.533 M€, programTotal 292.8 → 287.054 M€. Previously correct for the old source, now aligned to the current Programme workbook.
+
 ### Engine
 - Version bumped: `5.4.0` → `5.5.0`; tag updated to `v5.5`.
+
+### Validation result (cycle 20260929T063821Z)
+- Confidence: **43.3/100** (up from 40.5, baseline 34.9)
+- UI/UX source defects: **0** (was 9 — all UX-02 through UX-10 cleared)
+- New PASS: L1-01, L1-08, L1-09, L2-08, L4-06
+- Remaining open automated failures (all data/policy, not code): L1-04 (15 missing ops services), L2-04 (130 ops cost differences), L2-05 (4-stage vs 5-stage policy)
+- 14 cases still PENDING (require owner decisions, scored zero until resolved)
 
 ---
 
