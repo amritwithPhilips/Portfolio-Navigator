@@ -1,15 +1,83 @@
 # AOP 2027 One Portfolio Dashboard — Changelog
 
-## v5.4.1 — ExCo Ops Reconciliation and PMI Display (29 Sep 2026)
-**Fixes ExCo-level operations cost accuracy, moves PMI details to Tab 6, and aligns version/label consistency.**
+## v5.5.0 — Defect-fix build: PMI double-count, Ops over-count, KPI restore, a11y (29 Sep 2026)
 
-### Tab 2 — PMI banner removed
-- Removed the yellow PMI notice banner and the 6th "PMI On Top" KPI card
-- Tab 2 now shows exactly 5 KPI cards in a single row with no overflow
+**Pure defect-fix build targeting the 7 open critical/high/medium UI defects from the 20260929T051933Z validation cycle. No new features. Score improvement target: +7.5 pts (UI/UX gate cases L4-01–L4-03).**
 
-### Tab 6 — PMI row added to Demand Split by ExCo Accountability
-- New highlighted PMI row shows programme count, requested, and funded amounts
-- Footer total row now includes PMI counts and amounts
+### Critical: UX-09 — PMI no longer double-counted in Demand Split footer
+- Root cause: `result.rows` already contains PMI rows (engine does `rows.concat(pmiRows)`), so `gTotDem`/`gTotFund` already included PMI. The footer then added `pmiInfo.requested`/`pmiInfo.funded` a second time.
+- Fix: Removed the redundant `+pmiInfo.count`, `+pmiInfo.requested`, `+pmiInfo.funded` additions from the Total row. PMI disclosure row above the footer is retained as a visual highlight only.
+- Effect: Footer Requested corrects from 292.24 M€ → 287.05 M€; Funded from 110.37 M€ → 105.18 M€; count from 447 → 443.
+
+### Critical: UX-10 — Ops footer total uses authoritative OPS metadata (not summed EXCO map)
+- Root cause: `gTotOps` summed `EXCO_OPS_COST` for every ExCo leader including Functions/Regions whose costs are already allocated into BU totals, yielding 568.5 M€ instead of 469.7 M€.
+- Fix: Footer total Ops cell and footer note now use `OPS.meta.opsTotal2027` (fallback 469.7) — the source-verified total.
+- ExCo-level ops rows still show their individual BU-cluster allocations; only the total row is corrected.
+
+### High: UX-02 — PMI On Top KPI restored to One Portfolio (Tab 6)
+- Root cause: A "clean exec view" patch at Tab 6 activation replaced the entire KPI block with 5 hard-coded tiles, discarding the PMI card that the original builder had added.
+- Fix: Tab 6 KPI replacement now reads `aop.result.pmi` and appends the PMI tile when programmes are present; column count sets `--kpi-cols` CSS variable (5 or 6).
+
+### High: UX-03 — Operations AOP tile in Tab 6 derives from OPS metadata
+- Root cause: Same "exec view" patch hardcoded `469.7 M€` literal in both the Ops tile and the Total IT tile.
+- Fix: Both tiles now use `(OPS.meta.opsTotal2027)||469.7` so they follow an approved Operations refresh.
+
+### High: UX-04 — Unfunded bubbles and median merit line restored in One Portfolio chart
+- Root cause: Another patch hid unfunded bubbles and removed the median line as a cosmetic choice with no design exception logged; validation flagged the suppression as a defect.
+- Fix: Removed the hiding loops for `circle[data-bubble]` (unfunded) and `.median-line/.median-label/.median-value`. Full demand is now visible in the bubble chart.
+
+### High: UX-08 — Finance QA reconciliation status now visible in One Portfolio view
+- Root cause: `renderFinanceQA()` existed and was tested in exports but was never injected into the DOM render path for Tab 6.
+- Fix: After the allocation table is inserted, `AOPDataQA.validateFinance()` + `AOPDataQA.renderFinanceQA()` run and the resulting panel is inserted before the third `.panel` in the overview. Errors are silently caught so a QA failure never breaks the render.
+
+### Medium: UX-05 — Demand Overview KPI grid is now responsive
+- Root cause: Inline `style="grid-template-columns:repeat(N,1fr)"` on `.stream-kpis` overrode all media queries, making the 6-column grid overflow at 800 and 1200 px.
+- Fix: Added `.stream-kpis` CSS class with breakpoints at 1366/1200/800 px (3-col → 2-col). Inline style changed to set `--kpi-cols` CSS variable only; media queries use explicit column counts that win over the variable.
+
+### Medium: UX-06 — Scenario status exposed to assistive technology
+- Root cause: `#status` span had `aria-hidden="true"` (originally added to suppress screen-reader repetition but never removed).
+- Fix: Replaced with `aria-live="polite" aria-atomic="true"` so status changes are announced once on update.
+
+### Medium: UX-07 — Tab buttons declare accessible selected state
+- Root cause: Tab buttons used only a CSS `.active` class; no `role="tab"` or `aria-selected` was set.
+- Fix: `render()` now sets `role="tablist"` on `#tabs`, and each button gets `role="tab"`, `aria-selected="true/false"`, `id="tab-btn-{key}"`, and `aria-controls="main"`.
+
+### Engine
+- Version bumped: `5.4.0` → `5.5.0`; tag updated to `v5.5`.
+
+---
+
+## v5.4.1 — ExCo Ops Reconciliation, PMI, Fork & Metadata Fixes (29 Sep 2026)
+**Fixes ExCo-level operations cost accuracy, adds PMI KPI cards to Tabs 2 and 6, preserves decisions on fork, corrects stale metadata, removes Finance QA badge, and enables Tab 6 filter propagation.**
+
+### Engine — Fork preserves decisions (L4-05)
+- `transact('fork')` now preserves all overrides (include/exclude decisions), evidence reviews, settings (budget, lever positions), filters, and preset from the parent scenario
+- Only identity fields reset: new ID, name appends "(fork)", revision 0, status Draft, empty event log
+- Parent link (`parent`) recorded for lineage tracking
+
+### Data — Operations metadata refreshed (L2-08)
+- Updated stale `ops-data` metadata: EW 111.7 → 115.7 M€, BU 170.6 → 177.0 M€, Program 282.3 → 292.8 M€
+- Metadata now matches engine-computed values from the live source workbook
+
+### Tab 2 — PMI KPI card
+- Removed the yellow multi-line PMI notice banner
+- Added "PMI On Top" as a proper KPI card (matching "Initiatives funded" style with blue left border, large number, subtitle)
+- Grid auto-expands to 6 columns when PMI programmes are present
+
+### Tab 6 — PMI KPI card + table row
+- Added "PMI On Top" KPI card in the Demand Overview KPI row (6-column grid)
+- PMI row in "Demand Split by ExCo Accountability" table shows programme count, requested, and funded amounts
+- Footer total row includes PMI counts and amounts
+- Removed the multi-line PMI notice paragraph from the One Portfolio overview
+
+### Tab 6 — Finance QA badge removed
+- Removed the "Finance QA: FAIL/PASS" badge and expandable check details from the "Organisation IT Cost Allocation" section
+- Programme/Operations reconciliation and stream-sum checks remain available in the engine but no longer rendered in the UI
+
+### Tab 6 — ExCo filter propagates to Organisation IT Cost Allocation
+- ExCo Leader filters now also filter the "Organisation IT Cost Allocation: Program + Operations" table
+- Filtering by ExCo leader shows only the corresponding BU clusters (e.g. selecting "Bert van Meurs" shows only "Image Guided Therapy")
+- Grand Total row recalculates to reflect the filtered subset
 
 ### Tab 6 — Ops Cost M€ column reconciled
 - `EXCO_OPS_COST` is now derived at runtime from `ORG_OPS_MAP` sub-org totals per ExCo leader
