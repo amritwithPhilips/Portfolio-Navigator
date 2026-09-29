@@ -1,5 +1,72 @@
 # AOP 2027 One Portfolio Dashboard — Changelog
 
+## v5.6.0 — IT Simplification lever, Levers filter, ExCo revert, fresh session (29 Sep 2026)
+
+**Side-version built from v5.5.0. Inherits all v5.5 defect fixes. Confidence carry-forward: 43.3/100 (v5.5 baseline). Five functional improvements added; no engine calculation regressions.**
+
+### Feature: IT Simplification — Optional 5th Lever
+
+**Toggle "IT Simplification Lever"** added to the Tab 2 scenario toolbar. When ON, programmes with `category` containing "Decomm" or "Replatforming" are separated from Stage 3 (Value Based Portfolio) into a new Stage 4 — IT Simplification.
+
+- **Engine**: `isITSimpProgram(r)` identifies candidates via `category.toLowerCase().indexOf('decomm')>=0 || indexOf('replatform')>=0`
+- **Default**: `itsimp:{basis:'bucket',pct:0}`, `itsimpMode:false` — no budget reserved until user acts
+- **Lever**: Full 3-basis support — % of bucket demand / % of Total AOP / Allocation (M€) — matching Levers 3 and 4
+- **Budget mechanics**: `itsimpReserve()` deducts IT Simplification allocation from `valueTarget()`, ring-fencing Stage 3 from consuming the IT Simplification envelope
+- **STAGES**: Now 5 entries: `['Legal and Compliance (Must Do)','Carry Over demand','Sustain Engineering and Hygiene','Value Based Portfolio','IT Simplification']`
+- **Funding Gate**: Gate 5 "IT Simplification" shown conditionally when toggle is ON, with demand/funded/coverage stats
+- **Toggle initialises**: `itsimp={basis:'bucket',pct:0}` on first activation; stored in `session.settings`
+- **Live data**: 29 programmes (category "Decomm/Replatforming") correctly extracted; 0M€ default (configurable)
+- **Addresses**: L2-05 audit finding (4-stage vs 5-stage policy gap from v5.5 QA cycle)
+
+### Feature: Levers Filter — All Tabs
+
+`stageName` dimension added as **"Lever"** filter to every filter bar:
+- `filters()` function → Tabs 3 / 4 / 6
+- `demandInScenario()` filter row → Tab 2 Demand in Scenario
+- `portfolioInclusionTable()` filter row → Tab 2 Portfolio Inclusion Table
+
+All filters remain on one row; no new filter row created.
+
+### Feature: Demand in Scenario — Consistent Funding Status
+
+- Column header: always **"Funding status / demand details"** (was conditional on Prioritised/Not Funded toggle — now fixed)
+- Organisation summary row: always shows **"X Funded · Y Partially Funded · Z Unfunded · N Total Demand · M holds"** drawn from `allOrgMap` (all programmes, not just the current view)
+- `summaryRow()` gains `fullRows` parameter; `fstatus` precomputed before the return statement
+
+### Feature: Service Catalog — Platform Column Header (Tab 5)
+
+Column header renamed **"Platform Name" → "Platform"** in the Service Catalog table (`#svcCatalog`).
+
+### Feature: New Scenario (100M€) Button
+
+**"New Scenario (100M€)"** button added to the scenario savebar (purple outline, purple label). Clicking creates a fresh `AOP.createSession(session.data)` with budget=100M€ and the Optimal Segmentation preset, clearing all overrides, reviews and ExCo trade-offs. Resolves: users could not return to the default optimal scenario from a heavily customised state.
+
+### Feature: ExCo Trade-off Revert
+
+- **Per-ExCo Revert button**: "Revert" button (red outline) appears in the last column of the ExCo cockpit table for any leader with stage-3/4 programme overrides — reverts only that leader's decisions to automatic
+- **Updated "Reset all trade-offs"**: Now also reverts all stage-3/4 programme overrides in addition to clearing pending input values — fully restores automatic prioritisation
+- Resolves: applied ExCo trade-offs could not be undone after the "Apply" action was committed
+
+### Engine
+
+- VERSION: `5.5.0` → `5.6.0`
+- New functions: `isITSimpProgram(r)`, `itsimpReserve()` in `solve()`
+- `validateSettings()`: full itsimp validation for all 3 bases
+- `switchBasis()`: 'itsimp' added as valid key with `si=4`
+- `defaults()`: includes `itsimp:{basis:'bucket',pct:0}`, `itsimpMode:false`
+
+### QA / Audit
+
+- Syntax: Node.js `--check` PASS on main script
+- Runtime: no console errors on load, Tab 2 render, IT Simplification toggle ON/OFF
+- Stage 4: 29 programmes correctly classified at 0M€ default; `itsimpReserve()` correctly ring-fences Stage 3
+- Lever: 3 basis tabs render correctly; `switchBasis` handler wired
+- Fresh session: creates `{basis:'bucket',pct:0}` at 100M€ ✓
+- ExCo revert: per-ExCo and global reset both clear stage-3/4 overrides ✓
+- **Remaining open** (carried from v5.5): L1-04 (15 missing ops services), L2-04 (130 ops cost differences)
+
+---
+
 ## v5.5.0 — Defect-fix build: PMI double-count, Ops over-count, KPI restore, a11y (29 Sep 2026)
 
 **Pure defect-fix build. Validation cycle 20260929T063821Z: confidence 43.3/100 (up from 40.5, baseline 34.9). UI/UX defects 0 (was 9). L2-08 metadata now PASS. Completed 18/32 automated cases; 14 pending owner/data decisions outside code scope.**

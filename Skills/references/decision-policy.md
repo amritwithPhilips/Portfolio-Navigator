@@ -35,6 +35,18 @@ Select whole initiatives in priority order. Stage limit is target × (1 + tolera
 
 Four presets: Optimal Segmentation (100% bucket P1/P3/P4, 0x carry), Protect Commitments (100% bucket P1/P3, 2x carry, 10% AOP P4), Tighten Carryover Evidence (100% bucket P1, 3x carry, 75% bucket P3, 15% AOP P4), Release Sustain Capacity (44% bucket P1, 0x carry, 75% bucket P3, 20% AOP P4). Retain entered Total AOP and manual overrides when changing preset.
 
+## IT Simplification — Stage 4 (v5.6, toggle-activated)
+
+When `session.settings.itsimpMode = true`, programmes with `category` containing "Decomm" or "Replatforming" (case-insensitive substring match) are classified to Stage 4 "IT Simplification" instead of Stage 3.
+
+**Identification**: `isITSimpProgram(r)` checks `(r.category||'').toLowerCase()` for 'decomm' or 'replatform'.
+
+**Funding**: Finance-based ring-fence supporting all 3 bases (% bucket / % AOP / Allocation M€). Default: `{basis:'bucket',pct:0}` — no budget reserved. Stage 3 residual is reduced by `itsimpReserve()` so Stage 3 cannot consume the IT Simplification allocation.
+
+**Toggle**: Stored in `session.settings.itsimpMode`. Creates a `New Scenario (100M€)` fresh session to return to defaults.
+
+**Presets**: All 4 existing presets keep `itsimpMode:false` — IT Simplification is always a manual user choice, not a preset.
+
 ## Shared scenario state
 
 One shared scenario with settings, reviews, overrides, trade-offs and event history. Scenario types removed in v5.x. New Working Version performs a full reset: Optimal preset, empty overrides, empty reviews, empty trade-offs, cleared decision log. Automatic results computed first; manual overrides applied afterwards.
@@ -59,9 +71,11 @@ ExCo is a first-class filter dimension on all programme tabs (cascading ExCo->Or
 
 Total AOP changes ONLY when the user manually edits the budget input field. The ExCo Trade-off Cockpit Apply button includes/excludes P4 programmes by merit score without modifying Total AOP. The "On top off AOP" KPI shows the delta between actual allocation and user-set budget.
 
-## ExCo Trade-off mechanics (v5.2)
+## ExCo Trade-off mechanics (v5.2, updated v5.6)
 
-The Trade-off Cockpit (Tabs 3/4, below filters, default closed) shows per-ExCo leader: Requested, Funded, Gap, % Funded, Hard Benefits, Soft Benefits, Trade-off Budget input, Delta, Progs/Benefits impact. Apply includes/excludes P4 programmes ranked by merit. Reset clears all entered values. Negative deltas supported (enter target below current funded to exclude lowest-merit P4 programmes). All trade-off decisions are logged.
+The Trade-off Cockpit (Tabs 3/4, below filters, default closed) shows per-ExCo leader: Requested, Funded, Gap, % Funded, Hard Benefits, Soft Benefits, Trade-off Budget input, Delta, Progs/Benefits impact, Revert. Apply includes/excludes P4/Stage 3 programmes ranked by merit. Negative deltas supported (enter target below current funded to exclude lowest-merit Stage 3 programmes). All trade-off decisions are logged.
+
+**v5.6 Revert**: Per-ExCo "Revert" button (red outline) appears when a leader has stage-3/4 overrides — click to return those programmes to automatic. "Reset all trade-offs" now also clears all stage-3/4 programme overrides (previously only cleared pending input values).
 
 ## Source data fields extracted
 

@@ -1,23 +1,23 @@
 ---
 name: aop-modeler
-description: AOP 2027 IT Portfolio Scenario Modelling tool — v5.1.1 golden baseline. Use when making changes to the modeler HTML, understanding the tab structure, KPI layouts, popup specs, or build conventions.
+description: AOP 2027 IT Portfolio Scenario Modelling tool — v5.6 current build. Use when making changes to the modeler HTML, understanding the tab structure, IT Simplification lever, KPI layouts, popup specs, or build conventions.
 ---
 
-# AOP 2027 Modeler — v5.1.1 Golden Baseline
+# AOP 2027 Modeler — v5.6 Current Build
 
-## Golden Baseline File
+## Current File
 
-`AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.1.html`
+`AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.6.html`
 
-This is the frozen golden baseline. All future builds MUST branch from this file (copy to a new version, e.g., v5.2.html). Never modify v5.1.html directly.
+This is the current working version. All future builds MUST branch from this file (copy to a new version, e.g., v5.7.html). The v5.1.1 golden baseline is frozen at `AOP2027-IT-Portfolio-Scenario-Modelling-v5.1.html` — never modify it.
 
 ## Architecture
 
 Single standalone offline HTML file (~20K lines). No server, no database. Three IIFEs:
 
-1. **Engine IIFE** (lines ~18400–19200): `AOP.normalize()`, `AOP.solve()`, `enrich()`, `stage()`, `consequence()`, `classifyBenefit()`, merit scoring.
-2. **UI IIFE** (lines ~19300–19560): `render()`, `stream()`, `controls()`, `filters()`, `details()`, `chart()`, `table()`, event delegation.
-3. **One Portfolio IIFE** (lines ~19565–20480): MutationObserver on `#main`, Tab 6 KPI replacement, Org IT Cost Allocation, TCO mapping.
+1. **Engine IIFE** (~lines 18400–19200): `AOP.normalize()`, `AOP.solve()`, `enrich()`, `stage()`, `isITSimpProgram()`, `consequence()`, `classifyBenefit()`, merit scoring.
+2. **UI IIFE** (~lines 19200–19560): `render()`, `stream()`, `controls()`, `filters()`, `demandInScenario()`, `excoTradeoffPanel()`, `details()`, `chart()`, event delegation.
+3. **One Portfolio IIFE** (~lines 19560–20480): MutationObserver on `#main`, Tab 6 KPI replacement, Org IT Cost Allocation, TCO mapping.
 
 ## Six-Tab Structure
 
@@ -102,16 +102,53 @@ Tabs 3 & 4 (ew/bu scope): Download Excel button present (primary style).
 ## Build Conventions
 
 1. Always update `CHANGELOG.md` when modifying the modeler
-2. Version naming: `v{major}.{minor}.{patch}` (e.g., v5.1.1)
-3. PRD and Requirements docs live in `PRD/` directory as `.docx`
-4. Dev server: `python -m http.server {port} --directory "AOP 2027 Modeler"`
+2. Version naming: `v{major}.{minor}.{patch}` (e.g., v5.6.0)
+3. PRD and Requirements docs live in `PRD/` directory; Skill refs in `Skills/references/`
+4. Dev server: `python -m http.server {port} --directory "AOP 2027 Modeler"`; launch.json entry "v5.6-modeler" on port 8783
 5. The `kpi()` helper function escapes HTML via `esc()` — use raw HTML `<div class="kpi">` for cards that need inline styling (like Committed Benefits)
 6. Tab switching uses `data-tab` attribute and delegated click handler on `document`
-7. IndexedDB store: `Philips-AOP2027-v5.1` with `scenarios` object store
+7. IndexedDB store: `Philips-AOP2027-v5.1` with `scenarios` object store (unchanged across v5.x)
+8. IT Simplification lever: always validate engine changes against Node.js `--check` on the extracted main script before committing (encoding issues can cause silent regex parsing failures)
+
+## IT Simplification Lever (v5.6 — toggle-activated)
+
+The 5th lever "IT Simplification" activates when `session.settings.itsimpMode = true`.
+
+**Toggle**: Checkbox "IT Simplification Lever" in the Tab 2 scenario toolbar (purple accent when ON).
+
+**Identification**: `isITSimpProgram(r)` — `const c=(r.category||'').toLowerCase(); return c.indexOf('decomm')>=0||c.indexOf('replatform')>=0;`
+- Live data: 29 programmes with category "Decomm/Replatforming"
+
+**Defaults**: `itsimp:{basis:'bucket',pct:0}` — no budget reserved by default. User can switch to % of Total AOP or Allocation (M€).
+
+**Budget mechanics**: `itsimpReserve()` subtracts IT Simplification target from `valueTarget()` — Stage 3 cannot consume the IT Simplification envelope.
+
+**Gate**: Funding Prioritization Gate conditionally shows Gate 5 "IT Simplification" with demand/funded/coverage stats only when `itsimpMode` is true.
+
+**STAGES** (v5.6): `['Legal and Compliance (Must Do)','Carry Over demand','Sustain Engineering and Hygiene','Value Based Portfolio','IT Simplification']` — 5 entries; Stage 4 demand is 0 when toggle OFF.
+
+## Levers Filter (v5.6)
+
+`stageName` filter with label "Lever" added to:
+- `filters(scope,rows)` → Tabs 3/4/6
+- `demandInScenario()` filter row → Tab 2
+- `portfolioInclusionTable()` filter row → Tab 2
+
+Values: the stage names (e.g., "Legal and Compliance (Must Do)", "Value Based Portfolio", "IT Simplification").
+
+## New Scenario (100M€) Button (v5.6)
+
+Button in the Tab 2 savebar. Creates `AOP.createSession(session.data)` with `budget=100` and runs `autoLfrPct`. Clears all overrides, reviews, and ExCo trade-offs. Navigates to scenario tab.
+
+## ExCo Trade-off Revert (v5.6)
+
+- "Revert" button per-ExCo row in cockpit table — reverts stage-3/4 overrides for that leader only
+- "Reset all trade-offs" button now also reverts ALL stage-3/4 programme overrides (not just pending inputs)
+- Handler: `data-revert-exco="ExCo Name"` attribute on button; handled before main click delegation
 
 ## Data Model
 
-472 demand rows (EW 176, BU 296). 285.1 M€ total demand.
+443 demand programmes (EW 169, BU 274). 287.054 M€ total programme demand. Source hash: b26dd808... (SharePoint live workbook).
 Operations: 469.7 M€ (167 services, pre-aligned).
 Enterprise-wide charging row excluded from demand; stored as `ewChargingKey`.
 
@@ -120,7 +157,7 @@ Key enriched fields per programme row:
 - `cost` (requested M€), `final` (prioritised M€), `benefit` (M€)
 - `benefitClass` (hard/soft/qualitative/none), `benefitClassLabel`
 - `score` (0-100 merit), `rawComponents[5]`, `components[5]`
-- `stage` (0-3), `stageName`, `status`, `reason`
+- `stage` (0-4, stage 4 only when itsimpMode=true), `stageName`, `status`, `reason`
 - `priority`, `problem`, `scope`, `impact`, `benefitDetails`
 - `paybackYears`, `decisionBand`, `overall`
 - `sourceValues[]` (all columns from source sheet)

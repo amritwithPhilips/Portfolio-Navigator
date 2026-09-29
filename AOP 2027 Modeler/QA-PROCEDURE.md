@@ -1,6 +1,6 @@
 # AOP 2027 One Portfolio Dashboard — QA Procedure
 
-**Version**: 4.5 | **Last updated**: 22 September 2026
+**Version**: 5.6 | **Last updated**: 29 September 2026
 
 ## Quick Start
 
@@ -129,6 +129,41 @@ preview_eval with contents of qa-harness.js
 | 28 | Process simplification = Soft | All programmes with area containing "Process simplification" and benefit > 0 are classified Soft |
 | 29 | Hard + Soft totals | Hard 159 programmes (12,308.0 M€), Soft 140 programmes (9,806.2 M€) with current 28 Sep data |
 
+### 15. IT Simplification Lever (v5.6) (6 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 50 | Toggle exists | `document.querySelector('[data-itsimp-toggle]')` is present in Tab 2 |
+| 51 | Default OFF and 0% | `session.settings.itsimpMode === false`; `session.settings.itsimp.pct === 0` on fresh session |
+| 52 | Toggle activates Stage 4 | After toggle ON: `result.stages[4]` exists with demand > 0; 29 programmes in Stage 4 (Decomm/Replatforming category) |
+| 53 | 3 basis tabs render | `[data-basis="itsimp"]` buttons for 'bucket', 'aop', 'amount' all present when toggle ON |
+| 54 | IT Simp ring-fenced from Stage 3 | With 10M€ IT Simp allocation: Stage 3 residual does NOT include the 10M€ (itsimpReserve deducts it) |
+| 55 | Gate 5 conditional | Gate count = 5 when itsimpMode=false; Gate count = 6 when itsimpMode=true |
+
+### 16. Levers Filter — All Tabs (v5.6) (3 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 56 | Lever filter in Tab 2 | `demandInScenario()` filter bar includes "Lever:" dropdown with stage name values |
+| 57 | Lever filter in Tabs 3/4 | `filters('ew'...)` and `filters('bu'...)` include "Lever:" filter option |
+| 58 | Filter works | Selecting "Value Based Portfolio" in Lever filter shows only Stage 3 programmes |
+
+### 17. Demand in Scenario consistency (v5.6) (2 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 59 | Column header always same | `burf-tablebox thead th:last-child` text = "Funding status / demand details" regardless of Prioritised/Not Funded toggle state |
+| 60 | Org summary shows Funded/Partial/Unfunded | Organisation summary row last column shows text matching pattern "N Funded · N Partially Funded · N Unfunded" |
+
+### 18. New Scenario (100M€) Button (v5.6) (2 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 61 | Button present | `document.getElementById('new-scenario')` is present in Tab 2 savebar |
+| 62 | Creates fresh session | After click: `session.settings.budget === 100`, `Object.keys(session.overrides).length === 0`, `session.preset === 'optimal'` |
+
+### 19. ExCo Trade-off Revert (v5.6) (2 checks)
+| # | Test | Acceptance Criteria |
+|---|------|-------------------|
+| 63 | Revert button per ExCo | After applying a trade-off: `[data-revert-exco]` button appears in cockpit table for affected leader |
+| 64 | Reset clears overrides | After "Reset all trade-offs": `result.rows.filter(r=>(r.stage===3||r.stage===4)&&r.override).length === 0` |
+
 ---
 
 ## Manual Visual Checks (ExCo Readiness)
@@ -183,6 +218,29 @@ These cannot be automated and require human review:
 - [ ] Programme popup: Process simplification programmes show "Soft Benefit" label (not Hard)
 - [ ] Programme popup: Productivity/Revenue programmes show "Hard Benefit" label
 - [ ] Excel export: benefitClass column shows "soft" for Cost Avoidance and Process simplification rows
+
+### IT Simplification Lever (v5.6)
+- [ ] "IT Simplification Lever" checkbox visible in Tab 2 toolbar (right-aligned, purple accent)
+- [ ] Toggle OFF: only 4 levers and 5 gates visible
+- [ ] Toggle ON: 5th lever "5 · IT Simplification" appears with 3 basis tabs; Gate 5 appears with demand/funded/coverage stats
+- [ ] Slider starts at 0% / 0M€; basis tabs work (bucket/AOP/amount)
+- [ ] Funding Prioritization Gate shows "IT Simplification" card only when toggle ON
+
+### New Scenario & ExCo Revert (v5.6)
+- [ ] "New Scenario (100M€)" button visible in savebar (purple outline)
+- [ ] Clicking resets to Optimal Segmentation at 100M€ with all overrides cleared
+- [ ] ExCo cockpit "Revert" column visible for leaders with stage-3/4 overrides
+- [ ] "Reset all trade-offs" button returns all stage-3/4 programmes to automatic (not just clears inputs)
+
+### Levers Filter & Consistent Status (v5.6)
+- [ ] "Lever:" filter visible in Tab 2 Demand in Scenario filter row (on same line as other filters)
+- [ ] "Lever:" filter visible in Tab 2 Portfolio Inclusion Table filter row
+- [ ] "Lever:" filter visible in Tabs 3, 4, 6 filter rows
+- [ ] "Demand in Scenario" column header always shows "Funding status / demand details" (not "Reason not funded / demand details" on unfunded view)
+- [ ] Organisation summary last column shows "X Funded · Y Partially Funded · Z Unfunded · N Total Demand"
+
+### Tab 5 Service Catalog (v5.6)
+- [ ] Service Catalog table header shows "Platform" (not "Platform Name")
 
 ### Cross-Tab
 - [ ] Switch to Enterprise Wide — stream KPIs and bubble chart render

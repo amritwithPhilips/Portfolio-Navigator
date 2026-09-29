@@ -1,6 +1,6 @@
 # AOP 2027 model logic specification
 
-Status: confirmed and implemented in the Excel model, dashboard and AOP prioritisation skill.
+Status: confirmed and implemented in the dashboard v5.6 and AOP prioritisation skill. Last updated: 29 Sep 2026 (v5.6 — IT Simplification Stage 4 added).
 
 ## Source authority
 
@@ -14,20 +14,30 @@ Snapshot reconciliation:
 
 ## Primary funding stages
 
-1. LFR: source Overall AOP decisions P1 Immediate and P2 Scheduled, plus the approved exceptions EW-11, EW-65 and EW-71.
-2. Sustain Engineering: only source rows explicitly classified `Change & Sustain`, after LFR overlap is removed. Display only Sustain Engineering as the stage name; do not infer membership from request size or CCB wording.
-3. Hygiene: approved source Category variants for decommissioning/replatforming, Continuous Improvement, and Upgrades & Enhancements, after earlier stages.
-4. Carryover: remaining source carryover with numeric Quantified Benefits at or above the configured benefit/request threshold.
-5. ROI-Based Portfolio: all remaining initiatives with numeric benefits, ranked by Merit Score. AI enters here unless an earlier stage applies.
+The modeler engine uses four mandatory stages (0–3) plus one optional toggle-activated stage (4).
 
-Current source bases:
+**Stage 0 — Legal and Compliance (Must Do)**: Source Overall AOP decisions P1 Immediate and P2 Scheduled, plus the approved CCB exceptions EW-11, EW-65 and EW-71. Requires LFR compliance name AND year for automatic funding. CCBs are always funded in full.
 
-- LFR: 34.517 M€.
-- Sustain Engineering: 12.333 M€.
-- Combined at full coverage: 46.850 M€.
-- Hygiene after LFR and Sustain Engineering precedence: 65.560 M€.
+**Stage 1 — Carry Over demand**: All source rows with New/Carry-over = "Carry Over". Funded at min(Requested, Baselined). RoI threshold slider (0x–10x) controls eligibility. Confirmed baseline carry-overs (Must Do/Must Have) always funded first.
 
-Total AOP is a model input. LFR, Sustain Engineering and Hygiene each use a switchable basis: `% of bucket demand` or `% of Total AOP`. Carryover exposes only a 1x–5x+ threshold in 0.5x steps, default 2x. ROI-Based Portfolio receives all remaining AOP automatically.
+**Stage 2 — Sustain Engineering and Hygiene**: Source rows with New/Carry-over = "Change & Sustain" OR Category in {Continuous Improvement, Upgrades & Enhancements}. Change & Sustain funded first (100%), then Hygiene by merit.
+
+**Stage 3 — Value Based Portfolio**: All remaining demand not qualifying for Stages 0–2 — new features, AI enablement, LFRs without evidence, carry-overs without baseline. Ranked by merit score. When IT Simplification is active (Stage 4), decommissioning/replatforming programmes are extracted from Stage 3 before ranking.
+
+**Stage 4 — IT Simplification (toggle-activated, v5.6)**: Optional stage activated via the "IT Simplification Lever" toggle in Tab 2. Extracts programmes with `category` containing "Decomm" or "Replatforming" from Stage 3. Finance-based allocation: % of bucket demand / % of Total AOP / Allocation (M€). Default: 0% (no ring-fence). Budget is reserved from the Stage 3 residual via `itsimpReserve()` so Stage 3 cannot consume the IT Simplification envelope.
+
+**Identification rule**: `isITSimpProgram(r)` — `const c=(r.category||'').toLowerCase(); return c.indexOf('decomm')>=0||c.indexOf('replatform')>=0;`
+Live data: 29 programmes with category "Decomm/Replatforming" in the current source workbook.
+
+Current source bases (v5.5/v5.6 data — SHA-256 b26dd808, 443 programmes):
+
+- Stage 0 (Legal and Compliance): demand from current source
+- Stage 1 (Carry Over): ~109.2 M€ total carry demand
+- Stage 2 (Sustain Engineering and Hygiene): demand from current source
+- Stage 3 (Value Based Portfolio): residual after Stages 0–2
+- Stage 4 (IT Simplification): 29 programmes (Decomm/Replatforming category); demand variable
+
+Total AOP is a model input (default 100 M€). Stages 0, 2, 3, 4 each use a switchable basis: `% of bucket demand` / `% of Total AOP` / `Allocation (M€)`. Stage 1 (Carry Over) uses an RoI threshold slider (0x–10x). Stage 4 defaults to 0% (inactive) until toggled. Stage 3 automatically receives residual AOP after Stages 0, 1, 2, and the Stage 4 ring-fence.
 
 ## Decision treatment
 
