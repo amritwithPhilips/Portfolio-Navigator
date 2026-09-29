@@ -68,6 +68,12 @@
       "port": 8782
     },
     {
+      "name": "v5.6-modeler",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8783", "--directory", "AOP 2027 Modeler"],
+      "port": 8783
+    },
+    {
       "name": "data-extract",
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8775", "--directory", "AOP 2027 Demand"],
