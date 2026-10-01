@@ -1,6 +1,69 @@
-# Current release — v5.7.1, 30 September 2026
+# Current release — v5.8.0, 1 October 2026
 
-This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.7.1.html. Current PRD and detailed requirements: PRD/*-v5.7.0.docx. QA and detailed comparisons are in AOP 2027 Modeler/QA-report.html and Detailed-data-comparison.html, with reproducible evidence in Data file/Finance-20260930-v5.7.0.
+This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html. Current PRD and detailed requirements: PRD/*-v5.7.0.docx. QA and detailed comparisons are in AOP 2027 Modeler/QA-report.html and Detailed-data-comparison.html, with reproducible evidence in Data file/Finance-20260930-v5.7.0.
+
+## v5.8.0 — Benefit data fix: all 158 null-benefit programs corrected (1 Oct 2026)
+
+### Benefit data patch
+- **Root cause**: v5.8.0 was built from Excel `110261530.xlsx` captured before teams populated the "Quantified Benefits (in K€)" column — 258 BU programs and 49 EW programs had `benefit: null` in the embedded source-data, suppressing all monetary benefit from ExCo totals and scoring.
+- **Fix**: `col[21]` (BU benefit) and `col[18]` (EW benefit) patched in-place using values from the authoritative data extract (`299262020.xlsx`). 154 BU + 4 EW programs updated.
+- **Impact**: Total portfolio benefit corrected from **897.7 M€ → 14,857.7 M€** across all 17 ExCo leaders.
+- **PH (Deeptha Khanna)**: was **4.0 M€** (2 programs) → now **120.0 M€** (39 programs, 93.0 hard / 27.1 soft).
+- All other leaders confirmed aligned with data extract: Julia Strandberg 4891 M€, Özlem Fidanci 4742 M€, Jie Xue 1896 M€, Marnix 1632 M€, Bert van Meurs 1183 M€ (5 M€ residual from unmatched program IDs), Shez Partovi 137 M€, Laura Matz 112 M€, Wim Appelo 69 M€.
+- Benefit scores for previously-null programs now correctly influence the automatic prioritisation — programs with real benefit claims now compete on merit.
+
+## v5.8.0 — Data refresh, PMI update, AOP 2026 Spend lines (1 Oct 2026)
+
+**Source**: AOP 2027 Consolidated Live 110261530.xlsx | SHA-256: 8058eb8ba9fc
+
+### Data refresh
+- Source changed from `AOP 2027 Consolidated Live 299262020.xlsx` to `AOP 2027 Consolidated Live 110261530.xlsx` (1 Oct 2026 15:30 extract)
+- Programs: 447 → 437 active (excl. PMI); total with PMI: 442
+- Requested demand: 327.1 M€ → 279.9 M€ base (271.7 + 8.2 PMI)
+- EW: 108.4 M€ (167 programs), BU: 163.2 M€ (270 programs)
+- PMI: 5.2 M€ → **8.2 M€** (+3.0M, new Bu-453 "Delta/Epsilon" under Finance)
+
+### Key data changes by ExCo
+- **Shez Partovi** (EI): 16.8 → 13.9 M€ (−2.9M) — 6 EI programs zeroed
+- **Bert van Meurs** (IGT+STO): 52.6 → 50.1 M€ (−2.5M) — STO decomm consolidated
+- **Jie Xue** (PD): 15.3 → 15.2 M€ (−0.1M) — 8 MR placeholders added
+
+### Decomm data improvements
+- STO: 4 overlapping decomm programs removed (Bu-449/450/451/452 = 2.7M€), replaced by 2 consolidated entries (Bu-420, Bu-444)
+- EW-189 reclassified to Decomm at 0€ (was 3.0M€ under Finance)
+- Bu-263 carry-over corrected from "New Initiative" to "Change & Sustain"
+- Decomm total: 35.2 → 32.5 M€
+
+### Program-level changes
+- Added: 23 programs (mostly placeholders, plus Bu-453 PMI 3.0M€)
+- Removed: 6 programs (Bu-384, Bu-449/450/451/452, Bu-458)
+- Value changes: 16 programs (primarily EI reductions)
+
+### AOP 2026 Spend lines (Tab 2)
+- Each lever card now shows an AOP 2026 reference line below the allocation selection:
+  - L1 (LFR): 32 M€
+  - L2 (Carryover excl. LFR, Decomm): 122.11 M€
+  - L3 (C&S, Upgrades & CI excl. LFR, Carryover): 9.39 M€
+  - L4 (Other excl. LFR, Carryover, C&S, Upgrade & CI): 16.85 M€
+  - L5 (Decommissioning): 4.36 M€
+- Deep blue (#00126E) background, white text, consistent with Philips brand
+
+### Header update
+- Header now shows: "One Portfolio Navigator · v5.8.0 · Built {date} {time} with Demand Details at 1.10.26 at 15:30"
+- Timestamp derived from source filename (110261530 = 1.10.26 at 15:30)
+
+### Tab 6 fixes
+- **Cost allocation table fixed**: New workbook stores allocations as k€ amounts (not fractions). Engine now auto-detects scale: divides by program cost to get fractions for BU programs, divides by 100 for EW charging key (percentage sums ~42%)
+- **Removed debug sections**: EW charging percentages, Traceable finance ledger, and Finance QA badge no longer rendered in Tab 6
+- **Prioritized Programs AOP excludes PMI**: KPI shows 100.0 M€ (base programs only). PMI 8.2 M€ shown separately in its own KPI. Total IT AOP (578.5 M€) includes all three: Programs + Operations + PMI
+
+### QA
+- Zero console errors
+- All 6 tabs render correctly
+- Cost allocation table reconciles: Grand Total ✓ at 578.5 M€ (BU 41.7 + F&R 58.3 + Ops 470.4)
+- Engine recalculates all scoring, funding and charging from new data
+- ExCo hierarchy, benefits classification, lever cascade all operational
+- Operations data unchanged (470.4 M€)
 
 ## v5.7.1 — ExCo LFR decisions, Carry Over ROI lever, header update (30 Sep – 1 Oct 2026)
 
