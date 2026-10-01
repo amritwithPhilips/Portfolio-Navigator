@@ -1,4 +1,156 @@
+# Current release — v5.7.1, 30 September 2026
+
+This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.7.1.html. Current PRD and detailed requirements: PRD/*-v5.7.0.docx. QA and detailed comparisons are in AOP 2027 Modeler/QA-report.html and Detailed-data-comparison.html, with reproducible evidence in Data file/Finance-20260930-v5.7.0.
+
+## v5.7.1 — ExCo LFR decisions, Carry Over ROI lever, header update (30 Sep – 1 Oct 2026)
+
+### Tab 1: ExCo Demand table simplified
+- Removed columns: Prioritised M€, Gap M€, % Funded. Table now shows: ExCo Leader/Organisation, Programs, Requested M€, Benefits M€, Hard/Soft, Ops Cost M€.
+- Ops Cost shows for BU-cluster ExCo members (from Bill of IT). Enterprise function leaders show dash (their costs are allocated into BU TCO).
+
+### Tab 2: Demand in Scenario table
+- Evid. column removed from all table instances.
+- Group counts show funded/total for ALL programs in that org (e.g. "(1/7)"), not just the filtered view.
+
+### UI: L4 ceiling tick, L2 default basis
+- L4 slider: red tick on the grid marks the budget ceiling. Moves dynamically when upstream levers change.
+- L2 (Carry Over): defaults to "% of bucket demand" basis matching other levers.
+- Tab 2 Demand in Scenario: Evid. column removed. Group counts show funded/total for ALL programs in that org (not just filtered view).
+- Session migration: carry basis auto-corrected from 'amount' to 'bucket' on recovery.
+
+### Lever cascade — L4 sole absorber (corrected)
+- **New**: `rebalance(settings, changedKey, data)` function in the engine. When any lever is adjusted, all downstream levers auto-scale proportionally to maintain the Total AOP budget.
+- Order is strict: L1 → L2 → L3 → L4 → L5. Changing L1 scales L2/L3/L4. Changing L2 scales L3/L4. Changing L3 scales L4. Upstream levers are never affected.
+- Wired into both slider drag (input event) and numeric input (change event) handlers.
+- Rebalance only fires when downstream targets exceed remaining budget. If budget has headroom, no adjustment.
+
+### ExCo LFR decisions as ranking demotion (not permanent exclude)
+- Opt-out programs marked `lfrVerified=false` and `lfrOptOut=true` in `enrich()`. They rank below verified in Lever 1 but remain fundable at higher slider settings.
+- ExCo feedback displayed as warning on program row: "ExCo LFR opt-out: {leader} — {feedback}". Detail popup shows "ExCo LFR Opt-Out (deprioritised)" rationale type.
+- No permanent overrides applied. `createSession()` starts with empty overrides.
+
+### Fix: Total AOP respects budget (100 M€)
+- **Root cause**: Excluded LFR programs (ExCo opt-outs) consumed budget in the solve loop's `spent[]` array before overrides zeroed their `final`. The residual available for Value was reduced by 7 M€ of phantom spending.
+- **Fix**: Excluded programs are now skipped at the top of the funding loop (`continue`). They don't increment `spent[]` or `automatic`. Budget freed for downstream stages.
+- **Result**: Default Optimal at 100 M€ → L1 37.9 + L2 16.8 + L3 20.6 + L4 24.8 = **100.0 M€ fully allocated**. L4 at 100% bucket fills remaining budget naturally.
+- Value lever slider shows full 0-100% range; the solve engine caps funding at the residual.
+
+### 1. Lever 2 — Carry Over demand slider (engine + UI)
+- **Converted from fixed display to standard 3-mode slider** (% of bucket demand, % of Total AOP, Allocation M€), matching Levers 1, 3, 4.
+- Carry-over programs now **ranked by ROI** (benefit/cost ratio). Previously confirmed baselines were funded first with no slider control.
+- All carry-over programs are eligible. Removed the hold "No confirmed approved baseline for Carry Over funding" — all carry-overs compete on ROI within the slider target.
+- Confirmed baselines remain capped at `min(requested, approved baseline)`. Non-baseline carry-overs use full request amount.
+- Settings: `carry` changed from `number` (ROI threshold 0-10) to `{basis, pct, amount}` lever object. Old sessions auto-migrate via `validateSettings()`.
+- Presets updated: Optimal/Protect/Evidence at 100% bucket, Capacity at 75% bucket.
+
+### 2. Baselined carry data
+- The confirmed 16.8 M€ baseline carry demand is preserved as `confirmedCarryDemand` in stages output.
+- Lever 2 allocation selection shows actual % funded (e.g. "56.3 M€ funded of 107.6 M€ Demand (52.3%)").
+
+### 3. Funding Prioritization Gate and rules text updated
+- Gate 2 (Carry Over): "All prior-year carry-over demand ranked by ROI. Confirmed baselines pre-selected within slider target. Slider controls funding envelope."
+- Allocation rules: "All carry-over records enter the lever and are ranked by ROI. The slider controls the overall funding envelope."
+- Preset comparison table: P2 column renamed from "Baseline cap" to "Carry Over / 100% ROI".
+- Optimal description: "ROI-ranked Carry Over" replaces "baselined Carry Over".
+
+### 4. Old static text removed
+- "Confirmed business cases funded at approved baseline cap. No ROI threshold. Funding = min(requested, approved baseline)." — no longer rendered (lever mode changed from `roi` to standard `lever`).
+
+### 5. LFR ExCo opt-in/opt-out decisions (67 decisions, 30 Sep 2026)
+- **32 opt-out programs excluded** from LFR with ExCo feedback captured in override notes.
+- **40 opt-in programs** confirmed in LFR — no change needed.
+- Feedback appears in Funding Rationale popup as "ExCo LFR Decision" type, e.g. "Manual exclusion: ExCo LFR opt-out: Charlotte Hanneman — NDA, separate bucket (on top off)".
+- Decisions embedded as `LFR_EXCO_DECISIONS` constant. Applied automatically on new session creation via `applyLfrDecisions()`.
+- Opt-out by ExCo: Laura Matz (6), Ling Liu (5), Julia Strandberg (5), Steve C de Baca (4), Charlotte Hanneman (3), Marnix van Ginneken (2), Carla Peron (2), Özlem Fidanci (2), Shez Partovi (1), Bert van Meurs (1), Jie Xue (1).
+- Impact: LFR funded drops from 43.8 M€ to 36.8 M€ (7.0 M€ released). 32 programs excluded.
+
+### 6. Header updated
+- From: `One Portfolio · Evidence-led · v5.7.0`
+- To: `One Portfolio Navigator · v5.7.1 · Built {date} {time}` — dynamic build timestamp.
+- Page title updated to "AOP27 One Portfolio Navigator v5.7.1".
+- Rule VERSION constant updated to `5.7.1`.
+- IndexedDB namespace updated to `v5.7.1` (separate storage from v5.7.0).
+
+### Scenario impact summary (Optimal Segmentation at 100 M€)
+| Stage | v5.7.0 demand | v5.7.0 funded | v5.7.1 demand | v5.7.1 funded | Delta |
+|---|---|---|---|---|---|
+| LFR | 53.1 M€ | 43.8 M€ | 53.1 M€ | 36.8 M€ | -7.0 M€ (32 opt-out exclusions) |
+| Carry Over | 107.5 M€ | 16.8 M€ | 107.5 M€ | 56.2 M€ | +39.4 M€ (ROI slider, holds removed) |
+| Sustain | 34.4 M€ | 20.7 M€ | 34.4 M€ | 0.0 M€ | -20.7 M€ (budget consumed by carry) |
+| Value | 85.1 M€ | 18.9 M€ | 85.0 M€ | 0.0 M€ | -18.9 M€ (budget consumed by carry) |
+| **Total** | — | **99.9 M€** | — | **93.0 M€** | **-6.9 M€** |
+
+Note: The carry lever at 100% now funds many more carry-over programs (previously held). Users should adjust the carry slider down to release budget for Sustain and Value stages.
+
+---
+
+## v5.7.0 (build 2), 30 September 2026
+
+433 active Programs; demand 285.2129 M€ including 5.19 PMI. Default 100 M€ Optimal funds 99.963 M€ base, plus PMI and 470.314463 M€ Operations = 575.467463 M€. BU row 276 is a charging key only; exclude 40 M€. Correct its fraction vector by the confirmed 1,000 factor and retain 22.6303317536% unallocated. All Programs types use source recipient fractions; Operations retains own/Region/Function allocation without duplicate sender costs.
+
+### Build 2 changes (30 Sep 2026)
+
+1. **Cost allocation table consolidation (Tab 6):** Replaced 10-column granular table with consolidated 5-column view matching ExCo report format — Organisation, BU Led (M€), Functions & Regions (M€), Operations Cost (M€), Total IT Charge (M€). Sorted by total descending. Functions/Regions distributed via Type II keys shown as a separate row. Footer includes programme/operations AOP summary.
+2. **Decimal consistency:** All user-visible numbers enforce X.X (one decimal). Internal ledger and export retain full precision.
+3. **Lever 4 (Value Based Portfolio) clarity:**
+   - All lever allocation selections now show actual funded percentage (e.g. "18.9 M€ funded of 85.1 M€ Demand (22.2%)") instead of absolute amounts only.
+   - Decomm/Replatform programs are scored and ranked together with all stage 3 demand. The `isItSimp` flag tracks eligibility without changing stage assignment when IT Simplification is off.
+   - When IT Simplification is toggled on, the lever pre-populates with the funded Decomm amount from Value (e.g. if 2 M€ of 27 M€ Decomm demand was funded, slider starts at 2 M€). Toggling off resets to zero.
+   - IT Simplification lever shows contextual text: "Decomm/Replatform demand pre-prioritized from Value: X M€ of Y M€ total IT Simplification demand."
+4. **Tab 6 Excel download:** Added "Download Excel" button in the Finalise Scenario toolbar row, exporting the complete scenario workbook.
+
+Confirmed carry uses approved baseline cap with no ROI threshold. Benefits accepted without benefit-only holds. Nine missing-request and four invalid-decision rows are audit-only. F&R/BU request and merit edits preserve source data; ExCo trade-offs are isolated by stream. The shared finance ledger drives UI/export reconciliation. Data extract supports every column in 22 datasets. No formal external handoff is required. Unallocated balances are explicitly disclosed in QA.
+
+---
+
+## Historical context (superseded where inconsistent above)
+
+## v5.6.1 — 29 September Programs and Operations refresh
+
+Programs: 464 records, 287.1229 M€ including 5.19 M€ PMI. Operations: 182 services, 470.3144630385122 M€, fully reconciled to consuming organisations and recipient TCO. Source workbooks unchanged. Source snapshots, comparison, exact changes and QA are in Data file/Refresh-20260929-v5.6.1.
+
+The build refreshes data, makes Operations displays source-driven, repairs PMI/allocation and inclusion-export reconciliation, adds Excel source references, separates browser storage by source, expands evidence-change fingerprints, and adds all-column filtering to the data extract. Funding, scoring and default-setting functions are preserved from v5.6.
+
+QA: 152/152 checks passed, including 618 column filters across 20 datasets. Discussion/review use only until source and business gaps are resolved or explicitly accepted: missing F&R charging key; 20 missing requests; Bu-388 cached decision errors; benefit validation; policy/envelope alignment; Finance/Planisware approvals. Full details: QA-report.html.
+
 # AOP 2027 One Portfolio Dashboard — Changelog
+
+## v5.6.1 — Excel Export v2 — 8-tab executive export with ExCo, Cost Summary, IT Simplification (29 Sep 2026)
+
+**Enhancement to v5.6.0. Excel export (`exportExcel()`) fully rewritten. No engine changes.**
+
+### Excel Export — `write()` function (XLSX writer)
+- **Fix: "Cannot apply changes" Excel repair prompt** — root causes eliminated:
+  1. `t="inlineStr"` changed to `t="str"` (formula-string type) — removes legacy format flag
+  2. Added `<fileVersion appName="xl" lastEdited="7" rupBuild="22228"/>` + `<bookViews>` to workbook.xml — prevents "older version of Excel" banner
+  3. `<autoFilter>` now only emitted for data-table sheets (`s.filter === true`) — was incorrectly applied to all 4 sheets including the Scenario Overview
+  4. Freeze pane (`<pane ySplit>`) only applied where `s.freezeRow > 0` — not on narrative/summary sheets
+- **Fix: 6 decimal places** — `numFmt formatCode="0.000000"` → `"#,##0.0"` (1dp with thousands separator)
+- **New: Rich styles** — 8 cell formats, 3 fonts, 5 fills:
+  - `rowStyles[r]=0` normal data; `=1` Philips dark-blue header (white bold); `=2` mid-blue section header; `=3` light-blue subtotal (bold)
+- **New: `colWidths[]` and `freezeRow` per-sheet options** — proper column sizing for each tab
+- **New: second numFmt** `0.0%` for percentage cells
+
+### Excel Export — `sheets()` function (8 tabs, was 4)
+
+| Tab | Name | What's new |
+|-----|------|------------|
+| 1 | Scenario Overview | Added IT Simplification lever section; added ExCo accountability summary with funded/unfunded/hard-benefit/soft-benefit per leader; section/subtotal row styling |
+| 2 | Programmes | **All programmes** (was funded only) + `Funded Yes/No` indicator column + `ExCo Leader` column + `Prog Type` column; autoFilter on row 1 |
+| 3 | Cost Summary *(NEW)* | Section 1: ExCo × Type 1/2/3 cross-tab (count + requested + funded M€); Section 2: Stage × Type funded breakdown; Section 3: BU cluster IT cost allocation |
+| 4 | Levers & Settings *(NEW)* | All 5 levers (LFR, Carry-RoI, Sustain, Value, **IT Simplification**) with basis/target/demand/allocated/prog count/% funded; merit weights; budget; export scope |
+| 5 | Operations Overview | Unchanged content; new row styles |
+| 6 | Scoring Evidence | `ExCo Leader` column added |
+| 7 | Decisions Log *(NEW)* | Full event audit trail with `ExCo Leader` column |
+| 8 | Change Log *(NEW)* | Simplified chronological override log with `ExCo Leader` column |
+
+### Type 1/2/3 classification (Cost Summary)
+- **Type 1 — BU Led**: `r.type` field contains "BU Led"
+- **Type 2 — Cross BU**: `r.type` field contains "Cross BU"
+- **Type 3 — F&R**: `r.type` field contains "F&R"
+- Classification is dynamic — groups by actual `r.type` values, sorted BU Led → Cross BU → F&R
+
+---
 
 ## v5.6.0 — IT Simplification lever, Levers filter, ExCo revert, fresh session (29 Sep 2026)
 
