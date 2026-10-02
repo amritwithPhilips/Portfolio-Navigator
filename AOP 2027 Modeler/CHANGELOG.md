@@ -2,6 +2,35 @@
 
 This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html. Current PRD and detailed requirements: PRD/*-v5.7.0.docx. QA and detailed comparisons are in AOP 2027 Modeler/QA-report.html and Detailed-data-comparison.html, with reproducible evidence in Data file/Finance-20260930-v5.7.0.
 
+## v5.8.0 — Multi-item UX and data update (2 Oct 2026)
+
+### Scoring (Item 1)
+- Scores auto-recomputed from patched benefit data — no additional code change required. All previously null-benefit programs now contribute benefit points to merit scoring via the existing `enrich()` ratio ladder.
+
+### Benefit loading validation added to PRD (Item 2)
+- Added mandatory benefit null validation rules to `Skills/references/data-contract.md`: pre-build check (>20% null = block), post-embed cross-check against data extract, 5% max delta tolerance, and required changelog entry per refresh.
+
+### Ops Cost column — function/region leaders (Item 3)
+- Added 10 missing ExCo leaders to `EXCO_OPS_COST`: Laura Matz, Wim Appelo, Charlotte Hanneman, Özlem Fidanci, Jeff DiLullo, Ling Liu, Heidy Schein, Steve C de Baca, Carla Rosana Goulart Silva Peron, Filip Koek — all with value 0.0 (their IT costs are allocated into BU TCO via `functionAlloc` and `regionAlloc`).
+- Demand Split table now shows `0.0` (annotated tooltip: "Costs allocated into BU TCO") for these leaders instead of `—`.
+- Description note updated from "shown as —" to "shown as 0.0".
+
+### IT Cost Allocation text (Item 4)
+- Removed pre-table narrative paragraph ("BU Led: direct BU programme funding...").
+- Replaced post-table numbers paragraph ("Prioritised Programme AOP: X M€...") with a 4-bullet summary list below the table — no live M€ numbers that could be misread out of context.
+
+### Source decision coverage collapsed by default (Item 5)
+- Section now uses `<details>/<summary>` — collapsed on page load. User clicks "► Source decision coverage" to expand. No change to content.
+
+### Default page load (Item 6)
+- Confirmed: `tab='demand'` is the hardcoded default — Tab 1 (Demand Overview) loads on every fresh open. No IndexedDB tab-restore logic found.
+
+### Programme → Program terminology (Item 7)
+- Replaced all 5 user-visible occurrences of "programme" with "Program" (case-corrected). Applies to IT Cost Allocation bullets and two narrative data fields. No tab labels were affected.
+
+### New data extract (Item 8)
+- Authoritative extract is `Data file/ExCo-20260930-v5.8.0/AOP2027-Data-Extract.html` — generated from Excel `299262020.xlsx` which carries all correct benefit values. This extract is the benefit validation baseline for v5.8.0.
+
 ## v5.8.0 — Benefit data fix: all 158 null-benefit programs corrected (1 Oct 2026)
 
 ### Benefit data patch

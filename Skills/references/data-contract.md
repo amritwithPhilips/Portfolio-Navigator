@@ -29,3 +29,24 @@ Resolve headers by normalised name and subheading, not fixed offsets. Priority b
 Refresh accepts equivalent EW/Bu schemas. Unknown sheet names, duplicate/missing required headers, duplicate stable IDs or invalid requested numeric values block apply. Stable IDs with unchanged business evidence retain overrides; changed evidence marks them Needs review.
 
 Exports use the engine v5.2.0 exact result: Scenario Summary, Portfolio, Score Evidence, Settings, Decisions and Source Reference. Session schema 4. Engine also exports EXCO_HIERARCHY, ORG_TO_EXCO, excoOf, classifyBenefit. Exports are not a separate financial engine. Refresh using the original schema; restore decisions using a checksummed portable scenario.
+
+## Benefit data loading validation (added v5.8.0)
+
+**Root cause of v5.8.0 benefit null incident (2026-10-01)**: The modeler HTML embeds a point-in-time snapshot of the source Excel. If teams have not yet populated "Quantified Benefits (in K€)" (BU col 21, EW col 18) when the snapshot is taken, those programs are embedded with `benefit: null` and classified as Qualitative Only — suppressing all monetary benefit from ExCo totals and scoring.
+
+**Mandatory validation on every data refresh:**
+
+1. **Pre-build check**: Before embedding source-data JSON into the modeler HTML, run a benefit null audit:
+   - Count BU rows where col 21 is null/0 and the program has a stated priority of "Must Have" or "Must Do" (these should have quantified benefit or explicit qualitative justification)
+   - Count EW rows where col 18 is null/0
+   - If >20% of all BU programs have null benefit, **BLOCK** the build and require the demand owner to confirm the Excel is complete
+   - If any ExCo leader has 0 total benefit across all programs, flag as **DATA INCOMPLETE** — not a scoring artefact
+
+2. **Post-embed verification**: After writing source-data JSON into the HTML, verify:
+   - `sum(benefit for r in BU if r.benefit)` > 0 per ExCo leader with at least 5 programs
+   - Cross-check total benefit per ExCo against the separately-generated data extract HTML (which reads from the same Excel independently)
+   - Maximum allowed delta between modeler-computed total and extract-computed total: **5%** (rounding only)
+
+3. **Data extract is the source of truth**: Always generate the data extract HTML from the current Excel before building the modeler. The extract's benefit totals are the benchmark. If the modeler and extract disagree by >5%, do not publish the modeler — patch the source-data JSON using the extract values (see v5.8.0 benefit patch procedure).
+
+4. **Changelog entry required**: Every data refresh must include a line in CHANGELOG.md stating: `Benefit totals verified: [list per ExCo total] — matches data extract SHA [hash]`.
