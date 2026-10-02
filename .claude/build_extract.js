@@ -57,23 +57,63 @@ for (const r of result.rows) {
     platform: r.platform || '',
     newCarry: r.newCarry || '',
     type: r.type || '',
+    category: r.category || '',
+    area: r.area || '',
     priority: r.priority || '',
     decisionBand: r.decisionBand || '',
+    overall: r.overall || '',
+    // Submitted data fields
+    benefitQuant: r.benefit,
+    benefitRaw: r.benefitRaw,
+    benefitDetails: r.benefitDetails || '',
+    benefitSource: r.benefitSource || '',
+    problem: r.problem || '',
+    scope: r.scope || '',
+    impact: r.impact || '',
+    paybackRaw: r.paybackRaw != null ? String(r.paybackRaw) : '',
+    remarks: r.remarks || '',
+    dependency: r.dependency || '',
+    // Financial columns
     cost: r.cost,
     final: r.final,
     unfunded: r.unfunded,
+    automatic: r.automatic,
     benefit: r.benefit,
     benefitClass: r.benefitClassLabel || r.benefitClass || '',
+    benefitFlag: r.benefitFlag || '',
+    ratio: r.ratio,
     paybackYears: r.paybackYears,
+    // Scoring
     score: r.score != null ? Math.round(r.score * 10) / 10 : null,
     raw0: r.rawComponents ? r.rawComponents[0] : null,
     raw1: r.rawComponents ? r.rawComponents[1] : null,
     raw2: r.rawComponents ? r.rawComponents[2] : null,
     raw3: r.rawComponents ? r.rawComponents[3] : null,
     raw4: r.rawComponents ? r.rawComponents[4] : null,
+    comp0: r.components ? r.components[0] : null,
+    comp1: r.components ? r.components[1] : null,
+    comp2: r.components ? r.components[2] : null,
+    comp3: r.components ? r.components[3] : null,
+    comp4: r.components ? r.components[4] : null,
+    priorityPts: r.priorityPoints,
+    paybackPts: r.paybackPoints,
+    // Scenario outcome
     stageName: r.stageName || '',
+    rank: r.rank,
     status: r.status || '',
-    reason: r.reason || ''
+    reason: r.reason || '',
+    eligible: r.eligible,
+    // LFR / Carry
+    lfrTier: r.lfrTier || '',
+    lfrVerified: r.lfrVerified,
+    hasLfrEvidence: r.hasLfrEvidence,
+    isBaselinedCarry: r.isBaselinedCarry,
+    carryConfirmed: r.carryConfirmed,
+    warnings: (r.warnings || []).join('; '),
+    holds: (r.holds || []).join('; '),
+    // Source
+    sourceSheet: r.sourceSheet || '',
+    sourceRow: r.sourceRow
   };
   if (r.stream === 'ew') ewRows.push(row);
   else buRows.push(row);
@@ -95,11 +135,38 @@ const opsRows = opsData.operations.services.map(s => ({
   sourceRow: s.sourceRow
 }));
 
-// ── 6. Build the HTML ─────────────────────────────────────────────────
+// ── 6. Prepare mapping / reference data ───────────────────────────────
+const mappings = {
+  excoHierarchy: Object.entries(AOP.EXCO_HIERARCHY).map(([name, info]) => ({
+    exco: name, role: info.role, orgs: info.orgs
+  })),
+  orgToExco: AOP.ORG_TO_EXCO,
+  orgRename: AOP.ORG_RENAME || {},
+  stages: AOP.STAGES,
+  lfrDecisionCount: AOP.LFR_EXCO_DECISIONS ? Object.keys(AOP.LFR_EXCO_DECISIONS).length : 0,
+  lfrDecisions: AOP.LFR_EXCO_DECISIONS || {},
+  optimalPreset: AOP.preset('optimal'),
+  currentSettings: session.settings,
+  scoreWeights: session.settings.weights,
+  scoreComponents: ['Benefit Strength (0-50)','Submitted Priority (0-25)','Captured Consequence (0-15)','Decision Band (0-10)','Payback Period (0-10)'],
+  platformNorm: {},
+  version: AOP.VERSION
+};
+
+// Extract platform normalization from data
+for (const r of result.rows) {
+  const raw = r.sourceValues?.find(sv => sv.label && sv.label.toLowerCase().includes('platform'));
+  if (raw && raw.value && raw.value !== r.platform) {
+    mappings.platformNorm[raw.value] = r.platform || '(blank)';
+  }
+}
+
+// ── 7. Build the HTML ─────────────────────────────────────────────────
 const DATA_JS = `
 const BU_ROWS  = ${JSON.stringify(buRows)};
 const EW_ROWS  = ${JSON.stringify(ewRows)};
 const OPS_ROWS = ${JSON.stringify(opsRows)};
+const MAPPINGS = ${JSON.stringify(mappings)};
 `;
 
 const htmlOutput = `<!DOCTYPE html>
@@ -289,6 +356,13 @@ tbody td.name-col {
   white-space: normal;
   word-wrap: break-word;
 }
+tbody td.detail-col {
+  max-width: 250px;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: .82rem;
+  color: var(--subtle);
+}
 tbody td.reason-col {
   max-width: 280px;
   white-space: normal;
@@ -318,6 +392,17 @@ tfoot td {
   .header { padding: 14px 14px; }
 }
 
+/* ── Reference / Mappings ──────────────────────────────────────────── */
+.ref-content { padding: 20px 28px; max-width: 1200px; }
+.ref-content h2 { font-size: 1.2rem; }
+.ref-section { margin-bottom: 16px; background: #fff; border-radius: var(--radius); border: 1px solid var(--border); }
+.ref-section summary { padding: 12px 16px; font-weight: 600; font-size: .92rem; cursor: pointer; color: var(--dk); }
+.ref-section summary:hover { background: var(--mist); }
+.ref-tbl { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.ref-tbl th { background: var(--dk); color: #fff; padding: 8px 12px; text-align: left; font-weight: 600; position: sticky; top: 0; }
+.ref-tbl td { padding: 6px 12px; border-bottom: 1px solid var(--border); }
+.ref-tbl tr:hover { background: var(--row-hover); }
+
 /* ── Print ────────────────────────────────────────────────────────── */
 @media print {
   .header { background: #fff !important; color: #000; border-bottom: 2px solid #000; }
@@ -339,6 +424,7 @@ tfoot td {
   <button class="tab-btn active" data-tab="bu" role="tab" aria-selected="true">BU Led Programs</button>
   <button class="tab-btn" data-tab="ew" role="tab" aria-selected="false">F&amp;R Programs</button>
   <button class="tab-btn" data-tab="ops" role="tab" aria-selected="false">Operations Services</button>
+  <button class="tab-btn" data-tab="ref" role="tab" aria-selected="false">Mappings &amp; Reference</button>
 </div>
 
 <!-- BU Programs -->
@@ -407,35 +493,75 @@ tfoot td {
   </div>
 </div>
 
+<!-- Mappings & Reference -->
+<div id="panel-ref" class="tab-panel">
+  <div class="ref-content" id="ref-content"></div>
+</div>
+
 <script>
 ${DATA_JS}
 
 // ── Column definitions ─────────────────────────────────────────────
 const PROG_COLS = [
-  { key:'id',           label:'ID',                 cls:'' },
-  { key:'name',         label:'Program Name',        cls:'name-col' },
-  { key:'org',          label:'Organisation',        cls:'' },
-  { key:'exco',         label:'ExCo Leader',         cls:'' },
-  { key:'platform',     label:'Platform',            cls:'' },
-  { key:'newCarry',     label:'New / Carryover',     cls:'' },
-  { key:'type',         label:'Investment Area',     cls:'' },
-  { key:'priority',     label:'Priority',            cls:'' },
-  { key:'decisionBand', label:'Decision Band',       cls:'' },
-  { key:'cost',         label:'Requested (M\\u20ac)', cls:'num', fmt:'money' },
-  { key:'final',        label:'Prioritised (M\\u20ac)',cls:'num', fmt:'money' },
-  { key:'unfunded',     label:'Unfunded (M\\u20ac)',  cls:'num', fmt:'money' },
-  { key:'benefit',      label:'Benefit (M\\u20ac)',   cls:'num', fmt:'money' },
-  { key:'benefitClass', label:'Benefit Class',       cls:'' },
-  { key:'paybackYears', label:'Payback (yrs)',       cls:'num' },
-  { key:'score',        label:'Merit Score',         cls:'num' },
-  { key:'raw0',         label:'Ben. Str.',           cls:'num', fmt:'int' },
-  { key:'raw1',         label:'Priority',            cls:'num', fmt:'int' },
-  { key:'raw2',         label:'Consequence',         cls:'num', fmt:'int' },
-  { key:'raw3',         label:'Band',                cls:'num', fmt:'int' },
-  { key:'raw4',         label:'Payback',             cls:'num', fmt:'int' },
-  { key:'stageName',    label:'Lever',               cls:'' },
-  { key:'status',       label:'Funding Status',      cls:'status-col' },
-  { key:'reason',       label:'Reason',              cls:'reason-col' },
+  // Identity
+  { key:'id',           label:'ID',                 cls:'', group:'Identity' },
+  { key:'name',         label:'Program Name',        cls:'name-col', group:'Identity' },
+  { key:'org',          label:'Organisation',        cls:'', group:'Identity' },
+  { key:'exco',         label:'ExCo Leader',         cls:'', group:'Identity' },
+  { key:'platform',     label:'Platform',            cls:'', group:'Identity' },
+  { key:'newCarry',     label:'New / Carryover',     cls:'', group:'Identity' },
+  { key:'type',         label:'Investment Area',     cls:'', group:'Identity' },
+  { key:'category',     label:'Category',            cls:'', group:'Identity' },
+  { key:'area',         label:'Investment Area Detail', cls:'', group:'Identity' },
+  // Submitted Data
+  { key:'priority',     label:'Priority',            cls:'', group:'Submitted Data' },
+  { key:'decisionBand', label:'Decision Band',       cls:'', group:'Submitted Data' },
+  { key:'overall',      label:'Overall Assessment',  cls:'detail-col', group:'Submitted Data' },
+  { key:'benefitQuant', label:'Quantified Benefit (M\\u20ac)', cls:'num', fmt:'money', group:'Submitted Data' },
+  { key:'benefitDetails',label:'Benefit Qualitative', cls:'detail-col', group:'Submitted Data' },
+  { key:'benefitSource',label:'Benefit Source',      cls:'', group:'Submitted Data' },
+  { key:'paybackRaw',   label:'Payback (Raw)',       cls:'', group:'Submitted Data' },
+  { key:'problem',      label:'Problem Statement',   cls:'detail-col', group:'Submitted Data' },
+  { key:'scope',        label:'Program Scope',       cls:'detail-col', group:'Submitted Data' },
+  { key:'impact',       label:'Impact / Cost of Not Doing', cls:'detail-col', group:'Submitted Data' },
+  { key:'dependency',   label:'Dependencies',        cls:'detail-col', group:'Submitted Data' },
+  // Scoring
+  { key:'score',        label:'Merit Score',         cls:'num', group:'Scoring' },
+  { key:'raw0',         label:'Ben. Str. (raw)',     cls:'num', fmt:'int', group:'Scoring' },
+  { key:'comp0',        label:'Ben. Str. (wtd)',     cls:'num', fmt:'money', group:'Scoring' },
+  { key:'raw1',         label:'Priority (raw)',      cls:'num', fmt:'int', group:'Scoring' },
+  { key:'comp1',        label:'Priority (wtd)',      cls:'num', fmt:'money', group:'Scoring' },
+  { key:'raw2',         label:'Consequence (raw)',   cls:'num', fmt:'int', group:'Scoring' },
+  { key:'comp2',        label:'Consequence (wtd)',   cls:'num', fmt:'money', group:'Scoring' },
+  { key:'raw3',         label:'Band (raw)',          cls:'num', fmt:'int', group:'Scoring' },
+  { key:'comp3',        label:'Band (wtd)',          cls:'num', fmt:'money', group:'Scoring' },
+  { key:'raw4',         label:'Payback (raw)',       cls:'num', fmt:'int', group:'Scoring' },
+  { key:'comp4',        label:'Payback (wtd)',       cls:'num', fmt:'money', group:'Scoring' },
+  { key:'ratio',        label:'Benefit/Cost Ratio',  cls:'num', group:'Scoring' },
+  { key:'benefitClass', label:'Benefit Class',       cls:'', group:'Scoring' },
+  { key:'benefitFlag',  label:'Benefit Flag',        cls:'', group:'Scoring' },
+  // Scenario Outcome
+  { key:'cost',         label:'Requested (M\\u20ac)', cls:'num', fmt:'money', group:'Scenario' },
+  { key:'final',        label:'Prioritised (M\\u20ac)',cls:'num', fmt:'money', group:'Scenario' },
+  { key:'unfunded',     label:'Unfunded (M\\u20ac)',  cls:'num', fmt:'money', group:'Scenario' },
+  { key:'automatic',    label:'Automatic (M\\u20ac)', cls:'num', fmt:'money', group:'Scenario' },
+  { key:'benefit',      label:'Benefit (M\\u20ac)',   cls:'num', fmt:'money', group:'Scenario' },
+  { key:'paybackYears', label:'Payback (yrs)',       cls:'num', group:'Scenario' },
+  { key:'stageName',    label:'Lever',               cls:'', group:'Scenario' },
+  { key:'rank',         label:'Rank',                cls:'num', group:'Scenario' },
+  { key:'status',       label:'Funding Status',      cls:'status-col', group:'Scenario' },
+  { key:'reason',       label:'Reason',              cls:'reason-col', group:'Scenario' },
+  { key:'eligible',     label:'Eligible',            cls:'', group:'Scenario' },
+  // LFR / Evidence
+  { key:'lfrTier',      label:'LFR Tier',            cls:'', group:'Evidence' },
+  { key:'lfrVerified',  label:'LFR Verified',        cls:'', group:'Evidence' },
+  { key:'isBaselinedCarry', label:'Baselined Carry',  cls:'', group:'Evidence' },
+  { key:'carryConfirmed',label:'Carry Confirmed',    cls:'', group:'Evidence' },
+  { key:'warnings',     label:'Warnings',            cls:'detail-col', group:'Evidence' },
+  { key:'holds',        label:'Holds',               cls:'detail-col', group:'Evidence' },
+  // Source
+  { key:'sourceSheet',  label:'Source Sheet',         cls:'', group:'Source' },
+  { key:'sourceRow',    label:'Source Row',            cls:'num', group:'Source' },
 ];
 
 const OPS_COLS = [
@@ -452,10 +578,11 @@ const OPS_COLS = [
   { key:'sourceRow',   label:'Source Row',          cls:'num' },
 ];
 
-const MONEY_SUM_KEYS_PROG = ['cost','final','unfunded','benefit'];
+const MONEY_SUM_KEYS_PROG = ['cost','final','unfunded','benefit','benefitQuant','automatic'];
 const MONEY_SUM_KEYS_OPS  = ['cost2026','cost2027','delta'];
 
 // ── Helpers ─────────────────────────────────────────────────────────
+function esc(s) { return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
 function fmtMoney(v) {
   if (v == null) return '';
   return v.toFixed(1);
@@ -606,10 +733,92 @@ function buildTable(tabId, allRows, cols, sumKeys, filterDefs) {
 }
 
 // ── Init ──────────────────────────────────────────────────────────
+function renderMappings(){
+  const M = MAPPINGS;
+  let h = '<h2 style="color:var(--dk);margin:0 0 18px">Mappings & Reference Data</h2>';
+
+  // ExCo → Organisation Hierarchy
+  h += '<details open class="ref-section"><summary>ExCo Leader → Organisation Hierarchy ('+M.excoHierarchy.length+' leaders, '+Object.keys(M.orgToExco).length+' orgs)</summary>';
+  h += '<table class="ref-tbl"><thead><tr><th>ExCo Leader</th><th>Role</th><th>Organisations</th></tr></thead><tbody>';
+  M.excoHierarchy.forEach(e => {
+    h += '<tr><td><b>'+esc(e.exco)+'</b></td><td>'+esc(e.role)+'</td><td>'+e.orgs.map(o=>esc(o)).join(', ')+'</td></tr>';
+  });
+  h += '</tbody></table></details>';
+
+  // Organisation Name Normalizations
+  const renames = Object.entries(M.orgRename);
+  if(renames.length){
+    h += '<details class="ref-section"><summary>Organisation Name Normalizations ('+renames.length+' mappings)</summary>';
+    h += '<table class="ref-tbl"><thead><tr><th>Source Name</th><th>Normalized To</th></tr></thead><tbody>';
+    renames.forEach(([from,to]) => { h += '<tr><td>'+esc(from)+'</td><td><b>'+esc(to)+'</b></td></tr>'; });
+    h += '</tbody></table></details>';
+  }
+
+  // Platform Normalizations
+  const platNorm = Object.entries(M.platformNorm);
+  if(platNorm.length){
+    h += '<details class="ref-section"><summary>Platform / Charge Code Normalizations ('+platNorm.length+' mappings)</summary>';
+    h += '<table class="ref-tbl"><thead><tr><th>Source Platform Name</th><th>Normalized To</th></tr></thead><tbody>';
+    platNorm.forEach(([from,to]) => { h += '<tr><td>'+esc(from)+'</td><td><b>'+esc(to)+'</b></td></tr>'; });
+    h += '</tbody></table></details>';
+  }
+
+  // Funding Stages / Levers
+  h += '<details class="ref-section"><summary>Funding Stages (Levers) — Priority Order</summary>';
+  h += '<table class="ref-tbl"><thead><tr><th>#</th><th>Lever Name</th><th>Description</th></tr></thead><tbody>';
+  M.stages.forEach((s,i) => {
+    const desc = ['Legal, fiscal, regulatory & compliance programs — must-fund','Carry-over programs with verified prior-year commitment','Sustain engineering, hygiene, and platform maintenance','Value-based portfolio — merit-ranked discretionary','IT Simplification — decommissioning & replatforming'][i]||'';
+    h += '<tr><td>'+(i+1)+'</td><td><b>'+esc(s)+'</b></td><td>'+esc(desc)+'</td></tr>';
+  });
+  h += '</tbody></table></details>';
+
+  // Merit Score Weights
+  h += '<details class="ref-section"><summary>Merit Score Components & Weights (Total 100)</summary>';
+  h += '<table class="ref-tbl"><thead><tr><th>Component</th><th>Max Raw</th><th>Weight (%)</th></tr></thead><tbody>';
+  var maxRaw = [50,25,15,10,10];
+  M.scoreComponents.forEach((c,i) => {
+    h += '<tr><td>'+esc(c)+'</td><td>'+maxRaw[i]+'</td><td><b>'+M.scoreWeights[i]+'</b></td></tr>';
+  });
+  h += '<tr style="font-weight:700;background:var(--mist)"><td>Total</td><td>110</td><td>100</td></tr>';
+  h += '</tbody></table></details>';
+
+  // Optimal Scenario Settings
+  h += '<details class="ref-section"><summary>Optimal Scenario Default Conditions</summary>';
+  h += '<table class="ref-tbl"><thead><tr><th>Parameter</th><th>Preset Value</th><th>Resolved Value</th><th>Description</th></tr></thead><tbody>';
+  var cs = M.currentSettings;
+  var rows = [
+    ['Total AOP Budget', cs.budget+' M\\u20ac', cs.budget+' M\\u20ac', 'Total program investment envelope'],
+    ['Lever 1: Legal & Compliance', 'Auto-fit ('+M.optimalPreset.lfr.pct+'%)', Math.round(cs.lfr.pct*10)/10+'% of bucket', 'Verified LFR programs funded first'],
+    ['Lever 2: Carry Over', 'Auto-fit', cs.carry.amount ? cs.carry.amount.toFixed(1)+' M\\u20ac ('+Math.round(cs.carry.pct*10)/10+'%)' : cs.carry.pct+'%', 'Carry-over with verified evidence'],
+    ['Lever 3: Sustain Engineering', M.optimalPreset.sustain.amount+' M\\u20ac fixed', cs.sustain.amount+' M\\u20ac', 'Fixed sustain envelope'],
+    ['Lever 4: Value Portfolio', 'Auto-ceiling', Math.round(cs.value.pct*10)/10+'% of bucket', 'Merit-ranked residual envelope'],
+    ['IT Simplification', cs.itsimpMode?'ON':'OFF', '0 M\\u20ac', 'Decomm/replatforming programs (toggle)'],
+    ['Merit Floor', cs.merit, cs.merit, 'Minimum score for Value eligibility'],
+    ['Tolerance', cs.tolerance, cs.tolerance, 'Budget rounding tolerance']
+  ];
+  rows.forEach(r => { h += '<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+r[3]+'</td></tr>'; });
+  h += '</tbody></table></details>';
+
+  // LFR ExCo Decisions
+  if(M.lfrDecisionCount > 0){
+    h += '<details class="ref-section"><summary>LFR ExCo Decisions ('+M.lfrDecisionCount+' programs reviewed)</summary>';
+    h += '<table class="ref-tbl"><thead><tr><th>Program ID</th><th>ExCo Leader</th><th>Decision</th></tr></thead><tbody>';
+    Object.entries(M.lfrDecisions).sort((a,b)=>a[0].localeCompare(b[0])).forEach(([id,d]) => {
+      var cls = d.opt==='in'?'color:var(--funded)':'color:var(--not-funded)';
+      h += '<tr><td>'+esc(id)+'</td><td>'+esc(d.exco)+'</td><td style="'+cls+';font-weight:600">'+(d.opt==='in'?'Opt In':'Opt Out')+'</td></tr>';
+    });
+    h += '</tbody></table></details>';
+  }
+
+  h += '<p style="margin-top:24px;font-size:.82rem;color:var(--subtle)">Engine version: '+esc(M.version)+' | Source: AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.1.html</p>';
+  document.getElementById('ref-content').innerHTML = h;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   buildTable('bu',  BU_ROWS,  PROG_COLS, MONEY_SUM_KEYS_PROG);
   buildTable('ew',  EW_ROWS,  PROG_COLS, MONEY_SUM_KEYS_PROG);
   buildTable('ops', OPS_ROWS, OPS_COLS,  MONEY_SUM_KEYS_OPS);
+  renderMappings();
 
   // Tab switching
   document.querySelectorAll('.tab-btn').forEach(btn => {
