@@ -2,6 +2,25 @@
 
 This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.1.html. Base: v5.8_1.html.
 
+## v5.9.1 patch 3 — Tab 1 Proposed Benefits, Tab 2 column toggle, Tab 3/4 simplified status (2 Oct 2026)
+
+### Tab 1 — Proposed Benefits (renamed from Committed Benefits)
+- KPI renamed to "Proposed Benefits" to reflect it now shows all demand benefits, not just funded.
+- Benefit computation changed from `funded.filter(...)` to `all.filter(...)` — captures total benefits identified by all ExCo leaders across the full demand portfolio.
+- Values: 7160.2 M€ Hard / 7916.0 M€ Soft (was 6740.9 / 4875.6 funded-only).
+
+### Tab 2 — Demand in Scenario column toggle
+- Requested column always shows total demand in both Prioritised and Not Funded toggle views.
+- Prioritised toggle: shows Prioritised (M€) column, hides Unfunded column.
+- Not Funded toggle: shows Unfunded (M€) column, hides Prioritised column.
+- Column count reduced from 8 to 7 per view (cleaner layout).
+- Summary row and program rows both respect the toggle.
+
+### Tabs 3/4 — Simplified funding status column
+- Status cell simplified from 5+ detail lines to 3: status pill, reason, and lever name.
+- Removed: "New/Carry · Stage", "Overall decision", "Benefit evidence", "Warnings".
+- Tab 2 retains full detail for scenario comparison.
+
 ## v5.9.1 patch 2 — ExCo tradeoff all-stage, popup redesign, low-funding table restyle (2 Oct 2026)
 
 ### ExCo Trade-off Cockpit — all stages now eligible
@@ -1525,3 +1544,15 @@ Engine schema 3→4. Two build phases (A+B) in single release.
 - AOPWorkbook: XLSX read/write
 - IndexedDB persistence, portable JSON export/import
 - Source: 15926_IT AOP2027 Demand.xlsx
+
+
+## v5.8_1 A-Suite maintenance — 2 October 2026
+
+This maintenance applies only to v5.8_1; v5.9.1 remains unchanged and remains the latest release.
+
+- Fixed One Portfolio render failure caused by using `result` outside its closure; now uses `aop.result`.
+- Corrected final receiving-finance table: all receiving rows, explicit Unallocated and PMI rows, separate PMI column, correct BU/F&R classification and exact row/column reconciliation.
+- Prevented finalisation with any unresolved refreshed override, including PMI overrides.
+- No source workbook, embedded source snapshot, scoring rule, default funding, or current exclusion-refill policy changed.
+- A-Suite candidate passes 24 scenarios for each of 32 program organizations, 23 portfolio-wide scenarios, 20 finance scenarios for each of 41 operations entities plus 2 exception buckets, full source-cell fidelity and native export roundtrip. Full executive certification remains conditional on source-owner and end-user file/import/download acceptance.
+- The reported Tab 2 `fmt is not defined` was not reproduced in the frozen published v5.8_1 baseline or corrected candidate; six-tab localhost browser checks passed.
