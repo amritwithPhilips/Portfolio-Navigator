@@ -1,4 +1,38 @@
-# Current release — v5.8.0, 1 October 2026
+# Current release — v5.9.1, 2 October 2026
+
+This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.1.html. Base: v5.8_1.html.
+
+## v5.9.1 — Optimal preset, 1-decimal rule, ExCo cockpit fix, low-funding panel, source panel removal (2 Oct 2026)
+
+### Req 1 — Optimal scenario: Lever 3 fixed at 20 M€, rest in Lever 4
+- `preset('optimal')` sustain lever changed from `{basis:'bucket',pct:60}` to `{basis:'amount',amount:20}` — Lever 3 (Sustain Engineering) is now capped at exactly 20 M€ in the Optimal Segmentation scenario.
+- Lever 4 (Value Based Portfolio) continues to auto-fit via `_autoValue:true` / `autoValueCeiling()`, capturing all remaining budget after Levers 1–3.
+
+### Req 2 — Hard rule: all displayed numbers use exactly 1 decimal place
+- `fmt(requested/budget*100, 0)` → `fmt(..., 1)` in demand-vs-envelope table (was showing 0 dp for the budget utilisation %).
+- `d.amount.toFixed(d.amount%1?2:0)` → `Number(d.amount.toFixed(1))` for the AOP 2026 Spend chip (was showing 0 or 2 dp depending on whether value was integer).
+- `(bandPct*100).toFixed(0)` → `toFixed(1)` in QA decision-bands line.
+- Available and over-budget display `.toFixed(6)` → `.toFixed(1)` in scenario KPI and stream table cells.
+
+### Req 3 — ExCo Trade-off Cockpit: stage filter aligned with engine
+- Cockpit preview (increase delta) filter changed from `r.stage===3` → `r.stage>=3` for unfunded programs.
+- Cockpit preview (decrease delta) filter changed from `r.stage===3` → `r.stage>=3` for funded programs.
+- These align the display preview with the `tradeoff()` engine function which already correctly uses `r.stage>=3`. With IT Simplification mode OFF (default) there are no stage-4 programs so results are unchanged; the fix activates when IT Simp lever is enabled.
+
+### Req 4 — Organizations with funding below 20%: data-backed analysis panel
+- New `lowFundingOrgsPanel(rows)` function added before `scenario()` in the UI IIFE.
+- Panel renders in the Scenario tab, after the Merit Score Framework, showing all organisations receiving < 20% of their requested budget.
+- Current scenario: **9 organisations** below 20% threshold (ISC 9%, People function 3%, Patient Safety & Quality 0%, Innovation & Design Ops 16%, North America 0%, Precision Diagnosis DXR 0%, AM&D 12%, Health & Safety 0%, Unknown 0%).
+- **Data-backed reasons generated per org** from: stage distribution (early-lever exhaustion, Value-stage concentration), merit score band, hard/soft benefit split, and per-program cost profile.
+- Key finding: ISC (25.8 M€ requested, only 9% funded) has all 7 unfunded programs in Carry Over (Lever 2) — largest programs are 10.1 M€ and 8.25 M€, exhausting the carry-over lever envelope before ISC's tail demand is reached.
+
+### Req 5 — Remove Source completeness and decision readiness panel
+- Removed `window.renderSourceAttention=function(state){...}` declaration and both call sites.
+- The "Source completeness and decision readiness · N programs retained · N paybacks parsed · N missing requests" panel no longer appears above the main content area.
+
+---
+
+# Previous release — v5.8.0, 1 October 2026
 
 This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html. Current PRD and detailed requirements: PRD/*-v5.7.0.docx. QA and detailed comparisons are in AOP 2027 Modeler/QA-report.html and Detailed-data-comparison.html, with reproducible evidence in Data file/Finance-20260930-v5.7.0.
 
