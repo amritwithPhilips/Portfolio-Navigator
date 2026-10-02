@@ -470,8 +470,8 @@ function tradeoff(session,stream,targets){
  for(const [leader,target] of Object.entries(targets)){
   if(!Number.isFinite(target)||target<0)throw Error('Trade-off target must be nonnegative');
   const rows=before.rows.filter(r=>r.stream===stream&&r.exco===leader&&!r.isPmi),current=sum(rows,r=>r.final),delta=target-current;
-  if(delta>1e-9){let used=0;for(const r of rows.filter(r=>r.final===0&&r.cost>0&&r.stage>=3&&r.eligible).sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id,'en',{numeric:true}))){if(used+r.cost<=delta+1e-9){next=transact(next,'program',{id:r.id,choice:'include',note:'ExCo trade-off'},'ExCo '+stream+' trade-off');used+=r.cost;}}}
-  else if(delta< -1e-9){let freed=0;for(const r of rows.filter(r=>r.final>0&&r.stage>=3).sort((a,b)=>a.score-b.score||a.id.localeCompare(b.id,'en',{numeric:true}))){if(freed>=-delta-1e-9)break;next=transact(next,'program',{id:r.id,choice:'exclude',note:'ExCo trade-off'},'ExCo '+stream+' trade-off');freed+=r.final;}}
+  if(delta>1e-9){let used=0;for(const r of rows.filter(r=>r.final===0&&r.cost>0&&r.eligible).sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id,'en',{numeric:true}))){if(used+r.cost<=delta+1e-9){next=transact(next,'program',{id:r.id,choice:'include',note:'ExCo trade-off'},'ExCo '+stream+' trade-off');used+=r.cost;}}}
+  else if(delta< -1e-9){let freed=0;for(const r of rows.filter(r=>r.final>0).sort((a,b)=>a.score-b.score||a.id.localeCompare(b.id,'en',{numeric:true}))){if(freed>=-delta-1e-9)break;next=transact(next,'program',{id:r.id,choice:'exclude',note:'ExCo trade-off'},'ExCo '+stream+' trade-off');freed+=r.final;}}
  }
  next.excoTradeoffs={};return next;
 }
@@ -1104,36 +1104,37 @@ function lowFundingOrgsPanel(rows){
    var softPct=Math.round(un.filter(function(r){return r.benefitClass!=='hard';}).length/n*100);
    var largeCt=un.filter(function(r){return r.cost>=2;}).length;
    var avgCost=od.requested/Math.max(1,od.all.length);
-   if(earlyPct>=60)out.push(earlyPct+'% of unfunded programs sit in higher-priority levers (Legal/Compliance, Carry Over, or Sustain — Levers 1–3) — budget envelope exhausted before covering this organisation’s full demand within those levers');
-   else if(s1pct>=40)out.push(s1pct+'% of unfunded programs are Carry Over (Lever 2) — carry-over lever only partially backed by verified evidence, reducing funded envelope below total carry-over requests');
-   if(s3pct>=70)out.push(s3pct+'% of unfunded programs are in Value-based Portfolio (Lever 4) — budget consumed by Legal, Carry Over, and Sustain levers before reaching these programs');
-   else if(s3pct>=40)out.push(s3pct+'% of unfunded programs are in Lever 4 (Value) — competing for the residual envelope after higher-priority levers are satisfied');
-   if(avgScore<30)out.push('Low average merit score ('+dec(avgScore)+'/100) on unfunded programs — insufficient benefit quantification, missing payback data, or absence of hard-ROI evidence');
-   else if(avgScore<50)out.push('Below-median merit score ('+dec(avgScore)+'/100) on unfunded programs — limited hard-benefit or payback evidence compared to funded portfolio');
-   if(hardCt===0&&un.length>0)out.push('No hard-benefit programs in unfunded set — all '+un.length+' programs carry soft or qualitative benefits only, placing them behind hard-ROI programs in merit ranking');
-   else if(softPct>=80)out.push(softPct+'% soft/qualitative benefits in unfunded programs — absence of hard financial returns reduces merit ranking against quantified-ROI peers');
-   if(largeCt>=2&&avgCost>=3)out.push(largeCt+' programs cost ≥2 M€ each (avg '+dec(avgCost)+' M€ per program) — high per-program cost limits how many fit within lever envelopes');
-   if(od.yes.length===0)out.push('Zero programs funded — entire '+dec(od.requested)+' M€ demand falls below the budget threshold for each applicable lever; AOP envelope exhausted by other organizations');
-   if(!out.length)out.push(dec(od.no.reduce(function(s,r){return s+r.cost;},0))+' M€ of demand not accommodated within AOP envelope — programs rank below current funding threshold');
+   if(earlyPct>=60)out.push(earlyPct+'% of unfunded programs sit in higher-priority levers (Legal/Compliance, Carry Over, or Sustain \u2014 Levers 1\u20133) \u2014 budget envelope exhausted before covering this organisation\u2019s full demand within those levers');
+   else if(s1pct>=40)out.push(s1pct+'% of unfunded programs are Carry Over (Lever 2) \u2014 carry-over lever only partially backed by verified evidence, reducing funded envelope below total carry-over requests');
+   if(s3pct>=70)out.push(s3pct+'% of unfunded programs are in Value-based Portfolio (Lever 4) \u2014 budget consumed by Legal, Carry Over, and Sustain levers before reaching these programs');
+   else if(s3pct>=40)out.push(s3pct+'% of unfunded programs are in Lever 4 (Value) \u2014 competing for the residual envelope after higher-priority levers are satisfied');
+   if(avgScore<30)out.push('Low average merit score ('+dec(avgScore)+'/100) on unfunded programs \u2014 insufficient benefit quantification, missing payback data, or absence of hard-ROI evidence');
+   else if(avgScore<50)out.push('Below-median merit score ('+dec(avgScore)+'/100) on unfunded programs \u2014 limited hard-benefit or payback evidence compared to funded portfolio');
+   if(hardCt===0&&un.length>0)out.push('No hard-benefit programs in unfunded set \u2014 all '+un.length+' programs carry soft or qualitative benefits only, placing them behind hard-ROI programs in merit ranking');
+   else if(softPct>=80)out.push(softPct+'% soft/qualitative benefits in unfunded programs \u2014 absence of hard financial returns reduces merit ranking');
+   if(largeCt>=2&&avgCost>=3)out.push(largeCt+' programs cost \u22652 M\u20ac each (avg '+dec(avgCost)+' M\u20ac per program) \u2014 high per-program cost limits how many fit within lever envelopes');
+   if(od.yes.length===0)out.push('Zero programs funded \u2014 entire '+dec(od.requested)+' M\u20ac demand falls below the budget threshold; AOP envelope exhausted by other organizations');
+   if(!out.length)out.push(dec(od.no.reduce(function(s,r){return s+r.cost;},0))+' M\u20ac of demand not accommodated within AOP envelope \u2014 programs rank below current funding threshold');
    return out;
  }
 
- var h='<details class="panel section-panel"><summary style="font-weight:700;font-size:13px;cursor:pointer">&#9888; Organizations with Low Funding Coverage &mdash; '+lowOrgs.length+' orgs below 20%</summary>';
- h+='<p class="muted" style="font-size:11px;margin:8px 0 12px">Organizations receiving less than 20% of requested budget. Reasons are data-backed: derived from stage distribution, merit scores, and benefit classification of unfunded programs in the current scenario.</p>';
- h+='<div class="tablebox"><table class="it"><thead><tr>';
- h+='<th>Organization</th><th class="num">Requested M€</th><th class="num">Funded M€</th><th class="num">% Funded</th><th class="num">Unfunded progs</th><th>Data-backed reasons for low coverage</th>';
+ var h='<details class="panel section-panel" open style="margin-top:16px"><summary style="font-weight:700;font-size:16px;cursor:pointer">Organizations with Low Funding Coverage</summary>';
+ h+='<p class="muted" style="font-size:11px;margin:4px 0 10px">'+lowOrgs.length+' organizations receiving less than 20% of requested budget. Reasons derived from stage distribution, merit scores, and benefit classification of unfunded programs in the current scenario.</p>';
+ h+='<div class="tablebox burf-tablebox"><table class="portfolio burf-table"><thead><tr>';
+ h+='<th class="identity">Organisation</th><th>Unfunded</th><th>Requested (M\u20ac)</th><th>Funded (M\u20ac)</th><th>% Funded</th><th>Data-backed reasons for low coverage</th>';
  h+='</tr></thead><tbody>';
  lowOrgs.forEach(function(e){
    var org=e[0],od=e[1];
    var pct=Math.round(od.funded/od.requested*100);
    var rs=reasons(od);
    var col=pct>=10?'#FFBE2C':'#D43F44';
-   h+='<tr><td><strong>'+esc(org)+'</strong></td>';
-   h+='<td class="num">'+money(od.requested)+'</td>';
-   h+='<td class="num">'+money(od.funded)+'</td>';
-   h+='<td class="num"><span style="color:'+col+';font-weight:600">'+pct+'%</span></td>';
-   h+='<td class="num">'+od.no.length+'</td>';
-   h+='<td style="font-size:11px"><ul style="margin:4px 0;padding-left:16px">'+rs.map(function(r){return '<li style="margin-bottom:3px">'+r+'</li>';}).join('')+'</ul></td>';
+   h+='<tr>';
+   h+='<td class="identity"><strong>'+esc(org)+'</strong></td>';
+   h+='<td style="text-align:center">'+od.no.length+'</td>';
+   h+='<td style="text-align:right">'+money(od.requested)+'</td>';
+   h+='<td style="text-align:right">'+money(od.funded)+'</td>';
+   h+='<td style="text-align:center"><span style="color:'+col+';font-weight:700">'+pct+'%</span></td>';
+   h+='<td style="font-size:11px"><ul style="margin:2px 0;padding-left:16px;line-height:1.5">'+rs.map(function(r){return '<li style="margin-bottom:2px">'+r+'</li>';}).join('')+'</ul></td>';
    h+='</tr>';
  });
  h+='</tbody></table></div></details>';
@@ -1498,7 +1499,7 @@ function excoTradeoffPanel(allResultRows,scope){
 
  let h='<details class="panel section-panel exco-tradeoff"'+(hasTradeoffs?' open':'')+'><summary style="font-weight:700;font-size:14px;cursor:pointer">ExCo Trade-off Cockpit</summary>';
 
- h+='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><p class="muted" style="font-size:11px;margin:0">Enter a target budget per ExCo leader. Increase adds P4 Programs by merit; decrease removes lowest-merit funded P4 Programs. Overall AOP adjusts accordingly.</p>';
+ h+='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><p class="muted" style="font-size:11px;margin:0">Enter a target budget per ExCo leader. Increase adds unfunded Programs by merit; decrease removes lowest-merit funded Programs. Overall AOP adjusts accordingly.</p>';
 
  h+=(hasAnyTradeoff?'<button id="reset-exco-tradeoff" style="font-size:11px;padding:4px 12px;white-space:nowrap">Reset all trade-offs</button>':'')+'</div>';
 
@@ -1538,7 +1539,7 @@ function excoTradeoffPanel(allResultRows,scope){
 
    if(delta>0.01){
 
-     const ecUnfunded=allResultRows.filter(function(r){return r.exco===ec&&r.final===0&&r.cost>0&&r.stage>=3;}).sort(function(a,b){return b.score-a.score;});
+     const ecUnfunded=allResultRows.filter(function(r){return r.exco===ec&&r.final===0&&r.cost>0;}).sort(function(a,b){return b.score-a.score;});
 
      let used=0;
 
@@ -1554,7 +1555,7 @@ function excoTradeoffPanel(allResultRows,scope){
 
    } else if(delta<-0.01){
 
-     const ecFundedP4=allResultRows.filter(function(r){return r.exco===ec&&r.final>0&&r.stage>=3;}).sort(function(a,b){return a.score-b.score;});
+     const ecFundedP4=allResultRows.filter(function(r){return r.exco===ec&&r.final>0;}).sort(function(a,b){return a.score-b.score;});
 
      let freed=0;
 
@@ -1604,7 +1605,7 @@ function excoTradeoffPanel(allResultRows,scope){
 
    } else h+='<td class="num">—</td>';
 
-  const hasOvr=allResultRows.some(function(r){return r.stream===tab&&r.exco===ec&&(r.stage===3||r.stage===4)&&r.override?.note==='ExCo trade-off';}); h+='<td class="num">'+(hasOvr?'<button data-revert-exco="'+esc(ec)+'" style="font-size:11px;padding:2px 8px;border-color:#D43F44;color:#D43F44" title="Revert stage-3/4 Programs overrides for '+esc(ec)+'">Revert</button>':'<span style="color:#aaa;font-size:11px">—</span>')+'</td>'; h+='</tr>';
+  const hasOvr=allResultRows.some(function(r){return r.stream===tab&&r.exco===ec&&r.override?.note==='ExCo trade-off';}); h+='<td class="num">'+(hasOvr?'<button data-revert-exco="'+esc(ec)+'" style="font-size:11px;padding:2px 8px;border-color:#D43F44;color:#D43F44" title="Revert stage-3/4 Programs overrides for '+esc(ec)+'">Revert</button>':'<span style="color:#aaa;font-size:11px">—</span>')+'</td>'; h+='</tr>';
 
  });
 
@@ -1695,48 +1696,81 @@ function details(id){const r=result.rows.find(x=>x.id===id);
 const sv=k=>{const v=r.sourceValues.find(x=>{const lbl=x.label.split(' [')[0].split(' / ')[0].toLowerCase().trim();return lbl.startsWith(k.toLowerCase());});return v&&AOP.clean(typeof v.value==='number'?dec(v.value):v.value)?v.value:null;};
 
 const priorityVal=sv('priority')||r.priority||'Not supplied';
-
 const benefitQuant=r.benefit!==null?money(r.benefit):'Not supplied';
-
 const benefitQual=AOP.clean(r.benefitDetails)||'Not supplied';
-
 const paybackVal=r.paybackYears!==null?r.paybackYears+' year'+(r.paybackYears!==1?'s':''):(r.paybackRaw!=null&&String(r.paybackRaw).trim()?'Needs source correction: '+String(r.paybackRaw):'Not supplied');
-
 const problemVal=AOP.clean(r.problem)||'Not supplied';
-
 const scopeVal=AOP.clean(r.scope)||'Not supplied';
-
 const impactVal=AOP.clean(r.impact)||'Not supplied';
-
 const isUserOverride=r.override&&r.override.state;
-
 const rationaleType=r.lfrOptOut?'ExCo LFR Opt-Out (deprioritised)':isUserOverride?'User Prioritised':'Default Logic';
 
-var h='<h2 style="margin:0 0 4px;font-size:17px;color:var(--dk)">'+esc(r.name||r.id)+'</h2>';
+function dataQuality(label,val){
+  if(!val||val==='Not supplied') return '<span style="color:#D43F44;font-size:14px" title="No data submitted">\u274C</span>';
+  var s=String(val).trim();
+  if(s.length<3||s==='0'||s==='N/A'||s==='n/a'||s==='TBD'||s==='tbd'||s==='NA'||s.toLowerCase()==='not applicable') return '<span style="color:#E8960C;font-size:14px" title="Data present but insufficient for scoring">\u26A0</span>';
+  return '<span style="color:#27934C;font-size:14px" title="Data present and used in scoring">\u2705</span>';
+}
 
-h+='<p style="color:var(--text2);font-size:12px;margin:0 0 12px">'+esc(r.id)+' · '+esc(r.stageName)+' · <b>'+esc(r.status)+'</b></p>';
+var h='';
 
-h+='<div style="display:flex;gap:24px;margin-bottom:14px"><div><span style="font-size:11px;color:var(--text2)">Demand</span><div style="font-size:20px;font-weight:300;color:var(--dk)">'+money(r.cost)+'</div></div><div><span style="font-size:11px;color:var(--text2)">Prioritised Demand</span><div style="font-size:20px;font-weight:300;color:var(--blue)">'+money(r.final)+'</div></div></div>';
+// Section 1: Name + status badge
+var statusCol=r.status==='Funded'?'#27934C':r.status==='Partially Funded'?'#E8960C':'#D43F44';
+h+='<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">';
+h+='<h2 style="margin:0;font-size:17px;color:var(--dk);flex:1">'+esc(r.name||r.id)+'</h2>';
+h+='<span style="display:inline-block;padding:3px 12px;border-radius:12px;font-size:11px;font-weight:700;color:white;background:'+statusCol+';white-space:nowrap;margin-left:12px">'+esc(r.status)+'</span>';
+h+='</div>';
 
-h+='<h3 style="font-size:13px;color:var(--dk);margin:14px 0 6px;border-bottom:1px solid var(--mist);padding-bottom:4px">Details</h3>';
+// Section 2: ID | Org | Funding Type
+h+='<div style="display:flex;gap:16px;font-size:12px;color:var(--text2);margin-bottom:12px;flex-wrap:wrap">';
+h+='<span>'+esc(r.id)+'</span><span>\u00B7</span>';
+h+='<span>'+esc(r.org||'Not supplied')+'</span><span>\u00B7</span>';
+h+='<span>'+esc(r.stageName)+'</span>';
+h+='</div>';
 
+// Section 3: Demand | Prioritised
+h+='<div style="display:flex;gap:32px;margin-bottom:14px;padding:10px 16px;background:var(--bg);border-radius:8px">';
+h+='<div><span style="font-size:11px;color:var(--text2)">Demand</span><div style="font-size:20px;font-weight:300;color:var(--dk)">'+money(r.cost)+'</div></div>';
+h+='<div><span style="font-size:11px;color:var(--text2)">Prioritised Demand</span><div style="font-size:20px;font-weight:300;color:var(--blue)">'+money(r.final)+'</div></div>';
+h+='</div>';
+
+// Section 4: Funding Rationale
+h+='<div style="padding:10px 14px;margin-bottom:14px;background:'+
+  (rationaleType==='Default Logic'?'#EBF0F5':rationaleType.includes('Opt-Out')?'#FFF0E0':'#E8F5E9')+
+  ';border-radius:6px;border-left:3px solid '+
+  (rationaleType==='Default Logic'?'#0B5ED7':rationaleType.includes('Opt-Out')?'#E8960C':'#27934C')+
+  '"><div style="font-size:11px;font-weight:700;color:var(--text2);margin-bottom:3px">Funding Rationale \u2014 '+esc(rationaleType)+'</div>';
+h+='<div style="font-size:12px">'+esc(r.reason)+'</div></div>';
+
+// Section 5: Details Overview - quality indicator table
+var dqRows=[
+  ['Priority',priorityVal],
+  ['Benefit (Quantitative)',r.benefit!==null?String(r.benefit):'Not supplied'],
+  ['Payback Period',r.paybackYears!==null?String(r.paybackYears):'Not supplied'],
+  ['Problem Statement',problemVal],
+  ['Programs Scope',scopeVal],
+  ['Impact and Cost of Not Doing',impactVal]
+];
+h+='<h3 style="font-size:13px;color:var(--dk);margin:14px 0 6px;border-bottom:1px solid var(--mist);padding-bottom:4px">Details Overview</h3>';
 h+='<table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px">';
-
-var detailRows=[['Priority',esc(priorityVal)],['Benefit (Quantitative)',esc(benefitQuant)],['Benefit (Qualitative)',esc(benefitQual)],['Payback Period',esc(paybackVal)],['Problem Statement',esc(problemVal)],['Programs Scope',esc(scopeVal)],['Impact and Cost of Not Doing',esc(impactVal)]];
-
-detailRows.forEach(function(d){h+='<tr style="border-bottom:1px solid var(--mist)"><td style="padding:6px 8px;width:40%;color:var(--text2);vertical-align:top">'+d[0]+'</td><td style="padding:6px 8px;white-space:pre-wrap;overflow-wrap:anywhere">'+d[1]+'</td></tr>';});
-
+h+='<tr style="background:var(--lt)"><th style="padding:5px 8px;text-align:left;width:45%">Field</th><th style="padding:5px 8px;text-align:center;width:55%">Data Quality</th></tr>';
+dqRows.forEach(function(d){
+  h+='<tr style="border-bottom:1px solid var(--mist)"><td style="padding:5px 8px;color:var(--text2)">'+d[0]+'</td><td style="padding:5px 8px;text-align:center">'+dataQuality(d[0],d[1])+'</td></tr>';
+});
 h+='</table>';
 
-h+='<h3 style="font-size:13px;color:var(--dk);margin:14px 0 6px;border-bottom:1px solid var(--mist);padding-bottom:4px">Merit Score — '+dec(r.score)+'</h3>';
-
+// Section 6: Merit Score table (same as before)
+h+='<h3 style="font-size:13px;color:var(--dk);margin:14px 0 6px;border-bottom:1px solid var(--mist);padding-bottom:4px">Merit Score \u2014 '+dec(r.score)+'</h3>';
 h+='<table style="width:100%;border-collapse:collapse;font-size:11px;margin:4px 0"><tr style="background:var(--dk);color:white"><th style="padding:5px 8px;text-align:left">Component</th><th style="padding:5px 8px;text-align:right">Raw</th><th style="padding:5px 8px;text-align:right">Weight</th><th style="padding:5px 8px;text-align:right">Weighted</th></tr>'+['Benefit Strength','Submitted Priority','Captured Consequence','Decision Band','Payback Period'].map((n,i)=>'<tr style="border-bottom:1px solid var(--mist)"><td style="padding:5px 8px">'+n+'</td><td style="padding:5px 8px;text-align:right">'+r.rawComponents[i]+'/'+[50,25,15,10,10][i]+'</td><td style="padding:5px 8px;text-align:right">'+dec(session.settings.weights[i])+'</td><td style="padding:5px 8px;text-align:right;font-weight:700">'+dec(r.components[i])+'</td></tr>').join('')+'<tr style="background:var(--lt);font-weight:700"><td style="padding:5px 8px">Total</td><td></td><td style="text-align:right">100</td><td style="padding:5px 8px;text-align:right">'+dec(r.score)+'</td></tr></table>';
 
-h+='<h3 style="font-size:13px;color:var(--dk);margin:14px 0 6px;border-bottom:1px solid var(--mist);padding-bottom:4px">Funding Rationale <span style="font-size:11px;font-weight:400;color:var(--text2)">— '+esc(rationaleType)+'</span></h3>';
+// Section 7: Submitted Details (collapsed by default)
+h+='<details style="margin-top:14px"><summary style="font-size:13px;color:var(--dk);font-weight:700;cursor:pointer;padding-bottom:4px;border-bottom:1px solid var(--mist)">Submitted Details</summary>';
+h+='<table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:8px">';
+var detailRows=[['Priority',esc(priorityVal)],['Benefit (Quantitative)',esc(benefitQuant)],['Benefit (Qualitative)',esc(benefitQual)],['Payback Period',esc(paybackVal)],['Problem Statement',esc(problemVal)],['Programs Scope',esc(scopeVal)],['Impact and Cost of Not Doing',esc(impactVal)]];
+detailRows.forEach(function(d){h+='<tr style="border-bottom:1px solid var(--mist)"><td style="padding:6px 8px;width:40%;color:var(--text2);vertical-align:top">'+d[0]+'</td><td style="padding:6px 8px;white-space:pre-wrap;overflow-wrap:anywhere">'+d[1]+'</td></tr>';});
+h+='</table></details>';
 
-h+='<p style="font-size:12px;margin:0 0 14px">'+esc(r.reason)+'</p>';
-
-h+='<p style="font-size:11px;color:var(--text3);margin-top:12px">'+esc(r.sourceSheet)+' row '+r.sourceRow+' · '+session.data.version+'</p>';
+h+='<p style="font-size:11px;color:var(--text3);margin-top:12px">'+esc(r.sourceSheet)+' row '+r.sourceRow+' \u00B7 '+session.data.version+'</p>';
 
 $('#modal-body').innerHTML=h;$('#modal').showModal();}
 
@@ -2022,7 +2056,7 @@ document.addEventListener('scroll',hideBubble,true);
 
 
 
-document.addEventListener('click',async e=>{const excoRow=e.target.closest('[data-exco-toggle]');if(excoRow){const ec=excoRow.dataset.excoToggle,arrow=excoRow.querySelector('.exco-arrow'),orgRows=document.querySelectorAll('[data-exco-parent="'+CSS.escape(ec)+'"]'),open=orgRows[0]&&orgRows[0].style.display!=='none';orgRows.forEach(function(r){r.style.display=open?'none':'';});if(arrow)arrow.textContent=open?'▶':'▼';return;}const b=e.target.closest('button');if(!b)return;try{if(b.dataset.revertExco){const ec=b.dataset.revertExco;const ecIds=result.rows.filter(function(r){return r.stream===tab&&r.exco===ec&&(r.stage===3||r.stage===4)&&r.override?.note==='ExCo trade-off';}).map(function(r){return r.id;});if(ecIds.length)session=AOP.transact(session,'group',{ids:ecIds,choice:'automatic'},'ExCo Revert');if(!session.excoTradeoffs)session.excoTradeoffs={};delete session.excoTradeoffs[ec];render();persist();toast('Reverted trade-off for '+ec+(ecIds.length?' — '+ecIds.length+' Programs'+(ecIds.length>1?'s':'')+' returned to automatic':'')+'.');return;}if(b.dataset.tab){tab=b.dataset.tab;render();window.scrollTo(0,0);}else if(b.dataset.preset)commit('preset',{preset:b.dataset.preset});else if(b.dataset.basis){const si={lfr:0,carry:1,sustain:2,value:3,itsimp:4}[b.dataset.basis],stg=result.stages[si],bdem=stg.fundableDemand!==undefined?stg.fundableDemand:stg.demand;const s=AOP.switchBasis(session.settings,b.dataset.basis,b.dataset.value,bdem);commit('setting',{settings:s});}else if(b.dataset.program)details(b.dataset.program);else if(b.dataset.action)commit(b.dataset.action);else if(b.dataset.auto)commit('program',{id:b.dataset.auto,choice:'automatic'});else if(b.dataset.resolve)commit('resolve',{id:b.dataset.resolve});else if(b.dataset.discard)commit('resolve',{id:b.dataset.discard,discard:true});else if(b.dataset.collapse){const id=b.dataset.collapse;expanded.has(id)?expanded.delete(id):expanded.add(id);render();}else if(b.dataset.expandAll||b.dataset.closeAll){const scope=b.dataset.expandAll||b.dataset.closeAll;document.querySelectorAll('[data-table-scope="'+scope+'"] [data-collapse]').forEach(x=>b.dataset.expandAll?expanded.add(x.dataset.collapse):expanded.delete(x.dataset.collapse));render();}else if(b.dataset.scenarioView){if(!session.filters.scenario)session.filters.scenario={};session.filters.scenario._view=b.dataset.scenarioView;render();persist();}else if(b.dataset.clearScope){session.filters[b.dataset.clearScope]={};render();persist();}else if(b.dataset.exportScope){const scope=b.dataset.exportScope,rows=scope==='overview'?result.rows:result.rows.filter(r=>r.stream===scope);exportExcel(AOP.filter(rows,session.filters[scope]),scope+'-filtered');}else if(b.dataset.group){const rows=AOP.filter(result.rows.filter(r=>r.stream===tab),session.filters[tab]);commit('group',{ids:rows.filter(r=>(r.org||'BURF not supplied')===b.dataset.group&&r.cost>0).map(r=>r.id),choice:b.dataset.choice});}else if(b.dataset.applyReview){const id=b.dataset.applyReview,q=k=>document.querySelector('[data-'+k+'="'+CSS.escape(id)+'"]');const tier=q('consequence').value,note=q('review-note').value;if(tier!==''&&!AOP.clean(note))throw Error('A reviewed consequence tier needs a rationale.');commit('review',{id,review:{benefitReviewed:q('review-benefit').checked,condition:q('condition').value,consequence:tier===''?null:Number(tier),note}});}else if(b.dataset.open){const s=await dbget(b.dataset.open);await verifyWorkbookEvidence(s);AOP.validateSession(s);session=s;tab='scenario';render();persist();}else switch(b.id){case 'save':await save();break;case 'export-inclusions':exportExcel(result.rows.filter(r=>r.final>0),'inclusions');break;case 'export-full':exportExcel(result.rows,'complete-portfolio');break;case 'overview-export-xlsx':exportExcel(result.rows,'finalized-scenario');break;case 'export-json':await portable();break;case 'reset-exco-tradeoff':{const revertIds=result.rows.filter(function(r){return r.stream===tab&&(r.stage===3||r.stage===4)&&r.override?.note==='ExCo trade-off';}).map(function(r){return r.id;});if(revertIds.length)session=AOP.transact(session,'group',{ids:revertIds,choice:'automatic'},'ExCo Trade-off Reset');session.excoTradeoffs={};render();persist();toast('All ExCo trade-offs reverted'+(revertIds.length?' — '+revertIds.length+' Programs'+(revertIds.length>1?'s':'')+' returned to automatic':'')+'.');break;}case 'close-modal':$('#modal').close();break;case 'apply-weights':{const s=AOP.clone(session.settings);s.weights=[...document.querySelectorAll('.weight')].map(x=>Number(x.value));commit('setting',{settings:s});break;}case 'apply-exco-tradeoff':{session=AOP.tradeoff(session,tab,session.excoTradeoffScope===tab?session.excoTradeoffs||{}:{});render();persist();toast('ExCo trade-off applied. Total AOP remains '+money(session.settings.budget));break;}case 'new-scenario':{const fresh=AOP.createSession(session.data);fresh.settings.budget=100;AOP.autoLfrPct(fresh.data,fresh.settings);session=fresh;tab='scenario';render();persist();toast('Fresh Optimal Segmentation scenario created at 100M€ AOP. All customisations cleared.');break;}case 'undo':session=AOP.undo(session);render();persist();break;case 'source-json':download('AOP2027-Complete-Workbook-Snapshot.json',JSON.stringify(session.data.workbook),'application/json');break;case 'source-xlsx':download(session.data.sourceFile.split(/[\\/]/).pop(),Uint8Array.from(atob(session.data.workbook.originalBase64),c=>c.charCodeAt(0)));break;case 'cancel-refresh':pending=null;render();break;case 'apply-refresh':await save();session=AOP.refresh(session,pending.data,pending.audit||null);pending=null;render();await persist();toast('New source version applied. Changed prior decisions are held for review.');break;case 'export-audit-xlsx':if(pending&&pending.audit)exportAuditExcel(pending.audit);break;case 'export-audit-json':if(pending&&pending.audit)exportAuditJson(pending.audit);break;}}catch(err){toast(err.message,true);}});
+document.addEventListener('click',async e=>{const excoRow=e.target.closest('[data-exco-toggle]');if(excoRow){const ec=excoRow.dataset.excoToggle,arrow=excoRow.querySelector('.exco-arrow'),orgRows=document.querySelectorAll('[data-exco-parent="'+CSS.escape(ec)+'"]'),open=orgRows[0]&&orgRows[0].style.display!=='none';orgRows.forEach(function(r){r.style.display=open?'none':'';});if(arrow)arrow.textContent=open?'▶':'▼';return;}const b=e.target.closest('button');if(!b)return;try{if(b.dataset.revertExco){const ec=b.dataset.revertExco;const ecIds=result.rows.filter(function(r){return r.stream===tab&&r.exco===ec&&r.override?.note==='ExCo trade-off';}).map(function(r){return r.id;});if(ecIds.length)session=AOP.transact(session,'group',{ids:ecIds,choice:'automatic'},'ExCo Revert');if(!session.excoTradeoffs)session.excoTradeoffs={};delete session.excoTradeoffs[ec];render();persist();toast('Reverted trade-off for '+ec+(ecIds.length?' — '+ecIds.length+' Programs'+(ecIds.length>1?'s':'')+' returned to automatic':'')+'.');return;}if(b.dataset.tab){tab=b.dataset.tab;render();window.scrollTo(0,0);}else if(b.dataset.preset)commit('preset',{preset:b.dataset.preset});else if(b.dataset.basis){const si={lfr:0,carry:1,sustain:2,value:3,itsimp:4}[b.dataset.basis],stg=result.stages[si],bdem=stg.fundableDemand!==undefined?stg.fundableDemand:stg.demand;const s=AOP.switchBasis(session.settings,b.dataset.basis,b.dataset.value,bdem);commit('setting',{settings:s});}else if(b.dataset.program)details(b.dataset.program);else if(b.dataset.action)commit(b.dataset.action);else if(b.dataset.auto)commit('program',{id:b.dataset.auto,choice:'automatic'});else if(b.dataset.resolve)commit('resolve',{id:b.dataset.resolve});else if(b.dataset.discard)commit('resolve',{id:b.dataset.discard,discard:true});else if(b.dataset.collapse){const id=b.dataset.collapse;expanded.has(id)?expanded.delete(id):expanded.add(id);render();}else if(b.dataset.expandAll||b.dataset.closeAll){const scope=b.dataset.expandAll||b.dataset.closeAll;document.querySelectorAll('[data-table-scope="'+scope+'"] [data-collapse]').forEach(x=>b.dataset.expandAll?expanded.add(x.dataset.collapse):expanded.delete(x.dataset.collapse));render();}else if(b.dataset.scenarioView){if(!session.filters.scenario)session.filters.scenario={};session.filters.scenario._view=b.dataset.scenarioView;render();persist();}else if(b.dataset.clearScope){session.filters[b.dataset.clearScope]={};render();persist();}else if(b.dataset.exportScope){const scope=b.dataset.exportScope,rows=scope==='overview'?result.rows:result.rows.filter(r=>r.stream===scope);exportExcel(AOP.filter(rows,session.filters[scope]),scope+'-filtered');}else if(b.dataset.group){const rows=AOP.filter(result.rows.filter(r=>r.stream===tab),session.filters[tab]);commit('group',{ids:rows.filter(r=>(r.org||'BURF not supplied')===b.dataset.group&&r.cost>0).map(r=>r.id),choice:b.dataset.choice});}else if(b.dataset.applyReview){const id=b.dataset.applyReview,q=k=>document.querySelector('[data-'+k+'="'+CSS.escape(id)+'"]');const tier=q('consequence').value,note=q('review-note').value;if(tier!==''&&!AOP.clean(note))throw Error('A reviewed consequence tier needs a rationale.');commit('review',{id,review:{benefitReviewed:q('review-benefit').checked,condition:q('condition').value,consequence:tier===''?null:Number(tier),note}});}else if(b.dataset.open){const s=await dbget(b.dataset.open);await verifyWorkbookEvidence(s);AOP.validateSession(s);session=s;tab='scenario';render();persist();}else switch(b.id){case 'save':await save();break;case 'export-inclusions':exportExcel(result.rows.filter(r=>r.final>0),'inclusions');break;case 'export-full':exportExcel(result.rows,'complete-portfolio');break;case 'overview-export-xlsx':exportExcel(result.rows,'finalized-scenario');break;case 'export-json':await portable();break;case 'reset-exco-tradeoff':{const revertIds=result.rows.filter(function(r){return r.stream===tab&&r.override?.note==='ExCo trade-off';}).map(function(r){return r.id;});if(revertIds.length)session=AOP.transact(session,'group',{ids:revertIds,choice:'automatic'},'ExCo Trade-off Reset');session.excoTradeoffs={};render();persist();toast('All ExCo trade-offs reverted'+(revertIds.length?' — '+revertIds.length+' Programs'+(revertIds.length>1?'s':'')+' returned to automatic':'')+'.');break;}case 'close-modal':$('#modal').close();break;case 'apply-weights':{const s=AOP.clone(session.settings);s.weights=[...document.querySelectorAll('.weight')].map(x=>Number(x.value));commit('setting',{settings:s});break;}case 'apply-exco-tradeoff':{session=AOP.tradeoff(session,tab,session.excoTradeoffScope===tab?session.excoTradeoffs||{}:{});render();persist();toast('ExCo trade-off applied. Total AOP remains '+money(session.settings.budget));break;}case 'new-scenario':{const fresh=AOP.createSession(session.data);fresh.settings.budget=100;AOP.autoLfrPct(fresh.data,fresh.settings);session=fresh;tab='scenario';render();persist();toast('Fresh Optimal Segmentation scenario created at 100M€ AOP. All customisations cleared.');break;}case 'undo':session=AOP.undo(session);render();persist();break;case 'source-json':download('AOP2027-Complete-Workbook-Snapshot.json',JSON.stringify(session.data.workbook),'application/json');break;case 'source-xlsx':download(session.data.sourceFile.split(/[\\/]/).pop(),Uint8Array.from(atob(session.data.workbook.originalBase64),c=>c.charCodeAt(0)));break;case 'cancel-refresh':pending=null;render();break;case 'apply-refresh':await save();session=AOP.refresh(session,pending.data,pending.audit||null);pending=null;render();await persist();toast('New source version applied. Changed prior decisions are held for review.');break;case 'export-audit-xlsx':if(pending&&pending.audit)exportAuditExcel(pending.audit);break;case 'export-audit-json':if(pending&&pending.audit)exportAuditJson(pending.audit);break;}}catch(err){toast(err.message,true);}});
 
 document.addEventListener('input',e=>{const x=e.target;if(x.type==='range'&&x.dataset.lever){var v=Number(x.value);if(x.dataset.ceiling){var ceil=Number(x.dataset.ceiling);if(v>ceil){v=ceil;x.value=ceil;}}const s=AOP.clone(session.settings);const k=x.dataset.lever;s[k][s[k].basis==='amount'?'amount':'pct']=v;commit('setting',{settings:s});}});
 

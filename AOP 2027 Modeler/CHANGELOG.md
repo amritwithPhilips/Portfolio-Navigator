@@ -2,6 +2,27 @@
 
 This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.1.html. Base: v5.8_1.html.
 
+## v5.9.1 patch 2 — ExCo tradeoff all-stage, popup redesign, low-funding table restyle (2 Oct 2026)
+
+### ExCo Trade-off Cockpit — all stages now eligible
+- **Root cause**: both engine `tradeoff()` and cockpit preview filtered on `r.stage>=3`, excluding stage 0–2 programs. Leaders like Wim Appelo (all 7 unfunded programs in Carry Over stage 1) showed "+12.8 M€ delta" but "Programs unlocked: 0".
+- **Fix**: removed `r.stage>=3` gate from engine increase/decrease paths and cockpit preview. All eligible unfunded programs now participate in trade-off budget allocation by merit score, regardless of lever stage.
+- **Validation**: automated test across all 20 ExCo/stream combinations — every combo with unfunded eligible programs now correctly shows programs unlocking when budget is increased.
+
+### Organizations with Low Funding Coverage — restyled
+- Renamed from "⚠ Organizations with Low Funding Coverage — N orgs below 20%" to "Organizations with Low Funding Coverage".
+- Table class changed to `portfolio burf-table` (same as Demand in Scenario) for consistent styling.
+- Column layout: Organisation | Unfunded | Requested (M€) | Funded (M€) | % Funded | Reasons.
+
+### Program detail popup — redesigned layout
+- **Section 1**: Program name + prioritization status badge (green/amber/red)
+- **Section 2**: Unique ID · Organisation · Funding Type (lever)
+- **Section 3**: Demand | Prioritised Demand (on blue-grey background card)
+- **Section 4**: Funding Rationale — highlighted card with left border colour by type
+- **Section 5**: Details Overview — data quality table with ✅ (good for scoring) / ⚠ (present but insufficient) / ❌ (no data) per field
+- **Section 6**: Merit Score table (unchanged)
+- **Section 7**: Submitted Details — auto-collapsed `<details>` so popup fits on screen without scroll
+
 ## v5.9.1 — Optimal preset, 1-decimal rule, ExCo cockpit fix, low-funding panel, source panel removal (2 Oct 2026)
 
 ### Req 1 — Optimal scenario: Lever 3 fixed at 20 M€, rest in Lever 4
