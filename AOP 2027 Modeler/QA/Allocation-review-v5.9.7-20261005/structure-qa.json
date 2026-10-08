@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "name": "Built HTML contains exact reviewed app code",
+      "status": "PASS",
+      "detail": "No stale engine copy in standalone HTML"
+    },
+    {
+      "name": "Tab 6 displays explicit/pending/conflict breakdown",
+      "status": "PASS",
+      "detail": "Static markup review; no live browser claim"
+    },
+    {
+      "name": "Tab 6 drilldown includes source cells and reasons",
+      "status": "PASS",
+      "detail": "Static markup review"
+    },
+    {
+      "name": "New storage namespace preserves prior version",
+      "status": "PASS",
+      "detail": "New-version scenarios are saved separately"
+    },
+    {
+      "name": "Recovery does not adjust funding decisions",
+      "status": "PASS",
+      "detail": "Removed previous startup rewrite of exclusions and lever values"
+    },
+    {
+      "name": "Recovery reads old draft without writing",
+      "status": "PASS",
+      "detail": "Mock IndexedDB unit check; no access to live browser storage"
+    },
+    {
+      "name": "Absent legacy storage recovers cleanly",
+      "status": "PASS",
+      "detail": "Mock empty legacy namespace"
+    }
+  ],
+  "failures": []
+}

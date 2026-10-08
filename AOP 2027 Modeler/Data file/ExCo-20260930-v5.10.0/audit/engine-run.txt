@@ -1,0 +1,431 @@
+{
+  "checks": 693,
+  "passed": 693,
+  "failures": [],
+  "scenarios": [
+    {
+      "id": "validation-01",
+      "name": "Optimal",
+      "funded": 99.963,
+      "ew": 49.716,
+      "bu": 50.247,
+      "total": 575.4674630385123
+    },
+    {
+      "id": "validation-02",
+      "name": "Protect Sustain",
+      "funded": 99.971,
+      "ew": 56.205,
+      "bu": 43.766,
+      "total": 575.4754630385123
+    },
+    {
+      "id": "validation-03",
+      "name": "Release Sustain",
+      "funded": 100,
+      "ew": 47.139,
+      "bu": 52.861,
+      "total": 575.5044630385123
+    },
+    {
+      "id": "validation-04",
+      "name": "AOP percentage basis",
+      "funded": 99.973,
+      "ew": 46.521,
+      "bu": 53.452,
+      "total": 575.4774630385123
+    },
+    {
+      "id": "validation-05",
+      "name": "Absolute allocations",
+      "funded": 99.994,
+      "ew": 45.019,
+      "bu": 54.975,
+      "total": 575.4984630385123
+    },
+    {
+      "id": "validation-06",
+      "name": "IT Simplification reserve",
+      "funded": 99.926,
+      "ew": 52.458,
+      "bu": 47.468,
+      "total": 575.4304630385122
+    },
+    {
+      "id": "validation-07",
+      "name": "Inclusion and partial scope",
+      "funded": 100.413,
+      "ew": 49.606,
+      "bu": 50.807,
+      "total": 575.9174630385122
+    },
+    {
+      "id": "validation-08",
+      "name": "Requested investment and merit changes",
+      "funded": 99.967,
+      "ew": 49.742,
+      "bu": 50.225,
+      "total": 575.4714630385123
+    },
+    {
+      "id": "validation-09",
+      "name": "F&R and BU ExCo trade-offs",
+      "funded": 98.963,
+      "ew": 47.716,
+      "bu": 51.247,
+      "total": 574.4674630385123
+    },
+    {
+      "id": "validation-10",
+      "name": "Combined 80M stress and recovery",
+      "funded": 79.875,
+      "ew": 48.291,
+      "bu": 31.584,
+      "total": 555.3794630385123
+    },
+    {
+      "id": "validation-11",
+      "name": "Protect commitments preset",
+      "funded": 99.996,
+      "ew": 62.38,
+      "bu": 37.616,
+      "total": 575.5004630385123
+    },
+    {
+      "id": "validation-12",
+      "name": "Balance evidence preset",
+      "funded": 99.996,
+      "ew": 58.36,
+      "bu": 41.636,
+      "total": 575.5004630385123
+    },
+    {
+      "id": "validation-13",
+      "name": "Release capacity preset",
+      "funded": 85.898,
+      "ew": 41.137,
+      "bu": 44.761,
+      "total": 561.4024630385122
+    },
+    {
+      "id": "validation-14",
+      "name": "120M budget",
+      "funded": 119.954,
+      "ew": 53.128,
+      "bu": 66.826,
+      "total": 595.4584630385124
+    },
+    {
+      "id": "validation-15",
+      "name": "Zero base budget",
+      "funded": 0,
+      "ew": 0,
+      "bu": 0,
+      "total": 475.50446303851226
+    },
+    {
+      "id": "validation-16",
+      "name": "350M upper envelope",
+      "funded": 149.604,
+      "ew": 72.543,
+      "bu": 77.061,
+      "total": 625.1084630385124
+    },
+    {
+      "id": "validation-17",
+      "name": "Two percent tolerance",
+      "funded": 101.995,
+      "ew": 50.693,
+      "bu": 51.302,
+      "total": 577.4994630385123
+    },
+    {
+      "id": "validation-18",
+      "name": "Five percent tolerance",
+      "funded": 104.99,
+      "ew": 52.242,
+      "bu": 52.748,
+      "total": 580.4944630385122
+    },
+    {
+      "id": "validation-19",
+      "name": "Merit floor zero",
+      "funded": 99.963,
+      "ew": 49.716,
+      "bu": 50.247,
+      "total": 575.4674630385123
+    },
+    {
+      "id": "validation-20",
+      "name": "Merit floor 65",
+      "funded": 99.963,
+      "ew": 49.716,
+      "bu": 50.247,
+      "total": 575.4674630385123
+    },
+    {
+      "id": "validation-21",
+      "name": "Merit floor 100",
+      "funded": 81.158,
+      "ew": 47.526,
+      "bu": 33.632,
+      "total": 556.6624630385122
+    },
+    {
+      "id": "validation-22",
+      "name": "Benefit weight sensitivity",
+      "funded": 99.964,
+      "ew": 49.826,
+      "bu": 50.138,
+      "total": 575.4684630385123
+    },
+    {
+      "id": "validation-23",
+      "name": "Priority weight sensitivity",
+      "funded": 99.992,
+      "ew": 49.694,
+      "bu": 50.298,
+      "total": 575.4964630385123
+    },
+    {
+      "id": "validation-24",
+      "name": "Consequence weight sensitivity",
+      "funded": 99.983,
+      "ew": 53.841,
+      "bu": 46.142,
+      "total": 575.4874630385123
+    },
+    {
+      "id": "validation-25",
+      "name": "Decision band weight sensitivity",
+      "funded": 99.963,
+      "ew": 49.866,
+      "bu": 50.097,
+      "total": 575.4674630385123
+    },
+    {
+      "id": "validation-26",
+      "name": "Payback weight sensitivity",
+      "funded": 86.298,
+      "ew": 47.696,
+      "bu": 38.602,
+      "total": 561.8024630385124
+    },
+    {
+      "id": "validation-27",
+      "name": "IT Simplification bucket basis",
+      "funded": 99.93,
+      "ew": 60.778,
+      "bu": 39.152,
+      "total": 575.4344630385124
+    },
+    {
+      "id": "validation-28",
+      "name": "Zero discretionary levers",
+      "funded": 16.773,
+      "ew": 0.063,
+      "bu": 16.71,
+      "total": 492.27746303851217
+    },
+    {
+      "id": "validation-29",
+      "name": "Equal score weights",
+      "funded": 99.976,
+      "ew": 48.174,
+      "bu": 51.802,
+      "total": 575.4804630385124
+    },
+    {
+      "id": "validation-30",
+      "name": "Value zero, sustain full",
+      "funded": 94.916,
+      "ew": 56.185,
+      "bu": 38.731,
+      "total": 570.4204630385123
+    },
+    {
+      "id": "validation-31",
+      "name": "Zero request and merit boundary edits",
+      "funded": 99.974,
+      "ew": 49.656,
+      "bu": 50.318,
+      "total": 575.4784630385122
+    },
+    {
+      "id": "validation-32",
+      "name": "Combined configuration stress",
+      "funded": 96.671,
+      "ew": 52.319,
+      "bu": 44.352,
+      "total": 572.1754630385122
+    },
+    {
+      "id": "validation-roi-0",
+      "name": "Carryover ROI 0x",
+      "funded": 99.995,
+      "ew": 40.731,
+      "bu": 59.264,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-0_5",
+      "name": "Carryover ROI 0.5x",
+      "funded": 99.998,
+      "ew": 40.731,
+      "bu": 59.267,
+      "total": 575.5024630385122
+    },
+    {
+      "id": "validation-roi-1",
+      "name": "Carryover ROI 1x",
+      "funded": 99.998,
+      "ew": 40.731,
+      "bu": 59.267,
+      "total": 575.5024630385122
+    },
+    {
+      "id": "validation-roi-1_5",
+      "name": "Carryover ROI 1.5x",
+      "funded": 99.988,
+      "ew": 40.381,
+      "bu": 59.607,
+      "total": 575.4924630385124
+    },
+    {
+      "id": "validation-roi-2",
+      "name": "Carryover ROI 2x",
+      "funded": 99.983,
+      "ew": 42.611,
+      "bu": 57.372,
+      "total": 575.4874630385121
+    },
+    {
+      "id": "validation-roi-2_5",
+      "name": "Carryover ROI 2.5x",
+      "funded": 99.973,
+      "ew": 45.131,
+      "bu": 54.842,
+      "total": 575.4774630385123
+    },
+    {
+      "id": "validation-roi-3",
+      "name": "Carryover ROI 3x",
+      "funded": 99.993,
+      "ew": 45.081,
+      "bu": 54.912,
+      "total": 575.4974630385123
+    },
+    {
+      "id": "validation-roi-3_5",
+      "name": "Carryover ROI 3.5x",
+      "funded": 99.983,
+      "ew": 46.086,
+      "bu": 53.897,
+      "total": 575.4874630385123
+    },
+    {
+      "id": "validation-roi-4",
+      "name": "Carryover ROI 4x",
+      "funded": 99.995,
+      "ew": 47.486,
+      "bu": 52.509,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-4_5",
+      "name": "Carryover ROI 4.5x",
+      "funded": 100,
+      "ew": 48.711,
+      "bu": 51.289,
+      "total": 575.5044630385122
+    },
+    {
+      "id": "validation-roi-5",
+      "name": "Carryover ROI 5x",
+      "funded": 99.995,
+      "ew": 48.206,
+      "bu": 51.789,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-5_5",
+      "name": "Carryover ROI 5.5x",
+      "funded": 99.995,
+      "ew": 48.276,
+      "bu": 51.719,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-6",
+      "name": "Carryover ROI 6x",
+      "funded": 99.995,
+      "ew": 48.276,
+      "bu": 51.719,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-6_5",
+      "name": "Carryover ROI 6.5x",
+      "funded": 99.995,
+      "ew": 48.176,
+      "bu": 51.819,
+      "total": 575.4994630385122
+    },
+    {
+      "id": "validation-roi-7",
+      "name": "Carryover ROI 7x",
+      "funded": 99.995,
+      "ew": 48.426,
+      "bu": 51.569,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-7_5",
+      "name": "Carryover ROI 7.5x",
+      "funded": 99.995,
+      "ew": 48.426,
+      "bu": 51.569,
+      "total": 575.4994630385123
+    },
+    {
+      "id": "validation-roi-8",
+      "name": "Carryover ROI 8x",
+      "funded": 99.995,
+      "ew": 48.726,
+      "bu": 51.269,
+      "total": 575.4994630385121
+    },
+    {
+      "id": "validation-roi-8_5",
+      "name": "Carryover ROI 8.5x",
+      "funded": 99.981,
+      "ew": 48.126,
+      "bu": 51.855,
+      "total": 575.4854630385123
+    },
+    {
+      "id": "validation-roi-9",
+      "name": "Carryover ROI 9x",
+      "funded": 99.981,
+      "ew": 48.126,
+      "bu": 51.855,
+      "total": 575.4854630385123
+    },
+    {
+      "id": "validation-roi-9_5",
+      "name": "Carryover ROI 9.5x",
+      "funded": 99.981,
+      "ew": 48.126,
+      "bu": 51.855,
+      "total": 575.4854630385123
+    },
+    {
+      "id": "validation-roi-10",
+      "name": "Carryover ROI 10x",
+      "funded": 99.963,
+      "ew": 49.716,
+      "bu": 50.247,
+      "total": 575.4674630385123
+    }
+  ]
+}

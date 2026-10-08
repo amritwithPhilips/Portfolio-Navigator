@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "reviewed": "2026-09-30T11:17:21.694945",
+  "documents": {
+    "PRD": 2,
+    "Detailed requirements": 2
+  },
+  "views": [
+    "Company",
+    "Portfolio",
+    "Decisions",
+    "Funding opportunities",
+    "Review preview",
+    "Additional funding preview",
+    "Validation report"
+  ],
+  "result": "No clipping or overlap. Preview focus starts at the financial summary. Source fields scroll within their table. Documents rendered with installed Microsoft Word and inspected as PNGs."
+}

@@ -1,0 +1,47 @@
+[
+  [
+    "EXCO59-01",
+    "Leader decisions",
+    "Expose inclusion, exclusion, automatic funding, partial scope, request and merit review for all base Programs priorities. Keep PMI separate. Preview changes with rationale; persist through the shared scenario transaction."
+  ],
+  [
+    "EXCO59-02",
+    "Company controls",
+    "Expose budget, tolerance, merit floor, five score weights, four editable lever bases/amounts and optional IT Simplification. Label these settings company-wide and preview before apply."
+  ],
+  [
+    "EXCO59-03",
+    "Decision chart",
+    "Toggle requested Demand and quantified Hard Benefits against merit. Use log(1 + amount), request-scaled bubbles and funding status. Support mouse and keyboard source detail access."
+  ],
+  [
+    "EXCO59-04",
+    "Additional funding",
+    "Accept a positive additional company envelope, one leader, optional stream and rationale. Select eligible whole remaining scopes in priority-stage then merit order. Respect confirmed carry caps and explicit manual exclusions. Preview additions, budget, headroom and recipient costs."
+  ],
+  [
+    "EXCO59-05",
+    "Retained allocations",
+    "Keep existing funding unchanged when applying additional funding. Record retained automatic decisions as explicit overrides. Allow previewed return of these retained decisions to automatic; undo restores the whole additional-funding transaction."
+  ],
+  [
+    "EXCO59-06",
+    "Benefit evidence",
+    "Separate newly funded productivity, revenue and soft lifetime claims. Label productivity as a savings proxy. Do not infer annual savings, realised returns or incremental benefits for already funded partial scopes."
+  ],
+  [
+    "EXCO59-07",
+    "Custom columns",
+    "Offer normalized scenario fields and original EW/BU source columns. Keep Programs ID/name/source access mandatory. Save column choices per leader in the scenario; retain them through save/reload, portable export and fork."
+  ],
+  [
+    "EXCO59-08",
+    "Synchronized selection",
+    "Synchronize ExCo leader selections with the Programs filters in tabs 2–4 and One Portfolio. Support multiple leaders selected in the workbench. All six views and exports use the same funding and finance result; Operations recipient costs remain company-wide."
+  ],
+  [
+    "EXCO59-09",
+    "State and validation",
+    "Guard decision previews against a changed scenario ID, revision or source hash. Lock edits on finalised scenarios. Preserve earlier HTML builds and both source workbooks; validate source-linked Programs and recipient ledgers."
+  ]
+]

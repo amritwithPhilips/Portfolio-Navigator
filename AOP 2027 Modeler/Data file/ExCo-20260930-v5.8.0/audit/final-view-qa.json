@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "name": "Live comparison identifies changed Programs",
+      "passed": true
+    },
+    {
+      "name": "ExCo-QA-report-v5.8.0.html layout",
+      "passed": true
+    },
+    {
+      "name": "ExCo-architecture-v5.8.0.html layout",
+      "passed": true
+    },
+    {
+      "name": "No final view errors",
+      "passed": true
+    }
+  ]
+}

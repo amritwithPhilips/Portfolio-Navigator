@@ -1,0 +1,4 @@
+{"phase": "Review", "result": "Checked v5.6 ROI behavior, v5.9 controls, exports and shared chart renderer."}
+{"phase": "Rebuild", "result": "Implemented the five requested corrections in v5.10.0; previous builds preserved."}
+{"phase": "Validate", "result": "2237 assertions passed across 53 scenarios, UI workflows and downloaded Excel workbooks."}
+{"phase": "Source replay", "result": "Original-workbook Program selection and receiving organisation totals independently reconciled."}

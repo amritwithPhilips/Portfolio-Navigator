@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=2000">
+<title>AOP'27 — Preset Scenario Supporting Prioritisation</title>
+<style>
+:root {
+  --ph-title:  #2E74B5;
+  --ph-dark:   #1F3864;
+  --lev-bg:    #D9E2F3;
+  --bd:        #BDD7EE;
+  --muted:     #595959;
+  --white:     #FFFFFF;
+  --row-z:     #EEF4F9;
+
+  --l1: #1F497D; --l1bg: #DAE3F3;
+  --l2: #375623; --l2bg: #E2EFDA;
+  --l3: #843C0C; --l3bg: #FCE4D6;
+  --l4: #403151; --l4bg: #E2D9F3;
+  --l5: #155F75; --l5bg: #DDEBF7;
+
+  --bu-bg:  #1B5E20;
+  --reg-bg: #4A148C;
+  --fn-bg:  #0D47A1;
+
+  --hard-fg: #1B5E20; --hard-bg: #C8E6C9;
+  --soft-fg: #1565C0; --soft-bg: #BBDEFB;
+
+  --aop26-bg: #FFF9C4; --aop26-bdr: #F9A825;
+  --must-bg:  #FFF9C4; --must-bdr:  #F9A825;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Calibri, 'Open Sans', Arial, sans-serif;
+  background: #FFFFFF;
+  color: #1A1A1A;
+  width: 2000px;
+  padding: 32px 40px 28px;
+}
+
+/* ── Title ── */
+.title { font-size: 22px; font-weight: 700; color: var(--ph-title); line-height: 1.3; }
+.title .sep { font-weight: 400; color: #7B9FBE; margin: 0 6px; }
+.subtitle { font-style: italic; font-size: 13.5px; color: var(--ph-title); margin: 4px 0 20px; }
+
+/* ── Table ── */
+table { width: 100%; border-collapse: collapse; font-size: 10.5px; table-layout: fixed; }
+th, td { border: 1px solid var(--bd); padding: 6px 7px; vertical-align: middle; text-align: center; line-height: 1.4; }
+
+/* column widths */
+col.w-lbl  { width: 120px; }
+col.w-def  { width: 185px; }
+col.w-l1   { width: 152px; }
+col.w-l2   { width: 140px; }
+col.w-l3   { width: 165px; }
+col.w-l4   { width: 175px; }
+col.w-l5   { width: 148px; }
+col.w-bh   { width: 78px; }
+col.w-bs   { width: 78px; }
+col.w-rh   { width: 78px; }
+col.w-rs   { width: 78px; }
+col.w-fh   { width: 78px; }
+col.w-fs   { width: 78px; }
+
+/* header utilities */
+.hdr { font-weight: 700; }
+.hdr-levers { background: var(--lev-bg); color: var(--ph-dark); font-size: 11px; padding: 7px 8px; }
+.hdr-dark   { background: var(--ph-dark); color: var(--white); }
+.hdr-l1 { background: var(--l1bg); color: var(--l1); }
+.hdr-l2 { background: var(--l2bg); color: var(--l2); }
+.hdr-l3 { background: var(--l3bg); color: var(--l3); }
+.hdr-l4 { background: var(--l4bg); color: var(--l4); }
+.hdr-l5 { background: var(--l5bg); color: var(--l5); }
+.hdr-bu  { background: var(--bu-bg);  color: var(--white); font-size: 10px; }
+.hdr-reg { background: var(--reg-bg); color: var(--white); font-size: 10px; }
+.hdr-fn  { background: var(--fn-bg);  color: var(--white); font-size: 10px; }
+.hdr-hard { background: var(--hard-bg); color: var(--hard-fg); font-size: 9.5px; }
+.hdr-soft { background: var(--soft-bg); color: var(--soft-fg); font-size: 9.5px; }
+
+.badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 17px; height: 17px; border-radius: 50%;
+  background: #1A1A1A; color: #fff;
+  font-weight: 700; font-size: 9px;
+  margin-right: 4px; vertical-align: middle; flex-shrink: 0;
+}
+.lh { display: flex; align-items: flex-start; gap: 3px; text-align: left; justify-content: center; }
+
+/* left label column */
+.lbl { text-align: left; font-weight: 700; background: var(--white); padding-left: 9px; border-right: 2px solid var(--bd); }
+
+/* definition column */
+.def { text-align: left; font-size: 9.5px; color: var(--muted); line-height: 1.5; background: #FAFCFF; padding: 7px 8px; }
+
+/* full demand row */
+.row-dem .lbl { font-size: 11px; }
+.row-dem .amt { font-weight: 700; font-size: 14px; padding: 9px 7px; }
+.amt-l1 { background: var(--l1bg); color: var(--l1); }
+.amt-l2 { background: var(--l2bg); color: var(--l2); }
+.amt-l3 { background: var(--l3bg); color: var(--l3); }
+.amt-l4 { background: var(--l4bg); color: var(--l4); }
+.amt-l5 { background: var(--l5bg); color: var(--l5); font-size: 12px; }
+
+/* logic row */
+.row-logic td { background: #F5F8FC; font-size: 9px; text-align: left; padding: 8px 8px; line-height: 1.55; color: #444; }
+.row-logic .lbl { background: #EDF2F8; font-size: 10px; color: var(--muted); font-weight: 600; }
+.row-logic .def { background: #EBF3FB; }
+.lt { font-weight: 700; color: #222; display: block; font-size: 9.5px; margin-bottom: 3px; }
+.le { color: #555; font-size: 8.5px; display: block; margin-top: 3px; }
+
+/* separator */
+.row-sep td { background: var(--ph-dark); color: var(--white); font-weight: 700; font-size: 9.5px; text-align: left; padding: 5px 10px; letter-spacing: .4px; }
+
+/* AOP2026 row */
+.row-aop26 td { background: var(--aop26-bg); border-top: 2px solid var(--aop26-bdr); border-bottom: 2px solid var(--aop26-bdr); }
+.row-aop26 .lbl { border-left: 3px solid var(--aop26-bdr); background: #FFF0A0; color: #6B4000; }
+.row-aop26 .def { background: #FFFDE0; color: #7B5800; }
+
+/* scenario rows */
+.row-scn td { padding: 8px 7px; }
+.odd  td { background: var(--white); }
+.even td { background: var(--row-z); }
+.odd  .lbl { background: var(--white); }
+.even .lbl { background: #E8F0F8; }
+.odd  .def { background: #FAFCFF; }
+.even .def { background: #EBF5FF; }
+
+/* must do */
+.row-must td { background: var(--must-bg) !important; }
+.row-must .lbl { background: #FFF0A0 !important; color: #7B4F00; border-left: 3px solid var(--must-bdr); }
+.row-must .def { background: #FFFDE0 !important; color: #7B5800; }
+.row-must .sn  { color: #7B4F00; }
+
+/* scenario name / sublabel */
+.sn { font-weight: 700; font-size: 11px; color: var(--ph-dark); display: block; }
+.ss { font-size: 8.5px; font-weight: 400; color: var(--muted); display: block; margin-top: 3px; }
+
+/* config cells */
+.cfg-main { font-weight: 700; font-size: 9.5px; display: block; }
+.cfg-alloc { font-size: 12px; font-weight: 700; display: block; margin: 3px 0 2px; }
+.cfg-sub  { font-size: 8px; font-style: italic; color: var(--muted); display: block; line-height: 1.4; }
+
+/* colour helpers */
+.cl1 { color: var(--l1); } .cl2 { color: var(--l2); } .cl3 { color: var(--l3); }
+.cl4 { color: var(--l4); } .cl5 { color: var(--l5); } .cm { color: var(--muted); }
+
+/* benefit cells */
+.bh { color: var(--hard-fg); font-weight: 700; font-size: 11.5px; }
+.bs { color: var(--soft-fg); font-weight: 700; font-size: 11.5px; }
+.dash { color: #BBBBBB; font-size: 10px; }
+
+/* legend */
+.legend { margin-top: 16px; display: flex; gap: 22px; align-items: center; font-size: 10px; color: var(--muted); flex-wrap: wrap; }
+.legend b { color: #1A1A1A; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; margin-right: 3px; }
+.dh { background: var(--hard-fg); } .ds { background: var(--soft-fg); }
+
+.footnote { margin-top: 9px; font-size: 8.5px; color: #999; line-height: 1.6; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="title">
+  Strategic AOP'27 Conference for IT <span class="sep">|</span> Preset scenario supporting Prioritisation
+</div>
+<div class="subtitle">Prioritising demand (278M) to shape the BU | R | F priorities within a 100M baseline</div>
+
+<table>
+  <colgroup>
+    <col class="w-lbl"><col class="w-def">
+    <col class="w-l1"><col class="w-l2"><col class="w-l3"><col class="w-l4"><col class="w-l5">
+    <col class="w-bh"><col class="w-bs">
+    <col class="w-rh"><col class="w-rs">
+    <col class="w-fh"><col class="w-fs">
+  </colgroup>
+  <thead>
+    <!-- Row 1: top grouping -->
+    <tr>
+      <th rowspan="3" style="background:var(--white);border:1px solid var(--bd)"></th>
+      <th rowspan="3" class="hdr hdr-dark" style="font-size:9.5px">Scenario Definition<br><span style="font-weight:400;font-size:8px;opacity:.7">(business view)</span></th>
+      <th colspan="5" class="hdr hdr-levers">Scenario Funding Levers</th>
+      <th colspan="2" class="hdr hdr-bu" style="padding:5px 4px">BU</th>
+      <th colspan="2" class="hdr hdr-reg" style="padding:5px 4px">Regions</th>
+      <th colspan="2" class="hdr hdr-fn" style="padding:5px 4px">Functions</th>
+    </tr>
+    <!-- Row 2: lever headers + hard/soft sub-headers -->
+    <tr>
+      <th rowspan="2" class="hdr hdr-l1" style="padding:8px 6px">
+        <div class="lh"><span class="badge">1</span><span>Legal, Fiscal,<br>Regulatory</span></div>
+      </th>
+      <th rowspan="2" class="hdr hdr-l2" style="padding:8px 6px">
+        <div class="lh"><span class="badge">2</span><span>Carry-Over</span></div>
+      </th>
+      <th rowspan="2" class="hdr hdr-l3" style="padding:8px 6px">
+        <div class="lh"><span class="badge">3</span><span>Sustaining<br>Engineering</span></div>
+      </th>
+      <th rowspan="2" class="hdr hdr-l4" style="padding:8px 6px">
+        <div class="lh"><span class="badge">4</span><span>Value Based<br>Portfolio</span></div>
+      </th>
+      <th rowspan="2" class="hdr hdr-l5" style="padding:8px 6px">
+        <div class="lh"><span class="badge">5</span><span>IT<br>Simplification</span></div>
+      </th>
+      <th class="hdr hdr-hard">Hard</th>
+      <th class="hdr hdr-soft">Soft</th>
+      <th class="hdr hdr-hard">Hard</th>
+      <th class="hdr hdr-soft">Soft</th>
+      <th class="hdr hdr-hard">Hard</th>
+      <th class="hdr hdr-soft">Soft</th>
+    </tr>
+    <!-- Row 3: M€ label row -->
+    <tr>
+      <th class="hdr-hard" style="font-size:8px;color:var(--hard-fg);background:var(--hard-bg);font-style:italic">(M€)</th>
+      <th class="hdr-soft" style="font-size:8px;color:var(--soft-fg);background:var(--soft-bg);font-style:italic">(M€)</th>
+      <th class="hdr-hard" style="font-size:8px;color:var(--hard-fg);background:var(--hard-bg);font-style:italic">(M€)</th>
+      <th class="hdr-soft" style="font-size:8px;color:var(--soft-fg);background:var(--soft-bg);font-style:italic">(M€)</th>
+      <th class="hdr-hard" style="font-size:8px;color:var(--hard-fg);background:var(--hard-bg);font-style:italic">(M€)</th>
+      <th class="hdr-soft" style="font-size:8px;color:var(--soft-fg);background:var(--soft-bg);font-style:italic">(M€)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- ═══ FULL DEMAND ═══ -->
+    <tr class="row-dem">
+      <td class="lbl">Full demand<br>(All BU|R|F)</td>
+      <td class="def" style="font-size:9px;color:#999">Total submitted demand across all levers and organisations before any prioritisation.</td>
+      <td class="amt amt-l1">53M</td>
+      <td class="amt amt-l2">107M</td>
+      <td class="amt amt-l3">34M</td>
+      <td class="amt amt-l4">85M</td>
+      <td class="amt amt-l5" style="font-size:11px">~18M<span style="display:block;font-size:7.5px;font-weight:400;color:var(--l5)">decommission &amp;<br>replatform scope</span></td>
+      <td colspan="6" style="font-size:9px;color:var(--muted);background:#F7FAFC">Total demand: <strong style="color:var(--ph-dark);font-size:12px">278M</strong></td>
+    </tr>
+
+    <!-- ═══ ASSESSMENT LOGIC ═══ -->
+    <tr class="row-logic">
+      <td class="lbl">Assessment<br>logic</td>
+      <td class="def">
+        <span class="lt">How each lever works</span>
+        Entry criteria and funding mechanism differ per lever. Programmes must qualify before budget is allocated.
+      </td>
+      <td>
+        <span class="lt">✔ Verified LFR</span>
+        Named Law, Regulation or Fiscal ruling for 2027.
+        <span class="le"><strong>Verified</strong> = Legal / Tax / Compliance has confirmed the obligation is real, applies to Philips, and scope is minimum-viable. Unverified or gold-plated claims are excluded.</span>
+      </td>
+      <td>
+        <span class="lt">✔ Confirmed carry-over</span>
+        Signed Business Case that started spend in 2026, within &lt;10% baseline margin.
+        <span class="le"><strong>ROI-ranked</strong> = ordered by benefit-to-cost ratio within envelope. <strong>100% bucket</strong> = all carry-overs fully protected regardless of ROI.</span>
+      </td>
+      <td>
+        <span class="lt">✔ BU-prioritised CCBs</span>
+        Mandatory upgrades, patches, small continuity items (CCBs).
+        <span class="le"><strong>52% bucket</strong> = funded to 52% of total sustaining demand; BU IT leaders choose which CCBs enter. <strong>40% bucket</strong> = tighter ceiling, more budget freed for value. <strong>100% bucket</strong> = full demand funded.</span>
+      </td>
+      <td>
+        <span class="lt">✔ Merit-ranked · Auto ceiling</span>
+        Programmes ranked by composite merit score (benefit strength, ROI, strategic alignment, evidence quality).
+        <span class="le"><strong>Auto ceiling</strong> = the engine funds programmes in merit order until the 100M total budget is consumed. No manual cap — the budget itself is the ceiling. Highest-benefit programmes are guaranteed entry before lower-ranked ones.</span>
+      </td>
+      <td>
+        <span class="lt">✔ Value-Based · Decommission scope</span>
+        Programmes from the Value Based Portfolio that meet the Decommission and Replatforming scope criteria, prioritised by merit within this lever.
+        <span class="le">Activated only in selected scenarios. Savings generated by retiring legacy platforms are factored into the programme's net benefit score.</span>
+      </td>
+      <td style="font-size:8.5px;color:var(--hard-fg);background:var(--hard-bg)" colspan="2">
+        <strong>Hard Benefit</strong><br>Revenue Increase<br>Productivity Savings
+      </td>
+      <td style="font-size:8.5px;color:var(--soft-fg);background:var(--soft-bg)" colspan="2">
+        <strong>Soft Benefit</strong><br>Compliance · Security<br>Cost Avoidance · Efficiency
+      </td>
+      <td style="font-size:8.5px;color:#555;background:#F0F4F8" colspan="2">
+        Values show quantified benefit claimed by funded programmes in each scenario
+      </td>
+    </tr>
+
+    <!-- ═══ SECTION SEPARATOR ═══ -->
+    <tr class="row-sep">
+      <td colspan="13">SCENARIO CONFIGURATIONS — lever cells show: configuration rule · M€ allocated within 100M baseline (Must Do shown at 228M actual)</td>
+    </tr>
+
+    <!-- ═══ AOP2026 APPROVED ═══ -->
+    <tr class="row-aop26">
+      <td class="lbl">
+        <span class="sn" style="color:#6B4000">AOP2026<br>Approved</span>
+        <span class="ss">Reference baseline</span>
+      </td>
+      <td class="def">
+        <strong style="color:#6B4000">Previous year's approved IT programme budget.</strong> Used as reference baseline to measure AOP2027 scope change and budget efficiency.
+      </td>
+      <td style="background:var(--aop26-bg)"><span style="font-weight:700;font-size:12px;color:#6B4000">~28M</span><span style="display:block;font-size:8px;color:#999">estimated LFR</span></td>
+      <td style="background:var(--aop26-bg)"><span style="font-weight:700;font-size:12px;color:#6B4000">~55M</span><span style="display:block;font-size:8px;color:#999">carry-over</span></td>
+      <td style="background:var(--aop26-bg)"><span style="font-weight:700;font-size:12px;color:#6B4000">~38M</span><span style="display:block;font-size:8px;color:#999">sustaining</span></td>
+      <td style="background:var(--aop26-bg)"><span style="font-weight:700;font-size:12px;color:#6B4000">~40M</span><span style="display:block;font-size:8px;color:#999">value</span></td>
+      <td style="background:var(--aop26-bg);font-size:8.5px;color:#999">Not tracked separately in AOP2026</td>
+      <td colspan="6" style="background:var(--aop26-bg);text-align:center">
+        <span style="font-weight:700;font-size:14px;color:#6B4000">161M</span>
+        <span style="display:block;font-size:8px;color:#999;margin-top:2px">total approved programmes<br>benefit split not available in this extract</span>
+      </td>
+    </tr>
+
+    <!-- ═══ OPTIMAL SEGMENTATION ═══ -->
+    <tr class="row-scn odd">
+      <td class="lbl">
+        <span class="sn">Optimal<br>Segmentation</span>
+        <span class="ss">100M allocated</span>
+      </td>
+      <td class="def">
+        <strong style="color:var(--ph-dark)">Best portfolio efficiency within 100M.</strong> Funds all verified legal obligations, highest-ROI carry-overs, 52% of sustaining demand, and fills remaining budget with the highest-merit value programmes.
+      </td>
+      <td>
+        <span class="cfg-main cl1">Verified LFR</span>
+        <span class="cfg-alloc cl1">38.8 M€</span>
+        <span class="cfg-sub">All confirmed legal obligations only; no unverified claims</span>
+      </td>
+      <td>
+        <span class="cfg-main cl2">ROI-ranked</span>
+        <span class="cfg-alloc cl2">18.3 M€</span>
+        <span class="cfg-sub">Carry-overs selected by highest benefit-to-cost ratio</span>
+      </td>
+      <td>
+        <span class="cfg-main cl3">52% bucket</span>
+        <span class="cfg-alloc cl3">20.4 M€</span>
+        <span class="cfg-sub">Up to 52% of sustaining demand; BU IT leaders prioritise</span>
+      </td>
+      <td>
+        <span class="cfg-main cl4">Auto ceiling</span>
+        <span class="cfg-alloc cl4">22.5 M€</span>
+        <span class="cfg-sub">Merit-ranked; funds until 100M budget is consumed</span>
+      </td>
+      <td>
+        <span class="cfg-main cm">Value-Based · Decomm scope</span>
+        <span class="cfg-alloc" style="color:#BBB">— M€</span>
+        <span class="cfg-sub">Decommission-eligible programmes compete within Lever 4; no separate allocation in this scenario</span>
+      </td>
+      <td class="bh">4,146</td>
+      <td class="bs">2,117</td>
+      <td class="bh">0.2</td>
+      <td class="bs">344</td>
+      <td class="bh">7</td>
+      <td class="bs">1,766</td>
+    </tr>
+
+    <!-- ═══ PROTECT COMMITMENTS ═══ -->
+    <tr class="row-scn even">
+      <td class="lbl">
+        <span class="sn">Protect<br>Commitments</span>
+        <span class="ss">100M allocated</span>
+      </td>
+      <td class="def">
+        <strong style="color:var(--ph-dark)">Continuity and obligation protection first.</strong> All carry-overs and all sustaining engineering fully funded before any value investment. Risk-averse, low-disruption view for ExCo.
+      </td>
+      <td>
+        <span class="cfg-main cl1">100% bucket</span>
+        <span class="cfg-alloc cl1">50.9 M€</span>
+        <span class="cfg-sub">Full verified LFR demand funded</span>
+      </td>
+      <td>
+        <span class="cfg-main cl2">100% bucket</span>
+        <span class="cfg-alloc cl2">49.1 M€</span>
+        <span class="cfg-sub">All carry-overs fully protected</span>
+      </td>
+      <td>
+        <span class="cfg-main cl3">100% bucket</span>
+        <span class="cfg-alloc" style="color:#BBB">0 M€</span>
+        <span class="cfg-sub">Budget exhausted by Levers 1 &amp; 2; sustaining unfunded</span>
+      </td>
+      <td>
+        <span class="cfg-main cm">Auto ceiling</span>
+        <span class="cfg-alloc" style="color:#BBB">0 M€</span>
+        <span class="cfg-sub">No budget remaining for value investment</span>
+      </td>
+      <td>
+        <span class="cfg-main cm">Value-Based · Decomm scope</span>
+        <span class="cfg-alloc" style="color:#BBB">— M€</span>
+        <span class="cfg-sub">Decommission-eligible programmes compete within Lever 4; no budget available in this scenario</span>
+      </td>
+      <td class="bh">1,002</td>
+      <td class="bs">2,606</td>
+      <td class="bh">0.2</td>
+      <td class="bs">346</td>
+      <td class="bh">8</td>
+      <td class="bs">1,704</td>
+    </tr>
+
+    <!-- ═══ BALANCED PORTFOLIO ═══ -->
+    <tr class="row-scn odd">
+      <td class="lbl">
+        <span class="sn">Balanced<br>Portfolio</span>
+        <span class="ss">100M allocated</span>
+      </td>
+      <td class="def">
+        <strong style="color:var(--ph-dark)">Recommended conference starting point.</strong> Calibrated mix: verified legal, ROI-ranked carry-overs, 52% sustaining, IT Simplification programmes activated, topped with highest-merit value. Designed to maximise governance quality within 100M.
+      </td>
+      <td>
+        <span class="cfg-main cl1">Verified LFR</span>
+        <span class="cfg-alloc cl1">30.8 M€</span>
+        <span class="cfg-sub">Verified cap applied; unverified excluded</span>
+      </td>
+      <td>
+        <span class="cfg-main cl2">ROI-ranked</span>
+        <span class="cfg-alloc cl2">28.8 M€</span>
+        <span class="cfg-sub">Carry-overs ordered by benefit-to-cost ratio</span>
+      </td>
+      <td>
+        <span class="cfg-main cl3">52% bucket</span>
+        <span class="cfg-alloc cl3">15.0 M€</span>
+        <span class="cfg-sub">52% of sustaining demand; BU IT leaders prioritise</span>
+      </td>
+      <td>
+        <span class="cfg-main cl4">Auto ceiling</span>
+        <span class="cfg-alloc cl4">18.5 M€</span>
+        <span class="cfg-sub">Merit-ranked; fills remaining budget after Levers 1–3 &amp; 5</span>
+      </td>
+      <td>
+        <span class="cfg-main cl5">Value-Based · Decomm scope</span>
+        <span class="cfg-alloc cl5">6.9 M€</span>
+        <span class="cfg-sub">Merit-prioritised programmes in Decommission &amp; Replatforming scope; savings factored into net benefit</span>
+      </td>
+      <td class="bh">4,109</td>
+      <td class="bs">2,667</td>
+      <td class="bh">—</td>
+      <td class="bs">343</td>
+      <td class="bh">11</td>
+      <td class="bs">1,447</td>
+    </tr>
+
+    <!-- ═══ MAXIMUM BENEFIT ═══ -->
+    <tr class="row-scn even">
+      <td class="lbl">
+        <span class="sn">Maximum<br>Benefit</span>
+        <span class="ss">100M allocated</span>
+      </td>
+      <td class="def">
+        <strong style="color:var(--ph-dark)">Maximise hard returns — revenue and productivity.</strong> Tighter 40% sustaining bucket frees budget for the highest-return value programmes. Hard benefits drive the merit ranking; best for ROI-focused ExCo discussions.
+      </td>
+      <td>
+        <span class="cfg-main cl1">Verified LFR</span>
+        <span class="cfg-alloc cl1">38.8 M€</span>
+        <span class="cfg-sub">All verified obligations funded</span>
+      </td>
+      <td>
+        <span class="cfg-main cl2">ROI-ranked</span>
+        <span class="cfg-alloc cl2">18.3 M€</span>
+        <span class="cfg-sub">Carry-overs ranked by benefit-to-cost ratio</span>
+      </td>
+      <td>
+        <span class="cfg-main cl3">40% bucket</span>
+        <span class="cfg-alloc cl3">15.7 M€</span>
+        <span class="cfg-sub">Tighter ceiling — more budget freed for value investment</span>
+      </td>
+      <td>
+        <span class="cfg-main cl4">Auto ceiling</span>
+        <span class="cfg-alloc cl4">27.2 M€</span>
+        <span class="cfg-sub">Hard-benefit weight boosted; merit score reflects revenue &amp; productivity</span>
+      </td>
+      <td>
+        <span class="cfg-main cm">Value-Based · Decomm scope</span>
+        <span class="cfg-alloc" style="color:#BBB">— M€</span>
+        <span class="cfg-sub">Decommission-eligible programmes compete within Lever 4 merit ranking; no separate allocation</span>
+      </td>
+      <td class="bh">4,217</td>
+      <td class="bs">1,991</td>
+      <td class="bh">—</td>
+      <td class="bs">344</td>
+      <td class="bh">7</td>
+      <td class="bs">1,447</td>
+    </tr>
+
+    <!-- ═══ MUST DO SCENARIO ═══ -->
+    <tr class="row-scn row-must">
+      <td class="lbl">
+        <span class="sn">Must Do<br>Scenario</span>
+        <span class="ss" style="color:#7B4F00">228M allocated<br>↑ 128M above baseline</span>
+      </td>
+      <td class="def">
+        <strong>True cost of non-discretionary obligations.</strong> Same configuration as Balanced Portfolio, but all programmes validated as Must-Do are funded on top of the 100M baseline. Reveals the 128M gap between baseline and full non-discretionary spend.
+      </td>
+      <td>
+        <span class="cfg-main" style="color:#7B4F00">Balanced + Must Do on top</span>
+        <span class="cfg-alloc" style="color:#7B4F00">48.0 M€</span>
+        <span class="cfg-sub">LFR + all validated Must-Do obligations on top</span>
+      </td>
+      <td>
+        <span class="cfg-alloc" style="color:#7B4F00">90.7 M€</span>
+        <span class="cfg-sub">All Must-Do carry-overs protected above baseline</span>
+      </td>
+      <td>
+        <span class="cfg-alloc" style="color:#7B4F00">28.0 M€</span>
+        <span class="cfg-sub">Full sustaining Must-Do scope funded</span>
+      </td>
+      <td>
+        <span class="cfg-alloc" style="color:#7B4F00">45.7 M€</span>
+        <span class="cfg-sub">Value + Must-Do programmes above baseline</span>
+      </td>
+      <td>
+        <span class="cfg-main cl5">Value-Based · Decomm scope</span>
+        <span class="cfg-alloc cl5">15.6 M€</span>
+        <span class="cfg-sub">Must-Do programmes in Decommission &amp; Replatforming scope; merit-prioritised above baseline</span>
+      </td>
+      <td class="bh" style="color:#7B4F00">4,476</td>
+      <td class="bs" style="color:#7B4F00">2,730</td>
+      <td class="bh" style="color:#7B4F00">—</td>
+      <td class="bs" style="color:#7B4F00">345</td>
+      <td class="bh" style="color:#7B4F00">36</td>
+      <td class="bs" style="color:#7B4F00">1,849</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<div class="legend">
+  <strong>Benefit (M€):</strong>
+  <span><span class="dot dh"></span><b>Hard</b> — Revenue Increase, Productivity Savings</span>
+  <span><span class="dot ds"></span><b>Soft</b> — Compliance, Security, Cost Avoidance, Process Simplification, Enabling</span>
+  <span style="border-left:1px solid #CCC;padding-left:16px">
+    <span class="dot" style="background:#F9A825;border-radius:2px"></span>
+    <b>AOP2026</b> stage estimates are indicative — not derived from programme-level data
+  </span>
+  <span style="border-left:1px solid #CCC;padding-left:16px">
+    <b>—</b> = zero or negligible (&lt;0.1 M€)
+  </span>
+</div>
+
+<div class="footnote">
+  Benefit values computed from AOP2027 demand data per funded programme in each scenario. Must Do allocates 228M€ (128M€ above 100M baseline) to cover all validated non-discretionary programmes.
+  Hard Benefits = Revenue Increase, Productivity Savings. Soft Benefits = Compliance, Security, Cost Avoidance, Process Simplification/Efficiency, Enabling.
+  Source: AOP2027-IT-Portfolio-Scenario-Modelling v5.9.6 · Engine run: 6 October 2026.
+</div>
+
+</body>
+</html>

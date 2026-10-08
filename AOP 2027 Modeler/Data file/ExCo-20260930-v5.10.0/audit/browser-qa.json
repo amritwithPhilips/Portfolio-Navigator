@@ -1,0 +1,3022 @@
+{
+  "checks": [
+    {
+      "name": "Render 1440 demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1440 scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1440 ew",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1440 bu",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1440 operations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1440 overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1920 demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1920 scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1920 ew",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1920 bu",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1920 operations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Render 1920 overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Removed refresh banner",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Restored carry ROI controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-0_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-1_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-2_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-3_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-4_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-5_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-6_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-7_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-8_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-9_5 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 demand finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 scenario finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 ew finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 bu finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 operations finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 overview finance state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 recipient DOM total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 source row excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 final finance QA uses ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-roi-10 Excel created",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Portfolio Inclusion Table edit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew request and merit UI",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu request and merit UI",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Save/reload scenario inputs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew tradeoff isolation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu tradeoff isolation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Tradeoffs match scenario 09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "BU ExCo revert",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Finalize",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Finalized edits disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Fork",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Extract Programs",
+      "passed": true,
+      "detail": "34 filters"
+    },
+    {
+      "name": "Extract Operations services",
+      "passed": true,
+      "detail": "15 filters"
+    },
+    {
+      "name": "Extract Operations consumption",
+      "passed": true,
+      "detail": "8 filters"
+    },
+    {
+      "name": "Extract Operations TCO",
+      "passed": true,
+      "detail": "9 filters"
+    },
+    {
+      "name": "Extract Operations raw AOP2027 Bill of IT",
+      "passed": true,
+      "detail": "206 filters"
+    },
+    {
+      "name": "Extract Operations formulas AOP2027 Bill of IT",
+      "passed": true,
+      "detail": "2 filters"
+    },
+    {
+      "name": "Extract Operations raw Platform Mapping ",
+      "passed": true,
+      "detail": "3 filters"
+    },
+    {
+      "name": "Extract Operations raw Platform Service List",
+      "passed": true,
+      "detail": "7 filters"
+    },
+    {
+      "name": "Extract Operations raw Comparable AOP2027",
+      "passed": true,
+      "detail": "19 filters"
+    },
+    {
+      "name": "Extract Operations formulas Comparable AOP2027",
+      "passed": true,
+      "detail": "2 filters"
+    },
+    {
+      "name": "Extract Operations raw AOP Svc. Costs (21.09)",
+      "passed": true,
+      "detail": "8 filters"
+    },
+    {
+      "name": "Extract Excluded Programs",
+      "passed": true,
+      "detail": "8 filters"
+    },
+    {
+      "name": "Extract EW charging key",
+      "passed": true,
+      "detail": "7 filters"
+    },
+    {
+      "name": "Extract Finance ledger",
+      "passed": true,
+      "detail": "23 filters"
+    },
+    {
+      "name": "Extract Recipient IT allocation",
+      "passed": true,
+      "detail": "11 filters"
+    },
+    {
+      "name": "Extract Scenario results",
+      "passed": true,
+      "detail": "9 filters"
+    },
+    {
+      "name": "Extract Programs raw BU",
+      "passed": true,
+      "detail": "201 filters"
+    },
+    {
+      "name": "Extract Programs formulas BU",
+      "passed": true,
+      "detail": "2 filters"
+    },
+    {
+      "name": "Extract Programs raw EW",
+      "passed": true,
+      "detail": "67 filters"
+    },
+    {
+      "name": "Extract Programs formulas EW",
+      "passed": true,
+      "detail": "2 filters"
+    },
+    {
+      "name": "Extract Source manifest",
+      "passed": true,
+      "detail": "3 filters"
+    },
+    {
+      "name": "Extract Allocation exceptions",
+      "passed": true,
+      "detail": "3 filters"
+    },
+    {
+      "name": "Extract numeric filter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Extract combined filter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Extract CSV",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "filterReport": [
+    {
+      "name": "Programs",
+      "columns": 34,
+      "ok": true
+    },
+    {
+      "name": "Operations services",
+      "columns": 15,
+      "ok": true
+    },
+    {
+      "name": "Operations consumption",
+      "columns": 8,
+      "ok": true
+    },
+    {
+      "name": "Operations TCO",
+      "columns": 9,
+      "ok": true
+    },
+    {
+      "name": "Operations raw AOP2027 Bill of IT",
+      "columns": 206,
+      "ok": true
+    },
+    {
+      "name": "Operations formulas AOP2027 Bill of IT",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Operations raw Platform Mapping ",
+      "columns": 3,
+      "ok": true
+    },
+    {
+      "name": "Operations raw Platform Service List",
+      "columns": 7,
+      "ok": true
+    },
+    {
+      "name": "Operations raw Comparable AOP2027",
+      "columns": 19,
+      "ok": true
+    },
+    {
+      "name": "Operations formulas Comparable AOP2027",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Operations raw AOP Svc. Costs (21.09)",
+      "columns": 8,
+      "ok": true
+    },
+    {
+      "name": "Excluded Programs",
+      "columns": 8,
+      "ok": true
+    },
+    {
+      "name": "EW charging key",
+      "columns": 7,
+      "ok": true
+    },
+    {
+      "name": "Finance ledger",
+      "columns": 23,
+      "ok": true
+    },
+    {
+      "name": "Recipient IT allocation",
+      "columns": 11,
+      "ok": true
+    },
+    {
+      "name": "Scenario results",
+      "columns": 9,
+      "ok": true
+    },
+    {
+      "name": "Programs raw BU",
+      "columns": 201,
+      "ok": true
+    },
+    {
+      "name": "Programs formulas BU",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Programs raw EW",
+      "columns": 67,
+      "ok": true
+    },
+    {
+      "name": "Programs formulas EW",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Source manifest",
+      "columns": 3,
+      "ok": true
+    },
+    {
+      "name": "Allocation exceptions",
+      "columns": 3,
+      "ok": true
+    }
+  ]
+}

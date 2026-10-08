@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "name": "Carry card full demand denominator at 0x",
+      "passed": true
+    },
+    {
+      "name": "Carry card full demand denominator at 10x",
+      "passed": true
+    },
+    {
+      "name": "Final workbook ROI rule metadata",
+      "passed": true
+    },
+    {
+      "name": "Final UI console clean",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

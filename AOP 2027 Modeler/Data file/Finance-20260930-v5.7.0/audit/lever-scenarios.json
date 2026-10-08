@@ -1,0 +1,6309 @@
+{
+  "checks": [
+    {
+      "name": "L01 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 ISC chargeout==funded",
+      "passed": true,
+      "detail": "0.12 vs 0.12"
+    },
+    {
+      "name": "L01 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "17.163 vs 17.163"
+    },
+    {
+      "name": "L01 PH chargeout==funded",
+      "passed": true,
+      "detail": "17.04 vs 17.04"
+    },
+    {
+      "name": "L01 Svc chargeout==funded",
+      "passed": true,
+      "detail": "17.417 vs 17.417"
+    },
+    {
+      "name": "L01 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L01 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 ISC chargeout==funded",
+      "passed": true,
+      "detail": "0.12 vs 0.12"
+    },
+    {
+      "name": "L02 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "16.498 vs 16.498"
+    },
+    {
+      "name": "L02 PH chargeout==funded",
+      "passed": true,
+      "detail": "15.746 vs 15.746"
+    },
+    {
+      "name": "L02 Svc chargeout==funded",
+      "passed": true,
+      "detail": "24.267 vs 24.267"
+    },
+    {
+      "name": "L02 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L02 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.32 vs 2.32"
+    },
+    {
+      "name": "L03 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "8.761 vs 8.761"
+    },
+    {
+      "name": "L03 PH chargeout==funded",
+      "passed": true,
+      "detail": "15.915 vs 15.915"
+    },
+    {
+      "name": "L03 Svc chargeout==funded",
+      "passed": true,
+      "detail": "26.997 vs 26.997"
+    },
+    {
+      "name": "L03 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L03 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.28 vs 2.28"
+    },
+    {
+      "name": "L04 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "12.148 vs 12.148"
+    },
+    {
+      "name": "L04 PH chargeout==funded",
+      "passed": true,
+      "detail": "16.115 vs 16.115"
+    },
+    {
+      "name": "L04 Svc chargeout==funded",
+      "passed": true,
+      "detail": "21.874 vs 21.874"
+    },
+    {
+      "name": "L04 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L04 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L05 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L05 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L05 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L05 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L05 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L06 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L06 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L06 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L06 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L06 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L07 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.821 vs 9.821"
+    },
+    {
+      "name": "L07 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.145 vs 13.145"
+    },
+    {
+      "name": "L07 Svc chargeout==funded",
+      "passed": true,
+      "detail": "29.209 vs 29.209"
+    },
+    {
+      "name": "L07 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L07 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L08 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "10.015 vs 10.015"
+    },
+    {
+      "name": "L08 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.145 vs 13.145"
+    },
+    {
+      "name": "L08 Svc chargeout==funded",
+      "passed": true,
+      "detail": "30.459 vs 30.459"
+    },
+    {
+      "name": "L08 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L08 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.2 vs 2.2"
+    },
+    {
+      "name": "L09 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "5.365 vs 5.365"
+    },
+    {
+      "name": "L09 PH chargeout==funded",
+      "passed": true,
+      "detail": "12.25 vs 12.25"
+    },
+    {
+      "name": "L09 Svc chargeout==funded",
+      "passed": true,
+      "detail": "39.639 vs 39.639"
+    },
+    {
+      "name": "L09 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L09 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L10 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "5.915 vs 5.915"
+    },
+    {
+      "name": "L10 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.145 vs 13.145"
+    },
+    {
+      "name": "L10 Svc chargeout==funded",
+      "passed": true,
+      "detail": "35.659 vs 35.659"
+    },
+    {
+      "name": "L10 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L10 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.32 vs 2.32"
+    },
+    {
+      "name": "L11 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L11 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L11 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L11 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L11 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L12 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "8.418 vs 8.418"
+    },
+    {
+      "name": "L12 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L12 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L12 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L12 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L13 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L13 PH chargeout==funded",
+      "passed": true,
+      "detail": "12.25 vs 12.25"
+    },
+    {
+      "name": "L13 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L13 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L13 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L14 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L14 PH chargeout==funded",
+      "passed": true,
+      "detail": "17.115 vs 17.115"
+    },
+    {
+      "name": "L14 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L14 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L14 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L15 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L15 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L15 Svc chargeout==funded",
+      "passed": true,
+      "detail": "34.677 vs 34.677"
+    },
+    {
+      "name": "L15 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L15 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.2 vs 2.2"
+    },
+    {
+      "name": "L16 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "5.02 vs 5.02"
+    },
+    {
+      "name": "L16 PH chargeout==funded",
+      "passed": true,
+      "detail": "12.25 vs 12.25"
+    },
+    {
+      "name": "L16 Svc chargeout==funded",
+      "passed": true,
+      "detail": "25.177 vs 25.177"
+    },
+    {
+      "name": "L16 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L16 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L17 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "10.816 vs 10.816"
+    },
+    {
+      "name": "L17 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L17 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L17 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L17 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L18 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L18 PH chargeout==funded",
+      "passed": true,
+      "detail": "15.015 vs 15.015"
+    },
+    {
+      "name": "L18 Svc chargeout==funded",
+      "passed": true,
+      "detail": "27.347 vs 27.347"
+    },
+    {
+      "name": "L18 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L18 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L19 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L19 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L19 Svc chargeout==funded",
+      "passed": true,
+      "detail": "31.0556 vs 31.0556"
+    },
+    {
+      "name": "L19 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L19 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.27 vs 2.27"
+    },
+    {
+      "name": "L20 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "9.57 vs 9.57"
+    },
+    {
+      "name": "L20 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.915 vs 13.915"
+    },
+    {
+      "name": "L20 Svc chargeout==funded",
+      "passed": true,
+      "detail": "31.867 vs 31.867"
+    },
+    {
+      "name": "L20 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L20 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.32 vs 2.32"
+    },
+    {
+      "name": "L21 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "13.835 vs 13.835"
+    },
+    {
+      "name": "L21 PH chargeout==funded",
+      "passed": true,
+      "detail": "15.32 vs 15.32"
+    },
+    {
+      "name": "L21 Svc chargeout==funded",
+      "passed": true,
+      "detail": "28.659 vs 28.659"
+    },
+    {
+      "name": "L21 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L21 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.22 vs 2.22"
+    },
+    {
+      "name": "L22 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "5.92 vs 5.92"
+    },
+    {
+      "name": "L22 PH chargeout==funded",
+      "passed": true,
+      "detail": "12.55 vs 12.55"
+    },
+    {
+      "name": "L22 Svc chargeout==funded",
+      "passed": true,
+      "detail": "34.677 vs 34.677"
+    },
+    {
+      "name": "L22 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L22 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 ISC chargeout==funded",
+      "passed": true,
+      "detail": "4.2 vs 4.2"
+    },
+    {
+      "name": "L23 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "5.02 vs 5.02"
+    },
+    {
+      "name": "L23 PH chargeout==funded",
+      "passed": true,
+      "detail": "12.25 vs 12.25"
+    },
+    {
+      "name": "L23 Svc chargeout==funded",
+      "passed": true,
+      "detail": "25.177 vs 25.177"
+    },
+    {
+      "name": "L23 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L23 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 ISC chargeout==funded",
+      "passed": true,
+      "detail": "0.08 vs 0.08"
+    },
+    {
+      "name": "L24 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "11.828 vs 11.828"
+    },
+    {
+      "name": "L24 PH chargeout==funded",
+      "passed": true,
+      "detail": "13.146 vs 13.146"
+    },
+    {
+      "name": "L24 Svc chargeout==funded",
+      "passed": true,
+      "detail": "21.527 vs 21.527"
+    },
+    {
+      "name": "L24 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L24 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 EW unalloc share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 row276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 433 programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 per-record alloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 ISC chargeout==funded",
+      "passed": true,
+      "detail": "2.2 vs 2.2"
+    },
+    {
+      "name": "L25 IGTS chargeout==funded",
+      "passed": true,
+      "detail": "14.7834 vs 14.7834"
+    },
+    {
+      "name": "L25 PH chargeout==funded",
+      "passed": true,
+      "detail": "12.3 vs 12.3"
+    },
+    {
+      "name": "L25 Svc chargeout==funded",
+      "passed": true,
+      "detail": "35.787 vs 35.787"
+    },
+    {
+      "name": "L25 Image cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 Personal cluster==ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "L25 stage4 only when itsimpMode",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "sim-L01",
+      "name": "LFR AOP 12% basis",
+      "group": "G1-Lever Basis",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "aop",
+          "pct": 12
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.976,
+        "pmi": 5.19,
+        "unfunded": 180.0469,
+        "ew": 34.261,
+        "bu": 65.715,
+        "grandTotal": 575.480463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 11.993
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 50.601
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 0.12,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 17.163,
+          "demand": 49.4039,
+          "count": 16
+        },
+        "Deeptha Khanna": {
+          "funded": 17.04,
+          "demand": 27.202,
+          "count": 32
+        },
+        "Laura Matz": {
+          "funded": 17.417,
+          "demand": 61.607,
+          "count": 16
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 16.598678,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 159.168021
+        },
+        "Image Guided Therapy": {
+          "programs": 17.235348,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 104.173329
+        },
+        "Connected Care": {
+          "programs": 20.455464,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 132.436703
+        },
+        "EI": {
+          "programs": 10.022961,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 45.40639
+        },
+        "Personal Health": {
+          "programs": 22.462569,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.590393
+        },
+        "Unallocated": {
+          "programs": 12.610378,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 12.610378
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L02",
+      "name": "LFR fixed 8M",
+      "group": "G1-Lever Basis",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.984,
+        "pmi": 5.19,
+        "unfunded": 180.0389,
+        "ew": 39.477,
+        "bu": 60.507,
+        "grandTotal": 575.488463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 8
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 54.602
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 0.12,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 16.498,
+          "demand": 49.4039,
+          "count": 14
+        },
+        "Deeptha Khanna": {
+          "funded": 15.746,
+          "demand": 27.202,
+          "count": 28
+        },
+        "Laura Matz": {
+          "funded": 24.267,
+          "demand": 61.607,
+          "count": 16
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 16.596572,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 159.165915
+        },
+        "Image Guided Therapy": {
+          "programs": 17.652127,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 104.590108
+        },
+        "Connected Care": {
+          "programs": 18.948492,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 130.929731
+        },
+        "EI": {
+          "programs": 10.271397,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 45.654827
+        },
+        "Personal Health": {
+          "programs": 21.994117,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.121942
+        },
+        "Unallocated": {
+          "programs": 13.840776,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.840776
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L03",
+      "name": "Sustain AOP 15% basis",
+      "group": "G1-Lever Basis",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "aop",
+          "pct": 15
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.993,
+        "pmi": 5.19,
+        "unfunded": 180.0299,
+        "ew": 48.469,
+        "bu": 51.524,
+        "grandTotal": 575.497463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 14.998
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 24.446
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.32,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 8.761,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 15.915,
+          "demand": 27.202,
+          "count": 30
+        },
+        "Laura Matz": {
+          "funded": 26.997,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 16.978528,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 159.547871
+        },
+        "Image Guided Therapy": {
+          "programs": 14.109721,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 101.047702
+        },
+        "Connected Care": {
+          "programs": 23.79185,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 135.773089
+        },
+        "EI": {
+          "programs": 8.078379,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 43.461808
+        },
+        "Personal Health": {
+          "programs": 23.586302,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 102.714126
+        },
+        "Unallocated": {
+          "programs": 12.612695,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 12.612695
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L04",
+      "name": "Sustain fixed 8M",
+      "group": "G1-Lever Basis",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.977,
+        "pmi": 5.19,
+        "unfunded": 180.0459,
+        "ew": 43.866,
+        "bu": 56.111,
+        "grandTotal": 575.481463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 7.973
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 31.455
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.28,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 12.148,
+          "demand": 49.4039,
+          "count": 10
+        },
+        "Deeptha Khanna": {
+          "funded": 16.115,
+          "demand": 27.202,
+          "count": 31
+        },
+        "Laura Matz": {
+          "funded": 21.874,
+          "demand": 61.607,
+          "count": 12
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.739151,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.308493
+        },
+        "Image Guided Therapy": {
+          "programs": 14.889815,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 101.827796
+        },
+        "Connected Care": {
+          "programs": 23.162571,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 135.14381
+        },
+        "EI": {
+          "programs": 8.950491,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.33392
+        },
+        "Personal Health": {
+          "programs": 23.057774,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 102.185599
+        },
+        "Unallocated": {
+          "programs": 11.421021,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 11.421021
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L05",
+      "name": "Value AOP 30% basis",
+      "group": "G1-Lever Basis",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "aop",
+          "pct": 30
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.963,
+        "pmi": 5.19,
+        "unfunded": 180.0599,
+        "ew": 49.716,
+        "bu": 50.247,
+        "grandTotal": 575.467463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 18.805
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.840011,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.409353
+        },
+        "Image Guided Therapy": {
+          "programs": 15.116325,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.054305
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 21.783667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.911492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L06",
+      "name": "IT Simp OFF (baseline)",
+      "group": "G2-IT Simp Lever",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.963,
+        "pmi": 5.19,
+        "unfunded": 180.0599,
+        "ew": 49.716,
+        "bu": 50.247,
+        "grandTotal": 575.467463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 18.805
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.840011,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.409353
+        },
+        "Image Guided Therapy": {
+          "programs": 15.116325,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.054305
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 21.783667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.911492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L07",
+      "name": "IT Simp ON 2.5% AOP",
+      "group": "G2-IT Simp Lever",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "aop",
+          "pct": 2.5
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.906,
+        "pmi": 5.19,
+        "unfunded": 180.1169,
+        "ew": 51.978,
+        "bu": 47.928,
+        "grandTotal": 575.410463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 16.306
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 2.442
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.821,
+          "demand": 49.4039,
+          "count": 9
+        },
+        "Deeptha Khanna": {
+          "funded": 13.145,
+          "demand": 27.202,
+          "count": 24
+        },
+        "Laura Matz": {
+          "funded": 29.209,
+          "demand": 61.607,
+          "count": 16
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 18.192537,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.76188
+        },
+        "Image Guided Therapy": {
+          "programs": 15.622955,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.560935
+        },
+        "Connected Care": {
+          "programs": 22.485917,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.467156
+        },
+        "EI": {
+          "programs": 7.752105,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 43.135534
+        },
+        "Personal Health": {
+          "programs": 21.371679,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.499504
+        },
+        "Unallocated": {
+          "programs": 13.584794,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.584794
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L08",
+      "name": "IT Simp ON 7.5% AOP",
+      "group": "G2-IT Simp Lever",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "aop",
+          "pct": 7.5
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.83,
+        "pmi": 5.19,
+        "unfunded": 180.1929,
+        "ew": 54.658,
+        "bu": 45.172,
+        "grandTotal": 575.334463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 11.335
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 7.337
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 10.015,
+          "demand": 49.4039,
+          "count": 10
+        },
+        "Deeptha Khanna": {
+          "funded": 13.145,
+          "demand": 27.202,
+          "count": 24
+        },
+        "Laura Matz": {
+          "funded": 30.459,
+          "demand": 61.607,
+          "count": 23
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.991711,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.561054
+        },
+        "Image Guided Therapy": {
+          "programs": 16.184517,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 103.122498
+        },
+        "Connected Care": {
+          "programs": 21.839635,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 133.820874
+        },
+        "EI": {
+          "programs": 7.084788,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 42.468217
+        },
+        "Personal Health": {
+          "programs": 21.795849,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.923674
+        },
+        "Unallocated": {
+          "programs": 13.991287,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.991287
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L09",
+      "name": "IT Simp ON 100% bucket",
+      "group": "G2-IT Simp Lever",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.945,
+        "pmi": 5.19,
+        "unfunded": 180.0779,
+        "ew": 65.968,
+        "bu": 33.977,
+        "grandTotal": 575.449463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 0
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 18.787
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.2,
+          "demand": 25.89,
+          "count": 1
+        },
+        "Bert van Meurs": {
+          "funded": 5.365,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 39.639,
+          "demand": 61.607,
+          "count": 23
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 19.13391,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 161.703252
+        },
+        "Image Guided Therapy": {
+          "programs": 12.719284,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 99.657264
+        },
+        "Connected Care": {
+          "programs": 22.921437,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.902676
+        },
+        "EI": {
+          "programs": 5.091504,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 40.474934
+        },
+        "Personal Health": {
+          "programs": 22.690909,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.818734
+        },
+        "Unallocated": {
+          "programs": 16.250777,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 16.250777
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L10",
+      "name": "IT Simp ON 12M fixed",
+      "group": "G2-IT Simp Lever",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 12,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.93,
+        "pmi": 5.19,
+        "unfunded": 180.0929,
+        "ew": 59.358,
+        "bu": 40.572,
+        "grandTotal": 575.434463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 6.835
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 11.937
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 5.915,
+          "demand": 49.4039,
+          "count": 8
+        },
+        "Deeptha Khanna": {
+          "funded": 13.145,
+          "demand": 27.202,
+          "count": 24
+        },
+        "Laura Matz": {
+          "funded": 35.659,
+          "demand": 61.607,
+          "count": 20
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 18.722898,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 161.292241
+        },
+        "Image Guided Therapy": {
+          "programs": 12.886414,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 99.824394
+        },
+        "Connected Care": {
+          "programs": 22.385336,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.366575
+        },
+        "EI": {
+          "programs": 7.317478,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 42.700908
+        },
+        "Personal Health": {
+          "programs": 22.539729,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.667554
+        },
+        "Unallocated": {
+          "programs": 15.054912,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 15.054912
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L11",
+      "name": "ISC opt-in all Stage3 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-01",
+          "choice": "include",
+          "amount": 0.06
+        },
+        {
+          "id": "EW-02",
+          "choice": "include",
+          "amount": 0.04
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 100.063,
+        "pmi": 5.19,
+        "unfunded": 179.9599,
+        "ew": 49.816,
+        "bu": 50.247,
+        "grandTotal": 575.567463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 18.905
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.32,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.862102,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.431445
+        },
+        "Image Guided Therapy": {
+          "programs": 15.132171,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.070152
+        },
+        "Connected Care": {
+          "programs": 22.119894,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.101133
+        },
+        "EI": {
+          "programs": 9.195067,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.578497
+        },
+        "Personal Health": {
+          "programs": 21.799495,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.927319
+        },
+        "Unallocated": {
+          "programs": 13.095526,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.095526
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L12",
+      "name": "IGTS swap: opt-out funded, opt-in top-3 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-63",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-57",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-437",
+          "choice": "include",
+          "amount": 3.107
+        },
+        {
+          "id": "Bu-447",
+          "choice": "include",
+          "amount": 0.071
+        },
+        {
+          "id": "Bu-448",
+          "choice": "include",
+          "amount": 0.22
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 98.811,
+        "pmi": 5.19,
+        "unfunded": 181.2119,
+        "ew": 49.716,
+        "bu": 49.095,
+        "grandTotal": 574.315463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 17.653
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 8.418,
+          "demand": 49.4039,
+          "count": 8
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 19.614696,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 162.184038
+        },
+        "Image Guided Therapy": {
+          "programs": 12.18964,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 99.12762
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 21.783667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.911492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L13",
+      "name": "PH opt-out all Stage3 funded",
+      "group": "G3-ExCo Opt-In/Out",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-299",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-304",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-292",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-286",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-293",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-320",
+          "choice": "exclude",
+          "amount": 0
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 98.298,
+        "pmi": 5.19,
+        "unfunded": 181.7249,
+        "ew": 49.716,
+        "bu": 48.582,
+        "grandTotal": 573.802463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 17.14
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.840011,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.409353
+        },
+        "Image Guided Therapy": {
+          "programs": 15.116325,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.054305
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 20.118667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 99.246492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L14",
+      "name": "PH opt-in 5 unfunded Stage3",
+      "group": "G3-ExCo Opt-In/Out",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-313",
+          "choice": "include",
+          "amount": 0.9
+        },
+        {
+          "id": "Bu-285",
+          "choice": "include",
+          "amount": 0.9
+        },
+        {
+          "id": "Bu-315",
+          "choice": "include",
+          "amount": 0.2
+        },
+        {
+          "id": "Bu-301",
+          "choice": "include",
+          "amount": 0.2
+        },
+        {
+          "id": "Bu-290",
+          "choice": "include",
+          "amount": 1
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 103.163,
+        "pmi": 5.19,
+        "unfunded": 176.8599,
+        "ew": 49.716,
+        "bu": 53.447,
+        "grandTotal": 578.667463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 22.005
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 17.115,
+          "demand": 27.202,
+          "count": 32
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.840011,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.409353
+        },
+        "Image Guided Therapy": {
+          "programs": 15.116325,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.054305
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 24.983667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 104.111492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L15",
+      "name": "Services swap: out funded, in top-2 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-99",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "EW-43",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "EW-122",
+          "choice": "include",
+          "amount": 7
+        },
+        {
+          "id": "EW-95",
+          "choice": "include",
+          "amount": 2.5
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 107.293,
+        "pmi": 5.19,
+        "unfunded": 172.7299,
+        "ew": 57.046,
+        "bu": 50.247,
+        "grandTotal": 582.797463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 26.135
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 34.677,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 19.459326,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 162.028668
+        },
+        "Image Guided Therapy": {
+          "programs": 16.277861,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 103.215841
+        },
+        "Connected Care": {
+          "programs": 23.343919,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 135.325158
+        },
+        "EI": {
+          "programs": 9.553014,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.936444
+        },
+        "Personal Health": {
+          "programs": 22.943804,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 102.071628
+        },
+        "Unallocated": {
+          "programs": 14.731699,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 14.731699
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L16",
+      "name": "All four ExCo opt-out all Stage3 funded",
+      "group": "G3-ExCo Opt-In/Out",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-03",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-63",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-57",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-299",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-304",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-292",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-286",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-293",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "Bu-320",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "EW-99",
+          "choice": "exclude",
+          "amount": 0
+        },
+        {
+          "id": "EW-43",
+          "choice": "exclude",
+          "amount": 0
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 91.558,
+        "pmi": 5.19,
+        "unfunded": 188.4649,
+        "ew": 47.526,
+        "bu": 44.032,
+        "grandTotal": 567.062463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 10.4
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.2,
+          "demand": 25.89,
+          "count": 1
+        },
+        "Bert van Meurs": {
+          "funded": 5.02,
+          "demand": 49.4039,
+          "count": 5
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 25.177,
+          "demand": 61.607,
+          "count": 11
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.356204,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 159.925547
+        },
+        "Image Guided Therapy": {
+          "programs": 10.21929,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 97.157271
+        },
+        "Connected Care": {
+          "programs": 21.732202,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 133.713441
+        },
+        "EI": {
+          "programs": 9.081692,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.465122
+        },
+        "Personal Health": {
+          "programs": 19.772051,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 98.899876
+        },
+        "Unallocated": {
+          "programs": 12.577291,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 12.577291
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L17",
+      "name": "IGTS Stage3 funded at 75%",
+      "group": "G4-Partial Funding",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-63",
+          "choice": "include",
+          "amount": 0.4125
+        },
+        {
+          "id": "Bu-57",
+          "choice": "include",
+          "amount": 3
+        },
+        {
+          "id": "Bu-437",
+          "choice": "include",
+          "amount": 2.33025
+        },
+        {
+          "id": "Bu-447",
+          "choice": "include",
+          "amount": 0.05325
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 101.209,
+        "pmi": 5.19,
+        "unfunded": 178.8139,
+        "ew": 49.716,
+        "bu": 51.493,
+        "grandTotal": 576.713463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 20.051
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 10.816,
+          "demand": 49.4039,
+          "count": 9
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 19.171024,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 161.740367
+        },
+        "Image Guided Therapy": {
+          "programs": 15.031311,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 101.969291
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 21.783667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 100.911492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L18",
+      "name": "PH unfunded Stage3 at 50% cost",
+      "group": "G4-Partial Funding",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-313",
+          "choice": "include",
+          "amount": 0.45
+        },
+        {
+          "id": "Bu-285",
+          "choice": "include",
+          "amount": 0.45
+        },
+        {
+          "id": "Bu-315",
+          "choice": "include",
+          "amount": 0.1
+        },
+        {
+          "id": "Bu-301",
+          "choice": "include",
+          "amount": 0.1
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 101.063,
+        "pmi": 5.19,
+        "unfunded": 178.9599,
+        "ew": 49.716,
+        "bu": 51.347,
+        "grandTotal": 576.567463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 19.905
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 15.015,
+          "demand": 27.202,
+          "count": 31
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 17.840011,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 160.409353
+        },
+        "Image Guided Therapy": {
+          "programs": 15.116325,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.054305
+        },
+        "Connected Care": {
+          "programs": 22.102965,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.084204
+        },
+        "EI": {
+          "programs": 9.190116,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.573546
+        },
+        "Personal Health": {
+          "programs": 22.883667,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 102.011492
+        },
+        "Unallocated": {
+          "programs": 13.072896,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.072896
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L19",
+      "name": "Services top-4 unfunded EW at 30% cost",
+      "group": "G4-Partial Funding",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-122",
+          "choice": "include",
+          "amount": 2.1
+        },
+        {
+          "id": "EW-95",
+          "choice": "include",
+          "amount": 0.75
+        },
+        {
+          "id": "EW-114",
+          "choice": "include",
+          "amount": 0.54
+        },
+        {
+          "id": "EW-131",
+          "choice": "include",
+          "amount": 0.3186
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 103.6716,
+        "pmi": 5.19,
+        "unfunded": 176.3513,
+        "ew": 53.4246,
+        "bu": 50.247,
+        "grandTotal": 579.176063
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 22.5136
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 31.0556,
+          "demand": 61.607,
+          "count": 17
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 18.6593,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 161.228643
+        },
+        "Image Guided Therapy": {
+          "programs": 15.704002,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.641982
+        },
+        "Connected Care": {
+          "programs": 22.730823,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.712062
+        },
+        "EI": {
+          "programs": 9.373724,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.757153
+        },
+        "Personal Health": {
+          "programs": 22.370636,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.498461
+        },
+        "Unallocated": {
+          "programs": 13.912164,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 13.912164
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L20",
+      "name": "ISC 50% + Services 40% partial combined",
+      "group": "G4-Partial Funding",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-01",
+          "choice": "include",
+          "amount": 0.03
+        },
+        {
+          "id": "EW-02",
+          "choice": "include",
+          "amount": 0.02
+        },
+        {
+          "id": "EW-122",
+          "choice": "include",
+          "amount": 2.8
+        },
+        {
+          "id": "EW-95",
+          "choice": "include",
+          "amount": 1
+        },
+        {
+          "id": "EW-114",
+          "choice": "include",
+          "amount": 0.72
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 104.533,
+        "pmi": 5.19,
+        "unfunded": 175.4899,
+        "ew": 54.286,
+        "bu": 50.247,
+        "grandTotal": 580.037463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 23.375
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.27,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 31.867,
+          "demand": 61.607,
+          "count": 16
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 18.849597,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 161.41894
+        },
+        "Image Guided Therapy": {
+          "programs": 15.840502,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 102.778483
+        },
+        "Connected Care": {
+          "programs": 22.876656,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.857895
+        },
+        "EI": {
+          "programs": 9.416371,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 44.7998
+        },
+        "Personal Health": {
+          "programs": 22.506972,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.634797
+        },
+        "Unallocated": {
+          "programs": 14.107102,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 14.107102
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L21",
+      "name": "IT Simp 5% AOP + IGTS decomm on-top + PH top-3",
+      "group": "G5-Combined",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "aop",
+          "pct": 5
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-435",
+          "choice": "include",
+          "amount": 0.85
+        },
+        {
+          "id": "Bu-441",
+          "choice": "include",
+          "amount": 1
+        },
+        {
+          "id": "Bu-443",
+          "choice": "include",
+          "amount": 0.7
+        },
+        {
+          "id": "Bu-449",
+          "choice": "include",
+          "amount": 0.499
+        },
+        {
+          "id": "Bu-452",
+          "choice": "include",
+          "amount": 0.8
+        },
+        {
+          "id": "Bu-313",
+          "choice": "include",
+          "amount": 0.9
+        },
+        {
+          "id": "Bu-285",
+          "choice": "include",
+          "amount": 0.9
+        },
+        {
+          "id": "Bu-315",
+          "choice": "include",
+          "amount": 0.2
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 105.775,
+        "pmi": 5.19,
+        "unfunded": 174.2479,
+        "ew": 52.458,
+        "bu": 53.317,
+        "grandTotal": 581.279463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 17.623
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 20.609
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 15.831
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 7.936
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.32,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 13.835,
+          "demand": 49.4039,
+          "count": 15
+        },
+        "Deeptha Khanna": {
+          "funded": 15.32,
+          "demand": 27.202,
+          "count": 28
+        },
+        "Laura Matz": {
+          "funded": 28.659,
+          "demand": 61.607,
+          "count": 19
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 19.628727,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 162.19807
+        },
+        "Image Guided Therapy": {
+          "programs": 16.862605,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 103.800585
+        },
+        "Connected Care": {
+          "programs": 22.788442,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.769681
+        },
+        "EI": {
+          "programs": 6.975869,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 42.359298
+        },
+        "Personal Health": {
+          "programs": 23.62265,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 102.750475
+        },
+        "Unallocated": {
+          "programs": 14.992419,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 14.992419
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 3
+    },
+    {
+      "id": "sim-L22",
+      "name": "Budget 90M + Sustain 80% bucket + Services 2 on-top",
+      "group": "G5-Combined",
+      "levers": {
+        "budget": 90,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-122",
+          "choice": "include",
+          "amount": 7
+        },
+        {
+          "id": "EW-95",
+          "choice": "include",
+          "amount": 2.5
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.476,
+        "pmi": 5.19,
+        "unfunded": 180.5469,
+        "ew": 60.905,
+        "bu": 38.571,
+        "grandTotal": 574.980463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 27.417
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 85.001,
+          "funded": 11.51
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 0,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 5.92,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 12.55,
+          "demand": 27.202,
+          "count": 23
+        },
+        "Laura Matz": {
+          "funded": 34.677,
+          "demand": 61.607,
+          "count": 13
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 19.682361,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 162.251704
+        },
+        "Image Guided Therapy": {
+          "programs": 12.708382,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 99.646363
+        },
+        "Connected Care": {
+          "programs": 22.556814,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 134.538053
+        },
+        "EI": {
+          "programs": 6.083962,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 41.467392
+        },
+        "Personal Health": {
+          "programs": 22.189577,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 101.317401
+        },
+        "Unallocated": {
+          "programs": 15.205004,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 15.205004
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    },
+    {
+      "id": "sim-L23",
+      "name": "Budget 80M + IT Simp 8% + ISC 2 Stage1 on-top",
+      "group": "G5-Combined",
+      "levers": {
+        "budget": 80,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "aop",
+          "pct": 8
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-10",
+          "choice": "include",
+          "amount": 1.2
+        },
+        {
+          "id": "Bu-54",
+          "choice": "include",
+          "amount": 0.8
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 81.963,
+        "pmi": 5.19,
+        "unfunded": 198.0599,
+        "ew": 47.331,
+        "bu": 34.632,
+        "grandTotal": 557.467463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 43.776
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 18.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 19.414
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 0
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 0
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 4.2,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 5.02,
+          "demand": 49.4039,
+          "count": 5
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 25.177,
+          "demand": 61.607,
+          "count": 11
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 15.272882,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 157.842225
+        },
+        "Image Guided Therapy": {
+          "programs": 9.943818,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 96.881798
+        },
+        "Connected Care": {
+          "programs": 20.176231,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 132.15747
+        },
+        "EI": {
+          "programs": 3.474012,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 38.857442
+        },
+        "Personal Health": {
+          "programs": 19.741188,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 98.869012
+        },
+        "Unallocated": {
+          "programs": 12.538962,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 12.538962
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 3
+    },
+    {
+      "id": "sim-L24",
+      "name": "All levers AOP + 1 unfunded per ExCo on-top",
+      "group": "G5-Combined",
+      "levers": {
+        "budget": 100,
+        "lfr": {
+          "basis": "aop",
+          "pct": 15
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "aop",
+          "pct": 12
+        },
+        "value": {
+          "basis": "aop",
+          "pct": 25
+        },
+        "itsimp": {
+          "basis": "aop",
+          "pct": 4
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "EW-01",
+          "choice": "include",
+          "amount": 0.06
+        },
+        {
+          "id": "Bu-437",
+          "choice": "include",
+          "amount": 3.107
+        },
+        {
+          "id": "Bu-313",
+          "choice": "include",
+          "amount": 0.9
+        },
+        {
+          "id": "EW-114",
+          "choice": "include",
+          "amount": 1.8
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 74.489,
+        "pmi": 5.19,
+        "unfunded": 205.5339,
+        "ew": 32.103,
+        "bu": 42.386,
+        "grandTotal": 549.993463
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 14.993
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 11.958
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 24.993
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 5.772
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 0.08,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 11.828,
+          "demand": 49.4039,
+          "count": 8
+        },
+        "Deeptha Khanna": {
+          "funded": 13.146,
+          "demand": 27.202,
+          "count": 23
+        },
+        "Laura Matz": {
+          "funded": 21.527,
+          "demand": 61.607,
+          "count": 16
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 12.414514,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 154.983857
+        },
+        "Image Guided Therapy": {
+          "programs": 12.243812,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 99.181792
+        },
+        "Connected Care": {
+          "programs": 15.640119,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 127.621358
+        },
+        "EI": {
+          "programs": 7.116121,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 42.49955
+        },
+        "Personal Health": {
+          "programs": 18.227017,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 97.354841
+        },
+        "Unallocated": {
+          "programs": 8.294015,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 8.294015
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 0
+    },
+    {
+      "id": "sim-L25",
+      "name": "Budget 110M + max levers + IGTS Stage3 at 80%",
+      "group": "G5-Combined",
+      "levers": {
+        "budget": 110,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "bucket",
+          "pct": 50
+        },
+        "itsimpMode": true,
+        "merit": 45
+      },
+      "overrides": [
+        {
+          "id": "Bu-63",
+          "choice": "include",
+          "amount": 0.44
+        },
+        {
+          "id": "Bu-57",
+          "choice": "include",
+          "amount": 3.2
+        },
+        {
+          "id": "Bu-437",
+          "choice": "include",
+          "amount": 2.4856
+        },
+        {
+          "id": "Bu-447",
+          "choice": "include",
+          "amount": 0.0568
+        },
+        {
+          "id": "Bu-448",
+          "choice": "include",
+          "amount": 0.176
+        },
+        {
+          "id": "Bu-415",
+          "choice": "include",
+          "amount": 0.96
+        }
+      ],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 117.2314,
+        "pmi": 5.19,
+        "unfunded": 162.7915,
+        "ew": 69.802,
+        "bu": 47.4294,
+        "grandTotal": 592.735863
+      },
+      "stages": [
+        {
+          "name": "Legal and Compliance (Must Do)",
+          "demand": 53.136,
+          "funded": 52.636
+        },
+        {
+          "name": "Carry Over demand",
+          "demand": 107.5189,
+          "funded": 16.773
+        },
+        {
+          "name": "Sustain Engineering and Hygiene",
+          "demand": 34.367,
+          "funded": 34.367
+        },
+        {
+          "name": "Value Based Portfolio",
+          "demand": 58.069,
+          "funded": 7.3184
+        },
+        {
+          "name": "IT Simplification",
+          "demand": 26.932,
+          "funded": 6.137
+        }
+      ],
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.2,
+          "demand": 25.89,
+          "count": 1
+        },
+        "Bert van Meurs": {
+          "funded": 14.7834,
+          "demand": 49.4039,
+          "count": 17
+        },
+        "Deeptha Khanna": {
+          "funded": 12.3,
+          "demand": 27.202,
+          "count": 22
+        },
+        "Laura Matz": {
+          "funded": 35.787,
+          "demand": 61.607,
+          "count": 27
+        }
+      },
+      "clusters": {
+        "Precision Diagnosis": {
+          "programs": 24.068586,
+          "own": 81.348034,
+          "region": 39.120742,
+          "functions": 22.100567,
+          "total": 166.637929
+        },
+        "Image Guided Therapy": {
+          "programs": 20.491548,
+          "own": 58.286642,
+          "region": 11.458394,
+          "functions": 17.192945,
+          "total": 107.429528
+        },
+        "Connected Care": {
+          "programs": 24.220526,
+          "own": 74.123943,
+          "region": 11.090021,
+          "functions": 26.767275,
+          "total": 136.201765
+        },
+        "EI": {
+          "programs": 6.681321,
+          "own": 28.977639,
+          "region": 1.504919,
+          "functions": 4.900872,
+          "total": 42.06475
+        },
+        "Personal Health": {
+          "programs": 23.347726,
+          "own": 65.023528,
+          "region": 0.28731,
+          "functions": 13.816987,
+          "total": 102.47555
+        },
+        "Unallocated": {
+          "programs": 17.218424,
+          "own": 0,
+          "region": 0,
+          "functions": 0,
+          "total": 17.218424
+        }
+      },
+      "financeReconciled": true,
+      "issueCount": 1
+    }
+  ]
+}

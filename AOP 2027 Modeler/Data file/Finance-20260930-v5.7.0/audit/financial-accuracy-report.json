@@ -1,0 +1,42 @@
+{
+  "score": 100.0,
+  "weighted_score": "116/116",
+  "checks": 23,
+  "passed": 23,
+  "failed": 0,
+  "failures": [],
+  "categories": {
+    "Program cost accuracy": {
+      "passed": 3,
+      "total": 3
+    },
+    "BU/EW split accuracy": {
+      "passed": 4,
+      "total": 4
+    },
+    "EW charging key": {
+      "passed": 5,
+      "total": 5
+    },
+    "Operations per BU": {
+      "passed": 7,
+      "total": 7
+    },
+    "Chargeout allocation": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "key_figures": {
+    "ew_demand_M": 111.421,
+    "bu_demand_M": 173.7919,
+    "total_demand_M": 285.2129,
+    "funded_M": 99.963,
+    "pmi_M": 5.19,
+    "operations_M": 470.3144630385122,
+    "grand_total_M": 575.467463
+  },
+  "cost_mismatches": [],
+  "chargeout_errors": [],
+  "bu_ops_errors": []
+}

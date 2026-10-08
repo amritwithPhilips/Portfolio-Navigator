@@ -1,0 +1,145 @@
+{
+  "checks": [
+    {
+      "name": "evidence-full-export.xlsx IDs",
+      "status": "PASS",
+      "detail": "Every requested source ID retained"
+    },
+    {
+      "name": "evidence-full-export.xlsx exact funding",
+      "status": "PASS",
+      "detail": "Exact engine funding retained"
+    },
+    {
+      "name": "evidence-full-export.xlsx ledger",
+      "status": "PASS",
+      "detail": "All native export ledger entries independently read with openpyxl"
+    },
+    {
+      "name": "evidence-full-export.xlsx unallocated reasons",
+      "status": "PASS",
+      "detail": "Explicit, pending and conflict amounts sum exactly"
+    },
+    {
+      "name": "evidence-full-export.xlsx recipient subtotals",
+      "status": "PASS",
+      "detail": "Every allocation-table column reconciles"
+    },
+    {
+      "name": "evidence-full-export.xlsx recipient engine parity",
+      "status": "PASS",
+      "detail": "Each recipient, including Unallocated, agrees with the shared engine"
+    },
+    {
+      "name": "evidence-full-export.xlsx corrected key provenance",
+      "status": "PASS",
+      "detail": "Original misleading header and resolved recipient remain auditable"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx IDs",
+      "status": "PASS",
+      "detail": "Every requested source ID retained"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx exact funding",
+      "status": "PASS",
+      "detail": "Exact engine funding retained"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx ledger",
+      "status": "PASS",
+      "detail": "All native export ledger entries independently read with openpyxl"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx unallocated reasons",
+      "status": "PASS",
+      "detail": "Explicit, pending and conflict amounts sum exactly"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx recipient subtotals",
+      "status": "PASS",
+      "detail": "Every allocation-table column reconciles"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx recipient engine parity",
+      "status": "PASS",
+      "detail": "Each recipient, including Unallocated, agrees with the shared engine"
+    },
+    {
+      "name": "evidence-inclusions-export.xlsx corrected key provenance",
+      "status": "PASS",
+      "detail": "Original misleading header and resolved recipient remain auditable"
+    },
+    {
+      "name": "mustdo-full-export.xlsx IDs",
+      "status": "PASS",
+      "detail": "Every requested source ID retained"
+    },
+    {
+      "name": "mustdo-full-export.xlsx exact funding",
+      "status": "PASS",
+      "detail": "Exact engine funding retained"
+    },
+    {
+      "name": "mustdo-full-export.xlsx ledger",
+      "status": "PASS",
+      "detail": "All native export ledger entries independently read with openpyxl"
+    },
+    {
+      "name": "mustdo-full-export.xlsx unallocated reasons",
+      "status": "PASS",
+      "detail": "Explicit, pending and conflict amounts sum exactly"
+    },
+    {
+      "name": "mustdo-full-export.xlsx recipient subtotals",
+      "status": "PASS",
+      "detail": "Every allocation-table column reconciles"
+    },
+    {
+      "name": "mustdo-full-export.xlsx recipient engine parity",
+      "status": "PASS",
+      "detail": "Each recipient, including Unallocated, agrees with the shared engine"
+    },
+    {
+      "name": "mustdo-full-export.xlsx corrected key provenance",
+      "status": "PASS",
+      "detail": "Original misleading header and resolved recipient remain auditable"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx IDs",
+      "status": "PASS",
+      "detail": "Every requested source ID retained"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx exact funding",
+      "status": "PASS",
+      "detail": "Exact engine funding retained"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx ledger",
+      "status": "PASS",
+      "detail": "All native export ledger entries independently read with openpyxl"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx unallocated reasons",
+      "status": "PASS",
+      "detail": "Explicit, pending and conflict amounts sum exactly"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx recipient subtotals",
+      "status": "PASS",
+      "detail": "Every allocation-table column reconciles"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx recipient engine parity",
+      "status": "PASS",
+      "detail": "Each recipient, including Unallocated, agrees with the shared engine"
+    },
+    {
+      "name": "mustdo-inclusions-export.xlsx corrected key provenance",
+      "status": "PASS",
+      "detail": "Original misleading header and resolved recipient remain auditable"
+    }
+  ],
+  "failures": []
+}

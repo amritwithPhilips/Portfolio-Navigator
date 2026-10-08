@@ -1,0 +1,179 @@
+{
+  "checks": [
+    {
+      "name": "rebuild-saved exact scenario revision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved scope and row IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved exact request funding merit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved company finance and selected totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved original source references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved unambiguous filename",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved finance and decision evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current exact scenario revision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current scope and row IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current exact request funding merit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current company finance and selected totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current original source references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current unambiguous filename",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current finance and decision evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions exact scenario revision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions scope and row IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions exact request funding merit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions company finance and selected totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions original source references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions unambiguous filename",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions finance and decision evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered exact scenario revision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered scope and row IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered exact request funding merit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered company finance and selected totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered original source references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered unambiguous filename",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered finance and decision evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved exact scenario revision",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved scope and row IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved exact request funding merit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved company finance and selected totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved original source references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved unambiguous filename",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved finance and decision evidence",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

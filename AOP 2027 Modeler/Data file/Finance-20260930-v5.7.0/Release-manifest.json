@@ -1,0 +1,21 @@
+{
+  "AOP2027-IT-Portfolio-Scenario-Modelling-v5.7.0.html": "0ed72652f4e4ff09c7fd28de45749bcc21e61989f35a36b4d92d32b698dbb949",
+  "AOP2027-Data-Extract.html": "5fe703a61135da468b0b48015ef2600455984f8bb66d03ff9d8eca85c1e721e7",
+  "QA-report.html": "3c1284572687c7dd9be8269ff697330e8908fd8af06bfd12a21e5dca05d0a0a1",
+  "Detailed-data-comparison.html": "e9f4eb31ec8ea72c3b3880e99d8711562ae152a6a61c342239e21135ded0bc17",
+  "AOP2027-Modeler-Detailed-Requirements-v5.7.0.docx": "a4917378810cad77ef3d474edefd23ff0b51dbf117a9f4e89b30fedeb11b74b2",
+  "AOP2027-Modeler-PRD-v5.7.0.docx": "6e3ac9abb16f2836827dba8ecfcd0d15f48ac086779c16559190618aee7c0565",
+  "Programs-field-changes.csv": "4fc618c5715cd6a47943a75f50a0f3bda2750db15cb99ffd2d12f21666fe7795",
+  "Programs-funding-changes.csv": "9aec86b6dcf54ea2e0b943e8f09b71190bccaa1f9cf603b15ae3c0f030c8e223",
+  "Programs-scope-changes.csv": "4cf73b1bf0cc858dc31ecbd3587531438246983674fab189c77ca74f886ea5f2",
+  "Source-cell-changes.csv": "5b7349fae1bc656e2223372f63122c92dbee19a251ef890b8a85ba42ed6228cd",
+  "Ten-scenarios-Programs-trace.csv": "7ab7b16055f73e98ea4ebf3924869ef228ec9f426109a07bb27771a93a12d023",
+  "audit\\browser-qa.json": "eee24042df3044936f2d03cb6bf972485d1e75ddbb9f10e51a5b005d9e370946",
+  "audit\\document-render-qa.json": "0544fb8b7abcb839b6d0fdd4b997bc9f549576e8acd5c685b41eeb3156806ce1",
+  "audit\\engine-qa.json": "88fd14f2fe846f3cc75956cce00903a5a187888e2545db806aed7268474dfaa0",
+  "audit\\export-qa.json": "2acdfd9c7dda9eb1299314aa817508b3d4673ed9852a80163c0aa818ff25511a",
+  "audit\\oracle-qa.json": "9dd4dcc14a1101defc74abaf5eae40b3ced9fc0f272a1299cebf58bdb4fda928",
+  "audit\\refresh-ui-qa.json": "29964b05b03d682b12f482f76f99d1c6e9da9f1121b5d95987f9946bc5c21377",
+  "audit\\regression-browser-qa.json": "5dea566e073da7685dabca72cc7c347a38b549e6b931f105248483a6432e54b5",
+  "audit\\release-qa.json": "95e0d8f95db15727bd51c9a18fb46631a865f35ffead6d956cfd1a40573322f6"
+}

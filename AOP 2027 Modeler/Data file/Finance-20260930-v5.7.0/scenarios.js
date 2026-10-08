@@ -1,0 +1,41 @@
+const fs=require('fs'),path=require('path'),A=require('./engine.js');const D=__dirname;
+global.OPS_DATA=JSON.parse(fs.readFileSync(path.join(D,'audit/ops-data.json')));
+const data=A.normalize(JSON.parse(fs.readFileSync(path.join(D,'audit/program-source.json'))));
+const initial=A.createSession(data),base=A.solve(data,initial.settings),checks=[];
+const check=(name,ok,detail='')=>checks.push({name,passed:!!ok,detail});
+const near=(a,b)=>Math.abs(a-b)<1e-8;
+const find=(stream,predicate)=>base.rows.find(r=>r.stream===stream&&!r.isPmi&&predicate(r));
+const ids={ewFunded:find('ew',r=>r.stage===3&&r.final>0).id,buFunded:find('bu',r=>r.stage===3&&r.final>0).id,ewUnfunded:find('ew',r=>r.stage===3&&!r.final&&r.cost>0).id,buUnfunded:find('bu',r=>r.stage===3&&!r.final&&r.cost>0).id,cross:find('bu',r=>/Type II/.test(r.type)&&r.final>0).id};
+const clone=x=>JSON.parse(JSON.stringify(x));
+const configs=[];function sc(id,name,modify){const s=clone(initial);s.id='validation-'+id;s.name=name;modify?.(s);configs.push(s);}
+sc('01','Optimal');sc('02','Protect Sustain',s=>s.settings.sustain.pct=100);sc('03','Release Sustain',s=>s.settings.sustain.pct=40);
+sc('04','AOP percentage basis',s=>{s.settings.lfr={basis:'aop',pct:40};s.settings.sustain={basis:'aop',pct:20};s.settings.value={basis:'aop',pct:25};});
+sc('05','Absolute allocations',s=>{for(const [k,v] of [['lfr',40],['sustain',15],['value',30]])s.settings[k]={basis:'amount',amount:v,pct:0};});
+sc('06','IT Simplification reserve',s=>{s.settings.itsimpMode=true;s.settings.itsimp={basis:'amount',amount:5,pct:0};});
+const ov=(s,id,choice,amount)=>{const r=data.records.find(r=>r.id===id);s.overrides[id]={choice,amount:choice==='exclude'?0:amount??r.cost,state:'active',fingerprint:r.fingerprint,note:'Scenario validation decision'};};
+sc('07','Inclusion and partial scope',s=>{ov(s,ids.ewFunded,'exclude');ov(s,ids.buFunded,'exclude');ov(s,ids.ewUnfunded,'include');ov(s,ids.buUnfunded,'include');ov(s,ids.cross,'include',data.records.find(r=>r.id===ids.cross).cost*.5);});
+sc('08','Requested investment and merit changes',s=>{for(const [id,mul] of [[ids.ewFunded,.8],[ids.buFunded,1.2]]){const r=data.records.find(r=>r.id===id);s.reviews[id]={requested:A.round(r.cost*mul),fingerprint:r.fingerprint,note:'Scenario request changed for validation'};}for(const id of [ids.ewUnfunded,ids.buUnfunded])s.reviews[id]={merit:99,note:'Reviewed scenario merit for validation',fingerprint:data.records.find(r=>r.id===id).fingerprint};});
+// Same explicit eligible discretionary selection contract as the ExCo cockpit; browser tests exercise its buttons.
+sc('09','F&R and BU ExCo trade-offs',s=>{for(const [stream,delta] of [['ew',-1],['bu',1]]){const leader=base.rows.find(r=>r.stream===stream&&r.stage===3&&(delta<0?r.final>0:r.final===0&&r.eligible&&r.cost<=1)).exco;const rows=base.rows.filter(r=>r.stream===stream&&r.exco===leader&&!r.isPmi),current=rows.reduce((a,r)=>a+r.final,0),target=Math.max(0,current+delta);Object.assign(s,A.tradeoff(s,stream,{[leader]:target}));s.tradeoffTargets??=[];s.tradeoffTargets.push({stream,leader,current,target});}});
+sc('10','Combined 80M stress and recovery',s=>{s.settings.budget=80;s.settings.sustain.pct=50;s.settings.itsimpMode=true;s.settings.itsimp={basis:'aop',pct:5};ov(s,ids.ewFunded,'exclude');ov(s,ids.cross,'include',data.records.find(r=>r.id===ids.cross).cost*.5);});
+const outputs=[];
+for(const s of configs){const r=A.solve(data,s.settings,s.overrides,s.reviews),f=r.finance,name=s.id;
+ check(name+' funding identity',near(r.totals.requested,r.totals.allocation+r.totals.unfunded));
+ check(name+' stream identity',near(r.streams.ew.allocation+r.streams.bu.allocation,r.totals.allocation));
+ check(name+' stage identity',near(r.stages.reduce((a,s)=>a+s.allocation,0),r.totals.allocation));
+ check(name+' automatic budget cap',r.totals.automatic<=s.settings.budget*(1+s.settings.tolerance/100)+1e-8);
+ check(name+' carry cap',r.rows.filter(r=>r.stage===1&&!r.isPmi&&r.automatic>0).every(r=>r.carryConfirmed&&near(r.automatic,Math.min(r.cost,r.baselined))));
+ check(name+' allocation ledger identity',f.reconciled&&near(f.totals.programs,r.totals.allocation+r.pmi.funded));
+ check(name+' EW unallocated share',near(f.rows.find(x=>x.recipient==='Unallocated').ew,r.streams.ew.allocation*.22630331753554522));
+ check(name+' Operations invariance',near(f.totals.operations,470.3144630385122));
+ check(name+' source row 276 not demand',!r.rows.some(r=>r.name==='Enterprise-wide charging'));
+ check(name+' exclusion scope',r.rows.length===433&&r.rows.every(r=>r.cost!==null&&!/^#|^0$/.test(r.overall)&&!/^#/.test(r.decisionBand)));
+ check(name+' per-record allocation',r.rows.filter(r=>r.final>0).every(r=>near(f.ledger.filter(x=>x.pillar==='Programs'&&x.id===r.id).reduce((a,x)=>a+x.amount,0),r.final)));
+ check(name+' deterministic replay',JSON.stringify(r)===JSON.stringify(A.solve(data,s.settings,s.overrides,s.reviews)));
+ check(name+' source immutable',data.records.every(r=>r.cost===base.rows.find(x=>x.id===r.id).sourceCost));
+ const compact=r.rows.map(({sourceValues,...r})=>r);outputs.push({id:s.id,name:s.name,settings:s.settings,overrides:s.overrides,reviews:s.reviews,tradeoffTargets:s.tradeoffTargets,result:{...r,rows:compact}});
+}
+const s=A.transact(initial,'review',{id:ids.buFunded,review:{requested:2,merit:80,note:'Test request and reviewed merit'}});check('scenario edits logged',s.events.at(-1).action==='review'&&A.solve(data,s.settings,s.overrides,s.reviews).rows.find(r=>r.id===ids.buFunded).cost===2);
+const u=A.undo(s);check('scenario edit undo',!u.reviews[ids.buFunded]);const fin=A.transact(s,'finalise');let blocked=false;try{A.transact(fin,'review',{id:ids.buFunded,review:{requested:3}})}catch(e){blocked=true;}check('finalized editing blocked',blocked);check('fork preserves edits',A.transact(fin,'fork').reviews[ids.buFunded].requested===2);
+fs.writeFileSync(path.join(D,'audit/scenarios.json'),JSON.stringify({sourceHash:data.sourceHash,ids,scenarios:outputs}));fs.writeFileSync(path.join(D,'audit/engine-qa.json'),JSON.stringify({checks},null,2));
+console.log(JSON.stringify({checks:checks.length,passed:checks.filter(x=>x.passed).length,failures:checks.filter(x=>!x.passed),scenarios:outputs.map(x=>({id:x.id,name:x.name,funded:x.result.totals.allocation,ew:x.result.streams.ew.allocation,bu:x.result.streams.bu.allocation,total:x.result.finance.totals.total}))},null,2));

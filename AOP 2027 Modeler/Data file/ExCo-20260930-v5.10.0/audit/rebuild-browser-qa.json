@@ -1,0 +1,390 @@
+{
+  "checks": [
+    {
+      "name": "Overall State navigation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Overall State dropdown",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Compare removed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry ROI range and numeric visible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Baseline-only default",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry numeric 0 updates engine",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry 0 confirmed baseline cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry numeric 0.5 updates engine",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry 0.5 confirmed baseline cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry numeric 3 updates engine",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry 3 confirmed baseline cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry numeric 9.5 updates engine",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry 9.5 confirmed baseline cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry numeric 10 updates engine",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry 10 confirmed baseline cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry return restores baseline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carry slider keyboard works",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "score-desc actual table order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "score-asc actual table order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "hard-desc actual table order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "hard-asc actual table order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cost-desc actual table order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cost-asc actual table order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shared chart geometry false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Chart colors and category legend false",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shared chart geometry true",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Chart colors and category legend true",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Decision Band coloring",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shared bubble keyboard source detail",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Chart axis and color synchronized to workbench",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Workbench axis synchronized to ExCo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew exclude preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew exclude funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew exclude finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew include preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew include funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew include finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew partial preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew partial funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew partial finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew automatic preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew automatic funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew automatic finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew automatic restores allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew excessive partial rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu exclude preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu exclude funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu exclude finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu include preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu include funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu include finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu partial preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu partial funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu partial finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu automatic preview no mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu automatic funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu automatic finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu automatic restores allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu excessive partial rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-saved download",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Saved download leaves active scenario unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-current download",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-inclusions download",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-filtered download",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rebuild-tab2-saved download",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo ROI sync to Tab 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Sort and ROI survive saved reload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 company no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 portfolio no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 decisions no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1440 opportunities no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1920 company no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1920 portfolio no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1920 decisions no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "1920 opportunities no page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Finalised funding actions locked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}

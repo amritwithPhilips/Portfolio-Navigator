@@ -1,0 +1,394 @@
+{
+  "_meta": {
+    "description": "Versioned rule contract for AOP 2027 One Portfolio Navigator. Every release must carry a matching copy of this file. A challenge on any scoring, stage or allocation rule cites this document as the authoritative answer.",
+    "candidateFile": "AOP2027-IT-Portfolio-Scenario-Modelling-v6.10.26-p4.html",
+    "engineVersion": "6.10.26-p4",
+    "sourceFile": "AOP 2027 Consolidated Live 61020261400.xlsx",
+    "sourceHash": "8db571f7a50dc5aad6b536860aa47fb662d719d73ed246bb37eb1b5f7cc21d15",
+    "capturedAt": "2026-10-06",
+    "approvedBy": null,
+    "approvalRef": null,
+    "status": "DRAFT — awaiting ExCo sign-off before publication",
+    "lastUpdated": "2026-10-06"
+  },
+  "stages": {
+    "order": [
+      "P1 — Legal and Compliance (Must Do)",
+      "P2 — Carry Over demand",
+      "P3 — Sustain Engineering and Hygiene",
+      "P4 — Value Based Portfolio",
+      "P5 — IT Simplification (optional lever)"
+    ],
+    "classificationRules": {
+      "P1_LFR": "Programme has a non-blank LFR Name or LFR Year (isLfrRecord), OR Overall AOP Decision contains 'must-do', OR item is one of: EW-11, EW-65, EW-71 (CCB-LFR by name), OR programme name matches CCB_LFR_NAMES set",
+      "P1_CCB_LFR_names": [
+        "fin-ccb - finance",
+        "ccb - group function",
+        "isc-ccb - ew",
+        "isc -ccb - ew"
+      ],
+      "P2_CarryOver": "newCarry field normalised to 'carry over'",
+      "P3_Sustain": "newCarry is 'change & sustain', OR category normalised to one of: 'continuous improvement', 'continous improvement', 'continuous improvement (ci)', 'upgrades & enhancements'",
+      "P3_CCB_Sustaining_names": [
+        "ccb - hyperautomation",
+        "ccb - i&d - innovation & digital",
+        "ccb commercial it",
+        "ccb services it",
+        "eadi - ccb initiative",
+        "ccb - i&d - the vault",
+        "ccb - i&d: brand licensing"
+      ],
+      "P4_Value": "All remaining records not classified above",
+      "P5_ITSimp": "Stage 4 in solver; only active when itsimpMode toggle is ON in settings. Identification: category contains 'decomm' or 'replatform'"
+    },
+    "itSimpToggle": {
+      "default": "OFF for optimal, protect, capacity; ON for evidence (Balanced Portfolio) and mustdo",
+      "onBehavior": "IT Simplification programmes promoted to stage 4 and funded from a separate ring-fenced envelope before Value (P4) competition",
+      "offBehavior": "IT Simplification programmes remain at P4 (Value) with stage demand shown as zero"
+    },
+    "recordedDecisionRef": "validation/run_cycle.py comment preceding approved_names — 29 September 2026 four-stage change. IT Simplification added as optional P5 in subsequent release history."
+  },
+  "annualisationAndDuration": {
+    "formula": "annualBenefitMEUR = (sourceBenefitKEUR / 1000) / effectiveDuration",
+    "annualBCR": "annualBenefitMEUR / originalRequestedMEUR",
+    "durationStates": {
+      "blank_source": "Source cell null or whitespace-only → effectiveDuration = 3 years; benefitDurationAssumed = true (labelled in UI)",
+      "valid_positive": "Source parsed to a positive number or 'N years' text → use as-is",
+      "invalid": "Source is 0, negative, or unparseable text → effectiveDuration = null; annual benefit and BCR unavailable (displayed as 'Invalid')"
+    },
+    "zeroBenefit": "Submitted zero (numeric 0) is preserved as zero. With valid duration and positive request: annualBenefit = 0, BCR = 0, benefit tier = 1 (not qualitative fallback). benefitClass = 'zero'.",
+    "missingBenefit": "Source cell null/blank → annualBenefit = null, BCR unavailable, qualitative fallback applies",
+    "recordedDecisionRef": "Memory/AOP2027-Demand-Context.md, Current refresh v5.9.5 — annualisation introduced; outputs/refresh-v5.9.5-20261005/README-v5.9.5.txt — blank duration defaults to three years; explicit invalid duration remains invalid"
+  },
+  "scoring": {
+    "components": [
+      {
+        "name": "Benefit Strength",
+        "rawMax": 5,
+        "defaultWeight": 40
+      },
+      {
+        "name": "Submitted Priority",
+        "rawMax": 25,
+        "defaultWeight": 25
+      },
+      {
+        "name": "Captured Consequence",
+        "rawMax": 15,
+        "defaultWeight": 15
+      },
+      {
+        "name": "Decision Band",
+        "rawMax": 10,
+        "defaultWeight": 10
+      },
+      {
+        "name": "Payback Period",
+        "rawMax": 10,
+        "defaultWeight": 10
+      }
+    ],
+    "componentFormula": "score = sum(raw_i / rawMax_i × weight_i) for i in 0..4",
+    "bcrTiers": {
+      "description": "Annual BCR (= annualBenefit / requestedCost); raw points out of 5",
+      "tiers": [
+        {
+          "condition": "ratio < 0",
+          "rawPoints": 0
+        },
+        {
+          "condition": "ratio < 0.5",
+          "rawPoints": 1
+        },
+        {
+          "condition": "ratio < 1.0",
+          "rawPoints": 2
+        },
+        {
+          "condition": "ratio < 2.0",
+          "rawPoints": 3
+        },
+        {
+          "condition": "ratio ≤ 3.0",
+          "rawPoints": 4
+        },
+        {
+          "condition": "ratio > 3.0",
+          "rawPoints": 5
+        }
+      ],
+      "suppressionRule": "When benefitMode is 'hard': soft-benefit programmes have ratio suppressed to null (enters qualitative path). When 'soft': hard-benefit programmes suppressed. Applies only at stage 1–4."
+    },
+    "priorityPoints": {
+      "mustDo": 25,
+      "mustHave": 18,
+      "deprioritised": 5,
+      "other": 0
+    },
+    "decisionBandPoints": {
+      "Healthy": 10,
+      "Contain": 6,
+      "other": 0,
+      "note": "Uninterpretable source value triggers a hold; programme excluded from funding until resolved"
+    },
+    "paybackTiers": {
+      "description": "Payback period in years; raw points out of 10",
+      "tiers": [
+        {
+          "condition": "≤ 1 year",
+          "rawPoints": 10
+        },
+        {
+          "condition": "≤ 2 years",
+          "rawPoints": 8
+        },
+        {
+          "condition": "≤ 3 years",
+          "rawPoints": 6
+        },
+        {
+          "condition": "≤ 5 years",
+          "rawPoints": 4
+        },
+        {
+          "condition": "> 5 years or null/invalid",
+          "rawPoints": 0
+        }
+      ]
+    },
+    "qualitativeFallback": {
+      "description": "Used when BCR ratio is null (missing benefit or suppressed). Revenue/productivity text in benefit details field → 0 pts. Otherwise qualitativeBenefit() assigns 0–4 pts based on Impact/Problem/Scope evidence.",
+      "zeroBenefitOverride": "Explicit zero benefit bypasses qualitative fallback entirely; goes directly to BCR tier (ratio = 0 → tier 1 = 1 raw point)"
+    },
+    "hardBenefitAreas": [
+      "revenue increase",
+      "productivity savings",
+      "productivity saving",
+      "productivity"
+    ]
+  },
+  "presets": {
+    "optimal": {
+      "label": "Optimal Segmentation",
+      "lfrLever": {
+        "basis": "bucket",
+        "pct": 100
+      },
+      "carryLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "sustainLever": {
+        "basis": "bucket",
+        "pct": 52
+      },
+      "valueLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "weights": [
+        40,
+        25,
+        15,
+        10,
+        10
+      ],
+      "benefitMode": "both",
+      "itsimpMode": false,
+      "applyLfrOptOuts": false,
+      "balancedPortfolio": false
+    },
+    "protect": {
+      "label": "Protect Commitments",
+      "lfrLever": {
+        "basis": "bucket",
+        "pct": 100
+      },
+      "carryLever": {
+        "basis": "bucket",
+        "pct": 100
+      },
+      "sustainLever": {
+        "basis": "bucket",
+        "pct": 100
+      },
+      "valueLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "weights": [
+        40,
+        25,
+        15,
+        10,
+        10
+      ],
+      "benefitMode": "both",
+      "itsimpMode": false,
+      "applyLfrOptOuts": false,
+      "balancedPortfolio": false
+    },
+    "evidence": {
+      "label": "Balanced Portfolio",
+      "lfrLever": {
+        "basis": "amount",
+        "amount_MEur": 28,
+        "lfrCap_MEur": 26,
+        "note": "28M LFR envelope; 26M confirmed-opt-in cap after ExCo opt-outs applied"
+      },
+      "carryLever": {
+        "autoCalc": true,
+        "note": "Confirmed carry-overs (baselined Must-Do/Must-Have) funded fully"
+      },
+      "sustainLever": {
+        "basis": "bucket",
+        "pct": 52
+      },
+      "valueLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "weights": [
+        40,
+        25,
+        15,
+        10,
+        10
+      ],
+      "benefitMode": "both",
+      "itsimpMode": true,
+      "itsimpEnvelope_MEur": 7,
+      "applyLfrOptOuts": true,
+      "balancedPortfolio": true,
+      "balancedTargets": {
+        "iscFloor_MEur": 10,
+        "stoFloor_MEur": 20,
+        "regionCap_MEur": 5,
+        "ewCap_MEur": 40,
+        "buLedCap_MEur": 60,
+        "regionPriority": "IR (all items) first, then GRC, then NAR LFR via Phase 0c3 (EW-28)",
+        "note": "Bu-87 NAR Commercial Excellence excluded from region anchor — competes on BU merit"
+      }
+    },
+    "capacity": {
+      "label": "Maximum Benefit",
+      "lfrLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "carryLever": {
+        "autoCalc": true
+      },
+      "sustainLever": {
+        "basis": "bucket",
+        "pct": 40
+      },
+      "valueLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "weights": [
+        60,
+        15,
+        10,
+        10,
+        5
+      ],
+      "benefitMode": "hard",
+      "itsimpMode": false,
+      "applyLfrOptOuts": false,
+      "balancedPortfolio": false
+    },
+    "mustdo": {
+      "label": "Must Do Scenario",
+      "lfrLever": {
+        "basis": "amount",
+        "amount_MEur": 28,
+        "lfrCap_MEur": 26
+      },
+      "carryLever": {
+        "autoCalc": true
+      },
+      "sustainLever": {
+        "basis": "bucket",
+        "pct": 52
+      },
+      "valueLever": {
+        "basis": "bucket",
+        "pct": 100,
+        "autoCalc": true
+      },
+      "weights": [
+        40,
+        25,
+        15,
+        10,
+        10
+      ],
+      "benefitMode": "both",
+      "itsimpMode": true,
+      "itsimpEnvelope_MEur": 7,
+      "applyLfrOptOuts": true,
+      "balancedPortfolio": true,
+      "mustDoOnTop": true,
+      "balancedTargets": "Same as evidence preset"
+    }
+  },
+  "onTopRules": {
+    "PMI_NDA": {
+      "description": "PMI and NDA programmes (type field = 'PMI' in source) are funded automatically on top of the base AOP envelope. They are not included in the 100 M€ budget competition.",
+      "overrideOrder": "Manual exclusion (choice='exclude') is checked first and zeroes final funding. Manual partial scope (choice='include' with amount) is applied next. Default auto-full-fund runs only when no override exists.",
+      "currentTotal_MEur": 8.78,
+      "programmes": 7
+    },
+    "carryConfirmed": "Carry-over items are 'confirmed' when: stage=1 AND isBaselinedCarry AND priority is 'must do' or 'must have'. Confirmed carry items receive automatic baseline funding before merit competition."
+  },
+  "lfrExcoDecisions": {
+    "totalDecisions": 78,
+    "optOut": 32,
+    "optIn": 46,
+    "totalOptOutValue_MEur": 12.27,
+    "source": "LFR_EXCO_DECISIONS embedded in engine — each ExCo member's opt-in/opt-out decision for individual LFR programmes",
+    "appliedIn": [
+      "evidence",
+      "mustdo"
+    ],
+    "notAppliedIn": [
+      "optimal",
+      "protect",
+      "capacity"
+    ]
+  },
+  "manualOverrideOrder": {
+    "description": "Order of precedence when manual decisions are applied in solve()",
+    "steps": [
+      "1. PMI branch: check overrides[id].choice first — 'exclude' zeroes final before auto-fund runs",
+      "2. Phase 0c2: protect EW-11, EW-65, EW-71, EW-28 from Phase 1 defunding",
+      "3. Phase 0c3: force-fund EW-28 (NAR LFR) if unfunded",
+      "4. Phase 0d: force-fund ISC up to _iscTarget floor (evidence/mustdo only)",
+      "5. Phase 0e: force-fund STO up to _stoTarget floor (evidence/mustdo only)",
+      "6. Phase 0f: force-fund IR then GRC to fill region floor (evidence/mustdo only)",
+      "7. Phase 1: cap F&R (40M), BU-led (60M), regions (5M) — defund lowest-merit non-protected items",
+      "8. Non-PMI overrides (include/exclude/partial) applied to main solver rows",
+      "9. LFR opt-out overrides applied as programme-level excludes before main solve"
+    ],
+    "protectedItems": "Items force-funded via bpFundForced() receive _protected=true and cannot be defunded by Phase 1 cap enforcement"
+  },
+  "openItems": {
+    "F02_stageDesign": "Stage order contract pending formal sign-off. Current implementation matches 29 Sep 2026 recorded decision. IT Simplification toggle behaviour not separately tested against a signed rule contract.",
+    "F03_independentScoring": "Score components not yet verified from raw source cells independently. Model currently reuses its own derived ratio and payback values in the 421-score check.",
+    "F04_sourceCellParity": "Three cells (EW!D4, BU!B63, BU!E278) classified as Critical in QA JSON due to whitespace-vs-null representation difference. Written report says non-material. Severity alignment across report, JSON and CSV not yet reconciled.",
+    "F07_EW163payback": "EW-163 payback cell contains narrative text. Engine correctly marks paybackStatus='invalid' and displays label in popup. Source correction by programme sponsor pending.",
+    "Z01_Z26_dispositions": "CLOSED 2026-10-06 — All 26 confirmed by sponsors. 24 intentional-zero, 2 consolidated (Bu-276, Bu-325). Z_DISPOSITIONS constant embedded in engine. Excluded register panel shows confirmation badges.",
+    "missingBenefits81": "81 programmes without quantified benefit. Funded rows carry amber warning in popup. Source owners have not supplied amounts.",
+    "operationsParity": "Service ID, cost and recipient allocation row-level comparison against the Operations workbook source not yet performed.",
+    "portableScenarioID": "Meeting scenario not yet exported as portable JSON with recorded ID, revision, preset and envelope.",
+    "browserVerification": "UI test at 1366 and 1920 px (tabs, filters, export, keyboard) not yet performed."
+  }
+}

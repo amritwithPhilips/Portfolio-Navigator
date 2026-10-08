@@ -1,0 +1,58 @@
+AOP 2027  |  ExCo decision view  |  Version 5.8.0 
+30 September 2026  |  1 
+AOP 2027 ExCo view detailed requirements  
+Version 5.8.0 addendum. These requirements supplement AOP2027-Modeler-Detailed-Requirements-
+v5.7.0.docx. They cover the new ExCo presentation and command bridge. Existing funding, scoring, source 
+exclusions and recipient allocation rules remain in force. 
+EXCO58-01  Default leadership view 
+Open the new build in ExCo view. Keep all six original tabs accessible through Six-tab workbench. 
+Acceptance evidence: ExCo default view and six-tab navigation browser checks. 
+EXCO58-02  Single calculation result 
+Company KPIs, priority bars, receiving organisation costs, drilldowns and exports use the same scenario result 
+and finance ledger. 
+Acceptance evidence: 32-scenario ExCo parity, independent source replay and downloaded Excel ledger 
+reconciliation. 
+EXCO58-03  Scope clarity 
+Company position always shows company cost. The 16-leader filter applies to accountable Programs in My 
+portfolio and Decisions. Receiving-BU allocation is separate from accountability. 
+Acceptance evidence: All 16 leader ownership filters plus company recipient totals. 
+EXCO58-04  Benefit meaning 
+Show funded hard and soft submitted lifetime benefit claims separately. Do not label claims as annual savings 
+or realised returns. 
+Acceptance evidence: Hard and soft benefit rendering checks and source classification regression. 
+EXCO58-05  Recommendation boundary 
+Compare baseline, best tested option and current scenario. State objective, protected funding and grid size. 
+Invalidate the recommendation when the Programs source hash changes. 
+Acceptance evidence: 135-option analysis and changed-source recommendation guard. 
+EXCO58-06  Recommended draft 
+Save the current scenario before creating a fresh recommended child draft. Preserve parent lineage. Apply 
+source settings without copying current manual decisions. 
+Acceptance evidence: Recommended child draft preserves parent ID and expected funding. 
+AOP 2027  |  ExCo decision view  |  Version 5.8.0 
+30 September 2026  |  2 
+EXCO58-07  Decision preview 
+For P4 and optional P5, preview partial scope or exclusion with a rationale and exact before/after funding, 
+total IT and budget excess. Cancel leaves state unchanged. 
+Acceptance evidence: Rationale, preview non-mutation, cancellation and partial-scope commit browser 
+checks. 
+EXCO58-08  Stale preview guard 
+Apply only when scenario ID, revision and source hash still match the preview. Otherwise require a new 
+preview. 
+Acceptance evidence: Stale preview rejected after a concurrent revision change. 
+EXCO58-09  Trade-off isolation 
+Apply whole-Programs trade-offs to the selected leader and F&R or BU Led stream. Keep the base budget 
+unchanged and disclose any target undershoot. 
+Acceptance evidence: F&R and BU Led trade-offs match scenario 09; base budget stays €100M. 
+EXCO58-10  Lifecycle and evidence 
+Save, undo, finalise, fork and full Excel export use existing commands. Finalised scenarios disable editing. 
+Changed-source unresolved decisions continue to block finalisation. 
+Acceptance evidence: Browser save/reload, undo, finalise/fork, exports, and refreshed decision holds. 
+EXCO58-11  Portable input validation 
+Reject imported negative or non-numeric requested amounts, merit outside 0–100, merit without rationale, 
+and invalid review objects. 
+Acceptance evidence: Negative, non-numeric and out-of-range import rejection with valid zero and 100 
+boundaries. 
+EXCO58-12  Release preservation 
+Create v5.8.0 without changing the v5.7.0 HTML or either source workbook. Run 32 scenarios, source replay, 
+exports, browser regression, refresh and ExCo tests. 
+Acceptance evidence: SHA256 preservation, 32-case v5.7 engine parity and full validation report. 

@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "reviewed": "2026-09-30T09:43:13.657438",
+  "modelViews": [
+    "Company position",
+    "My portfolio",
+    "Compare options",
+    "Decisions"
+  ],
+  "reportLayouts": [
+    "Validation report",
+    "Architecture"
+  ],
+  "documents": {
+    "PRD": 3,
+    "Detailed requirements": 2
+  },
+  "renderMethod": "Packaged render_docx attempted; LibreOffice unavailable. Rendered through installed Microsoft Word, converted PDF to PNG and visually inspected every page.",
+  "findings": "No clipping or overlap. Removed inherited title border and kept each requirement with acceptance evidence.",
+  "supplementalChecks": "ExCo evidence Programs, Source Reference and Finance Ledger exactly match scenario 01. CSV has 13,856 records and ranking 135 candidates."
+}

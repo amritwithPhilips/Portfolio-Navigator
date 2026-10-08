@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "REFRESH-UI-PREVIEW",
+      "status": "PASS",
+      "detail": {
+        "fixture": {
+          "change": "EW-46",
+          "remove": "EW-69",
+          "keep": "EW-04",
+          "sourceHash": "70480f321fa60e6cba983bf63e72572570b2821ec0a222b604449aafe9f4f470"
+        },
+        "previewText": "Data Refresh Audit Report\n\nGenerated 2026-09-30 04:40 · Source 70480f321fa6 → fb4d5b02f0fa\n\nRow Count\n433 → 433\n0\nrecords\nTotal Demand\n280.1 M€\n+2.0 M€\nAllocation\n97.7 M€ → 97.8 M€\n+0.2 M€\nEW / BU Shift\nF&R\n+1.8 M€\nBU\n-1.6 M€\nBenefit Shifts\n0\nPrograms reclassified\nActions Required\n2\n1 critical, 1 warning\nPre-refresh vs Post-refresh KPIs\nMetric\tBefore\tAfter\tDelta\t% Change\nTotal Records\t433\t433\t0\t0.0%\nRequested Demand\t280.1\t282.0\t+2.0\t+0.7%\nAllocated Demand\t97.7\t97.8\t+0.2\t+0.1%\nUnfunded Demand\t182.4\t184.3\t+1.9\t+1.0%\nFunded Count\t160\t157\t-3\t-1.9%\nEW Allocation\t47.5\t49.2\t+1.8\t+3.6%\nBU Allocation\t50.3\t48.7\t-1.6\t-3.2%\nHard Benefits\t7038.7\t7038.7\t0.0\t0.0%\nSoft Benefits\t7818.4\t7919.5\t+101.1\t+1.3%\nLegal and Compliance (Must Do) Demand\t53.2\t55.2\t+2.0\t+3.7%\nLegal and Compliance (Must Do) Allocation\t41.5\t43.2\t+1.7\t+4.0%\nCarry Over demand Demand\t107.6\t107.6\t0.0\t0.0%\nCarry Over demand Allocation\t16.8\t16.8\t0.0\t0.0%\nSustain Engineering and Hygiene Demand\t34.4\t34.4\t0.0\t0.0%\nSustain Engineering and Hygi"
+      }
+    },
+    {
+      "id": "REFRESH-UI-APPLY",
+      "status": "PASS",
+      "detail": {
+        "hash": "fb4d5b02f0fabc53a1d1a2f148a5dc8a4900008caaa928dced0c2875a96e1efc",
+        "parent": "scenario-1790743186596"
+      }
+    },
+    {
+      "id": "REFRESH-UI-HOLDS",
+      "status": "PASS",
+      "detail": {
+        "EW-04": {
+          "choice": "exclude",
+          "amount": 0,
+          "note": "",
+          "fingerprint": "{\"item\":\"EW-04\",\"planisware\":\"1006377\",\"org\":\"Legal\",\"name\":\"Healthcare Compliance Project Engage\",\"type\":\"Type III - Enterprise wide\",\"newCarry\":\"Carry Over\",\"category\":\"Legal Fiscal, Regulatory & Compliancy\",\"platform\":\"Group Functions & Hyperautomation IT\",\"area\":\"Compliance/Keeping the lights on\",\"priority\":\"Must Do\",\"cost\":2.2,\"benefit\":105,\"benefitDetails\":\"a. Cost avoidance (avoiding penalties) apart from avoiding severe legal, civil and criminal repercussions b. Safeguarding Philips Brands, Preserving Shareholder value by doing business the right way with the right HCPs / HCOs c. Meeting with various Anti-bribary Anti-corruption (ABAC) laws and regulations around the world, including (but not limited to) • U.S. FCPA and UK Bribery Act. • U.S. Department of Justice Criminal Division’s guidance on Evaluation of Corporate Compliance Programs • ISO 37001 (Anti-Bribery Management Systems), the OECD Anti-Bribery Convention and the UN Convention against Corruption (UNCAC)\",\"impact\":\"1) Potential fines from Regulators for potential violations in ABAC, EC&S related regulations 2) Loss of reputation, Brand Value 3) Loss of license to operate in extreme situations\",\"problem\":\"Current solution lacks a traceable fee-for-service engagements with health care professional and health care organizations. Any failure to demonstrate payments are made for bona fide purposes and representing Fair Market Value, leads to higher penalties and prosecutions by regulators.\",\"scope\":\"Project will deliver an E2E solution that includes: A standard process that leads to Legal Business in various regions to own monitoring and overseeing the engagements and report out to authorities Medispend as End-to-End platform (industry standard SaaS) A Master data hub for HCP / HCOs (via IDMC)\",\"dependency\":\"None\",\"decisionBand\":\"HEALTHY\",\"overall\":\"HEALTHY / MUST-DO — P1 — Immediate\",\"remarks\":\"1) BOM Priority (one of legal commitments to Philips’ Board of Management) 2) ABAC and HCC regulations varies globally country to country and Regulators pay attention to these FFS (fee-for-service) engagements with HCPs and HCOs 3) Any interaction with an HCP must be aligned with our global Fair Market Value Standards 4) Active investigations into Fee-for-Services engagements already underway in the US.\",\"stream\":\"ew\",\"lfrName\":\"ABAC, HCC\",\"lfrYear\":\"2027\",\"baselined\":null,\"paybackYears\":null,\"allocations\":null}",
+          "state": "active"
+        },
+        "EW-46": {
+          "choice": "exclude",
+          "amount": 0,
+          "note": "",
+          "fingerprint": "{\"item\":\"EW-46\",\"planisware\":\"New\",\"org\":\"International Regions\",\"name\":\"FIN-IR - India Privacy Data Protection Bill (deferred from 2026 on PF request)\",\"type\":\"Type III - Enterprise wide\",\"newCarry\":\"Carry Over\",\"category\":\"Legal Fiscal, Regulatory & Compliancy\",\"platform\":\"Integrated Supply Chain & Finance\",\"area\":\"Compliance/Keeping the lights on\",\"priority\":\"Must Do\",\"cost\":0.1,\"benefit\":110,\"benefitDetails\":\"\",\"impact\":\"-India Privacy Act Compliance - Non-compliance could result in penalties of up to ₹250 crore - approximately €22M - per breach, alongside remediation and reputational exposure - Protect revenue of 450M€ and secure license to grow in India - Enable compliant, trusted data practices aligned with India’s Digital Data Protection Bill.\",\"problem\":\"India landscape must adhere to commissioned Digital Privacy Data Protection Act. Started in 2026 with some scop deferred to 'last minute' (04'27) - Establish enterprise-wide consent and personal-data controls to achieve compliance by May 2027\",\"scope\":\"India only, all local & global systems, KPMG involved for evaluation - Implement required changes across Salesforce, DMS, GEP and Workday, supported by a common framework for consent and personal-data access, correction and deletion requests.\",\"dependency\":\"\",\"decisionBand\":\"HEALTHY\",\"overall\":\"HEALTHY / MUST-DO — P1 — Immediate\",\"remarks\":\"0\",\"stream\":\"ew\",\"lfrName\":\"DPDP Act\",\"lfrYear\":\"2027\",\"baselined\":null,\"paybackYears\":null,\"allocations\":null}",
+          "state": "needs-review"
+        }
+      }
+    },
+    {
+      "id": "REFRESH-UI-LOCK",
+      "status": "PASS",
+      "detail": "Pending changed-source decision blocks finalisation"
+    },
+    {
+      "id": "REFRESH-EXCO-RECOMMENDATION-GUARD",
+      "status": "PASS",
+      "detail": "Recommendation blocked after changed Programs source"
+    },
+    {
+      "id": "REFRESH-UI-CONSOLE",
+      "status": "PASS",
+      "detail": []
+    }
+  ]
+}

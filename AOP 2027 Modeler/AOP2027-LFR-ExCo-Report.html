@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AOP 2027 — LFR Must-Do Portfolio Report (ExCo)</title>
+<style>
+:root{--bd:#003087;--bm:#0055b8;--bl:#e8f0fc;--ab:#f59e0b;--rd:#dc2626;--gn:#16a34a;--br:#e2e8f0;--tx:#111827;--mu:#6b7280;--surf:#fff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;color:var(--tx);background:#f8fafc;line-height:1.45;}
+.page{max-width:1440px;margin:0 auto;padding:24px 20px;}
+/* Header */
+.hdr{background:var(--bd);color:#fff;padding:24px 32px;border-radius:8px;margin-bottom:18px;}
+.hdr h1{font-size:20px;font-weight:700;}
+.hdr .sub{font-size:13px;opacity:.9;margin-top:3px;}
+.hdr .meta{font-size:11.5px;opacity:.7;margin-top:5px;}
+/* KPI bar */
+.kbar{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:18px;}
+.kc{background:var(--surf);border:1px solid var(--br);border-radius:8px;padding:13px 16px;}
+.kc .v{font-size:26px;font-weight:700;color:var(--bd);}
+.kc .l{font-size:10.5px;color:var(--mu);margin-top:2px;text-transform:uppercase;letter-spacing:.5px;}
+.kc.warn .v{color:var(--ab);}.kc.danger .v{color:var(--rd);}.kc.good .v{color:var(--gn);}
+/* Section */
+.stitle{font-size:15px;font-weight:700;color:var(--bd);padding:0 0 10px;border-bottom:2px solid var(--bl);margin-bottom:14px;}
+/* Lever box */
+.lbox{background:var(--surf);border:1px solid var(--br);border-left:4px solid var(--bm);border-radius:8px;padding:20px 24px;margin-bottom:18px;}
+.lbox h2{font-size:14px;font-weight:700;color:var(--bd);margin-bottom:10px;}
+.lbox p{margin-bottom:8px;color:#374151;line-height:1.65;font-size:13px;}
+.lbox ol,.lbox ul{margin:6px 0 8px 20px;line-height:1.8;}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px;}
+.lcard{border-radius:6px;padding:14px 16px;border:1.5px solid var(--br);}
+.lcard h4{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--mu);margin-bottom:6px;}
+.lcard p{font-size:12px;color:#374151;margin-top:4px;line-height:1.6;}
+.lcard.c0{border-color:#dc2626;background:#fef2f2;}
+.lcard.c1{border-color:#f59e0b;background:#fffbeb;}
+.lcard.c2{border-color:#6366f1;background:#eef2ff;}
+.lever-flow{display:flex;gap:0;margin:14px 0;align-items:stretch;flex-wrap:wrap;}
+.lf-step{flex:1;min-width:130px;background:#f8fafc;border:1px solid var(--br);padding:12px 14px;position:relative;}
+.lf-step:not(:last-child)::after{content:'→';position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--bd);font-size:16px;font-weight:700;z-index:1;}
+.lf-step h5{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--bd);margin-bottom:4px;}
+.lf-step p{font-size:11.5px;color:#374151;}
+.lf-step.funded{background:#f0fdf4;border-color:#22c55e;}
+.lf-step.held{background:#fef2f2;border-color:#dc2626;}
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:12.5px;}
+th{text-align:left;padding:7px 9px;background:var(--bd);color:#fff;font-weight:600;font-size:11.5px;white-space:nowrap;}
+td{padding:5px 9px;border-bottom:1px solid #f1f5f9;vertical-align:top;}
+tr:hover td{background:#f8fafc;}
+tfoot td{background:var(--bl);font-weight:700;}
+.r-risk td:first-child{border-left:3px solid var(--rd);}
+.r-ok  td:first-child{border-left:3px solid var(--gn);}
+.num{text-align:right;font-variant-numeric:tabular-nums;}
+.sm{font-size:11.5px;}.muted{color:var(--mu);}
+.c-red{color:var(--rd);font-weight:700;}.c-amber{color:var(--ab);}.c-grn{color:var(--gn);}
+/* Detail toolbar */
+.dtb{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--bl);border-bottom:1px solid var(--br);flex-wrap:wrap;}
+.dtb label{font-size:12px;font-weight:600;color:var(--bd);white-space:nowrap;}
+.dtb select{font-size:12px;padding:5px 10px;border:1px solid var(--br);border-radius:6px;background:#fff;min-width:260px;cursor:pointer;}
+.dtb select:focus{outline:2px solid var(--bm);}
+.ik-row{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto;}
+.ik{background:#fff;border:1px solid var(--br);border-radius:6px;padding:5px 10px;text-align:center;min-width:68px;}
+.ik .kv{display:block;font-size:16px;font-weight:700;color:var(--bd);}
+.ik .kl{display:block;font-size:9.5px;text-transform:uppercase;color:var(--mu);letter-spacing:.4px;}
+.ik.red .kv{color:var(--rd);}.ik.amber .kv{color:var(--ab);}.ik.grn .kv{color:var(--gn);}
+/* Save bar */
+.save-bar{display:flex;align-items:center;gap:10px;padding:8px 16px;background:#f0fdf4;border-bottom:1px solid #bbf7d0;flex-wrap:wrap;}
+.save-bar .saved-note{font-size:11.5px;color:#166534;display:none;}
+.btn{padding:7px 16px;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;border:none;}
+.btn-save{background:#16a34a;color:#fff;}.btn-save:hover{background:#15803d;}
+.btn-export{background:var(--bm);color:#fff;}.btn-export:hover{background:var(--bd);}
+.btn-clear{background:#f3f4f6;color:#374151;border:1px solid var(--br);}.btn-clear:hover{background:#e5e7eb;}
+/* Programme table */
+.pr-gap td{background:#fff8f8;}
+.col-chk{width:84px;white-space:nowrap;}
+.col-id{font-family:'Consolas',monospace;font-size:11.5px;color:var(--mu);white-space:nowrap;}
+.col-name{max-width:230px;word-break:break-word;}
+.col-org{max-width:140px;word-break:break-word;}
+.col-lfr{max-width:160px;}
+.col-ben{max-width:110px;}
+.col-holds{max-width:180px;}
+.col-fb{width:180px;}
+/* Opt buttons */
+.opt-group{display:flex;gap:2px;}
+.opt-btn{display:flex;align-items:center;gap:3px;padding:3px 7px;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;border:1px solid var(--br);background:#fff;}
+.opt-btn input{display:none;}
+.opt-btn.opt-in:has(input:checked){background:#dcfce7;border-color:#22c55e;color:#166534;}
+.opt-btn.opt-out:has(input:checked){background:#fee2e2;border-color:#ef4444;color:#991b1b;}
+.opt-btn.opt-none:has(input:checked){background:#f3f4f6;border-color:#9ca3af;color:#374151;}
+.opt-btn:hover{background:#f8fafc;}
+/* Feedback input */
+.fb-input{width:100%;font-size:11.5px;padding:4px 7px;border:1px solid var(--br);border-radius:4px;resize:vertical;font-family:inherit;background:#fff;transition:border-color .15s;}
+.fb-input:focus{outline:none;border-color:var(--bm);}
+.fb-input.has-val{background:#fefce8;border-color:#fbbf24;}
+/* Badges/tiers */
+.badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:600;}
+.st-funded{background:#dcfce7;color:#166534;}.st-gap{background:#fee2e2;color:#991b1b;}
+.st-hold{background:#fef9c3;color:#854d0e;}.st-partial{background:#e0f2fe;color:#075985;}
+.tier{display:inline-block;padding:2px 7px;border-radius:3px;font-size:11px;font-weight:600;}
+.t-imm{background:#fee2e2;color:#991b1b;}.t-sch{background:#fef3c7;color:#92400e;}
+.t-ccb{background:#ede9fe;color:#5b21b6;}.t-oth{background:#f3f4f6;color:#374151;}
+.tag-hold{display:inline-block;background:#fef9c3;color:#78350f;border-radius:3px;padding:1px 5px;font-size:10.5px;margin:1px 2px 1px 0;}
+.tag-warn{display:inline-block;background:#e0f2fe;color:#075985;border-radius:3px;padding:1px 5px;font-size:10.5px;margin:1px 2px 1px 0;}
+/* Gap section */
+.gap-hdr{background:#fef2f2;padding:12px 16px;border-bottom:1px solid #fecaca;}
+.gap-hdr h2{color:var(--rd);font-size:14px;font-weight:700;}
+/* Misc */
+.panel{background:var(--surf);border:1px solid var(--br);border-radius:8px;margin-bottom:18px;overflow:hidden;}
+.exco-link{color:var(--bm);text-decoration:none;cursor:pointer;}
+.exco-link:hover{text-decoration:underline;}
+.hidden{display:none;}
+.no-res{padding:24px;text-align:center;color:var(--mu);font-size:13px;display:none;}
+.print-note{font-size:11px;color:var(--mu);text-align:right;margin-bottom:6px;}
+.change-count{font-size:12px;font-weight:600;color:var(--bm);}
+@media print{body{background:#fff;}.save-bar,.dtb select,.opt-group{display:none;}td,th{font-size:10px;padding:3px 5px;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="hdr">
+  <h1>AOP 2027 — Legal, Compliance &amp; Must-Do (LFR) Portfolio Report</h1>
+  <p class="sub">Stage 0 Gate · LFR Lever Mechanics · ExCo Accountability &amp; Decisions</p>
+  <p class="meta">Engine v5.7.0 &nbsp;·&nbsp; Finance-20260930 &nbsp;·&nbsp; 30 September 2026 &nbsp;·&nbsp; Optimal Segmentation &nbsp;·&nbsp; Confidential — ExCo and IT Leadership</p>
+</div>
+<p class="print-note">Confidential · For ExCo and IT Leadership use only · AOP 2027 Planning Cycle</p>
+
+<!-- KPI BAR -->
+<div class="kbar">
+  <div class="kc"><div class="v">77</div><div class="l">LFR Programmes</div></div>
+  <div class="kc good"><div class="v">61</div><div class="l">Funded</div></div>
+  <div class="kc danger"><div class="v">16</div><div class="l">Funding Gaps</div></div>
+  <div class="kc warn"><div class="v">1</div><div class="l">Hold Conditions</div></div>
+  <div class="kc"><div class="v">53.14</div><div class="l">Total Demand M€</div></div>
+  <div class="kc warn"><div class="v">82.4%</div><div class="l">Budget Coverage</div></div>
+</div>
+
+<!-- LFR LEVER -->
+<section style="margin-bottom:18px">
+<div class="stitle">LFR Lever — How It Works</div>
+<div class="lbox">
+  <h2>The LFR lever controls the budget envelope reserved for all mandatory legal, regulatory, and compliance programmes (Stage 0)</h2>
+  <p>LFR stands for <strong>Legal, Financial &amp; Regulatory</strong>. These are non-negotiable programmes — failing to fund them creates direct legal exposure, regulatory breach, audit findings, or loss of operating licence. The LFR lever does not make them optional; it controls how much of the overall AOP budget is ringfenced to cover them.</p>
+
+  <div class="lgrid">
+    <div class="lcard c0">
+      <h4>🔴 Immediate (P1) — 28 programmes</h4>
+      <p>Active regulatory deadlines or contractual obligations due in 2027. Must be funded before any other stage. Decision band = Healthy/Must-Do P1 Immediate in the source workbook.</p>
+      <p><strong>Total demand: 14.45 M€</strong></p>
+    </div>
+    <div class="lcard c1">
+      <h4>🟡 Scheduled (P2) — 4 programmes</h4>
+      <p>Known future obligations with a 2027 scheduled commitment. High priority but not immediately overdue. Decision band = Healthy/Must-Do P2 Scheduled.</p>
+      <p><strong>Total demand: 1.25 M€</strong></p>
+    </div>
+    <div class="lcard c2">
+      <h4>🟣 CCB Exceptions — 3 programmes</h4>
+      <p>Change Control Board-approved legacy exceptions (EW-11, EW-65, EW-71). Funded outside the normal LFR evidence gate. Verified by CCB decision record.</p>
+      <p><strong>Total demand: 18.02 M€</strong></p>
+    </div>
+  </div>
+
+  <div class="lever-flow" style="margin-top:16px">
+    <div class="lf-step funded"><h5>Stage 0 Demand</h5><p>53.14 M€ total across 77 programmes</p></div>
+    <div class="lf-step funded"><h5>LFR Lever</h5><p>Bucket basis · <strong>82.4%</strong> of demand = <strong>43.8 M€</strong> reserved</p></div>
+    <div class="lf-step funded"><h5>Funding Order</h5><p>Verified P1 → Verified P2 → CCB → Unverified (by score)</p></div>
+    <div class="lf-step funded"><h5>Funded</h5><p><strong>61</strong> programmes · <strong>43.78 M€</strong></p></div>
+    <div class="lf-step held"><h5>Not Funded</h5><p><strong>16</strong> programmes · <strong>9.36 M€</strong></p></div>
+  </div>
+
+  <p style="margin-top:14px"><strong>Lever basis options:</strong></p>
+  <ul>
+    <li><strong>Bucket % (default 82.4%):</strong> Reserves a % of total Stage 0 demand. At 100%, all verified LFR programmes are funded. Reducing below 82.4% will start dropping the lowest-scoring unverified LFR items.</li>
+    <li><strong>AOP % basis:</strong> Reserves a % of the Total AOP budget (e.g. 40% of 100M = 40M for LFR). Useful when you want to cap LFR regardless of how many programmes are submitted.</li>
+    <li><strong>Fixed amount (M€):</strong> Sets a hard ceiling in euros. If LFR demand exceeds this, lowest-scoring programmes are dropped.</li>
+  </ul>
+  <p style="margin-top:10px"><strong>Funding priority within Stage 0:</strong> (1) Verified LFR — programmes with both LFR Name and LFR Year evidence fields populated. (2) Unverified LFR — sorted by score descending. (3) CCB exceptions — always funded regardless of score. Changing the lever % only affects which unverified programmes fall outside the envelope; P1 Immediate programmes are always at the top of the order.</p>
+  <p style="margin-top:8px"><strong>Hold conditions in LFR:</strong> A programme is held (not funded automatically) if: priority = "TBD", overall decision band is invalid or blank, or a Contain condition has no remarks/justification. Holds require source workbook correction or an explicit ExCo override — they cannot be resolved by adjusting the lever.</p>
+</div>
+</section>
+
+<!-- EXCO SUMMARY -->
+<section style="margin-bottom:18px">
+<div class="stitle">ExCo Accountability Summary — All 77 LFR Programmes</div>
+<div class="panel">
+<table>
+  <thead><tr>
+    <th>ExCo Leader</th><th>Role / Area</th>
+    <th style="text-align:right"># Pgms</th><th style="text-align:right">Funded</th>
+    <th style="text-align:right">Gaps</th><th style="text-align:right">Demand M€</th>
+    <th style="text-align:right">Funded M€</th><th style="text-align:right">Coverage</th>
+    <th>Holds</th>
+  </tr></thead>
+  <tbody><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Laura Matz">Laura Matz</a></td>
+    <td class="muted sm">Information Technology</td>
+    <td class="num">9</td><td class="num">4</td>
+    <td class="num c-red">5</td>
+    <td class="num">15.54</td><td class="num">13.24</td>
+    <td class="num c-amber">85.2%</td>
+    <td><span class="badge st-hold">1</span></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Charlotte Hanneman">Charlotte Hanneman</a></td>
+    <td class="muted sm">Finance &amp; Security</td>
+    <td class="num">5</td><td class="num">4</td>
+    <td class="num c-red">1</td>
+    <td class="num">9.55</td><td class="num">9.43</td>
+    <td class="num c-amber">98.7%</td>
+    <td></td>
+  </tr><tr class="r-ok">
+    <td><a href="#detail" class="exco-link" data-exco="Marnix van Ginneken">Marnix van Ginneken</a></td>
+    <td class="muted sm">Legal, Comms &amp; IP&amp;S</td>
+    <td class="num">7</td><td class="num">7</td>
+    <td class="num ">—</td>
+    <td class="num">4.18</td><td class="num">4.18</td>
+    <td class="num c-grn">100%</td>
+    <td></td>
+  </tr><tr class="r-ok">
+    <td><a href="#detail" class="exco-link" data-exco="Wim Appelo">Wim Appelo</a></td>
+    <td class="muted sm">COO &amp; ISC</td>
+    <td class="num">1</td><td class="num">1</td>
+    <td class="num ">—</td>
+    <td class="num">2.2</td><td class="num">2.2</td>
+    <td class="num c-grn">100%</td>
+    <td></td>
+  </tr><tr class="r-ok">
+    <td><a href="#detail" class="exco-link" data-exco="Julia Strandberg">Julia Strandberg</a></td>
+    <td class="muted sm">Connected Care</td>
+    <td class="num">11</td><td class="num">11</td>
+    <td class="num ">—</td>
+    <td class="num">5.21</td><td class="num">5.21</td>
+    <td class="num c-grn">100%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Bert van Meurs">Bert van Meurs</a></td>
+    <td class="muted sm">IGT &amp; Service Transformation</td>
+    <td class="num">2</td><td class="num">1</td>
+    <td class="num c-red">1</td>
+    <td class="num">1.2</td><td class="num">0.5</td>
+    <td class="num c-amber">41.7%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Jie Xue">Jie Xue</a></td>
+    <td class="muted sm">Precision Diagnosis</td>
+    <td class="num">7</td><td class="num">6</td>
+    <td class="num c-red">1</td>
+    <td class="num">1.69</td><td class="num">1.36</td>
+    <td class="num c-amber">80.2%</td>
+    <td></td>
+  </tr><tr class="r-ok">
+    <td><a href="#detail" class="exco-link" data-exco="Deeptha Khanna">Deeptha Khanna</a></td>
+    <td class="muted sm">Personal Health</td>
+    <td class="num">6</td><td class="num">6</td>
+    <td class="num ">—</td>
+    <td class="num">1.67</td><td class="num">1.67</td>
+    <td class="num c-grn">100%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Shez Partovi">Shez Partovi</a></td>
+    <td class="muted sm">EI &amp; I&amp;D</td>
+    <td class="num">2</td><td class="num">1</td>
+    <td class="num c-red">1</td>
+    <td class="num">3</td><td class="num">0.5</td>
+    <td class="num c-amber">16.7%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Steve C de Baca">Steve C de Baca</a></td>
+    <td class="muted sm">Patient Safety &amp; Quality</td>
+    <td class="num">4</td><td class="num">2</td>
+    <td class="num c-red">2</td>
+    <td class="num">1.35</td><td class="num">0.4</td>
+    <td class="num c-amber">29.6%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Carla Rosana Goulart Silva Peron">Carla Rosana Goulart Silva Peron</a></td>
+    <td class="muted sm">Medical Office</td>
+    <td class="num">5</td><td class="num">4</td>
+    <td class="num c-red">1</td>
+    <td class="num">2.15</td><td class="num">1.85</td>
+    <td class="num c-amber">86%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Ling Liu">Ling Liu</a></td>
+    <td class="muted sm">Greater China Region</td>
+    <td class="num">10</td><td class="num">7</td>
+    <td class="num c-red">3</td>
+    <td class="num">3.29</td><td class="num">1.91</td>
+    <td class="num c-amber">58.1%</td>
+    <td></td>
+  </tr><tr class="r-risk">
+    <td><a href="#detail" class="exco-link" data-exco="Jeff DiLullo">Jeff DiLullo</a></td>
+    <td class="muted sm">North America</td>
+    <td class="num">1</td><td class="num">0</td>
+    <td class="num c-red">1</td>
+    <td class="num">0.78</td><td class="num">0</td>
+    <td class="num c-amber">0%</td>
+    <td></td>
+  </tr><tr class="r-ok">
+    <td><a href="#detail" class="exco-link" data-exco="Özlem Fidanci">Özlem Fidanci</a></td>
+    <td class="muted sm">International Regions</td>
+    <td class="num">5</td><td class="num">5</td>
+    <td class="num ">—</td>
+    <td class="num">1.06</td><td class="num">1.06</td>
+    <td class="num c-grn">100%</td>
+    <td></td>
+  </tr><tr class="r-ok">
+    <td><a href="#detail" class="exco-link" data-exco="Filip Koek">Filip Koek</a></td>
+    <td class="muted sm">Internal Audit</td>
+    <td class="num">2</td><td class="num">2</td>
+    <td class="num ">—</td>
+    <td class="num">0.27</td><td class="num">0.27</td>
+    <td class="num c-grn">100%</td>
+    <td></td>
+  </tr></tbody>
+  <tfoot><tr>
+    <td colspan="2">TOTAL</td>
+    <td class="num">77</td><td class="num">61</td>
+    <td class="num c-red">16</td>
+    <td class="num">53.14</td><td class="num">43.78</td>
+    <td class="num c-amber">82.4%</td><td></td>
+  </tr></tfoot>
+</table>
+</div>
+</section>
+
+<!-- FUNDING GAPS -->
+<section style="margin-bottom:18px">
+<div class="stitle" style="color:var(--rd)">⚠ Funding Gaps — 16 LFR Programmes Without Allocation</div>
+<div class="panel">
+  <div class="gap-hdr">
+    <h2>Mandatory programmes not funded in the Optimal scenario</h2>
+    <p style="font-size:12px;color:#7f1d1d;margin-top:4px">Each requires an ExCo decision or source correction. Items with no hold condition are budget-pressure gaps — an override in the modeller will fund them immediately.</p>
+  </div>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr>
+      <th>ID</th><th>Programme</th><th>ExCo Leader</th>
+      <th>Demand M€</th><th>Tier</th><th>Reason / Hold</th><th>LFR Reference</th>
+    </tr></thead>
+    <tbody><tr>
+    <td class="col-id">EW-127</td>
+    <td class="col-name">Digitization of Business Case template: Future proof and AI-powered for smart Portfolio prioritization</td>
+    <td>Shez Partovi</td>
+    <td class="num">2.5</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm">The current solution of business ca</td>
+  </tr><tr>
+    <td class="col-id">EW-28</td>
+    <td class="col-name">NAR Government IT System &amp; Security</td>
+    <td>Jeff DiLullo</td>
+    <td class="num">0.78</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"> (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-142</td>
+    <td class="col-name">Vmware/Broadcom exit for Compute estate (GoA)</td>
+    <td>Laura Matz</td>
+    <td class="num">0.7</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"></td>
+  </tr><tr>
+    <td class="col-id">Bu-61</td>
+    <td class="col-name">Entrepreneur Split</td>
+    <td>Bert van Meurs</td>
+    <td class="num">0.7</td>
+    <td><span class="tier t-oth">Other</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"> (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-13</td>
+    <td class="col-name">HA AI Enablement and Platform compliance</td>
+    <td>Laura Matz</td>
+    <td class="num">0.5</td>
+    <td><span class="tier t-oth">Other</span></td>
+    <td><span class="tag-hold">Mandatory priority TBD</span></td>
+    <td class="muted sm">SoX, NPSS (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-119</td>
+    <td class="col-name">LLM, AI Foundation &amp; ITaaP Extension in GCR</td>
+    <td>Ling Liu</td>
+    <td class="num">0.5</td>
+    <td><span class="tier t-sch">Scheduled</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"></td>
+  </tr><tr>
+    <td class="col-id">EW-50</td>
+    <td class="col-name">Global Hold program Improvement</td>
+    <td>Steve C de Baca</td>
+    <td class="num">0.5</td>
+    <td><span class="tier t-oth">Other</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"> (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-37</td>
+    <td class="col-name">EADI - I&amp;A Business Intelligence Rationalisation ( New name : EADI -I&amp;A CDM and AI asset engineering )</td>
+    <td>Laura Matz</td>
+    <td class="num">0.49</td>
+    <td><span class="tier t-oth">Other</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"> (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-25</td>
+    <td class="col-name">Service365 HK &amp; TW</td>
+    <td>Ling Liu</td>
+    <td class="num">0.48</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"> (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-59</td>
+    <td class="col-name">GCR IT Decommission</td>
+    <td>Laura Matz</td>
+    <td class="num">0.48</td>
+    <td><span class="tier t-sch">Scheduled</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"></td>
+  </tr><tr>
+    <td class="col-id">EW-19</td>
+    <td class="col-name">SICR APQP Supplier Portal</td>
+    <td>Steve C de Baca</td>
+    <td class="num">0.45</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"></td>
+  </tr><tr>
+    <td class="col-id">EW-23</td>
+    <td class="col-name">Channel365 2027 Change&amp;Sustain</td>
+    <td>Ling Liu</td>
+    <td class="num">0.4</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"> (2027)</td>
+  </tr><tr>
+    <td class="col-id">Bu-353</td>
+    <td class="col-name">BU Existing Project CR's (ALM - Workpath, Viva goals)</td>
+    <td>Jie Xue</td>
+    <td class="num">0.34</td>
+    <td><span class="tier t-oth">Other</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm">NA (2027)</td>
+  </tr><tr>
+    <td class="col-id">EW-70</td>
+    <td class="col-name">AI Big Bets - Clinical &amp; Medical Affairs, Medical Safety, and HEMAR</td>
+    <td>Carla Rosana Goulart Silva Peron</td>
+    <td class="num">0.3</td>
+    <td><span class="tier t-oth">Other</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm">EU AI Act; GDPR; MDR/IVDR and ISO 1</td>
+  </tr><tr>
+    <td class="col-id">EW-102</td>
+    <td class="col-name">IT ServiceContinuity Management</td>
+    <td>Laura Matz</td>
+    <td class="num">0.13</td>
+    <td><span class="tier t-imm">Immediate</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"></td>
+  </tr><tr>
+    <td class="col-id">EW-77</td>
+    <td class="col-name">FIN-ARIC LFR's Non SAP being ADL/BW/Power BI etc. Dashboard &amp; Reports for SOx &amp; Compliancy purposes</td>
+    <td>Charlotte Hanneman</td>
+    <td class="num">0.12</td>
+    <td><span class="tier t-sch">Scheduled</span></td>
+    <td><span class="muted sm">Budget pressure — eligible for override</span></td>
+    <td class="muted sm"></td>
+  </tr></tbody>
+  </table>
+  </div>
+</div>
+</section>
+
+<!-- INTERACTIVE DETAIL -->
+<section id="detail">
+<div class="stitle">LFR Programme Detail by ExCo Leader</div>
+<div class="panel">
+
+  <!-- TOOLBAR: ExCo filter + Status filter + KPIs -->
+  <div class="dtb">
+    <label>ExCo Leader</label>
+    <select id="dd-exco"><option value="__all__">All ExCo Leaders (77 programmes)</option><option value="Laura Matz">Laura Matz — Information Technology (9)</option><option value="Charlotte Hanneman">Charlotte Hanneman — Finance &amp; Security (5)</option><option value="Marnix van Ginneken">Marnix van Ginneken — Legal, Comms &amp; IP&amp;S (7)</option><option value="Wim Appelo">Wim Appelo — COO &amp; ISC (1)</option><option value="Julia Strandberg">Julia Strandberg — Connected Care (11)</option><option value="Bert van Meurs">Bert van Meurs — IGT &amp; Service Transformation (2)</option><option value="Jie Xue">Jie Xue — Precision Diagnosis (7)</option><option value="Deeptha Khanna">Deeptha Khanna — Personal Health (6)</option><option value="Shez Partovi">Shez Partovi — EI &amp; I&amp;D (2)</option><option value="Steve C de Baca">Steve C de Baca — Patient Safety &amp; Quality (4)</option><option value="Carla Rosana Goulart Silva Peron">Carla Rosana Goulart Silva Peron — Medical Office (5)</option><option value="Ling Liu">Ling Liu — Greater China Region (10)</option><option value="Jeff DiLullo">Jeff DiLullo — North America (1)</option><option value="Özlem Fidanci">Özlem Fidanci — International Regions (5)</option><option value="Filip Koek">Filip Koek — Internal Audit (2)</option></select>
+    <label>Status</label>
+    <select id="dd-status"><option value="__all__">All Statuses</option>
+<option value="funded">Funded</option>
+<option value="gap">Gap — Not Funded</option>
+<option value="hold">Hold Condition</option>
+<option value="partial">Partial Scope</option></select>
+    <div class="ik-row">
+      <div class="ik"><span class="kv" id="ik-count">77</span><span class="kl">Programmes</span></div>
+      <div class="ik"><span class="kv" id="ik-dem">53.14</span><span class="kl">Demand M€</span></div>
+      <div class="ik"><span class="kv" id="ik-fund">43.78</span><span class="kl">Funded M€</span></div>
+      <div class="ik amber"><span class="kv" id="ik-cov">82.4%</span><span class="kl">Coverage</span></div>
+      <div class="ik red"><span class="kv" id="ik-gaps">16</span><span class="kl">Gaps</span></div>
+      <div class="ik amber"><span class="kv" id="ik-holds">1</span><span class="kl">Holds</span></div>
+    </div>
+  </div>
+
+  <!-- SAVE BAR -->
+  <div class="save-bar">
+    <button class="btn btn-save" id="btn-save" onclick="saveDecisions()">💾 Save Decisions</button>
+    <button class="btn btn-export" id="btn-export" onclick="exportDecisions()">⬇ Export JSON</button>
+    <button class="btn btn-clear" id="btn-clear" onclick="clearDecisions()">✕ Clear All</button>
+    <span class="change-count" id="change-count">No decisions saved yet</span>
+    <span class="saved-note" id="saved-note"></span>
+  </div>
+
+  <p id="det-sub" style="font-size:12px;color:var(--mu);padding:7px 16px 5px;border-bottom:1px solid var(--br)">
+    Showing all 77 LFR programmes across all ExCo leaders
+  </p>
+
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr>
+      <th>Opt In/Out</th>
+      <th>ID</th>
+      <th>Programme Name</th>
+      <th>Organisation</th>
+      <th>Priority Tier</th>
+      <th>Demand M€</th>
+      <th>Funded M€</th>
+      <th>Status</th>
+      <th>LFR Reference</th>
+      <th>Benefit Class</th>
+      <th>Holds / Flags</th>
+      <th>Feedback</th>
+    </tr></thead>
+    <tbody id="ptbody">
+<tr class="pr pr-gap"
+    data-exco="Shez Partovi"
+    data-status="gap"
+    data-id="EW-127">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-127" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-127" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-127" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-127</td>
+  <td class="col-name">Digitization of Business Case template: Future proof and AI-powered for smart Portfolio prioritization</td>
+  <td class="col-org muted sm">Innovation and Design Business O</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">2.5</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title="The current solution of business case is not sustainable. We need this solution to avoid deficiencies and observations of PWC audit. The data of business case is the basis of capitalization of PDLM projects within Philips.">The current solution of busi</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-127"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-04">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-04" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-04" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-04" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-04</td>
+  <td class="col-name">Healthcare Compliance Project Engage</td>
+  <td class="col-org muted sm">Legal</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">2.2</td>
+  <td class="num">2.2</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="ABAC, HCC">ABAC, HCC (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-04"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-181">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-181" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-181" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-181" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-181</td>
+  <td class="col-name">GALA refactoring (license revenue management)</td>
+  <td class="col-org muted sm">Intellectual Property &amp; Standard</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">1.1</td>
+  <td class="num">1.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Strict IFRS accounting standards and ICS/SOX compliance framework (significant ORU)">Strict IFRS accounting stand (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-181"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Jeff DiLullo"
+    data-status="gap"
+    data-id="EW-28">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-28" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-28" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-28" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-28</td>
+  <td class="col-name">NAR Government IT System &amp; Security</td>
+  <td class="col-org muted sm">North America</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.78</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""> (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-28"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Carla Rosana Goulart Silva Peron"
+    data-status="funded"
+    data-id="EW-68">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-68" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-68" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-68" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-68</td>
+  <td class="col-name">Veeva Program (@investor - Evidence &amp; Claims Management)</td>
+  <td class="col-org muted sm">Medical Office</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.73</td>
+  <td class="num">0.73</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="FDA, FCA (in US), in EU: Medical Device Regulation (MDR 2017/745), and recent CAPA around addresses a process related noncompliance in the approval of promotional marketing materials where localized promotional assets have been approved outside the required system and without controlled approval records. EU MDR claims control; FDA/FD&amp;C Act and 21 CFR 801; electronic approval records/21 CFR Part 11; CAPA.">FDA, FCA (in US), in EU: Med (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-68"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Laura Matz"
+    data-status="gap"
+    data-id="EW-142">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-142" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-142" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-142" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-142</td>
+  <td class="col-name">Vmware/Broadcom exit for Compute estate (GoA)</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.7</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-142"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Özlem Fidanci"
+    data-status="funded"
+    data-id="EW-45">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-45" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-45" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-45" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-45</td>
+  <td class="col-name">FIN-IR - Brazil Tax Reform Phase 3</td>
+  <td class="col-org muted sm">International Regions</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.55</td>
+  <td class="num">0.55</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Dual VAT structure">Dual VAT structure (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-45"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Shez Partovi"
+    data-status="funded"
+    data-id="EW-124">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-124" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-124" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-124" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-124</td>
+  <td class="col-name">I2M Planisware : Audit Readiness &amp; Innovation Reporting Enablement</td>
+  <td class="col-org muted sm">Innovation and Design Business O</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.5</td>
+  <td class="num">0.5</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Required to address non-compliant issues in 2027 with regards to SOx observed during PWC audit and Internal Control reviews (amongst others all IFA controls, Subsidy (mainly Europe) audit requirements, WBSO (Wet bevordering speur- en ontwikkelwerk).">Required to address non-comp (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-124"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-21">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-21" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-21" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-21" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-21</td>
+  <td class="col-name">Service365 &amp; Project Operations365 2027 Change&amp;Sustain</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.48</td>
+  <td class="num">0.48</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="CBDT">CBDT (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-21"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-22">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-22" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-22" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-22" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-22</td>
+  <td class="col-name">Commercial365 2027 Change&amp;Sustain</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.48</td>
+  <td class="num">0.48</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="CBDT">CBDT (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-22"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Ling Liu"
+    data-status="gap"
+    data-id="EW-25">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-25" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-25" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-25" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-25</td>
+  <td class="col-name">Service365 HK &amp; TW</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.48</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""> (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-25"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Steve C de Baca"
+    data-status="gap"
+    data-id="EW-19">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-19" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-19" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-19" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-19</td>
+  <td class="col-name">SICR APQP Supplier Portal</td>
+  <td class="col-org muted sm">Patient Safety &amp; Quality</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.45</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-19"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-24">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-24" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-24" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-24" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-24</td>
+  <td class="col-name">China Data Lake 2027 Change&amp;Sustain</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.4</td>
+  <td class="num">0.4</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="CBDT">CBDT (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-24"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Laura Matz"
+    data-status="funded"
+    data-id="EW-72">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-72" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-72" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-72" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-72</td>
+  <td class="col-name">ARIS Process framework</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.4</td>
+  <td class="num">0.4</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-72"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Ling Liu"
+    data-status="gap"
+    data-id="EW-23">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-23" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-23" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-23" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-23</td>
+  <td class="col-name">Channel365 2027 Change&amp;Sustain</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.4</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""> (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-23"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Carla Rosana Goulart Silva Peron"
+    data-status="funded"
+    data-id="EW-67">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-67" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-67" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-67" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-67</td>
+  <td class="col-name">BEACON - Program (BoM - Clinical Research Model)</td>
+  <td class="col-org muted sm">Medical Office</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.38</td>
+  <td class="num">0.38</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Clinical research governance: EU MDR, ISO 14155, GDPR, local ethics/WMO; FDA 21 CFR 812/50/56 where applicable.">Clinical research governance (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-67"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Carla Rosana Goulart Silva Peron"
+    data-status="funded"
+    data-id="EW-69">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-69" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-69" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-69" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-69</td>
+  <td class="col-name">eClinical Platform - Compliance &amp; Sustain</td>
+  <td class="col-org muted sm">Medical Office</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.35</td>
+  <td class="num">0.35</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Good Clinical Practice (ISO 14155), FDA, Medical Device Regulation (MDR 2017/745), WMO. EU MDR, ISO 14155, GDPR, local ethics/WMO; FDA 21 CFR 812/50/56 and Part 11 where applicable.">Good Clinical Practice (ISO  (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-69"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Steve C de Baca"
+    data-status="funded"
+    data-id="EW-162">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-162" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-162" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-162" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-162</td>
+  <td class="col-name">Quality AI for GCR Adverse Event Report and Post Market Vigilance</td>
+  <td class="col-org muted sm">Patient Safety &amp; Quality</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.35</td>
+  <td class="num">0.35</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="CAPA">CAPA (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-162"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-154">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-154" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-154" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-154" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-154</td>
+  <td class="col-name">E2E event planning incl. GBP compliance review, HCP engagement review &amp; registration for GCR (Engage - Legal not usable)</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.25</td>
+  <td class="num">0.25</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Anti-unfair competition law (AUCL), PRC criminal law and Medical representative management Measrures, GBP, PIPL, CBDT">Anti-unfair competition law  (2027)</td>
+  <td class="col-ben muted sm">No Benefit Data</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-154"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Özlem Fidanci"
+    data-status="funded"
+    data-id="EW-61">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-61" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-61" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-61" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-61</td>
+  <td class="col-name">Contractor Management &amp; Permit to Work</td>
+  <td class="col-org muted sm">Health &amp; Safety</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.23</td>
+  <td class="num">0.23</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="EHS">EHS (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-61"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-60">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-60" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-60" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-60" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-60</td>
+  <td class="col-name">3rd Party Screening Replatformation</td>
+  <td class="col-org muted sm">Legal</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.2</td>
+  <td class="num">0.2</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="ABAC, EC&amp;S">ABAC, EC&amp;S (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-60"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Laura Matz"
+    data-status="gap"
+    data-id="EW-102">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-102" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-102" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-102" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-102</td>
+  <td class="col-name">IT ServiceContinuity Management</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.13</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-102"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Özlem Fidanci"
+    data-status="funded"
+    data-id="EW-46">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-46" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-46" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-46" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-46</td>
+  <td class="col-name">FIN-IR - India Privacy Data Protection Bill (deferred from 2026 on PF request)</td>
+  <td class="col-org muted sm">International Regions</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="DPDP Act">DPDP Act (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-46"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-163">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-163" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-163" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-163" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-163</td>
+  <td class="col-name">Master Data Clean up, Harmonization &amp; Dashboard (incl. SoX Key Reports)</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="SoX">SoX (2026)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-163"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Özlem Fidanci"
+    data-status="funded"
+    data-id="EW-47">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-47" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-47" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-47" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-47</td>
+  <td class="col-name">FIN-IR - ORU Lebanon (formalize current operations)</td>
+  <td class="col-org muted sm">International Regions</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.09</td>
+  <td class="num">0.09</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Country specific">Country specific (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-47"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Charlotte Hanneman"
+    data-status="funded"
+    data-id="EW-83">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-83" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-83" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-83" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-83</td>
+  <td class="col-name">FIN-Form 1099/1042 withholding tax process improvements</td>
+  <td class="col-org muted sm">Finance</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.05</td>
+  <td class="num">0.05</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Audit Compliance (Withholding tax process deficiencies)">Audit Compliance (Withholdin (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-83"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Steve C de Baca"
+    data-status="funded"
+    data-id="EW-20">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-20" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-20" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-20" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-20</td>
+  <td class="col-name">ARIS deployment for ISC QMS Integration</td>
+  <td class="col-org muted sm">Patient Safety &amp; Quality</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.05</td>
+  <td class="num">0.05</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-20"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-165">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-165" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-165" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-165" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-165</td>
+  <td class="col-name">Multiple GCR LFR related App Enhancement (VAT Mainland, VAT Taiwan, VAT Hongkong, e-Invoice, e-Chop, e-Sign, T&amp;E company billing, EHS Lone woker etc.)</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-imm">Immediate</span></td>
+  <td class="num">0.05</td>
+  <td class="num">0.05</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-165"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Ling Liu"
+    data-status="gap"
+    data-id="EW-119">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-119" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-119" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-119" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-119</td>
+  <td class="col-name">LLM, AI Foundation &amp; ITaaP Extension in GCR</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-sch">Scheduled</span></td>
+  <td class="num">0.5</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-119"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Laura Matz"
+    data-status="gap"
+    data-id="EW-59">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-59" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-59" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-59" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-59</td>
+  <td class="col-name">GCR IT Decommission</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-sch">Scheduled</span></td>
+  <td class="num">0.48</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-59"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Charlotte Hanneman"
+    data-status="funded"
+    data-id="EW-80">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-80" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-80" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-80" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-80</td>
+  <td class="col-name">FIN-Concur Request integration with Travel &amp; Joule implementation &amp; AI Audit tool</td>
+  <td class="col-org muted sm">Finance</td>
+  <td><span class="tier t-sch">Scheduled</span></td>
+  <td class="num">0.15</td>
+  <td class="num">0.15</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Mandatory travel approval before travel booking">Mandatory travel approval be (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-80"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Charlotte Hanneman"
+    data-status="gap"
+    data-id="EW-77">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-77" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-77" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-77" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-77</td>
+  <td class="col-name">FIN-ARIC LFR's Non SAP being ADL/BW/Power BI etc. Dashboard &amp; Reports for SOx &amp; Compliancy purposes</td>
+  <td class="col-org muted sm">Finance</td>
+  <td><span class="tier t-sch">Scheduled</span></td>
+  <td class="num">0.12</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""></td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-77"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Laura Matz"
+    data-status="funded"
+    data-id="EW-11">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-11" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-11" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-11" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-11</td>
+  <td class="col-name">CCB - Group Function</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-ccb">CCB</span></td>
+  <td class="num">7.63</td>
+  <td class="num">7.63</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Risk &amp; Compliance EU directives">Risk &amp; Compliance EU directi (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-11"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Charlotte Hanneman"
+    data-status="funded"
+    data-id="EW-71">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-71" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-71" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-71" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-71</td>
+  <td class="col-name">FIN-CCB - Finance</td>
+  <td class="col-org muted sm">Finance</td>
+  <td><span class="tier t-ccb">CCB</span></td>
+  <td class="num">6.23</td>
+  <td class="num">6.23</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Ongoing Country specific regulations, laws changes related to all finance domains in respective systems - Tax, Treasury, Bank related and Accounting">Ongoing Country specific reg (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-71"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Laura Matz"
+    data-status="funded"
+    data-id="EW-65">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-65" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-65" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-65" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-65</td>
+  <td class="col-name">ISC -CCB - EW</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-ccb">CCB</span></td>
+  <td class="num">4.16</td>
+  <td class="num">4.16</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Ongoing Country and business-critcial specific regulations, laws changes related to all supply chain domains in respective SAP and non-SAP systems">Ongoing Country and business (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-65"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Charlotte Hanneman"
+    data-status="funded"
+    data-id="EW-189">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-189" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-189" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-189" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-189</td>
+  <td class="col-name">Delta/Epsilon</td>
+  <td class="col-org muted sm">Finance</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">3</td>
+  <td class="num">3</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="NDA">NDA (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-189"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Wim Appelo"
+    data-status="funded"
+    data-id="Bu-06">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-06" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-06" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-06" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-06</td>
+  <td class="col-name">Compliance - GTS</td>
+  <td class="col-org muted sm">Integrated Supply Chain (ISC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">2.2</td>
+  <td class="num">2.2</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Digital trade and data driven compliance">Digital trade and data drive (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-06"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-51">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-51" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-51" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-51" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-51</td>
+  <td class="col-name">Customer Service Management SRC</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">1.83</td>
+  <td class="num">1.83</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-51"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-104">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-104" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-104" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-104" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-104</td>
+  <td class="col-name">Windchil C&amp;CM</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">1.66</td>
+  <td class="num">1.66</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-104"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Laura Matz"
+    data-status="funded"
+    data-id="EW-10">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-10" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-10" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-10" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-10</td>
+  <td class="col-name">CCB - Hyperautomation</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">1.05</td>
+  <td class="num">1.05</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="PSQ, SoX">PSQ, SoX (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-10"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Bert van Meurs"
+    data-status="gap"
+    data-id="Bu-61">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-61" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-61" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-61" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-61</td>
+  <td class="col-name">Entrepreneur Split</td>
+  <td class="col-org muted sm">Image Guided Therapy - Systems (</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.7</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""> (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-61"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Deeptha Khanna"
+    data-status="funded"
+    data-id="Bu-309">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-309" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-309" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-309" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-309</td>
+  <td class="col-name">KSA (SA11) New 3PL Partner Project</td>
+  <td class="col-org muted sm">Personal Health (PH)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.67</td>
+  <td class="num">0.67</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="ISO/MD certification, SFDA licenses, EU MDR /ISO13485">ISO/MD certification, SFDA l (2027)</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-309"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-96">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-96" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-96" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-96" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-96</td>
+  <td class="col-name">ISC Lanscape Transformation</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.6</td>
+  <td class="num">0.6</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-96"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Laura Matz"
+    data-status="hold"
+    data-id="EW-13">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-13" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-13" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-13" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-13</td>
+  <td class="col-name">HA AI Enablement and Platform compliance</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.5</td>
+  <td class="num">—</td>
+  <td><span class="badge st-hold">Hold</span></td>
+  <td class="col-lfr muted sm" title="SoX, NPSS">SoX, NPSS (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-hold">Mandatory priority TBD</span><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-13"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Bert van Meurs"
+    data-status="funded"
+    data-id="Bu-433">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-433" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-433" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-433" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-433</td>
+  <td class="col-name">WS4 : CSIP | EMIP</td>
+  <td class="col-org muted sm">Service Transformation Office (S</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.5</td>
+  <td class="num">0.5</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="EU Data Act">EU Data Act (2027)</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-433"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Steve C de Baca"
+    data-status="gap"
+    data-id="EW-50">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-50" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-50" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-50" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-50</td>
+  <td class="col-name">Global Hold program Improvement</td>
+  <td class="col-org muted sm">Patient Safety &amp; Quality</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.5</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""> (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-50"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Laura Matz"
+    data-status="gap"
+    data-id="EW-37">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-37" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-37" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-37" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-37</td>
+  <td class="col-name">EADI - I&amp;A Business Intelligence Rationalisation ( New name : EADI -I&amp;A CDM and AI asset engineering )</td>
+  <td class="col-org muted sm">Information Technology</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.49</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title=""> (2027)</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-37"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Jie Xue"
+    data-status="funded"
+    data-id="Bu-385">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-385" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-385" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-385" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-385</td>
+  <td class="col-name">Mantan (NDA Project CT &amp; MR)</td>
+  <td class="col-org muted sm">Precision Diagnosis - Magnetic R</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.49</td>
+  <td class="num">0.49</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="NDA">NDA (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-385"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Carla Rosana Goulart Silva Peron"
+    data-status="funded"
+    data-id="EW-66">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-66" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-66" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-66" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-66</td>
+  <td class="col-name">CLARA - Clinical Partnerships (Site &amp; KOL Engagements)</td>
+  <td class="col-org muted sm">Medical Office</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.4</td>
+  <td class="num">0.4</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="HCP/HCO transparency &amp; FMV: Sunshine/Open Payments and applicable local transparency rules; GDPR; ISO 14155 where study-related.">HCP/HCO transparency &amp; FMV:  (2027)</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-66"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Jie Xue"
+    data-status="funded"
+    data-id="Bu-355">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-355" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-355" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-355" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-355</td>
+  <td class="col-name">PRISM - Product, Regulatory, Installed Base, Services Metrics unified</td>
+  <td class="col-org muted sm">Precision Diagnosis - Magnetic R</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.34</td>
+  <td class="num">0.34</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="SOX compliance">SOX compliance (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-355"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Jie Xue"
+    data-status="gap"
+    data-id="Bu-353">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-353" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-353" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-353" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-353</td>
+  <td class="col-name">BU Existing Project CR's (ALM - Workpath, Viva goals)</td>
+  <td class="col-org muted sm">Precision Diagnosis - Magnetic R</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.34</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title="NA">NA (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-353"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-178">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-178" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-178" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-178" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-178</td>
+  <td class="col-name">CCB - I&amp;D: Brand Licensing</td>
+  <td class="col-org muted sm">Intellectual Property &amp; Standard</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.33</td>
+  <td class="num">0.33</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Trademark License agreement obligations">Trademark License agreement  (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-178"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Deeptha Khanna"
+    data-status="funded"
+    data-id="Bu-297">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-297" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-297" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-297" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-297</td>
+  <td class="col-name">DPP - From Compliance to Growth, Trust &amp; Revenue Protection Platform</td>
+  <td class="col-org muted sm">Personal Health (PH)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.3</td>
+  <td class="num">0.3</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="ESPR, EU Data act &amp; Green Claims">ESPR, EU Data act &amp; Green Cl (2028)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-297"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-109">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-109" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-109" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-109" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-109</td>
+  <td class="col-name">SAP changes CD related</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.3</td>
+  <td class="num">0.3</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-109"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Deeptha Khanna"
+    data-status="funded"
+    data-id="Bu-284">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-284" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-284" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-284" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-284</td>
+  <td class="col-name">27.1 Customer Engagement | Unified Commercial Collaboration &amp; Claims Management</td>
+  <td class="col-org muted sm">Personal Health (PH)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.3</td>
+  <td class="num">0.3</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="SOX relevant. Accounting customer Pay-outs Collections">SOX relevant. Accounting cus (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-284"></textarea></td>
+</tr>
+<tr class="pr pr-gap"
+    data-exco="Carla Rosana Goulart Silva Peron"
+    data-status="gap"
+    data-id="EW-70">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-70" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-70" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-70" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-70</td>
+  <td class="col-name">AI Big Bets - Clinical &amp; Medical Affairs, Medical Safety, and HEMAR</td>
+  <td class="col-org muted sm">Medical Office</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.3</td>
+  <td class="num">—</td>
+  <td><span class="badge st-gap">Gap</span></td>
+  <td class="col-lfr muted sm" title="EU AI Act; GDPR; MDR/IVDR and ISO 14971 if medical-device AI; AI governance/ISO 42001.">EU AI Act; GDPR; MDR/IVDR an</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-70"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-97">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-97" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-97" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-97" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-97</td>
+  <td class="col-name">Contract Lifecycle Management</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.27</td>
+  <td class="num">0.27</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-97"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Jie Xue"
+    data-status="funded"
+    data-id="Bu-391">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-391" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-391" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-391" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-391</td>
+  <td class="col-name">1. GAIA - platform showing E2E product / customer quality status.</td>
+  <td class="col-org muted sm">Precision Diagnosis - Computed T</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.25</td>
+  <td class="num">0.25</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Red site requirement">Red site requirement (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-391"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-135">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-135" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-135" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-135" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-135</td>
+  <td class="col-name">Knowledge Mgmt - InCenter 2.0 - CSIP Compliance</td>
+  <td class="col-org muted sm">Intellectual Property &amp; Standard</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.2</td>
+  <td class="num">0.2</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="IP protection agianst unotherised access">IP protection agianst unothe (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-135"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Jie Xue"
+    data-status="funded"
+    data-id="Bu-193">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-193" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-193" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-193" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-193</td>
+  <td class="col-name">Ultrasound FDA Remediation</td>
+  <td class="col-org muted sm">Precision Diagnosis - Ultrasound</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.2</td>
+  <td class="num">0.2</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Ultrasound FDA remediation">Ultrasound FDA remediation (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-193"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-103">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-103" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-103" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-103" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-103</td>
+  <td class="col-name">3rd Party Inventory and Hold status update from SAP/PRD</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.2</td>
+  <td class="num">0.2</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-103"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Filip Koek"
+    data-status="funded"
+    data-id="EW-62">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-62" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-62" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-62" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-62</td>
+  <td class="col-name">Optro Accelerate Module</td>
+  <td class="col-org muted sm">Internal Audit</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.17</td>
+  <td class="num">0.17</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="IIA, IFRS, SOx">IIA, IFRS, SOx (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-62"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Deeptha Khanna"
+    data-status="funded"
+    data-id="Bu-283">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-283" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-283" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-283" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-283</td>
+  <td class="col-name">17.3 PH Digital Marketing Compliance</td>
+  <td class="col-org muted sm">Personal Health (PH)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.15</td>
+  <td class="num">0.15</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="EU AI Act applicable from 2nd Aug 2026">EU AI Act applicable from 2n (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-283"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Deeptha Khanna"
+    data-status="funded"
+    data-id="Bu-316">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-316" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-316" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-316" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-316</td>
+  <td class="col-name">RegMem in a Day</td>
+  <td class="col-org muted sm">Personal Health (PH)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.15</td>
+  <td class="num">0.15</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Automation of process creating regulatory memos for Artwork changes owing to increased speed of implementation">Automation of process creati (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-316"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Ling Liu"
+    data-status="funded"
+    data-id="EW-161">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-161" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-161" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-161" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-161</td>
+  <td class="col-name">Regina AI - GCR NMPA Submission Assistant for Regulatory Affair</td>
+  <td class="col-org muted sm">Greater China</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.15</td>
+  <td class="num">0.15</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="NMPA">NMPA (2027)</td>
+  <td class="col-ben muted sm">Hard Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-161"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-117">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-117" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-117" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-117" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-117</td>
+  <td class="col-name">SRC Uno Data Lake</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.13</td>
+  <td class="num">0.13</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-117"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Özlem Fidanci"
+    data-status="funded"
+    data-id="Bu-68">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-68" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-68" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-68" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-68</td>
+  <td class="col-name">IR27#23 - Sales Deals compliance</td>
+  <td class="col-org muted sm">International Regions</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="anticipated external audit issue">anticipated external audit i (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-68"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-101">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-101" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-101" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-101" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-101</td>
+  <td class="col-name">Kimball/Smoke changes</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-101"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Filip Koek"
+    data-status="funded"
+    data-id="EW-63">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-63" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-63" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-63" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-63</td>
+  <td class="col-name">Internal Audit - AI and Innovation</td>
+  <td class="col-org muted sm">Internal Audit</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="IIA">IIA (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-63"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-64">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-64" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-64" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-64" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-64</td>
+  <td class="col-name">Legal - AI and Innovation</td>
+  <td class="col-org muted sm">Legal</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="ABAC, EC&amp;S, HCC, GDPR">ABAC, EC&amp;S, HCC, GDPR (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Payback period missing for quantified benefit claim</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-64"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Deeptha Khanna"
+    data-status="funded"
+    data-id="Bu-294">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-294" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-294" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-294" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-294</td>
+  <td class="col-name">Business application validation</td>
+  <td class="col-org muted sm">Personal Health (PH)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.1</td>
+  <td class="num">0.1</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Ongoing validation of all consumer facing business applications">Ongoing validation of all co (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-294"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-116">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-116" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-116" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-116" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-116</td>
+  <td class="col-name">SRC Uno Analytics</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.08</td>
+  <td class="num">0.08</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-116"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Marnix van Ginneken"
+    data-status="funded"
+    data-id="EW-180">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_EW-180" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_EW-180" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_EW-180" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">EW-180</td>
+  <td class="col-name">CCB - I&amp;D - The Vault</td>
+  <td class="col-org muted sm">Intellectual Property &amp; Standard</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.05</td>
+  <td class="num">0.05</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Legal requirement for managing IP according to local (governmental) laws">Legal requirement for managi (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="EW-180"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Jie Xue"
+    data-status="funded"
+    data-id="Bu-392">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-392" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-392" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-392" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-392</td>
+  <td class="col-name">2. Audit management tool</td>
+  <td class="col-org muted sm">Precision Diagnosis - Computed T</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.05</td>
+  <td class="num">0.05</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Audit requirement">Audit requirement (2027)</td>
+  <td class="col-ben muted sm">Soft Benefit</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-392"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-105">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-105" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-105" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-105" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-105</td>
+  <td class="col-name">QMS Roles Standardization (Lumen) and Job Catalog alignment</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.04</td>
+  <td class="num">0.04</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-105"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Jie Xue"
+    data-status="funded"
+    data-id="Bu-365">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-365" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-365" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-365" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-365</td>
+  <td class="col-name">Regulatory submissions simplification | Document creation &amp; management</td>
+  <td class="col-org muted sm">Precision Diagnosis - Magnetic R</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.03</td>
+  <td class="num">0.03</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="DigiCAP">DigiCAP (2028)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-365"></textarea></td>
+</tr>
+<tr class="pr"
+    data-exco="Julia Strandberg"
+    data-status="funded"
+    data-id="Bu-106">
+  <td class="col-chk">
+    <div class="opt-group">
+      <label class="opt-btn opt-in" title="Opt In"><input type="radio" name="opt_Bu-106" value="in"><span>In</span></label>
+      <label class="opt-btn opt-out" title="Opt Out"><input type="radio" name="opt_Bu-106" value="out"><span>Out</span></label>
+      <label class="opt-btn opt-none" title="No override"><input type="radio" name="opt_Bu-106" value="" checked><span>—</span></label>
+    </div>
+  </td>
+  <td class="col-id">Bu-106</td>
+  <td class="col-name">Mammoth migration TEDS to Cornerstone (Wave 5)</td>
+  <td class="col-org muted sm">Sleep &amp; Respiratory Care (SRC)</td>
+  <td><span class="tier t-oth">Other</span></td>
+  <td class="num">0.01</td>
+  <td class="num">0.01</td>
+  <td><span class="badge st-funded">Funded</span></td>
+  <td class="col-lfr muted sm" title="Consent Decree">Consent Decree (2027)</td>
+  <td class="col-ben muted sm">Qualitative Only</td>
+  <td class="col-holds"><span class="tag-warn">Decision Band unassessed</span></td>
+  <td class="col-fb"><textarea class="fb-input" rows="2" placeholder="Add feedback…" data-id="Bu-106"></textarea></td>
+</tr></tbody>
+  </table>
+  <p id="no-res" class="no-res">No programmes match the selected filters.</p>
+  </div>
+
+</div>
+</section>
+
+</div>
+
+<script>
+const STATS={"Laura Matz":{"count":9,"funded":4,"demand":15.54,"fundedM":13.24,"coverage":85.2,"gaps":5,"holds":1},"Charlotte Hanneman":{"count":5,"funded":4,"demand":9.55,"fundedM":9.43,"coverage":98.7,"gaps":1,"holds":0},"Marnix van Ginneken":{"count":7,"funded":7,"demand":4.18,"fundedM":4.18,"coverage":100,"gaps":0,"holds":0},"Wim Appelo":{"count":1,"funded":1,"demand":2.2,"fundedM":2.2,"coverage":100,"gaps":0,"holds":0},"Julia Strandberg":{"count":11,"funded":11,"demand":5.21,"fundedM":5.21,"coverage":100,"gaps":0,"holds":0},"Bert van Meurs":{"count":2,"funded":1,"demand":1.2,"fundedM":0.5,"coverage":41.7,"gaps":1,"holds":0},"Jie Xue":{"count":7,"funded":6,"demand":1.69,"fundedM":1.36,"coverage":80.2,"gaps":1,"holds":0},"Deeptha Khanna":{"count":6,"funded":6,"demand":1.67,"fundedM":1.67,"coverage":100,"gaps":0,"holds":0},"Shez Partovi":{"count":2,"funded":1,"demand":3,"fundedM":0.5,"coverage":16.7,"gaps":1,"holds":0},"Steve C de Baca":{"count":4,"funded":2,"demand":1.35,"fundedM":0.4,"coverage":29.6,"gaps":2,"holds":0},"Carla Rosana Goulart Silva Peron":{"count":5,"funded":4,"demand":2.15,"fundedM":1.85,"coverage":86,"gaps":1,"holds":0},"Ling Liu":{"count":10,"funded":7,"demand":3.29,"fundedM":1.91,"coverage":58.1,"gaps":3,"holds":0},"Jeff DiLullo":{"count":1,"funded":0,"demand":0.78,"fundedM":0,"coverage":0,"gaps":1,"holds":0},"Özlem Fidanci":{"count":5,"funded":5,"demand":1.06,"fundedM":1.06,"coverage":100,"gaps":0,"holds":0},"Filip Koek":{"count":2,"funded":2,"demand":0.27,"fundedM":0.27,"coverage":100,"gaps":0,"holds":0}};
+const TOTAL=77,FUNDED=61,DEMAND=53.14,FUNDEDM=43.78,COV=82.4,GAPS=16,HOLDS=1;
+const STORAGE_KEY='lfr_decisions_v570';
+
+// Restore saved decisions from localStorage
+function restore(){
+  try{
+    const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+    Object.entries(saved).forEach(([id,d])=>{
+      const tr=document.querySelector('tr[data-id="'+id+'"]');
+      if(!tr) return;
+      if(d.opt){
+        const radio=tr.querySelector('input[name="opt_'+id+'"][value="'+d.opt+'"]');
+        if(radio){radio.checked=true;}
+      }
+      if(d.fb){
+        const ta=tr.querySelector('.fb-input');
+        if(ta){ta.value=d.fb;ta.classList.toggle('has-val',!!d.fb);}
+      }
+    });
+    updateChangeCount();
+  }catch(e){}
+}
+
+function updateKpis(exco,status){
+  let rows=[...document.querySelectorAll('#ptbody tr')];
+  if(exco!=='__all__') rows=rows.filter(r=>r.dataset.exco===exco);
+  if(status!=='__all__') rows=rows.filter(r=>r.dataset.status===status);
+  const s=exco!=='__all__'&&status==='__all__'?STATS[exco]:null;
+  if(s&&status==='__all__'){
+    set('ik-count',s.count); set('ik-dem',s.demand); set('ik-fund',s.fundedM);
+    set('ik-cov',s.coverage+'%'); set('ik-gaps',s.gaps||'—'); set('ik-holds',s.holds||'—');
+    cls('ik-gaps',s.gaps?'red':''); cls('ik-cov',s.coverage<100?'amber':'grn');
+  } else {
+    const vis=rows.filter(r=>!r.classList.contains('hidden'));
+    const dem=vis.reduce((a,r)=>{const c=parseFloat(r.cells[5]?.textContent)||0;return a+c;},0);
+    const fun=vis.reduce((a,r)=>{const c=parseFloat(r.cells[6]?.textContent)||0;return a+c;},0);
+    const gaps=vis.filter(r=>r.dataset.status==='gap'||r.dataset.status==='hold').length;
+    const holds=vis.filter(r=>r.dataset.status==='hold').length;
+    const cov=dem>0?Math.round(fun/dem*1000)/10:0;
+    set('ik-count',vis.length); set('ik-dem',Math.round(dem*100)/100);
+    set('ik-fund',Math.round(fun*100)/100); set('ik-cov',cov+'%');
+    set('ik-gaps',gaps||'—'); set('ik-holds',holds||'—');
+    cls('ik-gaps',gaps?'red':''); cls('ik-cov',cov<100?'amber':'grn');
+  }
+}
+
+function filterTable(){
+  const exco=document.getElementById('dd-exco').value;
+  const status=document.getElementById('dd-status').value;
+  let vis=0;
+  document.querySelectorAll('#ptbody tr').forEach(tr=>{
+    const m=(exco==='__all__'||tr.dataset.exco===exco)&&(status==='__all__'||tr.dataset.status===status);
+    tr.classList.toggle('hidden',!m);
+    if(m) vis++;
+  });
+  document.getElementById('no-res').style.display=vis?'none':'block';
+  updateKpis(exco,status);
+  const sub=document.getElementById('det-sub');
+  const eLabel=exco==='__all__'?'All ExCo Leaders':exco;
+  const sLabel=status==='__all__'?'':' · '+{funded:'Funded only',gap:'Gaps only',hold:'Holds only',partial:'Partial scope'}[status];
+  sub.textContent=vis+' programmes — '+eLabel+sLabel;
+}
+
+function saveDecisions(){
+  const exco=document.getElementById('dd-exco').value;
+  let saved={};
+  try{saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');}catch(e){}
+  const rows=exco==='__all__'
+    ?[...document.querySelectorAll('#ptbody tr')]
+    :[...document.querySelectorAll('#ptbody tr[data-exco="'+exco+'"]')];
+  rows.forEach(tr=>{
+    const id=tr.dataset.id;
+    const optEl=tr.querySelector('input[type="radio"]:checked');
+    const fb=tr.querySelector('.fb-input')?.value||'';
+    const opt=optEl?.value||'';
+    if(opt||fb) saved[id]={opt,fb,ts:Date.now(),exco:tr.dataset.exco};
+    else delete saved[id];
+  });
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(saved));
+  const note=document.getElementById('saved-note');
+  note.textContent='Saved '+(exco==='__all__'?'all decisions':exco+"'s decisions")+' · '+new Date().toLocaleTimeString();
+  note.style.display='inline';
+  setTimeout(()=>note.style.display='none',3500);
+  updateChangeCount();
+}
+
+function exportDecisions(){
+  let saved={};
+  try{saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');}catch(e){}
+  const out=JSON.stringify({exportedAt:new Date().toISOString(),decisions:saved},null,2);
+  const a=document.createElement('a');
+  a.href='data:application/json,'+encodeURIComponent(out);
+  a.download='LFR-ExCo-Decisions-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+}
+
+function clearDecisions(){
+  if(!confirm('Clear all saved decisions? This cannot be undone.')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  document.querySelectorAll('#ptbody tr').forEach(tr=>{
+    const id=tr.dataset.id;
+    const none=tr.querySelector('input[value=""]');
+    if(none) none.checked=true;
+    const ta=tr.querySelector('.fb-input');
+    if(ta){ta.value='';ta.classList.remove('has-val');}
+  });
+  updateChangeCount();
+}
+
+function updateChangeCount(){
+  let saved={};
+  try{saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');}catch(e){}
+  const n=Object.keys(saved).length;
+  document.getElementById('change-count').textContent=n?n+' decision'+(n>1?'s':'')+' saved':'No decisions saved yet';
+}
+
+function set(id,v){const el=document.getElementById(id);if(el) el.textContent=v;}
+function cls(id,c){
+  const el=document.getElementById(id)?.closest('.ik');
+  if(!el) return;
+  el.className='ik'+(c?' '+c:'');
+}
+
+// Expose globally so button onclick attr also works
+window.saveDecisions   = saveDecisions;
+window.exportDecisions = exportDecisions;
+window.clearDecisions  = clearDecisions;
+
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('dd-exco').addEventListener('change',filterTable);
+  document.getElementById('dd-status').addEventListener('change',filterTable);
+  document.getElementById('btn-save').addEventListener('click',saveDecisions);
+  document.getElementById('btn-export').addEventListener('click',exportDecisions);
+  document.getElementById('btn-clear').addEventListener('click',clearDecisions);
+
+  // Feedback highlight
+  document.querySelectorAll('.fb-input').forEach(ta=>{
+    ta.addEventListener('input',()=>ta.classList.toggle('has-val',!!ta.value));
+  });
+
+  // Summary row click → filter to that ExCo
+  document.querySelectorAll('.exco-link').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      const exco=a.dataset.exco;
+      document.getElementById('dd-exco').value=exco;
+      document.getElementById('dd-status').value='__all__';
+      filterTable();
+      document.getElementById('detail').scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  restore();
+  updateChangeCount();
+});
+</script>
+</body>
+</html>

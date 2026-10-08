@@ -1,0 +1,183 @@
+{
+  "checks": [
+    {
+      "name": "Independent active source count",
+      "passed": true,
+      "detail": "433"
+    },
+    {
+      "name": "Source key total and scale",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Operations all service costs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Operations 36 recipient consumption columns",
+      "passed": true,
+      "detail": "470.3144630385122"
+    },
+    {
+      "name": "validation-01 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-01 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-01 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-02 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-02 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-03 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-03 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-04 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-04 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-05 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-05 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-06 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-06 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-07 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-07 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-08 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-08 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-09 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-09 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 independent record funding and merit",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-10 independent receiving organisation totals",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "validation-10 exact source percentage lineage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source workbook hash stable",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "recordsPerScenario": 433,
+  "scenarios": 10,
+  "fieldComparisons": 21650,
+  "mismatches": []
+}

@@ -1,0 +1,87 @@
+{
+  "checks": 134,
+  "passed": 134,
+  "failures": [],
+  "scenarios": [
+    {
+      "id": "validation-01",
+      "name": "Optimal",
+      "funded": 99.963,
+      "ew": 49.716,
+      "bu": 50.247,
+      "total": 575.4674630385123
+    },
+    {
+      "id": "validation-02",
+      "name": "Protect Sustain",
+      "funded": 99.971,
+      "ew": 56.205,
+      "bu": 43.766,
+      "total": 575.4754630385123
+    },
+    {
+      "id": "validation-03",
+      "name": "Release Sustain",
+      "funded": 100,
+      "ew": 47.139,
+      "bu": 52.861,
+      "total": 575.5044630385123
+    },
+    {
+      "id": "validation-04",
+      "name": "AOP percentage basis",
+      "funded": 99.973,
+      "ew": 46.521,
+      "bu": 53.452,
+      "total": 575.4774630385123
+    },
+    {
+      "id": "validation-05",
+      "name": "Absolute allocations",
+      "funded": 99.994,
+      "ew": 45.019,
+      "bu": 54.975,
+      "total": 575.4984630385123
+    },
+    {
+      "id": "validation-06",
+      "name": "IT Simplification reserve",
+      "funded": 99.926,
+      "ew": 52.458,
+      "bu": 47.468,
+      "total": 575.4304630385122
+    },
+    {
+      "id": "validation-07",
+      "name": "Inclusion and partial scope",
+      "funded": 100.413,
+      "ew": 49.606,
+      "bu": 50.807,
+      "total": 575.9174630385122
+    },
+    {
+      "id": "validation-08",
+      "name": "Requested investment and merit changes",
+      "funded": 99.967,
+      "ew": 49.742,
+      "bu": 50.225,
+      "total": 575.4714630385123
+    },
+    {
+      "id": "validation-09",
+      "name": "F&R and BU ExCo trade-offs",
+      "funded": 98.963,
+      "ew": 47.716,
+      "bu": 51.247,
+      "total": 574.4674630385123
+    },
+    {
+      "id": "validation-10",
+      "name": "Combined 80M stress and recovery",
+      "funded": 79.875,
+      "ew": 48.291,
+      "bu": 31.584,
+      "total": 555.3794630385123
+    }
+  ]
+}

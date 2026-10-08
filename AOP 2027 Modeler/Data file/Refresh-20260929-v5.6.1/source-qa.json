@@ -1,0 +1,1320 @@
+{
+  "checks": [
+    {
+      "id": "INDEPENDENT-01",
+      "status": "PASS",
+      "detail": "464 normalized IDs traced to exact source rows"
+    },
+    {
+      "id": "INDEPENDENT-02",
+      "status": "PASS",
+      "detail": {
+        "unitConversionDifferences": [],
+        "precision": "Preserved v5.6 engine rounds M€ to six decimals; original precision remains in snapshots"
+      }
+    },
+    {
+      "id": "INDEPENDENT-03",
+      "status": "PASS",
+      "detail": "182 source service IDs match candidate exactly"
+    },
+    {
+      "id": "INDEPENDENT-04",
+      "status": "PASS",
+      "detail": "All service costs equal cached source cells at full precision"
+    },
+    {
+      "id": "INDEPENDENT-05",
+      "status": "PASS",
+      "detail": "Independent source service total"
+    },
+    {
+      "id": "SOURCE-UNCHANGED",
+      "status": "PASS",
+      "detail": "Original program workbook unchanged"
+    }
+  ],
+  "gaps": {
+    "missingRequests": [
+      {
+        "id": "EW-73",
+        "name": "SPINE24",
+        "org": "Information Technology",
+        "sheet": "EW",
+        "row": 70
+      },
+      {
+        "id": "Bu-213",
+        "name": "IR [C1/C2/C3] Channel Partner Program",
+        "org": "Monitoring - HPM (MCH)",
+        "sheet": "BU",
+        "row": 132
+      },
+      {
+        "id": "EW-173",
+        "name": "ISC IT DRP - DESCARTES",
+        "org": "Information Technology",
+        "sheet": "EW",
+        "row": 158
+      },
+      {
+        "id": "Bu-400",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 247
+      },
+      {
+        "id": "Bu-401",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 248
+      },
+      {
+        "id": "Bu-402",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 249
+      },
+      {
+        "id": "Bu-403",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 250
+      },
+      {
+        "id": "Bu-404",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 251
+      },
+      {
+        "id": "Bu-405",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 252
+      },
+      {
+        "id": "Bu-406",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 253
+      },
+      {
+        "id": "Bu-407",
+        "name": "",
+        "org": "Precision Diagnosis - Magnetic Resonance (MR)",
+        "sheet": "BU",
+        "row": 254
+      },
+      {
+        "id": "Bu-408",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 255
+      },
+      {
+        "id": "Bu-453",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 293
+      },
+      {
+        "id": "Bu-454",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 294
+      },
+      {
+        "id": "Bu-455",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 295
+      },
+      {
+        "id": "Bu-456",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 296
+      },
+      {
+        "id": "Bu-457",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 297
+      },
+      {
+        "id": "Bu-458",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 298
+      },
+      {
+        "id": "Bu-459",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 299
+      },
+      {
+        "id": "Bu-460",
+        "name": "",
+        "org": "",
+        "sheet": "BU",
+        "row": 300
+      }
+    ],
+    "missingNames": [
+      "Bu-400",
+      "Bu-401",
+      "Bu-402",
+      "Bu-403",
+      "Bu-404",
+      "Bu-405",
+      "Bu-406",
+      "Bu-407",
+      "Bu-408",
+      "Bu-453",
+      "Bu-454",
+      "Bu-455",
+      "Bu-456",
+      "Bu-457",
+      "Bu-458",
+      "Bu-459",
+      "Bu-460"
+    ],
+    "missingBenefits": [
+      "EW-83",
+      "EW-163",
+      "EW-154",
+      "EW-80",
+      "EW-11",
+      "EW-65",
+      "EW-71",
+      "Bu-385",
+      "Bu-109",
+      "Bu-365",
+      "EW-10",
+      "Bu-116",
+      "Bu-117",
+      "EW-189",
+      "EW-102",
+      "EW-142",
+      "EW-165",
+      "EW-50",
+      "Bu-353",
+      "EW-183",
+      "EW-139",
+      "Bu-380",
+      "EW-52",
+      "EW-84",
+      "Bu-10",
+      "EW-73",
+      "EW-74",
+      "EW-167",
+      "EW-05",
+      "EW-29",
+      "EW-53",
+      "Bu-54",
+      "EW-185",
+      "Bu-427",
+      "Bu-428",
+      "Bu-357",
+      "Bu-358",
+      "Bu-359",
+      "EW-09",
+      "EW-115",
+      "Bu-15",
+      "Bu-195",
+      "Bu-197",
+      "Bu-201",
+      "Bu-202",
+      "Bu-203",
+      "Bu-204",
+      "Bu-205",
+      "Bu-438",
+      "Bu-432",
+      "Bu-282",
+      "Bu-350",
+      "Bu-440",
+      "Bu-430",
+      "Bu-213",
+      "EW-164",
+      "EW-07",
+      "EW-27",
+      "EW-100",
+      "Bu-372",
+      "EW-153",
+      "EW-157",
+      "Bu-375",
+      "EW-152",
+      "EW-159",
+      "EW-160",
+      "EW-171",
+      "EW-172",
+      "Bu-371",
+      "Bu-377",
+      "EW-156",
+      "EW-170",
+      "EW-117",
+      "Bu-388",
+      "Bu-436",
+      "Bu-419",
+      "Bu-429",
+      "EW-94",
+      "EW-78",
+      "EW-89",
+      "EW-91",
+      "EW-81",
+      "EW-101",
+      "EW-16",
+      "EW-17",
+      "EW-85",
+      "EW-93",
+      "Bu-386",
+      "EW-95",
+      "EW-173",
+      "EW-14",
+      "Bu-387",
+      "EW-147",
+      "Bu-384",
+      "EW-18",
+      "Bu-215",
+      "EW-114",
+      "Bu-381",
+      "Bu-382",
+      "Bu-214",
+      "Bu-439",
+      "Bu-217",
+      "EW-116",
+      "EW-155",
+      "Bu-370",
+      "EW-97",
+      "EW-98",
+      "Bu-220",
+      "Bu-233",
+      "Bu-267",
+      "Bu-449",
+      "Bu-420",
+      "Bu-444",
+      "Bu-418",
+      "EW-166",
+      "Bu-400",
+      "Bu-401",
+      "Bu-402",
+      "Bu-403",
+      "Bu-404",
+      "Bu-405",
+      "Bu-406",
+      "Bu-407",
+      "Bu-408",
+      "Bu-453",
+      "Bu-454",
+      "Bu-455",
+      "Bu-456",
+      "Bu-457",
+      "Bu-458",
+      "Bu-459",
+      "Bu-460",
+      "Bu-83"
+    ],
+    "above5x": [
+      {
+        "id": "EW-46",
+        "name": "FIN-IR - India Privacy Data Protection Bill (deferred from 2026 on PF request)",
+        "cost": 0.1,
+        "benefit": 110,
+        "ratio": 1100
+      },
+      {
+        "id": "EW-69",
+        "name": "eClinical Platform - Compliance & Sustain",
+        "cost": 0.35,
+        "benefit": 3.9,
+        "ratio": 11.142857142857144
+      },
+      {
+        "id": "EW-04",
+        "name": "Healthcare Compliance Project Engage",
+        "cost": 2.2,
+        "benefit": 105,
+        "ratio": 47.72727272727273
+      },
+      {
+        "id": "EW-45",
+        "name": "FIN-IR - Brazil Tax Reform Phase 3",
+        "cost": 0.55,
+        "benefit": 1150,
+        "ratio": 2090.9090909090905
+      },
+      {
+        "id": "EW-60",
+        "name": "3rd Party Screening Replatformation",
+        "cost": 0.2,
+        "benefit": 285,
+        "ratio": 1425
+      },
+      {
+        "id": "EW-68",
+        "name": "Veeva Program (@investor - Evidence & Claims Management)",
+        "cost": 0.725,
+        "benefit": 9.464,
+        "ratio": 13.053793103448276
+      },
+      {
+        "id": "EW-181",
+        "name": "GALA refactoring (license revenue management)",
+        "cost": 1.1,
+        "benefit": 500,
+        "ratio": 454.5454545454545
+      },
+      {
+        "id": "EW-124",
+        "name": "I2M Planisware : Audit Readiness & Innovation Reporting Enablement",
+        "cost": 0.5,
+        "benefit": 18.322,
+        "ratio": 36.644
+      },
+      {
+        "id": "EW-13",
+        "name": "HA AI Enablement and Platform compliance",
+        "cost": 0.5,
+        "benefit": 25,
+        "ratio": 50
+      },
+      {
+        "id": "EW-135",
+        "name": "Knowledge Mgmt - InCenter 2.0 - CSIP Compliance",
+        "cost": 0.2,
+        "benefit": 30,
+        "ratio": 150
+      },
+      {
+        "id": "Bu-68",
+        "name": "IR27#23 - Sales Deals compliance",
+        "cost": 0.1,
+        "benefit": 2500,
+        "ratio": 25000
+      },
+      {
+        "id": "Bu-297",
+        "name": "DPP - From Compliance to Growth, Trust & Revenue Protection Platform",
+        "cost": 0.3,
+        "benefit": 4.236,
+        "ratio": 14.12
+      },
+      {
+        "id": "Bu-97",
+        "name": "Contract Lifecycle Management",
+        "cost": 0.27,
+        "benefit": 2.5,
+        "ratio": 9.25925925925926
+      },
+      {
+        "id": "Bu-101",
+        "name": "Kimball/Smoke changes",
+        "cost": 0.1,
+        "benefit": 5.9,
+        "ratio": 59
+      },
+      {
+        "id": "Bu-193",
+        "name": "Ultrasound FDA Remediation",
+        "cost": 0.2,
+        "benefit": 1700,
+        "ratio": 8500
+      },
+      {
+        "id": "Bu-283",
+        "name": "17.3 PH Digital Marketing Compliance",
+        "cost": 0.15,
+        "benefit": 20,
+        "ratio": 133.33333333333334
+      },
+      {
+        "id": "Bu-433",
+        "name": "WS4 : CSIP | EMIP",
+        "cost": 0.5,
+        "benefit": 39.479,
+        "ratio": 78.958
+      },
+      {
+        "id": "EW-178",
+        "name": "CCB - I&D: Brand Licensing",
+        "cost": 0.333,
+        "benefit": 200,
+        "ratio": 600.6006006006006
+      },
+      {
+        "id": "EW-180",
+        "name": "CCB - I&D - The Vault",
+        "cost": 0.05,
+        "benefit": 500,
+        "ratio": 10000
+      },
+      {
+        "id": "Bu-06",
+        "name": "Compliance - GTS",
+        "cost": 2.2,
+        "benefit": 11.5,
+        "ratio": 5.227272727272727
+      },
+      {
+        "id": "Bu-392",
+        "name": "2. Audit management tool",
+        "cost": 0.05,
+        "benefit": 0.5,
+        "ratio": 10
+      },
+      {
+        "id": "EW-28",
+        "name": "NAR Government IT System & Security",
+        "cost": 0.777,
+        "benefit": 10,
+        "ratio": 12.87001287001287
+      },
+      {
+        "id": "EW-127",
+        "name": "Digitization of Business Case template: Future proof and AI-powered for smart Portfolio prioritization",
+        "cost": 2.5,
+        "benefit": 27.673,
+        "ratio": 11.069199999999999
+      },
+      {
+        "id": "EW-20",
+        "name": "ARIS deployment for ISC QMS Integration",
+        "cost": 0.05,
+        "benefit": 0.6,
+        "ratio": 11.999999999999998
+      },
+      {
+        "id": "Bu-61",
+        "name": "Entrepreneur Split",
+        "cost": 0.7,
+        "benefit": 29.4,
+        "ratio": 42
+      },
+      {
+        "id": "Bu-13",
+        "name": "HPM - P3S - MaaS Capability Program: Scaling",
+        "cost": 5,
+        "benefit": 1250,
+        "ratio": 250
+      },
+      {
+        "id": "Bu-14",
+        "name": "HPM - Tariff Mitigation - long term (LTS-4 Late Customization)",
+        "cost": 0.35,
+        "benefit": 70,
+        "ratio": 200
+      },
+      {
+        "id": "Bu-58",
+        "name": "MI&A Workbench program",
+        "cost": 0.2,
+        "benefit": 18,
+        "ratio": 90
+      },
+      {
+        "id": "Bu-50",
+        "name": "E2E NAM Re-entry Digital SRC",
+        "cost": 1.95,
+        "benefit": 50,
+        "ratio": 25.641025641025642
+      },
+      {
+        "id": "Bu-49",
+        "name": "Demand & Supply Planning SRC",
+        "cost": 1.7,
+        "benefit": 29.3,
+        "ratio": 17.235294117647058
+      },
+      {
+        "id": "Bu-55",
+        "name": "D2B HS eCommerce 2025_26",
+        "cost": 0.4,
+        "benefit": 3,
+        "ratio": 7.5
+      },
+      {
+        "id": "Bu-01",
+        "name": "EI-IS-AI Service Excellence program - SPM--> Microsoft Project Operations",
+        "cost": 1.3,
+        "benefit": 9,
+        "ratio": 6.9230769230769225
+      },
+      {
+        "id": "EW-12",
+        "name": "Integrated C&R",
+        "cost": 0.65,
+        "benefit": 3.9,
+        "ratio": 6
+      },
+      {
+        "id": "Bu-32",
+        "name": "30. COPAD (Customer One performance Analytics Dashboards)",
+        "cost": 0.2,
+        "benefit": 1.014,
+        "ratio": 5.069999999999999
+      },
+      {
+        "id": "Bu-22",
+        "name": "03. PH Professionals / D2B2C",
+        "cost": 1,
+        "benefit": 5.053,
+        "ratio": 5.053
+      },
+      {
+        "id": "Bu-196",
+        "name": "SW Ops: Enabling HPM on Sentinel with new licensing models for NPIs -",
+        "cost": 0.2,
+        "benefit": 287,
+        "ratio": 1435
+      },
+      {
+        "id": "Bu-198",
+        "name": "HSPMP - enable support flow for cloud platform",
+        "cost": 0.36,
+        "benefit": 287,
+        "ratio": 797.2222222222223
+      },
+      {
+        "id": "Bu-253",
+        "name": "cCRM – Change & Sustain",
+        "cost": 0.12,
+        "benefit": 39,
+        "ratio": 325
+      },
+      {
+        "id": "Bu-04",
+        "name": "2027 IGTD DATA and INSIGHTS",
+        "cost": 0.295,
+        "benefit": 39,
+        "ratio": 132.20338983050848
+      },
+      {
+        "id": "Bu-352",
+        "name": "Sentinel LDK integration into BU SW",
+        "cost": 0.4,
+        "benefit": 49,
+        "ratio": 122.5
+      },
+      {
+        "id": "Bu-252",
+        "name": "Conga – Change & Sustain",
+        "cost": 0.32,
+        "benefit": 39,
+        "ratio": 121.875
+      },
+      {
+        "id": "Bu-207",
+        "name": "Fidelity (Fulcrum/RDC NAM/RDC EU/FF)",
+        "cost": 1,
+        "benefit": 66.648,
+        "ratio": 66.648
+      },
+      {
+        "id": "Bu-356",
+        "name": "Sentinel LEM deployment for CT/AMI (OKM – Order Key Manager) - STO 400K",
+        "cost": 0.25,
+        "benefit": 16.557,
+        "ratio": 66.228
+      },
+      {
+        "id": "Bu-414",
+        "name": "Lifecycle Service Offerings : Direct Business",
+        "cost": 1.5,
+        "benefit": 35.886,
+        "ratio": 23.924000000000003
+      },
+      {
+        "id": "Bu-409",
+        "name": "AI Model Line",
+        "cost": 4.461,
+        "benefit": 106.553,
+        "ratio": 23.88545169244564
+      },
+      {
+        "id": "Bu-410",
+        "name": "Commercial Excellence & GTM",
+        "cost": 1.514,
+        "benefit": 34.335,
+        "ratio": 22.678335535006607
+      },
+      {
+        "id": "EW-188",
+        "name": "IR27#18 - Performance Split Automation Step 2",
+        "cost": 0.247,
+        "benefit": 5,
+        "ratio": 20.242914979757085
+      },
+      {
+        "id": "EW-36",
+        "name": "EADI - Exploration AI capabilities for Supply Chain",
+        "cost": 0.1,
+        "benefit": 2,
+        "ratio": 20
+      },
+      {
+        "id": "EW-175",
+        "name": "Corporate website (Investors, Legal & Regulatory pages, ExCo pages, News, Museum, Foundation etc.)",
+        "cost": 0.6,
+        "benefit": 10.6,
+        "ratio": 17.666666666666668
+      },
+      {
+        "id": "Bu-411",
+        "name": "HoS Conga & Commercial Policy : IR",
+        "cost": 1.788,
+        "benefit": 31.374,
+        "ratio": 17.54697986577181
+      },
+      {
+        "id": "Bu-60",
+        "name": "Symphony - Azurion NextGen",
+        "cost": 2.8,
+        "benefit": 48,
+        "ratio": 17.142857142857142
+      },
+      {
+        "id": "Bu-82",
+        "name": "IGTS AI 2027",
+        "cost": 2.468,
+        "benefit": 42,
+        "ratio": 17.01782820097245
+      },
+      {
+        "id": "EW-32",
+        "name": "EADI - AI",
+        "cost": 0.2,
+        "benefit": 3,
+        "ratio": 15
+      },
+      {
+        "id": "Bu-351",
+        "name": "COSAC Transition to PIL",
+        "cost": 0.7,
+        "benefit": 10.3,
+        "ratio": 14.714285714285717
+      },
+      {
+        "id": "Bu-431",
+        "name": "WS2 : Parts Delivery - Parts Nova",
+        "cost": 0.6,
+        "benefit": 8,
+        "ratio": 13.333333333333334
+      },
+      {
+        "id": "Bu-199",
+        "name": "Timber and dual manufacturing (NAM footprint)",
+        "cost": 0.8,
+        "benefit": 10,
+        "ratio": 12.5
+      },
+      {
+        "id": "EW-125",
+        "name": "I2M Planisware : AI-Driven Portfolio Management focused on Insights & Value Realization",
+        "cost": 1,
+        "benefit": 11.831,
+        "ratio": 11.831
+      },
+      {
+        "id": "Bu-33",
+        "name": "28. Social Care and Project Management",
+        "cost": 0.025,
+        "benefit": 0.283,
+        "ratio": 11.319999999999999
+      },
+      {
+        "id": "Bu-81",
+        "name": "Data Analytics & IB Fix2Perform",
+        "cost": 0.85,
+        "benefit": 8.5,
+        "ratio": 10
+      },
+      {
+        "id": "Bu-37",
+        "name": "05. One AI-powered Translation Solution for PH",
+        "cost": 0.4,
+        "benefit": 3.393,
+        "ratio": 8.482499999999998
+      },
+      {
+        "id": "EW-35",
+        "name": "EDI - AI Innovation - MCP, Voice, Automation, Business Inisights App",
+        "cost": 0.6,
+        "benefit": 5,
+        "ratio": 8.333333333333334
+      },
+      {
+        "id": "EW-38",
+        "name": "EADI - DQ modernization",
+        "cost": 0.13,
+        "benefit": 1,
+        "ratio": 7.692307692307692
+      },
+      {
+        "id": "Bu-02",
+        "name": "Sensei Usage-to-Cash: Contract, Billing & Invoice Automation",
+        "cost": 0.75,
+        "benefit": 5,
+        "ratio": 6.666666666666667
+      },
+      {
+        "id": "EW-39",
+        "name": "EADI - MDM Strategic Positioning",
+        "cost": 0.1,
+        "benefit": 0.625,
+        "ratio": 6.25
+      },
+      {
+        "id": "EW-186",
+        "name": "Agent Atelier",
+        "cost": 0.075,
+        "benefit": 0.4,
+        "ratio": 5.333333333333334
+      },
+      {
+        "id": "EW-187",
+        "name": "Innovation & AI Atlas",
+        "cost": 0.075,
+        "benefit": 0.4,
+        "ratio": 5.333333333333334
+      },
+      {
+        "id": "Bu-338",
+        "name": "31. Ecommerce Analytics - Amazon Double Down",
+        "cost": 0.3,
+        "benefit": 1.533,
+        "ratio": 5.11
+      },
+      {
+        "id": "EW-179",
+        "name": "Upgrade Windchill 2027 to meet support compliance requirements",
+        "cost": 1,
+        "benefit": 8,
+        "ratio": 8
+      },
+      {
+        "id": "Bu-75",
+        "name": "IR27#44 - EDI Continuous Improvement incl BNL Peppol Orders",
+        "cost": 0.078,
+        "benefit": 2.25,
+        "ratio": 28.846153846153847
+      },
+      {
+        "id": "Bu-76",
+        "name": "IR27#60 - Supply Chain Excellence (in fact 3x Type 1: each 50K HPM SE, ULS DK, IGTD Italy) - create 3 lines?",
+        "cost": 0.15,
+        "benefit": 128.25,
+        "ratio": 855
+      },
+      {
+        "id": "Bu-74",
+        "name": "IR27#43 - D2B Configurable Product Mgt",
+        "cost": 0.08,
+        "benefit": 5.95,
+        "ratio": 74.375
+      },
+      {
+        "id": "Bu-72",
+        "name": "IR27#34 - Partner Central Consistency While Scaling",
+        "cost": 0.14,
+        "benefit": 4.4,
+        "ratio": 31.428571428571427
+      },
+      {
+        "id": "Bu-99",
+        "name": "Rotech Virtual Org (CPG in BY)",
+        "cost": 0.1,
+        "benefit": 38,
+        "ratio": 380
+      },
+      {
+        "id": "Bu-393",
+        "name": "COST Competitiveness - Grouped",
+        "cost": 1.28,
+        "benefit": 17.95,
+        "ratio": 14.0234375
+      },
+      {
+        "id": "Bu-368",
+        "name": "MR Req2Res Type 1",
+        "cost": 0.15,
+        "benefit": 4,
+        "ratio": 26.666666666666668
+      },
+      {
+        "id": "Bu-413",
+        "name": "Indirect Channel Partner Improvements",
+        "cost": 0.24,
+        "benefit": 64.6,
+        "ratio": 269.16666666666663
+      },
+      {
+        "id": "EW-136",
+        "name": "FIN-Managed Services automation",
+        "cost": 0.3,
+        "benefit": 1.8,
+        "ratio": 6
+      },
+      {
+        "id": "EW-128",
+        "name": "Integrated project & business performance modernization",
+        "cost": 0.09,
+        "benefit": 0.55,
+        "ratio": 6.111111111111112
+      },
+      {
+        "id": "Bu-69",
+        "name": "IR27#31 - Partner Central: Democratize Action to Allow Scale",
+        "cost": 0.39,
+        "benefit": 5.6,
+        "ratio": 14.358974358974358
+      },
+      {
+        "id": "Bu-73",
+        "name": "IR27#35 - Partner: Scale Impact with Agile Publishing",
+        "cost": 0.05,
+        "benefit": 5.6,
+        "ratio": 111.99999999999999
+      },
+      {
+        "id": "Bu-132",
+        "name": "Install Base : Commercial Install-Base Intelligence",
+        "cost": 0.6,
+        "benefit": 10,
+        "ratio": 16.666666666666668
+      },
+      {
+        "id": "Bu-137",
+        "name": "Innovation Excellence Team - R&D Support",
+        "cost": 0.6,
+        "benefit": 10,
+        "ratio": 16.666666666666668
+      },
+      {
+        "id": "Bu-138",
+        "name": "Data & Analytics Program",
+        "cost": 0.95,
+        "benefit": 23,
+        "ratio": 24.210526315789476
+      },
+      {
+        "id": "Bu-299",
+        "name": "E2E Product Portfolio Mgt (Pulse)",
+        "cost": 0.25,
+        "benefit": 2.2,
+        "ratio": 8.8
+      },
+      {
+        "id": "Bu-63",
+        "name": "Commercial Intelligence & CRM KOL Management tool",
+        "cost": 0.55,
+        "benefit": 9.6,
+        "ratio": 17.454545454545453
+      },
+      {
+        "id": "Bu-94",
+        "name": "Content Syndication - SRC",
+        "cost": 0.15,
+        "benefit": 10,
+        "ratio": 66.66666666666667
+      },
+      {
+        "id": "Bu-304",
+        "name": "Global Retail Content Accelerator (PXM)",
+        "cost": 0.58,
+        "benefit": 4.659,
+        "ratio": 8.032758620689656
+      },
+      {
+        "id": "Bu-325",
+        "name": "Hybris Feature Enhancements (Service Parts Capabilities, AI powered commerce, etc)",
+        "cost": 0.3,
+        "benefit": 5,
+        "ratio": 16.666666666666668
+      },
+      {
+        "id": "Bu-67",
+        "name": "IR27#22 - Sales Incentives Auto-Credit",
+        "cost": 0.25,
+        "benefit": 9,
+        "ratio": 36
+      },
+      {
+        "id": "Bu-136",
+        "name": "Commercial Excellence Program - GtM (AWS Marketplace)",
+        "cost": 0.2,
+        "benefit": 2.5,
+        "ratio": 12.5
+      },
+      {
+        "id": "Bu-367",
+        "name": "I2M Planisware CT Timesheet enhancements",
+        "cost": 0.1,
+        "benefit": 2.058,
+        "ratio": 20.58
+      },
+      {
+        "id": "EW-99",
+        "name": "Implementing Zero Trust NEtwork Architecture",
+        "cost": 0.17,
+        "benefit": 5,
+        "ratio": 29.41176470588235
+      },
+      {
+        "id": "Bu-57",
+        "name": "Symphony Eye",
+        "cost": 4,
+        "benefit": 202,
+        "ratio": 50.5
+      },
+      {
+        "id": "Bu-66",
+        "name": "IR27#21 - AI in Commercial Excellence",
+        "cost": 0.95,
+        "benefit": 735,
+        "ratio": 773.6842105263158
+      },
+      {
+        "id": "Bu-70",
+        "name": "IR27#32 - Partner Journeys to Drive Value Extraction",
+        "cost": 0.27,
+        "benefit": 11.3,
+        "ratio": 41.851851851851855
+      },
+      {
+        "id": "Bu-71",
+        "name": "IR27#33 - Partner Data towards Commercial Action",
+        "cost": 0.14,
+        "benefit": 11.9,
+        "ratio": 85
+      },
+      {
+        "id": "Bu-79",
+        "name": "IR27#14 - ORU KSA APM 'Kafu'",
+        "cost": 0.15,
+        "benefit": 60,
+        "ratio": 400
+      },
+      {
+        "id": "Bu-127",
+        "name": "Probe Repair",
+        "cost": 0.25,
+        "benefit": 8,
+        "ratio": 32
+      },
+      {
+        "id": "Bu-221",
+        "name": "Cross business value proposition enablement - (e.g.CCS Stage 2)",
+        "cost": 0.25,
+        "benefit": 1250,
+        "ratio": 5000
+      },
+      {
+        "id": "Bu-224",
+        "name": "SaaS capabilities (incl.Lifecycle mgmt for contracts )",
+        "cost": 1.1,
+        "benefit": 1250,
+        "ratio": 1136.3636363636363
+      },
+      {
+        "id": "Bu-276",
+        "name": "Web - Install Base Web Experience & Improved Product Page",
+        "cost": 0.2,
+        "benefit": 2,
+        "ratio": 10
+      },
+      {
+        "id": "Bu-292",
+        "name": "AI-enabling learning RnD organization",
+        "cost": 0.065,
+        "benefit": 0.55,
+        "ratio": 8.461538461538462
+      },
+      {
+        "id": "Bu-360",
+        "name": "Spaniel 12 | MR subscription for Indirect channel",
+        "cost": 0.05,
+        "benefit": 1.2,
+        "ratio": 23.999999999999996
+      },
+      {
+        "id": "Bu-369",
+        "name": "3PP | 3rd party partners program",
+        "cost": 0.85,
+        "benefit": 39,
+        "ratio": 45.88235294117647
+      },
+      {
+        "id": "EW-03",
+        "name": "LCA Automation",
+        "cost": 0.02,
+        "benefit": 0.25,
+        "ratio": 12.5
+      },
+      {
+        "id": "EW-43",
+        "name": "EADI- Enabling GAIT",
+        "cost": 2,
+        "benefit": 20,
+        "ratio": 10
+      },
+      {
+        "id": "Bu-142",
+        "name": "Service Now : Proactive Service Operations & Digital Self-Service at the Edge",
+        "cost": 0.8,
+        "benefit": 5,
+        "ratio": 6.25
+      },
+      {
+        "id": "Bu-144",
+        "name": "Sercie Now AI Initiatives :Intelligent Contact Centre & Intelligent Omnichannel Service",
+        "cost": 0.8,
+        "benefit": 5,
+        "ratio": 6.25
+      },
+      {
+        "id": "Bu-286",
+        "name": "3PL Transformation (Dual 3PL ) - India",
+        "cost": 0.175,
+        "benefit": 1.939,
+        "ratio": 11.080000000000002
+      },
+      {
+        "id": "Bu-363",
+        "name": "Spaniel 4 & 5 | 3P SW PPP Business Model Archetype MVP",
+        "cost": 0.25,
+        "benefit": 39,
+        "ratio": 156
+      },
+      {
+        "id": "Bu-145",
+        "name": "Service Now: Agentic Workspace for Service & Demand- and Skills-Based Workforce Orchestration",
+        "cost": 0.75,
+        "benefit": 5,
+        "ratio": 6.666666666666667
+      },
+      {
+        "id": "Bu-229",
+        "name": "Fidelity (Fulcrum/RDC NAM/RDC EU/FF)",
+        "cost": 1,
+        "benefit": 66.648,
+        "ratio": 66.648
+      },
+      {
+        "id": "Bu-231",
+        "name": "GBS Collaboration - Order Orchestration (Appian) - Phase 2",
+        "cost": 0.9,
+        "benefit": 9.162,
+        "ratio": 10.180000000000001
+      },
+      {
+        "id": "Bu-293",
+        "name": "Amazon Agentic Planning & Simulation Hub",
+        "cost": 0.35,
+        "benefit": 2.472,
+        "ratio": 7.062857142857143
+      },
+      {
+        "id": "Bu-313",
+        "name": "Philips.com Growth Engine – Unlocking the value of our new platform",
+        "cost": 0.9,
+        "benefit": 5.275,
+        "ratio": 5.861111111111112
+      },
+      {
+        "id": "Bu-320",
+        "name": "TikTok Automated Consignment Flow",
+        "cost": 0.245,
+        "benefit": 4.1,
+        "ratio": 16.73469387755102
+      },
+      {
+        "id": "Bu-437",
+        "name": "WS5 : Remote Digital First",
+        "cost": 3.107,
+        "benefit": 62.358,
+        "ratio": 20.07016414547795
+      },
+      {
+        "id": "Bu-447",
+        "name": "Product Life Cycle Management (PLCM) IGT-D",
+        "cost": 0.071,
+        "benefit": 4.8,
+        "ratio": 67.60563380281691
+      },
+      {
+        "id": "Bu-448",
+        "name": "Service initiatives specific to IGTD NOT covered in the Service Transformation, including AI Licensing OneDeal cCRM Conga reporting INTL HOS CPQ remediation NAR tool",
+        "cost": 0.22,
+        "benefit": 2.501,
+        "ratio": 11.368181818181817
+      },
+      {
+        "id": "Bu-374",
+        "name": "Unlock as-granted ibase for HW to auto-populate guided selling",
+        "cost": 0.1,
+        "benefit": 0.728,
+        "ratio": 7.279999999999999
+      },
+      {
+        "id": "Bu-376",
+        "name": "RSDI (Type 1) | Flat budget",
+        "cost": 0.15,
+        "benefit": 16.261,
+        "ratio": 108.40666666666667
+      },
+      {
+        "id": "Bu-442",
+        "name": "PNL (Sentinal Replacement)",
+        "cost": 0.18,
+        "benefit": 1.339,
+        "ratio": 7.438888888888889
+      },
+      {
+        "id": "Bu-230",
+        "name": "NAM late customization improvements (100K) Topkal (150K)",
+        "cost": 0.25,
+        "benefit": 1.5,
+        "ratio": 6
+      },
+      {
+        "id": "Bu-373",
+        "name": "Deploy maintenance logbook preparations (IB whitepaper)",
+        "cost": 0.15,
+        "benefit": 1,
+        "ratio": 6.666666666666667
+      },
+      {
+        "id": "Bu-84",
+        "name": "M&A PMI Helios",
+        "cost": 3.18,
+        "benefit": 300,
+        "ratio": 94.33962264150944
+      },
+      {
+        "id": "Bu-85",
+        "name": "M&A PMI HeartStream",
+        "cost": 1.5,
+        "benefit": 100,
+        "ratio": 66.66666666666667
+      },
+      {
+        "id": "Bu-86",
+        "name": "M&A PMI Everest Change Request",
+        "cost": 0.5,
+        "benefit": 50,
+        "ratio": 100
+      }
+    ],
+    "formulaErrors": [
+      {
+        "workbook": "Programs",
+        "sheet": "BU",
+        "cell": "GA241",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU",
+        "cell": "GB241",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU",
+        "cell": "GP241",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU Waste Matrix",
+        "cell": "O5",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU Waste Matrix",
+        "cell": "P5",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU Waste Matrix",
+        "cell": "AD5",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU Waste Matrix",
+        "cell": "O200",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU Waste Matrix",
+        "cell": "P200",
+        "error": "#VALUE!"
+      },
+      {
+        "workbook": "Programs",
+        "sheet": "BU Waste Matrix",
+        "cell": "AD200",
+        "error": "#VALUE!"
+      }
+    ],
+    "recordErrors": [
+      {
+        "id": "Bu-388",
+        "name": "Placeholder",
+        "sourceSheet": "BU",
+        "sourceRow": 241,
+        "fields": [
+          {
+            "label": "Waste score [GA]",
+            "value": "#VALUE!",
+            "formula": null
+          },
+          {
+            "label": "Waste band [GB]",
+            "value": "#VALUE!",
+            "formula": null
+          },
+          {
+            "label": "Overall AOP decision [GP]",
+            "value": "#VALUE!",
+            "formula": null
+          }
+        ]
+      }
+    ],
+    "unassignedExco": [
+      "EW-167",
+      "Bu-408",
+      "Bu-453",
+      "Bu-454",
+      "Bu-455",
+      "Bu-456",
+      "Bu-457",
+      "Bu-458",
+      "Bu-459",
+      "Bu-460"
+    ]
+  },
+  "rawCellChanges": 40449
+}

@@ -1,0 +1,71 @@
+{
+  "version": "5.10.0",
+  "assertions": 2237,
+  "passed": 2237,
+  "scenarios": 53,
+  "suites": [
+    {
+      "file": "engine-qa.json",
+      "label": "53 scenario engine checks",
+      "checks": 693,
+      "passed": 693,
+      "fatal": null
+    },
+    {
+      "file": "oracle-qa.json",
+      "label": "Independent original-workbook finance replay",
+      "checks": 164,
+      "passed": 164,
+      "fatal": null
+    },
+    {
+      "file": "browser-qa.json",
+      "label": "53 scenarios across six tabs and actual Excel exports",
+      "checks": 581,
+      "passed": 581,
+      "fatal": null
+    },
+    {
+      "file": "rebuild-browser-qa.json",
+      "label": "Five requested ExCo corrections",
+      "checks": 77,
+      "passed": 77,
+      "fatal": null
+    },
+    {
+      "file": "final-export-browser-qa.json",
+      "label": "Final build scenario downloads",
+      "checks": 54,
+      "passed": 54,
+      "fatal": null
+    },
+    {
+      "file": "export-qa.json",
+      "label": "Downloaded scenario workbooks and ROI metadata",
+      "checks": 583,
+      "passed": 583,
+      "fatal": null
+    },
+    {
+      "file": "scenario-download-qa.json",
+      "label": "Current / saved revision / inclusion / filtered downloads",
+      "checks": 35,
+      "passed": 35,
+      "fatal": null
+    },
+    {
+      "file": "compatibility-qa.json",
+      "label": "Prior scenarios, ROI boundaries and undo",
+      "checks": 46,
+      "passed": 46,
+      "fatal": null
+    },
+    {
+      "file": "final-ui-qa.json",
+      "label": "Final carryover demand display and export wording",
+      "checks": 4,
+      "passed": 4,
+      "fatal": null
+    }
+  ]
+}

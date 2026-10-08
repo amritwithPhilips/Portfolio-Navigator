@@ -1,0 +1,188 @@
+{
+  "checks": [
+    {
+      "name": "validation-01 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-02 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-03 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-04 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-05 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-06 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-07 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-08 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-09 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-10 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-11 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-12 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-13 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-14 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-15 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-16 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-17 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-18 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-19 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-20 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-21 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-22 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-23 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-24 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-25 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-26 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-27 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-28 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-29 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-30 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-31 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "validation-32 older portable settings preserve funding",
+      "passed": true
+    },
+    {
+      "name": "Default Optimal protected",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid ROI -0.5",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid ROI 10.5",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid ROI 0.1",
+      "passed": true
+    },
+    {
+      "name": "Reject invalid ROI NaN",
+      "passed": true
+    },
+    {
+      "name": "ROI undo 0",
+      "passed": true
+    },
+    {
+      "name": "Confirmed carry independent of ROI 0",
+      "passed": true
+    },
+    {
+      "name": "ROI undo 3",
+      "passed": true
+    },
+    {
+      "name": "Confirmed carry independent of ROI 3",
+      "passed": true
+    },
+    {
+      "name": "ROI undo 9.5",
+      "passed": true
+    },
+    {
+      "name": "Confirmed carry independent of ROI 9.5",
+      "passed": true
+    },
+    {
+      "name": "ROI undo 10",
+      "passed": true
+    },
+    {
+      "name": "Confirmed carry independent of ROI 10",
+      "passed": true
+    },
+    {
+      "name": "Legacy session accepted",
+      "passed": true
+    }
+  ]
+}

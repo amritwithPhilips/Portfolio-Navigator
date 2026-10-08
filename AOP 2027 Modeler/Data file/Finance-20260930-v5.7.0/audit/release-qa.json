@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "name": "QA-report.html title/content",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QA-report.html responsive width",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QA-report.html evidence links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Detailed-data-comparison.html title/content",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Detailed-data-comparison.html responsive width",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Detailed-data-comparison.html evidence links",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Final finance checks use source ledger",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PMI separated from BU",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Data health excludes charging key and rejected rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No script errors",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

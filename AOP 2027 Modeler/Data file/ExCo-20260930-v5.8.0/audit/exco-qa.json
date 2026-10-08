@@ -1,0 +1,475 @@
+{
+  "checks": [
+    {
+      "name": "New build opens in ExCo view",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-11 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-12 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-13 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-14 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-15 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-16 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-17 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-18 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-19 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-20 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-21 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-22 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-23 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-24 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-25 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-26 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-27 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-28 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-29 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-30 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-31 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-32 ExCo exact finance parity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Deeptha Khanna",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Shez Partovi",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Julia Strandberg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Jie Xue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Bert van Meurs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Wim Appelo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Özlem Fidanci",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Jeff DiLullo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Ling Liu",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Charlotte Hanneman",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Laura Matz",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Heidy Schein",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Steve C de Baca",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Carla Rosana Goulart Silva Peron",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Filip Koek",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader ownership Marnix van Ginneken",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1366 company",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1366 portfolio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1366 compare",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1366 decisions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1920 company",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1920 portfolio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1920 compare",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo layout 1920 decisions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Recommendation explains unchanged Programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Recommendation creates child draft and same totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Rationale required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Preview does not mutate state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cancel keeps original funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Commit funding and finance trace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo undo restores funding",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo preview tradeoff ew",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo preview tradeoff bu",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo tradeoff matches independent scenario 09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stale decision preview blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo save and reload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo finalise locks edits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Finalised scope controls hidden",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo fork reopens editable draft",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ExCo exports evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI setting budget",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI setting merit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI setting tolerance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI all five weights",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI lfr aop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI lfr amount",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI lfr bucket",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI sustain aop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI sustain amount",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI sustain bucket",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI value aop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI value amount",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI value bucket",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI itsimp aop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI itsimp amount",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI itsimp bucket",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI preset protect",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI preset evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI preset capacity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Actual UI preset optimal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No ExCo browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}

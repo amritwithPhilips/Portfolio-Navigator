@@ -1,0 +1,12 @@
+{
+  "baselineFile": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\AOP2027-IT-Portfolio-Scenario-Modelling-v5.7.0.html",
+  "baselineSha256": "0ed72652f4e4ff09c7fd28de45749bcc21e61989f35a36b4d92d32b698dbb949",
+  "newFile": "AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html",
+  "newSha256": "93e8663293ce296295989f6a81b05fd1b8897a4f765f99276511426d104dc46f",
+  "changes": [
+    "ExCo view above six tabs using shared transaction bridge",
+    "Source-based recommendation preview and independent draft creation",
+    "Imported requested/merit review validation"
+  ],
+  "preserved": "Funding, scoring and allocation formulas; approved EW unallocated share; source snapshots"
+}

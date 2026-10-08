@@ -1,0 +1,366 @@
+{
+  "checks": [
+    {
+      "id": "SRC-01",
+      "status": "PASS",
+      "detail": "Original workbook bytes match declared SHA-256"
+    },
+    {
+      "id": "SRC-02",
+      "status": "PASS",
+      "detail": "All four program sheets, cached values and formulas preserved"
+    },
+    {
+      "id": "SRC-03",
+      "status": "PASS",
+      "detail": "464 unique stable IDs"
+    },
+    {
+      "id": "SRC-04",
+      "status": "PASS",
+      "detail": "20 missing requests retained as null"
+    },
+    {
+      "id": "SRC-05",
+      "status": "PASS",
+      "detail": "No positive amount has a missing program name"
+    },
+    {
+      "id": "SRC-06",
+      "status": "PASS",
+      "detail": "Missing charging key remains absent; no stale key copied"
+    },
+    {
+      "id": "REG-01",
+      "status": "PASS",
+      "detail": "Refresh build matches v5.6 funding engine on identical new input"
+    },
+    {
+      "id": "REG-02",
+      "status": "PASS",
+      "detail": "Funding, scoring, classification and default-setting functions unchanged; refresh fingerprints expanded"
+    },
+    {
+      "id": "FIN-01",
+      "status": "PASS",
+      "detail": "Base requested = allocation + unfunded"
+    },
+    {
+      "id": "FIN-02",
+      "status": "PASS",
+      "detail": "All demand 287.1229; PMI on top 5.19 M€"
+    },
+    {
+      "id": "FIN-03",
+      "status": "PASS",
+      "detail": "Every source row reconciles including null and zero"
+    },
+    {
+      "id": "FIN-04",
+      "status": "PASS",
+      "detail": "Base streams reconcile"
+    },
+    {
+      "id": "FIN-05",
+      "status": "PASS",
+      "detail": "Base stage allocations reconcile"
+    },
+    {
+      "id": "FIN-06",
+      "status": "PASS",
+      "detail": "No negative or over-request allocation"
+    },
+    {
+      "id": "SCORE-01",
+      "status": "PASS",
+      "detail": "Merit within 0–100"
+    },
+    {
+      "id": "SCORE-02",
+      "status": "PASS",
+      "detail": "Missing benefits retain unavailable ratio"
+    },
+    {
+      "id": "SCORE-03",
+      "status": "PASS",
+      "detail": "Hard classification limited to Productivity/Revenue"
+    },
+    {
+      "id": "SCORE-04",
+      "status": "PASS",
+      "detail": "ExCo follows preserved hierarchy"
+    },
+    {
+      "id": "OPS-01",
+      "status": "PASS",
+      "detail": "182 unique Operations service IDs"
+    },
+    {
+      "id": "OPS-02",
+      "status": "PASS",
+      "detail": "Services reconcile to exact Operations total"
+    },
+    {
+      "id": "OPS-03",
+      "status": "PASS",
+      "detail": "Seven recipient TCO clusters reconcile"
+    },
+    {
+      "id": "OPS-04",
+      "status": "PASS",
+      "detail": "36 consuming-org service allocations reconcile"
+    },
+    {
+      "id": "OPS-05",
+      "status": "PASS",
+      "detail": "Own + region + function allocations reconcile"
+    },
+    {
+      "id": "PRESET-optimal",
+      "status": "PASS",
+      "detail": "{\"requested\":281.9329,\"allocation\":99.984,\"automatic\":99.984,\"manual\":0,\"unfunded\":181.9489,\"available\":0.016,\"over\":0,\"count\":166,\"partial\":14,\"missing\":20}"
+    },
+    {
+      "id": "PRESET-protect",
+      "status": "PASS",
+      "detail": "{\"requested\":281.9329,\"allocation\":100,\"automatic\":100,\"manual\":0,\"unfunded\":181.9329,\"available\":0,\"over\":0,\"count\":153,\"partial\":14,\"missing\":20}"
+    },
+    {
+      "id": "PRESET-evidence",
+      "status": "PASS",
+      "detail": "{\"requested\":281.9329,\"allocation\":100,\"automatic\":100,\"manual\":0,\"unfunded\":181.9329,\"available\":0,\"over\":0,\"count\":145,\"partial\":14,\"missing\":20}"
+    },
+    {
+      "id": "PRESET-capacity",
+      "status": "PASS",
+      "detail": "{\"requested\":281.9329,\"allocation\":100,\"automatic\":100,\"manual\":0,\"unfunded\":181.9329,\"available\":0,\"over\":0,\"count\":142,\"partial\":14,\"missing\":20}"
+    },
+    {
+      "id": "BUDGET-50",
+      "status": "PASS",
+      "detail": {
+        "requested": 281.9329,
+        "allocation": 49.988,
+        "automatic": 49.988,
+        "manual": 0,
+        "unfunded": 231.9449,
+        "available": 0.012,
+        "over": 0,
+        "count": 71,
+        "partial": 4,
+        "missing": 20
+      }
+    },
+    {
+      "id": "BUDGET-75",
+      "status": "PASS",
+      "detail": {
+        "requested": 281.9329,
+        "allocation": 74.997,
+        "automatic": 74.997,
+        "manual": 0,
+        "unfunded": 206.9359,
+        "available": 0.003,
+        "over": 0,
+        "count": 111,
+        "partial": 14,
+        "missing": 20
+      }
+    },
+    {
+      "id": "BUDGET-100",
+      "status": "PASS",
+      "detail": {
+        "requested": 281.9329,
+        "allocation": 99.984,
+        "automatic": 99.984,
+        "manual": 0,
+        "unfunded": 181.9489,
+        "available": 0.016,
+        "over": 0,
+        "count": 166,
+        "partial": 14,
+        "missing": 20
+      }
+    },
+    {
+      "id": "BUDGET-150",
+      "status": "PASS",
+      "detail": {
+        "requested": 281.9329,
+        "allocation": 148.154,
+        "automatic": 148.154,
+        "manual": 0,
+        "unfunded": 133.7789,
+        "available": 1.846,
+        "over": 0,
+        "count": 244,
+        "partial": 14,
+        "missing": 20
+      }
+    },
+    {
+      "id": "BUDGET-300",
+      "status": "PASS",
+      "detail": {
+        "requested": 281.9329,
+        "allocation": 148.154,
+        "automatic": 148.154,
+        "manual": 0,
+        "unfunded": 133.7789,
+        "available": 151.846,
+        "over": 0,
+        "count": 244,
+        "partial": 14,
+        "missing": 20
+      }
+    },
+    {
+      "id": "LEVER-lfr-bucket",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-lfr-aop",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-lfr-amount",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-sustain-bucket",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-sustain-aop",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-sustain-amount",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-value-bucket",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-value-aop",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-value-amount",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-itsimp-bucket",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-itsimp-aop",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "LEVER-itsimp-amount",
+      "status": "PASS",
+      "detail": "Allocation basis accepted and reconciled"
+    },
+    {
+      "id": "MANUAL-01",
+      "status": "PASS",
+      "detail": "Exclusion does not auto-refill"
+    },
+    {
+      "id": "MANUAL-02",
+      "status": "PASS",
+      "detail": "Undo restores exact funding"
+    },
+    {
+      "id": "MANUAL-03",
+      "status": "PASS",
+      "detail": "Manual addition is additive"
+    },
+    {
+      "id": "MANUAL-04",
+      "status": "PASS",
+      "detail": "Partial manual scope follows entered amount"
+    },
+    {
+      "id": "LIFE-01",
+      "status": "PASS",
+      "detail": "Finalised state rejects financial edit"
+    },
+    {
+      "id": "LIFE-02",
+      "status": "PASS",
+      "detail": "Fork preserves decisions, settings and lineage"
+    },
+    {
+      "id": "REFRESH-01",
+      "status": "PASS",
+      "detail": "Controlled changed/add/remove/unchanged preview"
+    },
+    {
+      "id": "REFRESH-02",
+      "status": "PASS",
+      "detail": "Changed override held; unchanged retained; finalisation blocked"
+    },
+    {
+      "id": "REFRESH-03",
+      "status": "PASS",
+      "detail": "Prior source remains recoverable with child lineage"
+    },
+    {
+      "id": "REFRESH-EVIDENCE-lfrName",
+      "status": "PASS",
+      "detail": "Evidence-only source edit detected"
+    },
+    {
+      "id": "REFRESH-EVIDENCE-lfrYear",
+      "status": "PASS",
+      "detail": "Evidence-only source edit detected"
+    },
+    {
+      "id": "REFRESH-EVIDENCE-baselined",
+      "status": "PASS",
+      "detail": "Evidence-only source edit detected"
+    },
+    {
+      "id": "REFRESH-EVIDENCE-payback",
+      "status": "PASS",
+      "detail": "Evidence-only source edit detected"
+    },
+    {
+      "id": "REFRESH-04",
+      "status": "PASS",
+      "detail": "Resolving pending decision enables finalisation"
+    }
+  ],
+  "totals": {
+    "requested": 281.9329,
+    "allocation": 99.984,
+    "automatic": 99.984,
+    "manual": 0,
+    "unfunded": 181.9489,
+    "available": 0.016,
+    "over": 0,
+    "count": 166,
+    "partial": 14,
+    "missing": 20
+  },
+  "pmi": {
+    "count": 4,
+    "requested": 5.19,
+    "funded": 5.19
+  }
+}

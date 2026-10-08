@@ -1,3 +1,32 @@
+# Current allocation correction: v5.9.7, 5 October 2026
+
+User requested review of Tab 6 “Unallocated Programs (source key pending)” in the selected v5.9.5 model. Current correction: `C:\Users\320126040\Documents\Codex\AOP2027\AOP 2027 Modeler\AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.7.html`. The separate existing v5.9.6 is preserved; this correction builds on v5.9.5.
+
+Source workbook and hash unchanged: `AOP 2027 Consolidated Live 510261440.xlsx`, `981e9a196484e5f41852cb2b4088c8539478d63d335139fb059d7ef8b8dea8ac`. Complete original evidence remains in `C:\Users\320126040\OneDrive - Philips\Documents\ChatGPT\AOP 2027/outputs/refresh-v5.9.5-20261005/source-snapshot.json`. Corrected complete records/ledgers and QA are in `C:\Users\320126040\OneDrive - Philips\Documents\ChatGPT\AOP 2027/outputs/allocation-review-v5.9.7-20261005/`.
+
+Correction: shifted BU allocation headers had mixed spend, percent and subtotal columns. Reviewed formula references identify distinct leaf amounts; the manual EW key has its own ratio layout totalling 0.001 and uses the previously confirmed 1000x unit correction. EW key explicitly leaves 22.63033175355452% unallocated. Original Type III charging evidence applies after Laura IT sub-org/type remaps. PH subtotals are retained where leaf details are absent. Incomplete/conflicting keys remain visible; no key is invented.
+
+Unallocated M€: Optimal 79.119831339624 -> 11.416227488152; Balanced 71.776115861139 -> 10.476523696682; Balanced + Must Do 174.616092808681 -> 29.001696445498. Must Do remainder: 23.274996445498 explicitly unallocated + 3.8567 incomplete keys + 1.87 conflicting keys. Nine exception IDs are listed in README/QA/export; four have conflicts (including source rounding differences) and five have incomplete keys. Every funding amount/score across five scenarios and all Operations ledger entries are unchanged.
+
+132 checks passed. Live visual/browser verification was blocked by the local-file URL restriction; static markup, engine migration and mocked read-only draft recovery were checked. New storage is separate; v5.9.5 original files/storage remain intact. Earlier v5.9.5 claims that all its Unallocated balance reflected missing source keys are superseded by this review.
+
+---
+
+# Current refresh: v5.8.0, 1 October 2026
+
+Current model: `AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html`.
+Current extract: `AOP 2027 Demand/AOP2027-Data-Extract.html`.
+
+Programs source: `AOP 2027 Consolidated Live 110261530.xlsx` (1 Oct 2026 15:30 extract). SHA-256: `8058eb8ba9fc967827155243adad2de9c538cb7f35e168aaa642a3bc2f425d9c`.
+Operations source: `Updated - Preliminary AOP2027 Bill of IT for BU_R_F - 23.Sep.xlsx`. SHA-256: `176a6192da3356bcedd9f2babc8318c45977e7658d03172f9e2cb643d22e4668`.
+442 records (437 base + 5 PMI). Program demand: 279.9 M€ base (EW 108.4, BU 163.2) + 8.19 M€ PMI = 288.1 M€ total. Illustrative 100 M€ default funds 99.9 M€ base plus 8.2 M€ PMI on top. Operations: 182 service IDs, 470.4 M€. ExCo hierarchy, benefits classification, lever cascade all operational. AOP 2026 Spend reference lines added to Tab 2 levers (grand total 184.71 M€).
+
+Previous refresh: v5.6.1/v5.7.1 from `AOP 2027 Consolidated Live 299262020.xlsx` (447 programs, 327.1 M€). Key changes: PMI 5.2→8.2 M€ (new Bu-453), STO decomm consolidated, EI programs zeroed, decomm improved.
+
+Older baseline context is retained below for recovery and historical interpretation.
+
+---
+
 # AOP 2027 complete demand context
 
 Updated 17 September 2026. This is a persistent project index, not a claim that an entire workbook permanently occupies the assistant's chat context.

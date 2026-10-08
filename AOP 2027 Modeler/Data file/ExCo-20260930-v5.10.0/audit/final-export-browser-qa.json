@@ -1,0 +1,221 @@
+{
+  "checks": [
+    {
+      "name": "validation-01 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-02 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-03 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-04 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-05 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-06 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-07 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-08 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-09 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-10 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-11 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-12 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-13 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-14 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-15 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-16 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-17 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-18 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-19 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-20 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-21 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-22 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-23 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-24 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-25 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-26 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-27 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-28 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-29 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-30 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-31 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-32 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-0 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-0_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-1 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-1_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-2 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-2_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-3 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-3_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-4 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-4_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-5_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-6 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-6_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-7 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-7_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-8 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-8_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-9 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-9_5 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "validation-roi-10 final artifact scenario download",
+      "passed": true
+    },
+    {
+      "name": "Final export console clean",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "errors": [],
+  "filters": {
+    "datasets": 20,
+    "columns": 618,
+    "rowHeight": 92
+  },
+  "allocation": {
+    "programExact": "105.174",
+    "operationsExact": "470.31446303851226",
+    "totalExact": "575.4884630385122",
+    "expectedExact": "575.4884630385121"
+  }
+}

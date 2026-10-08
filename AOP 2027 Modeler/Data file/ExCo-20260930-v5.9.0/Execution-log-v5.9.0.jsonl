@@ -1,0 +1,5 @@
+{"time": "2026-09-30T11:16:04", "phase": "Build", "detail": "Created v5.9.0 with leader controls, funding previews, custom columns and shared selection."}
+{"time": "2026-09-30T10:16:51", "phase": "Additional funding", "detail": "144 combinations exercised with state, scope, budget and undo checks."}
+{"time": "2026-09-30T10:25:20", "phase": "Source reconciliation", "detail": "94 feasible additional-funding plans independently replayed from source workbooks."}
+{"time": "2026-09-30T10:22:06", "phase": "UI validation", "detail": "Charts, columns, persistence, two-way edits, six-tab totals and lifecycle passed."}
+{"time": "2026-09-30T10:27:26", "phase": "Release gate", "detail": "1425 assertions passed; constraints documented."}

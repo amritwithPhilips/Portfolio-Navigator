@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Portfolio Navigator — Journey Map</title>
+<style>
+  :root {
+    --navy: #00126E;
+    --royal: #0B5FFF;
+    --sky: #4B9CD3;
+    --teal: #009B8D;
+    --mint: #00C9A7;
+    --amber: #F5A623;
+    --coral: #E85D75;
+    --surface: #F8F9FC;
+    --surface-card: #FFFFFF;
+    --ink: #1A1F36;
+    --ink2: #4E5D78;
+    --ink3: #8492A6;
+    --border: #E4E8EE;
+    --glow: rgba(11, 95, 255, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--surface);
+    color: var(--ink);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #001A8C 40%, var(--royal) 100%);
+    color: white;
+    padding: 56px 48px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .hero-label {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .hero h1 strong { font-weight: 700; }
+  .hero-sub {
+    font-size: 16px;
+    opacity: 0.8;
+    max-width: 700px;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .hero-stat {
+    text-align: left;
+  }
+  .hero-stat-num {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 12px;
+    opacity: 0.65;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  /* TIMELINE SPINE */
+  .timeline-wrap {
+    padding: 56px 48px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .timeline-heading {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 32px;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 44px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+      to bottom,
+      var(--sky) 0%,
+      var(--royal) 30%,
+      var(--amber) 52%,
+      var(--teal) 70%,
+      var(--navy) 100%
+    );
+  }
+
+  /* PHASE NODE */
+  .phase {
+    position: relative;
+    margin-bottom: 48px;
+    animation: fadeSlideIn 0.5s ease both;
+  }
+  .phase:nth-child(1) { animation-delay: 0.1s; }
+  .phase:nth-child(2) { animation-delay: 0.2s; }
+  .phase:nth-child(3) { animation-delay: 0.3s; }
+  .phase:nth-child(4) { animation-delay: 0.4s; }
+  .phase:nth-child(5) { animation-delay: 0.5s; }
+  .phase:nth-child(6) { animation-delay: 0.6s; }
+
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .node {
+    position: absolute;
+    left: -44px;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--surface);
+  }
+  .node-origin   { background: var(--sky); }
+  .node-build    { background: var(--royal); }
+  .node-mature   { background: #3A4FBF; }
+  .node-pivot    { background: var(--amber); width: 38px; height: 38px; left: -48px; top: 2px; box-shadow: 0 0 0 4px var(--surface), 0 0 24px rgba(245,166,35,0.35); }
+  .node-iterate  { background: var(--teal); }
+  .node-current  { background: var(--navy); width: 36px; height: 36px; left: -46px; top: 3px; box-shadow: 0 0 0 4px var(--surface), 0 0 20px rgba(0,18,110,0.25); }
+
+  /* PHASE CARD */
+  .phase-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    position: relative;
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .phase-card:hover {
+    box-shadow: 0 4px 24px rgba(0,18,110,0.08);
+    border-color: var(--sky);
+  }
+  .phase.pivot .phase-card {
+    border-color: var(--amber);
+    border-width: 2px;
+    background: linear-gradient(135deg, #FFFBF0 0%, #FFF 40%);
+  }
+  .phase.pivot .phase-card:hover {
+    box-shadow: 0 4px 24px rgba(245,166,35,0.15);
+  }
+  .phase.current .phase-card {
+    border-color: var(--navy);
+    border-width: 2px;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .phase-version {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .pv-origin  { background: #E8F0FE; color: var(--sky); }
+  .pv-build   { background: #E0ECFF; color: var(--royal); }
+  .pv-mature  { background: #E8EAF6; color: #3A4FBF; }
+  .pv-pivot   { background: #FFF3D6; color: #B07800; }
+  .pv-iterate { background: #E0F5F0; color: #007A66; }
+  .pv-current { background: #E8E8F8; color: var(--navy); }
+
+  .phase-date {
+    font-size: 12px;
+    color: var(--ink3);
+  }
+
+  .phase-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .phase-subtitle {
+    font-size: 14px;
+    color: var(--ink2);
+    margin-bottom: 20px;
+    max-width: 720px;
+  }
+
+  /* PIVOT CALLOUT */
+  .pivot-callout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FFF3D6;
+    border-left: 3px solid var(--amber);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #6B4F00;
+    font-weight: 500;
+  }
+  .pivot-callout svg { flex-shrink: 0; }
+
+  /* CAPABILITIES */
+  .caps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .cap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .cap-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .cap-new { background: var(--teal); }
+  .cap-key { background: var(--royal); }
+  .cap-pivot { background: var(--amber); }
+
+  /* METRICS ROW */
+  .metrics {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .metric {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .metric-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .metric-label {
+    font-size: 11px;
+    color: var(--ink3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* EVOLUTION BAR */
+  .evo-section {
+    padding: 48px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .evo-title {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 24px;
+  }
+  .evo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .evo-cell {
+    padding: 16px 12px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  .evo-cell-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 4px;
+  }
+  .evo-cell-val {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .evo-cell-sub {
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+  .ec1 { background: var(--sky); }
+  .ec2 { background: var(--royal); }
+  .ec3 { background: #3A4FBF; }
+  .ec4 { background: #B07800; }
+  .ec5 { background: var(--teal); }
+  .ec6 { background: var(--navy); }
+
+  .evo-legend {
+    font-size: 11px;
+    color: var(--ink3);
+    text-align: right;
+  }
+
+  /* BUILD INTENSITY */
+  .intensity-section {
+    padding: 48px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .intensity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .intensity-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .intensity-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .ic-builds::before { background: var(--royal); }
+  .ic-hours::before  { background: var(--teal); }
+  .ic-code::before   { background: var(--navy); }
+  .ic-log::before    { background: var(--amber); }
+  .intensity-num {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .intensity-label {
+    font-size: 13px;
+    color: var(--ink2);
+    margin-bottom: 12px;
+  }
+  .intensity-detail {
+    font-size: 11px;
+    color: var(--ink3);
+    line-height: 1.5;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    text-align: left;
+  }
+
+  /* SAVINGS COMPARISON */
+  .savings-section {
+    padding: 0 48px 48px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .savings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .savings-card {
+    border-radius: 10px;
+    padding: 28px 24px;
+    position: relative;
+  }
+  .savings-card.alt-cots {
+    background: #FFF5F5;
+    border: 1px solid #FFCCCC;
+  }
+  .savings-card.alt-custom {
+    background: #FFF8F0;
+    border: 1px solid #FFE0B2;
+  }
+  .savings-card.alt-ai {
+    background: #F0FBF4;
+    border: 2px solid var(--teal);
+  }
+  .savings-card-tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+  .tag-red { background: #FFE0E0; color: #8B0000; }
+  .tag-amber { background: #FFE8CC; color: #7A4400; }
+  .tag-green { background: #D4EDDA; color: #155724; }
+  .savings-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+  .savings-card-cost {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .cost-red { color: #B71C1C; }
+  .cost-amber { color: #BF6900; }
+  .cost-green { color: #0D6E3A; }
+  .savings-card-sub {
+    font-size: 12px;
+    color: var(--ink3);
+    margin-bottom: 16px;
+  }
+  .savings-items {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    color: var(--ink2);
+    line-height: 1.6;
+  }
+  .savings-items li { padding-left: 16px; position: relative; }
+  .savings-items li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+  }
+  .alt-cots .savings-items li::before { background: #E57373; }
+  .alt-custom .savings-items li::before { background: #FFB74D; }
+  .alt-ai .savings-items li::before { background: var(--teal); }
+
+  .savings-footer {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .sf-saved {
+    background: #E8F5E9;
+    border: 1px solid #A5D6A7;
+  }
+  .sf-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0D6E3A;
+    line-height: 1;
+  }
+  .sf-label {
+    font-size: 12px;
+    color: #2E7D32;
+  }
+  .sf-divider {
+    width: 1px;
+    height: 36px;
+    background: #A5D6A7;
+  }
+
+  /* COMPLEXITY */
+  .complexity-section {
+    padding: 0 48px 48px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .complexity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .complexity-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .complexity-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .cci-data { background: #E3F2FD; }
+  .cci-engine { background: #E8EAF6; }
+  .cci-ux { background: #E0F2F1; }
+  .complexity-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .complexity-list {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    color: var(--ink2);
+    line-height: 1.6;
+  }
+  .complexity-list li {
+    padding: 3px 0 3px 18px;
+    position: relative;
+  }
+  .complexity-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--ink3);
+    font-size: 11px;
+  }
+
+  /* KEY INSIGHT */
+  .insight-bar {
+    background: var(--navy);
+    color: white;
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .insight-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .insight-text {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 900px;
+  }
+  .insight-text strong { color: var(--mint); }
+
+  /* FOOTER */
+  footer {
+    padding: 24px 48px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink3);
+    border-top: 1px solid var(--border);
+  }
+
+  /* PRINT / PRESENTATION */
+  @media print {
+    .phase { break-inside: avoid; }
+    .hero { padding: 32px; }
+    .timeline-wrap, .evo-section { padding: 24px; }
+  }
+  @media (max-width: 900px) {
+    .hero { padding: 32px 24px; }
+    .timeline-wrap, .evo-section, .intensity-section, .savings-section, .complexity-section { padding: 32px 24px; }
+    .hero h1 { font-size: 28px; }
+    .evo-grid { grid-template-columns: repeat(3, 1fr); }
+    .caps { grid-template-columns: 1fr; }
+    .insight-bar { padding: 24px; }
+    .intensity-grid { grid-template-columns: repeat(2, 1fr); }
+    .savings-grid { grid-template-columns: 1fr; }
+    .complexity-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-label">AOP 2027 &middot; CIO Presentation</div>
+  <h1><strong>One Portfolio Navigator</strong> — The Journey</h1>
+  <p class="hero-sub">From a prototype idea to an enterprise-grade IT investment decision tool, shaped by CIO feedback and built for ExCo leadership.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">43 builds</div>
+      <div class="hero-stat-label">In 18 days &middot; v3.5 &rarr; v5.9.4</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">~80 hrs</div>
+      <div class="hero-stat-label">Human direction time</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">578.5 M&euro;</div>
+      <div class="hero-stat-label">Total IT portfolio modelled</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">~1 M&euro;</div>
+      <div class="hero-stat-label">Estimated saving vs COTS</div>
+    </div>
+  </div>
+</header>
+
+<!-- TIMELINE -->
+<div class="timeline-wrap">
+  <div class="timeline-heading">Evolution timeline</div>
+
+  <div class="timeline">
+
+    <!-- PHASE 1: ORIGIN -->
+    <div class="phase">
+      <div class="node node-origin">1</div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-version pv-origin">v3.5</span>
+          <span class="phase-date">Mid-September 2026</span>
+        </div>
+        <div class="phase-title">The Spark &mdash; Prototype</div>
+        <div class="phase-subtitle">An idea to replace static Excel prioritisation with a live, interactive modeller. Built as a proof-of-concept from the original demand spreadsheet.</div>
+        <div class="caps">
+          <div class="cap"><span class="cap-dot cap-new"></span>4 tabs: Scenarios, Enterprise Wide, BU Led, Overview</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Core engine: normalize, enrich, solve, transact</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>5-lever funding model with bubble charts</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Excel read/write, IndexedDB persistence</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">4</span><span class="metric-label">Tabs</span></div>
+          <div class="metric"><span class="metric-val">509</span><span class="metric-label">Programs</span></div>
+          <div class="metric"><span class="metric-val">280 M&euro;</span><span class="metric-label">Demand</span></div>
+          <div class="metric"><span class="metric-val">100 M&euro;</span><span class="metric-label">Budget</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2: FOUNDATION -->
+    <div class="phase">
+      <div class="node node-build">2</div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-version pv-build">v4.3 &ndash; v4.5</span>
+          <span class="phase-date">18 &ndash; 22 September 2026</span>
+        </div>
+        <div class="phase-title">Building the Engine</div>
+        <div class="phase-subtitle">Clean rebuild with four-priority funding, 5-component merit scoring, Operations visibility, and a 6-tab structure matching the decision workflow.</div>
+        <div class="caps">
+          <div class="cap"><span class="cap-dot cap-new"></span>Tab 1: Demand Overview with KPIs and filters</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Tab 5: Operations &mdash; 3-level TCO hierarchy, 167 services</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Four-priority funding: LFR &rarr; Carry-Over &rarr; Sustain &rarr; Value</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>5-component scoring: Benefit, Priority, Consequence, Band, Payback</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>4 presets: Optimal, Protect, Tighten, Release</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>29-check QA harness &mdash; EXCO READY baseline</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">6</span><span class="metric-label">Tabs</span></div>
+          <div class="metric"><span class="metric-val">473</span><span class="metric-label">Programs</span></div>
+          <div class="metric"><span class="metric-val">470 M&euro;</span><span class="metric-label">Ops TCO</span></div>
+          <div class="metric"><span class="metric-val">29</span><span class="metric-label">QA checks</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3: PRE-EXCO MATURITY -->
+    <div class="phase">
+      <div class="node node-mature">3</div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-version pv-mature">v4.7 &ndash; v5.1.1</span>
+          <span class="phase-date">24 &ndash; 25 September 2026</span>
+        </div>
+        <div class="phase-title">Technical Maturity &mdash; Pre-ExCo View</div>
+        <div class="phase-subtitle">Complete scoring reform (8 leadership recommendations), pivot to live SharePoint source, Finance model with EW charging, BU cost allocation, and DRAFT badge. The &ldquo;golden baseline&rdquo; before the ExCo transformation.</div>
+        <div class="caps">
+          <div class="cap"><span class="cap-dot cap-key"></span>8 scoring recommendations implemented: hybrid benefit, payback, 10x ceiling</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>Live SharePoint source replaces static Excel</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Finance model: BU cluster allocation + EW charging key</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Tab 6: Organisation IT Cost Allocation with reconciliation</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Data refresh with full audit engine and before/after report</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>4-tab Excel export redesigned for executives</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">v5.1.1</span><span class="metric-label">Golden baseline</span></div>
+          <div class="metric"><span class="metric-val">570 M&euro;</span><span class="metric-label">Total IT AOP</span></div>
+          <div class="metric"><span class="metric-val">7</span><span class="metric-label">Finance QA checks</span></div>
+          <div class="metric"><span class="metric-val">82</span><span class="metric-label">Automated tests</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4: CIO PIVOT -->
+    <div class="phase pivot">
+      <div class="node node-pivot">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-version pv-pivot">v5.2.0</span>
+          <span class="phase-date">25 September 2026 &mdash; The Pivot</span>
+        </div>
+        <div class="phase-title">CIO Feedback &mdash; ExCo Decision Cockpit</div>
+        <div class="phase-subtitle">The CIO&rsquo;s feedback transformed the tool from a portfolio modeller into an ExCo-level decision cockpit. Every view reorganised by accountable ExCo leader with live trade-off negotiation.</div>
+
+        <div class="pivot-callout">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B07800" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          CIO direction: &ldquo;This must be an ExCo decision-making tool, not a technical portfolio model.&rdquo;
+        </div>
+
+        <div class="caps">
+          <div class="cap"><span class="cap-dot cap-pivot"></span><strong>ExCo Accountability Hierarchy</strong> &mdash; 16 leaders mapped to 35 orgs</div>
+          <div class="cap"><span class="cap-dot cap-pivot"></span><strong>Hard/Soft Benefit Classification</strong> &mdash; evidence-based per program</div>
+          <div class="cap"><span class="cap-dot cap-pivot"></span><strong>ExCo Trade-off Cockpit</strong> &mdash; interactive per-leader budget negotiation</div>
+          <div class="cap"><span class="cap-dot cap-pivot"></span><strong>Global ExCo Filter</strong> &mdash; every tab filterable by accountable leader</div>
+          <div class="cap"><span class="cap-dot cap-pivot"></span><strong>Demand Split by ExCo</strong> &mdash; collapsible leader groups replace flat org list</div>
+          <div class="cap"><span class="cap-dot cap-pivot"></span><strong>Total AOP Protection</strong> &mdash; trade-offs can't silently change the budget</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">16</span><span class="metric-label">ExCo leaders</span></div>
+          <div class="metric"><span class="metric-val">35</span><span class="metric-label">Organisations</span></div>
+          <div class="metric"><span class="metric-val">13+</span><span class="metric-label">UI refinements</span></div>
+          <div class="metric"><span class="metric-val">100%</span><span class="metric-label">Views restructured</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 5: RAPID ITERATION -->
+    <div class="phase">
+      <div class="node node-iterate">5</div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-version pv-iterate">v5.3 &ndash; v5.8</span>
+          <span class="phase-date">27 September &ndash; 2 October 2026</span>
+        </div>
+        <div class="phase-title">Rapid Iteration &mdash; Leadership-Driven</div>
+        <div class="phase-subtitle">Six days of intensive iteration absorbing ExCo LFR opt-in/opt-out decisions, data refreshes, Balanced Portfolio stream targeting, benefit data fixes, and defect hardening.</div>
+        <div class="caps">
+          <div class="cap"><span class="cap-dot cap-new"></span>Portfolio Inclusion Table &mdash; program-level include/exclude with editable budgets</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Data refresh audit engine &mdash; full before/after with per-ExCo impact analysis</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>IT Simplification 5th lever (Decomm/Replatforming)</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>67 ExCo LFR decisions embedded (32 opt-out, 40 opt-in)</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>Carry Over ROI lever &mdash; full slider control replaces fixed baseline</div>
+          <div class="cap"><span class="cap-dot cap-key"></span>Balanced Portfolio stream targeting: F&R 35M / Regions 5M / BU 53M / Decomm 7M</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Benefit data fix: 897.7 M&euro; &rarr; 14,858 M&euro; (158 null-benefit programs corrected)</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>8-tab Excel export with ExCo summary, Cost Summary, Decisions Log</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">442</span><span class="metric-label">Programs</span></div>
+          <div class="metric"><span class="metric-val">67</span><span class="metric-label">ExCo decisions</span></div>
+          <div class="metric"><span class="metric-val">14.9 B&euro;</span><span class="metric-label">Benefits tracked</span></div>
+          <div class="metric"><span class="metric-val">0</span><span class="metric-label">UI defects</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 6: CURRENT -->
+    <div class="phase current">
+      <div class="node node-current">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-version pv-current">v5.9.4</span>
+          <span class="phase-date">4 October 2026 &mdash; Current</span>
+        </div>
+        <div class="phase-title">Enterprise-Grade Maturity</div>
+        <div class="phase-subtitle">The Balanced Investment preset delivers a fully constrained portfolio with ISC, STO, and CCB ring-fences, LFR opt-out enforcement, region rebalancing, and Navigator-approved funding reasoning &mdash; ready for the AOP Conference.</div>
+        <div class="caps">
+          <div class="cap"><span class="cap-dot cap-key"></span><strong>Balanced Investment preset</strong> &mdash; ISC 10M / STO 20M / CCB 70% constraints</div>
+          <div class="cap"><span class="cap-dot cap-key"></span><strong>LFR cap at 28M</strong> with 32 ExCo opt-outs enforced</div>
+          <div class="cap"><span class="cap-dot cap-key"></span><strong>Region rebalancing</strong> &mdash; GRC ring-fence, IR/NAR allocations</div>
+          <div class="cap"><span class="cap-dot cap-key"></span><strong>Hard benefit maximiser</strong> &mdash; fills remaining headroom by BCR</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Navigator-approved funding reasons on every program</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Cost allocation drill-down &mdash; every cell clickable with filters</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>File size optimised: 38 MB &rarr; 12 MB (70% reduction)</div>
+          <div class="cap"><span class="cap-dot cap-new"></span>Hard/Soft benefit toggle for prioritisation (changes funding outcomes)</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><span class="metric-val">100.1 M&euro;</span><span class="metric-label">Allocated</span></div>
+          <div class="metric"><span class="metric-val">BU 57.8 / F&R 42.3</span><span class="metric-label">Split</span></div>
+          <div class="metric"><span class="metric-val">2,711 M&euro;</span><span class="metric-label">Hard benefits</span></div>
+          <div class="metric"><span class="metric-val">8.2 M&euro;</span><span class="metric-label">PMI on top</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- EVOLUTION METRICS -->
+<div class="evo-section">
+  <div class="evo-title">Capability growth across phases</div>
+  <div class="evo-grid">
+    <div class="evo-cell ec1">
+      <div class="evo-cell-label">Origin</div>
+      <div class="evo-cell-val">4</div>
+      <div class="evo-cell-sub">tabs</div>
+    </div>
+    <div class="evo-cell ec2">
+      <div class="evo-cell-label">Foundation</div>
+      <div class="evo-cell-val">6</div>
+      <div class="evo-cell-sub">tabs + Ops</div>
+    </div>
+    <div class="evo-cell ec3">
+      <div class="evo-cell-label">Pre-ExCo</div>
+      <div class="evo-cell-val">82</div>
+      <div class="evo-cell-sub">QA tests</div>
+    </div>
+    <div class="evo-cell ec4">
+      <div class="evo-cell-label">CIO Pivot</div>
+      <div class="evo-cell-val">16</div>
+      <div class="evo-cell-sub">ExCo leaders</div>
+    </div>
+    <div class="evo-cell ec5">
+      <div class="evo-cell-label">Iteration</div>
+      <div class="evo-cell-val">67</div>
+      <div class="evo-cell-sub">LFR decisions</div>
+    </div>
+    <div class="evo-cell ec6">
+      <div class="evo-cell-label">Current</div>
+      <div class="evo-cell-val">5</div>
+      <div class="evo-cell-sub">presets</div>
+    </div>
+  </div>
+  <div class="evo-grid" style="margin-top: 2px;">
+    <div class="evo-cell ec1">
+      <div class="evo-cell-label">Programs</div>
+      <div class="evo-cell-val">509</div>
+      <div class="evo-cell-sub">static Excel</div>
+    </div>
+    <div class="evo-cell ec2">
+      <div class="evo-cell-label">Programs</div>
+      <div class="evo-cell-val">473</div>
+      <div class="evo-cell-sub">live source</div>
+    </div>
+    <div class="evo-cell ec3">
+      <div class="evo-cell-label">Finance</div>
+      <div class="evo-cell-val">570</div>
+      <div class="evo-cell-sub">M&euro; modelled</div>
+    </div>
+    <div class="evo-cell ec4">
+      <div class="evo-cell-label">Views</div>
+      <div class="evo-cell-val">100%</div>
+      <div class="evo-cell-sub">ExCo-ready</div>
+    </div>
+    <div class="evo-cell ec5">
+      <div class="evo-cell-label">Benefits</div>
+      <div class="evo-cell-val">14.9B</div>
+      <div class="evo-cell-sub">&euro; tracked</div>
+    </div>
+    <div class="evo-cell ec6">
+      <div class="evo-cell-label">Portfolio</div>
+      <div class="evo-cell-val">578.5</div>
+      <div class="evo-cell-sub">M&euro; total IT</div>
+    </div>
+  </div>
+  <div class="evo-legend">Sep 16 &rarr; Oct 4, 2026 &middot; 18 days of development</div>
+</div>
+
+<!-- BUILD INTENSITY -->
+<div class="intensity-section">
+  <div class="evo-title">Build intensity &mdash; by the numbers</div>
+  <div class="intensity-grid">
+    <div class="intensity-card ic-builds">
+      <div class="intensity-num">43</div>
+      <div class="intensity-label">Build iterations</div>
+      <div class="intensity-detail">
+        24 shipped HTML versions on disk. 43 documented changelog entries from v3.5 through v5.9.4. Average: 2.4 builds per day across the 18-day sprint.
+      </div>
+    </div>
+    <div class="intensity-card ic-hours">
+      <div class="intensity-num">~80</div>
+      <div class="intensity-label">Hours of human direction</div>
+      <div class="intensity-detail">
+        One senior IT portfolio strategist directing AI-assisted development. ~4&ndash;5 hours per day of active requirement definition, testing, CIO feedback translation, and data validation.
+      </div>
+    </div>
+    <div class="intensity-card ic-code">
+      <div class="intensity-num">2,000+</div>
+      <div class="intensity-label">Lines of application code</div>
+      <div class="intensity-detail">
+        1,934 lines JS + CSS application logic powering the engine, 6 interactive tabs, solver, Excel exports, trade-off cockpit, and scenario management. Plus 11.1 MB of embedded financial data across 4 JSON blocks.
+      </div>
+    </div>
+    <div class="intensity-card ic-log">
+      <div class="intensity-num">1,787</div>
+      <div class="intensity-label">Lines of changelog</div>
+      <div class="intensity-detail">
+        135,000 characters of documented changes. Every feature, fix, data refresh, and CIO feedback cycle recorded with before/after evidence and QA results.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAVINGS VS STANDARD TOOLING -->
+<div class="savings-section">
+  <div class="evo-title">Estimated savings vs standard tooling alternatives</div>
+  <div class="savings-grid">
+
+    <div class="savings-card alt-cots">
+      <span class="savings-card-tag tag-red">Alternative A</span>
+      <div class="savings-card-title">Buy COTS Portfolio Tool</div>
+      <div class="savings-card-cost cost-red">0.8 &ndash; 1.5 M&euro;</div>
+      <div class="savings-card-sub">First-year total &middot; 9&ndash;12 months to value</div>
+      <ul class="savings-items">
+        <li>Enterprise license (Planview / ServiceNow SPM / Clarity): 150&ndash;300K&euro;/year</li>
+        <li>Implementation + SI engagement: 400&ndash;800K&euro;</li>
+        <li>Customisation for ExCo hierarchy, 4-priority funding, merit model, trade-off cockpit: 200&ndash;400K&euro;</li>
+        <li>Annual maintenance &amp; support: 100&ndash;200K&euro;/year</li>
+        <li>Data integration &amp; stitching: 3&ndash;6 months effort</li>
+        <li>Does not include change management and user training</li>
+      </ul>
+    </div>
+
+    <div class="savings-card alt-custom">
+      <span class="savings-card-tag tag-amber">Alternative B</span>
+      <div class="savings-card-title">Custom Build by Consultancy</div>
+      <div class="savings-card-cost cost-amber">0.6 &ndash; 1.2 M&euro;</div>
+      <div class="savings-card-sub">Development cost &middot; 6&ndash;9 months to first release</div>
+      <ul class="savings-items">
+        <li>Team of 4&ndash;6 developers &times; 6&ndash;9 months: 500K&ndash;1M&euro;</li>
+        <li>Architecture &amp; design sprint: 50&ndash;100K&euro;</li>
+        <li>Infrastructure (servers, CI/CD, hosting): 30&ndash;60K&euro;/year</li>
+        <li>Ongoing maintenance team: 150&ndash;250K&euro;/year</li>
+        <li>Requirement changes during build = scope creep risk</li>
+        <li>Feedback loop: weeks per iteration, not hours</li>
+      </ul>
+    </div>
+
+    <div class="savings-card alt-ai">
+      <span class="savings-card-tag tag-green">What was done</span>
+      <div class="savings-card-title">AI-Assisted Development</div>
+      <div class="savings-card-cost cost-green">~15 K&euro;</div>
+      <div class="savings-card-sub">Total cost &middot; 18 days from idea to v5.9.4</div>
+      <ul class="savings-items">
+        <li>Human time: ~80 hours &times; ~€100/hr fully loaded = ~8K&euro;</li>
+        <li>AI tooling (Claude Code): ~€500/month = ~6K&euro;/year</li>
+        <li>Infrastructure: zero (standalone HTML, no servers)</li>
+        <li>Maintenance: same person + AI, no external dependency</li>
+        <li>Feedback loop: same day &mdash; CIO input at 9am, build by 5pm</li>
+        <li>43 iterations in 18 days vs ~3 iterations in 9 months</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="savings-footer sf-saved">
+    <div>
+      <div class="sf-num">0.8 &ndash; 1.5 M&euro;</div>
+      <div class="sf-label">Estimated first-year saving vs COTS</div>
+    </div>
+    <div class="sf-divider"></div>
+    <div>
+      <div class="sf-num">8&ndash;11 months</div>
+      <div class="sf-label">Faster time to value</div>
+    </div>
+    <div class="sf-divider"></div>
+    <div>
+      <div class="sf-num">14&times;</div>
+      <div class="sf-label">More iteration cycles in 3% of the time</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPLEXITY: WHAT WAS STITCHED TOGETHER -->
+<div class="complexity-section">
+  <div class="evo-title">Why this was hard &mdash; complexity under the surface</div>
+  <div class="complexity-grid">
+
+    <div class="complexity-card">
+      <div class="complexity-card-icon cci-data">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      </div>
+      <h4>Data stitching across 4 live sources</h4>
+      <ul class="complexity-list">
+        <li>Live SharePoint Excel demand workbook (442 programs, 5 parsed sheets)</li>
+        <li>Separate Bill of IT operations workbook (182 services, 470 M&euro;)</li>
+        <li>ExCo hierarchy mapping (16 leaders &times; 35 orgs with fuzzy match)</li>
+        <li>67 individual ExCo LFR opt-in/opt-out decisions embedded as override rules</li>
+        <li>Enterprise-wide charging key (Type II BU allocation percentages)</li>
+        <li>3 data refreshes during development &mdash; each requiring full audit trail</li>
+        <li>Benefit data repair: 158 null-benefit programs patched from authoritative extract</li>
+      </ul>
+    </div>
+
+    <div class="complexity-card">
+      <div class="complexity-card-icon cci-engine">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#283593" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
+      <h4>Multi-phase solver engine</h4>
+      <ul class="complexity-list">
+        <li>4-priority funding waterfall: LFR &rarr; Carry-Over &rarr; Sustain &rarr; Value</li>
+        <li>5-component merit scoring with hybrid benefit (quantitative &rarr; qualitative fallback)</li>
+        <li>Balanced Investment: 9-phase engine (CCB 70%, ISC fill, STO fill, stream cap, region rebalance, bucket fill, hard benefit maximiser)</li>
+        <li>Per-leader trade-off cockpit: include/exclude by merit rank, budget delta, benefit impact</li>
+        <li>Lever cascade: changing any upstream lever auto-rebalances all downstream</li>
+        <li>Session management: save/load/fork with full decision audit trail</li>
+        <li>Financial reconciliation: Programs + Operations = Total IT AOP, validated to 3 decimal places</li>
+      </ul>
+    </div>
+
+    <div class="complexity-card">
+      <div class="complexity-card-icon cci-ux">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00695C" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h4>All in one self-contained HTML file</h4>
+      <ul class="complexity-list">
+        <li>Zero server dependencies &mdash; open from desktop, SharePoint, or email attachment</li>
+        <li>6 interactive tabs with real-time recalculation on every lever change</li>
+        <li>Embedded 11 MB of financial data (demand + operations + services + allocations)</li>
+        <li>Full Excel export (8-tab workbook generated in-browser with XLSX writer)</li>
+        <li>IndexedDB persistence: scenarios survive browser close, portable JSON export</li>
+        <li>Cost allocation drill-down: every cell clickable across 7 BU clusters</li>
+        <li>Optimised from 38 MB to 12 MB without losing any functionality</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- INSIGHT BAR -->
+<div class="insight-bar">
+  <div class="insight-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z"/><path d="M9 21h6M10 17v1M14 17v1"/></svg>
+  </div>
+  <div class="insight-text">
+    What started as a <strong>prototype to replace a static Excel model</strong> was transformed by CIO feedback into the
+    <strong>One Portfolio Navigator</strong> through <strong>43 build iterations in 18 days</strong> &mdash; a pace no COTS tool or consultancy could match.
+    It stitches together live demand data, operations Bill of IT, ExCo hierarchies, and 67 individual leadership decisions into a single self-contained HTML file
+    that models 578.5 M&euro; of IT investment. Estimated saving vs standard tooling: <strong>0.8&ndash;1.5 M&euro; in year one</strong> and
+    <strong>8&ndash;11 months faster</strong> time to value.
+  </div>
+</div>
+
+<footer>
+  One Portfolio Navigator &middot; Journey Map &middot; Built for CIO presentation &middot; October 2026
+</footer>
+
+</body>
+</html>

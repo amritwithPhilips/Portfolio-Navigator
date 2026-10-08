@@ -1,0 +1,12 @@
+{
+  "build": "5.6.1",
+  "createdAt": "2026-09-29T15:53:03.199716+00:00",
+  "programSource": "f3d2dd19319d6143b75f4efaf133f7445e56a6081409e9a3256ddb23d65b3691",
+  "operationsSource": "176a6192da3356bcedd9f2babc8318c45977e7658d03172f9e2cb643d22e4668",
+  "modelSha256": "887f19493a0313ecd510461d3166a27fdc95c1e118cf2a45dfa938767227184d",
+  "extractSha256": "65a0568200c1b3a41fa280105db6a1ba5248fc518d29adacf8e3e1b5ffc0934b",
+  "checks": 152,
+  "passed": 152,
+  "failed": 0,
+  "meetingUse": "Discussion and scenario review; not unconditional funding or Finance signoff"
+}

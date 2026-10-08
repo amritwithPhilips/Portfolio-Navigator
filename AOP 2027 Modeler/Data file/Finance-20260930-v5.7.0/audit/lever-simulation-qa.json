@@ -1,0 +1,610 @@
+{
+  "total": 525,
+  "passed": 525,
+  "failed": 0,
+  "failures": [],
+  "byScenario": {
+    "L01": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L02": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L03": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L04": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L05": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L06": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L07": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L08": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L09": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L10": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L11": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L12": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L13": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L14": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L15": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L16": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L17": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L18": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L19": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L20": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L21": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L22": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L23": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L24": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    },
+    "L25": {
+      "total": 21,
+      "passed": 21,
+      "failures": []
+    }
+  },
+  "summary": [
+    {
+      "id": "sim-L01",
+      "name": "LFR AOP 12% basis",
+      "group": "G1-Lever Basis",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 0,
+      "funded_M": 99.976,
+      "pmi_M": 5.19,
+      "ew_M": 34.261,
+      "bu_M": 65.715,
+      "grand_M": 575.480463,
+      "exco": {
+        "ISC": 0.12,
+        "IGTS": 17.163,
+        "PH": 17.04,
+        "Svc": 17.417
+      }
+    },
+    {
+      "id": "sim-L02",
+      "name": "LFR fixed 8M",
+      "group": "G1-Lever Basis",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 0,
+      "funded_M": 99.984,
+      "pmi_M": 5.19,
+      "ew_M": 39.477,
+      "bu_M": 60.507,
+      "grand_M": 575.488463,
+      "exco": {
+        "ISC": 0.12,
+        "IGTS": 16.498,
+        "PH": 15.746,
+        "Svc": 24.267
+      }
+    },
+    {
+      "id": "sim-L03",
+      "name": "Sustain AOP 15% basis",
+      "group": "G1-Lever Basis",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 0,
+      "funded_M": 99.993,
+      "pmi_M": 5.19,
+      "ew_M": 48.469,
+      "bu_M": 51.524,
+      "grand_M": 575.497463,
+      "exco": {
+        "ISC": 2.32,
+        "IGTS": 8.761,
+        "PH": 15.915,
+        "Svc": 26.997
+      }
+    },
+    {
+      "id": "sim-L04",
+      "name": "Sustain fixed 8M",
+      "group": "G1-Lever Basis",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 0,
+      "funded_M": 99.977,
+      "pmi_M": 5.19,
+      "ew_M": 43.866,
+      "bu_M": 56.111,
+      "grand_M": 575.481463,
+      "exco": {
+        "ISC": 2.28,
+        "IGTS": 12.148,
+        "PH": 16.115,
+        "Svc": 21.874
+      }
+    },
+    {
+      "id": "sim-L05",
+      "name": "Value AOP 30% basis",
+      "group": "G1-Lever Basis",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 0,
+      "funded_M": 99.963,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 50.247,
+      "grand_M": 575.467463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 13.915,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L06",
+      "name": "IT Simp OFF (baseline)",
+      "group": "G2-IT Simp Lever",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 0,
+      "funded_M": 99.963,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 50.247,
+      "grand_M": 575.467463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 13.915,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L07",
+      "name": "IT Simp ON 2.5% AOP",
+      "group": "G2-IT Simp Lever",
+      "budget": 100,
+      "itsimpMode": true,
+      "overrides": 0,
+      "funded_M": 99.906,
+      "pmi_M": 5.19,
+      "ew_M": 51.978,
+      "bu_M": 47.928,
+      "grand_M": 575.410463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.821,
+        "PH": 13.145,
+        "Svc": 29.209
+      }
+    },
+    {
+      "id": "sim-L08",
+      "name": "IT Simp ON 7.5% AOP",
+      "group": "G2-IT Simp Lever",
+      "budget": 100,
+      "itsimpMode": true,
+      "overrides": 0,
+      "funded_M": 99.83,
+      "pmi_M": 5.19,
+      "ew_M": 54.658,
+      "bu_M": 45.172,
+      "grand_M": 575.334463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 10.015,
+        "PH": 13.145,
+        "Svc": 30.459
+      }
+    },
+    {
+      "id": "sim-L09",
+      "name": "IT Simp ON 100% bucket",
+      "group": "G2-IT Simp Lever",
+      "budget": 100,
+      "itsimpMode": true,
+      "overrides": 0,
+      "funded_M": 99.945,
+      "pmi_M": 5.19,
+      "ew_M": 65.968,
+      "bu_M": 33.977,
+      "grand_M": 575.449463,
+      "exco": {
+        "ISC": 2.2,
+        "IGTS": 5.365,
+        "PH": 12.25,
+        "Svc": 39.639
+      }
+    },
+    {
+      "id": "sim-L10",
+      "name": "IT Simp ON 12M fixed",
+      "group": "G2-IT Simp Lever",
+      "budget": 100,
+      "itsimpMode": true,
+      "overrides": 0,
+      "funded_M": 99.93,
+      "pmi_M": 5.19,
+      "ew_M": 59.358,
+      "bu_M": 40.572,
+      "grand_M": 575.434463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 5.915,
+        "PH": 13.145,
+        "Svc": 35.659
+      }
+    },
+    {
+      "id": "sim-L11",
+      "name": "ISC opt-in all Stage3 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 2,
+      "funded_M": 100.063,
+      "pmi_M": 5.19,
+      "ew_M": 49.816,
+      "bu_M": 50.247,
+      "grand_M": 575.567463,
+      "exco": {
+        "ISC": 2.32,
+        "IGTS": 9.57,
+        "PH": 13.915,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L12",
+      "name": "IGTS swap: opt-out funded, opt-in top-3 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 5,
+      "funded_M": 98.811,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 49.095,
+      "grand_M": 574.315463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 8.418,
+        "PH": 13.915,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L13",
+      "name": "PH opt-out all Stage3 funded",
+      "group": "G3-ExCo Opt-In/Out",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 6,
+      "funded_M": 98.298,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 48.582,
+      "grand_M": 573.802463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 12.25,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L14",
+      "name": "PH opt-in 5 unfunded Stage3",
+      "group": "G3-ExCo Opt-In/Out",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 5,
+      "funded_M": 103.163,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 53.447,
+      "grand_M": 578.667463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 17.115,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L15",
+      "name": "Services swap: out funded, in top-2 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 4,
+      "funded_M": 107.293,
+      "pmi_M": 5.19,
+      "ew_M": 57.046,
+      "bu_M": 50.247,
+      "grand_M": 582.797463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 13.915,
+        "Svc": 34.677
+      }
+    },
+    {
+      "id": "sim-L16",
+      "name": "All four ExCo opt-out all Stage3 funded",
+      "group": "G3-ExCo Opt-In/Out",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 11,
+      "funded_M": 91.558,
+      "pmi_M": 5.19,
+      "ew_M": 47.526,
+      "bu_M": 44.032,
+      "grand_M": 567.062463,
+      "exco": {
+        "ISC": 2.2,
+        "IGTS": 5.02,
+        "PH": 12.25,
+        "Svc": 25.177
+      }
+    },
+    {
+      "id": "sim-L17",
+      "name": "IGTS Stage3 funded at 75%",
+      "group": "G4-Partial Funding",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 4,
+      "funded_M": 101.209,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 51.493,
+      "grand_M": 576.713463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 10.816,
+        "PH": 13.915,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L18",
+      "name": "PH unfunded Stage3 at 50% cost",
+      "group": "G4-Partial Funding",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 4,
+      "funded_M": 101.063,
+      "pmi_M": 5.19,
+      "ew_M": 49.716,
+      "bu_M": 51.347,
+      "grand_M": 576.567463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 15.015,
+        "Svc": 27.347
+      }
+    },
+    {
+      "id": "sim-L19",
+      "name": "Services top-4 unfunded EW at 30% cost",
+      "group": "G4-Partial Funding",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 4,
+      "funded_M": 103.6716,
+      "pmi_M": 5.19,
+      "ew_M": 53.4246,
+      "bu_M": 50.247,
+      "grand_M": 579.176063,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 9.57,
+        "PH": 13.915,
+        "Svc": 31.0556
+      }
+    },
+    {
+      "id": "sim-L20",
+      "name": "ISC 50% + Services 40% partial combined",
+      "group": "G4-Partial Funding",
+      "budget": 100,
+      "itsimpMode": false,
+      "overrides": 5,
+      "funded_M": 104.533,
+      "pmi_M": 5.19,
+      "ew_M": 54.286,
+      "bu_M": 50.247,
+      "grand_M": 580.037463,
+      "exco": {
+        "ISC": 2.27,
+        "IGTS": 9.57,
+        "PH": 13.915,
+        "Svc": 31.867
+      }
+    },
+    {
+      "id": "sim-L21",
+      "name": "IT Simp 5% AOP + IGTS decomm on-top + PH top-3",
+      "group": "G5-Combined",
+      "budget": 100,
+      "itsimpMode": true,
+      "overrides": 8,
+      "funded_M": 105.775,
+      "pmi_M": 5.19,
+      "ew_M": 52.458,
+      "bu_M": 53.317,
+      "grand_M": 581.279463,
+      "exco": {
+        "ISC": 2.32,
+        "IGTS": 13.835,
+        "PH": 15.32,
+        "Svc": 28.659
+      }
+    },
+    {
+      "id": "sim-L22",
+      "name": "Budget 90M + Sustain 80% bucket + Services 2 on-top",
+      "group": "G5-Combined",
+      "budget": 90,
+      "itsimpMode": false,
+      "overrides": 2,
+      "funded_M": 99.476,
+      "pmi_M": 5.19,
+      "ew_M": 60.905,
+      "bu_M": 38.571,
+      "grand_M": 574.980463,
+      "exco": {
+        "ISC": 2.22,
+        "IGTS": 5.92,
+        "PH": 12.55,
+        "Svc": 34.677
+      }
+    },
+    {
+      "id": "sim-L23",
+      "name": "Budget 80M + IT Simp 8% + ISC 2 Stage1 on-top",
+      "group": "G5-Combined",
+      "budget": 80,
+      "itsimpMode": true,
+      "overrides": 2,
+      "funded_M": 81.963,
+      "pmi_M": 5.19,
+      "ew_M": 47.331,
+      "bu_M": 34.632,
+      "grand_M": 557.467463,
+      "exco": {
+        "ISC": 4.2,
+        "IGTS": 5.02,
+        "PH": 12.25,
+        "Svc": 25.177
+      }
+    },
+    {
+      "id": "sim-L24",
+      "name": "All levers AOP + 1 unfunded per ExCo on-top",
+      "group": "G5-Combined",
+      "budget": 100,
+      "itsimpMode": true,
+      "overrides": 4,
+      "funded_M": 74.489,
+      "pmi_M": 5.19,
+      "ew_M": 32.103,
+      "bu_M": 42.386,
+      "grand_M": 549.993463,
+      "exco": {
+        "ISC": 0.08,
+        "IGTS": 11.828,
+        "PH": 13.146,
+        "Svc": 21.527
+      }
+    },
+    {
+      "id": "sim-L25",
+      "name": "Budget 110M + max levers + IGTS Stage3 at 80%",
+      "group": "G5-Combined",
+      "budget": 110,
+      "itsimpMode": true,
+      "overrides": 6,
+      "funded_M": 117.2314,
+      "pmi_M": 5.19,
+      "ew_M": 69.802,
+      "bu_M": 47.4294,
+      "grand_M": 592.735863,
+      "exco": {
+        "ISC": 2.2,
+        "IGTS": 14.7834,
+        "PH": 12.3,
+        "Svc": 35.787
+      }
+    }
+  ]
+}

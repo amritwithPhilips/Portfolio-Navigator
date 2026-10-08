@@ -1,0 +1,76 @@
+{
+  "version": "5.8.0",
+  "scenarios": 32,
+  "candidateOptions": 135,
+  "assertions": 1423,
+  "passed": 1423,
+  "fieldComparisons": 69280,
+  "suites": [
+    [
+      "Scenario engine",
+      420,
+      420,
+      "engine-qa.json",
+      null
+    ],
+    [
+      "Independent source workbook replay",
+      101,
+      101,
+      "oracle-qa.json",
+      null
+    ],
+    [
+      "Six-tab browser and extract",
+      371,
+      371,
+      "browser-qa.json",
+      null
+    ],
+    [
+      "Browser regression and recovery",
+      65,
+      65,
+      "regression-browser-qa.json",
+      null
+    ],
+    [
+      "Changed-source refresh",
+      6,
+      6,
+      "refresh-ui-qa.json",
+      null
+    ],
+    [
+      "ExCo workflow and configuration controls",
+      94,
+      94,
+      "exco-qa.json",
+      null
+    ],
+    [
+      "Excel exports",
+      320,
+      320,
+      "export-qa.json",
+      null
+    ],
+    [
+      "v5.7 calculation parity and import boundaries",
+      42,
+      42,
+      "compatibility-qa.json",
+      null
+    ],
+    [
+      "Final comparison and report rendering",
+      4,
+      4,
+      "final-view-qa.json",
+      null
+    ]
+  ],
+  "recommendedBase": 99.963,
+  "recommendedTotalIT": 575.4674630385123,
+  "fundingWeightedSourceMerit": 60.088012564648935
+}

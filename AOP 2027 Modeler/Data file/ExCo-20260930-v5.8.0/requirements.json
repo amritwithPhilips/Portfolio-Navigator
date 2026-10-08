@@ -1,0 +1,62 @@
+[
+  [
+    "EXCO58-01",
+    "Default leadership view",
+    "Open the new build in ExCo view. Keep all six original tabs accessible through Six-tab workbench."
+  ],
+  [
+    "EXCO58-02",
+    "Single calculation result",
+    "Company KPIs, priority bars, receiving organisation costs, drilldowns and exports use the same scenario result and finance ledger."
+  ],
+  [
+    "EXCO58-03",
+    "Scope clarity",
+    "Company position always shows company cost. The 16-leader filter applies to accountable Programs in My portfolio and Decisions. Receiving-BU allocation is separate from accountability."
+  ],
+  [
+    "EXCO58-04",
+    "Benefit meaning",
+    "Show funded hard and soft submitted lifetime benefit claims separately. Do not label claims as annual savings or realised returns."
+  ],
+  [
+    "EXCO58-05",
+    "Recommendation boundary",
+    "Compare baseline, best tested option and current scenario. State objective, protected funding and grid size. Invalidate the recommendation when the Programs source hash changes."
+  ],
+  [
+    "EXCO58-06",
+    "Recommended draft",
+    "Save the current scenario before creating a fresh recommended child draft. Preserve parent lineage. Apply source settings without copying current manual decisions."
+  ],
+  [
+    "EXCO58-07",
+    "Decision preview",
+    "For P4 and optional P5, preview partial scope or exclusion with a rationale and exact before/after funding, total IT and budget excess. Cancel leaves state unchanged."
+  ],
+  [
+    "EXCO58-08",
+    "Stale preview guard",
+    "Apply only when scenario ID, revision and source hash still match the preview. Otherwise require a new preview."
+  ],
+  [
+    "EXCO58-09",
+    "Trade-off isolation",
+    "Apply whole-Programs trade-offs to the selected leader and F&R or BU Led stream. Keep the base budget unchanged and disclose any target undershoot."
+  ],
+  [
+    "EXCO58-10",
+    "Lifecycle and evidence",
+    "Save, undo, finalise, fork and full Excel export use existing commands. Finalised scenarios disable editing. Changed-source unresolved decisions continue to block finalisation."
+  ],
+  [
+    "EXCO58-11",
+    "Portable input validation",
+    "Reject imported negative or non-numeric requested amounts, merit outside 0–100, merit without rationale, and invalid review objects."
+  ],
+  [
+    "EXCO58-12",
+    "Release preservation",
+    "Create v5.8.0 without changing the v5.7.0 HTML or either source workbook. Run 32 scenarios, source replay, exports, browser regression, refresh and ExCo tests."
+  ]
+]

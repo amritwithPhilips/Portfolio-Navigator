@@ -1,0 +1,15 @@
+{
+  "inspected": [
+    "Overall State navigation",
+    "Shared bubble chart and category legend",
+    "Visible Opt in, Opt out and Partial funding actions",
+    "Carryover ROI slider and numeric input",
+    "Scenario and revision download selectors"
+  ],
+  "passed": true,
+  "findings": "No page overflow or overlapping controls in the reviewed desktop views. Wide customizable tables scroll within their panel.",
+  "viewports": [
+    1440,
+    1920
+  ]
+}

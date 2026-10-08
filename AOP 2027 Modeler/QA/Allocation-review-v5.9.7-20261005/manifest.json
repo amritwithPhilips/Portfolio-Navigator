@@ -1,0 +1,12 @@
+{
+  "version": "5.9.7",
+  "baseVersion": "5.9.5",
+  "baseHash": "a890c16c78136d5f3c468e94e10597426ba76eddac15172365b21e1565a254e0",
+  "sourceHash": "981e9a196484e5f41852cb2b4088c8539478d63d335139fb059d7ef8b8dea8ac",
+  "output": "AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.7.html",
+  "outputHash": "d8ca266e9e62f8ceb4263216fe367a4fc0343a3b714b78b35d66120e6331217f",
+  "checks": 132,
+  "publishedDashboard": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.7.html",
+  "visualVerification": "Unavailable: local-file browser security restriction",
+  "qaReport": "QA-report-v5.9.7.html"
+}

@@ -1,0 +1,9295 @@
+[
+  {
+    "id": "rebuild-saved",
+    "filename": "AOP2027-Optimal-Segmentation-790754402952-r0-full.xlsx",
+    "scenarioId": "scenario-1790754402952",
+    "name": "Optimal Segmentation",
+    "revision": 0,
+    "base": 99.963,
+    "total": 575.4674630385123,
+    "rows": [
+      {
+        "id": "EW-46",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 90
+      },
+      {
+        "id": "EW-69",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 90
+      },
+      {
+        "id": "EW-04",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 85
+      },
+      {
+        "id": "EW-45",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "EW-60",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "EW-68",
+        "cost": 0.725,
+        "final": 0.725,
+        "score": 85
+      },
+      {
+        "id": "EW-181",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 85
+      },
+      {
+        "id": "EW-124",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-47",
+        "cost": 0.085,
+        "final": 0.085,
+        "score": 70
+      },
+      {
+        "id": "EW-61",
+        "cost": 0.225,
+        "final": 0.225,
+        "score": 70
+      },
+      {
+        "id": "EW-67",
+        "cost": 0.375,
+        "final": 0.375,
+        "score": 62
+      },
+      {
+        "id": "EW-83",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 61
+      },
+      {
+        "id": "EW-162",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 55
+      },
+      {
+        "id": "EW-21",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 52
+      },
+      {
+        "id": "EW-24",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "EW-22",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 40
+      },
+      {
+        "id": "EW-163",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 38
+      },
+      {
+        "id": "EW-154",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 33
+      },
+      {
+        "id": "EW-80",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 66
+      },
+      {
+        "id": "EW-11",
+        "cost": 7.63,
+        "final": 7.63,
+        "score": 56
+      },
+      {
+        "id": "EW-65",
+        "cost": 4.16,
+        "final": 4.16,
+        "score": 51
+      },
+      {
+        "id": "EW-71",
+        "cost": 6.225,
+        "final": 6.225,
+        "score": 40
+      },
+      {
+        "id": "EW-13",
+        "cost": 0.5,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "EW-135",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "Bu-68",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-297",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-97",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-101",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-193",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-283",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-433",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-178",
+        "cost": 0.333,
+        "final": 0.333,
+        "score": 75
+      },
+      {
+        "id": "EW-180",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 75
+      },
+      {
+        "id": "Bu-06",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-309",
+        "cost": 0.669,
+        "final": 0.669,
+        "score": 63
+      },
+      {
+        "id": "Bu-392",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 63
+      },
+      {
+        "id": "EW-63",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-64",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "Bu-385",
+        "cost": 0.49,
+        "final": 0.49,
+        "score": 61
+      },
+      {
+        "id": "Bu-96",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "EW-62",
+        "cost": 0.171,
+        "final": 0.171,
+        "score": 57
+      },
+      {
+        "id": "EW-66",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "Bu-316",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 50
+      },
+      {
+        "id": "Bu-109",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 48
+      },
+      {
+        "id": "Bu-365",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 46
+      },
+      {
+        "id": "EW-161",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 45
+      },
+      {
+        "id": "Bu-294",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 45
+      },
+      {
+        "id": "Bu-51",
+        "cost": 1.825,
+        "final": 1.825,
+        "score": 42
+      },
+      {
+        "id": "Bu-103",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 40
+      },
+      {
+        "id": "Bu-104",
+        "cost": 1.655,
+        "final": 1.655,
+        "score": 40
+      },
+      {
+        "id": "Bu-284",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 40
+      },
+      {
+        "id": "EW-10",
+        "cost": 1.052,
+        "final": 1.052,
+        "score": 38
+      },
+      {
+        "id": "Bu-116",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 38
+      },
+      {
+        "id": "Bu-117",
+        "cost": 0.13,
+        "final": 0.13,
+        "score": 38
+      },
+      {
+        "id": "Bu-391",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 35
+      },
+      {
+        "id": "EW-189",
+        "cost": 3,
+        "final": 3,
+        "score": 30
+      },
+      {
+        "id": "Bu-355",
+        "cost": 0.336,
+        "final": 0.336,
+        "score": 28
+      },
+      {
+        "id": "Bu-105",
+        "cost": 0.04,
+        "final": 0.04,
+        "score": 23
+      },
+      {
+        "id": "Bu-106",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 23
+      },
+      {
+        "id": "EW-28",
+        "cost": 0.777,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "EW-127",
+        "cost": 2.5,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-20",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 76
+      },
+      {
+        "id": "EW-72",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 62
+      },
+      {
+        "id": "EW-102",
+        "cost": 0.125,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-142",
+        "cost": 0.7,
+        "final": 0,
+        "score": 54
+      },
+      {
+        "id": "EW-23",
+        "cost": 0.4,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-25",
+        "cost": 0.48,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-19",
+        "cost": 0.45,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-165",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 33
+      },
+      {
+        "id": "EW-77",
+        "cost": 0.12,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-119",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-59",
+        "cost": 0.48,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-61",
+        "cost": 0.7,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-70",
+        "cost": 0.3,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-50",
+        "cost": 0.5,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-37",
+        "cost": 0.493,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-353",
+        "cost": 0.335,
+        "final": 0,
+        "score": 31
+      },
+      {
+        "id": "Bu-13",
+        "cost": 5,
+        "final": 1,
+        "score": 80
+      },
+      {
+        "id": "Bu-14",
+        "cost": 0.35,
+        "final": 0.3,
+        "score": 80
+      },
+      {
+        "id": "Bu-58",
+        "cost": 0.2,
+        "final": 0.129,
+        "score": 90
+      },
+      {
+        "id": "Bu-50",
+        "cost": 1.95,
+        "final": 1.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-49",
+        "cost": 1.7,
+        "final": 1.7,
+        "score": 80
+      },
+      {
+        "id": "Bu-55",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 80
+      },
+      {
+        "id": "Bu-01",
+        "cost": 1.3,
+        "final": 0.6,
+        "score": 58
+      },
+      {
+        "id": "EW-12",
+        "cost": 0.65,
+        "final": 0.063,
+        "score": 73
+      },
+      {
+        "id": "Bu-32",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-22",
+        "cost": 1,
+        "final": 0.525,
+        "score": 78
+      },
+      {
+        "id": "Bu-26",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 60
+      },
+      {
+        "id": "Bu-28",
+        "cost": 1,
+        "final": 0.3,
+        "score": 60
+      },
+      {
+        "id": "Bu-52",
+        "cost": 0.85,
+        "final": 0.5,
+        "score": 65
+      },
+      {
+        "id": "Bu-25",
+        "cost": 1.68,
+        "final": 1.315,
+        "score": 65
+      },
+      {
+        "id": "Bu-27",
+        "cost": 1.5,
+        "final": 0.758,
+        "score": 63
+      },
+      {
+        "id": "Bu-31",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "Bu-35",
+        "cost": 1,
+        "final": 1,
+        "score": 60
+      },
+      {
+        "id": "Bu-29",
+        "cost": 1.2,
+        "final": 1.088,
+        "score": 60
+      },
+      {
+        "id": "Bu-24",
+        "cost": 2.95,
+        "final": 2.175,
+        "score": 52
+      },
+      {
+        "id": "Bu-30",
+        "cost": 1.5,
+        "final": 1,
+        "score": 57
+      },
+      {
+        "id": "Bu-23",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 57
+      },
+      {
+        "id": "Bu-36",
+        "cost": 1.27,
+        "final": 0.15,
+        "score": 57
+      },
+      {
+        "id": "Bu-20",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 40
+      },
+      {
+        "id": "Bu-196",
+        "cost": 0.2,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-198",
+        "cost": 0.36,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-253",
+        "cost": 0.12,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-04",
+        "cost": 0.295,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-352",
+        "cost": 0.4,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-252",
+        "cost": 0.32,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-207",
+        "cost": 1,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-356",
+        "cost": 0.25,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-414",
+        "cost": 1.5,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-409",
+        "cost": 4.461,
+        "final": 0,
+        "score": 75
+      },
+      {
+        "id": "Bu-410",
+        "cost": 1.514,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-188",
+        "cost": 0.247,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "EW-36",
+        "cost": 0.1,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-175",
+        "cost": 0.6,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-411",
+        "cost": 1.788,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "Bu-60",
+        "cost": 2.8,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-82",
+        "cost": 2.468,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "EW-32",
+        "cost": 0.2,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "Bu-351",
+        "cost": 0.7,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-431",
+        "cost": 0.6,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-199",
+        "cost": 0.8,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-125",
+        "cost": 1,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "Bu-33",
+        "cost": 0.025,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-81",
+        "cost": 0.85,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-37",
+        "cost": 0.4,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-35",
+        "cost": 0.6,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-38",
+        "cost": 0.13,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-02",
+        "cost": 0.75,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-39",
+        "cost": 0.1,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "EW-186",
+        "cost": 0.075,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-187",
+        "cost": 0.075,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "Bu-338",
+        "cost": 0.3,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "Bu-269",
+        "cost": 0.02,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-120",
+        "cost": 0.575,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-434",
+        "cost": 1.75,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-57",
+        "cost": 0.5,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-174",
+        "cost": 0.175,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-38",
+        "cost": 0.638,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-19",
+        "cost": 0.1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-275",
+        "cost": 0.57,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-118",
+        "cost": 0.515,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-40",
+        "cost": 0.15,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-11",
+        "cost": 10.12,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-137",
+        "cost": 0.1,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-54",
+        "cost": 0.43,
+        "final": 0,
+        "score": 55
+      },
+      {
+        "id": "Bu-59",
+        "cost": 0.21,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-76",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-08",
+        "cost": 0.3,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-07",
+        "cost": 8.25,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-75",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-18",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-435",
+        "cost": 0.85,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-287",
+        "cost": 1.08,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-21",
+        "cost": 0.32,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-34",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-264",
+        "cost": 2.665,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-08",
+        "cost": 0.65,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-274",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-86",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-33",
+        "cost": 0.12,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-12",
+        "cost": 0.65,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-06",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-51",
+        "cost": 0.35,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-354",
+        "cost": 0.2,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-426",
+        "cost": 0.698,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-257",
+        "cost": 0.14,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "Bu-09",
+        "cost": 2.25,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "Bu-379",
+        "cost": 0.99,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-191",
+        "cost": 0.4277,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-16",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-140",
+        "cost": 0.1,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-192",
+        "cost": 0.2272,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-288",
+        "cost": 1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-183",
+        "cost": 0.15,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-139",
+        "cost": 1.5,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "Bu-380",
+        "cost": 0.05,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-52",
+        "cost": 0.395,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-84",
+        "cost": 0.25,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "Bu-10",
+        "cost": 1.2,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-74",
+        "cost": 3.2,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-167",
+        "cost": 0.05,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-05",
+        "cost": 0.15,
+        "final": 0,
+        "score": 49
+      },
+      {
+        "id": "EW-29",
+        "cost": 0.45,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-53",
+        "cost": 0.45,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "Bu-54",
+        "cost": 0.8,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-185",
+        "cost": 0.625,
+        "final": 0,
+        "score": 47
+      },
+      {
+        "id": "Bu-427",
+        "cost": 0.6,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-428",
+        "cost": 0.25,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-357",
+        "cost": 0.3,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-358",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-359",
+        "cost": 0.35,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-09",
+        "cost": 0,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-115",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-15",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-195",
+        "cost": 0.02,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-197",
+        "cost": 1.17,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-201",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-202",
+        "cost": 0.3,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-203",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-204",
+        "cost": 0.05,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-205",
+        "cost": 0.05,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-438",
+        "cost": 0.675,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-432",
+        "cost": 0.1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-282",
+        "cost": 0.012,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "Bu-350",
+        "cost": 0.1,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "Bu-440",
+        "cost": 0.228,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "EW-179",
+        "cost": 1,
+        "final": 1,
+        "score": 90
+      },
+      {
+        "id": "Bu-75",
+        "cost": 0.078,
+        "final": 0.078,
+        "score": 85
+      },
+      {
+        "id": "Bu-76",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-74",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 78
+      },
+      {
+        "id": "Bu-324",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 61
+      },
+      {
+        "id": "EW-44",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 42
+      },
+      {
+        "id": "EW-42",
+        "cost": 2,
+        "final": 2,
+        "score": 38
+      },
+      {
+        "id": "EW-164",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 33
+      },
+      {
+        "id": "Bu-323",
+        "cost": 0.025,
+        "final": 0.025,
+        "score": 33
+      },
+      {
+        "id": "EW-07",
+        "cost": 4.985,
+        "final": 4.985,
+        "score": 30
+      },
+      {
+        "id": "EW-27",
+        "cost": 1.6,
+        "final": 1.6,
+        "score": 5
+      },
+      {
+        "id": "Bu-72",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 90
+      },
+      {
+        "id": "Bu-99",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-368",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 75
+      },
+      {
+        "id": "Bu-98",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 73
+      },
+      {
+        "id": "Bu-413",
+        "cost": 0.24,
+        "final": 0.24,
+        "score": 73
+      },
+      {
+        "id": "EW-168",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 70
+      },
+      {
+        "id": "EW-136",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 68
+      },
+      {
+        "id": "EW-100",
+        "cost": 1.2,
+        "final": 1.2,
+        "score": 66
+      },
+      {
+        "id": "Bu-115",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 65
+      },
+      {
+        "id": "Bu-128",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "Bu-339",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "EW-79",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-158",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 62
+      },
+      {
+        "id": "EW-126",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 61
+      },
+      {
+        "id": "EW-128",
+        "cost": 0.09,
+        "final": 0.09,
+        "score": 61
+      },
+      {
+        "id": "EW-143",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 60
+      },
+      {
+        "id": "Bu-262",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "Bu-372",
+        "cost": 0.736,
+        "final": 0.736,
+        "score": 58
+      },
+      {
+        "id": "EW-177",
+        "cost": 0.7,
+        "final": 0.7,
+        "score": 57
+      },
+      {
+        "id": "Bu-389",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 53
+      },
+      {
+        "id": "EW-90",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 52
+      },
+      {
+        "id": "EW-121",
+        "cost": 0.65,
+        "final": 0.65,
+        "score": 52
+      },
+      {
+        "id": "Bu-259",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 52
+      },
+      {
+        "id": "Bu-280",
+        "cost": 0.328,
+        "final": 0.328,
+        "score": 52
+      },
+      {
+        "id": "EW-169",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-108",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 50
+      },
+      {
+        "id": "Bu-146",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 50
+      },
+      {
+        "id": "Bu-147",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-148",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 50
+      },
+      {
+        "id": "EW-153",
+        "cost": 0.152,
+        "final": 0.152,
+        "score": 49
+      },
+      {
+        "id": "EW-157",
+        "cost": 0.195,
+        "final": 0.195,
+        "score": 48
+      },
+      {
+        "id": "Bu-375",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 48
+      },
+      {
+        "id": "Bu-273",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-322",
+        "cost": 0.4,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-361",
+        "cost": 0.15,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-366",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-390",
+        "cost": 0.4,
+        "final": 0,
+        "score": 42
+      },
+      {
+        "id": "EW-152",
+        "cost": 0.35,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-159",
+        "cost": 0.129,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-160",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-171",
+        "cost": 0.425,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-172",
+        "cost": 1.5,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-371",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-377",
+        "cost": 0.124,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-184",
+        "cost": 4,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-194",
+        "cost": 0.7,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-261",
+        "cost": 0.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-109",
+        "cost": 0.48,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "EW-156",
+        "cost": 0.3,
+        "final": 0,
+        "score": 37
+      },
+      {
+        "id": "EW-170",
+        "cost": 0.05,
+        "final": 0,
+        "score": 37
+      },
+      {
+        "id": "EW-110",
+        "cost": 0.55,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-112",
+        "cost": 0.5,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-117",
+        "cost": 0.3,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-228",
+        "cost": 0.25,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-281",
+        "cost": 0.1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-317",
+        "cost": 0.05,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-436",
+        "cost": 0.5,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "EW-94",
+        "cost": 0,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-139",
+        "cost": 0.25,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-141",
+        "cost": 0.7,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-149",
+        "cost": 0.45,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-69",
+        "cost": 0.39,
+        "final": 0.39,
+        "score": 90
+      },
+      {
+        "id": "Bu-73",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 90
+      },
+      {
+        "id": "Bu-132",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-137",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-138",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 90
+      },
+      {
+        "id": "Bu-299",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 90
+      },
+      {
+        "id": "Bu-63",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "Bu-94",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-304",
+        "cost": 0.58,
+        "final": 0.58,
+        "score": 85
+      },
+      {
+        "id": "Bu-325",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-67",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 83
+      },
+      {
+        "id": "Bu-136",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 83
+      },
+      {
+        "id": "Bu-367",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 83
+      },
+      {
+        "id": "EW-99",
+        "cost": 0.17,
+        "final": 0.17,
+        "score": 83
+      },
+      {
+        "id": "Bu-57",
+        "cost": 4,
+        "final": 4,
+        "score": 80
+      },
+      {
+        "id": "Bu-66",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-70",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-71",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 80
+      },
+      {
+        "id": "Bu-79",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-127",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-221",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-224",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-276",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-292",
+        "cost": 0.065,
+        "final": 0.065,
+        "score": 80
+      },
+      {
+        "id": "Bu-360",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 80
+      },
+      {
+        "id": "Bu-369",
+        "cost": 0.85,
+        "final": 0.85,
+        "score": 80
+      },
+      {
+        "id": "EW-03",
+        "cost": 0.02,
+        "final": 0.02,
+        "score": 80
+      },
+      {
+        "id": "EW-43",
+        "cost": 2,
+        "final": 2,
+        "score": 80
+      },
+      {
+        "id": "Bu-142",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-144",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-286",
+        "cost": 0.175,
+        "final": 0.175,
+        "score": 78
+      },
+      {
+        "id": "Bu-363",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 75
+      },
+      {
+        "id": "Bu-145",
+        "cost": 0.75,
+        "final": 0.75,
+        "score": 73
+      },
+      {
+        "id": "Bu-229",
+        "cost": 1,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-231",
+        "cost": 0.9,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-293",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 73
+      },
+      {
+        "id": "Bu-313",
+        "cost": 0.9,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-320",
+        "cost": 0.245,
+        "final": 0.245,
+        "score": 73
+      },
+      {
+        "id": "Bu-437",
+        "cost": 3.107,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-285",
+        "cost": 0.9,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-447",
+        "cost": 0.071,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-448",
+        "cost": 0.22,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "EW-01",
+        "cost": 0.06,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "EW-144",
+        "cost": 0.3,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "EW-78",
+        "cost": 0.05,
+        "final": 0,
+        "score": 66
+      },
+      {
+        "id": "EW-89",
+        "cost": 0.25,
+        "final": 0,
+        "score": 66
+      },
+      {
+        "id": "Bu-129",
+        "cost": 0.3,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "Bu-315",
+        "cost": 0.2,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-91",
+        "cost": 0.3,
+        "final": 0,
+        "score": 64
+      },
+      {
+        "id": "Bu-301",
+        "cost": 0.2,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-374",
+        "cost": 0.1,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-376",
+        "cost": 0.15,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-442",
+        "cost": 0.18,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-130",
+        "cost": 0.35,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-135",
+        "cost": 0.75,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-254",
+        "cost": 0.1,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-87",
+        "cost": 0.15,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-92",
+        "cost": 0.4,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-131",
+        "cost": 1.062,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-176",
+        "cost": 0.4,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-230",
+        "cost": 0.25,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "Bu-237",
+        "cost": 0.5,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-81",
+        "cost": 0.3,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "Bu-87",
+        "cost": 3.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-113",
+        "cost": 0.501,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-114",
+        "cost": 0.6,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-225",
+        "cost": 0.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-290",
+        "cost": 1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-303",
+        "cost": 0.1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-311",
+        "cost": 0.2,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-378",
+        "cost": 0.256,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-02",
+        "cost": 0.04,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-145",
+        "cost": 0.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-101",
+        "cost": 0.7,
+        "final": 0,
+        "score": 59
+      },
+      {
+        "id": "Bu-415",
+        "cost": 1.2,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "Bu-143",
+        "cost": 0.65,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-260",
+        "cost": 1.8,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-340",
+        "cost": 0.75,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-103",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-106",
+        "cost": 0.1,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-108",
+        "cost": 0.4,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-113",
+        "cost": 0.3,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-146",
+        "cost": 0.3,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-16",
+        "cost": 0.8,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-17",
+        "cost": 0.5,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-85",
+        "cost": 0.25,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-93",
+        "cost": 0.15,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-122",
+        "cost": 7,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-133",
+        "cost": 0.15,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "Bu-110",
+        "cost": 0.502,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-111",
+        "cost": 0.534,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-112",
+        "cost": 0.513,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-222",
+        "cost": 0.46,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-263",
+        "cost": 0.165,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-295",
+        "cost": 0.175,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-362",
+        "cost": 0.2,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-15",
+        "cost": 2.7,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-107",
+        "cost": 0.435,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-182",
+        "cost": 0.7,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-373",
+        "cost": 0.15,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "Bu-386",
+        "cost": 0.2,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "EW-95",
+        "cost": 2.5,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "EW-104",
+        "cost": 0.3,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "EW-14",
+        "cost": 0,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "Bu-387",
+        "cost": 0.08,
+        "final": 0,
+        "score": 46
+      },
+      {
+        "id": "EW-147",
+        "cost": 0.35,
+        "final": 0,
+        "score": 46
+      },
+      {
+        "id": "Bu-271",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-289",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-364",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-383",
+        "cost": 0.9,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-421",
+        "cost": 1.5,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-58",
+        "cost": 0.6,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-123",
+        "cost": 0.5,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-129",
+        "cost": 0.08,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-03",
+        "cost": 0.4,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-319",
+        "cost": 0.3,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "EW-18",
+        "cost": 0,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-131",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-215",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-218",
+        "cost": 0.3,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-312",
+        "cost": 0.19,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-318",
+        "cost": 0.12,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-82",
+        "cost": 0.6,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-111",
+        "cost": 0.16,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-114",
+        "cost": 1.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-118",
+        "cost": 0.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-381",
+        "cost": 0.1,
+        "final": 0,
+        "score": 39
+      },
+      {
+        "id": "Bu-214",
+        "cost": 0.25,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-272",
+        "cost": 0.2,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-439",
+        "cost": 0.98,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-441",
+        "cost": 1,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-443",
+        "cost": 0.7,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-446",
+        "cost": 0.5,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-217",
+        "cost": 0.11,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-105",
+        "cost": 0.3,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-116",
+        "cost": 0.5,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-155",
+        "cost": 0.15,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-370",
+        "cost": 0.95,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "EW-97",
+        "cost": 0.4,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "EW-98",
+        "cost": 0.5,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "Bu-220",
+        "cost": 0.396,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-233",
+        "cost": 0.25,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-267",
+        "cost": 0.1,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-449",
+        "cost": 0.499,
+        "final": 0,
+        "score": 26
+      },
+      {
+        "id": "Bu-445",
+        "cost": 0.1,
+        "final": 0,
+        "score": 22
+      },
+      {
+        "id": "Bu-450",
+        "cost": 0.7,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-451",
+        "cost": 0.7,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-452",
+        "cost": 0.8,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-133",
+        "cost": 0.6,
+        "final": 0,
+        "score": 15
+      },
+      {
+        "id": "Bu-134",
+        "cost": 0.3,
+        "final": 0,
+        "score": 15
+      },
+      {
+        "id": "EW-166",
+        "cost": 0.1,
+        "final": 0,
+        "score": 5
+      },
+      {
+        "id": "Bu-83",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 30
+      },
+      {
+        "id": "Bu-84",
+        "cost": 3.18,
+        "final": 3.18,
+        "score": 70
+      },
+      {
+        "id": "Bu-85",
+        "cost": 1.5,
+        "final": 1.5,
+        "score": 70
+      },
+      {
+        "id": "Bu-86",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 70
+      }
+    ],
+    "carry": 10,
+    "scope": "full"
+  },
+  {
+    "id": "rebuild-current",
+    "filename": "AOP2027-Optimal-Segmentation-790754402952-r1-full.xlsx",
+    "scenarioId": "scenario-1790754402952",
+    "name": "Optimal Segmentation",
+    "revision": 1,
+    "base": 109.991,
+    "total": 585.4954630385123,
+    "rows": [
+      {
+        "id": "EW-46",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 90
+      },
+      {
+        "id": "EW-69",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 90
+      },
+      {
+        "id": "EW-04",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 85
+      },
+      {
+        "id": "EW-45",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "EW-60",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "EW-68",
+        "cost": 0.725,
+        "final": 0.725,
+        "score": 85
+      },
+      {
+        "id": "EW-181",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 85
+      },
+      {
+        "id": "EW-124",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-47",
+        "cost": 0.085,
+        "final": 0.085,
+        "score": 70
+      },
+      {
+        "id": "EW-61",
+        "cost": 0.225,
+        "final": 0.225,
+        "score": 70
+      },
+      {
+        "id": "EW-67",
+        "cost": 0.375,
+        "final": 0.375,
+        "score": 62
+      },
+      {
+        "id": "EW-83",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 61
+      },
+      {
+        "id": "EW-162",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 55
+      },
+      {
+        "id": "EW-21",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 52
+      },
+      {
+        "id": "EW-24",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "EW-22",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 40
+      },
+      {
+        "id": "EW-163",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 38
+      },
+      {
+        "id": "EW-154",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 33
+      },
+      {
+        "id": "EW-80",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 66
+      },
+      {
+        "id": "EW-11",
+        "cost": 7.63,
+        "final": 7.63,
+        "score": 56
+      },
+      {
+        "id": "EW-65",
+        "cost": 4.16,
+        "final": 4.16,
+        "score": 51
+      },
+      {
+        "id": "EW-71",
+        "cost": 6.225,
+        "final": 6.225,
+        "score": 40
+      },
+      {
+        "id": "EW-13",
+        "cost": 0.5,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "EW-135",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "Bu-68",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-297",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-97",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-101",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-193",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-283",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-433",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-178",
+        "cost": 0.333,
+        "final": 0.333,
+        "score": 75
+      },
+      {
+        "id": "EW-180",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 75
+      },
+      {
+        "id": "Bu-06",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-309",
+        "cost": 0.669,
+        "final": 0.669,
+        "score": 63
+      },
+      {
+        "id": "Bu-392",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 63
+      },
+      {
+        "id": "EW-63",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-64",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "Bu-385",
+        "cost": 0.49,
+        "final": 0.49,
+        "score": 61
+      },
+      {
+        "id": "Bu-96",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "EW-62",
+        "cost": 0.171,
+        "final": 0.171,
+        "score": 57
+      },
+      {
+        "id": "EW-66",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "Bu-316",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 50
+      },
+      {
+        "id": "Bu-109",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 48
+      },
+      {
+        "id": "Bu-365",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 46
+      },
+      {
+        "id": "EW-161",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 45
+      },
+      {
+        "id": "Bu-294",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 45
+      },
+      {
+        "id": "Bu-51",
+        "cost": 1.825,
+        "final": 1.825,
+        "score": 42
+      },
+      {
+        "id": "Bu-103",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 40
+      },
+      {
+        "id": "Bu-104",
+        "cost": 1.655,
+        "final": 1.655,
+        "score": 40
+      },
+      {
+        "id": "Bu-284",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 40
+      },
+      {
+        "id": "EW-10",
+        "cost": 1.052,
+        "final": 1.052,
+        "score": 38
+      },
+      {
+        "id": "Bu-116",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 38
+      },
+      {
+        "id": "Bu-117",
+        "cost": 0.13,
+        "final": 0.13,
+        "score": 38
+      },
+      {
+        "id": "Bu-391",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 35
+      },
+      {
+        "id": "EW-189",
+        "cost": 3,
+        "final": 3,
+        "score": 30
+      },
+      {
+        "id": "Bu-355",
+        "cost": 0.336,
+        "final": 0.336,
+        "score": 28
+      },
+      {
+        "id": "Bu-105",
+        "cost": 0.04,
+        "final": 0.04,
+        "score": 23
+      },
+      {
+        "id": "Bu-106",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 23
+      },
+      {
+        "id": "EW-28",
+        "cost": 0.777,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "EW-127",
+        "cost": 2.5,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-20",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 76
+      },
+      {
+        "id": "EW-72",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 62
+      },
+      {
+        "id": "EW-102",
+        "cost": 0.125,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-142",
+        "cost": 0.7,
+        "final": 0,
+        "score": 54
+      },
+      {
+        "id": "EW-23",
+        "cost": 0.4,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-25",
+        "cost": 0.48,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-19",
+        "cost": 0.45,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-165",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 33
+      },
+      {
+        "id": "EW-77",
+        "cost": 0.12,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-119",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-59",
+        "cost": 0.48,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-61",
+        "cost": 0.7,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-70",
+        "cost": 0.3,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-50",
+        "cost": 0.5,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-37",
+        "cost": 0.493,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-353",
+        "cost": 0.335,
+        "final": 0,
+        "score": 31
+      },
+      {
+        "id": "Bu-13",
+        "cost": 5,
+        "final": 1,
+        "score": 80
+      },
+      {
+        "id": "Bu-14",
+        "cost": 0.35,
+        "final": 0.3,
+        "score": 80
+      },
+      {
+        "id": "Bu-58",
+        "cost": 0.2,
+        "final": 0.129,
+        "score": 90
+      },
+      {
+        "id": "Bu-50",
+        "cost": 1.95,
+        "final": 1.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-49",
+        "cost": 1.7,
+        "final": 1.7,
+        "score": 80
+      },
+      {
+        "id": "Bu-55",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 80
+      },
+      {
+        "id": "Bu-01",
+        "cost": 1.3,
+        "final": 0.6,
+        "score": 58
+      },
+      {
+        "id": "EW-12",
+        "cost": 0.65,
+        "final": 0.063,
+        "score": 73
+      },
+      {
+        "id": "Bu-32",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-22",
+        "cost": 1,
+        "final": 0.525,
+        "score": 78
+      },
+      {
+        "id": "Bu-26",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 60
+      },
+      {
+        "id": "Bu-28",
+        "cost": 1,
+        "final": 0.3,
+        "score": 60
+      },
+      {
+        "id": "Bu-52",
+        "cost": 0.85,
+        "final": 0.5,
+        "score": 65
+      },
+      {
+        "id": "Bu-25",
+        "cost": 1.68,
+        "final": 1.315,
+        "score": 65
+      },
+      {
+        "id": "Bu-27",
+        "cost": 1.5,
+        "final": 0.758,
+        "score": 63
+      },
+      {
+        "id": "Bu-31",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "Bu-35",
+        "cost": 1,
+        "final": 1,
+        "score": 60
+      },
+      {
+        "id": "Bu-29",
+        "cost": 1.2,
+        "final": 1.088,
+        "score": 60
+      },
+      {
+        "id": "Bu-24",
+        "cost": 2.95,
+        "final": 2.175,
+        "score": 52
+      },
+      {
+        "id": "Bu-30",
+        "cost": 1.5,
+        "final": 1,
+        "score": 57
+      },
+      {
+        "id": "Bu-23",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 57
+      },
+      {
+        "id": "Bu-36",
+        "cost": 1.27,
+        "final": 0.15,
+        "score": 57
+      },
+      {
+        "id": "Bu-20",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 40
+      },
+      {
+        "id": "Bu-196",
+        "cost": 0.2,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-198",
+        "cost": 0.36,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-253",
+        "cost": 0.12,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-04",
+        "cost": 0.295,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-352",
+        "cost": 0.4,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-252",
+        "cost": 0.32,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-207",
+        "cost": 1,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-356",
+        "cost": 0.25,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-414",
+        "cost": 1.5,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-409",
+        "cost": 4.461,
+        "final": 0,
+        "score": 75
+      },
+      {
+        "id": "Bu-410",
+        "cost": 1.514,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-188",
+        "cost": 0.247,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "EW-36",
+        "cost": 0.1,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-175",
+        "cost": 0.6,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-411",
+        "cost": 1.788,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "Bu-60",
+        "cost": 2.8,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-82",
+        "cost": 2.468,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "EW-32",
+        "cost": 0.2,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "Bu-351",
+        "cost": 0.7,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-431",
+        "cost": 0.6,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-199",
+        "cost": 0.8,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-125",
+        "cost": 1,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "Bu-33",
+        "cost": 0.025,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-81",
+        "cost": 0.85,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-37",
+        "cost": 0.4,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-35",
+        "cost": 0.6,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-38",
+        "cost": 0.13,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-02",
+        "cost": 0.75,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-39",
+        "cost": 0.1,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "EW-186",
+        "cost": 0.075,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-187",
+        "cost": 0.075,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "Bu-338",
+        "cost": 0.3,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "Bu-269",
+        "cost": 0.02,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-120",
+        "cost": 0.575,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-434",
+        "cost": 1.75,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-57",
+        "cost": 0.5,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-174",
+        "cost": 0.175,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-38",
+        "cost": 0.638,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-19",
+        "cost": 0.1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-275",
+        "cost": 0.57,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-118",
+        "cost": 0.515,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-40",
+        "cost": 0.15,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-11",
+        "cost": 10.12,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-137",
+        "cost": 0.1,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-54",
+        "cost": 0.43,
+        "final": 0,
+        "score": 55
+      },
+      {
+        "id": "Bu-59",
+        "cost": 0.21,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-76",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-08",
+        "cost": 0.3,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-07",
+        "cost": 8.25,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-75",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-18",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-435",
+        "cost": 0.85,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-287",
+        "cost": 1.08,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-21",
+        "cost": 0.32,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-34",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-264",
+        "cost": 2.665,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-08",
+        "cost": 0.65,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-274",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-86",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-33",
+        "cost": 0.12,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-12",
+        "cost": 0.65,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-06",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-51",
+        "cost": 0.35,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-354",
+        "cost": 0.2,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-426",
+        "cost": 0.698,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-257",
+        "cost": 0.14,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "Bu-09",
+        "cost": 2.25,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "Bu-379",
+        "cost": 0.99,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-191",
+        "cost": 0.4277,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-16",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-140",
+        "cost": 0.1,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-192",
+        "cost": 0.2272,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-288",
+        "cost": 1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-183",
+        "cost": 0.15,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-139",
+        "cost": 1.5,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "Bu-380",
+        "cost": 0.05,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-52",
+        "cost": 0.395,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-84",
+        "cost": 0.25,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "Bu-10",
+        "cost": 1.2,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-74",
+        "cost": 3.2,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-167",
+        "cost": 0.05,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-05",
+        "cost": 0.15,
+        "final": 0,
+        "score": 49
+      },
+      {
+        "id": "EW-29",
+        "cost": 0.45,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-53",
+        "cost": 0.45,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "Bu-54",
+        "cost": 0.8,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-185",
+        "cost": 0.625,
+        "final": 0,
+        "score": 47
+      },
+      {
+        "id": "Bu-427",
+        "cost": 0.6,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-428",
+        "cost": 0.25,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-357",
+        "cost": 0.3,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-358",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-359",
+        "cost": 0.35,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-09",
+        "cost": 0,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-115",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-15",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-195",
+        "cost": 0.02,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-197",
+        "cost": 1.17,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-201",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-202",
+        "cost": 0.3,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-203",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-204",
+        "cost": 0.05,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-205",
+        "cost": 0.05,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-438",
+        "cost": 0.675,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-432",
+        "cost": 0.1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-282",
+        "cost": 0.012,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "Bu-350",
+        "cost": 0.1,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "Bu-440",
+        "cost": 0.228,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "EW-179",
+        "cost": 1,
+        "final": 1,
+        "score": 90
+      },
+      {
+        "id": "Bu-75",
+        "cost": 0.078,
+        "final": 0.078,
+        "score": 85
+      },
+      {
+        "id": "Bu-76",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-74",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 78
+      },
+      {
+        "id": "Bu-324",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 61
+      },
+      {
+        "id": "EW-44",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 42
+      },
+      {
+        "id": "EW-42",
+        "cost": 2,
+        "final": 2,
+        "score": 38
+      },
+      {
+        "id": "EW-164",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 33
+      },
+      {
+        "id": "Bu-323",
+        "cost": 0.025,
+        "final": 0.025,
+        "score": 33
+      },
+      {
+        "id": "EW-07",
+        "cost": 4.985,
+        "final": 4.985,
+        "score": 30
+      },
+      {
+        "id": "EW-27",
+        "cost": 1.6,
+        "final": 1.6,
+        "score": 5
+      },
+      {
+        "id": "Bu-72",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 90
+      },
+      {
+        "id": "Bu-99",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-368",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 75
+      },
+      {
+        "id": "Bu-98",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 73
+      },
+      {
+        "id": "Bu-413",
+        "cost": 0.24,
+        "final": 0.24,
+        "score": 73
+      },
+      {
+        "id": "EW-168",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 70
+      },
+      {
+        "id": "EW-136",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 68
+      },
+      {
+        "id": "EW-100",
+        "cost": 1.2,
+        "final": 1.2,
+        "score": 66
+      },
+      {
+        "id": "Bu-115",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 65
+      },
+      {
+        "id": "Bu-128",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "Bu-339",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "EW-79",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-158",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 62
+      },
+      {
+        "id": "EW-126",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 61
+      },
+      {
+        "id": "EW-128",
+        "cost": 0.09,
+        "final": 0.09,
+        "score": 61
+      },
+      {
+        "id": "EW-143",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 60
+      },
+      {
+        "id": "Bu-262",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "Bu-372",
+        "cost": 0.736,
+        "final": 0.736,
+        "score": 58
+      },
+      {
+        "id": "EW-177",
+        "cost": 0.7,
+        "final": 0.7,
+        "score": 57
+      },
+      {
+        "id": "Bu-389",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 53
+      },
+      {
+        "id": "EW-90",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 52
+      },
+      {
+        "id": "EW-121",
+        "cost": 0.65,
+        "final": 0.65,
+        "score": 52
+      },
+      {
+        "id": "Bu-259",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 52
+      },
+      {
+        "id": "Bu-280",
+        "cost": 0.328,
+        "final": 0.328,
+        "score": 52
+      },
+      {
+        "id": "EW-169",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-108",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 50
+      },
+      {
+        "id": "Bu-146",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 50
+      },
+      {
+        "id": "Bu-147",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-148",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 50
+      },
+      {
+        "id": "EW-153",
+        "cost": 0.152,
+        "final": 0.152,
+        "score": 49
+      },
+      {
+        "id": "EW-157",
+        "cost": 0.195,
+        "final": 0.195,
+        "score": 48
+      },
+      {
+        "id": "Bu-375",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 48
+      },
+      {
+        "id": "Bu-273",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-322",
+        "cost": 0.4,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-361",
+        "cost": 0.15,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-366",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-390",
+        "cost": 0.4,
+        "final": 0,
+        "score": 42
+      },
+      {
+        "id": "EW-152",
+        "cost": 0.35,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-159",
+        "cost": 0.129,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-160",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-171",
+        "cost": 0.425,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-172",
+        "cost": 1.5,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-371",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-377",
+        "cost": 0.124,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-184",
+        "cost": 4,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-194",
+        "cost": 0.7,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-261",
+        "cost": 0.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-109",
+        "cost": 0.48,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "EW-156",
+        "cost": 0.3,
+        "final": 0,
+        "score": 37
+      },
+      {
+        "id": "EW-170",
+        "cost": 0.05,
+        "final": 0,
+        "score": 37
+      },
+      {
+        "id": "EW-110",
+        "cost": 0.55,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-112",
+        "cost": 0.5,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-117",
+        "cost": 0.3,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-228",
+        "cost": 0.25,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-281",
+        "cost": 0.1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-317",
+        "cost": 0.05,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-436",
+        "cost": 0.5,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "EW-94",
+        "cost": 0,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-139",
+        "cost": 0.25,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-141",
+        "cost": 0.7,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-149",
+        "cost": 0.45,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-69",
+        "cost": 0.39,
+        "final": 0.39,
+        "score": 90
+      },
+      {
+        "id": "Bu-73",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 90
+      },
+      {
+        "id": "Bu-132",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-137",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-138",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 90
+      },
+      {
+        "id": "Bu-299",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 90
+      },
+      {
+        "id": "Bu-63",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "Bu-94",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-304",
+        "cost": 0.58,
+        "final": 0.58,
+        "score": 85
+      },
+      {
+        "id": "Bu-325",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-67",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 83
+      },
+      {
+        "id": "Bu-136",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 83
+      },
+      {
+        "id": "Bu-367",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 83
+      },
+      {
+        "id": "EW-99",
+        "cost": 0.17,
+        "final": 0.17,
+        "score": 83
+      },
+      {
+        "id": "Bu-57",
+        "cost": 4,
+        "final": 4,
+        "score": 80
+      },
+      {
+        "id": "Bu-66",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-70",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-71",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 80
+      },
+      {
+        "id": "Bu-79",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-127",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-221",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-224",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-276",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-292",
+        "cost": 0.065,
+        "final": 0.065,
+        "score": 80
+      },
+      {
+        "id": "Bu-360",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 80
+      },
+      {
+        "id": "Bu-369",
+        "cost": 0.85,
+        "final": 0.85,
+        "score": 80
+      },
+      {
+        "id": "EW-03",
+        "cost": 0.02,
+        "final": 0.02,
+        "score": 80
+      },
+      {
+        "id": "EW-43",
+        "cost": 2,
+        "final": 2,
+        "score": 80
+      },
+      {
+        "id": "Bu-142",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-144",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-286",
+        "cost": 0.175,
+        "final": 0.175,
+        "score": 78
+      },
+      {
+        "id": "Bu-363",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 75
+      },
+      {
+        "id": "Bu-145",
+        "cost": 0.75,
+        "final": 0.75,
+        "score": 73
+      },
+      {
+        "id": "Bu-229",
+        "cost": 1,
+        "final": 1,
+        "score": 73
+      },
+      {
+        "id": "Bu-231",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 73
+      },
+      {
+        "id": "Bu-293",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 73
+      },
+      {
+        "id": "Bu-313",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 73
+      },
+      {
+        "id": "Bu-320",
+        "cost": 0.245,
+        "final": 0.245,
+        "score": 73
+      },
+      {
+        "id": "Bu-437",
+        "cost": 3.107,
+        "final": 3.107,
+        "score": 73
+      },
+      {
+        "id": "Bu-285",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 70
+      },
+      {
+        "id": "Bu-447",
+        "cost": 0.071,
+        "final": 0.071,
+        "score": 70
+      },
+      {
+        "id": "Bu-448",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "EW-01",
+        "cost": 0.06,
+        "final": 0.06,
+        "score": 68
+      },
+      {
+        "id": "EW-144",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 68
+      },
+      {
+        "id": "EW-78",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 66
+      },
+      {
+        "id": "EW-89",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 66
+      },
+      {
+        "id": "Bu-129",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 65
+      },
+      {
+        "id": "Bu-315",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 65
+      },
+      {
+        "id": "EW-91",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 64
+      },
+      {
+        "id": "Bu-301",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 63
+      },
+      {
+        "id": "Bu-374",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 63
+      },
+      {
+        "id": "Bu-376",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 63
+      },
+      {
+        "id": "Bu-442",
+        "cost": 0.18,
+        "final": 0.18,
+        "score": 63
+      },
+      {
+        "id": "Bu-130",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 62
+      },
+      {
+        "id": "Bu-135",
+        "cost": 0.75,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-254",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-87",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 62
+      },
+      {
+        "id": "EW-92",
+        "cost": 0.4,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-131",
+        "cost": 1.062,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-176",
+        "cost": 0.4,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-230",
+        "cost": 0.25,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "Bu-237",
+        "cost": 0.5,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-81",
+        "cost": 0.3,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "Bu-87",
+        "cost": 3.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-113",
+        "cost": 0.501,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-114",
+        "cost": 0.6,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-225",
+        "cost": 0.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-290",
+        "cost": 1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-303",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 60
+      },
+      {
+        "id": "Bu-311",
+        "cost": 0.2,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-378",
+        "cost": 0.256,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-02",
+        "cost": 0.04,
+        "final": 0.04,
+        "score": 60
+      },
+      {
+        "id": "EW-145",
+        "cost": 0.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-101",
+        "cost": 0.7,
+        "final": 0,
+        "score": 59
+      },
+      {
+        "id": "Bu-415",
+        "cost": 1.2,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "Bu-143",
+        "cost": 0.65,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-260",
+        "cost": 1.8,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-340",
+        "cost": 0.75,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-103",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-106",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 57
+      },
+      {
+        "id": "EW-108",
+        "cost": 0.4,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-113",
+        "cost": 0.3,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-146",
+        "cost": 0.3,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-16",
+        "cost": 0.8,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-17",
+        "cost": 0.5,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-85",
+        "cost": 0.25,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-93",
+        "cost": 0.15,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-122",
+        "cost": 7,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-133",
+        "cost": 0.15,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "Bu-110",
+        "cost": 0.502,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-111",
+        "cost": 0.534,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-112",
+        "cost": 0.513,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-222",
+        "cost": 0.46,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-263",
+        "cost": 0.165,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-295",
+        "cost": 0.175,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-362",
+        "cost": 0.2,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-15",
+        "cost": 2.7,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-107",
+        "cost": 0.435,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-182",
+        "cost": 0.7,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-373",
+        "cost": 0.15,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "Bu-386",
+        "cost": 0.2,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "EW-95",
+        "cost": 2.5,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "EW-104",
+        "cost": 0.3,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "EW-14",
+        "cost": 0,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "Bu-387",
+        "cost": 0.08,
+        "final": 0,
+        "score": 46
+      },
+      {
+        "id": "EW-147",
+        "cost": 0.35,
+        "final": 0,
+        "score": 46
+      },
+      {
+        "id": "Bu-271",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-289",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-364",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-383",
+        "cost": 0.9,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-421",
+        "cost": 1.5,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-58",
+        "cost": 0.6,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-123",
+        "cost": 0.5,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-129",
+        "cost": 0.08,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-03",
+        "cost": 0.4,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-319",
+        "cost": 0.3,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "EW-18",
+        "cost": 0,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-131",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-215",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-218",
+        "cost": 0.3,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-312",
+        "cost": 0.19,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-318",
+        "cost": 0.12,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-82",
+        "cost": 0.6,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-111",
+        "cost": 0.16,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-114",
+        "cost": 1.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-118",
+        "cost": 0.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-381",
+        "cost": 0.1,
+        "final": 0,
+        "score": 39
+      },
+      {
+        "id": "Bu-214",
+        "cost": 0.25,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-272",
+        "cost": 0.2,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-439",
+        "cost": 0.98,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-441",
+        "cost": 1,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-443",
+        "cost": 0.7,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-446",
+        "cost": 0.5,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-217",
+        "cost": 0.11,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-105",
+        "cost": 0.3,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-116",
+        "cost": 0.5,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-155",
+        "cost": 0.15,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-370",
+        "cost": 0.95,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "EW-97",
+        "cost": 0.4,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "EW-98",
+        "cost": 0.5,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "Bu-220",
+        "cost": 0.396,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-233",
+        "cost": 0.25,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-267",
+        "cost": 0.1,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-449",
+        "cost": 0.499,
+        "final": 0,
+        "score": 26
+      },
+      {
+        "id": "Bu-445",
+        "cost": 0.1,
+        "final": 0,
+        "score": 22
+      },
+      {
+        "id": "Bu-450",
+        "cost": 0.7,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-451",
+        "cost": 0.7,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-452",
+        "cost": 0.8,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-133",
+        "cost": 0.6,
+        "final": 0,
+        "score": 15
+      },
+      {
+        "id": "Bu-134",
+        "cost": 0.3,
+        "final": 0,
+        "score": 15
+      },
+      {
+        "id": "EW-166",
+        "cost": 0.1,
+        "final": 0,
+        "score": 5
+      },
+      {
+        "id": "Bu-83",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 30
+      },
+      {
+        "id": "Bu-84",
+        "cost": 3.18,
+        "final": 3.18,
+        "score": 70
+      },
+      {
+        "id": "Bu-85",
+        "cost": 1.5,
+        "final": 1.5,
+        "score": 70
+      },
+      {
+        "id": "Bu-86",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 70
+      }
+    ],
+    "carry": 10,
+    "scope": "full"
+  },
+  {
+    "id": "rebuild-inclusions",
+    "filename": "AOP2027-Optimal-Segmentation-790754402952-r1-inclusions.xlsx",
+    "scenarioId": "scenario-1790754402952",
+    "name": "Optimal Segmentation",
+    "revision": 1,
+    "base": 109.991,
+    "total": 585.4954630385123,
+    "rows": [
+      {
+        "id": "EW-46",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 90
+      },
+      {
+        "id": "EW-69",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 90
+      },
+      {
+        "id": "EW-04",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 85
+      },
+      {
+        "id": "EW-45",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "EW-60",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "EW-68",
+        "cost": 0.725,
+        "final": 0.725,
+        "score": 85
+      },
+      {
+        "id": "EW-181",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 85
+      },
+      {
+        "id": "EW-124",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-47",
+        "cost": 0.085,
+        "final": 0.085,
+        "score": 70
+      },
+      {
+        "id": "EW-61",
+        "cost": 0.225,
+        "final": 0.225,
+        "score": 70
+      },
+      {
+        "id": "EW-67",
+        "cost": 0.375,
+        "final": 0.375,
+        "score": 62
+      },
+      {
+        "id": "EW-83",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 61
+      },
+      {
+        "id": "EW-162",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 55
+      },
+      {
+        "id": "EW-21",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 52
+      },
+      {
+        "id": "EW-24",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "EW-22",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 40
+      },
+      {
+        "id": "EW-163",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 38
+      },
+      {
+        "id": "EW-154",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 33
+      },
+      {
+        "id": "EW-80",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 66
+      },
+      {
+        "id": "EW-11",
+        "cost": 7.63,
+        "final": 7.63,
+        "score": 56
+      },
+      {
+        "id": "EW-65",
+        "cost": 4.16,
+        "final": 4.16,
+        "score": 51
+      },
+      {
+        "id": "EW-71",
+        "cost": 6.225,
+        "final": 6.225,
+        "score": 40
+      },
+      {
+        "id": "EW-135",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "Bu-68",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-297",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-97",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-101",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-193",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-283",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-433",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-178",
+        "cost": 0.333,
+        "final": 0.333,
+        "score": 75
+      },
+      {
+        "id": "EW-180",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 75
+      },
+      {
+        "id": "Bu-06",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-309",
+        "cost": 0.669,
+        "final": 0.669,
+        "score": 63
+      },
+      {
+        "id": "Bu-392",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 63
+      },
+      {
+        "id": "EW-63",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-64",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "Bu-385",
+        "cost": 0.49,
+        "final": 0.49,
+        "score": 61
+      },
+      {
+        "id": "Bu-96",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "EW-62",
+        "cost": 0.171,
+        "final": 0.171,
+        "score": 57
+      },
+      {
+        "id": "EW-66",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "Bu-316",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 50
+      },
+      {
+        "id": "Bu-109",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 48
+      },
+      {
+        "id": "Bu-365",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 46
+      },
+      {
+        "id": "EW-161",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 45
+      },
+      {
+        "id": "Bu-294",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 45
+      },
+      {
+        "id": "Bu-51",
+        "cost": 1.825,
+        "final": 1.825,
+        "score": 42
+      },
+      {
+        "id": "Bu-103",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 40
+      },
+      {
+        "id": "Bu-104",
+        "cost": 1.655,
+        "final": 1.655,
+        "score": 40
+      },
+      {
+        "id": "Bu-284",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 40
+      },
+      {
+        "id": "EW-10",
+        "cost": 1.052,
+        "final": 1.052,
+        "score": 38
+      },
+      {
+        "id": "Bu-116",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 38
+      },
+      {
+        "id": "Bu-117",
+        "cost": 0.13,
+        "final": 0.13,
+        "score": 38
+      },
+      {
+        "id": "Bu-391",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 35
+      },
+      {
+        "id": "EW-189",
+        "cost": 3,
+        "final": 3,
+        "score": 30
+      },
+      {
+        "id": "Bu-355",
+        "cost": 0.336,
+        "final": 0.336,
+        "score": 28
+      },
+      {
+        "id": "Bu-105",
+        "cost": 0.04,
+        "final": 0.04,
+        "score": 23
+      },
+      {
+        "id": "Bu-106",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 23
+      },
+      {
+        "id": "EW-20",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 76
+      },
+      {
+        "id": "EW-72",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 62
+      },
+      {
+        "id": "EW-165",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 33
+      },
+      {
+        "id": "Bu-13",
+        "cost": 5,
+        "final": 1,
+        "score": 80
+      },
+      {
+        "id": "Bu-14",
+        "cost": 0.35,
+        "final": 0.3,
+        "score": 80
+      },
+      {
+        "id": "Bu-58",
+        "cost": 0.2,
+        "final": 0.129,
+        "score": 90
+      },
+      {
+        "id": "Bu-50",
+        "cost": 1.95,
+        "final": 1.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-49",
+        "cost": 1.7,
+        "final": 1.7,
+        "score": 80
+      },
+      {
+        "id": "Bu-55",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 80
+      },
+      {
+        "id": "Bu-01",
+        "cost": 1.3,
+        "final": 0.6,
+        "score": 58
+      },
+      {
+        "id": "EW-12",
+        "cost": 0.65,
+        "final": 0.063,
+        "score": 73
+      },
+      {
+        "id": "Bu-32",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-22",
+        "cost": 1,
+        "final": 0.525,
+        "score": 78
+      },
+      {
+        "id": "Bu-26",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 60
+      },
+      {
+        "id": "Bu-28",
+        "cost": 1,
+        "final": 0.3,
+        "score": 60
+      },
+      {
+        "id": "Bu-52",
+        "cost": 0.85,
+        "final": 0.5,
+        "score": 65
+      },
+      {
+        "id": "Bu-25",
+        "cost": 1.68,
+        "final": 1.315,
+        "score": 65
+      },
+      {
+        "id": "Bu-27",
+        "cost": 1.5,
+        "final": 0.758,
+        "score": 63
+      },
+      {
+        "id": "Bu-31",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "Bu-35",
+        "cost": 1,
+        "final": 1,
+        "score": 60
+      },
+      {
+        "id": "Bu-29",
+        "cost": 1.2,
+        "final": 1.088,
+        "score": 60
+      },
+      {
+        "id": "Bu-24",
+        "cost": 2.95,
+        "final": 2.175,
+        "score": 52
+      },
+      {
+        "id": "Bu-30",
+        "cost": 1.5,
+        "final": 1,
+        "score": 57
+      },
+      {
+        "id": "Bu-23",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 57
+      },
+      {
+        "id": "Bu-36",
+        "cost": 1.27,
+        "final": 0.15,
+        "score": 57
+      },
+      {
+        "id": "Bu-20",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 40
+      },
+      {
+        "id": "EW-179",
+        "cost": 1,
+        "final": 1,
+        "score": 90
+      },
+      {
+        "id": "Bu-75",
+        "cost": 0.078,
+        "final": 0.078,
+        "score": 85
+      },
+      {
+        "id": "Bu-76",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-74",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 78
+      },
+      {
+        "id": "Bu-324",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 61
+      },
+      {
+        "id": "EW-44",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 42
+      },
+      {
+        "id": "EW-42",
+        "cost": 2,
+        "final": 2,
+        "score": 38
+      },
+      {
+        "id": "EW-164",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 33
+      },
+      {
+        "id": "Bu-323",
+        "cost": 0.025,
+        "final": 0.025,
+        "score": 33
+      },
+      {
+        "id": "EW-07",
+        "cost": 4.985,
+        "final": 4.985,
+        "score": 30
+      },
+      {
+        "id": "EW-27",
+        "cost": 1.6,
+        "final": 1.6,
+        "score": 5
+      },
+      {
+        "id": "Bu-72",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 90
+      },
+      {
+        "id": "Bu-99",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-368",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 75
+      },
+      {
+        "id": "Bu-98",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 73
+      },
+      {
+        "id": "Bu-413",
+        "cost": 0.24,
+        "final": 0.24,
+        "score": 73
+      },
+      {
+        "id": "EW-168",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 70
+      },
+      {
+        "id": "EW-136",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 68
+      },
+      {
+        "id": "EW-100",
+        "cost": 1.2,
+        "final": 1.2,
+        "score": 66
+      },
+      {
+        "id": "Bu-115",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 65
+      },
+      {
+        "id": "Bu-128",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "Bu-339",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "EW-79",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-158",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 62
+      },
+      {
+        "id": "EW-126",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 61
+      },
+      {
+        "id": "EW-128",
+        "cost": 0.09,
+        "final": 0.09,
+        "score": 61
+      },
+      {
+        "id": "EW-143",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 60
+      },
+      {
+        "id": "Bu-262",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "Bu-372",
+        "cost": 0.736,
+        "final": 0.736,
+        "score": 58
+      },
+      {
+        "id": "EW-177",
+        "cost": 0.7,
+        "final": 0.7,
+        "score": 57
+      },
+      {
+        "id": "Bu-389",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 53
+      },
+      {
+        "id": "EW-90",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 52
+      },
+      {
+        "id": "EW-121",
+        "cost": 0.65,
+        "final": 0.65,
+        "score": 52
+      },
+      {
+        "id": "Bu-259",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 52
+      },
+      {
+        "id": "Bu-280",
+        "cost": 0.328,
+        "final": 0.328,
+        "score": 52
+      },
+      {
+        "id": "EW-169",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-108",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 50
+      },
+      {
+        "id": "Bu-146",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 50
+      },
+      {
+        "id": "Bu-147",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-148",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 50
+      },
+      {
+        "id": "EW-153",
+        "cost": 0.152,
+        "final": 0.152,
+        "score": 49
+      },
+      {
+        "id": "EW-157",
+        "cost": 0.195,
+        "final": 0.195,
+        "score": 48
+      },
+      {
+        "id": "Bu-375",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 48
+      },
+      {
+        "id": "Bu-69",
+        "cost": 0.39,
+        "final": 0.39,
+        "score": 90
+      },
+      {
+        "id": "Bu-73",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 90
+      },
+      {
+        "id": "Bu-132",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-137",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-138",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 90
+      },
+      {
+        "id": "Bu-299",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 90
+      },
+      {
+        "id": "Bu-63",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "Bu-94",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-304",
+        "cost": 0.58,
+        "final": 0.58,
+        "score": 85
+      },
+      {
+        "id": "Bu-325",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-67",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 83
+      },
+      {
+        "id": "Bu-136",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 83
+      },
+      {
+        "id": "Bu-367",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 83
+      },
+      {
+        "id": "EW-99",
+        "cost": 0.17,
+        "final": 0.17,
+        "score": 83
+      },
+      {
+        "id": "Bu-57",
+        "cost": 4,
+        "final": 4,
+        "score": 80
+      },
+      {
+        "id": "Bu-66",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-70",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-71",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 80
+      },
+      {
+        "id": "Bu-79",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-127",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-221",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-224",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-276",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-292",
+        "cost": 0.065,
+        "final": 0.065,
+        "score": 80
+      },
+      {
+        "id": "Bu-360",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 80
+      },
+      {
+        "id": "Bu-369",
+        "cost": 0.85,
+        "final": 0.85,
+        "score": 80
+      },
+      {
+        "id": "EW-03",
+        "cost": 0.02,
+        "final": 0.02,
+        "score": 80
+      },
+      {
+        "id": "EW-43",
+        "cost": 2,
+        "final": 2,
+        "score": 80
+      },
+      {
+        "id": "Bu-142",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-144",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-286",
+        "cost": 0.175,
+        "final": 0.175,
+        "score": 78
+      },
+      {
+        "id": "Bu-363",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 75
+      },
+      {
+        "id": "Bu-145",
+        "cost": 0.75,
+        "final": 0.75,
+        "score": 73
+      },
+      {
+        "id": "Bu-229",
+        "cost": 1,
+        "final": 1,
+        "score": 73
+      },
+      {
+        "id": "Bu-231",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 73
+      },
+      {
+        "id": "Bu-293",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 73
+      },
+      {
+        "id": "Bu-313",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 73
+      },
+      {
+        "id": "Bu-320",
+        "cost": 0.245,
+        "final": 0.245,
+        "score": 73
+      },
+      {
+        "id": "Bu-437",
+        "cost": 3.107,
+        "final": 3.107,
+        "score": 73
+      },
+      {
+        "id": "Bu-285",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 70
+      },
+      {
+        "id": "Bu-447",
+        "cost": 0.071,
+        "final": 0.071,
+        "score": 70
+      },
+      {
+        "id": "Bu-448",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "EW-01",
+        "cost": 0.06,
+        "final": 0.06,
+        "score": 68
+      },
+      {
+        "id": "EW-144",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 68
+      },
+      {
+        "id": "EW-78",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 66
+      },
+      {
+        "id": "EW-89",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 66
+      },
+      {
+        "id": "Bu-129",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 65
+      },
+      {
+        "id": "Bu-315",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 65
+      },
+      {
+        "id": "EW-91",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 64
+      },
+      {
+        "id": "Bu-301",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 63
+      },
+      {
+        "id": "Bu-374",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 63
+      },
+      {
+        "id": "Bu-376",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 63
+      },
+      {
+        "id": "Bu-442",
+        "cost": 0.18,
+        "final": 0.18,
+        "score": 63
+      },
+      {
+        "id": "Bu-130",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 62
+      },
+      {
+        "id": "Bu-254",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-87",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 62
+      },
+      {
+        "id": "Bu-303",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 60
+      },
+      {
+        "id": "EW-02",
+        "cost": 0.04,
+        "final": 0.04,
+        "score": 60
+      },
+      {
+        "id": "EW-106",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 57
+      },
+      {
+        "id": "Bu-83",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 30
+      },
+      {
+        "id": "Bu-84",
+        "cost": 3.18,
+        "final": 3.18,
+        "score": 70
+      },
+      {
+        "id": "Bu-85",
+        "cost": 1.5,
+        "final": 1.5,
+        "score": 70
+      },
+      {
+        "id": "Bu-86",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 70
+      }
+    ],
+    "carry": 10,
+    "scope": "inclusions"
+  },
+  {
+    "id": "rebuild-filtered",
+    "filename": "AOP2027-Optimal-Segmentation-790754402952-r1-filtered.xlsx",
+    "scenarioId": "scenario-1790754402952",
+    "name": "Optimal Segmentation",
+    "revision": 1,
+    "base": 109.991,
+    "total": 585.4954630385123,
+    "rows": [
+      {
+        "id": "Bu-299",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 90
+      },
+      {
+        "id": "Bu-297",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-304",
+        "cost": 0.58,
+        "final": 0.58,
+        "score": 85
+      },
+      {
+        "id": "Bu-283",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-292",
+        "cost": 0.065,
+        "final": 0.065,
+        "score": 80
+      },
+      {
+        "id": "Bu-33",
+        "cost": 0.025,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-37",
+        "cost": 0.4,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-22",
+        "cost": 1,
+        "final": 0.525,
+        "score": 78
+      },
+      {
+        "id": "Bu-286",
+        "cost": 0.175,
+        "final": 0.175,
+        "score": 78
+      },
+      {
+        "id": "Bu-293",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 73
+      },
+      {
+        "id": "Bu-313",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 73
+      },
+      {
+        "id": "Bu-320",
+        "cost": 0.245,
+        "final": 0.245,
+        "score": 73
+      },
+      {
+        "id": "Bu-285",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 70
+      },
+      {
+        "id": "Bu-31",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "Bu-32",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-338",
+        "cost": 0.3,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "Bu-25",
+        "cost": 1.68,
+        "final": 1.315,
+        "score": 65
+      },
+      {
+        "id": "Bu-315",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 65
+      },
+      {
+        "id": "Bu-339",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "Bu-27",
+        "cost": 1.5,
+        "final": 0.758,
+        "score": 63
+      },
+      {
+        "id": "Bu-301",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 63
+      },
+      {
+        "id": "Bu-309",
+        "cost": 0.669,
+        "final": 0.669,
+        "score": 63
+      },
+      {
+        "id": "Bu-19",
+        "cost": 0.1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-26",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 60
+      },
+      {
+        "id": "Bu-28",
+        "cost": 1,
+        "final": 0.3,
+        "score": 60
+      },
+      {
+        "id": "Bu-29",
+        "cost": 1.2,
+        "final": 1.088,
+        "score": 60
+      },
+      {
+        "id": "Bu-290",
+        "cost": 1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-303",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 60
+      },
+      {
+        "id": "Bu-311",
+        "cost": 0.2,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-35",
+        "cost": 1,
+        "final": 1,
+        "score": 60
+      },
+      {
+        "id": "Bu-38",
+        "cost": 0.638,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-18",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-23",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 57
+      },
+      {
+        "id": "Bu-30",
+        "cost": 1.5,
+        "final": 1,
+        "score": 57
+      },
+      {
+        "id": "Bu-36",
+        "cost": 1.27,
+        "final": 0.15,
+        "score": 57
+      },
+      {
+        "id": "Bu-21",
+        "cost": 0.32,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-24",
+        "cost": 2.95,
+        "final": 2.175,
+        "score": 52
+      },
+      {
+        "id": "Bu-287",
+        "cost": 1.08,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-295",
+        "cost": 0.175,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-316",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 50
+      },
+      {
+        "id": "Bu-289",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-294",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 45
+      },
+      {
+        "id": "Bu-319",
+        "cost": 0.3,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-20",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 40
+      },
+      {
+        "id": "Bu-284",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 40
+      },
+      {
+        "id": "Bu-312",
+        "cost": 0.19,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-318",
+        "cost": 0.12,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-288",
+        "cost": 1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-317",
+        "cost": 0.05,
+        "final": 0,
+        "score": 33
+      }
+    ],
+    "carry": 10,
+    "scope": "filtered"
+  },
+  {
+    "id": "rebuild-tab2-saved",
+    "filename": "AOP2027-Optimal-Segmentation-790754402952-r0-full.xlsx",
+    "scenarioId": "scenario-1790754402952",
+    "name": "Optimal Segmentation",
+    "revision": 0,
+    "base": 99.963,
+    "total": 575.4674630385123,
+    "rows": [
+      {
+        "id": "EW-46",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 90
+      },
+      {
+        "id": "EW-69",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 90
+      },
+      {
+        "id": "EW-04",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 85
+      },
+      {
+        "id": "EW-45",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "EW-60",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "EW-68",
+        "cost": 0.725,
+        "final": 0.725,
+        "score": 85
+      },
+      {
+        "id": "EW-181",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 85
+      },
+      {
+        "id": "EW-124",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-47",
+        "cost": 0.085,
+        "final": 0.085,
+        "score": 70
+      },
+      {
+        "id": "EW-61",
+        "cost": 0.225,
+        "final": 0.225,
+        "score": 70
+      },
+      {
+        "id": "EW-67",
+        "cost": 0.375,
+        "final": 0.375,
+        "score": 62
+      },
+      {
+        "id": "EW-83",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 61
+      },
+      {
+        "id": "EW-162",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 55
+      },
+      {
+        "id": "EW-21",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 52
+      },
+      {
+        "id": "EW-24",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "EW-22",
+        "cost": 0.48,
+        "final": 0.48,
+        "score": 40
+      },
+      {
+        "id": "EW-163",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 38
+      },
+      {
+        "id": "EW-154",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 33
+      },
+      {
+        "id": "EW-80",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 66
+      },
+      {
+        "id": "EW-11",
+        "cost": 7.63,
+        "final": 7.63,
+        "score": 56
+      },
+      {
+        "id": "EW-65",
+        "cost": 4.16,
+        "final": 4.16,
+        "score": 51
+      },
+      {
+        "id": "EW-71",
+        "cost": 6.225,
+        "final": 6.225,
+        "score": 40
+      },
+      {
+        "id": "EW-13",
+        "cost": 0.5,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "EW-135",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 85
+      },
+      {
+        "id": "Bu-68",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-297",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-97",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-101",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-193",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-283",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-433",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 80
+      },
+      {
+        "id": "EW-178",
+        "cost": 0.333,
+        "final": 0.333,
+        "score": 75
+      },
+      {
+        "id": "EW-180",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 75
+      },
+      {
+        "id": "Bu-06",
+        "cost": 2.2,
+        "final": 2.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-309",
+        "cost": 0.669,
+        "final": 0.669,
+        "score": 63
+      },
+      {
+        "id": "Bu-392",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 63
+      },
+      {
+        "id": "EW-63",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-64",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "Bu-385",
+        "cost": 0.49,
+        "final": 0.49,
+        "score": 61
+      },
+      {
+        "id": "Bu-96",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "EW-62",
+        "cost": 0.171,
+        "final": 0.171,
+        "score": 57
+      },
+      {
+        "id": "EW-66",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 52
+      },
+      {
+        "id": "Bu-316",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 50
+      },
+      {
+        "id": "Bu-109",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 48
+      },
+      {
+        "id": "Bu-365",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 46
+      },
+      {
+        "id": "EW-161",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 45
+      },
+      {
+        "id": "Bu-294",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 45
+      },
+      {
+        "id": "Bu-51",
+        "cost": 1.825,
+        "final": 1.825,
+        "score": 42
+      },
+      {
+        "id": "Bu-103",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 40
+      },
+      {
+        "id": "Bu-104",
+        "cost": 1.655,
+        "final": 1.655,
+        "score": 40
+      },
+      {
+        "id": "Bu-284",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 40
+      },
+      {
+        "id": "EW-10",
+        "cost": 1.052,
+        "final": 1.052,
+        "score": 38
+      },
+      {
+        "id": "Bu-116",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 38
+      },
+      {
+        "id": "Bu-117",
+        "cost": 0.13,
+        "final": 0.13,
+        "score": 38
+      },
+      {
+        "id": "Bu-391",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 35
+      },
+      {
+        "id": "EW-189",
+        "cost": 3,
+        "final": 3,
+        "score": 30
+      },
+      {
+        "id": "Bu-355",
+        "cost": 0.336,
+        "final": 0.336,
+        "score": 28
+      },
+      {
+        "id": "Bu-105",
+        "cost": 0.04,
+        "final": 0.04,
+        "score": 23
+      },
+      {
+        "id": "Bu-106",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 23
+      },
+      {
+        "id": "EW-28",
+        "cost": 0.777,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "EW-127",
+        "cost": 2.5,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-20",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 76
+      },
+      {
+        "id": "EW-72",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 62
+      },
+      {
+        "id": "EW-102",
+        "cost": 0.125,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-142",
+        "cost": 0.7,
+        "final": 0,
+        "score": 54
+      },
+      {
+        "id": "EW-23",
+        "cost": 0.4,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-25",
+        "cost": 0.48,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-19",
+        "cost": 0.45,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-165",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 33
+      },
+      {
+        "id": "EW-77",
+        "cost": 0.12,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-119",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-59",
+        "cost": 0.48,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-61",
+        "cost": 0.7,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-70",
+        "cost": 0.3,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-50",
+        "cost": 0.5,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-37",
+        "cost": 0.493,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-353",
+        "cost": 0.335,
+        "final": 0,
+        "score": 31
+      },
+      {
+        "id": "Bu-13",
+        "cost": 5,
+        "final": 1,
+        "score": 80
+      },
+      {
+        "id": "Bu-14",
+        "cost": 0.35,
+        "final": 0.3,
+        "score": 80
+      },
+      {
+        "id": "Bu-58",
+        "cost": 0.2,
+        "final": 0.129,
+        "score": 90
+      },
+      {
+        "id": "Bu-50",
+        "cost": 1.95,
+        "final": 1.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-49",
+        "cost": 1.7,
+        "final": 1.7,
+        "score": 80
+      },
+      {
+        "id": "Bu-55",
+        "cost": 0.4,
+        "final": 0.4,
+        "score": 80
+      },
+      {
+        "id": "Bu-01",
+        "cost": 1.3,
+        "final": 0.6,
+        "score": 58
+      },
+      {
+        "id": "EW-12",
+        "cost": 0.65,
+        "final": 0.063,
+        "score": 73
+      },
+      {
+        "id": "Bu-32",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 68
+      },
+      {
+        "id": "Bu-22",
+        "cost": 1,
+        "final": 0.525,
+        "score": 78
+      },
+      {
+        "id": "Bu-26",
+        "cost": 0.9,
+        "final": 0.9,
+        "score": 60
+      },
+      {
+        "id": "Bu-28",
+        "cost": 1,
+        "final": 0.3,
+        "score": 60
+      },
+      {
+        "id": "Bu-52",
+        "cost": 0.85,
+        "final": 0.5,
+        "score": 65
+      },
+      {
+        "id": "Bu-25",
+        "cost": 1.68,
+        "final": 1.315,
+        "score": 65
+      },
+      {
+        "id": "Bu-27",
+        "cost": 1.5,
+        "final": 0.758,
+        "score": 63
+      },
+      {
+        "id": "Bu-31",
+        "cost": 0.22,
+        "final": 0.22,
+        "score": 70
+      },
+      {
+        "id": "Bu-35",
+        "cost": 1,
+        "final": 1,
+        "score": 60
+      },
+      {
+        "id": "Bu-29",
+        "cost": 1.2,
+        "final": 1.088,
+        "score": 60
+      },
+      {
+        "id": "Bu-24",
+        "cost": 2.95,
+        "final": 2.175,
+        "score": 52
+      },
+      {
+        "id": "Bu-30",
+        "cost": 1.5,
+        "final": 1,
+        "score": 57
+      },
+      {
+        "id": "Bu-23",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 57
+      },
+      {
+        "id": "Bu-36",
+        "cost": 1.27,
+        "final": 0.15,
+        "score": 57
+      },
+      {
+        "id": "Bu-20",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 40
+      },
+      {
+        "id": "Bu-196",
+        "cost": 0.2,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-198",
+        "cost": 0.36,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-253",
+        "cost": 0.12,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-04",
+        "cost": 0.295,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-352",
+        "cost": 0.4,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-252",
+        "cost": 0.32,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-207",
+        "cost": 1,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-356",
+        "cost": 0.25,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-414",
+        "cost": 1.5,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-409",
+        "cost": 4.461,
+        "final": 0,
+        "score": 75
+      },
+      {
+        "id": "Bu-410",
+        "cost": 1.514,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-188",
+        "cost": 0.247,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "EW-36",
+        "cost": 0.1,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-175",
+        "cost": 0.6,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-411",
+        "cost": 1.788,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "Bu-60",
+        "cost": 2.8,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-82",
+        "cost": 2.468,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "EW-32",
+        "cost": 0.2,
+        "final": 0,
+        "score": 85
+      },
+      {
+        "id": "Bu-351",
+        "cost": 0.7,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-431",
+        "cost": 0.6,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-199",
+        "cost": 0.8,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-125",
+        "cost": 1,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "Bu-33",
+        "cost": 0.025,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-81",
+        "cost": 0.85,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "Bu-37",
+        "cost": 0.4,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-35",
+        "cost": 0.6,
+        "final": 0,
+        "score": 80
+      },
+      {
+        "id": "EW-38",
+        "cost": 0.13,
+        "final": 0,
+        "score": 90
+      },
+      {
+        "id": "Bu-02",
+        "cost": 0.75,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-39",
+        "cost": 0.1,
+        "final": 0,
+        "score": 78
+      },
+      {
+        "id": "EW-186",
+        "cost": 0.075,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-187",
+        "cost": 0.075,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "Bu-338",
+        "cost": 0.3,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "Bu-269",
+        "cost": 0.02,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "EW-120",
+        "cost": 0.575,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-434",
+        "cost": 1.75,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-57",
+        "cost": 0.5,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-174",
+        "cost": 0.175,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-38",
+        "cost": 0.638,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-19",
+        "cost": 0.1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-275",
+        "cost": 0.57,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-118",
+        "cost": 0.515,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-40",
+        "cost": 0.15,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-11",
+        "cost": 10.12,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-137",
+        "cost": 0.1,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-54",
+        "cost": 0.43,
+        "final": 0,
+        "score": 55
+      },
+      {
+        "id": "Bu-59",
+        "cost": 0.21,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-76",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-08",
+        "cost": 0.3,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-07",
+        "cost": 8.25,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-75",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-18",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-435",
+        "cost": 0.85,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-287",
+        "cost": 1.08,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-21",
+        "cost": 0.32,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-34",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-264",
+        "cost": 2.665,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-08",
+        "cost": 0.65,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-274",
+        "cost": 0.3,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-86",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-33",
+        "cost": 0.12,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-12",
+        "cost": 0.65,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-06",
+        "cost": 0.5,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-51",
+        "cost": 0.35,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-354",
+        "cost": 0.2,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-426",
+        "cost": 0.698,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-257",
+        "cost": 0.14,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "Bu-09",
+        "cost": 2.25,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "Bu-379",
+        "cost": 0.99,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-191",
+        "cost": 0.4277,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-16",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-140",
+        "cost": 0.1,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-192",
+        "cost": 0.2272,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-288",
+        "cost": 1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-183",
+        "cost": 0.15,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-139",
+        "cost": 1.5,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "Bu-380",
+        "cost": 0.05,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "EW-52",
+        "cost": 0.395,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-84",
+        "cost": 0.25,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "Bu-10",
+        "cost": 1.2,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-74",
+        "cost": 3.2,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-167",
+        "cost": 0.05,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-05",
+        "cost": 0.15,
+        "final": 0,
+        "score": 49
+      },
+      {
+        "id": "EW-29",
+        "cost": 0.45,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-53",
+        "cost": 0.45,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "Bu-54",
+        "cost": 0.8,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "EW-185",
+        "cost": 0.625,
+        "final": 0,
+        "score": 47
+      },
+      {
+        "id": "Bu-427",
+        "cost": 0.6,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-428",
+        "cost": 0.25,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-357",
+        "cost": 0.3,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-358",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-359",
+        "cost": 0.35,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-09",
+        "cost": 0,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-115",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-15",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-195",
+        "cost": 0.02,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-197",
+        "cost": 1.17,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-201",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-202",
+        "cost": 0.3,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-203",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-204",
+        "cost": 0.05,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-205",
+        "cost": 0.05,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-438",
+        "cost": 0.675,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-432",
+        "cost": 0.1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-282",
+        "cost": 0.012,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "Bu-350",
+        "cost": 0.1,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "Bu-440",
+        "cost": 0.228,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "EW-179",
+        "cost": 1,
+        "final": 1,
+        "score": 90
+      },
+      {
+        "id": "Bu-75",
+        "cost": 0.078,
+        "final": 0.078,
+        "score": 85
+      },
+      {
+        "id": "Bu-76",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-74",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 78
+      },
+      {
+        "id": "Bu-324",
+        "cost": 0.03,
+        "final": 0.03,
+        "score": 61
+      },
+      {
+        "id": "EW-44",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 42
+      },
+      {
+        "id": "EW-42",
+        "cost": 2,
+        "final": 2,
+        "score": 38
+      },
+      {
+        "id": "EW-164",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 33
+      },
+      {
+        "id": "Bu-323",
+        "cost": 0.025,
+        "final": 0.025,
+        "score": 33
+      },
+      {
+        "id": "EW-07",
+        "cost": 4.985,
+        "final": 4.985,
+        "score": 30
+      },
+      {
+        "id": "EW-27",
+        "cost": 1.6,
+        "final": 1.6,
+        "score": 5
+      },
+      {
+        "id": "Bu-72",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 90
+      },
+      {
+        "id": "Bu-99",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 85
+      },
+      {
+        "id": "Bu-368",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 75
+      },
+      {
+        "id": "Bu-98",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 73
+      },
+      {
+        "id": "Bu-413",
+        "cost": 0.24,
+        "final": 0.24,
+        "score": 73
+      },
+      {
+        "id": "EW-168",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 70
+      },
+      {
+        "id": "EW-136",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 68
+      },
+      {
+        "id": "EW-100",
+        "cost": 1.2,
+        "final": 1.2,
+        "score": 66
+      },
+      {
+        "id": "Bu-115",
+        "cost": 0.08,
+        "final": 0.08,
+        "score": 65
+      },
+      {
+        "id": "Bu-128",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "Bu-339",
+        "cost": 0.45,
+        "final": 0.45,
+        "score": 65
+      },
+      {
+        "id": "EW-79",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 62
+      },
+      {
+        "id": "EW-158",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 62
+      },
+      {
+        "id": "EW-126",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 61
+      },
+      {
+        "id": "EW-128",
+        "cost": 0.09,
+        "final": 0.09,
+        "score": 61
+      },
+      {
+        "id": "EW-143",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 60
+      },
+      {
+        "id": "Bu-262",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 60
+      },
+      {
+        "id": "Bu-372",
+        "cost": 0.736,
+        "final": 0.736,
+        "score": 58
+      },
+      {
+        "id": "EW-177",
+        "cost": 0.7,
+        "final": 0.7,
+        "score": 57
+      },
+      {
+        "id": "Bu-389",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 53
+      },
+      {
+        "id": "EW-90",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 52
+      },
+      {
+        "id": "EW-121",
+        "cost": 0.65,
+        "final": 0.65,
+        "score": 52
+      },
+      {
+        "id": "Bu-259",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 52
+      },
+      {
+        "id": "Bu-280",
+        "cost": 0.328,
+        "final": 0.328,
+        "score": 52
+      },
+      {
+        "id": "EW-169",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-108",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 50
+      },
+      {
+        "id": "Bu-146",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 50
+      },
+      {
+        "id": "Bu-147",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 50
+      },
+      {
+        "id": "Bu-148",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 50
+      },
+      {
+        "id": "EW-153",
+        "cost": 0.152,
+        "final": 0.152,
+        "score": 49
+      },
+      {
+        "id": "EW-157",
+        "cost": 0.195,
+        "final": 0.195,
+        "score": 48
+      },
+      {
+        "id": "Bu-375",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 48
+      },
+      {
+        "id": "Bu-273",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-322",
+        "cost": 0.4,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-361",
+        "cost": 0.15,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-366",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-390",
+        "cost": 0.4,
+        "final": 0,
+        "score": 42
+      },
+      {
+        "id": "EW-152",
+        "cost": 0.35,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-159",
+        "cost": 0.129,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-160",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-171",
+        "cost": 0.425,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-172",
+        "cost": 1.5,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-371",
+        "cost": 0.075,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-377",
+        "cost": 0.124,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "EW-184",
+        "cost": 4,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-194",
+        "cost": 0.7,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-261",
+        "cost": 0.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-109",
+        "cost": 0.48,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "EW-156",
+        "cost": 0.3,
+        "final": 0,
+        "score": 37
+      },
+      {
+        "id": "EW-170",
+        "cost": 0.05,
+        "final": 0,
+        "score": 37
+      },
+      {
+        "id": "EW-110",
+        "cost": 0.55,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-112",
+        "cost": 0.5,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-117",
+        "cost": 0.3,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-228",
+        "cost": 0.25,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-281",
+        "cost": 0.1,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-317",
+        "cost": 0.05,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-436",
+        "cost": 0.5,
+        "final": 0,
+        "score": 23
+      },
+      {
+        "id": "EW-94",
+        "cost": 0,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-139",
+        "cost": 0.25,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-141",
+        "cost": 0.7,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-149",
+        "cost": 0.45,
+        "final": 0,
+        "score": 10
+      },
+      {
+        "id": "Bu-69",
+        "cost": 0.39,
+        "final": 0.39,
+        "score": 90
+      },
+      {
+        "id": "Bu-73",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 90
+      },
+      {
+        "id": "Bu-132",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-137",
+        "cost": 0.6,
+        "final": 0.6,
+        "score": 90
+      },
+      {
+        "id": "Bu-138",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 90
+      },
+      {
+        "id": "Bu-299",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 90
+      },
+      {
+        "id": "Bu-63",
+        "cost": 0.55,
+        "final": 0.55,
+        "score": 85
+      },
+      {
+        "id": "Bu-94",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 85
+      },
+      {
+        "id": "Bu-304",
+        "cost": 0.58,
+        "final": 0.58,
+        "score": 85
+      },
+      {
+        "id": "Bu-325",
+        "cost": 0.3,
+        "final": 0.3,
+        "score": 85
+      },
+      {
+        "id": "Bu-67",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 83
+      },
+      {
+        "id": "Bu-136",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 83
+      },
+      {
+        "id": "Bu-367",
+        "cost": 0.1,
+        "final": 0.1,
+        "score": 83
+      },
+      {
+        "id": "EW-99",
+        "cost": 0.17,
+        "final": 0.17,
+        "score": 83
+      },
+      {
+        "id": "Bu-57",
+        "cost": 4,
+        "final": 4,
+        "score": 80
+      },
+      {
+        "id": "Bu-66",
+        "cost": 0.95,
+        "final": 0.95,
+        "score": 80
+      },
+      {
+        "id": "Bu-70",
+        "cost": 0.27,
+        "final": 0.27,
+        "score": 80
+      },
+      {
+        "id": "Bu-71",
+        "cost": 0.14,
+        "final": 0.14,
+        "score": 80
+      },
+      {
+        "id": "Bu-79",
+        "cost": 0.15,
+        "final": 0.15,
+        "score": 80
+      },
+      {
+        "id": "Bu-127",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-221",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 80
+      },
+      {
+        "id": "Bu-224",
+        "cost": 1.1,
+        "final": 1.1,
+        "score": 80
+      },
+      {
+        "id": "Bu-276",
+        "cost": 0.2,
+        "final": 0.2,
+        "score": 80
+      },
+      {
+        "id": "Bu-292",
+        "cost": 0.065,
+        "final": 0.065,
+        "score": 80
+      },
+      {
+        "id": "Bu-360",
+        "cost": 0.05,
+        "final": 0.05,
+        "score": 80
+      },
+      {
+        "id": "Bu-369",
+        "cost": 0.85,
+        "final": 0.85,
+        "score": 80
+      },
+      {
+        "id": "EW-03",
+        "cost": 0.02,
+        "final": 0.02,
+        "score": 80
+      },
+      {
+        "id": "EW-43",
+        "cost": 2,
+        "final": 2,
+        "score": 80
+      },
+      {
+        "id": "Bu-142",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-144",
+        "cost": 0.8,
+        "final": 0.8,
+        "score": 78
+      },
+      {
+        "id": "Bu-286",
+        "cost": 0.175,
+        "final": 0.175,
+        "score": 78
+      },
+      {
+        "id": "Bu-363",
+        "cost": 0.25,
+        "final": 0.25,
+        "score": 75
+      },
+      {
+        "id": "Bu-145",
+        "cost": 0.75,
+        "final": 0.75,
+        "score": 73
+      },
+      {
+        "id": "Bu-229",
+        "cost": 1,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-231",
+        "cost": 0.9,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-293",
+        "cost": 0.35,
+        "final": 0.35,
+        "score": 73
+      },
+      {
+        "id": "Bu-313",
+        "cost": 0.9,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-320",
+        "cost": 0.245,
+        "final": 0.245,
+        "score": 73
+      },
+      {
+        "id": "Bu-437",
+        "cost": 3.107,
+        "final": 0,
+        "score": 73
+      },
+      {
+        "id": "Bu-285",
+        "cost": 0.9,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-447",
+        "cost": 0.071,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "Bu-448",
+        "cost": 0.22,
+        "final": 0,
+        "score": 70
+      },
+      {
+        "id": "EW-01",
+        "cost": 0.06,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "EW-144",
+        "cost": 0.3,
+        "final": 0,
+        "score": 68
+      },
+      {
+        "id": "EW-78",
+        "cost": 0.05,
+        "final": 0,
+        "score": 66
+      },
+      {
+        "id": "EW-89",
+        "cost": 0.25,
+        "final": 0,
+        "score": 66
+      },
+      {
+        "id": "Bu-129",
+        "cost": 0.3,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "Bu-315",
+        "cost": 0.2,
+        "final": 0,
+        "score": 65
+      },
+      {
+        "id": "EW-91",
+        "cost": 0.3,
+        "final": 0,
+        "score": 64
+      },
+      {
+        "id": "Bu-301",
+        "cost": 0.2,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-374",
+        "cost": 0.1,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-376",
+        "cost": 0.15,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-442",
+        "cost": 0.18,
+        "final": 0,
+        "score": 63
+      },
+      {
+        "id": "Bu-130",
+        "cost": 0.35,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-135",
+        "cost": 0.75,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-254",
+        "cost": 0.1,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-87",
+        "cost": 0.15,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-92",
+        "cost": 0.4,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-131",
+        "cost": 1.062,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "EW-176",
+        "cost": 0.4,
+        "final": 0,
+        "score": 62
+      },
+      {
+        "id": "Bu-230",
+        "cost": 0.25,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "Bu-237",
+        "cost": 0.5,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "EW-81",
+        "cost": 0.3,
+        "final": 0,
+        "score": 61
+      },
+      {
+        "id": "Bu-87",
+        "cost": 3.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-113",
+        "cost": 0.501,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-114",
+        "cost": 0.6,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-225",
+        "cost": 0.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-290",
+        "cost": 1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-303",
+        "cost": 0.1,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-311",
+        "cost": 0.2,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "Bu-378",
+        "cost": 0.256,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-02",
+        "cost": 0.04,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-145",
+        "cost": 0.5,
+        "final": 0,
+        "score": 60
+      },
+      {
+        "id": "EW-101",
+        "cost": 0.7,
+        "final": 0,
+        "score": 59
+      },
+      {
+        "id": "Bu-415",
+        "cost": 1.2,
+        "final": 0,
+        "score": 58
+      },
+      {
+        "id": "Bu-143",
+        "cost": 0.65,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-260",
+        "cost": 1.8,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "Bu-340",
+        "cost": 0.75,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-103",
+        "cost": 0.2,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-106",
+        "cost": 0.1,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-108",
+        "cost": 0.4,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-113",
+        "cost": 0.3,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-146",
+        "cost": 0.3,
+        "final": 0,
+        "score": 57
+      },
+      {
+        "id": "EW-16",
+        "cost": 0.8,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-17",
+        "cost": 0.5,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-85",
+        "cost": 0.25,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-93",
+        "cost": 0.15,
+        "final": 0,
+        "score": 56
+      },
+      {
+        "id": "EW-122",
+        "cost": 7,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "EW-133",
+        "cost": 0.15,
+        "final": 0,
+        "score": 53
+      },
+      {
+        "id": "Bu-110",
+        "cost": 0.502,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-111",
+        "cost": 0.534,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-112",
+        "cost": 0.513,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-222",
+        "cost": 0.46,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-263",
+        "cost": 0.165,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-295",
+        "cost": 0.175,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-362",
+        "cost": 0.2,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-15",
+        "cost": 2.7,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-107",
+        "cost": 0.435,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "EW-182",
+        "cost": 0.7,
+        "final": 0,
+        "score": 52
+      },
+      {
+        "id": "Bu-373",
+        "cost": 0.15,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "Bu-386",
+        "cost": 0.2,
+        "final": 0,
+        "score": 51
+      },
+      {
+        "id": "EW-95",
+        "cost": 2.5,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "EW-104",
+        "cost": 0.3,
+        "final": 0,
+        "score": 50
+      },
+      {
+        "id": "EW-14",
+        "cost": 0,
+        "final": 0,
+        "score": 48
+      },
+      {
+        "id": "Bu-387",
+        "cost": 0.08,
+        "final": 0,
+        "score": 46
+      },
+      {
+        "id": "EW-147",
+        "cost": 0.35,
+        "final": 0,
+        "score": 46
+      },
+      {
+        "id": "Bu-271",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-289",
+        "cost": 0.1,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-364",
+        "cost": 0.05,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-383",
+        "cost": 0.9,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-421",
+        "cost": 1.5,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-58",
+        "cost": 0.6,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-123",
+        "cost": 0.5,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "EW-129",
+        "cost": 0.08,
+        "final": 0,
+        "score": 45
+      },
+      {
+        "id": "Bu-03",
+        "cost": 0.4,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "Bu-319",
+        "cost": 0.3,
+        "final": 0,
+        "score": 43
+      },
+      {
+        "id": "EW-18",
+        "cost": 0,
+        "final": 0,
+        "score": 41
+      },
+      {
+        "id": "Bu-131",
+        "cost": 0.5,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-215",
+        "cost": 0.2,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-218",
+        "cost": 0.3,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-312",
+        "cost": 0.19,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-318",
+        "cost": 0.12,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-82",
+        "cost": 0.6,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-111",
+        "cost": 0.16,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-114",
+        "cost": 1.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "EW-118",
+        "cost": 0.8,
+        "final": 0,
+        "score": 40
+      },
+      {
+        "id": "Bu-381",
+        "cost": 0.1,
+        "final": 0,
+        "score": 39
+      },
+      {
+        "id": "Bu-214",
+        "cost": 0.25,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-272",
+        "cost": 0.2,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-439",
+        "cost": 0.98,
+        "final": 0,
+        "score": 38
+      },
+      {
+        "id": "Bu-441",
+        "cost": 1,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-443",
+        "cost": 0.7,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-446",
+        "cost": 0.5,
+        "final": 0,
+        "score": 35
+      },
+      {
+        "id": "Bu-217",
+        "cost": 0.11,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-105",
+        "cost": 0.3,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-116",
+        "cost": 0.5,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "EW-155",
+        "cost": 0.15,
+        "final": 0,
+        "score": 33
+      },
+      {
+        "id": "Bu-370",
+        "cost": 0.95,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "EW-97",
+        "cost": 0.4,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "EW-98",
+        "cost": 0.5,
+        "final": 0,
+        "score": 30
+      },
+      {
+        "id": "Bu-220",
+        "cost": 0.396,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-233",
+        "cost": 0.25,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-267",
+        "cost": 0.1,
+        "final": 0,
+        "score": 28
+      },
+      {
+        "id": "Bu-449",
+        "cost": 0.499,
+        "final": 0,
+        "score": 26
+      },
+      {
+        "id": "Bu-445",
+        "cost": 0.1,
+        "final": 0,
+        "score": 22
+      },
+      {
+        "id": "Bu-450",
+        "cost": 0.7,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-451",
+        "cost": 0.7,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-452",
+        "cost": 0.8,
+        "final": 0,
+        "score": 17
+      },
+      {
+        "id": "Bu-133",
+        "cost": 0.6,
+        "final": 0,
+        "score": 15
+      },
+      {
+        "id": "Bu-134",
+        "cost": 0.3,
+        "final": 0,
+        "score": 15
+      },
+      {
+        "id": "EW-166",
+        "cost": 0.1,
+        "final": 0,
+        "score": 5
+      },
+      {
+        "id": "Bu-83",
+        "cost": 0.01,
+        "final": 0.01,
+        "score": 30
+      },
+      {
+        "id": "Bu-84",
+        "cost": 3.18,
+        "final": 3.18,
+        "score": 70
+      },
+      {
+        "id": "Bu-85",
+        "cost": 1.5,
+        "final": 1.5,
+        "score": 70
+      },
+      {
+        "id": "Bu-86",
+        "cost": 0.5,
+        "final": 0.5,
+        "score": 70
+      }
+    ],
+    "carry": 10,
+    "scope": "full"
+  }
+]

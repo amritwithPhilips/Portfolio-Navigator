@@ -1,0 +1,713 @@
+ 
+ 
+AOP 2027 Modeler Product Requirements 
+Version 5.7.0  |  30 September 2026  |  Benefits Reclassification + Data Refresh + Audit Trail — 
+Column O Benefits Rule + Full Audit Engine 
+ 
+Version 5.7.0 adds the shared finance allocation ledger, confirmed EW charging split, baseline-
+capped carry-over rule, source exclusions, scenario request and merit edits, and independent 
+ten-scenario validation. Six-tab navigation and source evidence are retained. 
+1. Product Scope 
+1.1 Modeler state 
+Standalone offline HTML: AOP2027-IT-Portfolio-Scenario-Modelling-v5.7.0.html. Six tabs share 
+one scenario result and one finance allocation ledger. Engine v5.7.0; session schema 4. Source 
+workbooks remain unchanged. 
+1.2 Six-tab structure 
+Tab Name Editable Purpose 
+1 Demand Overview No KPIs: Total IT AOP 
+Demand, Programs 
+demand, operations, 
+committed benefits 
+(Hard/Soft), IT AOP 2026. 
+Demand Split by ExCo 
+with collapsible org 
+groups. 
+2 Programs AOP Scenarios Levers only Four priority levers, 
+Funding Prioritization 
+Gate, Merit Score 
+Framework, Demand in 
+Scenario table (collapsible 
+BURF groups, 
+Prioritised/Not Funded 
+toggle), decision log. 
+3 Functions & Regions Yes EW Programs. Editable 
+allocation. 
+ExCo/Org/Platform 
+cascading filters, bubble 
+chart with Y-axis toggle, 
+ExCo Trade-off Cockpit. 
+4 BU Led Yes BU Programs. Same layout 
+as Tab 3. Shares one 
+scenario with Tab 3. ExCo 
+Trade-off Cockpit. 
+5 Operations No TCO 3-level hierarchy, 
+service catalog. Pre-
+aligned costs; read-only. 
+ 
+ 
+Tab Name Editable Purpose 
+6 AOP 2027 : One Portfolio No Combined Programs + 
+operations. Finalise, New 
+Working Version. Org IT 
+Cost Allocation table with 
+filters. Bubble chart with 
+Y-axis toggle. 
+ 
+1.3 Source authority 
+• Authoritative Programs source: AOP 2027 Consolidated Live 299262020.xlsx, saved 29 
+September 2026. The release stores original bytes, cached values, formulas and full SHA-256 
+provenance. 
+• 433 active Programs; requested demand 285.2129 M€ including 5.19 M€ PMI. Nine missing-
+request rows and four uninterpretable-decision rows are excluded from active scope and 
+retained in the audit extract. 
+• Enterprise-wide charging at BU row 276 is an allocation key only. Its 40 M€ is excluded from all 
+demand. Apply the user-confirmed 1,000× percentage correction and retain 
+22.63033175355452% as unallocated. PMI is funded separately on top of the base budget 
+without a BU charge. 
+• Operations source: Updated - Preliminary AOP2027 Bill of IT for BU_R_F - 23.Sep.xlsx. All 182 
+service IDs reconcile to 470.3144630385122 M€; 36 consuming organisations and seven final 
+recipient clusters are retained. No proportional scaling of Operations totals is used. 
+2. ExCo Accountability Hierarchy 
+2.1 Structure 
+16 ExCo members mapped to all 35 organisation values. Dictionary: EXCO_HIERARCHY with role, 
+segment, orgs[]. Reverse lookup: ORG_TO_EXCO. Fuzzy match: excoOf() for 
+whitespace/encoding differences. 
+Every enriched Programs row carries an exco field. Regional leaders (IR/NAM/GCR) club BU+EW 
+demand together. 
+2.2 BU Leaders (10) 
+ExCo Leader Segment Organisations 
+Deeptha Khanna Personal Health PH 
+Shez Partovi Enterprise Informatics EI, I&D (Innovation & Design) 
+Julia Strandberg Connected Care HPM, AM&D, SRC 
+Jie Xue Precision Diagnosis CT, DXR, MR, PDU 
+Bert van Meurs Image Guided Therapy IGT-S, IGT-D, STO 
+Wim Appelo Integrated Supply Chain ISC, STET-ISC 
+Ozlem Fidanci International Regions IR, Health & Safety 
+Jeff DiLullo North America NAM 
+Ling Liu Greater China (merged from GRC) GCR 
+Charlotte Hanneman Finance & Group Security Finance, Group Security 
+ 
+ 
+ 
+2.3 Enterprise Function Leaders (6) 
+ExCo Leader Segment Organisations 
+Laura Matz IT IT 
+Heidy Schein People People 
+Steve C de Baca Patient Safety & Quality PS&Q 
+Carla Silva Peron Medical Office Medical Office 
+Filip Koek Internal Audit Internal Audit 
+Marnix van Ginneken Legal, Comms & Brand, IP&S Legal, Comms & Brand, IP&S 
+ 
+2.4 Engine integration 
+• EXCO_HIERARCHY: dictionary keyed by leader name. Each entry: {role, segment, orgs:[]}. 
+• ORG_TO_EXCO: reverse lookup from any of the 35 org values to ExCo leader name. 
+• excoOf(orgName): fuzzy match function handling whitespace/encoding differences. 
+• enrich() adds exco field to every Programs row. 
+• filter() supports exco dimension for cascading filters. 
+3. Hard/Soft Benefit Classification 
+3.1 classifyBenefit() function 
+New engine function classifies each Programs into one of four benefit categories: 
+Classification Criteria Label 
+Hard benefit > 0 AND area in {Revenue 
+Increase, Productivity Savings} 
+Hard Benefit 
+Soft benefit > 0 AND area in {Cost 
+Avoidance, Process 
+simplification/efficiency gain, 
+Compliance/Keeping the lights on, 
+Security, Enabling} or other areas 
+not in Hard set 
+Soft Benefit 
+Qualitative No numeric benefit but has impact 
+text or problem statement 
+Qualitative Only 
+None No benefit data of any kind No Benefit Data 
+ 
+3.2 Enriched fields 
+• benefitClass: "hard" | "soft" | "qualitative" | "none" 
+• benefitClassLabel: human-readable label for display 
+• benefitFlag: data quality flag (if applicable) 
+3.3 Data quality flags 
+Flag Condition Action 
+K EUR suspect Impact text value equals benefit 
+amount x 1000 
+Warning; manual review 
+recommended 
+Outlier Benefit amount > 100 M€ Warning; flagged for review 
+High ratio Benefit/cost ratio > 10x Accepted input; no eligibility hold 
+ 
+ 
+Flag Condition Action 
+No business case No numeric benefit, no qualitative 
+text, no impact 
+Flag; scored 0 
+ 
+3.4 Display across tabs 
+• Tab 1: "Committed Benefits" KPI shows Hard (blue, large) + "Hard" label (black, regular) / Soft 
+(black, large) + "Soft M€" label (black, regular). No highlight background. 
+• Tab 2: Allocated AOP KPI shows "On top off" indicator when allocation exceeds Total AOP. 
+• Tabs 3 & 4: "Committed Benefits" KPI with Hard (blue) / Soft (black) format. No coloured 
+background. 
+• Tab 6: "Committed Benefits" shows Hard (blue) / Soft (black) format matching Tab 1 style. 
+• Bubble chart tooltip: shows benefit classification label (Hard Benefit / Soft Benefit / Qualitative 
+Only / No Benefit Data). 
+• Chart summary line: "Committed: X Hard . Y Soft" replaces single combined number. 
+• ExCo Demand table: org sub-rows and grand total show Hard/Soft columns. 
+4. Total AOP Protection 
+The Total AOP (M€) field changes ONLY via manual user edit. No automated process may modify 
+it. 
+4.1 Trade-off Apply behaviour 
+• ExCo Trade-off Apply button includes/excludes P4 Programs by merit ranking. 
+• Apply does NOT modify the Total AOP budget. It only changes Programs inclusion/exclusion. 
+• The previous behaviour (Apply increased Total AOP by the sum of trade-off deltas) is removed. 
+4.2 "On top off AOP" KPI 
+• "On top off AOP" shows the delta between actual allocation and the user-set budget. 
+• Tabs 3 & 4: displayed as a separate KPI below the Committed Hard Benefits tile. 
+• Tab 2: Allocated AOP shows "On top off: +X M€" (red) when over budget, or "Under budget: X 
+M€" (green) when under. 
+• Red indicates over-budget; green indicates under-budget. 
+4.3 Manual budget edit 
+The Total AOP input field on Tab 2 is the ONLY mechanism to change the budget. Presets do not 
+change it. Trade-off Apply does not change it. Only direct user input changes it. 
+ 
+ 
+5. ExCo Trade-off Cockpit 
+5.1 Position and layout 
+Located below the filter bar on Tabs 3 (Functions & Regions) and Tab 4 (BU Led). Default state: 
+closed. Opens automatically when trade-off budget values are entered. 
+5.2 Per-ExCo leader columns 
+Column Description 
+Requested Total requested demand for this ExCo leader's 
+organisations 
+Funded Currently funded amount from automatic prioritisation 
++ manual overrides 
+Gap Requested minus Funded 
+% Funded Funded / Requested as percentage 
+Hard Ben Sum of Hard benefit amounts for funded Programs 
+Soft Ben Sum of Soft benefit amounts for funded Programs 
+Trade-off Budget User input field: target funding amount for this leader 
+Delta Trade-off Budget minus current Funded (positive = 
+additional funding, negative = reduction) 
+Progs / Benefits impact Programs count + Hard/Soft benefit M€ that would be 
+added or removed 
+ 
+5.3 Apply and Reset 
+• Apply button: includes/excludes P4 Programs by merit score ranking to match the entered trade-
+off budgets. Creates tracked decisions in the decision log. Does NOT modify Total AOP. 
+• Reset button: clears all entered trade-off budget values in one click. 
+• Negative trade-offs supported: entering a budget BELOW current funded amount models 
+reductions. Lowest-merit P4 Programs are excluded. Delta shown in red. 
+• Batched transact() calls used for Apply to avoid rendering issues. 
+5.4 Filter interaction 
+The trade-off cockpit receives filtered rows from the active tab filters (ExCo, Org, Platform, 
+Funding Status, Type). Filter changes update the cockpit values in real time. 
+6. Global ExCo Filter 
+ExCo Leader is the first filter dropdown on all Programs tabs (Tabs 2, 3, 4, and Overview/Tab 6). 
+6.1 Cascading behaviour 
+• ExCo filter is the first in the cascade chain: ExCo -> Org -> Platform. 
+• Selecting an ExCo leader narrows Organisation options to that leader's mapped orgs only. 
+• Organisation selection further narrows Platform options. 
+• AND logic with all other filters (Funding Status, Type, Investment Area, text search). 
+ 
+ 
+6.2 Tabs affected 
+• Tab 2: ExCo filter in Demand in Scenario table and Prioritized Programs filters. 
+• Tab 3: ExCo filter in main filter bar. 
+• Tab 4: ExCo filter in main filter bar. 
+• Tab 6: ExCo filter in Overview filter bar. 
+7. Bubble Chart 
+7.1 Y-axis toggle 
+Pill-style toggle switch (matching the Prioritised/Not Funded toggle design) replaces the 
+previous dropdown selector. 
+• Tabs 3 & 4: toggle between "Requested (M€)" and "Hard Benefits (M€)" on the Y-axis. 
+• Tab 6: toggle between "Prioritised (M€)" and "Hard Benefits (M€)". 
+• Tab 2: no toggle (scenario tab retains median/merit reference values). 
+• Toggle state is session-persistent. 
+7.2 Legend 
+• Legend moved from below chart to right-side panel. 
+• Compact table format showing per-category aggregated M€ values. 
+7.3 Summary line 
+Displayed below the chart heading on Tabs 3, 4, and 6: 
+• "X / Y Programs funded for a total N M€ / M M€ Prioritised AOP 2027 demand with a committed 
+Impact of Z M€" 
+• Committed impact text: "Committed: X Hard . Y Soft" 
+• Summary refreshes on filter change. 
+7.4 Median/merit text 
+Removed from Tabs 3, 4, and 6. Retained on Tab 2 only. 
+8. Demand in Scenario Table (Tab 2) 
+8.1 Structure 
+Merged table replacing the separate Demand Prioritized / Demand Not Funded sections. 
+Positioned before the Funding Prioritization Gate. 
+• Collapsible BURF organisation groups matching the Tabs 3/4 design pattern. 
+• View-only: no editable fields. 
+• 9 matching columns consistent with EW/BU tables. 
+ 
+ 
+8.2 Toggle switch 
+• Pill-style slide switch for Prioritised / Not Funded views. 
+• Prioritised is the default view. 
+• Teal/blue active state. 
+8.3 Filters 
+• Cascading filters: ExCo Leader -> Organisation -> Platform. 
+• ExCo narrows org options; org narrows platform options. 
+• Total row with filtered/unfiltered counts. 
+• Benefits total included in Total row. 
+9. Tab-by-Tab Element Reference 
+9.1 Tab 1 — Demand Overview 
+KPI Tiles (single row of 5, repeat(5,1fr) grid): 
+• Total IT AOP Demand (dark blue): Programs AOP + Operations AOP. 
+• Programs Demand (white): count and M€. 
+• Operations Demand (white): service count, pre-aligned. 
+• Committed Benefits (white, no highlight): Hard number (blue, 22px) + "Hard" (black, 13px) on 
+first line, Soft number (black, 22px) + "Soft M€" (black, 13px) on second line. 
+• IT AOP 2026 (white): large number in blue, sub-text in black with Programs + Operations 
+breakdown. 
+Demand Split by ExCo: 
+• Collapsible ExCo groups replacing flat organisation list. 
+• Per-ExCo row: Programs count, requested M€, prioritised M€, gap M€, % funded, hard benefits, 
+soft benefits, operations cost. 
+• Click to expand constituent organisations. Colour-coded funding percentage. 
+9.2 Tab 2 — Programs AOP Scenarios 
+Section 1 — KPI Cards: 
+• Allocated AOP (dark blue): M€ and % of Total AOP, funded count, Within/Over status, "On top 
+off" indicator. 
+• Initiatives Funded: count, partial scope count. 
+• EW/BU Led Share: split M€ and %. 
+• Open to Prioritisation or Over Total AOP: M€, variance text. 
+• Demand Left Unfunded: M€, missing request count. 
+Section 2 — Levers: 
+ 
+ 
+• Total AOP input field (manual edit only). 
+• Four preset buttons: Optimal Segmentation (default, blue-highlighted), Protect Commitments, 
+Balance Sustain and Value, Release Sustain Capacity. 
+• Four lever cards in horizontal desktop layout (4-column grid). Each shows current allocation and 
+fundable demand. 
+• Lever 1 (Legal & Compliance): Philips-style tick-mark slider. 
+• Confirmed carry-over baseline cap; no ROI threshold. 
+• Lever 3 (Sustain): basis toggle (% bucket / % AOP / M€). 
+• Lever 4 (Value): basis toggle. 
+• Allocation text centered on all levers, single-line nowrap. 
+Section 3 — Demand in Scenario Table: 
+• Collapsible BURF groups. Pill toggle: Prioritised / Not Funded. 
+• Cascading ExCo -> Org -> Platform filters. 
+Section 4 — Funding Prioritization Gate: 
+• 5 cards: Gate 0 + four priorities. Gate number and name inline. Bullet-list definitions at 10pt. 
+Section 5 — Merit Score Framework: 
+• 5 component cards in single row (5-column grid). 
+• Components: Benefit Strength (40%), Submitted Priority (25%), Captured Consequence (15%), 
+Decision Band (10%), Payback Period (10%). 
+Section 6 — Decision Log: 
+• 3 columns: Revision/Time, Change Origin, Change Details (business-readable 1-liner). 
+9.3 Tab 3 — Functions & Regions 
+Filter bar: 
+• ExCo Leader, Organisation, Platform, New/Carryover/Sustain, Investment Area, Funding Status, 
+text search. 
+ExCo Trade-off Cockpit: 
+• Below filter bar. Default closed. Per-ExCo leader: Requested, Funded, Gap, % Funded, Hard Ben, 
+Soft Ben, Trade-off Budget, Delta, Progs/Benefits impact. 
+• Apply and Reset buttons. 
+KPI Tiles: 
+• Committed Benefits: Hard (blue, 18px) + "Hard" (black, 12px) on first line, Soft (black, 18px) + 
+"Soft M€" (black, 12px) on second line. White card, no coloured background. 
+• "On top off AOP": delta between allocation and budget. 
+ 
+ 
+Bubble Chart: 
+• Y-axis pill toggle: Requested / Hard Benefits. 
+• Legend: right-side panel with per-category M€. 
+• Summary line below heading. 
+Programs Table: 
+• BURF summary rows collapsed by default. Editable allocation column. 
+• Sticky first column and header. 
+9.4 Tab 4 — BU Led 
+Identical layout to Tab 3. Same ExCo Trade-off Cockpit, filters, chart, and table structure. Shares 
+one scenario with Tab 3. 
+9.5 Tab 5 — Operations 
+KPI Tiles (6): 
+• Total Operations 2027: 470.314463039 M€; 2026 run-rate: 470.667055448 M€; change: -
+0.352592410 M€. 
+• Operations own consumption: 320.258096632 M€; Regions: 63.461385361 M€; Functions: 
+86.594981045 M€. 
+TCO Table: 
+• 3-level collapsible hierarchy: BU Cluster -> Sub-Organisation -> Services. 
+• Columns: Organisation, AOP2027 Costs M€, Own Consumption (M€|%), Regions to BU (M€|%), 
+Functions & CoEs (M€|%), Delta vs AOP2026 M€. 
+• Delta colour: positive = red, negative = green. 
+• Organisation and Platform filters with cascading counts. X of Y on total. 
+Service Catalog: 
+• Columns: Service ID, Service Name, Platform Name, AOP2027 Costs M€, AOP2026 Costs M€, 
+Delta vs AOP2026 M€. 
+• Delta colour: positive = red, negative = green. 
+• Platform filter. X of Y on AOP2027 and AOP2026 totals when filtered. 
+9.6 Tab 6 — AOP 2027 : One Portfolio 
+KPI Tiles (5 in one row, repeat(5,1fr) grid): 
+• Total IT AOP (dark blue): Programs AOP + Operations AOP. 
+• Operations AOP (white): 470.314463 M€. 
+• Prioritized Programs AOP: funded amount. 
+• Split of Programs AOP: "F&R X | BU Y M€" single-line format. 
+• Committed Benefits: Hard/Soft split. 
+ 
+ 
+Bubble Chart: 
+• Y-axis pill toggle: Prioritised / Hard Benefits. 
+• Legend: right-side panel. 
+• Summary line: "X / Y Programs funded... Committed: X Hard . Y Soft". 
+Buttons: 
+• Finalise scenario: freezes revision. 
+• New Working Version creates a draft fork with parent lineage, retaining settings, Programs 
+decisions and evidence reviews. 
+• Removed: "Export complete portfolio" and "Export portable scenario" buttons. 
+Organisation IT Cost Allocation Table: 
+• Seven BU clusters plus Unallocated and PMI. Columns separate Programs types, EW, Operations 
+own/Regions/Functions, PMI and Total. 
+• Allocation shows the entire scenario and labels this scope; source-accountability filters apply to 
+the portfolio view. 
+10. Prioritization Logic (v5.7.0) 
+10.1 Four-Priority Funding Structure 
+Every demand row is classified into exactly one of four priorities. Gate 0 checks evidence. 
+Classification is deterministic and data-driven. 
+Priority Name Classification Funding order Default demand M€ 
+P1 Legal & Compliance Compliance 
+name/year 
+evidence, must-do 
+decision, or CCB 
+exception 
+Verified first; 
+priority tier; merit 
+53.136 
+P2 Carry Over Carry Over demand; 
+confirmed funding 
+requires baseline >0 
+and Must Do/Must 
+Have 
+Confirmed first; 
+baseline cap 
+107.5189 
+P3 Sustain & Hygiene Change & Sustain, 
+Continuous 
+Improvement or 
+Upgrades & 
+Enhancements 
+Change & Sustain 
+first; then merit 
+34.367 
+P4 Value Based Remaining 
+Programs; IT 
+Simplification may 
+be separated as P5 
+Merit ranking 85.001 
+ 
+ 
+ 
+10.2 Evidence Gate 0 
+Automatic eligibility retains source decision, condition, name, positive request and merit rules. 
+Benefits alone do not create a hold. Carry Over requires a confirmed approved baseline. 
+10.3 Funding Algorithm 
+• Sort all rows by priority (P1->P4) then ranking within priority. 
+• Fund each eligible row at full requested amount if stage and portfolio budgets have capacity. 
+• Stage limit = target x (1 + tolerance/100). Portfolio limit = Total AOP x (1 + tolerance/100). 
+• P2: fund at min(Requested, Carry Over Baselined), not full request. 
+• Tolerance default: 0.0% (exact budget). 
+• Manual overrides after automatic: additions additive; exclusions do not refill silently. 
+10.4 Merit Scoring Framework (5 components) 
+0-100 composite score. Formula: Score = sum(raw_i / max_i x weight_i). Weights must sum to 
+100.0. 
+# Component Max Raw Default Weight Source Field(s) 
+1 Benefit Strength 50 pts 40% Quantified Benefits 
+(K€); Quantified 
+Benefits Details 
+(text) 
+2 Submitted Priority 25 pts 25% Priority column 
+3 Captured 
+Consequence 
+15 pts 15% Impact and Cost of 
+Not Doing; Problem 
+Statement; Scope 
+4 Decision Band 10 pts 10% Decision Band / 
+Waste band 
+5 Payback Period 10 pts 10% Payback Period 
+column 
+ 
+10.5 Lever Controls 
+Lever Priority Basis Options Default 
+1 . Legal & Compliance P1 % of bucket / % of Total 
+AOP / M€ allocation 
+Verified demand share 
+(~75%) 
+2. Carry Over P2 Confirmed approved 
+baseline 
+No ROI threshold 
+3 . Sustain Engineering & 
+Hygiene 
+P3 % of bucket / % of Total 
+AOP / M€ allocation 
+60% of bucket 
+4 . Value Based Portfolio P4 % of bucket / % of Total 
+AOP / M€ allocation 
+100% of bucket 
+ 
+10.6 Four Scenario Presets 
+Preset P1: LFR P2: Carry Over P3: Sustain P4: Value 
+Optimal 
+Segmentation 
+(Recommended) 
+Verified LFR Confirmed baseline 
+cap 
+60% bucket 100% bucket 
+Protect 
+Commitments 
+100% bucket Confirmed baseline 
+cap 
+100% bucket 10% AOP 
+ 
+ 
+Preset P1: LFR P2: Carry Over P3: Sustain P4: Value 
+Balance Sustain and 
+Value 
+100% bucket Confirmed baseline 
+cap 
+75% bucket 15% AOP 
+Release Sustain 
+Capacity 
+44% bucket Confirmed baseline 
+cap 
+75% bucket 20% AOP 
+ 
+11. Session and Reset 
+11.1 Default scenario 
+Optimal Segmentation is the default scenario applied on page load. The Optimal preset button is 
+blue-highlighted to indicate active state. 
+11.2 New Working Version 
+New Working Version creates a draft fork with parent lineage, retaining settings, Programs 
+decisions and evidence reviews. 
+• New Scenario applies Optimal Segmentation; New Working Version retains the current settings. 
+• New Working Version retains manual include/exclude decisions. 
+• New Working Version retains evidence reviews and scenario request/merit edits. 
+• Clears all ExCo trade-off budget values. 
+• Clears the decision log. 
+• Resets scenario revision counter. 
+11.3 Filter auto-close 
+All filter dropdowns across all tabs auto-close immediately after a selection is made. This applies 
+to ExCo, Organisation, Platform, Funding Status, Type, Investment Area, and all other multi-
+select filter dropdowns. 
+11.4 Session schema 
+Session schema 4 (5 weights). Sessions saved with schema 3 (4 weights [50,25,15,10]) auto-
+migrate to schema 4 ([40,25,15,10,10]) on load. 
+12. QA and Acceptance Criteria 
+12.1 Core rendering checks 
+• All 6 tabs render with zero console errors. 
+• 433 active Programs processed, no duplicate IDs. 
+• Benefits consistently split as Hard/Soft across all displays (Tabs 1, 2, 3, 4, 6). Blue Hard / black 
+Soft format verified. 
+• ExCo filter cascading works on all Programs tabs. 
+• ExCo Trade-off Cockpit Apply does not modify Total AOP. 
+ 
+ 
+• Demand in Scenario table shows collapsible BURF groups. 
+• Bubble chart Y-axis toggle functional on Tabs 3, 4, 6. 
+• Filter dropdowns auto-close after selection. 
+12.2 Financial reconciliation 
+• Requested = Final + Unfunded (per Programs, per stream, portfolio total; within +/-0.01 M€). 
+• EW Final + BU Final = Portfolio Final. 
+• Sum of stage allocations = Portfolio Total Allocation. 
+• Allocated AOP <= Total AOP x (1 + tolerance%). 
+• Total IT AOP = Programs Final Allocation + Operations AOP (470.314463 M€). 
+• Operations AOP is constant across Tabs 1, 5, and 6. 
+12.3 Benefit classification checks 
+• Every funded Programs has a benefitClass field (hard/soft/qualitative/none). 
+• Hard benefit sum matches across Tab 1, Tabs 3/4, and Tab 6. 
+• Soft benefit sum matches across all displays. 
+• "Committed: X Hard . Y Soft" summary line present on Tabs 3, 4, 6 charts. 
+• Bubble tooltip shows correct benefit classification label. 
+12.4 ExCo checks 
+• 16 ExCo leaders mapped to 35 organisations. 
+• ExCo filter on Tabs 2, 3, 4, 6 cascades to Org filter. 
+• Trade-off cockpit shows correct per-leader totals. 
+• Trade-off Apply creates decision log entries without modifying Total AOP. 
+• Trade-off Reset clears all entered budget values. 
+Appendix A: Requirement Delta v5.0 to v5.2 
+A.1 New requirements 
+ID Title Summary 
+EXCO-01 ExCo Accountability Hierarchy 16 leaders mapped to 35 orgs. 
+EXCO_HIERARCHY, ORG_TO_EXCO, 
+excoOf(). 
+EXCO-02 Global ExCo Filter First filter dropdown on all 
+Programs tabs. Cascading ExCo-
+>Org->Platform. 
+EXCO-03 Demand Split by ExCo Tab 1 collapsible ExCo groups 
+replacing flat org list. 
+EXCO-04 ExCo Trade-off Cockpit Per-leader budget negotiation on 
+Tabs 3 & 4. Apply/Reset. Negative 
+trade-offs. 
+EXCO-05 Total AOP Protection Apply does not modify budget. "On 
+top off AOP" KPI. 
+BEN-01 Benefit Classification classifyBenefit() -> 
+Hard/Soft/Qualitative/None. Data 
+quality flags. 
+ 
+ 
+ID Title Summary 
+BEN-02 Hard/Soft Display Consistent Hard/Soft split across all 
+tabs, charts, tooltips. 
+BEN-03 Data Quality Flags K EUR suspect, outlier, high ratio, 
+no business case. 
+UI-01 Y-axis Pill Toggle Bubble chart toggle: 
+Requested/Prioritised vs Hard 
+Benefits. 
+UI-02 Legend Redesign Right-side panel with per-category 
+M€ table. 
+UI-03 Chart Summary Line Tabs 3/4/6: funded count, total, 
+committed Hard/Soft. 
+UI-04 Median/Merit Removal Removed from Tabs 3/4/6; kept on 
+Tab 2. 
+UI-05 Demand in Scenario Rebuild Collapsible BURF groups, pill toggle, 
+cascading ExCo filters. 
+UI-06 Tab 1 KPI Redesign Single row of 5 tiles. Hard (blue) / 
+Soft (black) benefits format. 
+Removed 2026 Programs AOP and 
+2026 Operations AOP tiles. 
+UI-07 Tab 2 KPI Styling Allocated AOP dark blue; others 
+white. On top off indicator. 
+UI-08 Tab 6 Redesign 5-tile 1fr grid. F&R|BU single-line. 
+Removed export buttons. Download 
+Excel button removed from filter 
+toolbar. 
+UI-09 Filter Auto-Close All dropdowns auto-close after 
+selection. 
+UI-10 New Working Version Reset New Working Version creates a 
+draft fork with parent lineage, 
+retaining settings, Programs 
+decisions and evidence reviews. 
+UI-11 Programs Detail Popup Redesign New layout: Name header, 
+Demand/Prioritised Demand, 7-field 
+Details table, Merit Score 
+breakdown, Funding Rationale type 
+indicator. 
+ 
+A.2 Unchanged from v5.0 
+The following requirement groups from PRD v5.0 and v4.0 remain unchanged: 
+• FIN-01 through FIN-04: EW charging exclusion, BU cluster allocation, EW charge calculation, 
+Finance QA harness. 
+• Prioritization logic (4-priority structure, merit scoring, 5 components). 
+• Operations tab specification (Tab 5). 
+• Source workbook contract and normalised record fields. 
+• Scenario persistence and decision history. 
+• Excel downloads and traceability. 
+• Platform mapping (normalizePlatform, DEPT_PLATFORM, SVC_PLATFORM_MAP). 
+ 
+ 
+ 
+Finance calculation module — v5.7.0 
+The finance module is the calculation authority for Programs allocation and combined Programs 
++ Operations recipient cost. The source-accountability view and the receiving-BU view represent 
+the same cost and must never be added together. 
+Confirmed default and charging key 
+The Optimal default budget is 100 M€. LFR retains the verified share; Carry Over uses approved 
+baseline caps without an ROI threshold; Sustain is 60% of its bucket; Value uses the remaining 
+available budget; IT Simplification is optional and inactive by default. Manual changes retain any 
+overspend visibly. PMI is on top. 
+EW charge to recipient b = funded EW Programs × charging fraction b. The BU row 276 
+percentage formulas sum to 0.001 because recipient values totaling 40 are divided by 40,000. 
+The confirmed correction multiplies each source fraction by 1,000. It preserves the exact 
+22.63033175355452% unallocated share. Display rounding does not change the calculation. 
+FIN-01 
+One exact financial ledger feeds all six tabs, Portfolio Inclusion Table, both ExCo Trade-off 
+Cockpits, AOP2027: Programs Demand Overview, Organisation IT Cost Allocation: Programs + 
+Operations, and exports. 
+FIN-02 
+Separate demand selection from allocation. First compute requested, automatic, manual, final 
+and unfunded for every active Programs record. Then allocate final funding using the 
+appropriate source key. Allocation never changes merit or funding. 
+FIN-03 
+Single BU: use the row’s exact spend-allocation percentages, including sub-BU recipients. A 
+confirmed sole recipient can receive 100% only when the source establishes that recipient; 
+never substitute the requesting organisation for a missing charge key. 
+FIN-04 
+Cross BU: allocate final amount using the record’s exact percentages from SPEND ALLOCATION 
+BY BUSINESS UNIT. Validate each recipient and row total. Do not redistribute an incomplete key 
+automatically. 
+FIN-05 
+Indirect Cross BU follows its own source allocation, including Not allocated to BU. The 
+requesting Function/Region remains the accountable origin. No fallback to the EW key is 
+applied. 
+ 
+ 
+FIN-06 
+Enterprise-wide: isolate the Enterprise-wide charging row and apply its validated percentage 
+vector to funded EW amounts. Retain both source Function/Region and recipient BU for drill-
+down. 
+FIN-07 
+PMI remains funded on top of the 100 M€ envelope, separately identified and not charged to 
+BUs. Unknown types remain explicitly unmapped until a valid source routing exists. 
+FIN-08 
+Retain exact source percentage precision. Apply the confirmed 1,000× correction only to an EW 
+vector totaling 0.001; accept a fraction vector totaling 1 directly. Other EW totals are 
+exceptions. BU row percentages are never silently normalized. Missing balances remain 
+Unallocated. 
+FIN-09 
+Programs total uses investment spend, not operating-expense-only cost. Source capitalization 
+and expense splits may be shown separately; spend = capitalization + expense. Do not substitute 
+COST ALLOCATION columns for total investment allocation. 
+FIN-10 
+Operations follows its independent Bill of IT allocation, not the Programs EW key. Each service 
+ID has one cost and many traceable allocations. Keep own consumption, Region allocation and 
+Function allocation separate before summing recipient cost. 
+FIN-11 
+Show accountability/consumption and receiving-BU charge as two views of the same cost. 
+Never add Functions/Regions sender totals to their already allocated BU recipients. Seven top-
+level Operations recipient clusters reconcile to all 182 service costs. 
+FIN-12 
+Charge[b] = Single BU[b] + Cross BU[b] + Indirect Cross BU[b] + EW[b] + Operations own[b] + 
+Operations Region[b] + Operations Function[b]. Group total also includes explicit pending 
+allocation and separately retained PMI. 
+FIN-13 
+Confirmed carry-over baseline cap; no ROI threshold. 
+FIN-14 
+Benefits accepted for prioritization; no benefit-only hold. 
+ 
+ 
+FIN-15 
+Exclude missing-request records from active Programs overviews, prioritization and exports. 
+Nine such records remain in the refreshed source. Preserve original cells and exclusion reasons. 
+A completed record can return on refresh. 
+FIN-16 
+Exclude uninterpretable source decision records such as Excel errors and numeric zero decisions 
+from active scope; list IDs, source cells and amounts in the audit. Blank decisions remain 
+Unassessed; understood Priority TBD remains a visible decision hold. 
+FIN-17 
+Use Programs consistently in tab labels, tables, tooltips, exports, PRD and requirements. 
+Remove the entire specified 29 September refresh banner and superseded assertions about 
+illustrative budget, missing-request counts, benefit validation and Finance approvals. Keep 
+provenance in the dedicated audit view. 
+FIN-18 
+Manual inclusion/exclusion/partial scope, request edits and reviewed merit changes are explicit 
+logged scenario overlays. Preserve original cells and before/after values. ExCo trade-offs cannot 
+change Total AOP; exclusions cannot silently refill the portfolio. 
+FIN-19 
+The allocation ledger records source file hash, sheet, row, request/baseline cells, key cell, 
+Programs ID, source and scenario requests, funded amount, recipient fraction and charge. Key 
+cells link to original formulas preserved in the complete source snapshot. The workbook 
+overview identifies scenario and revision. These joins provide an independent manual-style 
+replay. 
+FIN-20 
+No external handoff or Planisware load is required for this deliverable. Model finalization means 
+a tested scenario artifact; external submission would be a separate user-requested action. 
+Reconciliation and known source balances 
+Default funded base Programs = 99.963 M€: EW 49.716 and BU Led 50.247. PMI = 5.190 M€; 
+Operations = 470.3144630385122 M€; total IT = 575.4674630385122 M€. EW unallocated = 
+11.250895734597165 M€. BU-led unallocated includes 1.357 M€ explicitly assigned to Not 
+allocated and 0.465 M€ missing from Bu-06 percentages. All balances remain included in the 
+total without an invented recipient. 
+ 
+ 
+Scenario acceptance and traceability 
+Ten scenarios cover default Optimal, two Sustain variants, AOP-percent limits, absolute limits, 
+the optional fifth lever, inclusion/partial scope, request/merit edits, F&R/BU ExCo trade-offs and 
+combined 80 M€ stress/recovery. Each scenario must match an independent calculation reading 
+the original two workbooks. Validate all Programs costs, stages, scores and funding, recipient 
+totals, PMI separation, Operations invariance, browser views, persistence and exports. 
+Trace every allocation through Programs/service ID, source file SHA-256, sheet/row, request 
+cell, baseline cell, key cell, funded amount, recipient fraction and final charge. Technical 
+conformance and source completeness are reported separately. A passing arithmetic result does 
+not resolve the source’s remaining unallocated balances. 

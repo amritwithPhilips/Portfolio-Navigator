@@ -4,98 +4,477 @@
     {
       "name": "modeler",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["http-server", ".", "-p", "8765", "--cors", "-c-1"],
+      "runtimeArgs": [
+        "http-server",
+        ".",
+        "-p",
+        "8765",
+        "--cors",
+        "-c-1"
+      ],
       "port": 8765
     },
     {
       "name": "one-portfolio",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["http-server", ".", "-p", "8766", "--cors", "-c-1"],
+      "runtimeArgs": [
+        "http-server",
+        ".",
+        "-p",
+        "8766",
+        "--cors",
+        "-c-1"
+      ],
       "port": 8766
     },
     {
       "name": "v45",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8767", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8767",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8767
     },
     {
       "name": "v44",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8770", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8770",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8770
     },
     {
       "name": "v47",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8771", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8771",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8771
     },
     {
       "name": "v5",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8772", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8772",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8772
     },
     {
       "name": "v51-review",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8780", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8780",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8780
     },
     {
       "name": "v52",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8774", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8774",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8774
     },
     {
       "name": "v52-aopilot",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8776", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8776",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8776
     },
     {
       "name": "v53",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8781", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8781",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8781
     },
     {
       "name": "v54",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8782", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8782",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8782
     },
     {
       "name": "v5.6-modeler",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8783", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8783",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8783
     },
     {
       "name": "v57",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8784", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8784",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8784
     },
     {
       "name": "v58",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8785", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8785",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8785
     },
     {
       "name": "v591",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8786", "--directory", "AOP 2027 Modeler"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8786",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
       "port": 8786
+    },
+    {
+      "name": "v592",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8789",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8789
+    },
+    {
+      "name": "v593",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8790",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8790
+    },
+    {
+      "name": "v594",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8791
+    },
+    {
+      "name": "v6",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-c",
+        "import http.server,socketserver,os;os.chdir('AOP 2027 Modeler');socketserver.TCPServer(('',8787),http.server.SimpleHTTPRequestHandler).serve_forever()"
+      ],
+      "port": 8787
+    },
+    {
+      "name": "journey-map",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8792",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8792
     },
     {
       "name": "data-extract",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8775", "--directory", "AOP 2027 Demand"],
-      "port": 8775
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8796",
+        "--directory",
+        "AOP 2027 Demand"
+      ],
+      "port": 8796
+    },
+    {
+      "name": "v596",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8793",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8793
+    },
+    {
+      "name": "scenario-slide",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8794",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8794
+    },
+    {
+      "name": "changelog-preview",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8797",
+        "--directory",
+        "AOP 2027 Demand"
+      ],
+      "port": 8797
+    },
+    {
+      "name": "v596-verify",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8798",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8798
+    },
+    {
+      "name": "validation-report",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8799",
+        "--directory",
+        "AOP 2027 Demand"
+      ],
+      "port": 8799
+    },
+    {
+      "name": "v61026",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8800",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8800
+    },
+    {
+      "name": "v61026-p1",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8801",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8801
+    },
+    {
+      "name": "v61026-p2",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8802",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8802
+    },
+    {
+      "name": "v61026-p3",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8803",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8803
+    },
+    {
+      "name": "v61026-p4",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8804",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8804
+    },
+    {
+      "name": "v61026-p5",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8805",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8805
+    },
+    {
+      "name": "v61026-p6",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8806",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8806
+    },
+    {
+      "name": "v61026-p7",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8807",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8807
+    },
+    {
+      "name": "v7-10-26",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8808",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8808
+    },
+    {
+      "name": "lfr-decisions",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8809",
+        "--directory",
+        "C:\\Users\\320126040\\OneDrive - Philips\\Download"
+      ],
+      "port": 8809
+    },
+    {
+      "name": "v7-r1",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8809",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8809
+    },
+    {
+      "name": "lfr-full",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8810",
+        "--directory",
+        "C:\\Users\\320126040\\OneDrive - Philips\\Download"
+      ],
+      "port": 8810
+    },
+    {
+      "name": "cloud-dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "azure-deploy/local-dev.js"
+      ],
+      "port": 8810
+    },
+    {
+      "name": "v7-r2",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8812",
+        "--directory",
+        "AOP 2027 Modeler"
+      ],
+      "port": 8812
     }
   ]
 }

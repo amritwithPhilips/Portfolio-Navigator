@@ -1,0 +1,584 @@
+{
+  "published": "20260930-094321",
+  "release": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0",
+  "backup": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\Backups\\exco-v5.8.0-20260930-094321",
+  "protectedFiles": [
+    {
+      "path": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\AOP2027-IT-Portfolio-Scenario-Modelling-v5.7.0.html",
+      "sha256": "0ed72652f4e4ff09c7fd28de45749bcc21e61989f35a36b4d92d32b698dbb949",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Demand\\AOP 2027 Consolidated Live 299262020.xlsx",
+      "sha256": "70480f321fa60e6cba983bf63e72572570b2821ec0a222b604449aafe9f4f470",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Demand\\Updated - Preliminary AOP2027 Bill of IT for BU_R_F - 23.Sep.xlsx",
+      "sha256": "176a6192da3356bcedd9f2babc8318c45977e7658d03172f9e2cb643d22e4668",
+      "unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\135-options-ranking.csv",
+      "sha256": "5c2f83bc77f06895b2a1fd8a94fca047d74ab41e5368a1b88b93944333e67e4d"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\32-scenarios-Programs-trace.csv",
+      "sha256": "83b877c41ec1d5cf268145bb8b268b879172a95a3dedd3ebd2e452ea68a3a481"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\AOP2027-Data-Extract.html",
+      "sha256": "5fe703a61135da468b0b48015ef2600455984f8bb66d03ff9d8eca85c1e721e7"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html",
+      "sha256": "93e8663293ce296295989f6a81b05fd1b8897a4f765f99276511426d104dc46f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum.docx",
+      "sha256": "8db6db4b36932c4095c34c5577fd33797e5753a87e28edde44a6cbcba92e46d1"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum.docx",
+      "sha256": "134128635e3d93ff6ffe21498b5c0efcfda0a1691d07d6120d749653ab472278"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\app.js",
+      "sha256": "09e0ac207f2342ca525df93aa501e66d319750b93eb4145633b999a1f22fac43"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\browser_qa.js",
+      "sha256": "f87dd5d5ad3a35fbc44c626795c966680a1ec6f6a683d85a0b4e0806a82a6d65"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\build_v58.py",
+      "sha256": "d91791f2846f4750a9f5ebbef9c4b96450ce8ff2b1a01f7b5d36cb8cfddac1e2"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\compatibility_qa.js",
+      "sha256": "4b33d4db6bf0b72433ee5a82eb02d3827e9dbcbdb8df29cd4cedf55647f2321e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\documents.py",
+      "sha256": "cff2c3e58e6ac4c75d9ea3c7c2701f2f9af3f63122452ce30a09f1e259022255"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\engine.js",
+      "sha256": "7d8b376c021dbc433a3e8854785ef4748e63423cfe6a26081fa491d0c599711f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\ExCo-architecture-v5.8.0.html",
+      "sha256": "37e0841f6b5a703c6938c584efc74a3f9349f061d9d337b864375c3fa55fc46f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\ExCo-QA-report-v5.8.0.html",
+      "sha256": "70fc7244b23f3cd7082eb32a6ff37815f50d52feaf4477221f4e7c435a9c6150"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\exco-view.css",
+      "sha256": "8631a3d7e6e0f4cc734ae54cca73fc35e9f00bdb8d94bd2530e047cef1562a1a"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\exco-view.js",
+      "sha256": "1b564e8445d09a0b51ed04e862be8152f4724aa4c7f555b7db1635315b451e66"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\exco_qa.js",
+      "sha256": "450144006d65d87da9073574f6a1477a72c3cf805d3abb8575b2ef0ec1c3d0eb"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\Execution-log-v5.8.0.html",
+      "sha256": "21c49fa11224f80a17515a71378f65daa5e698454359f8d9c826c5a75c7553a7"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\Execution-log-v5.8.0.jsonl",
+      "sha256": "3289009062b9bbc4b5913a0fbbd66c4adb29667b5a030357016fc13bbc670ddb"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\final_view_qa.js",
+      "sha256": "c622ddab035747d72648e4afaf06e34ee70ed29ab6f9a57c37b2692f5b2aa5dc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\optimize.js",
+      "sha256": "21859a09519a182b0deeebf98accc8dcc4d92182446dbd8316de53c05d1c3c9d"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\oracle.py",
+      "sha256": "f3ddbc4275dc4ace33d5a87e45949cb3a22416afebe78e62be7e35121c556f18"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\publish.py",
+      "sha256": "33faeaf2c20dee6bb071cf19a68e3bce3c2614964e0648dbd30686b73af1278d"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\refresh_ui_qa.js",
+      "sha256": "c7774cc2897cd57eece9c020569cf09edf861a7b5934a903dc5521e0e25001f8"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\regression_browser.js",
+      "sha256": "3817490b55ec8d79dac03805b6502b7426b67b2d96753f786f33b5334569966e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\render_pages.py",
+      "sha256": "58e4ccf7974105aa9a5f0c3b21b4150d59683991a3a68da36622efc34ac83be5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\render_word.ps1",
+      "sha256": "a2410b0bd27d4793e725044487786f89485172378cb37c4b8be9b18345e7174f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\report.py",
+      "sha256": "26eeaf1d5a9c583cd19d59aabbf63b4c192df2f9d1385d904aece81b192bb29b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\requirements.json",
+      "sha256": "51935d1e4154bc0c94aad2aeefb6070ea85efcfb5682eb97cb70707b15e95377"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\scenarios.js",
+      "sha256": "c6d55d718b758c7155f441b565ecf1de4f0277b44c0b33d0364cf1dd7c9d8b75"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\verify_exports.py",
+      "sha256": "c0263a1cfb0d111841f123925d72880c91d873f027976a9d5eb86516b561555c"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum.pdf",
+      "sha256": "1001a9007406388f1716dd7d86df624783a529da7a2886f2820f1b75181e44f9"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum.pdf",
+      "sha256": "b4cacfabc4225f983f68341f41fef04031a47f93ebbe96a26751d5745dd76e24"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\browser-finance.json",
+      "sha256": "7a3a2278725b9209522586b590bd2d06db781afabbad90d0929dc1a7af97937b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\browser-qa.json",
+      "sha256": "6fbdb891990dee466bef3d9fa0037eec2bd7bc39fd8dff53fcca07b61b5f4f71"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\browser-scenarios.json",
+      "sha256": "135fdda7fa894a906eb3e376154b3347bad83405920f86e79de35a2550a877b6"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\bu-1366.png",
+      "sha256": "0a4dd6e6c6e2ac7e0bafedd11bb7a42bc0965664ea0d18c619517218dcb151fc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\bu-1920.png",
+      "sha256": "4e618d68c7a87a1d4099b8717d015b95cb3c0990bff2ac72f2effe942574dfef"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\build-provenance.json",
+      "sha256": "6ad62da82f23c73c3635c03e4623cb9fcfbecd22b97261edb8f6305ea636190a"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\compatibility-qa.json",
+      "sha256": "f7a678422a4352207ed6f55baa879174c6b7e57bff824a6afa8664458acf2f42"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\demand-1366.png",
+      "sha256": "ea2946ecba8c90921539e0ff4703762909dd667dfab846ff7b36ebd00da5f74b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\demand-1920.png",
+      "sha256": "58007bff42fced8ed9657e3445c639dc34013de9da3bb940b52fa4cd3783a995"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\document-render-qa.json",
+      "sha256": "e4bf120c1f24575dc7fa892fde5a500afcc569d6b26dc76f969c22f97b3368f6"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\engine-qa.json",
+      "sha256": "e1adf96b81579242ed74808317e1f5b948625babd42252ca6d126c761433a7bd"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\ew-1366.png",
+      "sha256": "724ad21df60b2a7fd780d6425a3481df7fd6d036ce038e253d08b835683fbb2a"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\ew-1920.png",
+      "sha256": "5db267b23ba70fafb6f1e3113ac84ca6c73d1b1eb7384acf4dfc2839fff9a54c"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1366-company.png",
+      "sha256": "eb17d63e26705b6b7d2d43aa20e51b36c7a2c3ecdeb7d336b515ce884a187937"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1366-compare.png",
+      "sha256": "d8e1e3f55c184a885a9f7596b266b9011dad2a81fef53b4a26ab6c1e1a64c92d"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1366-decisions.png",
+      "sha256": "567ab6fdf1f571f28d70e40767fa543567446e9ce24045f5603c12cea2c0df2a"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1366-portfolio.png",
+      "sha256": "31b903d11dc58ea7f1d2361b32d0b8a947132ac44eff0a79476bb4dd107f329f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1920-company.png",
+      "sha256": "d2cfda194ad8e894559dc0d59858f11e159e4d0d976cb26656d6ca579358c1e3"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1920-compare.png",
+      "sha256": "2bb0937df867fbbcc6618343664fe64480c0f3b869333bb824e201e678e79308"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1920-decisions.png",
+      "sha256": "64b29533a7fb2bda9628a087233449c7b5b02ba38b4d0bbebf9ae67402622059"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-1920-portfolio.png",
+      "sha256": "cdcac3993726d2a2a4e97459b4764bf72ee81110091bbb385cdf31b3d51ef979"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\ExCo-architecture-v5.8.0.html.png",
+      "sha256": "78c22b189272b4fdce7ecf8590b2aff6269539bef55425c09e9a1bf23a95396d"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-current-versus-recommended.png",
+      "sha256": "58775071f1e8a6bd96acc0447806286d16b08f60c05a1c9664d06856d3bf8eeb"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-evidence.xlsx",
+      "sha256": "867c7f9c4ca7b99f7c2d4db97bd58e9da8785ac8ca9b47ec715b0cc027b03c30"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-first.png",
+      "sha256": "ef7c737fcf645bc0fb43c4047ed2258c15db815d5ba41476114b23e0d3c2ea0d"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\ExCo-QA-report-v5.8.0.html.png",
+      "sha256": "cfbeab852fce77f0c30323f01ecf7bdb75ff79d6a845caedac49352557c79280"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\exco-qa.json",
+      "sha256": "953c0e7d5fae2bcde9b607e453aedd75874bc55e9c353d3a768620068ed127b5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\export-qa.json",
+      "sha256": "a1cb7fd083c7dab4556fe0dce7b8d18d338f9a1c052975ade018f5d7f6bd43bc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\extract-1366.png",
+      "sha256": "ebbfab981ed853cef5c91292894849a6725e8b85df0ca65fc9ecadf0a4b9d1c7"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\extract-1920.png",
+      "sha256": "7b835c5edda4e3f0b9af2de83034b74a707a622acd631088c3e19bec4204d0dc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\extract-filtered.csv",
+      "sha256": "289d518e6d2d9b49b49c3b01fbde6be8e7702244cff53b77568c13640eec7685"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\filtered-extract.csv",
+      "sha256": "0acfa6d43ad45201adea6805a2d4a3d065f338c3cfc3a5d3bbcede62fadedf16"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\final-finance.png",
+      "sha256": "c58eb6fad8c5ebb310fae5ae9e01be2ceb94008a13113b9606aa213c36004a12"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\final-overview.png",
+      "sha256": "56a0ac8a6d2024c2fe56d47476f9743248d7def5a2559aff76622e23a6f9f095"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\final-view-qa.json",
+      "sha256": "aaa88dbb2afc7e4c295e1be67f5f10ce485259bcc908b2008e9759dbd1f5bed3"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\full-export.xlsx",
+      "sha256": "30313750e8590031d77df32eedf22ed894f8796fa1d5bf66a0db217bc1f5db86"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\inclusions-export.xlsx",
+      "sha256": "181baf5aefc5b1bfc8cd58a4b7da5e4415180dbed30701a873e901dc8ff27018"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\operations-1366.png",
+      "sha256": "78eb16f75c317063da0510c5a3388e45e8ac3a24b48382959f6ebe5142152f25"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\operations-1920.png",
+      "sha256": "184c68a94098a8c03367aa2452c6dce72e890287f8874a7f66a629b0bbb88832"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\ops-data.json",
+      "sha256": "5674b3051ee768bb01c0acfc7a7640b0f389d8c9e898592474d5a869eb7bc26b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\optimization.json",
+      "sha256": "200be872b839f6f3484448f42e2acde388b4a438f24ff60a2787879f22028475"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\oracle-qa.json",
+      "sha256": "7c0972cd6fb03b3357829113526023b9811720b02c73dac8935aa796c7e2afac"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\overview-1366.png",
+      "sha256": "0123a351ab8c46df5b6fb962f39fefd43cb617ed2576b7204562857a2bb37f5f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\overview-1920.png",
+      "sha256": "7b2dc8504f64286f513b16fc010c7228333502365fdcaa65b9c77c01fa918f81"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\program-source.json",
+      "sha256": "0ff803f259e965cc2b4bb10b3d3b3a969a2de71882d62e249fb5bf6f01614c71"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\refresh-ui-qa.json",
+      "sha256": "ca465204e908880a102c5aac94b8ebc3fe35bbdd109b89f6169c74af961b48c1"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\regression-browser-qa.json",
+      "sha256": "5dea566e073da7685dabca72cc7c347a38b549e6b931f105248483a6432e54b5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\scenario-1366.png",
+      "sha256": "e6f29db0d1c5dd3d5817f7470baf6e4b81c44837e947b9dd4781d84fc3fa0b0c"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\scenario-1920.png",
+      "sha256": "05b158bff69cb46aee0aa6dc214ed24617143e079250ce729bfa4ed61c7a5ac5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\scenarios.json",
+      "sha256": "cbff073d6e790da020a5773baf3fb3ad3a81cc161d98c7459115ab65396aab44"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\svc-data.json",
+      "sha256": "f753ef5eed07404ea7654db32ac630f6d00004387b08659fde0e1f04230292d5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\v5.7.0-engine.js",
+      "sha256": "b78df127bdd9b69438bd1989e65d170f5b1383a8cd353dfe9e9a320abacdff02"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-01.xlsx",
+      "sha256": "d213b71aa1d653723b1417e45d735c61acc9516a30f73d8b8c26ebebe46bf38e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-02.xlsx",
+      "sha256": "584f5bd37f042414d081ea2616ca7995cef42cf3e250a7852f5a7d6662b7f53b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-03.xlsx",
+      "sha256": "317744106adba8c3de1d514125d243631425b3629b4ad3ec5ed0a51ea5c8cc09"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-04.xlsx",
+      "sha256": "1468991cdf7e076fc4040427ede289f98963d8035896e397f37fa17d0b8f1cf5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-05.xlsx",
+      "sha256": "9b2db17c60c32e12e4a696d91b141e3313845b57e7fd5c52397041061de7e729"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-06.xlsx",
+      "sha256": "4974405cc888ff842923dd35194b6a9f0f263574d4480e32bd6f2ab199bf50dd"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-07.xlsx",
+      "sha256": "785201f6684ef0e6c4e40ddb60096a06b0efea12b5bf28dfd2e5e9cec97fc58b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-08.xlsx",
+      "sha256": "08b02c1d3425c533372e5c2a9edf345e68b0a723dae61a7ee2792ad39523f4e5"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-09.xlsx",
+      "sha256": "a1edd8a532bdceed559a2a6ebc00fb46547455b49eb04d22c8e11c157ae428ca"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-10.xlsx",
+      "sha256": "6179a72685e38b79e7e27ba60cfd27af5904cf52a9125c81546dbaad52b38943"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-11.xlsx",
+      "sha256": "0e5cf3053ff7550f481d0612e02f6a984dfa95a977812638937b6e1866ed7642"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-12.xlsx",
+      "sha256": "7c257f88fefa61de5a4c9a11f42c0a90ef68f0f2600d92798cbcc8be7cc5d3df"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-13.xlsx",
+      "sha256": "d158550425f2fe0d215c0f8286b914044795ac526c88ba7beaaec92327def911"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-14.xlsx",
+      "sha256": "e865dc840f982947dbc1b096a830ecae17dca66c75cf89bddd8eeea195ffd99b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-15.xlsx",
+      "sha256": "b0615f62efc463259aac1e1185502a1c84c1701d5a083aaf2d476fe256fa041e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-16.xlsx",
+      "sha256": "9bcb4251496ba3eeea8b80baa7c6a17ef8091ee6ee42adcc407f34a4da7da5bd"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-17.xlsx",
+      "sha256": "413905ba3394a57300087b1280e7ef813115fc86d98bd62375cfbd2ea1c6b142"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-18.xlsx",
+      "sha256": "d27fb9b58dcce01a67f22accbea88b357e9a53b789b98e38a047d9b76c9d3d6e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-19.xlsx",
+      "sha256": "22139b435ec364a1ccb3ad3478a4215b18dc294a5aad35fe855ae61b3f0a7505"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-20.xlsx",
+      "sha256": "bb362a8d0ccc7ff5cdd95ab49c5ef61e783d1d976f05d61da2f65eae8e44028e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-21.xlsx",
+      "sha256": "d147f3ee600c90766543b1a640643463c39abfab870c3776836c3ba45f1e23ac"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-22.xlsx",
+      "sha256": "6d774cb29cebedd0da16a0c257372196450e042436ae6a187955b0dd72d6b331"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-23.xlsx",
+      "sha256": "c04ecece481b1452d84ef19fa5773027a4c3574c845d719f6897e33026dde173"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-24.xlsx",
+      "sha256": "03c96430331b7147b5d8379403f1c4eebf24582c6bb66ffe6fa4d54745c73593"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-25.xlsx",
+      "sha256": "8af75735afdea1a65b2ee3dfee2702a7a3c87909c2064323faa9937e58d1cda9"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-26.xlsx",
+      "sha256": "bd5f1353b16189d4d9c781b6989aa5324a47b494b4bc48d4929a9cab50eb5589"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-27.xlsx",
+      "sha256": "7394602ff41ef1c0e256fe1487bda43a62acdde344ce0bf9194f6ed22f26b288"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-28.xlsx",
+      "sha256": "a7ce4a1a24673c35773ace6b23b39120b194bb6cc2b898194fbc12dec7d39070"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-29.xlsx",
+      "sha256": "3c2572e6b4651d7216d0d773fc58dd35ceff2e006880d5116623d9221ec91817"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-30.xlsx",
+      "sha256": "e656e40f2f926241677a3dd6d5a6c9cabeeb07a8f521930e6f7b5b742cc0b186"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-31.xlsx",
+      "sha256": "08720f3e6ecd95c0ad5e585d420f5f653cb3fa4b8ee7e1309feaa8ffb5117e8e"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-32.xlsx",
+      "sha256": "d9d7025dd7e5d7a30f72728af0f9936b1ac6acc718ccf427ab083788771ca6ca"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-file-hashes.json",
+      "sha256": "f8ce4989eb0ab719fd5930ed6b6f384e81ee6133b38fd255230fb43af5052e04"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\validation-summary.json",
+      "sha256": "44c2f00184890c034425d3576d33883a87979cdd3d37d67d539ef81dc86a57bc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\visual-review.json",
+      "sha256": "b78c5abf2a2b52d97254535a5c27335b73abdfaa708540069f2a9dd336e27154"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum\\contact-1.png",
+      "sha256": "59f12bb8eaae0ed51f388462df049f2d20d2a3d71e57b2db75a7e8de6c2f8ada"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum\\page-1.png",
+      "sha256": "9f00435047fce27a20f44563c566c07a185b16ab7bd2f9519868e9cc1969704c"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum\\page-2.png",
+      "sha256": "95bc4c26163b4ea4f6150dcf743800b9c9e2056298cf676d60381e28dcd4aba4"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum\\text.txt",
+      "sha256": "f6f4ad8a8c9d2c7ade015405f4c3e9b8c89687ec97eaa44224e22de91f7ec929"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum\\contact-1.png",
+      "sha256": "349ce1dbc31f65ae1a47acdfd44f5c5cb79691abc90c3301b888da45fce57458"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum\\page-1.png",
+      "sha256": "3309c2f6ac3d8e5c15e0cb43dc799c2324774a3e5a9ba5dffeda5ec79d0fd2fc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum\\page-2.png",
+      "sha256": "e7daf8b162fd4b1c729e9d39c9045ed27f336ff4c42f98bc2e6d80d63656ad15"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum\\page-3.png",
+      "sha256": "f3712c07b302c871c2c2875e499cf2334e7533db511f784eccec5c7f55639a53"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Data file\\ExCo-20260930-v5.8.0\\audit\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum\\text.txt",
+      "sha256": "c48cbaad1c875d07e395cac983f8d95d6edcd84cf78e102e9c5a26e50e243b5a"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\AOP2027-IT-Portfolio-Scenario-Modelling-v5.8.0.html",
+      "sha256": "93e8663293ce296295989f6a81b05fd1b8897a4f765f99276511426d104dc46f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\PRD\\AOP2027-Modeler-Detailed-Requirements-v5.8.0-ExCo-Addendum.docx",
+      "sha256": "8db6db4b36932c4095c34c5577fd33797e5753a87e28edde44a6cbcba92e46d1"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\PRD\\AOP2027-Modeler-PRD-v5.8.0-ExCo-Addendum.docx",
+      "sha256": "134128635e3d93ff6ffe21498b5c0efcfda0a1691d07d6120d749653ab472278"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\ExCo-QA-report-v5.8.0.html",
+      "sha256": "4695fa8ed622a34a94090b27699040547b4e4fc65f213caa13833c87acb288b8"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\ExCo-architecture-v5.8.0.html",
+      "sha256": "ade2abd43e596a07a481df95f225bbdada28759433cdbc9b7a0ee3a5edb8bd99"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\Execution-log-v5.8.0.html",
+      "sha256": "9b1a957a3ca9543feb25db5dfcb14b12d8dc9f4abc25fc1b8da100489330a9bc"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\AOP 2027 Modeler\\CHANGELOG.md",
+      "sha256": "6ba3a6fa8edcb6a35eecc865907d4cfce2e91d374c3dbd3496dbdf94cf27589b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\Memory\\AOP2027-Demand-Context.md",
+      "sha256": "80c866154f72802d3d2492eeb9be745a53accb9522e730448a653444c7f5913b"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\Skills\\SKILL.md",
+      "sha256": "115d0afd344a529b372c6e62da786ed503c319a37fce78da6b1b43949ce26d26"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\Skills\\assets\\engine-v5.8.0.js",
+      "sha256": "7d8b376c021dbc433a3e8854785ef4748e63423cfe6a26081fa491d0c599711f"
+    },
+    {
+      "file": "C:\\Users\\320126040\\Documents\\Codex\\AOP2027\\Skills\\references\\exco-view-v5.8.0.md",
+      "sha256": "288756ed88210762df9e75497b265e272e69e99d93327377dcc100ef46545db0"
+    }
+  ]
+}

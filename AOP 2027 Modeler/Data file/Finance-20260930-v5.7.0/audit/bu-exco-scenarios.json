@@ -1,0 +1,1530 @@
+{
+  "checks": [
+    {
+      "name": "S11 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.32 ledger=2.32"
+    },
+    {
+      "name": "S11 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.986 ledger=9.986"
+    },
+    {
+      "name": "S11 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.32 ledger=13.32"
+    },
+    {
+      "name": "S11 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=28.659 ledger=28.659"
+    },
+    {
+      "name": "S11 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S11 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.22 ledger=2.22"
+    },
+    {
+      "name": "S12 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.57 ledger=9.57"
+    },
+    {
+      "name": "S12 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=16.715 ledger=16.715"
+    },
+    {
+      "name": "S12 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=27.347 ledger=27.347"
+    },
+    {
+      "name": "S12 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S12 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.22 ledger=2.22"
+    },
+    {
+      "name": "S13 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=12.748 ledger=12.748"
+    },
+    {
+      "name": "S13 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.915 ledger=13.915"
+    },
+    {
+      "name": "S13 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=27.347 ledger=27.347"
+    },
+    {
+      "name": "S13 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S13 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.22 ledger=2.22"
+    },
+    {
+      "name": "S14 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=5.986 ledger=5.986"
+    },
+    {
+      "name": "S14 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.32 ledger=13.32"
+    },
+    {
+      "name": "S14 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=30.459 ledger=30.459"
+    },
+    {
+      "name": "S14 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S14 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.32 ledger=2.32"
+    },
+    {
+      "name": "S15 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.57 ledger=9.57"
+    },
+    {
+      "name": "S15 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.915 ledger=13.915"
+    },
+    {
+      "name": "S15 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=27.347 ledger=27.347"
+    },
+    {
+      "name": "S15 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S15 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.32 ledger=2.32"
+    },
+    {
+      "name": "S16 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.821 ledger=9.821"
+    },
+    {
+      "name": "S16 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=14.22 ledger=14.22"
+    },
+    {
+      "name": "S16 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=29.659 ledger=29.659"
+    },
+    {
+      "name": "S16 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S16 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.22 ledger=2.22"
+    },
+    {
+      "name": "S17 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=5.915 ledger=5.915"
+    },
+    {
+      "name": "S17 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.08 ledger=13.08"
+    },
+    {
+      "name": "S17 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=28.839 ledger=28.839"
+    },
+    {
+      "name": "S17 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S17 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.2 ledger=2.2"
+    },
+    {
+      "name": "S18 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.641 ledger=9.641"
+    },
+    {
+      "name": "S18 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.915 ledger=13.915"
+    },
+    {
+      "name": "S18 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=27.347 ledger=27.347"
+    },
+    {
+      "name": "S18 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S18 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.22 ledger=2.22"
+    },
+    {
+      "name": "S19 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.57 ledger=9.57"
+    },
+    {
+      "name": "S19 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=13.915 ledger=13.915"
+    },
+    {
+      "name": "S19 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=39.709 ledger=39.709"
+    },
+    {
+      "name": "S19 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S19 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.22 ledger=2.22"
+    },
+    {
+      "name": "S20 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.57 ledger=9.57"
+    },
+    {
+      "name": "S20 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=14.815 ledger=14.815"
+    },
+    {
+      "name": "S20 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=30.177 ledger=30.177"
+    },
+    {
+      "name": "S20 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S20 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.28 ledger=2.28"
+    },
+    {
+      "name": "S21 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=9.641 ledger=9.641"
+    },
+    {
+      "name": "S21 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=14.815 ledger=14.815"
+    },
+    {
+      "name": "S21 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=28.409 ledger=28.409"
+    },
+    {
+      "name": "S21 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S21 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 ledger reconciled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 ops invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 row 276 excluded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 433 active programs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 deterministic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 Wim chargeout == funded",
+      "passed": true,
+      "detail": "funded=2.2 ledger=2.2"
+    },
+    {
+      "name": "S22 Bert chargeout == funded",
+      "passed": true,
+      "detail": "funded=8.869 ledger=8.869"
+    },
+    {
+      "name": "S22 Deeptha chargeout == funded",
+      "passed": true,
+      "detail": "funded=12.25 ledger=12.25"
+    },
+    {
+      "name": "S22 Laura chargeout == funded",
+      "passed": true,
+      "detail": "funded=25.177 ledger=25.177"
+    },
+    {
+      "name": "S22 IGT cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S22 PH cluster ledger matches row",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "buexco-11",
+      "name": "IGTS Decomm Ring-Fenced (IT Simp 5% AOP)",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": true
+      },
+      "overrides": 0,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.926,
+        "unfunded": 180.0969,
+        "ew": 52.458,
+        "bu": 47.468,
+        "total": 575.430463
+      },
+      "exco": {
+        "Wim Appelo": 2.32,
+        "Bert van Meurs": 9.986,
+        "Deeptha Khanna": 13.32,
+        "Laura Matz": 28.659
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.864017,
+        "Personal Health": 21.62265
+      }
+    },
+    {
+      "id": "buexco-12",
+      "name": "PH Additional On Top — 3 unfunded programs forced",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 3,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 102.763,
+        "unfunded": 177.2599,
+        "ew": 49.716,
+        "bu": 53.047,
+        "total": 578.267463
+      },
+      "exco": {
+        "Wim Appelo": 2.22,
+        "Bert van Meurs": 9.57,
+        "Deeptha Khanna": 16.715,
+        "Laura Matz": 27.347
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.116325,
+        "Personal Health": 24.583667
+      }
+    },
+    {
+      "id": "buexco-13",
+      "name": "IGTS Additional On Top — WS5 Remote Digital + PLCM",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 2,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 103.141,
+        "unfunded": 176.8819,
+        "ew": 49.716,
+        "bu": 53.425,
+        "total": 578.645463
+      },
+      "exco": {
+        "Wim Appelo": 2.22,
+        "Bert van Meurs": 12.748,
+        "Deeptha Khanna": 13.915,
+        "Laura Matz": 27.347
+      },
+      "clusters": {
+        "Image Guided Therapy": 16.51964,
+        "Personal Health": 21.783667
+      }
+    },
+    {
+      "id": "buexco-14",
+      "name": "IT Services Decomm Ring-Fenced 10M (IT Simp amount)",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": true
+      },
+      "overrides": 0,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.926,
+        "unfunded": 180.0969,
+        "ew": 57.308,
+        "bu": 42.618,
+        "total": 575.430463
+      },
+      "exco": {
+        "Wim Appelo": 2.22,
+        "Bert van Meurs": 5.986,
+        "Deeptha Khanna": 13.32,
+        "Laura Matz": 30.459
+      },
+      "clusters": {
+        "Image Guided Therapy": 12.632564,
+        "Personal Health": 22.390271
+      }
+    },
+    {
+      "id": "buexco-15",
+      "name": "ISC All In — 2 EW stage3 unfunded programs forced",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 2,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 100.063,
+        "unfunded": 179.9599,
+        "ew": 49.816,
+        "bu": 50.247,
+        "total": 575.567463
+      },
+      "exco": {
+        "Wim Appelo": 2.32,
+        "Bert van Meurs": 9.57,
+        "Deeptha Khanna": 13.915,
+        "Laura Matz": 27.347
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.132171,
+        "Personal Health": 21.799495
+      }
+    },
+    {
+      "id": "buexco-16",
+      "name": "PH + IGTS Decomm Combined (IT Simp 3M amount)",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": true
+      },
+      "overrides": 1,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 100.861,
+        "unfunded": 179.1619,
+        "ew": 52.658,
+        "bu": 48.203,
+        "total": 576.365463
+      },
+      "exco": {
+        "Wim Appelo": 2.32,
+        "Bert van Meurs": 9.821,
+        "Deeptha Khanna": 14.22,
+        "Laura Matz": 29.659
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.73071,
+        "Personal Health": 22.554305
+      }
+    },
+    {
+      "id": "buexco-17",
+      "name": "Budget Pressure 90M + IT Simp 5% AOP",
+      "settings": {
+        "budget": 90,
+        "itsimpMode": true
+      },
+      "overrides": 0,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 89.985,
+        "unfunded": 190.0379,
+        "ew": 51.688,
+        "bu": 38.297,
+        "total": 565.489463
+      },
+      "exco": {
+        "Wim Appelo": 2.22,
+        "Bert van Meurs": 5.915,
+        "Deeptha Khanna": 13.08,
+        "Laura Matz": 28.839
+      },
+      "clusters": {
+        "Image Guided Therapy": 11.140012,
+        "Personal Health": 21.260781
+      }
+    },
+    {
+      "id": "buexco-18",
+      "name": "ExCo Trade-off — ISC drop EW-03, IGTS add PLCM",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 2,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 100.014,
+        "unfunded": 180.0089,
+        "ew": 49.696,
+        "bu": 50.318,
+        "total": 575.518463
+      },
+      "exco": {
+        "Wim Appelo": 2.2,
+        "Bert van Meurs": 9.641,
+        "Deeptha Khanna": 13.915,
+        "Laura Matz": 27.347
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.184156,
+        "Personal Health": 21.780502
+      }
+    },
+    {
+      "id": "buexco-19",
+      "name": "IT Services On Top — 4 major EW programs forced",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 4,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 112.325,
+        "unfunded": 167.6979,
+        "ew": 62.078,
+        "bu": 50.247,
+        "total": 587.829463
+      },
+      "exco": {
+        "Wim Appelo": 2.22,
+        "Bert van Meurs": 9.57,
+        "Deeptha Khanna": 13.915,
+        "Laura Matz": 39.709
+      },
+      "clusters": {
+        "Image Guided Therapy": 17.075248,
+        "Personal Health": 23.74023
+      }
+    },
+    {
+      "id": "buexco-20",
+      "name": "PH Protect + Services On Top (partial cost)",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 5,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 103.693,
+        "unfunded": 176.3299,
+        "ew": 52.546,
+        "bu": 51.147,
+        "total": 579.197463
+      },
+      "exco": {
+        "Wim Appelo": 2.22,
+        "Bert van Meurs": 9.57,
+        "Deeptha Khanna": 14.815,
+        "Laura Matz": 30.177
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.564776,
+        "Personal Health": 23.131578
+      }
+    },
+    {
+      "id": "buexco-21",
+      "name": "All Four ExCo On Top — representative from each",
+      "settings": {
+        "budget": 100,
+        "itsimpMode": false
+      },
+      "overrides": 4,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 102.056,
+        "unfunded": 177.9669,
+        "ew": 50.838,
+        "bu": 51.218,
+        "total": 577.560463
+      },
+      "exco": {
+        "Wim Appelo": 2.28,
+        "Bert van Meurs": 9.641,
+        "Deeptha Khanna": 14.815,
+        "Laura Matz": 28.409
+      },
+      "clusters": {
+        "Image Guided Therapy": 15.365121,
+        "Personal Health": 22.861249
+      }
+    },
+    {
+      "id": "buexco-22",
+      "name": "Stress 80M + IT Simp 8% AOP + IGTS decomm force",
+      "settings": {
+        "budget": 80,
+        "itsimpMode": true
+      },
+      "overrides": 5,
+      "totals": {
+        "requested": 280.0229,
+        "funded": 83.812,
+        "unfunded": 196.2109,
+        "ew": 47.331,
+        "bu": 36.481,
+        "total": 559.316463
+      },
+      "exco": {
+        "Wim Appelo": 2.2,
+        "Bert van Meurs": 8.869,
+        "Deeptha Khanna": 12.25,
+        "Laura Matz": 25.177
+      },
+      "clusters": {
+        "Image Guided Therapy": 10.522405,
+        "Personal Health": 19.741188
+      }
+    }
+  ]
+}

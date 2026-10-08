@@ -1,0 +1,125 @@
+﻿id,name,oldStage,newStage,oldScore,newScore,oldFinal,newFinal,oldStatus,newStatus
+EW-154,"E2E event planning incl. GBP compliance review, HCP engagement review & registration for GCR (Engage - Legal not usable)",Legal and Compliance (Must Do),Legal and Compliance (Must Do),38,33,0.25,0.25,Funded,Funded
+EW-11,CCB - Group Function,Legal and Compliance (Must Do),Legal and Compliance (Must Do),40,56,7.63,7.63,Funded,Funded
+EW-65,ISC -CCB - EW,Legal and Compliance (Must Do),Legal and Compliance (Must Do),35,51,4.16,4.16,Funded,Funded
+Bu-309,KSA (SA11) New 3PL Partner Project,Legal and Compliance (Must Do),Legal and Compliance (Must Do),53,63,0.669,0.669,Funded,Funded
+Bu-385,Mantan (NDA Project CT & MR),Legal and Compliance (Must Do),Legal and Compliance (Must Do),45,61,0.49,0.49,Funded,Funded
+Bu-316,RegMem in a Day,Legal and Compliance (Must Do),Legal and Compliance (Must Do),45,50,0.15,0.15,Funded,Funded
+Bu-109,SAP changes CD related,Legal and Compliance (Must Do),Legal and Compliance (Must Do),40,48,0.3,0.3,Funded,Funded
+Bu-365,Regulatory submissions simplification | Document creation & management,Legal and Compliance (Must Do),Legal and Compliance (Must Do),38,46,0.03,0.03,Funded,Funded
+EW-161,Regina AI - GCR NMPA Submission Assistant for Regulatory Affair,Legal and Compliance (Must Do),Legal and Compliance (Must Do),33,45,0.15,0.15,Funded,Funded
+EW-10,CCB - Hyperautomation,Legal and Compliance (Must Do),Legal and Compliance (Must Do),30,38,1.052,1.052,Funded,Funded
+Bu-116,SRC Uno Analytics,Legal and Compliance (Must Do),Legal and Compliance (Must Do),30,38,0.08,0.08,Funded,Funded
+Bu-117,SRC Uno Data Lake,Legal and Compliance (Must Do),Legal and Compliance (Must Do),30,38,0.13,0.13,Funded,Funded
+EW-127,Digitization of Business Case template: Future proof and AI-powered for smart Portfolio prioritization,Legal and Compliance (Must Do),Legal and Compliance (Must Do),52,80,0,0,Not funded,Not funded
+EW-102,IT ServiceContinuity Management,Legal and Compliance (Must Do),Legal and Compliance (Must Do),40,56,0,0,Not funded,Not funded
+EW-142,Vmware/Broadcom exit for Compute estate (GoA),Legal and Compliance (Must Do),Legal and Compliance (Must Do),46,54,0,0,Not funded,Not funded
+EW-50,Global Hold program Improvement,Legal and Compliance (Must Do),Legal and Compliance (Must Do),40,48,0,0,Not funded,Not funded
+Bu-353,"BU Existing Project CR's (ALM - Workpath, Viva goals)",Legal and Compliance (Must Do),Legal and Compliance (Must Do),23,31,0,0,Not funded,Not funded
+Bu-58,MI&A Workbench program,Carry Over demand,Carry Over demand,73,90,0.129,0.129,Partial scope,Partial scope
+Bu-252,Conga – Change & Sustain,Carry Over demand,Carry Over demand,80,90,0,0,Not funded,Not funded
+Bu-414,Lifecycle Service Offerings : Direct Business,Carry Over demand,Carry Over demand,63,73,0,0,Not funded,Not funded
+Bu-409,AI Model Line,Carry Over demand,Carry Over demand,80,75,0,0,Not funded,Not funded
+EW-175,"Corporate website (Investors, Legal & Regulatory pages, ExCo pages, News, Museum, Foundation etc.)",Carry Over demand,Carry Over demand,50,90,0,0,Not funded,Not funded
+Bu-411,HoS Conga & Commercial Policy : IR,Carry Over demand,Carry Over demand,73,78,0,0,Not funded,Not funded
+Bu-431,WS2 : Parts Delivery - Parts Nova,Carry Over demand,Carry Over demand,63,73,0,0,Not funded,Not funded
+Bu-434,WS4 : Education (Docebo + Certification),Carry Over demand,Carry Over demand,40,58,0,0,Not funded,Not funded
+Bu-435,WS4 : KM - Content Distribution Platform (CDP),Carry Over demand,Carry Over demand,23,45,0,0,Not funded,Not funded
+Bu-426,Performance Management & KPI,Carry Over demand,Carry Over demand,23,33,0,0,Not funded,Not funded
+Bu-257,Windchill – Change & Sustain,Carry Over demand,Carry Over demand,45,50,0,0,Not funded,Not funded
+EW-183,FIN - Internal Controls Automation,Carry Over demand,Carry Over demand,45,61,0,0,Not funded,Not funded
+EW-139,Global AI Hub,Carry Over demand,Carry Over demand,50,58,0,0,Not funded,Not funded
+Bu-380,Atlas (Regional Merge Center) — IT sap System,Carry Over demand,Carry Over demand,50,58,0,0,Not funded,Not funded
+EW-52,RM AI big bet,Carry Over demand,Carry Over demand,40,56,0,0,Not funded,Not funded
+Bu-10,Master Data and Data Quality,Carry Over demand,Carry Over demand,40,56,0,0,Not funded,Not funded
+EW-74,Future MES,Carry Over demand,Carry Over demand,45,53,0,0,Not funded,Not funded
+EW-167,Veeva-Seismic-PAL Integration API upgrade,Carry Over demand,Carry Over demand,45,53,0,0,Not funded,Not funded
+EW-05,Boardroom Intelligence,Carry Over demand,Carry Over demand,33,49,0,0,Not funded,Not funded
+EW-29,Technology Business Management and FinOps program,Carry Over demand,Carry Over demand,40,48,0,0,Not funded,Not funded
+EW-53,IT-Security - Global one Badge,Carry Over demand,Carry Over demand,40,48,0,0,Not funded,Not funded
+Bu-54,Procurement,Carry Over demand,Carry Over demand,40,48,0,0,Not funded,Not funded
+EW-185,ISC - Stable MES,Carry Over demand,Carry Over demand,39,47,0,0,Not funded,Not funded
+Bu-427,WS2 : Parts Delivery - Batch Management,Carry Over demand,Carry Over demand,35,43,0,0,Not funded,Not funded
+Bu-428,WS2 : Parts Delivery - FCO and Service Kit Trade Compliance,Carry Over demand,Carry Over demand,35,43,0,0,Not funded,Not funded
+Bu-357,I2M PLM (Windchill) CR's,Carry Over demand,Carry Over demand,33,41,0,0,Not funded,Not funded
+Bu-358,I2M Clinical Science Contracting (ORION/Ensight) CR's,Carry Over demand,Carry Over demand,33,41,0,0,Not funded,Not funded
+Bu-359,MR Mobile Apps CR's (MR - Imaging app v2) SI,Carry Over demand,Carry Over demand,33,41,0,0,Not funded,Not funded
+Bu-438,WS6 : Product LifeCycle Mgmt,Carry Over demand,Carry Over demand,30,38,0,0,Not funded,Not funded
+Bu-432,WS3 : TTSU,Carry Over demand,Carry Over demand,23,33,0,0,Not funded,Not funded
+Bu-440,LEM,Value Based Portfolio,Carry Over demand,5,23,0,0,Not funded,Not funded
+Bu-430,WS2 : Parts Delivery - Agora Implementation,Carry Over demand,Carry Over demand,23,20,0,0,Not funded,Not funded
+Bu-213,IR [C1/C2/C3] Channel Partner Program,Carry Over demand,Carry Over demand,15,10,0,0,Not funded,Not funded
+EW-100,"HW Lifecycle for NEtwork FW, Access points and core switches",Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,50,66,1.2,1.2,Funded,Funded
+Bu-372,I2M Engineering Tooling CR's & Licenses,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,50,58,0.736,0.736,Funded,Funded
+EW-153,Onboarding,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,49,0,0.152,Not funded,Funded
+EW-157,PPM,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,40,48,0.195,0.195,Funded,Funded
+Bu-375,Imaging Small Investment - Unallocated,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,40,48,0.25,0.25,Funded,Funded
+Bu-390,"Defoa process improvement (400 PD, 200 IGTS)",Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,42,42,0.4,0,Funded,Not funded
+EW-152,"Grading (framework, governance & job catalogue)",Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0,0.35,Not funded,Funded
+EW-159,Sourcing,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0.129,0,Funded,Not funded
+EW-160,Well-being Insights Platform,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0,0,Not funded,Not funded
+EW-171,Critical Capabilities,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0,0,Not funded,Not funded
+EW-172,Learning architecture,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0,0,Not funded,Not funded
+Bu-371,I2M Program/Portfolio/Project Management (Planisware) CR's,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0,0,Not funded,Not funded
+Bu-377,CT Mobile APP,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,33,41,0,0,Not funded,Not funded
+EW-156,Philips Skills Framework,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,29,37,0,0,Not funded,Not funded
+EW-170,Long term incentive,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,29,37,0,0,Not funded,Not funded
+Bu-436,WS4 : KM - Content migration from Legacy Tools,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,5,23,0,0,Not funded,Not funded
+Bu-419,NAR : Concierge Service,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,23,20,0,0,Not funded,Not funded
+Bu-429,WS2 : Parts Delivery - US WH Network Optimization & FLS Poland,Sustain Engineering and Hygiene,Sustain Engineering and Hygiene,23,20,0,0,Not funded,Not funded
+Bu-320,TikTok Automated Consignment Flow,Value Based Portfolio,Value Based Portfolio,73,73,0,0.245,Not funded,Funded
+Bu-437,WS5 : Remote Digital First,Value Based Portfolio,Value Based Portfolio,23,73,0,0,Not funded,Not funded
+Bu-447,Product Life Cycle Management (PLCM) IGT-D,Value Based Portfolio,Value Based Portfolio,75,70,0.071,0.071,Funded,Funded
+Bu-448,"Service initiatives specific to IGTD NOT covered in the Service Transformation, including AI Licensing OneDeal cCRM Conga reporting INTL HOS CPQ remediation NAR tool",Value Based Portfolio,Value Based Portfolio,70,70,0.22,0,Funded,Not funded
+EW-144,ISC IT DRP - Software Optimization: RunMyJob,Value Based Portfolio,Value Based Portfolio,52,68,0,0,Not funded,Not funded
+Bu-129,Ultrasound Data & AI,Value Based Portfolio,Value Based Portfolio,60,65,0,0,Not funded,Not funded
+Bu-442,PNL (Sentinal Replacement),Value Based Portfolio,Value Based Portfolio,5,63,0,0,Not funded,Not funded
+EW-176,Results hub replatforming (Quarterly and annual financial reporting),Value Based Portfolio,Value Based Portfolio,50,62,0,0,Not funded,Not funded
+EW-145,ISC IT DRP - Software Optimization: EveryAngle -> ADL,Value Based Portfolio,Value Based Portfolio,52,60,0,0,Not funded,Not funded
+EW-101,Cloud File Share Solution (CFSS),Value Based Portfolio,Value Based Portfolio,43,59,0,0,Not funded,Not funded
+Bu-415,Lifecycle Service Offerings : Subscriptions,Value Based Portfolio,Value Based Portfolio,43,58,0,0,Not funded,Not funded
+EW-146,ISC IT DRP - SAP OneBi & BCS to BDC,Value Based Portfolio,Value Based Portfolio,45,57,0,0,Not funded,Not funded
+EW-16,Document control with Ai capabilities (ARIS replacement),Value Based Portfolio,Value Based Portfolio,40,56,0,0,Not funded,Not funded
+EW-17,AI Prioritization Funnel budget,Value Based Portfolio,Value Based Portfolio,40,56,0,0,Not funded,Not funded
+Bu-386,MES features in factories,Value Based Portfolio,Value Based Portfolio,43,51,0,0,Not funded,Not funded
+Bu-387,SAP Functionality expansion LMPC/LFP (Pune & Latham),Value Based Portfolio,Value Based Portfolio,38,46,0,0,Not funded,Not funded
+EW-147,ISC IT DRP - Decommission legacy app and rebuild via GenAI - HS Industry app,Value Based Portfolio,Value Based Portfolio,38,46,0,0,Not funded,Not funded
+Bu-421,HoS Conga & Commercial Policy : NAR,Value Based Portfolio,Value Based Portfolio,5,45,0,0,Not funded,Not funded
+EW-129,"FIN-IR - DACH DMS 2 OpenText document archive, save 92K IT Ops p.a.",Value Based Portfolio,Value Based Portfolio,53,45,0,0,Not funded,Not funded
+Bu-384,DEFOA Brain AI program,Value Based Portfolio,Value Based Portfolio,28,44,0,0,Not funded,Not funded
+Bu-381,Entreperner flow Iray -SPS,Value Based Portfolio,Value Based Portfolio,23,39,0,0,Not funded,Not funded
+Bu-382,DEFOA Iray OEM 1EMS IT structure,Value Based Portfolio,Value Based Portfolio,23,39,0,0,Not funded,Not funded
+Bu-214,Early Skills Validation in SMAX,Value Based Portfolio,Value Based Portfolio,20,38,0,0,Not funded,Not funded
+Bu-439,Service Delivery Capability (Compliance),Value Based Portfolio,Value Based Portfolio,30,38,0,0,Not funded,Not funded
+Bu-441,PS Cloud (Certinia Replacement),Value Based Portfolio,Value Based Portfolio,5,35,0,0,Not funded,Not funded
+Bu-443,OneTnV (ProntoForms/TrueContext) Replacement,Value Based Portfolio,Value Based Portfolio,5,35,0,0,Not funded,Not funded
+Bu-446,Service delivery Capability,Value Based Portfolio,Value Based Portfolio,45,35,0,0,Not funded,Not funded
+Bu-217,FCO Partner Portal Validations Req,Value Based Portfolio,Value Based Portfolio,15,33,0,0,Not funded,Not funded
+EW-155,CRMA and Qlikview Decom - Commercial Analytics,Value Based Portfolio,Value Based Portfolio,61,33,0,0,Not funded,Not funded
+Bu-220,Education - TEDs - Docebo Migration,Value Based Portfolio,Value Based Portfolio,15,28,0,0,Not funded,Not funded
+Bu-233,PS cloud Capability Development,Value Based Portfolio,Value Based Portfolio,15,28,0,0,Not funded,Not funded
+Bu-267,HPM Impact Dashboard & AI,Value Based Portfolio,Value Based Portfolio,33,28,0,0,Not funded,Not funded
+Bu-449,SPC Data Re-platforming,,Value Based Portfolio,,26,,0,,Not funded
+Bu-445,Decisions Replacement,Value Based Portfolio,Value Based Portfolio,13,22,0,0,Not funded,Not funded
+Bu-420,Other : PSA Replacement + PS Cloud Migration,Value Based Portfolio,Value Based Portfolio,30,20,0,0,Not funded,Not funded
+Bu-444,GEMS (EMO/Appian Replacement),Value Based Portfolio,Value Based Portfolio,13,18,0,0,Not funded,Not funded
+Bu-450,TrueContext replacement,,Value Based Portfolio,,17,,0,,Not funded
+Bu-451,PS Cloud replacement,,Value Based Portfolio,,17,,0,,Not funded
+Bu-452,Incenter replacement,,Value Based Portfolio,,17,,0,,Not funded
+Bu-400,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-401,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-402,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-403,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-404,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-405,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-406,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-407,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-408,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-453,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-454,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-455,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-456,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-457,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-458,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-459,,,Value Based Portfolio,,0,,0,,Not funded
+Bu-460,,,Value Based Portfolio,,0,,0,,Not funded

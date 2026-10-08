@@ -1,0 +1,174 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AOP 2027 · v5.9.2 PRD and Requirements</title>
+<style>
+body{font:16px/1.6 Calibri,Arial,sans-serif;color:#00126e;background:#f5f8fc;margin:0}
+main{max-width:1200px;margin:35px auto;padding:30px;background:white;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+h1{font-size:28px;border-bottom:3px solid #0b5ed7;padding-bottom:12px}
+h2{margin-top:36px;color:#0b2d6b;font-size:22px;border-bottom:1px solid #d5dae0;padding-bottom:8px}
+h3{margin-top:24px;color:#143052;font-size:17px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
+td,th{text-align:left;padding:10px 12px;border-bottom:1px solid #d5dae0;vertical-align:top}
+th{background:#eaf4ff;font-weight:600}
+.id{font-family:monospace;font-weight:700;white-space:nowrap;color:#0b5ed7}
+.banner{padding:16px 20px;background:#e5f4e8;border-left:5px solid #008800;margin:16px 0;border-radius:4px}
+.warn{padding:16px 20px;background:#fff5da;border-left:5px solid #cc8800;margin:16px 0;border-radius:4px}
+.removed{padding:16px 20px;background:#fff0f0;border-left:5px solid #cc0000;margin:16px 0;border-radius:4px}
+code{background:#f0f3f8;padding:2px 6px;border-radius:3px;font-size:13px}
+a{color:#0b5ed7}
+ul,ol{padding-left:24px}
+li{margin:4px 0}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600}
+.badge-blue{background:#1976D21A;color:#1976D2}
+.badge-purple{background:#7B1FA21A;color:#7B1FA2}
+.badge-teal{background:#00838F1A;color:#00838F}
+.badge-orange{background:#E651001A;color:#E65100}
+.badge-green{background:#2E7D321A;color:#2E7D32}
+</style>
+<main>
+
+<h1>AOP 2027 · v5.9.2 PRD and Requirements</h1>
+<p><strong>Date:</strong> 3 October 2026 · <strong>Base:</strong> v5.9.1 · <strong>Build:</strong> <code>AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.2.html</code> (12 MB)</p>
+<p>This document covers the two changes in v5.9.2: file size optimisation and the cost allocation drill-down feature on Tab 6. All prior v5.9.1 functionality, data, and ExCo features are preserved. Source finance allocation rules, engine version (5.8_1), and all 443 programs remain unchanged.</p>
+
+<div class="banner"><strong>Conference-ready.</strong> File reduced from 38 MB to 12 MB. All 6 tabs, all exports, scenario save/load, and finance reconciliation verified at 578.5 M€ grand total. Zero console errors.</div>
+
+<!-- ============================================================ -->
+<h2>1. Product Requirements (PRD)</h2>
+<!-- ============================================================ -->
+
+<h3>1.1 File Size Optimisation</h3>
+<table>
+<tr><th style="width:100px">ID</th><th>Requirement</th></tr>
+<tr><td class="id">SIZE-01</td><td><b>Operations source data compaction</b><br>Strip the 9 parsed Excel sheets (1,201 rows, 98,908 formulas, 21.3 MB) from <code>operations-source-data</code>. Retain the base64-encoded original workbook (3.6 MB) so the "Download original operations workbook" button continues to function. The runtime reads <code>ops-data</code> (103 KB) exclusively for calculations.</td></tr>
+<tr><td class="id">SIZE-02</td><td><b>Demand formula removal</b><br>Strip 84,131 cell-level formula strings from the 5 parsed sheets in <code>source-data</code> (saving 6.4 MB). Cell values (rows), sheet structure, and the original base64 workbook must be preserved. The <code>normalize()</code> function reads cell values only. Formula text is recoverable from the embedded Excel binary at any time.</td></tr>
+<tr><td class="id">SIZE-03</td><td><b>Zero functional regression</b><br>All 6 tabs, all engine calculations (scoring, allocation, levers, trade-offs, finance reconciliation), all exports (Excel, JSON, CSV, source XLSX), scenario save/load/validate, and the operations workbook download must remain fully functional. Session JSON round-trip validation must pass.</td></tr>
+</table>
+
+<h3>1.2 Cost Allocation Drill-Down</h3>
+<table>
+<tr><th style="width:100px">ID</th><th>Requirement</th></tr>
+<tr><td class="id">DRILL-01</td><td><b>Clickable allocation cells</b><br>Every numeric cell in the Organisation IT Cost Allocation table on Tab 6 must be clickable: BU Led (M€), Functions & Regions (M€), Operations Cost (M€), and Total IT Charge (M€). Each cell must carry <code>data-col</code> and <code>data-recipient</code> attributes for the click handler.</td></tr>
+<tr><td class="id">DRILL-02</td><td><b>Detail panel rendering</b><br>Clicking a cell must open a detail panel below the allocation table showing the programs and/or operations that constitute the charge. The panel must be empty by default. Clicking a different cell must replace the panel content. A close button (✕) must dismiss the panel and remove the active cell highlight.</td></tr>
+<tr><td class="id">DRILL-03</td><td><b>Programs detail — aggregated by program ID</b><br>Sub-org allocation splits within the same BU cluster must be summed into one row per program. A Type I program with 3 sub-org fractions (e.g., G&B + OHC + MCC all mapping to Personal Health) must appear as a single row with the aggregated cost and 100% of Program. The detail must not show raw finance ledger entries.</td></tr>
+<tr><td class="id">DRILL-04</td><td><b>Programs detail columns</b><br>The programs table must show 9 columns: Type (badge), ID, Program Name, Organisation, Requested M€, Funded M€, [Cluster] Cost M€ (dynamic header naming the recipient cluster), % of Program (aggregated cost ÷ funded), and % of Org Cost (aggregated cost ÷ column total).</td></tr>
+<tr><td class="id">DRILL-05</td><td><b>% of Program calculation</b><br><code>% of Program = (sum of all ledger amounts for this program to this cluster) ÷ (program funded amount) × 100</code>. For Type I (Single BU): must be 100% (entire funded amount charged to one cluster). For Type II (Cross BU): must reflect the source allocation split. For Enterprise Wide: must reflect the EW charging key share. Display as integer percentage.</td></tr>
+<tr><td class="id">DRILL-06</td><td><b>% of Org Cost calculation</b><br><code>% of Org Cost = (program's aggregated cost to this cluster) ÷ (total column cost for this cluster) × 100</code>. Display to 1 decimal place.</td></tr>
+<tr><td class="id">DRILL-07</td><td><b>Operations detail</b><br>When clicking Operations Cost or Total IT Charge, show the 3 operations ledger entries: Own Consumption, Regions Allocated, Functions & CoEs Allocated with amount and % of Ops Total. Use green type badges.</td></tr>
+<tr><td class="id">DRILL-08</td><td><b>Total IT Charge combined view</b><br>When clicking the Total IT Charge column, the detail panel must show both Programs and Operations sections, each with their own sub-header, table, and totals.</td></tr>
+<tr><td class="id">DRILL-09</td><td><b>F&R distributed row</b><br>The italic "Functions / Regions (distributed via Type II keys)" row must be clickable on its BU Led and Total cells. Clicking must show programs from the Unallocated recipient with indirect, other, and ew buckets. The panel header must read "Functions / Regions (distributed via Type II keys) — Distributed Demand Detail".</td></tr>
+<tr><td class="id">DRILL-10</td><td><b>Filter bar</b><br>The programs detail must include a filter bar with 4 dropdown controls and a Reset button:<br>
+• <b>Type</b>: All Types / Type I - Single BU / Type II - Cross BU / Type III - Enterprise wide / Indirect Cross BU<br>
+• <b>Organisation</b>: All Organisations + each unique source org (up to 27)<br>
+• <b>% of Program</b>: 100% only / ≥ 50% / ≥ 25% / ≥ 10%<br>
+• <b>% of Org Cost</b>: ≥ 10% / ≥ 5% / ≥ 1%<br>
+The "100% only" option must use a ±0.5% tolerance to accommodate source rounding. The header row ("▶ Programs (N programs — X.X M€)") must dynamically update to show filtered count and filtered total.</td></tr>
+<tr><td class="id">DRILL-11</td><td><b>Active cell highlight</b><br>The currently selected allocation cell must receive a visible highlight (blue background, blue bottom border). Only one cell may be highlighted at a time. Closing the panel must remove the highlight.</td></tr>
+<tr><td class="id">DRILL-12</td><td><b>Dynamic column header</b><br>The cost column header must name the recipient cluster (e.g., "Precision Diagnosis Cost M€", "Personal Health Cost M€"). For the F&R distributed row, use "Distributed Cost M€".</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>2. Detailed Requirements and Acceptance Criteria</h2>
+<!-- ============================================================ -->
+
+<h3>2.1 File Size</h3>
+<table>
+<tr><th style="width:100px">ID</th><th>Acceptance criterion</th><th style="width:100px">Status</th></tr>
+<tr><td class="id">SIZE-01</td><td><code>operations-source-data</code> contains only <code>sourceFile</code>, <code>sourceHash</code>, and <code>originalBase64</code>. No <code>sheets</code> property.</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-02</td><td>No sheet in <code>source-data</code> contains a <code>formulas</code> property. All sheets retain their <code>rows</code> arrays. <code>originalBase64</code> is present and unchanged (2,985,540 chars).</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03a</td><td>443 programs parsed, 0 issues, engine version 5.8_1.</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03b</td><td>All 5 scenario presets produce 134 funded programs and 100.0 M€ allocation.</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03c</td><td>Finance reconciled: 108.2 M€ programs + 470.3 M€ operations = 578.5 M€ total. 9 clusters, 1,263 ledger entries.</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03d</td><td>Session create → JSON serialize → parse → <code>validateSession()</code> passes.</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03e</td><td><code>tradeoff()</code> function executes successfully.</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03f</td><td>Operations workbook download button works (reads <code>originalBase64</code> from <code>operations-source-data</code>).</td><td>✅ Pass</td></tr>
+<tr><td class="id">SIZE-03g</td><td>File size ≤ 12 MB.</td><td>✅ 12 MB</td></tr>
+</table>
+
+<h3>2.2 Cost Allocation Drill-Down</h3>
+<table>
+<tr><th style="width:100px">ID</th><th>Acceptance criterion</th><th style="width:100px">Status</th></tr>
+<tr><td class="id">DRILL-01</td><td>28 clickable cells rendered (7 clusters × 4 columns). Each cell has <code>data-col</code> (buled/fnr/ops/total) and <code>data-recipient</code> attributes. CSS hover effect on all cells.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-02a</td><td>Detail panel (<code>#alloc-detail</code>) is empty on page load.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-02b</td><td>Clicking a cell renders the detail panel. Clicking a different cell replaces content.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-02c</td><td>Close button (✕) clears the panel and removes the active cell highlight.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-03a</td><td>Precision Diagnosis BU Led shows 36 aggregated programs (not 96 raw entries).</td><td>✅ 36</td></tr>
+<tr><td class="id">DRILL-03b</td><td>Personal Health BU Led shows 18 aggregated programs (not 51 raw entries).</td><td>✅ 18</td></tr>
+<tr><td class="id">DRILL-03c</td><td>Bu-313 (Philips.com Growth Engine, Type I, PH) appears as 1 row with 0.90 M€ and 100% of Program.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-04</td><td>Programs table has 9 columns: Type, ID, Program Name, Organisation, Requested M€, Funded M€, [Cluster] Cost M€, % of Program, % of Org Cost.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-05a</td><td>Type I programs show 100% of Program across all clusters.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-05b</td><td>Bu-409 (AI Model Line, Type II Cross BU) shows 57% to Precision Diagnosis.</td><td>✅ 57%</td></tr>
+<tr><td class="id">DRILL-06</td><td>% of Org Cost column totals to 100% across all programs in each cluster view.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-07</td><td>PD Operations shows 3 entries: Own Consumption 81.35 M€, Regions 39.12 M€, Functions 22.10 M€.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-08</td><td>PD Total IT Charge shows both "▶ Programs" and "▶ Operations" sections.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-09</td><td>F&R distributed row click shows 66 programs, 25.6 M€, header "Functions / Regions (distributed via Type II keys) — Distributed Demand Detail".</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-10a</td><td>Filter bar renders with 4 dropdowns + Reset button.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-10b</td><td>Type filter: selecting "Type I - Single BU" on PH BU Led shows 17 programs (all Type I).</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-10c</td><td>% of Program "100% only" filter shows only Type I (single-cluster) programs.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-10d</td><td>Header updates dynamically: count and M€ total reflect filtered view.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-10e</td><td>Reset button clears all filters and restores full view.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-11</td><td>Active cell receives <code>.alloc-cell--active</code> class with blue highlight. Only one active at a time.</td><td>✅ Pass</td></tr>
+<tr><td class="id">DRILL-12</td><td>Column header says "Precision Diagnosis Cost M€" for PD, "Personal Health Cost M€" for PH, etc.</td><td>✅ Pass</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>3. Data Contract</h2>
+<!-- ============================================================ -->
+
+<h3>3.1 What is preserved</h3>
+<table>
+<tr><th>Data element</th><th>v5.9.1</th><th>v5.9.2</th></tr>
+<tr><td>Source file (demand)</td><td colspan="2">AOP 2027 Consolidated Live 110261530.xlsx</td></tr>
+<tr><td>Source hash</td><td colspan="2"><code>8058eb8ba9fc…</code></td></tr>
+<tr><td>Source base64 (demand)</td><td colspan="2">2,985,540 chars</td></tr>
+<tr><td>Source base64 (operations)</td><td colspan="2">3,652,140 chars</td></tr>
+<tr><td>Parsed sheet rows (demand)</td><td colspan="2">1,201 rows across 5 sheets</td></tr>
+<tr><td>Programs records</td><td colspan="2">443 records, 20 excluded, 0 issues</td></tr>
+<tr><td>EW charging key</td><td colspan="2">Present</td></tr>
+<tr><td>Operations TCO</td><td colspan="2">27 entries</td></tr>
+<tr><td>Operations services</td><td colspan="2">182 services</td></tr>
+<tr><td>Service cost data</td><td colspan="2">36 orgs × 174 services = 6,264 entries</td></tr>
+<tr><td>Engine version</td><td colspan="2">5.8_1</td></tr>
+<tr><td>Finance reconciliation</td><td colspan="2">✔ 578.5 M€</td></tr>
+</table>
+
+<h3>3.2 What was removed</h3>
+<table>
+<tr><th>Removed item</th><th>Size</th><th>Impact</th></tr>
+<tr><td>Demand formulas (84,131 cell formulas from 5 sheets)</td><td>6.4 MB</td><td>Formula text (e.g., <code>=SUMPRODUCT(...)</code>) no longer in parsed JSON. Cell values unchanged. Formulas recoverable from embedded Excel binary. <code>normalize()</code> reads values only. Scenario save/load unaffected.</td></tr>
+<tr><td>Operations parsed sheets (9 sheets: 1,201 rows, 98,908 formulas)</td><td>21.3 MB</td><td>Entirely removed. Runtime uses <code>ops-data</code> (103 KB). Original Excel downloadable via base64. No operational feature affected.</td></tr>
+</table>
+
+<div class="warn"><strong>Minor note on scenario portability:</strong> A scenario saved in v5.9.2 and loaded in v5.9.1 would have <code>formula: null</code> in source value metadata. This has no functional impact — formulas are provenance metadata only and are never used in calculations, scoring, or allocation.</div>
+
+<!-- ============================================================ -->
+<h2>4. Per-Cluster Drill-Down Reference</h2>
+<!-- ============================================================ -->
+
+<table>
+<tr><th>Cluster</th><th>BU Led M€</th><th>BU Led Programs</th><th>F&R M€</th><th>F&R Programs</th><th>Ops M€</th><th>Ops Entries</th><th>Total IT M€</th></tr>
+<tr><td>Precision Diagnosis</td><td>13.7</td><td>36</td><td>4.9</td><td>62</td><td>142.6</td><td>3</td><td>161.2</td></tr>
+<tr><td>Connected Care</td><td>16.1</td><td>25</td><td>4.6</td><td>62</td><td>112.0</td><td>3</td><td>132.7</td></tr>
+<tr><td>Image Guided Therapy</td><td>15.0</td><td>15</td><td>2.7</td><td>62</td><td>86.9</td><td>3</td><td>104.6</td></tr>
+<tr><td>Personal Health</td><td>7.3</td><td>18</td><td>3.9</td><td>62</td><td>79.1</td><td>3</td><td>90.3</td></tr>
+<tr><td>EI</td><td>2.2</td><td>5</td><td>1.3</td><td>62</td><td>35.4</td><td>3</td><td>38.8</td></tr>
+<tr><td>Innovation & Design</td><td>0.0</td><td>0</td><td>0.0</td><td>0</td><td>9.7</td><td>3</td><td>9.7</td></tr>
+<tr><td>Int. Property & Standards</td><td>0.0</td><td>0</td><td>0.3</td><td>62</td><td>4.6</td><td>3</td><td>4.9</td></tr>
+<tr style="font-style:italic;color:#889"><td>F&R distributed (unallocated)</td><td>25.6</td><td>66</td><td>—</td><td>—</td><td>—</td><td>—</td><td>25.6</td></tr>
+<tr style="font-weight:700"><td>Grand Total</td><td>54.3</td><td></td><td>45.8</td><td></td><td>470.4</td><td></td><td>578.5</td></tr>
+</table>
+
+<h2>5. Type Badge Legend</h2>
+<table>
+<tr><th>Badge</th><th>Colour</th><th>Description</th></tr>
+<tr><td><span class="badge badge-blue">Type I – Single BU</span></td><td>Blue</td><td>100% charged to one BU cluster. % of Program = 100%.</td></tr>
+<tr><td><span class="badge badge-purple">Type II – Cross BU</span></td><td>Purple</td><td>Split across BU clusters per source allocation percentages. % of Program = source split.</td></tr>
+<tr><td><span class="badge badge-teal">Enterprise Wide</span></td><td>Teal</td><td>Distributed via the EW charging key. Applies to F&R stream programs.</td></tr>
+<tr><td><span class="badge badge-orange">Indirect</span></td><td>Orange</td><td>Indirect cross-BU cost allocations.</td></tr>
+<tr><td><span class="badge badge-green">Own Consumption</span></td><td>Green</td><td>Operations: direct BU consumption from Bill of IT.</td></tr>
+<tr><td><span class="badge badge-green">Regions Allocated</span></td><td>Green</td><td>Operations: regional allocation to BU cluster.</td></tr>
+<tr><td><span class="badge badge-green">Functions & CoEs Allocated</span></td><td>Green</td><td>Operations: Functions and CoE allocation to BU cluster.</td></tr>
+</table>
+
+<p style="margin-top:36px;font-size:13px;color:#888">v5.9.2 · 3 October 2026 · <a href="AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.2.html">Open v5.9.2</a> · <a href="CHANGELOG.md">Changelog</a></p>
+
+</main></html>

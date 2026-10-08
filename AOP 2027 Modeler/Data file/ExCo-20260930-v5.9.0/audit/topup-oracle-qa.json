@@ -1,0 +1,961 @@
+{
+  "checks": [
+    {
+      "name": "Deeptha Khanna all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna bu 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna bu 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna bu 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna bu 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna bu 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Deeptha Khanna bu 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi bu 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi bu 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi bu 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi bu 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi bu 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi bu 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg bu 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg bu 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg bu 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg bu 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg bu 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg bu 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue bu 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue bu 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue bu 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue bu 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue bu 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue bu 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs bu 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs bu 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs bu 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs bu 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs bu 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs bu 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "\u00d6zlem Fidanci ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo bu 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo bu 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo bu 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo bu 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken all 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken all 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken all 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken all 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken all 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken all 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken ew 1 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken ew 1 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken ew 5 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken ew 5 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken ew 15 independent selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken ew 15 independent recipient totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Browser top-up export funded amounts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Browser top-up export total finance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Browser top-up export source references",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "sourceReadDirectly": true,
+  "cases": 94
+}

@@ -1,0 +1,411 @@
+AOP 2027 Modeler Detailed Requirements
+Version 5.4  |  28 September 2026  |  Companion to PRD v5.3
+
+This document defines detailed requirements for AOP 2027 Modeler v5.2. Each requirement includes an ID, title, description, acceptance criteria, affected tab(s), and priority. Requirements use language: MUST (mandatory), SHOULD (recommended), MAY (optional). Companion document: AOP2027-Modeler-PRD-v5.2.docx.
+Requirement groups: EXCO (ExCo hierarchy, filter, demand, trade-off, AOP protection); BEN (benefit classification, display, data quality); UI (toggles, levers, KPIs, charts, filters, reset); FIN (finance model, unchanged from v5.0).
+ExCo Accountability Requirements
+EXCO-01  ExCo Accountability Hierarchy
+Description: The engine MUST maintain a mapping of 16 ExCo members to all 35 organisation values. The mapping MUST be implemented as two complementary data structures plus a fuzzy match function.
+Implementation:
+EXCO_HIERARCHY: dictionary keyed by leader name. Each entry contains role (string), segment (string), and orgs (array of organisation values).
+ORG_TO_EXCO: reverse lookup dictionary mapping each of the 35 organisation values to its ExCo leader name.
+excoOf(orgName): fuzzy match function that handles whitespace differences, encoding variations, and case-insensitive matching to return the ExCo leader for any organisation string.
+enrich() MUST add an exco field to every programme row using ORG_TO_EXCO/excoOf().
+ExCo Member Mapping:
+
+Acceptance Criteria:
+AC-1: EXCO_HIERARCHY contains exactly 16 entries.
+AC-2: ORG_TO_EXCO maps all 35 unique organisation values.
+AC-3: excoOf() returns a valid leader for every org value in the demand dataset.
+AC-4: Every enriched programme row has a non-null exco field.
+AC-5: Regional leaders (IR, NAM, GCR) receive both BU and EW demand from their orgs.
+Tab(s): All. Priority: P1 (Must Have).
+EXCO-02  Global ExCo Filter
+Description: ExCo Leader MUST be added as the first filter dropdown on all programme tabs. The filter MUST cascade to downstream filters.
+Implementation:
+ExCo Leader dropdown is the first filter element on Tabs 2, 3, 4, and Tab 6 overview.
+Cascade chain: ExCo -> Organisation -> Platform. Selecting an ExCo leader narrows Organisation options to only that leader's mapped organisations.
+Organisation selection further narrows Platform options to platforms present in those organisations' demand.
+AND logic with all other filter dimensions (Funding Status, Type, Investment Area, text search).
+Tab 2: ExCo filter applies to both the Demand in Scenario table and the Prioritized programme filters.
+Acceptance Criteria:
+AC-1: ExCo filter dropdown present on Tabs 2, 3, 4, 6.
+AC-2: Selecting "Jie Xue" shows only CT, DXR, MR, PDU organisations.
+AC-3: Clearing ExCo filter restores all organisations in the Org filter.
+AC-4: ExCo + Org + Platform filters combine with AND logic.
+AC-5: Filter option counts update dynamically reflecting other active filters.
+Tab(s): 2, 3, 4, 6. Priority: P1 (Must Have).
+EXCO-03  Demand Split by ExCo (Tab 1)
+Description: The Demand Split table on Tab 1 MUST be reorganised from a flat organisation list to collapsible ExCo groups.
+Implementation:
+Each ExCo leader appears as a collapsible parent row.
+Parent row shows: programme count, requested M€, prioritised M€, gap M€, % funded, hard benefits M€, soft benefits M€, operations cost M€.
+Click to expand: constituent organisations shown as child rows with the same columns.
+Colour-coded funding percentage: red for low (<50%), amber for medium (50-80%), green for high (>80%).
+Replaces the previous "Demand Split by Organisation" flat table.
+Acceptance Criteria:
+AC-1: 16 ExCo parent rows visible (when all have demand).
+AC-2: Expanding any ExCo row shows its constituent organisations.
+AC-3: Parent row totals equal sum of child row values.
+AC-4: Hard and Soft benefit columns populated for all rows.
+AC-5: Percentage-funded values correctly colour-coded.
+Tab(s): 1. Priority: P1 (Must Have).
+EXCO-04  ExCo Trade-off Cockpit
+Description: An interactive trade-off panel MUST be available on Tabs 3 (Functions & Regions) and 4 (BU Led) enabling per-ExCo leader budget negotiation.
+Implementation:
+Position: below the filter bar on Tabs 3 and 4.
+Default state: collapsed/closed. Opens automatically when trade-off budget values are entered.
+Columns per ExCo leader row: Requested, Funded, Gap, % Funded, Hard Ben, Soft Ben, Trade-off Budget (input), Delta, Progs/Benefits impact.
+Trade-off Budget: user enters a target funding amount. Delta = Trade-off Budget - current Funded.
+Progs/Benefits impact: shows programme count + Hard/Soft benefit M€ that would be added or removed if Apply is pressed.
+Apply button: includes/excludes P4 programmes by merit score ranking to match entered trade-off budgets. Creates decision log entries. Does NOT modify Total AOP (see EXCO-05).
+Reset button: clears all entered trade-off budget values in one click.
+Negative trade-offs: entering a budget below current funded amount models reductions. Lowest-merit P4 programmes are excluded first. Delta shown in red.
+Implementation uses batched transact() calls to avoid rendering issues during Apply.
+Acceptance Criteria:
+AC-1: Trade-off cockpit visible on Tabs 3 and 4 when expanded.
+AC-2: Entering a budget value opens the cockpit if closed.
+AC-3: Apply includes/excludes correct programmes by merit ranking.
+AC-4: Apply creates decision log entries for each programme change.
+AC-5: Apply does NOT change the Total AOP value.
+AC-6: Reset clears all budget inputs and reverts programme changes.
+AC-7: Negative trade-off reduces funding by excluding lowest-merit P4 programmes.
+AC-8: No blank page or rendering error during Apply (batched transact).
+Tab(s): 3, 4. Priority: P1 (Must Have).
+EXCO-05  Total AOP Protection
+Description: The Total AOP (M€) field MUST change only via manual user edit. No automated process (including Trade-off Apply) may modify it.
+Implementation:
+Trade-off Apply button includes/excludes programmes but does NOT modify the Total AOP budget value.
+"On top off AOP" KPI displays the delta between actual allocation and user-set budget.
+Tabs 3 & 4: "On top off AOP" shown as a KPI tile. Red when over-budget, green when under.
+Tab 2: Allocated AOP shows "On top off: +X M€" (red) or "Under budget: X M€" (green).
+Total AOP changes ONLY when the user manually edits the budget input field on Tab 2.
+Presets do not change Total AOP. They only change lever settings.
+Acceptance Criteria:
+AC-1: After Trade-off Apply, Total AOP value is unchanged.
+AC-2: "On top off AOP" KPI shows correct delta.
+AC-3: Red indicator when allocation exceeds budget.
+AC-4: Green indicator when allocation is within budget.
+AC-5: Manual edit of Total AOP input field updates the budget and all dependent calculations.
+AC-6: Preset application does not modify Total AOP.
+Tab(s): 2, 3, 4. Priority: P1 (Must Have).
+Benefit Classification Requirements
+BEN-01  Benefit Classification Engine
+Description: The engine MUST classify every programme into one of four benefit categories using a deterministic classifyBenefit() function.
+Classification Rules:
+
+Enriched fields per programme row:
+benefitClass: "hard" | "soft" | "qualitative" | "none"
+benefitClassLabel: "Hard Benefit" | "Soft Benefit" | "Qualitative Only" | "No Benefit Data"
+benefitFlag: data quality flag string or null
+Data Quality Flags:
+
+Acceptance Criteria:
+AC-1: Every enriched row has benefitClass, benefitClassLabel, and benefitFlag fields.
+AC-2: classifyBenefit() is deterministic — same inputs always produce same classification.
+AC-3: Hard areas list is exactly: Revenue Increase, Productivity Savings.
+AC-4: Programmes with benefit > 0 in any area not in the Hard list classify as Soft.
+AC-5: Programmes with zero/null benefit but non-empty impact/problem text classify as Qualitative.
+AC-6: Data quality flags correctly detect K EUR suspect, outlier, high ratio, and no business case conditions.
+Tab(s): All (engine-level). Priority: P1 (Must Have).
+BEN-02  Hard/Soft Benefit Display
+Description: All benefit displays across all tabs MUST consistently separate Hard and Soft benefits.
+Display Locations:
+
+Acceptance Criteria:
+AC-1: Hard benefit sum is consistent across Tab 1, Tabs 3/4, and Tab 6.
+AC-2: Soft benefit sum is consistent across all displays.
+AC-3: Chart summary shows "Committed: X Hard . Y Soft" on Tabs 3, 4, 6.
+AC-4: Bubble tooltip shows the correct classification label per programme.
+AC-5: ExCo Demand table org sub-rows and grand total show Hard/Soft (not empty).
+Tab(s): 1, 2, 3, 4, 6. Priority: P1 (Must Have).
+BEN-03  Benefit Data Quality Flags
+Description: The engine MUST detect and flag data quality issues in benefit claims. Flags are informational and do not block funding (except high ratio which triggers a merit hold).
+Implementation:
+K EUR suspect: compare impact text numeric values against benefit x 1000. Flag if match found.
+Outlier: flag if benefit amount > 100 M€.
+High ratio: flag if benefit/cost > 10x. This also triggers the existing merit hold ("Benefit claim above 10.0x — warning only (no funding hold, v5.4)").
+No business case: flag if all of benefit (numeric), benefitDetails (text), impact, and problem are empty/null.
+Flags stored in benefitFlag field on each programme row.
+Programme detail popup MUST display any active flags (updated in v5.3 — see UI-11 for Details table and Funding Rationale label).
+Acceptance Criteria:
+AC-1: K EUR suspect flag triggers when impact text = benefit x 1000.
+AC-2: Outlier flag triggers for benefits > 100 M€.
+AC-3: High ratio flag triggers for benefit/cost > 10x.
+AC-4: No business case flag triggers when all evidence fields are empty.
+AC-5: Flags visible in programme detail popup.
+Tab(s): All (engine-level). Priority: P2 (Should Have).
+UI Requirements
+UI-01  Bubble Chart Y-Axis Toggle
+Description: The bubble chart MUST provide a pill-style toggle switch to change the Y-axis metric.
+Implementation:
+Tabs 3 & 4: toggle between "Requested (M€)" and "Hard Benefits (M€)".
+Tab 6: toggle between "Prioritised (M€)" and "Hard Benefits (M€)".
+Tab 2: no toggle (scenario tab retains median/merit reference values).
+Pill-style toggle matching the Prioritised/Not Funded toggle design (blue active state).
+Toggle state persisted within the session.
+Replaces the previous dropdown selector.
+Acceptance Criteria:
+AC-1: Pill toggle visible on Tabs 3, 4, 6 bubble charts.
+AC-2: Toggle switches Y-axis data and label.
+AC-3: No toggle on Tab 2.
+AC-4: Toggle state survives tab switches within same session.
+Tab(s): 3, 4, 6. Priority: P1 (Must Have).
+UI-02  Bubble Chart Legend Redesign
+Description: The bubble chart legend MUST be moved from below the chart to a right-side panel showing per-category aggregated values.
+Implementation:
+Legend positioned to the right of the bubble chart area.
+Compact table format: category colour swatch, category name, aggregated M€ value.
+Updates dynamically when filters change or Y-axis toggle is switched.
+Acceptance Criteria:
+AC-1: Legend appears to the right of the chart, not below.
+AC-2: Each category shows colour, name, and M€ total.
+AC-3: Legend M€ values update when filters change.
+Tab(s): 3, 4, 6. Priority: P2 (Should Have).
+UI-03  Chart Summary Line
+Description: A summary line MUST appear below the chart heading on Tabs 3, 4, and 6.
+Format:
+"X / Y Programmes funded for a total N M€ / M M€ Prioritised AOP 2027 demand with a committed Impact of Z M€"
+Impact text: "Committed: X Hard . Y Soft"
+Refreshes on filter change.
+Acceptance Criteria:
+AC-1: Summary line present on Tabs 3, 4, 6.
+AC-2: Programme counts and amounts match filtered results.
+AC-3: Hard/Soft committed amounts match BEN-02 totals.
+AC-4: Summary updates when filters change.
+Tab(s): 3, 4, 6. Priority: P2 (Should Have).
+UI-04  Median/Merit Text Removal
+Description: Median and merit reference text MUST be removed from Tabs 3, 4, and 6 chart areas. Retained on Tab 2 only.
+Acceptance Criteria:
+AC-1: No median/merit text on Tabs 3, 4, 6.
+AC-2: Tab 2 retains median/merit reference values.
+Tab(s): 2, 3, 4, 6. Priority: P2 (Should Have).
+UI-05  Demand in Scenario Table Rebuild
+Description: The Demand in Scenario table (Tab 2) MUST be rebuilt with collapsible BURF organisation groups, a pill-style toggle, and cascading ExCo filters.
+Implementation:
+Replaces separate Demand Prioritized / Demand Not Funded sections with a merged table.
+Collapsible BURF organisation groups matching Tabs 3/4 design pattern.
+View-only: no editable fields. 9 columns matching EW/BU tables.
+Pill-style slide switch: Prioritised (default) / Not Funded. Teal/blue active state.
+Cascading filters: ExCo Leader -> Organisation -> Platform.
+Total row with filtered/unfiltered counts and benefits total.
+Positioned before the Funding Prioritization Gate section.
+Acceptance Criteria:
+AC-1: Table shows collapsible BURF groups.
+AC-2: Toggle switches between Prioritised and Not Funded views.
+AC-3: ExCo filter narrows Organisation options.
+AC-4: Total row shows correct filtered counts.
+AC-5: Table is read-only (no editable cells).
+Tab(s): 2. Priority: P1 (Must Have).
+UI-06  Tab 1 KPI Redesign
+Description: Tab 1 MUST display KPI tiles in a single row of 5 tiles using repeat(5,1fr) CSS grid.
+Layout:
+Single row: Total IT AOP Demand (dark blue) | Program Demand (white) | Operations Demand (white) | Committed Benefits (white, Hard blue + Soft black) | IT AOP 2026 (white, blue number).
+Acceptance Criteria:
+AC-1: Single row has 5 tiles in repeat(5,1fr) grid.
+AC-2: Committed Benefits shows Hard (blue, 22px) + ‘Hard’ label (black) on line 1, Soft (black, 22px) + ‘Soft M€’ on line 2.
+AC-3: Total IT AOP Demand tile has dark blue styling.
+AC-4: 2026 Program AOP and 2026 Operations AOP tiles are removed.
+AC-5: IT AOP 2026 tile has blue number, black regular sub-text.
+Tab(s): 1. Priority: P1 (Must Have).
+UI-07  Tab 2 KPI Styling
+Description: Tab 2 KPI styling MUST use dark blue for Allocated AOP and white for all other tiles. The Allocated AOP tile MUST show an "On top off" indicator.
+Acceptance Criteria:
+AC-1: Allocated AOP tile has dark blue background.
+AC-2: All other KPI tiles have white background.
+AC-3: "Demand left unfunded" tile is no longer dark.
+AC-4: "On top off: +X M€" shown in red when allocation exceeds Total AOP.
+AC-5: "Under budget: X M€" shown in green when allocation is within Total AOP.
+Tab(s): 2. Priority: P2 (Should Have).
+UI-08  Tab 6 Redesign
+Description: Tab 6 MUST be redesigned with a 5-tile KPI row, simplified buttons, and updated styling.
+Implementation:
+KPI tiles: 5 tiles in one row using repeat(5,1fr) CSS grid.
+Total IT AOP: dark blue (was plain).
+Operations AOP: white (was dark).
+Split of Program AOP: "F&R X | BU Y M€" single-line format.
+Committed Benefits: Hard/Soft split.
+Buttons: "Finalise scenario" and "New working version" ONLY. Removed "Export complete portfolio" and "Export portable scenario" Download Excel button removed from filter toolbar.
+Acceptance Criteria:
+AC-1: 5 KPI tiles in a single row.
+AC-2: Total IT AOP is dark blue, Operations AOP is white.
+AC-3: Only 2 buttons visible (Finalise, New Working Version).
+AC-4: Committed Benefits shows Hard/Soft split.
+AC-5: No Download Excel button in the filter row.
+Tab(s): 6. Priority: P1 (Must Have).
+UI-09  Filter Auto-Close
+Description: All filter dropdowns across all tabs MUST auto-close immediately after a selection is made.
+Implementation:
+Applies to: ExCo, Organisation, Platform, Funding Status, Type, Investment Area, and all other multi-select filter dropdowns.
+On selection (click on option): dropdown closes, filter applies, downstream cascading filters update.
+Acceptance Criteria:
+AC-1: Clicking a filter option closes the dropdown.
+AC-2: Filter is applied immediately on close.
+AC-3: Cascading downstream filters update after close.
+AC-4: Applies to all filter dropdowns on all tabs.
+Tab(s): All. Priority: P2 (Should Have).
+UI-10  New Working Version Full Reset
+Description: The "New Working Version" button on Tab 6 MUST perform a complete scenario reset.
+Reset Actions:
+Apply Optimal Segmentation preset (default scenario).
+Clear all manual overrides (include/exclude decisions).
+Clear all evidence reviews.
+Clear all ExCo trade-off budget values.
+Clear the decision log.
+Reset scenario revision counter.
+Acceptance Criteria:
+AC-1: After reset, Optimal Segmentation is active (blue-highlighted button).
+AC-2: No manual overrides remain.
+AC-3: Decision log is empty.
+AC-4: All trade-off budget inputs are cleared.
+AC-5: Scenario revision counter is reset.
+Tab(s): 6. Priority: P1 (Must Have).
+UI-11  Programme Detail Popup Redesign
+Description: The programme detail popup MUST display a Details table with key programme attributes and a Funding Rationale type label.
+Implementation:
+Details table displays: Priority, Benefit (Quantitative), Benefit (Qualitative), Payback Period, Problem Statement, Program Scope, Impact and Cost of Not Doing.
+Funding Rationale shows "Default Logic" or "User Prioritised" label.
+Acceptance Criteria:
+AC-1: Popup contains Details table with Priority, Benefit (Quantitative), Benefit (Qualitative), Payback Period, Problem Statement, Program Scope, Impact and Cost of Not Doing.
+AC-2: Popup shows "Default Logic" or "User Prioritised" label next to Funding Rationale.
+Tab(s): All tabs with programme rows. Priority: P1 (Must Have).
+Finance Requirements (unchanged from v5.0)
+The following finance requirements are carried forward from PRD v5.0 without modification.
+FIN-01  Enterprise-Wide Charging Exclusion
+Description: The "Enterprise-wide charging. PMI programmes (type=PMI) are excluded from the prioritisation engine and auto-funded on top off AOP budget" row (Item BU, ~40 M€) MUST be filtered out of all demand records in normalize(). Stored as ewChargingKey on data object for Tab 6 EW split calculation only.
+Acceptance Criteria:
+AC-1: Enterprise-wide charging. PMI programmes (type=PMI) are excluded from the prioritisation engine and auto-funded on top off AOP budget row does not appear in any table, total, or export.
+AC-2: ewChargingKey is accessible for Tab 6 EW distribution calculation.
+AC-3: Total demand is 285.1 M€ (not 325.1 M€).
+Tab(s): All (engine-level). Priority: P1 (Must Have).
+FIN-02  Tab 6 BU Cluster Allocation Table
+Description: Tab 6 Organisation IT Cost Allocation table MUST show 7 TCO BU clusters with BU Led, Enterprise Wide, and Operations columns.
+Columns:
+BU Led (M€): Direct BU-stream funded programmes + Type II cross-BU allocations via source allocation % keys.
+Enterprise Wide (M€): Total EW-stream funded demand distributed to BU clusters using the Enterprise-wide charging. PMI programmes (type=PMI) are excluded from the prioritisation engine and auto-funded on top off AOP budget row allocation keys.
+Operations (M€): Bill of IT TCO per BU cluster.
+Total: Sum of all three columns per row.
+Acceptance Criteria:
+AC-1: Exactly 7 BU cluster rows (Precision Diagnosis, Connected Care, Image Guided Therapy, Personal Health, EI, Innovation & Design, Int. Property & Standards).
+AC-2: Grand Total = BU Led + EW Charges + Operations = Total IT AOP.
+AC-3: EW distribution uses normalised proportional allocation keys.
+AC-4: Amounts recalculate when scenario changes.
+Tab(s): 6. Priority: P1 (Must Have).
+FIN-03  EW Charging Key Algorithm
+Description: The engine MUST extract sub-org allocation fractions from the Enterprise-wide charging. PMI programmes (type=PMI) are excluded from the prioritisation engine and auto-funded on top off AOP budget row and use them to distribute EW-stream funded demand to BU clusters.
+Algorithm:
+Source: allocation % columns on the BU sheet for the Enterprise-wide charging. PMI programmes (type=PMI) are excluded from the prioritisation engine and auto-funded on top off AOP budget row.
+Map sub-org keys (HPM, MR, G and B, etc.) to BU clusters via SUBORG_BU dictionary.
+Normalise proportions so they sum to 100%.
+Distribute total EW-stream prioritised demand across BU clusters using normalised proportions.
+Acceptance Criteria:
+AC-1: All sub-org allocation fractions extracted from source.
+AC-2: Fractions mapped correctly to BU clusters.
+AC-3: Distributed EW amounts sum to total EW funded demand.
+AC-4: Functions/Regions residual shown as separate transparency line when allocation keys are incomplete.
+Tab(s): 6. Priority: P1 (Must Have).
+FIN-04  Finance QA Harness
+Description: Tab 6 MUST include an inline Finance QA reconciliation with 7 checks (5 critical + 2 warning).
+Checks:
+
+Acceptance Criteria:
+AC-1: All 7 checks run on every scenario change.
+AC-2: Critical failures shown with red indicator.
+AC-3: Warnings shown with amber indicator.
+AC-4: Expand/collapse detail for each check.
+Tab(s): 6. Priority: P1 (Must Have).
+Acceptance Tests (v5.2 additions)
+All tests from v4.0 (AT-A1 through AT-F2) and v5.0 remain. New tests for v5.2:
+
+Traceability: Requirement to PRD Section
+
+Leader | Role | Segment | Organisations
+Deeptha Khanna | BU Leader | Personal Health | PH
+Shez Partovi | BU Leader | Enterprise Informatics | EI, I&D
+Julia Strandberg | BU Leader | Connected Care | HPM, AM&D, SRC
+Jie Xue | BU Leader | Precision Diagnosis | CT, DXR, MR, PDU
+Bert van Meurs | BU Leader | Image Guided Therapy | IGT-S, IGT-D, STO
+Wim Appelo | BU Leader | Integrated Supply Chain | ISC, STET-ISC
+Ozlem Fidanci | BU Leader | International Regions | IR, Health & Safety
+Jeff DiLullo | BU Leader | North America | NAM
+Ling Liu | BU Leader | Greater China (merged from GRC) | GCR
+Charlotte Hanneman | BU Leader | Finance & Group Security | Finance, Group Security
+Laura Matz | Enterprise | IT | IT
+Heidy Schein | Enterprise | People | People
+Steve C de Baca | Enterprise | Patient Safety & Quality | PS&Q
+Carla Silva Peron | Enterprise | Medical Office | Medical Office
+Filip Koek | Enterprise | Internal Audit | Internal Audit
+Marnix van Ginneken | Enterprise | Legal, Comms & Brand, IP&S | Legal, Comms & Brand, IP&S
+Class | Condition | benefitClass value
+Hard | benefit > 0 AND area IN {Revenue Increase, Productivity Savings} | "hard"
+Soft | benefit > 0 AND area IN {Cost Avoidance, Process simplification/efficiency gain, Compliance/Keeping the lights on, Security, Enabling} OR any other area with benefit > 0 not matching Hard | "soft"
+Qualitative | benefit = 0 or null BUT (impact text non-empty OR problem statement non-empty) | "qualitative"
+None | No numeric benefit AND no impact/problem text | "none"
+Flag | Trigger Condition
+K EUR suspect | Impact text contains a number that equals benefit amount x 1000 (suggests K€/M€ confusion)
+Outlier | Benefit amount exceeds 100 M€
+High ratio | Benefit / cost ratio exceeds 10x (also triggers merit hold)
+No business case | No numeric benefit, no qualitative text, no impact statement — zero evidence
+Location | Display | Format
+Tab 1: Committed Benefits KPI | Hard (blue) / Soft (black). No highlight background. | Hard (blue) / Soft (black) inline
+Tab 2: Allocated AOP KPI | "On top off" indicator | Red when over-budget
+Tabs 3 & 4: KPI tile | "Committed Benefits" with subtitle | Hard (blue) / Soft (black). White card.
+Tab 6: Committed Benefits KPI | Hard (blue) / Soft (black) | Hard (blue) / Soft (black)
+Chart summary (Tabs 3/4/6) | "Committed: X Hard . Y Soft" | Replaces single combined number
+Bubble tooltip | Benefit classification label | Hard Benefit / Soft Benefit / Qualitative Only / No Benefit Data
+ExCo Demand table | Hard/Soft columns | M€ values per org row and grand total
+ExCo Trade-off panel | Hard Ben / Soft Ben columns | M€ per ExCo leader
+# | Check | Level
+1 | EW + BU stream totals = programme allocation (3dp) | Critical
+2 | EW allocation % present on funded EW programmes | Warning
+3 | Allocation % sums to 100% per programme (+/-1%) | Critical
+4 | EW charges distributed = total EW allocation | Critical
+5 | Grand Total = Programme AOP + Operations AOP | Critical
+6 | No negative funded amounts | Critical
+7 | Funded count consistency | Warning
+Test ID | Description | Pass Criteria
+AT-E1 | ExCo hierarchy loaded | 16 entries in EXCO_HIERARCHY; 35 keys in ORG_TO_EXCO
+AT-E2 | ExCo field on all rows | Every enriched programme row has non-null exco field
+AT-E3 | ExCo filter cascading | Select Jie Xue -> org filter shows only CT, DXR, MR, PDU
+AT-E4 | Trade-off Apply does not change AOP | Total AOP before Apply === Total AOP after Apply
+AT-E5 | Trade-off Reset clears inputs | All trade-off budget input values are empty after Reset
+AT-E6 | Negative trade-off | Enter budget < funded -> lowest-merit P4 excluded -> delta shown in red
+AT-B7 | Hard/Soft classification present | Every row has benefitClass in {hard, soft, qualitative, none}
+AT-B8 | Hard benefits consistent | Hard sum on Tab 1 === Hard sum on Tabs 3/4 === Hard sum on Tab 6
+AT-B9 | Soft benefits consistent | Soft sum on Tab 1 === Soft sum on Tabs 3/4 === Soft sum on Tab 6
+AT-B10 | Data quality flags | High ratio flag present on programmes with benefit/cost > 10x
+AT-U1 | Y-axis toggle functional | Toggle on Tab 3 switches Y-axis label and data
+AT-U2 | Legend on right side | Legend element positioned to right of chart, not below
+AT-U3 | Summary line present | Tabs 3/4/6 show "Programmes funded" and "Committed: X Hard . Y Soft"
+AT-U4 | No median/merit on Tabs 3/4/6 | No text containing "median" or "merit" in chart area of Tabs 3/4/6
+AT-U5 | Demand in Scenario collapsible | BURF org groups collapse/expand on click
+AT-U6 | Filter auto-close | Clicking a filter option closes the dropdown immediately
+AT-U7 | New Working Version reset | After reset: Optimal active, no overrides, empty decision log, no trade-off values
+AT-U8 | Tab 6 two buttons only | Only "Finalise scenario" and "New working version" buttons visible
+AT-U9 | Tab 6 five KPI tiles | 5 KPI tiles in single row; Total IT AOP is dark blue
+AT-U10 | Programme popup shows Details table | Popup contains Priority, Benefit (Quantitative), Benefit (Qualitative), Payback Period, Problem Statement, Program Scope, Impact and Cost of Not Doing
+AT-U11 | Programme popup shows Funding Rationale type | Popup shows "Default Logic" or "User Prioritised" label next to Funding Rationale
+Requirement | PRD v5.2 Section | Status
+EXCO-01 | Section 2: ExCo Accountability Hierarchy | New in v5.2
+EXCO-02 | Section 6: Global ExCo Filter | New in v5.2
+EXCO-03 | Section 9.1: Tab 1 Element Reference | New in v5.2
+EXCO-04 | Section 5: ExCo Trade-off Cockpit | New in v5.2
+EXCO-05 | Section 4: Total AOP Protection | New in v5.2
+BEN-01 | Section 3: Hard/Soft Benefit Classification | New in v5.2
+BEN-02 | Section 3.4: Display across tabs | New in v5.2
+BEN-03 | Section 3.3: Data quality flags | New in v5.2
+UI-01 | Section 7.1: Y-axis toggle | New in v5.2
+UI-02 | Section 7.2: Legend | New in v5.2
+UI-03 | Section 7.3: Summary line | New in v5.2
+UI-04 | Section 7.4: Median/merit text | New in v5.2
+UI-05 | Section 8: Demand in Scenario Table | New in v5.2
+UI-06 | Section 9.1: Tab 1 Element Reference | New in v5.2
+UI-07 | Section 9.2: Tab 2 Element Reference | New in v5.2
+UI-08 | Section 9.6: Tab 6 Element Reference | New in v5.2
+UI-09 | Section 11.3: Filter auto-close | New in v5.2
+UI-10 | Section 11.2: New Working Version | New in v5.2
+UI-11 | Section 9 (new): Programme Detail Popup | New in v5.3
+FIN-01 | PRD v5.0 Section 4 | Unchanged from v5.0
+FIN-02 | PRD v5.0 Section 4 | Unchanged from v5.0
+FIN-03 | PRD v5.0 Section 4 | Unchanged from v5.0
+FIN-04 | PRD v5.0 Section 4 | Unchanged from v5.0

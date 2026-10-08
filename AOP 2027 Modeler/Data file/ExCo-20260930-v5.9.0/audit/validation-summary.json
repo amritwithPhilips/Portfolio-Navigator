@@ -1,0 +1,66 @@
+{
+  "version": "5.9.0",
+  "assertions": 1425,
+  "passed": 1425,
+  "suites": [
+    {
+      "file": "features-engine-qa.json",
+      "label": "Leader decisions and 144 additional-budget combinations",
+      "checks": 310,
+      "passed": 310,
+      "fatal": null
+    },
+    {
+      "file": "features-browser-qa.json",
+      "label": "New ExCo controls and two-way synchronization",
+      "checks": 61,
+      "passed": 61,
+      "fatal": null
+    },
+    {
+      "file": "topup-oracle-qa.json",
+      "label": "Independent workbook replay of additional funding",
+      "checks": 191,
+      "passed": 191,
+      "fatal": null
+    },
+    {
+      "file": "browser-qa.json",
+      "label": "32 scenarios across all six tabs and extract filters",
+      "checks": 371,
+      "passed": 371,
+      "fatal": null
+    },
+    {
+      "file": "regression-browser-qa.json",
+      "label": "Existing browser and recovery workflows",
+      "checks": 65,
+      "passed": 65,
+      "fatal": null
+    },
+    {
+      "file": "refresh-ui-qa.json",
+      "label": "Changed-source refresh and recommendation guard",
+      "checks": 6,
+      "passed": 6,
+      "fatal": null
+    },
+    {
+      "file": "oracle-qa.json",
+      "label": "Independent source replay of 32 baseline scenarios",
+      "checks": 101,
+      "passed": 101,
+      "fatal": null
+    },
+    {
+      "file": "export-qa.json",
+      "label": "32 downloaded Excel workbooks",
+      "checks": 320,
+      "passed": 320,
+      "fatal": null
+    }
+  ],
+  "baselineScenarios": 32,
+  "additionalFundingCombinations": 144,
+  "feasibleAdditionalCombinations": 94
+}

@@ -1,0 +1,674 @@
+{
+  "checks": [
+    {
+      "name": "validation-01 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-01 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-02 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-03 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-04 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-05 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-06 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-07 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-08 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-09 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 funding identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 stream identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 stage identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 automatic budget cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 carry cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 allocation ledger identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 EW unallocated share",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 Operations invariance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 source row 276 not demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 exclusion scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 per-record allocation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 deterministic replay",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation-10 source immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "scenario edits logged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "scenario edit undo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finalized editing blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fork preserves edits",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

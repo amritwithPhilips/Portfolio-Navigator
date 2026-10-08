@@ -15,3 +15,18 @@ AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v4.1.html
 
 # IDE/local settings
 .claude/settings.local.json
+
+# Working scripts (not part of deliverable)
+.claude/*.py
+.claude/*.js
+.claude/*.json
+.claude/*.csv
+
+# Snapshot backups
+Backups/
+
+# Generated graph output
+graphify-out/
+
+# Large audit scenario dumps (exceed GitHub 100MB limit)
+**/audit/scenarios.json

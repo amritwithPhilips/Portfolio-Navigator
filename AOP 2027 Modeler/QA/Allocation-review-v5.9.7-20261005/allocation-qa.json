@@ -1,0 +1,364 @@
+{
+  "checks": [
+    {
+      "name": "Every funding selection unchanged: optimal",
+      "status": "PASS",
+      "detail": "444 IDs, scores and exact funded amounts compared with v5.9.5"
+    },
+    {
+      "name": "Independent recipient allocation: optimal",
+      "status": "PASS",
+      "detail": "1199 ledger entries compared with a separate original-XLSX reader"
+    },
+    {
+      "name": "Per-program ledger conservation: optimal",
+      "status": "PASS",
+      "detail": "Every positive-funded ID reconciles, including residuals and explicit unallocated"
+    },
+    {
+      "name": "Unallocated reasons reconcile: optimal",
+      "status": "PASS",
+      "detail": "Explicit, pending and invalid source evidence separately reconciled"
+    },
+    {
+      "name": "Operations unchanged: optimal",
+      "status": "PASS",
+      "detail": "All Operations ledger entries unchanged"
+    },
+    {
+      "name": "Every funding selection unchanged: protect",
+      "status": "PASS",
+      "detail": "444 IDs, scores and exact funded amounts compared with v5.9.5"
+    },
+    {
+      "name": "Independent recipient allocation: protect",
+      "status": "PASS",
+      "detail": "1136 ledger entries compared with a separate original-XLSX reader"
+    },
+    {
+      "name": "Per-program ledger conservation: protect",
+      "status": "PASS",
+      "detail": "Every positive-funded ID reconciles, including residuals and explicit unallocated"
+    },
+    {
+      "name": "Unallocated reasons reconcile: protect",
+      "status": "PASS",
+      "detail": "Explicit, pending and invalid source evidence separately reconciled"
+    },
+    {
+      "name": "Operations unchanged: protect",
+      "status": "PASS",
+      "detail": "All Operations ledger entries unchanged"
+    },
+    {
+      "name": "Every funding selection unchanged: evidence",
+      "status": "PASS",
+      "detail": "444 IDs, scores and exact funded amounts compared with v5.9.5"
+    },
+    {
+      "name": "Independent recipient allocation: evidence",
+      "status": "PASS",
+      "detail": "1008 ledger entries compared with a separate original-XLSX reader"
+    },
+    {
+      "name": "Per-program ledger conservation: evidence",
+      "status": "PASS",
+      "detail": "Every positive-funded ID reconciles, including residuals and explicit unallocated"
+    },
+    {
+      "name": "Unallocated reasons reconcile: evidence",
+      "status": "PASS",
+      "detail": "Explicit, pending and invalid source evidence separately reconciled"
+    },
+    {
+      "name": "Operations unchanged: evidence",
+      "status": "PASS",
+      "detail": "All Operations ledger entries unchanged"
+    },
+    {
+      "name": "Every funding selection unchanged: mustdo",
+      "status": "PASS",
+      "detail": "444 IDs, scores and exact funded amounts compared with v5.9.5"
+    },
+    {
+      "name": "Independent recipient allocation: mustdo",
+      "status": "PASS",
+      "detail": "2693 ledger entries compared with a separate original-XLSX reader"
+    },
+    {
+      "name": "Per-program ledger conservation: mustdo",
+      "status": "PASS",
+      "detail": "Every positive-funded ID reconciles, including residuals and explicit unallocated"
+    },
+    {
+      "name": "Unallocated reasons reconcile: mustdo",
+      "status": "PASS",
+      "detail": "Explicit, pending and invalid source evidence separately reconciled"
+    },
+    {
+      "name": "Operations unchanged: mustdo",
+      "status": "PASS",
+      "detail": "All Operations ledger entries unchanged"
+    },
+    {
+      "name": "Every funding selection unchanged: capacity",
+      "status": "PASS",
+      "detail": "444 IDs, scores and exact funded amounts compared with v5.9.5"
+    },
+    {
+      "name": "Independent recipient allocation: capacity",
+      "status": "PASS",
+      "detail": "1043 ledger entries compared with a separate original-XLSX reader"
+    },
+    {
+      "name": "Per-program ledger conservation: capacity",
+      "status": "PASS",
+      "detail": "Every positive-funded ID reconciles, including residuals and explicit unallocated"
+    },
+    {
+      "name": "Unallocated reasons reconcile: capacity",
+      "status": "PASS",
+      "detail": "Explicit, pending and invalid source evidence separately reconciled"
+    },
+    {
+      "name": "Operations unchanged: capacity",
+      "status": "PASS",
+      "detail": "All Operations ledger entries unchanged"
+    },
+    {
+      "name": "EW key exact source fractions",
+      "status": "PASS",
+      "detail": "All 20 recipients, including explicitly unallocated"
+    },
+    {
+      "name": "Remapped IT retains original charging policy",
+      "status": "PASS",
+      "detail": "Laura sub-orgs and current funding types preserved; source Type III still determines charging evidence"
+    },
+    {
+      "name": "EI charge no longer falsely lands in Connected Care",
+      "status": "PASS",
+      "detail": "Bu-01 corrected linked leaf columns"
+    },
+    {
+      "name": "Explicit 3-way source allocation retained",
+      "status": "PASS",
+      "detail": "HPM, IGT-D and US remain 50K each"
+    },
+    {
+      "name": "Source subtotal fallback retains lineage",
+      "status": "PASS",
+      "detail": "No inferred split between PH sub-businesses"
+    },
+    {
+      "name": "Actual missing key remains unallocated",
+      "status": "PASS",
+      "detail": "No fabricated North America recipient split"
+    },
+    {
+      "name": "Conflicting program keys held visibly",
+      "status": "PASS",
+      "detail": "122.37K leafs against 120K request, no percentage normalization"
+    },
+    {
+      "name": "EW key representation 0.001",
+      "status": "PASS",
+      "detail": "Only complete, recognized source unit representations accepted"
+    },
+    {
+      "name": "EW key representation 1",
+      "status": "PASS",
+      "detail": "Only complete, recognized source unit representations accepted"
+    },
+    {
+      "name": "EW key representation 100",
+      "status": "PASS",
+      "detail": "Only complete, recognized source unit representations accepted"
+    },
+    {
+      "name": "EW key representation 28.117286249060367",
+      "status": "PASS",
+      "detail": "Only complete, recognized source unit representations accepted"
+    },
+    {
+      "name": "Reviewed request preserves source proportions",
+      "status": "PASS",
+      "detail": "Allocation denominator remains original source request; reviewed demand does not distort source shares"
+    },
+    {
+      "name": "Saved v5.9.5 scenario upgrades without funding changes",
+      "status": "PASS",
+      "detail": "Settings, decisions, reviews, events and status retained"
+    },
+    {
+      "name": "Saved scenario charging metadata rebuilt",
+      "status": "PASS",
+      "detail": "Records, charging key and source mappings all rebuilt"
+    },
+    {
+      "name": "Exact export ledger evidence/full",
+      "status": "PASS",
+      "detail": "Export reads exact shared ledger"
+    },
+    {
+      "name": "Allocation review export evidence/full",
+      "status": "PASS",
+      "detail": "Unallocated reasons sum exactly"
+    },
+    {
+      "name": "Exact export ledger evidence/inclusions",
+      "status": "PASS",
+      "detail": "Export reads exact shared ledger"
+    },
+    {
+      "name": "Allocation review export evidence/inclusions",
+      "status": "PASS",
+      "detail": "Unallocated reasons sum exactly"
+    },
+    {
+      "name": "Exact export ledger mustdo/full",
+      "status": "PASS",
+      "detail": "Export reads exact shared ledger"
+    },
+    {
+      "name": "Allocation review export mustdo/full",
+      "status": "PASS",
+      "detail": "Unallocated reasons sum exactly"
+    },
+    {
+      "name": "Exact export ledger mustdo/inclusions",
+      "status": "PASS",
+      "detail": "Export reads exact shared ledger"
+    },
+    {
+      "name": "Allocation review export mustdo/inclusions",
+      "status": "PASS",
+      "detail": "Unallocated reasons sum exactly"
+    }
+  ],
+  "failures": [],
+  "scenarios": {
+    "optimal": {
+      "beforeUnallocated": 79.11983133962423,
+      "afterUnallocated": 11.416227488151666,
+      "breakdown": {
+        "explicit": 11.296227488151667,
+        "pending": 0,
+        "invalid": 0.12
+      },
+      "base": 99.9896,
+      "pmi": 8.19,
+      "operations": 470.31446303851214,
+      "total": 578.4940630385124,
+      "issues": [
+        {
+          "id": "Bu-72",
+          "reason": "Invalid allocation percentages",
+          "value": 1.0197500000000002
+        }
+      ]
+    },
+    "protect": {
+      "beforeUnallocated": 71.37674627992983,
+      "afterUnallocated": 10.032635071090056,
+      "breakdown": {
+        "explicit": 10.032635071090056,
+        "pending": 0,
+        "invalid": 0
+      },
+      "base": 99.9926,
+      "pmi": 8.19,
+      "operations": 470.31446303851214,
+      "total": 578.4970630385121,
+      "issues": []
+    },
+    "evidence": {
+      "beforeUnallocated": 71.7761158611387,
+      "afterUnallocated": 10.47652369668247,
+      "breakdown": {
+        "explicit": 10.47652369668247,
+        "pending": 0,
+        "invalid": 0
+      },
+      "base": 100.0246,
+      "pmi": 8.19,
+      "operations": 470.31446303851214,
+      "total": 578.5290630385122,
+      "issues": []
+    },
+    "mustdo": {
+      "beforeUnallocated": 174.61609280868112,
+      "afterUnallocated": 29.00169644549765,
+      "breakdown": {
+        "explicit": 23.274996445497653,
+        "pending": 3.8567,
+        "invalid": 1.87
+      },
+      "base": 232.4089,
+      "pmi": 8.19,
+      "operations": 470.31446303851214,
+      "total": 710.9133630385123,
+      "issues": [
+        {
+          "id": "Bu-08",
+          "reason": "Invalid allocation percentages",
+          "value": 1.0003333333333335
+        },
+        {
+          "id": "Bu-12",
+          "reason": "Invalid allocation percentages",
+          "value": 1.0000153846153845
+        },
+        {
+          "id": "Bu-454",
+          "reason": "Source allocation remainder",
+          "value": 0.1
+        },
+        {
+          "id": "Bu-10",
+          "reason": "Source allocation remainder",
+          "value": 0.08299999999999996
+        },
+        {
+          "id": "Bu-54",
+          "reason": "Invalid allocation percentages",
+          "value": 1.0002499999999999
+        },
+        {
+          "id": "Bu-72",
+          "reason": "Invalid allocation percentages",
+          "value": 1.0197500000000002
+        },
+        {
+          "id": "Bu-280",
+          "reason": "Source allocation remainder",
+          "value": 0.15000000000000002
+        },
+        {
+          "id": "Bu-73",
+          "reason": "Source allocation remainder",
+          "value": 0.0237
+        },
+        {
+          "id": "Bu-87",
+          "reason": "Source allocation remainder",
+          "value": 3.5
+        }
+      ]
+    },
+    "capacity": {
+      "beforeUnallocated": 79.94387379293121,
+      "afterUnallocated": 10.40843246445498,
+      "breakdown": {
+        "explicit": 10.40843246445498,
+        "pending": 0,
+        "invalid": 0
+      },
+      "base": 99.995,
+      "pmi": 8.19,
+      "operations": 470.31446303851214,
+      "total": 578.4994630385123,
+      "issues": []
+    }
+  }
+}

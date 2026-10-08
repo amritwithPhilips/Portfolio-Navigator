@@ -1,0 +1,1041 @@
+{
+  "total_checks": 325,
+  "total_passed": 325,
+  "total_failed": 0,
+  "average_score_pct": 100.0,
+  "findings": [],
+  "scenario_scores": [
+    {
+      "id": "sim-L01",
+      "name": "LFR AOP 12% basis",
+      "group": "G1-Lever Basis",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.976,
+        "pmi": 5.19,
+        "unfunded": 180.0469,
+        "ew": 34.261,
+        "bu": 65.715,
+        "grandTotal": 575.480463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 0.12,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 17.163,
+          "demand": 49.4039,
+          "count": 16
+        },
+        "Deeptha Khanna": {
+          "funded": 17.04,
+          "demand": 27.202,
+          "count": 32
+        },
+        "Laura Matz": {
+          "funded": 17.417,
+          "demand": 61.607,
+          "count": 16
+        }
+      }
+    },
+    {
+      "id": "sim-L02",
+      "name": "LFR fixed 8M",
+      "group": "G1-Lever Basis",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.984,
+        "pmi": 5.19,
+        "unfunded": 180.0389,
+        "ew": 39.477,
+        "bu": 60.507,
+        "grandTotal": 575.488463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 0.12,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 16.498,
+          "demand": 49.4039,
+          "count": 14
+        },
+        "Deeptha Khanna": {
+          "funded": 15.746,
+          "demand": 27.202,
+          "count": 28
+        },
+        "Laura Matz": {
+          "funded": 24.267,
+          "demand": 61.607,
+          "count": 16
+        }
+      }
+    },
+    {
+      "id": "sim-L03",
+      "name": "Sustain AOP 15% basis",
+      "group": "G1-Lever Basis",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.993,
+        "pmi": 5.19,
+        "unfunded": 180.0299,
+        "ew": 48.469,
+        "bu": 51.524,
+        "grandTotal": 575.497463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.32,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 8.761,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 15.915,
+          "demand": 27.202,
+          "count": 30
+        },
+        "Laura Matz": {
+          "funded": 26.997,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L04",
+      "name": "Sustain fixed 8M",
+      "group": "G1-Lever Basis",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.977,
+        "pmi": 5.19,
+        "unfunded": 180.0459,
+        "ew": 43.866,
+        "bu": 56.111,
+        "grandTotal": 575.481463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.28,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 12.148,
+          "demand": 49.4039,
+          "count": 10
+        },
+        "Deeptha Khanna": {
+          "funded": 16.115,
+          "demand": 27.202,
+          "count": 31
+        },
+        "Laura Matz": {
+          "funded": 21.874,
+          "demand": 61.607,
+          "count": 12
+        }
+      }
+    },
+    {
+      "id": "sim-L05",
+      "name": "Value AOP 30% basis",
+      "group": "G1-Lever Basis",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.963,
+        "pmi": 5.19,
+        "unfunded": 180.0599,
+        "ew": 49.716,
+        "bu": 50.247,
+        "grandTotal": 575.467463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L06",
+      "name": "IT Simp OFF (baseline)",
+      "group": "G2-IT Simp Lever",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.963,
+        "pmi": 5.19,
+        "unfunded": 180.0599,
+        "ew": 49.716,
+        "bu": 50.247,
+        "grandTotal": 575.467463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L07",
+      "name": "IT Simp ON 2.5% AOP",
+      "group": "G2-IT Simp Lever",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.906,
+        "pmi": 5.19,
+        "unfunded": 180.1169,
+        "ew": 51.978,
+        "bu": 47.928,
+        "grandTotal": 575.410463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.821,
+          "demand": 49.4039,
+          "count": 9
+        },
+        "Deeptha Khanna": {
+          "funded": 13.145,
+          "demand": 27.202,
+          "count": 24
+        },
+        "Laura Matz": {
+          "funded": 29.209,
+          "demand": 61.607,
+          "count": 16
+        }
+      }
+    },
+    {
+      "id": "sim-L08",
+      "name": "IT Simp ON 7.5% AOP",
+      "group": "G2-IT Simp Lever",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.83,
+        "pmi": 5.19,
+        "unfunded": 180.1929,
+        "ew": 54.658,
+        "bu": 45.172,
+        "grandTotal": 575.334463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 10.015,
+          "demand": 49.4039,
+          "count": 10
+        },
+        "Deeptha Khanna": {
+          "funded": 13.145,
+          "demand": 27.202,
+          "count": 24
+        },
+        "Laura Matz": {
+          "funded": 30.459,
+          "demand": 61.607,
+          "count": 23
+        }
+      }
+    },
+    {
+      "id": "sim-L09",
+      "name": "IT Simp ON 100% bucket",
+      "group": "G2-IT Simp Lever",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.945,
+        "pmi": 5.19,
+        "unfunded": 180.0779,
+        "ew": 65.968,
+        "bu": 33.977,
+        "grandTotal": 575.449463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.2,
+          "demand": 25.89,
+          "count": 1
+        },
+        "Bert van Meurs": {
+          "funded": 5.365,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 39.639,
+          "demand": 61.607,
+          "count": 23
+        }
+      }
+    },
+    {
+      "id": "sim-L10",
+      "name": "IT Simp ON 12M fixed",
+      "group": "G2-IT Simp Lever",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.93,
+        "pmi": 5.19,
+        "unfunded": 180.0929,
+        "ew": 59.358,
+        "bu": 40.572,
+        "grandTotal": 575.434463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 5.915,
+          "demand": 49.4039,
+          "count": 8
+        },
+        "Deeptha Khanna": {
+          "funded": 13.145,
+          "demand": 27.202,
+          "count": 24
+        },
+        "Laura Matz": {
+          "funded": 35.659,
+          "demand": 61.607,
+          "count": 20
+        }
+      }
+    },
+    {
+      "id": "sim-L11",
+      "name": "ISC opt-in all Stage3 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 100.063,
+        "pmi": 5.19,
+        "unfunded": 179.9599,
+        "ew": 49.816,
+        "bu": 50.247,
+        "grandTotal": 575.567463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.32,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L12",
+      "name": "IGTS swap: opt-out funded, opt-in top-3 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 98.811,
+        "pmi": 5.19,
+        "unfunded": 181.2119,
+        "ew": 49.716,
+        "bu": 49.095,
+        "grandTotal": 574.315463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 8.418,
+          "demand": 49.4039,
+          "count": 8
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L13",
+      "name": "PH opt-out all Stage3 funded",
+      "group": "G3-ExCo Opt-In/Out",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 98.298,
+        "pmi": 5.19,
+        "unfunded": 181.7249,
+        "ew": 49.716,
+        "bu": 48.582,
+        "grandTotal": 573.802463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L14",
+      "name": "PH opt-in 5 unfunded Stage3",
+      "group": "G3-ExCo Opt-In/Out",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 103.163,
+        "pmi": 5.19,
+        "unfunded": 176.8599,
+        "ew": 49.716,
+        "bu": 53.447,
+        "grandTotal": 578.667463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 17.115,
+          "demand": 27.202,
+          "count": 32
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L15",
+      "name": "Services swap: out funded, in top-2 unfunded",
+      "group": "G3-ExCo Opt-In/Out",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 107.293,
+        "pmi": 5.19,
+        "unfunded": 172.7299,
+        "ew": 57.046,
+        "bu": 50.247,
+        "grandTotal": 582.797463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 34.677,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L16",
+      "name": "All four ExCo opt-out all Stage3 funded",
+      "group": "G3-ExCo Opt-In/Out",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 91.558,
+        "pmi": 5.19,
+        "unfunded": 188.4649,
+        "ew": 47.526,
+        "bu": 44.032,
+        "grandTotal": 567.062463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.2,
+          "demand": 25.89,
+          "count": 1
+        },
+        "Bert van Meurs": {
+          "funded": 5.02,
+          "demand": 49.4039,
+          "count": 5
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 25.177,
+          "demand": 61.607,
+          "count": 11
+        }
+      }
+    },
+    {
+      "id": "sim-L17",
+      "name": "IGTS Stage3 funded at 75%",
+      "group": "G4-Partial Funding",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 101.209,
+        "pmi": 5.19,
+        "unfunded": 178.8139,
+        "ew": 49.716,
+        "bu": 51.493,
+        "grandTotal": 576.713463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 10.816,
+          "demand": 49.4039,
+          "count": 9
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L18",
+      "name": "PH unfunded Stage3 at 50% cost",
+      "group": "G4-Partial Funding",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 101.063,
+        "pmi": 5.19,
+        "unfunded": 178.9599,
+        "ew": 49.716,
+        "bu": 51.347,
+        "grandTotal": 576.567463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 15.015,
+          "demand": 27.202,
+          "count": 31
+        },
+        "Laura Matz": {
+          "funded": 27.347,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L19",
+      "name": "Services top-4 unfunded EW at 30% cost",
+      "group": "G4-Partial Funding",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 103.6716,
+        "pmi": 5.19,
+        "unfunded": 176.3513,
+        "ew": 53.4246,
+        "bu": 50.247,
+        "grandTotal": 579.176063
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 31.0556,
+          "demand": 61.607,
+          "count": 17
+        }
+      }
+    },
+    {
+      "id": "sim-L20",
+      "name": "ISC 50% + Services 40% partial combined",
+      "group": "G4-Partial Funding",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 104.533,
+        "pmi": 5.19,
+        "unfunded": 175.4899,
+        "ew": 54.286,
+        "bu": 50.247,
+        "grandTotal": 580.037463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.27,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 9.57,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 13.915,
+          "demand": 27.202,
+          "count": 27
+        },
+        "Laura Matz": {
+          "funded": 31.867,
+          "demand": 61.607,
+          "count": 16
+        }
+      }
+    },
+    {
+      "id": "sim-L21",
+      "name": "IT Simp 5% AOP + IGTS decomm on-top + PH top-3",
+      "group": "G5-Combined",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 105.775,
+        "pmi": 5.19,
+        "unfunded": 174.2479,
+        "ew": 52.458,
+        "bu": 53.317,
+        "grandTotal": 581.279463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.32,
+          "demand": 25.89,
+          "count": 4
+        },
+        "Bert van Meurs": {
+          "funded": 13.835,
+          "demand": 49.4039,
+          "count": 15
+        },
+        "Deeptha Khanna": {
+          "funded": 15.32,
+          "demand": 27.202,
+          "count": 28
+        },
+        "Laura Matz": {
+          "funded": 28.659,
+          "demand": 61.607,
+          "count": 19
+        }
+      }
+    },
+    {
+      "id": "sim-L22",
+      "name": "Budget 90M + Sustain 80% bucket + Services 2 on-top",
+      "group": "G5-Combined",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 99.476,
+        "pmi": 5.19,
+        "unfunded": 180.5469,
+        "ew": 60.905,
+        "bu": 38.571,
+        "grandTotal": 574.980463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.22,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 5.92,
+          "demand": 49.4039,
+          "count": 7
+        },
+        "Deeptha Khanna": {
+          "funded": 12.55,
+          "demand": 27.202,
+          "count": 23
+        },
+        "Laura Matz": {
+          "funded": 34.677,
+          "demand": 61.607,
+          "count": 13
+        }
+      }
+    },
+    {
+      "id": "sim-L23",
+      "name": "Budget 80M + IT Simp 8% + ISC 2 Stage1 on-top",
+      "group": "G5-Combined",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 81.963,
+        "pmi": 5.19,
+        "unfunded": 198.0599,
+        "ew": 47.331,
+        "bu": 34.632,
+        "grandTotal": 557.467463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 4.2,
+          "demand": 25.89,
+          "count": 3
+        },
+        "Bert van Meurs": {
+          "funded": 5.02,
+          "demand": 49.4039,
+          "count": 5
+        },
+        "Deeptha Khanna": {
+          "funded": 12.25,
+          "demand": 27.202,
+          "count": 21
+        },
+        "Laura Matz": {
+          "funded": 25.177,
+          "demand": 61.607,
+          "count": 11
+        }
+      }
+    },
+    {
+      "id": "sim-L24",
+      "name": "All levers AOP + 1 unfunded per ExCo on-top",
+      "group": "G5-Combined",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 74.489,
+        "pmi": 5.19,
+        "unfunded": 205.5339,
+        "ew": 32.103,
+        "bu": 42.386,
+        "grandTotal": 549.993463
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 0.08,
+          "demand": 25.89,
+          "count": 2
+        },
+        "Bert van Meurs": {
+          "funded": 11.828,
+          "demand": 49.4039,
+          "count": 8
+        },
+        "Deeptha Khanna": {
+          "funded": 13.146,
+          "demand": 27.202,
+          "count": 23
+        },
+        "Laura Matz": {
+          "funded": 21.527,
+          "demand": 61.607,
+          "count": 16
+        }
+      }
+    },
+    {
+      "id": "sim-L25",
+      "name": "Budget 110M + max levers + IGTS Stage3 at 80%",
+      "group": "G5-Combined",
+      "checks": 13,
+      "passed": 13,
+      "score_pct": 100.0,
+      "failures": [],
+      "totals": {
+        "requested": 280.0229,
+        "funded": 117.2314,
+        "pmi": 5.19,
+        "unfunded": 162.7915,
+        "ew": 69.802,
+        "bu": 47.4294,
+        "grandTotal": 592.735863
+      },
+      "exco": {
+        "Wim Appelo": {
+          "funded": 2.2,
+          "demand": 25.89,
+          "count": 1
+        },
+        "Bert van Meurs": {
+          "funded": 14.7834,
+          "demand": 49.4039,
+          "count": 17
+        },
+        "Deeptha Khanna": {
+          "funded": 12.3,
+          "demand": 27.202,
+          "count": 22
+        },
+        "Laura Matz": {
+          "funded": 35.787,
+          "demand": 61.607,
+          "count": 27
+        }
+      }
+    }
+  ],
+  "group_scores": {
+    "G1-Lever Basis": 100.0,
+    "G2-IT Simp Lever": 100.0,
+    "G3-ExCo Opt-In/Out": 100.0,
+    "G4-Partial Funding": 100.0,
+    "G5-Combined": 100.0
+  },
+  "max_weight_per_scenario": 100,
+  "weight_definition": {
+    "cost match": 12,
+    "EW-BU split": 8,
+    "PMI total": 4,
+    "cluster chargeout": 15,
+    "exco total ISC": 6,
+    "exco total IGTS": 6,
+    "exco total PH": 6,
+    "exco total Svc": 6,
+    "ops per BU": 10,
+    "ops grand total": 5,
+    "finance reconciled": 5,
+    "stage funding sums": 5,
+    "EW unallocated share": 5,
+    "override cost respected": 7
+  },
+  "key_figures": {
+    "ew_demand_M": 111.421,
+    "bu_demand_M": 173.7919,
+    "pmi_M": 5.19,
+    "ops_M": 470.3144630385122,
+    "ew_key_recipients": 20,
+    "ew_unallocated_pct": 22.63033175
+  }
+}

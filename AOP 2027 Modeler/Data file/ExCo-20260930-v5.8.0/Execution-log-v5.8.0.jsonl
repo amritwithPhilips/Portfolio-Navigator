@@ -1,0 +1,6 @@
+{"timestamp": "2026-09-30T09:32:03", "phase": "Build", "detail": "Created new v5.8.0 with shared ExCo view; v5.7.0 preserved."}
+{"timestamp": "2026-09-30T08:56:42", "phase": "Source validation", "detail": "32 scenarios and 69,280 record fields independently reconciled."}
+{"timestamp": "2026-09-30T08:50:31", "phase": "Recommendation", "detail": "135 candidates; default Optimal remains best under balanced constraints."}
+{"timestamp": "2026-09-30T09:36:50", "phase": "Browser validation", "detail": "Six tabs, ExCo controls, configuration changes and recovery passed."}
+{"timestamp": "2026-09-30T09:32:07", "phase": "Excel validation", "detail": "32 downloaded workbooks reconciled to source-linked Programs and finance ledgers."}
+{"timestamp": "2026-09-30T09:38:32", "phase": "Release gate", "detail": "1423/1423 assertions passed; source balances and scope limitations documented."}

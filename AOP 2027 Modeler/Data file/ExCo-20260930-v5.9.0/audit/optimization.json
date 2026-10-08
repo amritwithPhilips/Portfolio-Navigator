@@ -1,0 +1,6719 @@
+{
+  "sourceHash": "70480f321fa60e6cba983bf63e72572570b2821ec0a222b604449aafe9f4f470",
+  "objective": "Maximize funding-weighted source merit at the approved 100 M€ base budget, with zero tolerance, while preserving every baseline-funded LFR/carry Programs amount and at least baseline Sustain funding. Original source request, merit weights and merit floor retained; no manual overrides.",
+  "interpretation": "Best among the tested lever grid; not a proof of a global optimum or annual cash return. Benefit claims are lifetime submitted values and are not the objective.",
+  "baseline": {
+    "settings": {
+      "budget": 100,
+      "tolerance": 0,
+      "lfr": {
+        "basis": "bucket",
+        "pct": 82.384824
+      },
+      "carry": 0,
+      "sustain": {
+        "basis": "bucket",
+        "pct": 60
+      },
+      "value": {
+        "basis": "bucket",
+        "pct": 100
+      },
+      "itsimp": {
+        "basis": "bucket",
+        "pct": 0
+      },
+      "itsimpMode": false,
+      "merit": 45,
+      "weights": [
+        40,
+        25,
+        15,
+        10,
+        10
+      ]
+    },
+    "funded": 99.963,
+    "count": 162,
+    "canonicalUtility": 60.065779999999975,
+    "weightedMerit": 60.088012564648935,
+    "LFR": 43.776,
+    "carry": 16.773,
+    "sustain": 20.609,
+    "value": 18.805,
+    "itsimp": 0,
+    "hardClaims": 5153.663,
+    "softClaims": 7574.7970000000005,
+    "topHardShare": 0.24254593286367387,
+    "unallocated": 13.072895734597163,
+    "totalIT": 575.4674630385123
+  },
+  "recommended": {
+    "id": "search-001",
+    "settings": {
+      "budget": 100,
+      "tolerance": 0,
+      "lfr": {
+        "basis": "bucket",
+        "pct": 82.384824
+      },
+      "carry": 0,
+      "sustain": {
+        "basis": "bucket",
+        "pct": 60
+      },
+      "value": {
+        "basis": "bucket",
+        "pct": 100
+      },
+      "itsimp": {
+        "basis": "amount",
+        "amount": 0,
+        "pct": 0
+      },
+      "itsimpMode": false,
+      "merit": 45,
+      "weights": [
+        40,
+        25,
+        15,
+        10,
+        10
+      ]
+    },
+    "feasible": true,
+    "funded": 99.963,
+    "count": 162,
+    "canonicalUtility": 60.065779999999975,
+    "weightedMerit": 60.088012564648935,
+    "LFR": 43.776,
+    "carry": 16.773,
+    "sustain": 20.609,
+    "value": 18.805,
+    "itsimp": 0,
+    "hardClaims": 5153.663,
+    "softClaims": 7574.7970000000005,
+    "topHardShare": 0.24254593286367387,
+    "unallocated": 13.072895734597163,
+    "totalIT": 575.4674630385123
+  },
+  "grid": [
+    {
+      "id": "search-001",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.963,
+      "count": 162,
+      "canonicalUtility": 60.065779999999975,
+      "weightedMerit": 60.088012564648935,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 18.805,
+      "itsimp": 0,
+      "hardClaims": 5153.663,
+      "softClaims": 7574.7970000000005,
+      "topHardShare": 0.24254593286367387,
+      "unallocated": 13.072895734597163,
+      "totalIT": 575.4674630385123
+    },
+    {
+      "id": "search-002",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.941,
+      "count": 165,
+      "canonicalUtility": 59.807269999999974,
+      "weightedMerit": 59.84257712050111,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 16.841,
+      "itsimp": 1.942,
+      "hardClaims": 5143.391,
+      "softClaims": 7579.896000000001,
+      "topHardShare": 0.24303032765737625,
+      "unallocated": 13.4965355450237,
+      "totalIT": 575.4454630385123
+    },
+    {
+      "id": "search-003",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.926,
+      "count": 171,
+      "canonicalUtility": 59.12406999999997,
+      "weightedMerit": 59.16785421211699,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 13.831,
+      "itsimp": 4.937,
+      "hardClaims": 5141.602,
+      "softClaims": 7521.87,
+      "topHardShare": 0.24311488909487744,
+      "unallocated": 13.693419431279626,
+      "totalIT": 575.4304630385122
+    },
+    {
+      "id": "search-004",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.98,
+      "count": 164,
+      "canonicalUtility": 58.31806999999997,
+      "weightedMerit": 58.32973594718947,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 10.835,
+      "itsimp": 7.987,
+      "hardClaims": 2589.3229999999994,
+      "softClaims": 7521.42,
+      "topHardShare": 0.4827516690656207,
+      "unallocated": 14.161014218009486,
+      "totalIT": 575.4844630385123
+    },
+    {
+      "id": "search-005",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.926,
+      "count": 172,
+      "canonicalUtility": 57.619769999999974,
+      "weightedMerit": 57.66244020575228,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 8.831,
+      "itsimp": 9.937,
+      "hardClaims": 4906.1320000000005,
+      "softClaims": 7522.67,
+      "topHardShare": 0.2547831978430258,
+      "unallocated": 14.790990521327021,
+      "totalIT": 575.4304630385124
+    },
+    {
+      "id": "search-006",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.993,
+      "count": 167,
+      "canonicalUtility": 59.550519999999985,
+      "weightedMerit": 59.55468882821799,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 17.106,
+      "itsimp": 0,
+      "hardClaims": 5145.951999999999,
+      "softClaims": 7537.200000000001,
+      "topHardShare": 0.2429093780898073,
+      "unallocated": 13.298267772511853,
+      "totalIT": 575.4974630385124
+    },
+    {
+      "id": "search-007",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.935,
+      "count": 170,
+      "canonicalUtility": 59.17435999999998,
+      "weightedMerit": 59.21284835142844,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 15.106,
+      "itsimp": 1.942,
+      "hardClaims": 5147.451999999999,
+      "softClaims": 7521.999000000001,
+      "topHardShare": 0.24283859276395392,
+      "unallocated": 13.244407582938392,
+      "totalIT": 575.4394630385121
+    },
+    {
+      "id": "search-008",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.915,
+      "count": 178,
+      "canonicalUtility": 58.468459999999965,
+      "weightedMerit": 58.51820047039987,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 12.091,
+      "itsimp": 4.937,
+      "hardClaims": 3853.6019999999994,
+      "softClaims": 7562.1230000000005,
+      "topHardShare": 0.3243718474300149,
+      "unallocated": 13.909739336492894,
+      "totalIT": 575.4194630385123
+    },
+    {
+      "id": "search-009",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.955,
+      "count": 178,
+      "canonicalUtility": 57.63965999999997,
+      "weightedMerit": 57.66560952428596,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 9.081,
+      "itsimp": 7.987,
+      "hardClaims": 4905.062,
+      "softClaims": 7561.823,
+      "topHardShare": 0.2548387767575619,
+      "unallocated": 14.575071090047398,
+      "totalIT": 575.4594630385122
+    },
+    {
+      "id": "search-010",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.924,
+      "count": 174,
+      "canonicalUtility": 56.98645999999997,
+      "weightedMerit": 57.029802650014034,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 7.1,
+      "itsimp": 9.937,
+      "hardClaims": 2399.1929999999993,
+      "softClaims": 7523.273,
+      "topHardShare": 0.521008522449007,
+      "unallocated": 15.011836492891002,
+      "totalIT": 575.4284630385123
+    },
+    {
+      "id": "search-011",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.977,
+      "count": 175,
+      "canonicalUtility": 58.828409999999984,
+      "weightedMerit": 58.84194364703884,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 15.391,
+      "itsimp": 0,
+      "hardClaims": 5147.891,
+      "softClaims": 7518.150000000001,
+      "topHardShare": 0.24281788406164778,
+      "unallocated": 13.04593957345972,
+      "totalIT": 575.4814630385123
+    },
+    {
+      "id": "search-012",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.913,
+      "count": 173,
+      "canonicalUtility": 58.48824999999998,
+      "weightedMerit": 58.539179085804676,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 13.385,
+      "itsimp": 1.942,
+      "hardClaims": 5098.651999999999,
+      "softClaims": 7522.649,
+      "topHardShare": 0.24516283911904563,
+      "unallocated": 13.41979265402844,
+      "totalIT": 575.4174630385122
+    },
+    {
+      "id": "search-013",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.933,
+      "count": 172,
+      "canonicalUtility": 57.82854999999997,
+      "weightedMerit": 57.86732110514048,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 10.41,
+      "itsimp": 4.937,
+      "hardClaims": 2574.9629999999993,
+      "softClaims": 7462.673,
+      "topHardShare": 0.48544386851383897,
+      "unallocated": 13.855704976303324,
+      "totalIT": 575.4374630385122
+    },
+    {
+      "id": "search-014",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.973,
+      "count": 178,
+      "canonicalUtility": 56.985549999999975,
+      "weightedMerit": 57.000940253868585,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 7.4,
+      "itsimp": 7.987,
+      "hardClaims": 3648.3229999999994,
+      "softClaims": 7522.673,
+      "topHardShare": 0.34262317234521183,
+      "unallocated": 14.745930094786736,
+      "totalIT": 575.4774630385124
+    },
+    {
+      "id": "search-015",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.933,
+      "count": 175,
+      "canonicalUtility": 56.30204999999998,
+      "weightedMerit": 56.3397976644352,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 5.41,
+      "itsimp": 9.937,
+      "hardClaims": 1642.2929999999994,
+      "softClaims": 7463.923,
+      "topHardShare": 0.7611309309605536,
+      "unallocated": 14.98722156398105,
+      "totalIT": 575.4374630385124
+    },
+    {
+      "id": "search-016",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.997,
+      "count": 173,
+      "canonicalUtility": 58.20950999999999,
+      "weightedMerit": 58.21125633769015,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 13.681,
+      "itsimp": 0,
+      "hardClaims": 5138.191000000001,
+      "softClaims": 7517.85,
+      "topHardShare": 0.24327628147727476,
+      "unallocated": 13.401235781990525,
+      "totalIT": 575.5014630385123
+    },
+    {
+      "id": "search-017",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.918,
+      "count": 174,
+      "canonicalUtility": 57.82364999999998,
+      "weightedMerit": 57.871104305530544,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 11.66,
+      "itsimp": 1.942,
+      "hardClaims": 3845.8909999999996,
+      "softClaims": 7522.649,
+      "topHardShare": 0.3250222120179693,
+      "unallocated": 13.799982227488155,
+      "totalIT": 575.4224630385123
+    },
+    {
+      "id": "search-018",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.909,
+      "count": 182,
+      "canonicalUtility": 57.12114999999998,
+      "weightedMerit": 57.17317759160839,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 8.656,
+      "itsimp": 4.937,
+      "hardClaims": 4899.963000000001,
+      "softClaims": 7523.473,
+      "topHardShare": 0.25510396711158834,
+      "unallocated": 14.440420616113748,
+      "totalIT": 575.4134630385123
+    },
+    {
+      "id": "search-019",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.968,
+      "count": 176,
+      "canonicalUtility": 56.300449999999984,
+      "weightedMerit": 56.31847191101155,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 5.665,
+      "itsimp": 7.987,
+      "hardClaims": 1653.6229999999996,
+      "softClaims": 7463.223,
+      "topHardShare": 0.7559159494032197,
+      "unallocated": 14.926119668246452,
+      "totalIT": 575.4724630385124
+    },
+    {
+      "id": "search-020",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.913,
+      "count": 172,
+      "canonicalUtility": 55.54234999999998,
+      "weightedMerit": 55.590713921111394,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 3.66,
+      "itsimp": 9.937,
+      "hardClaims": 1610.1339999999993,
+      "softClaims": 7459.173,
+      "topHardShare": 0.7763329014852183,
+      "unallocated": 15.033465639810432,
+      "totalIT": 575.4174630385122
+    },
+    {
+      "id": "search-021",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.997,
+      "count": 176,
+      "canonicalUtility": 57.482509999999984,
+      "weightedMerit": 57.48423452703583,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 12.031,
+      "itsimp": 0,
+      "hardClaims": 3849.191,
+      "softClaims": 7557.35,
+      "topHardShare": 0.32474356299804297,
+      "unallocated": 13.604908767772516,
+      "totalIT": 575.5014630385123
+    },
+    {
+      "id": "search-022",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.923,
+      "count": 171,
+      "canonicalUtility": 57.123649999999984,
+      "weightedMerit": 57.167669105211026,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 10.015,
+      "itsimp": 1.942,
+      "hardClaims": 1855.7519999999995,
+      "softClaims": 7522.899,
+      "topHardShare": 0.6735813837193765,
+      "unallocated": 13.787813981042659,
+      "totalIT": 575.4274630385123
+    },
+    {
+      "id": "search-023",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.918,
+      "count": 180,
+      "canonicalUtility": 56.427949999999974,
+      "weightedMerit": 56.4742588922917,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 7.015,
+      "itsimp": 4.937,
+      "hardClaims": 2393.1629999999996,
+      "softClaims": 7523.723,
+      "topHardShare": 0.5223212961256715,
+      "unallocated": 14.428252369668252,
+      "totalIT": 575.4224630385123
+    },
+    {
+      "id": "search-024",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.978,
+      "count": 173,
+      "canonicalUtility": 55.55334999999997,
+      "weightedMerit": 55.565574426373836,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 4.025,
+      "itsimp": 7.987,
+      "hardClaims": 1613.0639999999994,
+      "softClaims": 7458.973,
+      "topHardShare": 0.7749227556997121,
+      "unallocated": 15.084531990521333,
+      "totalIT": 575.4824630385124
+    },
+    {
+      "id": "search-025",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.913,
+      "count": 172,
+      "canonicalUtility": 54.70484999999998,
+      "weightedMerit": 54.752484661655664,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 2.01,
+      "itsimp": 9.937,
+      "hardClaims": 1567.5339999999994,
+      "softClaims": 7459.673,
+      "topHardShare": 0.7974308691230942,
+      "unallocated": 15.225823459715645,
+      "totalIT": 575.4174630385124
+    },
+    {
+      "id": "search-026",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.986,
+      "count": 161,
+      "canonicalUtility": 56.859909999999985,
+      "weightedMerit": 56.867871502010296,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 10.25,
+      "itsimp": 0,
+      "hardClaims": 2569.6519999999996,
+      "softClaims": 7458.17,
+      "topHardShare": 0.48644719207114434,
+      "unallocated": 13.997823459715645,
+      "totalIT": 575.4904630385124
+    },
+    {
+      "id": "search-027",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.928,
+      "count": 168,
+      "canonicalUtility": 56.483749999999986,
+      "weightedMerit": 56.52444760227365,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 8.25,
+      "itsimp": 1.942,
+      "hardClaims": 4888.451999999999,
+      "softClaims": 7522.719,
+      "topHardShare": 0.25570466888086457,
+      "unallocated": 14.392043838862564,
+      "totalIT": 575.4324630385123
+    },
+    {
+      "id": "search-028",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.928,
+      "count": 171,
+      "canonicalUtility": 55.792049999999975,
+      "weightedMerit": 55.832249219438026,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 5.255,
+      "itsimp": 4.937,
+      "hardClaims": 1626.6629999999996,
+      "softClaims": 7464.093,
+      "topHardShare": 0.768444355099981,
+      "unallocated": 15.032482227488158,
+      "totalIT": 575.4324630385122
+    },
+    {
+      "id": "search-029",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.983,
+      "count": 165,
+      "canonicalUtility": 54.77894999999997,
+      "weightedMerit": 54.78826400488086,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 2.26,
+      "itsimp": 7.987,
+      "hardClaims": 1577.6639999999995,
+      "softClaims": 7456.735,
+      "topHardShare": 0.7923106567684883,
+      "unallocated": 15.388761848341238,
+      "totalIT": 575.4874630385124
+    },
+    {
+      "id": "search-030",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.923,
+      "count": 164,
+      "canonicalUtility": 53.88944999999998,
+      "weightedMerit": 53.93097685217619,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0.25,
+      "itsimp": 9.937,
+      "hardClaims": 1550.6339999999996,
+      "softClaims": 7457.735,
+      "topHardShare": 0.8061218830491272,
+      "unallocated": 15.825527251184841,
+      "totalIT": 575.4274630385124
+    },
+    {
+      "id": "search-031",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.981,
+      "count": 171,
+      "canonicalUtility": 56.158309999999986,
+      "weightedMerit": 56.168982106600275,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 8.565,
+      "itsimp": 0,
+      "hardClaims": 4890.452,
+      "softClaims": 7518.97,
+      "topHardShare": 0.25560009586025995,
+      "unallocated": 14.36981398104266,
+      "totalIT": 575.4854630385123
+    },
+    {
+      "id": "search-032",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.923,
+      "count": 169,
+      "canonicalUtility": 55.78214999999998,
+      "weightedMerit": 55.82513535422277,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 6.565,
+      "itsimp": 1.942,
+      "hardClaims": 2380.752,
+      "softClaims": 7463.769,
+      "topHardShare": 0.5250441877188384,
+      "unallocated": 14.568560426540289,
+      "totalIT": 575.4274630385123
+    },
+    {
+      "id": "search-033",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.913,
+      "count": 168,
+      "canonicalUtility": 55.01684999999997,
+      "weightedMerit": 55.06475633801411,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 3.56,
+      "itsimp": 4.937,
+      "hardClaims": 1604.6039999999994,
+      "softClaims": 7457.235,
+      "topHardShare": 0.7790084033194487,
+      "unallocated": 14.87505331753555,
+      "totalIT": 575.4174630385123
+    },
+    {
+      "id": "search-034",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.963,
+      "count": 165,
+      "canonicalUtility": 53.90984999999998,
+      "weightedMerit": 53.929804027490206,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 0.56,
+      "itsimp": 7.987,
+      "hardClaims": 1543.2639999999994,
+      "softClaims": 7459.293,
+      "topHardShare": 0.8099715926763019,
+      "unallocated": 15.565278436018962,
+      "totalIT": 575.4674630385123
+    },
+    {
+      "id": "search-035",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.903,
+      "count": 162,
+      "canonicalUtility": 53.66734999999998,
+      "weightedMerit": 53.71945787413792,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 0,
+      "itsimp": 8.487,
+      "hardClaims": 1532.9139999999995,
+      "softClaims": 7456.985,
+      "topHardShare": 0.8154403965258328,
+      "unallocated": 15.673904028436025,
+      "totalIT": 575.4074630385122
+    },
+    {
+      "id": "search-036",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.981,
+      "count": 171,
+      "canonicalUtility": 55.40630999999998,
+      "weightedMerit": 55.416839199447914,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 6.965,
+      "itsimp": 0,
+      "hardClaims": 2387.4269999999997,
+      "softClaims": 7518.97,
+      "topHardShare": 0.5235762182466731,
+      "unallocated": 14.475323459715646,
+      "totalIT": 575.4854630385123
+    },
+    {
+      "id": "search-037",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.928,
+      "count": 168,
+      "canonicalUtility": 55.02904999999998,
+      "weightedMerit": 55.06869946361382,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 4.97,
+      "itsimp": 1.942,
+      "hardClaims": 1622.7269999999994,
+      "softClaims": 7458.219,
+      "topHardShare": 0.7703082527128718,
+      "unallocated": 14.835598341232233,
+      "totalIT": 575.4324630385122
+    },
+    {
+      "id": "search-038",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.928,
+      "count": 170,
+      "canonicalUtility": 54.14684999999997,
+      "weightedMerit": 54.18586382195183,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 1.975,
+      "itsimp": 4.937,
+      "hardClaims": 1562.1789999999994,
+      "softClaims": 7457.785,
+      "topHardShare": 0.8001643857714131,
+      "unallocated": 15.180562796208536,
+      "totalIT": 575.4324630385122
+    },
+    {
+      "id": "search-039",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.853,
+      "count": 168,
+      "canonicalUtility": 53.244349999999976,
+      "weightedMerit": 53.32273441959682,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 0,
+      "itsimp": 6.837,
+      "hardClaims": 1529.6289999999995,
+      "softClaims": 7458.464,
+      "topHardShare": 0.817191619667253,
+      "unallocated": 15.583382701421806,
+      "totalIT": 575.3574630385123
+    },
+    {
+      "id": "search-040",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.853,
+      "count": 168,
+      "canonicalUtility": 53.244349999999976,
+      "weightedMerit": 53.32273441959682,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 0,
+      "itsimp": 6.837,
+      "hardClaims": 1529.6289999999995,
+      "softClaims": 7458.464,
+      "topHardShare": 0.817191619667253,
+      "unallocated": 15.583382701421806,
+      "totalIT": 575.3574630385123
+    },
+    {
+      "id": "search-041",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.971,
+      "count": 170,
+      "canonicalUtility": 54.12820999999998,
+      "weightedMerit": 54.14391173440299,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 5.055,
+      "itsimp": 0,
+      "hardClaims": 1621.2269999999994,
+      "softClaims": 7454.22,
+      "topHardShare": 0.7710209612842621,
+      "unallocated": 14.441377962085314,
+      "totalIT": 575.4754630385123
+    },
+    {
+      "id": "search-042",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.933,
+      "count": 168,
+      "canonicalUtility": 53.68004999999997,
+      "weightedMerit": 53.71603974663025,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 3.075,
+      "itsimp": 1.942,
+      "hardClaims": 1591.9679999999994,
+      "softClaims": 7456.961,
+      "topHardShare": 0.785191662143963,
+      "unallocated": 14.540124407582942,
+      "totalIT": 575.4374630385124
+    },
+    {
+      "id": "search-043",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.923,
+      "count": 169,
+      "canonicalUtility": 52.693849999999976,
+      "weightedMerit": 52.7344555307587,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0.07,
+      "itsimp": 4.937,
+      "hardClaims": 1534.3789999999995,
+      "softClaims": 7457.235,
+      "topHardShare": 0.8146618273581693,
+      "unallocated": 15.180562796208536,
+      "totalIT": 575.4274630385123
+    },
+    {
+      "id": "search-044",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.953,
+      "count": 168,
+      "canonicalUtility": 52.654849999999975,
+      "weightedMerit": 52.679609416425734,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0,
+      "itsimp": 5.037,
+      "hardClaims": 1528.7789999999995,
+      "softClaims": 7457.214,
+      "topHardShare": 0.8176459776069663,
+      "unallocated": 15.176036729857826,
+      "totalIT": 575.4574630385124
+    },
+    {
+      "id": "search-045",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 82.384824
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.953,
+      "count": 168,
+      "canonicalUtility": 52.654849999999975,
+      "weightedMerit": 52.679609416425734,
+      "LFR": 43.776,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0,
+      "itsimp": 5.037,
+      "hardClaims": 1528.7789999999995,
+      "softClaims": 7457.214,
+      "topHardShare": 0.8176459776069663,
+      "unallocated": 15.176036729857826,
+      "totalIT": 575.4574630385124
+    },
+    {
+      "id": "search-046",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.985,
+      "count": 163,
+      "canonicalUtility": 60.04562999999998,
+      "weightedMerit": 60.05463819572938,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 14.905,
+      "itsimp": 0,
+      "hardClaims": 5141.191,
+      "softClaims": 7592.99,
+      "topHardShare": 0.24313432432290497,
+      "unallocated": 13.507850710900478,
+      "totalIT": 575.4894630385123
+    },
+    {
+      "id": "search-047",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.913,
+      "count": 165,
+      "canonicalUtility": 59.68961999999998,
+      "weightedMerit": 59.741595187813424,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 12.891,
+      "itsimp": 1.942,
+      "hardClaims": 5099.391,
+      "softClaims": 7559.089,
+      "topHardShare": 0.24512731030038687,
+      "unallocated": 13.920175355450239,
+      "totalIT": 575.4174630385123
+    },
+    {
+      "id": "search-048",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.937,
+      "count": 164,
+      "canonicalUtility": 59.03491999999997,
+      "weightedMerit": 59.072135445330595,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 9.92,
+      "itsimp": 4.937,
+      "hardClaims": 1851.6629999999996,
+      "softClaims": 7559.062999999999,
+      "topHardShare": 0.6750688435206624,
+      "unallocated": 14.5470355450237,
+      "totalIT": 575.4414630385124
+    },
+    {
+      "id": "search-049",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.987,
+      "count": 166,
+      "canonicalUtility": 58.19991999999998,
+      "weightedMerit": 58.20748697330657,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 6.92,
+      "itsimp": 7.987,
+      "hardClaims": 2394.1229999999996,
+      "softClaims": 7559.062999999999,
+      "topHardShare": 0.5221118547376222,
+      "unallocated": 15.037260663507114,
+      "totalIT": 575.4914630385123
+    },
+    {
+      "id": "search-050",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.937,
+      "count": 163,
+      "canonicalUtility": 57.50031999999998,
+      "weightedMerit": 57.53656803786389,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 4.92,
+      "itsimp": 9.937,
+      "hardClaims": 1631.1929999999995,
+      "softClaims": 7493.004999999999,
+      "topHardShare": 0.7663103017239532,
+      "unallocated": 15.435554502369675,
+      "totalIT": 575.4414630385123
+    },
+    {
+      "id": "search-051",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 100,
+      "count": 172,
+      "canonicalUtility": 59.42716999999998,
+      "weightedMerit": 59.427170000000025,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 13.191,
+      "itsimp": 0,
+      "hardClaims": 5098.891,
+      "softClaims": 7594.693,
+      "topHardShare": 0.24515134761656998,
+      "unallocated": 13.758116113744077,
+      "totalIT": 575.5044630385123
+    },
+    {
+      "id": "search-052",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.921,
+      "count": 167,
+      "canonicalUtility": 59.07150999999998,
+      "weightedMerit": 59.118213388577,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 11.17,
+      "itsimp": 1.942,
+      "hardClaims": 3840.4519999999998,
+      "softClaims": 7559.642,
+      "topHardShare": 0.3254825213282187,
+      "unallocated": 13.931969194312797,
+      "totalIT": 575.4254630385124
+    },
+    {
+      "id": "search-053",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.901,
+      "count": 180,
+      "canonicalUtility": 58.330659999999966,
+      "weightedMerit": 58.38846457993417,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 8.155,
+      "itsimp": 4.937,
+      "hardClaims": 3650.901999999999,
+      "softClaims": 7600.016,
+      "topHardShare": 0.3423811430709453,
+      "unallocated": 14.77240758293839,
+      "totalIT": 575.4054630385124
+    },
+    {
+      "id": "search-054",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.986,
+      "count": 170,
+      "canonicalUtility": 57.55680999999998,
+      "weightedMerit": 57.56486908167146,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 5.19,
+      "itsimp": 7.987,
+      "hardClaims": 1630.1229999999996,
+      "softClaims": 7500.215999999999,
+      "topHardShare": 0.7668133018183292,
+      "unallocated": 15.258106635071094,
+      "totalIT": 575.4904630385123
+    },
+    {
+      "id": "search-055",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.936,
+      "count": 167,
+      "canonicalUtility": 56.77820999999997,
+      "weightedMerit": 56.81457132564844,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 3.19,
+      "itsimp": 9.937,
+      "hardClaims": 1602.7339999999995,
+      "softClaims": 7494.407999999999,
+      "topHardShare": 0.7799173162857969,
+      "unallocated": 15.360926540284364,
+      "totalIT": 575.4404630385122
+    },
+    {
+      "id": "search-056",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.993,
+      "count": 172,
+      "canonicalUtility": 58.767259999999986,
+      "weightedMerit": 58.77137399617977,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 11.485,
+      "itsimp": 0,
+      "hardClaims": 3842.1519999999996,
+      "softClaims": 7556.043,
+      "topHardShare": 0.32533850821102345,
+      "unallocated": 13.908607819905216,
+      "totalIT": 575.4974630385124
+    },
+    {
+      "id": "search-057",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.925,
+      "count": 168,
+      "canonicalUtility": 58.383099999999985,
+      "weightedMerit": 58.42692019014264,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 9.475,
+      "itsimp": 1.942,
+      "hardClaims": 1835.5519999999995,
+      "softClaims": 7500.592,
+      "topHardShare": 0.680994055194296,
+      "unallocated": 14.102828199052135,
+      "totalIT": 575.4294630385124
+    },
+    {
+      "id": "search-058",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.92,
+      "count": 177,
+      "canonicalUtility": 57.687399999999975,
+      "weightedMerit": 57.73358686949564,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 6.475,
+      "itsimp": 4.937,
+      "hardClaims": 2372.9629999999993,
+      "softClaims": 7501.415999999999,
+      "topHardShare": 0.5267675897180025,
+      "unallocated": 14.743266587677729,
+      "totalIT": 575.4244630385122
+    },
+    {
+      "id": "search-059",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.985,
+      "count": 169,
+      "canonicalUtility": 56.79429999999998,
+      "weightedMerit": 56.8028204230635,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 3.49,
+      "itsimp": 7.987,
+      "hardClaims": 1597.7639999999994,
+      "softClaims": 7495.865999999999,
+      "topHardShare": 0.7823433247964032,
+      "unallocated": 15.095020142180099,
+      "totalIT": 575.4894630385123
+    },
+    {
+      "id": "search-060",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.935,
+      "count": 171,
+      "canonicalUtility": 55.92479999999998,
+      "weightedMerit": 55.96117476359637,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 1.49,
+      "itsimp": 9.937,
+      "hardClaims": 1568.4339999999995,
+      "softClaims": 7495.057999999999,
+      "topHardShare": 0.7969732867305863,
+      "unallocated": 15.536311611374412,
+      "totalIT": 575.4394630385124
+    },
+    {
+      "id": "search-061",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.988,
+      "count": 168,
+      "canonicalUtility": 58.082159999999995,
+      "weightedMerit": 58.0891306956835,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 9.75,
+      "itsimp": 0,
+      "hardClaims": 1847.4519999999995,
+      "softClaims": 7555.2429999999995,
+      "topHardShare": 0.6766075654468967,
+      "unallocated": 14.084271327014221,
+      "totalIT": 575.4924630385123
+    },
+    {
+      "id": "search-062",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.911,
+      "count": 179,
+      "canonicalUtility": 57.680199999999985,
+      "weightedMerit": 57.73158110718542,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 7.731,
+      "itsimp": 1.942,
+      "hardClaims": 3648.691,
+      "softClaims": 7560.842,
+      "topHardShare": 0.34258861602695323,
+      "unallocated": 14.68754383886256,
+      "totalIT": 575.4154630385124
+    },
+    {
+      "id": "search-063",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.93,
+      "count": 174,
+      "canonicalUtility": 57.000199999999985,
+      "weightedMerit": 57.040128089662794,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 4.755,
+      "itsimp": 4.937,
+      "hardClaims": 1623.2629999999995,
+      "softClaims": 7494.607999999999,
+      "topHardShare": 0.770053897612402,
+      "unallocated": 15.089510663507111,
+      "totalIT": 575.4344630385123
+    },
+    {
+      "id": "search-064",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.985,
+      "count": 169,
+      "canonicalUtility": 55.965699999999984,
+      "weightedMerit": 55.97409611441719,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 1.76,
+      "itsimp": 7.987,
+      "hardClaims": 1563.2639999999994,
+      "softClaims": 7496.115999999999,
+      "topHardShare": 0.7996090231720301,
+      "unallocated": 15.479735781990524,
+      "totalIT": 575.4894630385123
+    },
+    {
+      "id": "search-065",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.945,
+      "count": 165,
+      "canonicalUtility": 55.21369999999999,
+      "weightedMerit": 55.244084246335504,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 0,
+      "itsimp": 9.707,
+      "hardClaims": 1533.9229999999995,
+      "softClaims": 7495.057999999999,
+      "topHardShare": 0.8149040075675248,
+      "unallocated": 15.86445142180095,
+      "totalIT": 575.4494630385122
+    },
+    {
+      "id": "search-066",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.979,
+      "count": 181,
+      "canonicalUtility": 57.330159999999985,
+      "weightedMerit": 57.34220186239113,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 8.091,
+      "itsimp": 0,
+      "hardClaims": 3647.191,
+      "softClaims": 7595.843,
+      "topHardShare": 0.3427295143029252,
+      "unallocated": 14.506048578199053,
+      "totalIT": 575.4834630385124
+    },
+    {
+      "id": "search-067",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.94,
+      "count": 172,
+      "canonicalUtility": 57.00649999999998,
+      "weightedMerit": 57.040724434660824,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 6.11,
+      "itsimp": 1.942,
+      "hardClaims": 2357.5519999999997,
+      "softClaims": 7500.7919999999995,
+      "topHardShare": 0.530210998527286,
+      "unallocated": 14.679901658767774,
+      "totalIT": 575.4444630385123
+    },
+    {
+      "id": "search-068",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.935,
+      "count": 173,
+      "canonicalUtility": 56.22069999999997,
+      "weightedMerit": 56.257267223695436,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 3.11,
+      "itsimp": 4.937,
+      "hardClaims": 1595.0039999999995,
+      "softClaims": 7496.615999999999,
+      "topHardShare": 0.7836970941765666,
+      "unallocated": 14.981868483412324,
+      "totalIT": 575.4394630385123
+    },
+    {
+      "id": "search-069",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.975,
+      "count": 168,
+      "canonicalUtility": 55.088199999999986,
+      "weightedMerit": 55.101975493873496,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 0.1,
+      "itsimp": 7.987,
+      "hardClaims": 1538.8639999999996,
+      "softClaims": 7494.307999999999,
+      "topHardShare": 0.8122875055885382,
+      "unallocated": 15.667567535545027,
+      "totalIT": 575.4794630385122
+    },
+    {
+      "id": "search-070",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.975,
+      "count": 167,
+      "canonicalUtility": 55.025199999999984,
+      "weightedMerit": 55.03895973993501,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 0,
+      "itsimp": 8.087,
+      "hardClaims": 1532.0639999999996,
+      "softClaims": 7494.536999999999,
+      "topHardShare": 0.8158928086555133,
+      "unallocated": 15.667567535545027,
+      "totalIT": 575.4794630385122
+    },
+    {
+      "id": "search-071",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.973,
+      "count": 166,
+      "canonicalUtility": 56.71875999999999,
+      "weightedMerit": 56.73407820111432,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 6.315,
+      "itsimp": 0,
+      "hardClaims": 2367.6519999999996,
+      "softClaims": 7496.913,
+      "topHardShare": 0.5279492087519619,
+      "unallocated": 14.88538507109005,
+      "totalIT": 575.4774630385123
+    },
+    {
+      "id": "search-072",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.94,
+      "count": 163,
+      "canonicalUtility": 56.33199999999998,
+      "weightedMerit": 56.36581949169504,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 4.34,
+      "itsimp": 1.942,
+      "hardClaims": 1608.2519999999995,
+      "softClaims": 7494.103999999999,
+      "topHardShare": 0.7772413775950537,
+      "unallocated": 14.945659952606636,
+      "totalIT": 575.4444630385123
+    },
+    {
+      "id": "search-073",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.935,
+      "count": 165,
+      "canonicalUtility": 55.41129999999998,
+      "weightedMerit": 55.4473407715015,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 1.34,
+      "itsimp": 4.937,
+      "hardClaims": 1552.9039999999995,
+      "softClaims": 7494.677999999999,
+      "topHardShare": 0.8049435122840822,
+      "unallocated": 15.58157227488152,
+      "totalIT": 575.4394630385123
+    },
+    {
+      "id": "search-074",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.895,
+      "count": 164,
+      "canonicalUtility": 54.80679999999998,
+      "weightedMerit": 54.86440762800943,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0,
+      "itsimp": 6.237,
+      "hardClaims": 1529.1539999999995,
+      "softClaims": 7494.906999999999,
+      "topHardShare": 0.8174454633084701,
+      "unallocated": 15.853136255924174,
+      "totalIT": 575.3994630385123
+    },
+    {
+      "id": "search-075",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.895,
+      "count": 164,
+      "canonicalUtility": 54.80679999999998,
+      "weightedMerit": 54.86440762800943,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0,
+      "itsimp": 6.237,
+      "hardClaims": 1529.1539999999995,
+      "softClaims": 7494.906999999999,
+      "topHardShare": 0.8174454633084701,
+      "unallocated": 15.853136255924174,
+      "totalIT": 575.3994630385123
+    },
+    {
+      "id": "search-076",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.978,
+      "count": 164,
+      "canonicalUtility": 56.009559999999986,
+      "weightedMerit": 56.02188481465926,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 4.64,
+      "itsimp": 0,
+      "hardClaims": 1612.0519999999995,
+      "softClaims": 7489.804999999999,
+      "topHardShare": 0.775409229975212,
+      "unallocated": 15.023430094786733,
+      "totalIT": 575.4824630385123
+    },
+    {
+      "id": "search-077",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.935,
+      "count": 162,
+      "canonicalUtility": 55.53539999999998,
+      "weightedMerit": 55.571521488967846,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 2.655,
+      "itsimp": 1.942,
+      "hardClaims": 1579.5929999999994,
+      "softClaims": 7494.9039999999995,
+      "topHardShare": 0.7913430864786059,
+      "unallocated": 15.11765047393365,
+      "totalIT": 575.4394630385123
+    },
+    {
+      "id": "search-078",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.96,
+      "count": 162,
+      "canonicalUtility": 54.69139999999998,
+      "weightedMerit": 54.713285314125685,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 0,
+      "itsimp": 4.622,
+      "hardClaims": 1528.6039999999996,
+      "softClaims": 7494.353999999999,
+      "topHardShare": 0.817739584614459,
+      "unallocated": 15.724143364928912,
+      "totalIT": 575.4644630385123
+    },
+    {
+      "id": "search-079",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.96,
+      "count": 162,
+      "canonicalUtility": 54.69139999999998,
+      "weightedMerit": 54.713285314125685,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 0,
+      "itsimp": 4.622,
+      "hardClaims": 1528.6039999999996,
+      "softClaims": 7494.353999999999,
+      "topHardShare": 0.817739584614459,
+      "unallocated": 15.724143364928912,
+      "totalIT": 575.4644630385123
+    },
+    {
+      "id": "search-080",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.96,
+      "count": 162,
+      "canonicalUtility": 54.69139999999998,
+      "weightedMerit": 54.713285314125685,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 30.867,
+      "value": 0,
+      "itsimp": 4.622,
+      "hardClaims": 1528.6039999999996,
+      "softClaims": 7494.353999999999,
+      "topHardShare": 0.817739584614459,
+      "unallocated": 15.724143364928912,
+      "totalIT": 575.4644630385123
+    },
+    {
+      "id": "search-081",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.993,
+      "count": 164,
+      "canonicalUtility": 55.192059999999984,
+      "weightedMerit": 55.19592371466004,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 3.055,
+      "itsimp": 0,
+      "hardClaims": 1590.4679999999994,
+      "softClaims": 7490.105,
+      "topHardShare": 0.7859321910280499,
+      "unallocated": 15.024413507109008,
+      "totalIT": 575.4974630385123
+    },
+    {
+      "id": "search-082",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.94,
+      "count": 164,
+      "canonicalUtility": 54.63239999999998,
+      "weightedMerit": 54.6651991194717,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 1.06,
+      "itsimp": 1.942,
+      "hardClaims": 1546.7679999999993,
+      "softClaims": 7494.603999999999,
+      "topHardShare": 0.80813670828463,
+      "unallocated": 15.427686018957347,
+      "totalIT": 575.4444630385123
+    },
+    {
+      "id": "search-083",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.98,
+      "count": 163,
+      "canonicalUtility": 54.32239999999998,
+      "weightedMerit": 54.33326665333068,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 0,
+      "itsimp": 3.042,
+      "hardClaims": 1528.5679999999995,
+      "softClaims": 7494.353999999999,
+      "topHardShare": 0.8177588435712382,
+      "unallocated": 15.672093601895737,
+      "totalIT": 575.4844630385122
+    },
+    {
+      "id": "search-084",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.98,
+      "count": 163,
+      "canonicalUtility": 54.32239999999998,
+      "weightedMerit": 54.33326665333068,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 0,
+      "itsimp": 3.042,
+      "hardClaims": 1528.5679999999995,
+      "softClaims": 7494.353999999999,
+      "topHardShare": 0.8177588435712382,
+      "unallocated": 15.672093601895737,
+      "totalIT": 575.4844630385122
+    },
+    {
+      "id": "search-085",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.98,
+      "count": 163,
+      "canonicalUtility": 54.32239999999998,
+      "weightedMerit": 54.33326665333068,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 32.467,
+      "value": 0,
+      "itsimp": 3.042,
+      "hardClaims": 1528.5679999999995,
+      "softClaims": 7494.353999999999,
+      "topHardShare": 0.8177588435712382,
+      "unallocated": 15.672093601895737,
+      "totalIT": 575.4844630385122
+    },
+    {
+      "id": "search-086",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.998,
+      "count": 165,
+      "canonicalUtility": 53.74655999999999,
+      "weightedMerit": 53.747634952699066,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 1.16,
+      "itsimp": 0,
+      "hardClaims": 1545.2679999999993,
+      "softClaims": 7491.862999999999,
+      "topHardShare": 0.8089211709554592,
+      "unallocated": 15.028939573459718,
+      "totalIT": 575.5024630385124
+    },
+    {
+      "id": "search-087",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 165,
+      "canonicalUtility": 53.39245999999999,
+      "weightedMerit": 53.42023852403251,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0,
+      "itsimp": 1.11,
+      "hardClaims": 1525.7789999999995,
+      "softClaims": 7491.917999999999,
+      "topHardShare": 0.8192536402716254,
+      "unallocated": 15.234875592417065,
+      "totalIT": 575.4524630385123
+    },
+    {
+      "id": "search-088",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 165,
+      "canonicalUtility": 53.39245999999999,
+      "weightedMerit": 53.42023852403251,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0,
+      "itsimp": 1.11,
+      "hardClaims": 1525.7789999999995,
+      "softClaims": 7491.917999999999,
+      "topHardShare": 0.8192536402716254,
+      "unallocated": 15.234875592417065,
+      "totalIT": 575.4524630385123
+    },
+    {
+      "id": "search-089",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 165,
+      "canonicalUtility": 53.39245999999999,
+      "weightedMerit": 53.42023852403251,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0,
+      "itsimp": 1.11,
+      "hardClaims": 1525.7789999999995,
+      "softClaims": 7491.917999999999,
+      "topHardShare": 0.8192536402716254,
+      "unallocated": 15.234875592417065,
+      "totalIT": 575.4524630385123
+    },
+    {
+      "id": "search-090",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 165,
+      "canonicalUtility": 53.39245999999999,
+      "weightedMerit": 53.42023852403251,
+      "LFR": 47.698,
+      "carry": 16.773,
+      "sustain": 34.367,
+      "value": 0,
+      "itsimp": 1.11,
+      "hardClaims": 1525.7789999999995,
+      "softClaims": 7491.917999999999,
+      "topHardShare": 0.8192536402716254,
+      "unallocated": 15.234875592417065,
+      "totalIT": 575.4524630385123
+    },
+    {
+      "id": "search-091",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.988,
+      "count": 162,
+      "canonicalUtility": 58.63282999999999,
+      "weightedMerit": 58.63986678401411,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 9.97,
+      "itsimp": 0,
+      "hardClaims": 1854.5649999999996,
+      "softClaims": 7584.115,
+      "topHardShare": 0.6740125042799795,
+      "unallocated": 14.191112559241711,
+      "totalIT": 575.4924630385124
+    },
+    {
+      "id": "search-092",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.941,
+      "count": 173,
+      "canonicalUtility": 58.24236999999998,
+      "weightedMerit": 58.276753284437845,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 7.981,
+      "itsimp": 1.942,
+      "hardClaims": 3649.004,
+      "softClaims": 7628.464,
+      "topHardShare": 0.3425592298610799,
+      "unallocated": 14.78985900473934,
+      "totalIT": 575.4454630385122
+    },
+    {
+      "id": "search-093",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.925,
+      "count": 167,
+      "canonicalUtility": 57.55586999999998,
+      "weightedMerit": 57.59906930197653,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 4.97,
+      "itsimp": 4.937,
+      "hardClaims": 1626.0759999999996,
+      "softClaims": 7524.487999999999,
+      "topHardShare": 0.768721757162642,
+      "unallocated": 15.187299763033181,
+      "totalIT": 575.4294630385122
+    },
+    {
+      "id": "search-094",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.98,
+      "count": 163,
+      "canonicalUtility": 56.53436999999998,
+      "weightedMerit": 56.5456791358272,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 1.975,
+      "itsimp": 7.987,
+      "hardClaims": 1565.7769999999996,
+      "softClaims": 7523.23,
+      "topHardShare": 0.7983256875021157,
+      "unallocated": 15.582050947867303,
+      "totalIT": 575.4844630385122
+    },
+    {
+      "id": "search-095",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 60
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.955,
+      "count": 160,
+      "canonicalUtility": 55.67386999999999,
+      "weightedMerit": 55.698934520534266,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 20.609,
+      "value": 0,
+      "itsimp": 9.937,
+      "hardClaims": 1534.4469999999997,
+      "softClaims": 7523.679999999999,
+      "topHardShare": 0.8146257250983581,
+      "unallocated": 16.018816350710907,
+      "totalIT": 575.4594630385122
+    },
+    {
+      "id": "search-096",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.997,
+      "count": 172,
+      "canonicalUtility": 57.997719999999994,
+      "weightedMerit": 57.99945998379954,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 8.25,
+      "itsimp": 0,
+      "hardClaims": 4888.5650000000005,
+      "softClaims": 7585.268,
+      "topHardShare": 0.2556987582245505,
+      "unallocated": 14.411958530805691,
+      "totalIT": 575.5014630385123
+    },
+    {
+      "id": "search-097",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.939,
+      "count": 172,
+      "canonicalUtility": 57.62155999999998,
+      "weightedMerit": 57.65673060566949,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 6.25,
+      "itsimp": 1.942,
+      "hardClaims": 2370.765,
+      "softClaims": 7530.317,
+      "topHardShare": 0.5272559701193497,
+      "unallocated": 14.81523104265403,
+      "totalIT": 575.4434630385122
+    },
+    {
+      "id": "search-098",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.924,
+      "count": 171,
+      "canonicalUtility": 56.83225999999998,
+      "weightedMerit": 56.875485368880376,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 3.24,
+      "itsimp": 4.937,
+      "hardClaims": 1605.3169999999996,
+      "softClaims": 7523.833,
+      "topHardShare": 0.7786624074871196,
+      "unallocated": 15.11267180094787,
+      "totalIT": 575.4284630385123
+    },
+    {
+      "id": "search-099",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.984,
+      "count": 168,
+      "canonicalUtility": 55.71875999999998,
+      "weightedMerit": 55.72767642822855,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 0.25,
+      "itsimp": 7.987,
+      "hardClaims": 1550.1769999999997,
+      "softClaims": 7523.833,
+      "topHardShare": 0.8063595318470086,
+      "unallocated": 15.802896919431284,
+      "totalIT": 575.4884630385124
+    },
+    {
+      "id": "search-100",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 65
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.984,
+      "count": 167,
+      "canonicalUtility": 55.577759999999984,
+      "weightedMerit": 55.58665386461837,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 22.338,
+      "value": 0,
+      "itsimp": 8.237,
+      "hardClaims": 1533.3769999999997,
+      "softClaims": 7524.062,
+      "topHardShare": 0.8151941759919448,
+      "unallocated": 15.836842417061616,
+      "totalIT": 575.4884630385122
+    },
+    {
+      "id": "search-101",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.996,
+      "count": 175,
+      "canonicalUtility": 57.30530999999999,
+      "weightedMerit": 57.3076023040922,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 6.55,
+      "itsimp": 0,
+      "hardClaims": 2381.765,
+      "softClaims": 7525.918,
+      "topHardShare": 0.5248208786341222,
+      "unallocated": 14.58734360189574,
+      "totalIT": 575.5004630385123
+    },
+    {
+      "id": "search-102",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.928,
+      "count": 173,
+      "canonicalUtility": 56.902549999999984,
+      "weightedMerit": 56.94354935553603,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 4.54,
+      "itsimp": 1.942,
+      "hardClaims": 1612.3649999999996,
+      "softClaims": 7525.967,
+      "topHardShare": 0.7752587038294682,
+      "unallocated": 14.952144549763036,
+      "totalIT": 575.4324630385124
+    },
+    {
+      "id": "search-103",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.923,
+      "count": 175,
+      "canonicalUtility": 55.98034999999998,
+      "weightedMerit": 56.02348808582613,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 1.54,
+      "itsimp": 4.937,
+      "hardClaims": 1563.3169999999996,
+      "softClaims": 7526.540999999999,
+      "topHardShare": 0.7995819146084897,
+      "unallocated": 15.288056872037918,
+      "totalIT": 575.4274630385123
+    },
+    {
+      "id": "search-104",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.953,
+      "count": 171,
+      "canonicalUtility": 55.36784999999998,
+      "weightedMerit": 55.39388512600926,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 0,
+      "itsimp": 6.507,
+      "hardClaims": 1530.5559999999996,
+      "softClaims": 7525.732999999999,
+      "topHardShare": 0.8166966775472445,
+      "unallocated": 15.643353080568723,
+      "totalIT": 575.4574630385124
+    },
+    {
+      "id": "search-105",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 70
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.953,
+      "count": 171,
+      "canonicalUtility": 55.36784999999998,
+      "weightedMerit": 55.39388512600926,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 24.037,
+      "value": 0,
+      "itsimp": 6.507,
+      "hardClaims": 1530.5559999999996,
+      "softClaims": 7525.732999999999,
+      "topHardShare": 0.8166966775472445,
+      "unallocated": 15.643353080568723,
+      "totalIT": 575.4574630385124
+    },
+    {
+      "id": "search-106",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.996,
+      "count": 172,
+      "canonicalUtility": 56.61311,
+      "weightedMerit": 56.615374614984624,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 4.82,
+      "itsimp": 0,
+      "hardClaims": 1621.3649999999996,
+      "softClaims": 7520.918,
+      "topHardShare": 0.7709553370154162,
+      "unallocated": 14.929061611374411,
+      "totalIT": 575.5004630385123
+    },
+    {
+      "id": "search-107",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.923,
+      "count": 170,
+      "canonicalUtility": 56.117949999999986,
+      "weightedMerit": 56.161194119472015,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 2.805,
+      "itsimp": 1.942,
+      "hardClaims": 1591.2059999999994,
+      "softClaims": 7524.209,
+      "topHardShare": 0.78556767634109,
+      "unallocated": 15.02780805687204,
+      "totalIT": 575.4274630385122
+    },
+    {
+      "id": "search-108",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 170,
+      "canonicalUtility": 55.22594999999999,
+      "weightedMerit": 55.25468243486616,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 0,
+      "itsimp": 4.772,
+      "hardClaims": 1530.2169999999996,
+      "softClaims": 7524.282999999999,
+      "topHardShare": 0.8168776062480029,
+      "unallocated": 15.668246445497633,
+      "totalIT": 575.4524630385122
+    },
+    {
+      "id": "search-109",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 170,
+      "canonicalUtility": 55.22594999999999,
+      "weightedMerit": 55.25468243486616,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 0,
+      "itsimp": 4.772,
+      "hardClaims": 1530.2169999999996,
+      "softClaims": 7524.282999999999,
+      "topHardShare": 0.8168776062480029,
+      "unallocated": 15.668246445497633,
+      "totalIT": 575.4524630385122
+    },
+    {
+      "id": "search-110",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 75
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.948,
+      "count": 170,
+      "canonicalUtility": 55.22594999999999,
+      "weightedMerit": 55.25468243486616,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 25.767,
+      "value": 0,
+      "itsimp": 4.772,
+      "hardClaims": 1530.2169999999996,
+      "softClaims": 7524.282999999999,
+      "topHardShare": 0.8168776062480029,
+      "unallocated": 15.668246445497633,
+      "totalIT": 575.4524630385122
+    },
+    {
+      "id": "search-111",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.981,
+      "count": 171,
+      "canonicalUtility": 55.81460999999999,
+      "weightedMerit": 55.82521679119035,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 3.155,
+      "itsimp": 0,
+      "hardClaims": 1591.9059999999995,
+      "softClaims": 7521.968,
+      "topHardShare": 0.7852222430218873,
+      "unallocated": 14.821419431279624,
+      "totalIT": 575.4854630385123
+    },
+    {
+      "id": "search-112",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.928,
+      "count": 171,
+      "canonicalUtility": 55.25494999999999,
+      "weightedMerit": 55.294762228804764,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 1.16,
+      "itsimp": 1.942,
+      "hardClaims": 1548.2059999999994,
+      "softClaims": 7526.467,
+      "topHardShare": 0.8073860971989518,
+      "unallocated": 15.224691943127963,
+      "totalIT": 575.4324630385122
+    },
+    {
+      "id": "search-113",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.968,
+      "count": 168,
+      "canonicalUtility": 54.932949999999984,
+      "weightedMerit": 54.950534170934716,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 0,
+      "itsimp": 3.142,
+      "hardClaims": 1529.1059999999995,
+      "softClaims": 7524.159,
+      "topHardShare": 0.8174711236500284,
+      "unallocated": 15.491729857819907,
+      "totalIT": 575.4724630385123
+    },
+    {
+      "id": "search-114",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.968,
+      "count": 168,
+      "canonicalUtility": 54.932949999999984,
+      "weightedMerit": 54.950534170934716,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 0,
+      "itsimp": 3.142,
+      "hardClaims": 1529.1059999999995,
+      "softClaims": 7524.159,
+      "topHardShare": 0.8174711236500284,
+      "unallocated": 15.491729857819907,
+      "totalIT": 575.4724630385123
+    },
+    {
+      "id": "search-115",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 80
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.968,
+      "count": 168,
+      "canonicalUtility": 54.932949999999984,
+      "weightedMerit": 54.950534170934716,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 27.417,
+      "value": 0,
+      "itsimp": 3.142,
+      "hardClaims": 1529.1059999999995,
+      "softClaims": 7524.159,
+      "topHardShare": 0.8174711236500284,
+      "unallocated": 15.491729857819907,
+      "totalIT": 575.4724630385123
+    },
+    {
+      "id": "search-116",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.986,
+      "count": 163,
+      "canonicalUtility": 55.012209999999996,
+      "weightedMerit": 55.01991278779031,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 1.39,
+      "itsimp": 0,
+      "hardClaims": 1548.6059999999995,
+      "softClaims": 7521.788,
+      "topHardShare": 0.8071775519402613,
+      "unallocated": 15.42564928909953,
+      "totalIT": 575.4904630385122
+    },
+    {
+      "id": "search-117",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 162,
+      "canonicalUtility": 54.63360999999999,
+      "weightedMerit": 54.646725214051386,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0,
+      "itsimp": 1.38,
+      "hardClaims": 1528.8059999999996,
+      "softClaims": 7521.468999999999,
+      "topHardShare": 0.8176315372911935,
+      "unallocated": 15.697213270142184,
+      "totalIT": 575.4804630385122
+    },
+    {
+      "id": "search-118",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 162,
+      "canonicalUtility": 54.63360999999999,
+      "weightedMerit": 54.646725214051386,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0,
+      "itsimp": 1.38,
+      "hardClaims": 1528.8059999999996,
+      "softClaims": 7521.468999999999,
+      "topHardShare": 0.8176315372911935,
+      "unallocated": 15.697213270142184,
+      "totalIT": 575.4804630385122
+    },
+    {
+      "id": "search-119",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 162,
+      "canonicalUtility": 54.63360999999999,
+      "weightedMerit": 54.646725214051386,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0,
+      "itsimp": 1.38,
+      "hardClaims": 1528.8059999999996,
+      "softClaims": 7521.468999999999,
+      "topHardShare": 0.8176315372911935,
+      "unallocated": 15.697213270142184,
+      "totalIT": 575.4804630385122
+    },
+    {
+      "id": "search-120",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 85
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 162,
+      "canonicalUtility": 54.63360999999999,
+      "weightedMerit": 54.646725214051386,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 29.187,
+      "value": 0,
+      "itsimp": 1.38,
+      "hardClaims": 1528.8059999999996,
+      "softClaims": 7521.468999999999,
+      "topHardShare": 0.8176315372911935,
+      "unallocated": 15.697213270142184,
+      "totalIT": 575.4804630385122
+    },
+    {
+      "id": "search-121",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.996,
+      "count": 162,
+      "canonicalUtility": 54.31961,
+      "weightedMerit": 54.32178287131487,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0.02,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.48,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.538800947867301,
+      "totalIT": 575.5004630385123
+    },
+    {
+      "id": "search-122",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-123",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-124",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-125",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 90
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-126",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.996,
+      "count": 162,
+      "canonicalUtility": 54.31961,
+      "weightedMerit": 54.32178287131487,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0.02,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.48,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.538800947867301,
+      "totalIT": 575.5004630385123
+    },
+    {
+      "id": "search-127",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-128",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-129",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-130",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 95
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-131",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 0,
+          "pct": 0
+        },
+        "itsimpMode": false,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.996,
+      "count": 162,
+      "canonicalUtility": 54.31961,
+      "weightedMerit": 54.32178287131487,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0.02,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.48,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.538800947867301,
+      "totalIT": 575.5004630385123
+    },
+    {
+      "id": "search-132",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 2,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-133",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 5,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-134",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 8,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    },
+    {
+      "id": "search-135",
+      "settings": {
+        "budget": 100,
+        "tolerance": 0,
+        "lfr": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "carry": 0,
+        "sustain": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "value": {
+          "basis": "bucket",
+          "pct": 100
+        },
+        "itsimp": {
+          "basis": "amount",
+          "amount": 10,
+          "pct": 0
+        },
+        "itsimpMode": true,
+        "merit": 45,
+        "weights": [
+          40,
+          25,
+          15,
+          10,
+          10
+        ]
+      },
+      "feasible": true,
+      "funded": 99.976,
+      "count": 161,
+      "canonicalUtility": 54.30361,
+      "weightedMerit": 54.316645995038826,
+      "LFR": 52.636,
+      "carry": 16.773,
+      "sustain": 30.567,
+      "value": 0,
+      "itsimp": 0,
+      "hardClaims": 1525.5059999999996,
+      "softClaims": 7520.23,
+      "topHardShare": 0.8194002514575494,
+      "unallocated": 15.534274881516591,
+      "totalIT": 575.4804630385123
+    }
+  ],
+  "feasibleCount": 135,
+  "changes": []
+}

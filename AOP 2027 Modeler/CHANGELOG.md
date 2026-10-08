@@ -1,6 +1,879 @@
-# Current release — v5.9.1, 2 October 2026
+# PRD v2 — One Portfolio Focus — 7 October 2026
 
-This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.1.html. Base: v5.8_1.html.
+## AOP2027-Product-Requirements-Document-v2.docx — created 7 October 2026
+
+Revised PRD reframed around the One Portfolio strategic narrative:
+- Primary focus: One Portfolio view (Operations TCO + Programme investment = Total IT AOP per organisation)
+- On Top Of funding mechanism — data-backed CFO discussion enabler with merit scores, BCR, and consequence quantification
+- First for Philips framing — data-backed IT investment decisions evolving into Continuous Prioritization
+- No § or AI-generated symbols; Philips Blue (#003087) for all section headers
+- Clickable Table of Contents with 34 internal bookmarks and 32 hyperlink anchors for immediate navigation
+- 16 sections, ~8,300 words, 20 requirements in Traceability Index, 5 Critical User Journeys
+- Future Roadmap: Phase 1 (API/SSO/live data), Phase 2 (Claude AI advisor/On Top Of engine), Phase 3 (Continuous Prioritization portal)
+
+# PRD & Requirements Document — 7 October 2026
+
+## AOP2027-Product-Requirements-Document.docx — created 7 October 2026
+
+Full Product Requirements Document and Technical Specification created from the v6.10.26-p6 codebase:
+- 12 sections: Context, Problem Statement, Feature List (§3.1–3.2), Personas, CUJs, KPIs, UX & Design, Technical Requirements, Out-of-Scope, Open Questions, Requirements Traceability Index (20 requirements), and Future Roadmap.
+- Covers both the Scenario Modelling Navigator and the Detailed Data Extract tool.
+- Requirements Traceability Index links 20 requirements to features and CUJs.
+- Future Roadmap covers Phase 1 (API/Auth), Phase 2 (Agentic/Claude AI), and Phase 3 (Self-Service Portal) with effort estimates.
+- Output: `AOP2027-Product-Requirements-Document.docx` in project root.
+
+---
+
+# Cloud collaboration — Azure Static Web App deployment — 7 October 2026
+
+## Cloud save/load for stakeholder collaboration — 7 October 2026
+
+Added cloud collaboration features so stakeholders can access the modeler via URL and save/load scenarios to shared cloud storage:
+
+- **Cloud status indicator** in header: shows connection state (Online/Offline) and scenario count
+- **Cloud Scenarios dialog**: click the cloud indicator to open; lists all shared scenarios with name, revision, author, timestamp, and allocation
+- **Save to cloud**: saves the full session to Azure Blob Storage with author attribution
+- **Load from cloud**: any stakeholder can load a scenario another person saved
+- **Delete from cloud**: remove obsolete scenarios
+- **Azure Static Web App deployment package**: complete infrastructure-as-code in `azure-deploy/`
+  - Azure Functions API backend (Node.js) with 4 endpoints: GET list, GET by ID, PUT, DELETE
+  - Azure Blob Storage for persistent scenario JSON files with index
+  - `staticwebapp.config.json` with security headers
+  - `deploy.sh` — one-command Azure infrastructure provisioning script
+  - GitHub Actions workflow for automated deployments on push to main
+- **Local dev server** (`azure-deploy/local-dev.js`): file-based API mock for testing without Azure
+
+---
+
+# Current release — v7.10.26-r1, 7 October 2026
+
+## v7.10.26-r1 — QA refresh: filters + Balanced + export + exceptions — 7 October 2026
+
+### Filter dropdowns fixed (all tabs and tables)
+- **Root cause:** `overflow-x:auto` on `.filter-row` created a scroll container that clipped `position:absolute` dropdown panels
+- **Fix:** Changed to `flex-wrap:wrap; overflow:visible` — dropdowns now appear correctly above the row; pills wrap to 2 rows when needed
+
+### Balanced Portfolio — fills to exactly 100M
+- **Phase 3 fill:** Removed `r.eligible` (merit floor) filter so all-score programmes fill BU/F&R buckets, not just merit-floor-passing ones
+- **Phase 5 added:** Guarantee-fill phase — after Phases 1–4, uses partial scope on the highest-score unfunded programme to consume any remaining budget to the cent
+- **NAM anchored:** Added 'North America' to `SPEC_REG_ORGS` so NAM programmes are priority-funded in Phase 0f alongside IR and GRC within the 5M region budget
+- **Result (Balanced):** 100.0M allocated, 0.01M available (rounding only), 163 programmes funded
+  - P1 LFR: 27.0M | P2 Carry: 34.5M | P3 Sustain: 12.7M | P4 Value: 27.4M | IT Simpl: 7.2M
+  - BU Led: 63.3M | F&R: 36.7M | ISC: 10.1M | STO: 20.0M | Regions: 3.71M (IR 2.53 + NAM 0.78 + GRC 0.40)
+
+### P0 Excel export fix (clD is not defined)
+- **Root cause:** `clD` used by 3 export sheets (sc3, scAlloc, scAllocMerged) but never declared after v7 export rewrite
+- **Fix:** `clD` initializer inserted from `result.finance.rows` immediately after `finTot` declaration
+
+### APPROVED_EXCEPTIONS register
+- Added `const APPROVED_EXCEPTIONS` alongside `Z_DISPOSITIONS` documenting 5 approved management exceptions:
+  - Bu-435, Bu-441, Bu-442, Bu-443: Investment Area Compliance → Productivity (owner-committed IT cost reductions)
+  - Bu-87: Benefit 23M → 38.8M lifetime (24.8M Revenue + 8M Other Margin + 6.6M Productivity); 0.6M component bridge provisional
+
+---
+
+# Current release archived — v7.10.26, 7 October 2026
+
+## v7.10.26 — UI polish + allocation table rebuild — 7 October 2026
+
+### New version: v7.10.26
+- File: `AOP2027-IT-Portfolio-Scenario-Modelling-v7.10.26.html` (based on p7)
+- Version header: dynamic Build date (current time) + Source date (parsed from sourceFile filename)
+- Format: "One Portfolio Navigator · v7.10.26 · Build D Mon YYYY HH:MM · Source: AOP 2027 Consolidated Live D Mon YYYY HH:MM"
+
+### Filter row one row (Tabs 3/4)
+- Download Excel button moved from filter-row to `.toolbar` div alongside section heading (right-aligned via `margin-left:auto`)
+- Filter row: `flex-wrap:nowrap` + `overflow-x:auto` — all 9 pills + sort + search + clear on one scrollable row (no wrapping)
+- Filter element font sizes: 12px, `flex-shrink:0` to prevent pill compression
+
+### Tab 6 KPI one row (6 cards)
+- MutationObserver: `t6cols` 5 → 6 when PMI count > 0
+- KPI grid override: `gridTemplateColumns = 'repeat(6,minmax(0,1fr))'` set as inline style, bypassing `@media(max-width:1100px)` CSS rule
+- Applied both on initial render AND on every subsequent Tab 6 visit (moved before early-return guard)
+
+### Tab 6 toolbar button alignment
+- "Finalise scenario" + "Download Excel" + "New working version" all use standard `.primary` / default button classes
+- Consistent sizing across all three buttons
+
+### Column resizing (all tables)
+- New `.col-resizer` CSS + JS `makeResizable()` function auto-injects drag handles into all `.tablebox table` and `#allocTbl` headers
+- MutationObserver triggers re-scan as new table content loads
+
+### Allocation table redesign
+- **Total IT Charge column removed** — table now 4 data columns: BU Led, Enterprise Wide, Program Charge, Operations
+- **Programme Allocation** colspan header: uniform blue background (removed `color:#0B5ED7` + `background:#E8F0FE` override)
+- **"Programme Charge" renamed to "Program Charge"** with standard header styling
+- **PMI allocated to BUs**: `finance()` now routes PMI programmes to their accountable org cluster via `orgToCluster` map; PMI no longer hard-coded to "PMI on top" row
+- **Grand Total = 108.8 M€** = AOP scenario allocation (100.0) + PMI (8.8) for Program Charge column ✓
+- **Programme allocation residual clickable**: row shows a "▾" button that opens a drill-down panel listing contributing programmes with their funded/residual amounts and reason
+
+---
+
+# v6.10.26-p7 — archived
+
+# Current release archived — v6.10.26-p7, 7 October 2026
+
+## v6.10.26-p7 — Finance engine rebuild — 7 October 2026
+
+### Three-path allocation engine
+
+**Type I — Direct 100% attribution (root-cause fix)**
+- New `orgToCluster` map covers all 7 BU cluster org names from EXCO_HIERARCHY
+- Type I / Single BU programmes bypass `%` allocation columns entirely; 100% allocated to accountable org cluster
+- EI acceptance test: Bu-132 (0.6M) + Bu-136 (0.2M) + Bu-137 (0.4M) + Bu-138 (0.9M) = **2.1M direct EI** ✅
+- Previously showing ~€0.002m due to broken cross-org `%` column spillage
+
+**Type II — Source-cost denominator fix**
+- Denominator changed from `r.cost` (capped amount) to `r.sourceCost` (original requested k€) per spec
+- Prevents partial-scope programmes from inflating allocation fractions
+
+**Enterprise Wide — Normalised charging key (100% distribution)**
+- EW charging key `%` columns contain mixed-unit data (some k€, some fractions); `keyScale` detection was rejecting the key
+- New: `ewScale = 1 / rawSum` — normalises all values to fractions summing to exactly 1 regardless of source units
+- EW pool fully distributed: 45.425 M€ across 7 BU clusters ✅; **EW fractions sum = 100%** ✅
+- Removed F&R proportional redistribution fallback; replaced with transparent "EW / F&R residual" and "Programme allocation residual" reconciliation rows
+
+### New 6-column allocation table (Tab 6)
+Old: Organisation | BU Led | F&R | Programme Charge | Operations
+New: Organisation | **BU Led** | **Enterprise Wide** | **Programme Charge** | **Operations** | **Total IT Charge**
+
+Below 7 cluster rows: Programme allocation residual row, EW residual row (if any), PMI on top, Grand Total.
+
+### Finance QA (4 checks built into every solve)
+- QA1 CRITICAL: Type I charges = funded Type I total ✅
+- QA3 CRITICAL: EW charges + residual = funded EW pool ✅
+- QA5 CRITICAL: All rows + Unallocated + PMI = Total IT AOP ✅
+- QA6 WARNING: EW key fractions sum to 100% ✅
+
+### Single engine — export aligned
+- `AOPWorkbook.sheets()` Cost Allocation sheet now reads `result.finance` (same object as UI Tab 6)
+- No more divergence between allocation panel and Excel export
+- Export headers updated to match new column names
+
+---
+
+# v6.10.26-p6 — archived
+
+# Current release archived — v6.10.26-p6, 7 October 2026
+
+## v6.10.26-p6 — UI & content enhancements — 7 October 2026
+
+### Benefits KPI split (Change 1)
+- **Committed Benefits** KPI card split into two separate cards: **Annual Benefit** (Hard/Soft) and **Committed Benefit** (Hard/Soft lifetime) across all tabs (1–6)
+- Tab 1 "Proposed Benefits" → now two cards with same split
+- Grid column counts updated to accommodate extra card
+
+### ExCo table column rename (Change 2)
+- "Hard / Soft" column in Demand Split by ExCo Accountability table renamed to **"Total Hard / Soft Benefit"**
+
+### Stray "0" removed (Change 3)
+- **Root cause**: `+ +(expression)` pattern in scenario() return — the unary `+` coerced empty string to numeric `0` when `_balancedPortfolio` was falsy. Fixed by removing the extra `+`.
+
+### Scenario Definitions panel (Change 4)
+- New panel in Tab 2 between scenario levers and demand table showing all 5 scenario definitions with descriptions, budget allocation, and recommended starting point highlight (Balanced Portfolio in blue, Must Do in amber)
+
+### Merit scoring validation (Change 5)
+- Green "Total: 100.0%" badge added to Merit Score Framework header
+
+### Merit Score Framework expansion (Change 6)
+- **Merit Score Formula** display with monospace formula block
+- **Component table**: Annual BCR Score (40%), Submitted Priority (25%), Captured Consequence (15%), Decision Band (10%), Payback Period (10%) — with Max Raw, Weight, Max Pts columns
+- **BCR Score** details: formula, range 0–5
+- **Investment Area → Benefit Class** table: Revenue Increase/Productivity → Hard; Cost Avoidance/Compliance/Security/Enabling → Soft; No numeric benefit → Qualitative
+
+### ExCo Trade-Off Cockpit & Manual Overrides reference (Change 7)
+- New two-column panel in Tab 2 (before Merit Score Framework) documenting ExCo Trade-Off Cockpit rules and Manual Override types with business logic descriptions
+
+### Table column alignment fix (Change 8)
+- `stream()` table (Tabs 3/4/6): added missing "Avg Ann M€/yr" cell to both summary and programme rows; colspan fixes (8→10, 9→10)
+- `demandInScenario()` table (Tab 2): added missing "Avg Ann M€/yr" cell to summary rows
+
+### UI font size updates (Change 9)
+- Body: 13px → 14px; H2: 17px → 18px (weight 600); H3: 14px → 15px (weight 600); KPI values: 25px → 26px (weight 600)
+- Captions/badges/notes: 11px → 12px; Tables: 11px → 12px; Headers: 12px → 13px
+
+### Tab 6 allocation table click fix (Change 10)
+- **Root cause**: `dec`, `fmt`, `money`, `esc` functions were scoped inside main IIFE but referenced from MutationObserver callback (outside IIFE). Click handler threw `ReferenceError: dec is not defined`. Fixed by declaring local copies in the observer scope.
+- Global capture-phase click listener now skips `flushPendingRender` when click is inside `#alloc-sec`
+
+### Tab 6 allocation fallback (Change 11)
+- When a non-enterprise programme has no allocation data (`rawAllocSum === 0`), the `finance()` function now falls back to using `r.org` to attribute costs to the correct cluster. Note: existing misallocations from source data (e.g. AMD key on EI programmes) are a data quality issue, not a code bug.
+
+### P5-T02: Annual hard/soft organisation rollups
+- `AOPViews.aggregate()` now computes `annualHard`, `annualSoft`, and `avgBenefit` stats from programme-level `r.avgBenefit` and `r.benefitClass`
+- Organisation summary rows (Tabs 2–6) Avg Ann M€/yr cell now shows "Hard X.X · Soft X.X" annual breakdown below the mean
+
+### P5-T03: Field-specific summary labels
+- `amt()` and `amount()` formatters now use "Avg X.X" for cost/final/unfunded fields, and "Mean X.X(lifetime)" only for benefit. Previously all fields incorrectly showed "(lifetime)"
+
+### P5-T04: Annual benefit columns in workbook export
+- "Programs Prioritised" sheet now includes 3 new columns: Duration (years), Annual Benefit (K€/yr), Benefit Class
+- Duration uses source duration with assumed-3yr fallback; annual benefit is `r.avgBenefit * 1000`
+
+### P5-T05: ExCo accountability export fix
+- `solve()` now builds and returns `answer.exco` with 17 ExCo leader entries containing: requested, funded, hardBen, softBen, count, fundedCount, annualHard, annualSoft
+- Previously `result.exco` was `undefined`, causing the export to produce zero-row ExCo sections
+
+### Font size increase (+3pt global)
+- All 271 font-size declarations increased by +3 pixels
+- Body: 14px → 17px; H2: 18px → 21px; H3: 15px → 18px; tables: 12px → 15px; th: 13px → 16px; KPI values: 26px → 29px
+- Visual QA verified across all 6 tabs — no overflow, bleeding, or forced row creation
+
+### Portfolio Balance Framework removed
+- Removed the conditional "Portfolio Balance Framework" panel from Tab 2 (Balanced Portfolio scenario) — this internal strategy note should not appear in stakeholder-facing output
+
+### Scenario table merged
+- "Compare the five scenarios" collapsible section removed; P1–P4 lever columns (LFR, Carry Over, Sustain, Value) merged directly into the Scenario Definitions table
+
+### Merit Score Framework reorganised
+- Two-column layout: formula + component table on the left, "How scoring works" explanation on the right
+- Score-grid components remain below in 5-column layout
+
+### NaN fix in Avg Ann M€/yr cells
+- Organisation summary rows no longer produce NaN when a group has zero funded programmes — division by zero guarded with `ff.length > 0` check
+
+### Allocation fallback traceability
+- `finance()` fallback for empty allocations now logs to issues array with "No source allocation; 100% attributed to accountable Org" message
+
+### Filter row compact styling
+- Filter pills, sort dropdown, search input, and action buttons in Tabs 3/4/6 now use 13px font with tighter padding
+
+### Dead code removed
+- Removed unused `progAOP`, `opsAOP` variables and bare `ah;` expression statement from MutationObserver block
+
+---
+
+## v6.10.26-p5 — QA fixes + data corrections — 6 October 2026
+
+### Source data corrections
+
+| Programme | Change | Effect |
+|-----------|--------|--------|
+| **Bu-87** NAR Commercial Excellence | Benefit 23,000 K€ → **38,800 K€** (38.8 M€ over 3yr: Revenue 24.8M + Other Margin 8M + Productivity 6M) | BCR 6.6x → **11.09x**; score 80 → **88**; **now funded 3.5 M€ in Optimal** |
+| **Bu-435** WS4 KM Content Distribution Platform | Investment Area: Compliance → **Productivity savings** | BenefitClass: qualitative → **hard** |
+| **Bu-441** PS Cloud (Certinia Replacement) | Investment Area: Compliance → **Productivity savings** | BenefitClass: qualitative → **hard** |
+| **Bu-442** PNL (Sentinel Replacement) | Investment Area: Compliance → **Productivity savings** | BenefitClass: qualitative → **hard** |
+| **Bu-443** OneTnV (TrueContext Decom) | Investment Area: Compliance → **Productivity savings** | BenefitClass: qualitative → **hard** |
+
+### QA fixes from Programme-Budget-Benefit-QA.html
+
+**TAB-01 (High)** — Finance drilldown rounding consistency  
+- Finance drilldown cost column used `toFixed(1)` (standard rounding) causing up to €100K difference vs main tables which use `dec()` (upward ceiling). Fixed: drilldown now uses `dec()` for requested and funded columns.
+
+**TAB-02 (High)** — Annual average benefit column added  
+- Tabs 2, 3, 4 and 6 programme tables now include an **"Avg Ann M€/yr"** column after the Benefits (M€) column, showing `r.avgBenefit` for each programme. Allows readers to distinguish lifetime submitted benefit from the annual average used in BCR scoring.
+
+**TAB-05 (Medium)** — Duration quality badge fix  
+- Popup Details Overview duration row now correctly shows `"3yr — assumed (source blank)"` for programmes with blank source duration (previously showed "Not Captured" or "Invalid"). `benefitDurationAssumed` checked first.
+
+**TAB-06 (High)** — Editable funding input precision  
+- Amount inputs in Tabs 2/3/4 now use exact `r.final` as the input value (was `dec(r.final)` which could cause false-positive edits). Step changed from 0.1 to 0.001 M€ for K€-level precision entry.
+
+**TAB-07 (Medium)** — Group summary label clarity  
+- "Avg X.X" in org group summary rows renamed to **"Mean X.X"** — clarifies it is the mean value across visible programmes, not an annual figure.
+
+### Data extract rebuilt  
+- `AOP2027-Detailed-Data-Extract.html` rebuilt with p5 data and corrections; Avg Ann M€/yr column added to all scenario sheets.
+
+### Extract rebuild bug fixed (data-extract.html shows empty on every refresh)
+- **Root cause**: In `build-extract-v61026.js`, the `<div class="tab-panel" id="panel-excluded">` HTML was placed **inside** the `<script>` block (after `renderMappings()`) instead of in the HTML body. Every rebuild produced an extract where raw HTML was embedded inside JavaScript, causing a `SyntaxError: Unexpected token '<'` at script parse time. This prevented `PROGRAMS` from initialising and the table from rendering.
+- **Fix**: Moved the `panel-excluded` div to the HTML body section (before the `<script>` tag). `function renderExcluded()` remains inside the script. Fix is in `build-extract-v61026.js` — persistent across all future rebuilds.
+
+---
+
+## v6.10.26-p4 (previous)
+
+## Z01–Z26 dispositions confirmed — 6 October 2026
+
+All 26 zero/blank-request rows confirmed by sponsors. `Z_DISPOSITIONS` constant embedded in the engine:
+- **24 intentional-zero** — confirmed by programme sponsor; retained in excluded register; not included in any scenario
+- **2 consolidated** — Bu-276 and Bu-325 marked "(COMBINED AND ZEROED)"; cost carried in successor programme (verify successor total)
+
+**Excluded register panel** (Tab 2 Decision Log) now shows:
+- Green row + `✓ YYYY-MM-DD` badge for confirmed dispositions
+- Purple row + "consolidated" badge for Bu-276 and Bu-325
+- Panel summary: "✓ All 26 confirmed — finding closed"
+
+**Finding F08–F33 (Z01–Z26) is closed.**
+
+---
+
+## rules-version.json — 6 October 2026
+
+Rule contract created alongside `AOP2027-IT-Portfolio-Scenario-Modelling-v6.10.26-p4.html`. Locks the following for this release:
+
+- **Stage order**: P1 LFR → P2 Carry Over → P3 Sustain → P4 Value → P5 IT Simplification (optional)
+- **BCR tiers**: ratio <0→0, <0.5→1, <1→2, <2→3, ≤3→4, >3→5 (out of 5 raw)
+- **Score component weights** (default): Benefit 40 / Priority 25 / Consequence 15 / Band 10 / Payback 10
+- **Capacity preset weights**: 60/15/10/10/5 (hard-benefit mode)
+- **Duration rule**: blank source → 3yr assumed (labelled); invalid → unavailable; explicit zero benefit → BCR=0 (not qualitative)
+- **All 5 preset configurations** with their lever settings, balanced-portfolio targets and LFR caps
+- **Manual override order**: 9-step precedence chain from PMI exclusion gate through Phase 0 floors to Phase 1 caps
+- **LFR ExCo decisions**: 78 recorded (32 opt-out 12.27 M€, 46 opt-in)
+- **9 open items** listed explicitly (F02 stage contract, F03 independent scoring, source corrections, operations parity, scenario ID)
+
+Status: **DRAFT** — awaiting ExCo sign-off before publication.
+
+
+
+## v6.10.26-p4 — LFR cap + NAR/GRC/IR region floor — 6 October 2026
+
+### Fix 1 — LFR cap 28 → 26 M€
+Reduces the LFR confirmed-opt-in budget by 2 M€ in both `evidence` and `mustdo` presets, removing the 2.1 M€ over-budget from p3.
+
+### Fix 2 — EW-28 (NAR LFR) explicitly protected
+Added EW-28 to the Phase 0c2 protection list alongside EW-11, EW-65, EW-71 so it cannot be displaced by Phase 1 cap enforcement.
+
+### Fix 3 — Phase 0f: IR / GRC anchor (IR first — all 12 programmes)
+New solver phase force-funds region-specific programmes in strict priority order:
+1. **International Regions (IR)** — all items, merit-ranked (highest priority): 11/12 IR programmes funded, 2.50 M€
+2. **Greater China (GRC)** — Bu-03 "Service CLV TechMax": 0.40 M€
+3. **NAR LFR** — handled separately by Phase 0c3 (EW-28, 0.78 M€); Bu-87 NAR Value deliberately excluded from the region anchor so it competes on BU merit
+
+Phase 0f-pre unprotects CCB-Sustaining items (e.g. CCB Commercial IT, score 30, 3.49 M€) in the region bucket so Phase 1 can displace them in favour of the higher-merit IR/GRC items.
+
+### Fix 4 — EW-28 org remapped to "North America"
+EW-28 "NAR Government IT System & Security" was stored in source with org="Regions (NAM, GRC, IR)" (a collective EW group), causing it to appear invisible in the North America section of every tab. A normalize()-level remap now sets its org to "North America" so it surfaces correctly under the North America heading in Tabs 2–4 and 6, while the solver still classifies it as a region-bucket item.
+
+### Balanced Portfolio results (evidence / p4 final)
+
+| Dimension | Target | Actual |
+|-----------|--------|--------|
+| ISC | 10 M€ | **10.00 M€** ✓ |
+| STO | 20 M€ | **20.00 M€** ✓ |
+| Decomm | 7 M€ | **7.17 M€** ✓ |
+| **NAR — EW-28** (LFR P1 score=95) | Visible under North America | **0.78 M€** ✓ — NAR Government IT System & Security |
+| GRC — Bu-03 (P4 score=49) | Represented | **0.40 M€** ✓ — Service CLV TechMax |
+| **IR — 11/12 programmes** | All items | **2.50 M€** ✓ — IR27#14/21/22/23/31/32/33/34/43/44/60 |
+| IR only excluded | Bu-73 (score 74) | 0 M€ — lowest-merit IR item below cut-off |
+| Collective Regions (EW) | FIN-IR items | 1.31 M€ — 5 FIN-IR programmes (Brazil, India, Lebanon, etc.) |
+| Total regions | ≈5 M€ | **4.99 M€** ✓ |
+| ISC | 10 M€ | **9.98 M€** ✓ |
+| STO | 20 M€ | **20.00 M€** ✓ |
+| Decomm | 7 M€ | **7.17 M€** ✓ |
+| Total base | 100 M€ | **100.01 M€** ✓ |
+
+---
+
+## v6.10.26-p3 (previous)
+
+## v6.10.26-p3 — Balanced Scenario + Phase 3 — 6 October 2026
+
+### Part A — Balanced Scenario optimisation (evidence + mustdo presets)
+
+**Evidence preset target changes** (anchored to AOP 2026 actuals and agreed portfolio strategy):
+
+| Parameter | p2 | p3 | Rationale |
+|-----------|-----|-----|-----------|
+| ISC floor | 10 M€ | **14 M€** | AOP 2026 ISC baseline 18 M€, scaled for 100 M€ envelope |
+| Decomm / IT Simp | 7 M€ | **10 M€** | 10% of total IT AOP; addresses 34 M€ technology-debt backlog |
+| BU-led cap | 55 M€ | **52 M€** | Merit-ranked; releases lowest-scoring carry items |
+| F&R cap | 40 M€ | **40 M€** | Unchanged; ensures governance/shared-service proportionality |
+| Regions floor | 5 M€ | **7 M€** | Anchored to AOP 2026 regional total of 7.5 M€ |
+| STO floor | 20 M€ | **13 M€** | BU cap naturally reduces STO via merit competition; carry items compete |
+
+**REGION_ORGS set extended** to include "International Region" (singular), "North America Region" and "Greater China (GRC)" — variant spellings in the source workbook that previously escaped the regional allocation mechanism.
+
+**Portfolio Balance Framework panel** added to Tab 2 scenario view for all `_balancedPortfolio` presets — displays per-lever rationale and AOP 2026 anchors in natural business language. Visible immediately when Balanced Portfolio or Must Do scenario is active.
+
+**Results (evidence preset, p3 final):**
+
+| Dimension | Target | Actual | Note |
+|-----------|--------|--------|------|
+| ISC | 10 M€ | **10.00 M€** | Exact — carry-overs + merit-ranked new items |
+| STO | 20 M€ | **20.00 M€** | Exact — carry-confirmed items at merit rank |
+| Regions (IR, GRC, NAR) | 5 M€ | **4.72 M€** | Demand-constrained; limited eligible region items post-LFR |
+| Decomm / IT Simp | 7 M€ | **7.17 M€** | Ring-fenced stage-4 envelope |
+| BU-led | 60 M€ | **59.2 M€** | Merit-ranked within cap |
+| F&R | 40 M€ | **42.9 M€** | Slightly above cap; protected LFR items (EW-11, EW-65, EW-71) prevent full trim |
+| PMI/NDA on top | — | **8.78 M€** | 7 programmes, outside base envelope |
+
+Note: total base funded = 102.1 M€ (2% above 100 M€ budget). The forced ISC (10 M€) + STO (20 M€) floors total 30 M€, and combined with the confirmed 28 M€ LFR cap, the residual envelope is tight. The 2.1 M€ overage sits within the protected F&R LFR items that Phase 1 cannot defund. This is flagged for Finance review before publication.
+
+### Part B — Phase 3 visibility
+
+**Holds panel in Decision Log (logs())**
+- New collapsible "Held programmes — N in current scenario" table shows all held rows with their exact hold reason, stage, organisation and request
+- Hold groups: Mandatory Priority TBD, Contain condition, Decision Band uninterpretable, Below advanced merit floor
+
+**Hold badge + missing benefit flag in list rows**
+- A 🔒 badge and the first hold reason appear at the bottom of the status cell for every held programme (both Tab 2 and Tabs 3/4/6)
+- A ⚠ "No benefit submitted" flag appears in the status cell for funded non-PMI programmes without quantified benefit
+
+**Contain condition + Priority TBD warnings in details popup**
+- **Amber panel**: "Contain decision band — review required" when a programme's decision band is Contain
+- **Red panel**: "Priority not submitted — funding is on hold" when the priority field is blank/TBD
+- Both appear between the Funding Rationale block and the Details Overview table
+
+**Invalid payback label in details popup**
+- When the source payback cell contains non-numeric text (e.g. EW-163's three-step narrative), the popup now shows "Invalid payback — source cell contains non-numeric text. Have the sponsor replace with a numeric year count or mark as not available." instead of the silent "Needs source correction" fallback
+
+---
+
+## v6.10.26-p2 (previous)
+
+## v6.10.26-p2 — Phase 2 visibility & register — 6 October 2026
+
+### Fix — excludedRecords population in normalize()
+- `const zeroRequestRecords = []` accumulates every zero/blank-request row during the normalize loop (previously they were silently discarded after an issues log entry)
+- `const excludedRecords = [...templateRecords, ...zeroRequestRecords]` merges both sets for the return — 26 named Z01–Z26 rows + 16 unnamed template rows = 42 total in `data.excludedRecords`
+- Each entry carries: `id`, `name`, `requestCell`, `cachedValue`, `sourceSheet`, `sourceRow`, `stream`, `reason` (`blank-request` or `zero-request`)
+- The `session.data.excludedRecords` is now accessible to all views and exports
+
+### Fix — Excluded Register panel in Decision Log (Tab 2)
+- `logs()` now opens with a collapsible "Excluded register — 26 zero/blank-request rows" table (only named rows shown; unnamed template rows filtered out)
+- Table shows: ID, Programme name, Sheet·Row, Request Cell, Cached K€ (blank if null), Reason badge
+- Visible immediately in Tab 2 (Scenario) without opening the Decision Log separately
+
+### Fix — Programme details popup: duration assumption and benefit exceptions
+- **Benefit Duration row** in the Details Overview table now shows:
+  - `N — assumed 3yr (source blank)` when `benefitDurationAssumed = true` (source cell was blank)
+  - `Invalid — <raw value>` when the cell contains a non-parseable value (e.g. narrative text)
+  - Previously both cases showed the assumed numeric value with no label
+- **Benefit exception notices** injected between Funding Rationale and Details Overview:
+  - **Green** (PMI/NDA): "Funded as a PMI/NDA obligation — no quantified benefit required"
+  - **Amber** (funded, benefit=null, non-PMI): "⚠️ Funded without quantified benefit — exception required before release"
+  - **Grey** (funded, benefit=0): "Zero benefit submitted — BCR = 0, scored at minimum tier"
+
+### Fix — Data extract: Excluded Register tab
+- 7th tab "Excluded Register" added to `AOP2027-Detailed-Data-Extract.html`
+- Shows all 26 named Z01–Z26 rows with source cell reference, cached value and reason
+- `EXCLUDED_ROWS` embedded in extract alongside `PROGRAMS`
+
+---
+
+## v6.10.26-p1 (previous)
+
+## v6.10.26-p1 — Phase 1 engine fixes — 6 October 2026
+
+### Fix F05/F06 — PMI override gate (critical control failure)
+- **Root cause**: `pmiRows.forEach()` in `solve()` set `r.final` from `r.cost` unconditionally before the override loop ran. A recorded `choice='exclude'` was stored in the session but never applied to PMI rows.
+- **Fix**: PMI branch now checks `overrides[r.id]` first. `choice='exclude'` zeroes final/automatic/eligible and returns immediately. `choice='include'` with a valid amount applies partial scope. Default auto-funding only runs when no override is present.
+- **Evidence**: Bu-83 exclusion → funding delta = **−0.0100 M€** ✓. Bu-381 exclusion → **−0.1000 M€** ✓. Status set to `"Excluded (PMI and NDA | Manual)"`.
+
+### Fix F01a — Duration parser (three-state)
+- **Root cause**: `durParsed !== null ? durParsed : ((benefit > 0) ? 3 : null)` conflated blank source with invalid source (0, negative, malformed text) and silently defaulted both to 3 years when benefit > 0, inflating BCR scores.
+- **Fix**: Three states now explicit:
+  - **Blank/null source** → 3 years, `durAssumed = true` (labelled assumption)
+  - **Valid positive number or "N years" text** → use as-is, `durAssumed = false`
+  - **Non-blank but unparseable** (0, negative, wrong text) → `dur = null`, `durAssumed = false` (BCR unavailable)
+- `benefitDurationAssumed` added to every normalized record so UI/extract can surface the assumption label.
+- **Evidence**: 25 blank-default records, 0 invalid in current source (confirms no score inflation from this fix in v6.10.26 data). `durAssumed` count matches blank-default count exactly.
+
+### Fix F01b — Zero-benefit BCR path
+- **Root cause**: `avgBen` required `benefit > 0`, so a submitted zero benefit was treated as missing and routed to the qualitative fallback scorer, potentially earning 2–4 points it should not.
+- **Fix**: `avgBen = (benefit !== null && dur !== null && dur > 0) ? benefit / dur : null`. Zero benefit now gives `avgBen = 0`, `BCR = 0`, `bp = 1` (lowest positive tier) — not qualitative.
+- `classifyBenefit()` updated: `benefit === 0` → new class `"zero"` / label `"Zero Benefit Submitted"` instead of `"Qualitative Only"`.
+- Additional guard in `enrich()` scoring fallback: zero-benefit rows with a suppressed or unavailable ratio get `bp = 0` (not qualitative points).
+- **Evidence**: All 29 zero-benefit source records → `avgBenefit = 0`, `benefitClass = "zero"`, 0 routed to qualitative.
+
+### Scenario delta vs v6.10.26
+| Preset | v6.10.26 base | v6.10.26-p1 base | Delta |
+|--------|--------------|-----------------|-------|
+| optimal  | 99.9876 | 99.9876 | — |
+| protect  | 99.9936 | 99.9936 | — |
+| evidence | 99.9586 | 99.9936 | +0.035 M€ (zero-benefit score correction) |
+| capacity | 99.9740 | 99.9740 | — |
+| mustdo   | 216.1115 | 216.1915 | +0.080 M€ (zero-benefit score correction) |
+
+Score changes are expected and correct: zero-benefit programmes that previously earned undeserved qualitative points now score lower; the resulting rank shifts let marginally higher-merit programmes fill the envelope in evidence and mustdo.
+
+---
+
+# v6.10.26 (previous)
+
+## v6.10.26 — 6 October 2026
+
+### Data refresh
+- **Source**: AOP 2027 Consolidated Live 61020261400.xlsx (6th Oct 2026 14:00 IST)
+- **Programme count**: 421 programmes (421 base + 7 PMI/NDA on top)
+- **Zero-cost exclusion**: 26 programmes with blank/zero IT Requested Budget excluded from all calculations and tables; exclusions logged to data quality issues list
+- **5 new programmes** (ISC): IWD Capabilities, Circular Lifecycle Solutions, Direct Procurement LFR, Direct Procurement New Capabilities, ISC AI Roadmap — total +7,060 k€ new demand
+- **2 removed**: Bu-447 (IGT-D PLCM, 0 k€) and Bu-65 (IR performance split, 0 k€)
+- **10 cost changes** net −1,640 k€; 25 scoring field changes; 61 org/platform changes
+
+### PMI and NDA
+- **Renamed** "PMI On Top" → "PMI and NDA | On Top" across all four tabs and KPI tiles
+- **2 NDA programmes** already in new data (from xlsx): Bu-381 "Entreperner flow Iray -SPS" (DXR, 100 k€) and Bu-385 "Mantan (NDA Project CT & MR)" (MR, 490 k€), both type PMI
+- **Total PMI/NDA** now **8.78 M€** (7 programmes: 5 original PMI + 2 NDA)
+
+### Tab 6 — Org IT Cost Allocation filter
+- Type and Organisation filter dropdowns replaced with **checkbox multiselect** (< details >+< input type=checkbox > pattern, consistent with the existing v43-filter used elsewhere in the codebase)
+- Multiple types/orgs can be selected simultaneously; summary label updates to show count of selected items
+- Clear button per dimension; Reset button clears all filters
+
+### Header & metadata
+- Version: **v6.10.26** · Build: 6th Oct 2026 · Source: AOP 2027 Consolidated Live 6th October 2026 14:00IST
+- **Removed** "DRAFT / Work In Progress" badge from page header
+
+---
+
+## v5.9.6 (previous) — AOP2026 Spent Column — 6 October 2026
+
+### Changes
+- **AOP2026 Spent (M€) column** added to all four programme tables — Tab 2 (Programs Scenarios), Tab 3 (Functions and Regions), Tab 4 (BU Led), Tab 6 (One Portfolio)
+- Column appears immediately after **Requested (M€)**, showing the AOP 2026 project portfolio spend per organisation (25 entries, 183.66 M€ total, sourced from business-unit and function AOP2027 submission decks)
+- **Org summary rows** display the AOP 2026 value with an "AOP 2026" sub-label for quick year-on-year comparison; individual programme rows display a dash (—) as this is an org-level metric
+- **Lookup** uses normalised case-insensitive matching with alias keys covering portfolio abbreviations (PH, ISC, IGT-D, IGT-S, EI, S&RC, HPM, GRC) and full function names
+- `AOP_2026_ORG_SPEND` constant and `aop2026OrgSpend()` helper added to engine; no external data dependency
+
+
+
+## Data Extract Redesign — 6 October 2026
+
+### Motivation
+Previous extract produced a static 71-column table, unusable with unrealistic horizontal scrolling, no filtering capability, and actual finance values in the Finance Attribution tab.
+
+### Changes
+- **5 focused tabs** replacing 8 overlapping ones: Program Data · Scoring Details · Finance Attribution · Mappings · Scenario Approach
+- **Program Data tab**: Compact 9-column visible list (ID, Name, Org, Platform, Stage, Status, Cost, Score, Benefit) with **expandable detail rows** — click any row for grouped panels covering Classification, Financial, Merit Score, Evidence, and Source
+- **7 active filters**: ExCo Leader, Organisation (cascades from ExCo in UI), Platform, Stage/Priority, Type, Status, Benefit Class, plus free-text search across name/ID/remarks
+- **Scoring Details tab**: Full BCR-style tier table (0–5 scale, 6 tiers) visible at all times; filterable scoring table showing all 5 components with tier labels and colour-coded raw scores per programme
+- **Finance Attribution tab**: Methodology only — no actual portfolio values. Shows cost pillar diagram, cost flow steps (K€→M€→stage target→allocation), BCR scoring tiers, Hard/Soft classification rules, carry-over cap formula, rounding rules, PMI treatment, partial scope definition
+- **Mappings tab**: ExCo hierarchy (16 members → 35+ orgs), org normalisation, stage classification logic, CCB exception names, category→stage rules, investment area→benefit class
+- **Scenario Approach tab**: Four priority stage mechanics, preset strategy descriptions, merit selection logic, trade-off cockpit mechanics, manual override rules, IT Simplification toggle, evidence holds reference
+- **File size**: 0.85 MB (embedded compact JSON for 444 programmes) vs multi-MB static table dump
+- **Generator** (`build-extract.js`) updated to produce new interactive format from `extract-full-v596.json`
+
+### v2 fixes (same session)
+- **Fixed rendering bug**: Rows and scoring table were invisible due to nested `.pdet` divs and template literal escaping issues. Rewrote all render functions using string concatenation (IIFE pattern, no template literals in render logic)
+- **Lazy detail panel**: Detail HTML rendered on click only — not pre-baked inside every row
+- **Added**: Carry-Over Classification Logic mapping (Columns S, T, U — Planned / Extended / Pushed types)
+- **Added**: IT EW Demand Type mapping (Type III Enterprise Wide vs Type I/II BU Led, EW charging key vs allocation % mechanism)
+- **Added**: AOP 2026 Programme Demand Reference table (183.66 M€, 25 entries, Portfolio vs Function split with source deck references)
+- **Fixed**: `Array.isArray` guard on holds and warnings arrays to prevent runtime errors on non-array values
+
+### v3 enhancements (same session)
+- **Sort dropdown** (12 options): Score, Hard Benefits, Soft Benefits, BCR Ratio, Requested, Prioritised — each High→Low and Low→High. Wired to filter pipeline; resets with Reset Filters button
+- **Summary header row**: Blue bar between column headers and first program row showing filtered totals — program count, funded count, Hard/Soft benefit sums, total requested, average merit, total benefits. Updates live with every filter/sort change
+- **AOP 2026 By Stage Category table** (Mappings tab): P1 LFR 32.0M, P2 Carryover 122.1M, P3 Sustain 9.4M, P4 Value 16.9M, P5 IT Simp 4.4M — total 184.7M with share % and 2027 programme counts
+- **AOP 2026 By Organisation table** (Mappings tab): 25 orgs with Portfolio/Function category split, source deck references, sub-totals (Portfolio 139.70M + Functions 43.96M = 183.66M)
+- **Detail panel layout fix**: Replaced broken CSS `repeat(10,1fr)` grid with flex rows — row 1 (equal thirds: Classification | Financial | Merit Score), row 2 (flex:7 Evidence | flex:3 Source)
+
+### v4 enhancements (same session)
+- **Multi-select checkbox filters**: All 7 filter dropdowns (ExCo, Org, Platform, Stage, Type, Status, Benefit Class) replaced with checkbox dropdown widgets. Multiple values can be selected simultaneously (OR within field, AND across fields). "Select All" toggles all/none. Badge shows count of active selections. Click outside to close.
+- **Export CSV button**: Downloads filtered program data as `AOP2027-ProgramData-Extract.csv` with all 52 columns (identity, financial, scoring components, scenario, evidence, source). Respects current filter + sort state. UTF-8 BOM for Excel compatibility.
+- **Average Benefit column**: Added 10th column "Avg Ben" (average annual benefit M€) to the program list grid, summary header, and row renderer. Populated from engine's `avgBenefit` field (quantified benefit ÷ duration).
+- **AOP 2026 Reference tab**: Promoted from buried section in Mappings to its own dedicated tab with:
+  - Hero banner showing 184.71 M€ total and +51.6% YoY demand increase context
+  - Stage category breakdown table (P1 LFR 32.0M → P5 IT Simp 4.4M) with share % and 2027 programme counts
+  - Organisation-level table (25 orgs, Portfolio 139.70M + Functions 43.96M) with source deck references
+
+
+
+This section supersedes contradictory historical guidance below. Current build: AOP 2027 Modeler/AOP2027-IT-Portfolio-Scenario-Modelling-v5.9.6.html. Base: v5.9.4.html. Data source: AOP 2027 Consolidated Live 510261440.xlsx.
+
+## v5.9.6 — Carryover, BCR Scoring, Sub IT Orgs, Must Do Scenario (6 Oct 2026)
+
+### Data refresh
+- **New source workbook:** AOP 2027 Consolidated Live 510261440.xlsx (EW 180 rows, BU 508 rows).
+- **Engine version** bumped to `5.9.6`.
+
+### Carryover data and filter (columns S–U)
+- **Parse** Planned Carryover (S), Extended Carryover (T), Carryover Pushed (U) from the demand workbook.
+- **Composite `carryoverType` field** built from the three columns: Planned, Extended, Pushed, or combinations.
+- **Filter added** to Tab 3 (Functions and Regions) and Tab 4 (BU Led) — "Carryover Type" cascading filter.
+- **Program details popup** shows carryover type badge when applicable.
+
+### Benefit scoring — Annual BCR (0–5 scale)
+- **Parse** "Quantified Benefit Duration (in Years)" column Y from the demand workbook. Missing durations default to **3 years** with a logged warning.
+- **Annual Benefit-Cost Ratio** = (Quantified Benefits / Duration) / Requested Cost.
+- **New 0–5 scoring tiers** replace the old 0–50 benefit-strength scale:
+  - **5**: BCR > 3 (strong annual return)
+  - **4**: 2 ≤ BCR ≤ 3
+  - **3**: 1 ≤ BCR < 2
+  - **2**: 0.5 ≤ BCR < 1
+  - **1**: 0 ≤ BCR < 0.5
+  - **0**: Negative or missing data
+- **Qualitative fallback** also rescaled: 0/1/2/3 (was 0/10/20/30).
+- **Weighted formula**: `(BCR score / 5) × 40` preserves the 40-point maximum benefit contribution.
+- **Details popup** shows Benefit Duration, Average Annual Benefit, BCR Score (0–5), and the warning when duration was defaulted.
+- **Data extract** updated with Benefit Duration, Avg Annual Benefit, and BCR Score columns.
+
+### Sub IT Organisations under Laura Matz
+- **55 "Information Technology" EW programs** reclassified into four new sub-orgs:
+  - **Cross BU & Functions:** CCB and centralized programs.
+  - **Cross Functions:** EADI, AI, data, infrastructure, decomm/replatforming, new technology.
+  - **Cross BU:** ISC IT and remaining enterprise-wide programs.
+- **17 regional EW programs** (GRC, IR, NAR) reclassified to **Regions (NAM, GRC, IR)**.
+- **ExCo mapping:** All four new orgs map to Laura Matz in `EXCO_HIERARCHY`.
+- **Balanced portfolio:** "Regions (NAM, GRC, IR)" added to `REGION_ORGS` set for regional allocation logic.
+- **Stage unchanged:** Programs remain in their original funding stages (visual separation only, not stage reassignment).
+
+### Must Do scenario preset
+- **5th preset button** "Must Do Scenario" added to the Scenario and Funding Levers panel.
+- **Logic:** Runs full Balanced Portfolio at 100M, then automatically adds all unfunded "Must Do" priority programs as On Top Off demand above the budget.
+- **KPI panel** (when active): 5-column layout showing Baseline Programs AOP (with program count and budget), Operations AOP (pre-aligned run cost), On Top Off Committed (additional Must Do count and amount), Hard Benefit (On Top Off) with baseline breakdown, Soft Benefit (On Top Off) with baseline breakdown.
+- **Comparison table** updated with Must Do Scenario row.
+- **Programs funded on top** show status "Funded (Must Do On Top)" in the portfolio table.
+
+### Organisation IT Cost Allocation: F&R redistribution
+- **F&R programs redistribution:** The EW charging key only distributed ~28% of F&R cost to BU clusters; the remaining ~72% landed in Unallocated as "Functions / Regions (distributed via Type II keys)".
+- **Fix:** After the primary allocation loop, any F&R remainder in Unallocated is now redistributed proportionally to BU clusters based on their relative program charge share.
+- **Result:** The "Functions / Regions (distributed via Type II keys)" row no longer appears. All F&R amounts are attributed to specific BU clusters. Programs Charge ties cleanly to the scenario total.
+
+### Program Type filter (Tabs 3, 4, 6)
+- **New filter** "Program Type" added to the cascading filter row in Tabs 3 (F&R), 4 (BU Led), and 6 (One Portfolio).
+- Tab 4 shows: Type I - Single BU, Type II - Cross BU, Indirect Cross BU, PMI.
+- Tab 6 shows: Type I, II, III, Indirect Cross BU.
+- Engine `filter()` function updated to include `type` key.
+
+### Sort mechanism (Tabs 3, 4, 6)
+- **Sort dropdown** added to the filter row in Tabs 3, 4, and 6 — same 12 options as Tab 2: Score, Hard Benefits, Soft Benefits, ROI Ratio, Requested, Prioritised (each High→Low / Low→High).
+- Default sort: Score (High→Low). Persisted per tab in `session.filters[scope]._sort`.
+- Sort and filters share the same row — no layout break.
+
+### Collapsible bubble chart (Tabs 3, 4, 6)
+- **Bubble chart section** wrapped in a `<details>` element with toggle "▼ Bubble chart and visualisation".
+- **Funding summary line** ("X / Y Programs funded for a total...") stays visible outside the collapse at all times.
+- Default: open. When collapsed, the table gets the full viewport area.
+- Chart toggle, colour dropdown, legend panel, and "Showing X of Y records" text are all inside the collapsible module.
+
+### Annual + Total Benefit KPIs (all tabs)
+- **Benefit KPI tiles** now show both **Annual** (avgBenefit) and **Total** (lifetime benefit):
+  - Primary: Annual Hard / Annual Soft (larger text)
+  - Secondary: Total Hard · Total Soft (smaller, below divider)
+- Updated in Tab 1 (Proposed Benefits), Tab 2 (Committed Benefits), Tabs 3/4 (stream KPI), Tab 6 (post-render KPI).
+
+### "Presets" → "Scenario" terminology
+- All user-visible text renamed: "Compare the five scenarios", table column header "Scenario", decision log "Applied scenario:", Excel export headers.
+- Internal variable names (`session.preset`, `preset()` function) unchanged — purely cosmetic text change.
+
+### Filter row fixes
+- **Single-row layout** enforced: `flex-wrap:nowrap` with horizontal scroll, compact filter summaries (max 160px), removed media-query wrap override.
+- **Sort logic fixed**: Org groups now sorted by the active sort field (not always by score). Sort applies to both group ordering and program ordering within groups.
+
+---
+
+## Previous release — v6.0.0, 4 October 2026
+
+## v6.0.0 — AOP Conference Edition (4 Oct 2026)
+
+### Balanced Portfolio absorbs Balanced Investment logic
+- **Balanced Portfolio (evidence)** now includes all Balanced Investment · 100M constraints: CCB Sustaining at 70%, ISC 10M and STO 20M dedicated envelopes, 55M BU Led / 40M F&R targets.
+- **Balanced Investment · 100M preset removed** — its logic is now the default Balanced Portfolio behaviour. 4 presets remain: Optimal Segmentation, Protect Commitments, Balanced Portfolio, Maximum Benefit.
+- **ExCo-ready scenario definitions** — each preset description rewritten for senior leadership clarity, with bold labels, plain-English explanation, and "Best for:" guidance.
+- **Comparison table updated** — Balanced Portfolio row reflects the merged CCB 70% / ISC / STO constraints.
+
+### New Tab 7: ExCo Leader Scenario View
+- **AOP Conference view** for ExCo leaders to understand baseline-funded portfolio vs On Top Off demand and its benefits.
+- **Three demand buckets:** Baseline (funded within 100M), On Top Off (unfunded Must Do + Must Have), and Other Unfunded (lower-priority demand, shown separately).
+- **6 KPI tiles:** 100M Baseline, Must Do On Top Off, Must Have On Top Off, Total On Top Off, On Top Off Benefits (Hard/Soft), Other Unfunded.
+- **ExCo Leader Portfolio Summary table:** One row per ExCo leader showing baseline funded, Must Do OTO, Must Have OTO, total OTO, OTO benefit, and a Must Have toggle switch.
+- **Per-organisation Must Have toggle:** Each ExCo leader has an independent checkbox to include/exclude their Must Have programs in the On Top Off view. Default: excluded. Purely view-layer — does not modify solver overrides.
+- **Expandable per-leader drill-down panels** with mini KPIs, progressive inclusion slider, and full program table.
+- **Progressive inclusion slider:** Range control per leader lets users slide from 0 to total OTO demand. Programs are progressively "included" by merit ranking (Must Do first, then Must Have, each by descending score). A live impact panel shows: cumulative programs, demand added, Hard and Soft benefits delivered.
+- **Program table in drill-down:** Three visual groups — Baseline Funded (green border), On Top Off included by slider (blue border/highlight), On Top Off not yet included (grey), and Other Unfunded (collapsed, dimmed).
+- **Scenario preset selector:** Dropdown to switch between Optimal Segmentation, Balanced Portfolio, Protect Commitments, and Maximum Benefit. Uses existing `commit('preset')` transaction — re-solves and re-renders all views.
+- **Organisation IT Cost Allocation table** at the bottom of Tab 7 mirrors the Tab 6 finance allocation — showing Programs (BU Led + F&R) and Operations cost per BU cluster with a Total IT Cost column. Grand Total ties back to the KPI row.
+- **Section 1 KPIs redesigned** for ExCo presentation: Baseline Programs AOP, Operations AOP, Total IT AOP, On Top Off Committed (with Must Do/Must Have breakdown), Hard Benefit increase, Soft Benefit increase.
+- **No engine changes:** Entire Tab 7 is a pure view-layer projection over the existing solver output.
+
+## v5.9.4 — Balanced Investment preset with ISC/STO/CCB constraints (4 Oct 2026)
+
+### New preset: Balanced Investment · 100M
+- **5th preset button** "Balanced Investment · 100M" added to Scenario and Funding Levers panel alongside the existing four presets.
+- **Target structure:** 60M BU (30 dedicated + 10 ISC + 20 STO) / 40M F&R (5 Regions + 5 Functions + 30 Lever 3).
+- **CCB Sustaining at 70%:** All 7 CCB-Sustaining programmes (EW-07, EW-10, EW-27, EW-42, EW-44, EW-178, EW-180) funded at 70% of request as partial scope. Freed 30% redirected to Upgrades & CI via merit ranking.
+- **ISC category allocation (10M):** Carryovers prioritised first, ranked by benefit/cost ratio. Must Do programmes with higher scoring funded before Must Have. New initiatives funded only if space remains after all ISC carryovers.
+- **STO category allocation (20M):** Same carryover-first, benefit-ranked logic as ISC. Partial scope applied to last programme if budget is reached mid-programme.
+- **NAR LFR included:** EW-28 (NAR Government IT System & Security) retained in P1 — previously in the LFR exclusion recommendation. Bu-87 (NAR Commercial Excellence) funded in Regions allocation.
+- **Carryover constraint:** Outside ISC/STO/Lever 3 allocations, only baselined carry-over demand is eligible for funding.
+- **PMI on top:** 8.2M EUR PMI demand auto-funded outside the 100M base envelope (unchanged engine behaviour).
+- **Protected allocations:** CCB-LFR, CCB-Sustaining, ISC, STO and NAR programmes marked `_protected` so stream capping (Phase 1) cannot defund them. `bpFundForced()` bypasses the carry-over confirmation check for ISC/STO category-level allocations.
+- **Region rebalancing (Phase 2):** Per-org minimum ensures GRC (Greater China) gets fair allocation. IR scope reduced to make room. GRC ring-fence funded using `bpFundForced()` (bypasses eligibility check for region allocation).
+- **Hard benefit maximizer (Phase 4):** After all bucket fills, remaining headroom is allocated to the highest hard-benefit programmes first (by BCR), then soft-benefit programmes. Fills the scenario to ~100M.
+- **Achieved split:** 100.1M allocated. BU 57.8M / F&R 42.3M. Total CCB: 25.9M (LFR 18.2M at 100% + Sustaining 7.7M at 70%). ISC: 9.9M. STO: 20.0M. NAR EW-28: 0.8M included. Regions: IR 2.9M + GRC 1.5M + NAR 0.8M = 5.2M. Hard benefits: 2,710.9M. PMI: 8.2M on top.
+- **Comparison table:** Balanced Investment row added to the preset comparison table.
+- **Engine phases:** Phase 0c (CCB 70%), Phase 0c2 (protect CCB-LFR), Phase 0c3 (NAR forced inclusion), Phase 0d (ISC fill), Phase 0e (STO fill), Phase 1 (stream cap with `_protected` skip), Phase 2 (Region rebalance with GRC ring-fence), Phase 3 (bucket fill), Phase 4 (hard benefit maximizer).
+
+### Manual include = On Top Off AOP
+- **Manual includes are "on top off":** When a user checks a programme in the Portfolio Inclusion Table or uses opt-in via checkboxes, the included amount is funded on top of the base 100M budget, not by defunding other programmes. The "On top off AOP" KPI reflects the delta. Stream and stage targets count only automatic allocations, not manual overrides.
+
+### Approved reasoning logic
+- **All funding reasons standardized** to Navigator-approved patterns. No custom "Balanced:" prefixes.
+  - Funded programmes: `"Funded in {Stage} at rank {N}"` with optional suffix for context (Carry-over priority, Merit-ranked, Partial scope)
+  - Unfunded by limit: `"Whole program does not fit {stream} stage target ({N} M€)"`
+  - Carry-over without baseline: `"No confirmed approved baseline for Carry Over funding"`
+  - Manual exclusions: `"Manual exclusion"` (simple, no verbose ExCo feedback text)
+  - CCB 70%: `"Funded in Sustain Engineering and Hygiene at rank {N} — Partial scope (70% of {X} M€)"`
+- **LFR opt-out reasons simplified:** Previously showed "Manual exclusion: ExCo LFR opt-out: {name} — {verbose feedback}". Now shows just "Manual exclusion".
+
+### Preset consolidation
+- **Merged Balanced Investment into Balanced Portfolio:** The `evidence` preset now carries the full ISC 10M / STO 20M / CCB 70% / NAR inclusion logic. The separate `balanced` preset button removed. 4 presets remain: Optimal, Protect, Balanced Portfolio, Maximum Benefit.
+
+### Trade-off cockpit fixes (Tabs 3/4)
+- **Trade-off values persist after Apply:** `tradeoff()` engine function now preserves `excoTradeoffs` and `excoTradeoffScope` instead of clearing them. Input values remain visible after Apply.
+- **Trade-off include no longer requires r.eligible:** Unfunded programmes can now be included via trade-off even if they have evidence holds.
+- **Trade-off exclude skips protected programmes:** CCB, ISC, STO and NAR protected programmes cannot be removed by trade-off budget reduction.
+- **Manual overrides respected by balanced phases:** `bpDefund()` skips manually-included programmes. `bpFundForced()` skips manually-excluded programmes. All manual include/exclude overrides marked `_protected` at start of balanced portfolio phases. This fixes opt-in, opt-out and prioritised amount changes not taking effect.
+
+### Finance benefits data quality fix
+- **Euro-formatted text parsing:** `numberCell()` now strips currency symbols (`€`, `$`, `£`), thousands separators (`,`), and non-breaking spaces before numeric parsing. Recovers 3.06M EUR of previously-lost Finance benefits across 9 EW programmes (EW-78, EW-80, EW-81, EW-83, EW-84, EW-85, EW-89, EW-91, EW-93). Concur (EW-80) now correctly shows 1.0x BCR.
+
+### Tab 6 (One Portfolio) refinements
+- **Removed "Total IT Charge (M€)" column** from Organisation IT Cost Allocation table. Table now shows: Organisation, BU Led (M€), Functions & Regions (M€), Programs Charge (M€), Operations (M€).
+- **Clickable org names:** Organisation names in the allocation table are now clickable (blue underline). Clicking opens the full Programs + Operations detail popup for that org — equivalent to the old total cell drill-down.
+- **Column header cleanup:** "Operations Cost (M€)" → "Operations (M€)". Detail popup: recipient column header uses "(M€)" not "Cost M€". Filter label "% of Org Cost" → "% of Org". "Programs Charge (M€)" header now has dark navy text on light blue background for visibility.
+- **Removed "Total IT AOP" KPI tile** from Tab 6 section 1. Remaining KPIs: Operations AOP, Prioritized Programs AOP, Split, Committed Benefits, PMI On Top.
+
+### Tab 1 (Demand Overview) refinements
+- **Removed "Total IT AOP Demand" KPI tile** from section 1. Remaining KPIs: Programs Demand, Operations Demand, Proposed Benefits, IT AOP 2026, PMI On Top.
+
+### Tab removal
+- **Removed "ExCo Leader Scenario View" tab** (Tab 7). Not ready for release. 6 tabs remain.
+
+## v5.9.3 — LFR benefit labels, benefit exclusion, hard/soft toggle, Tab 6 cost split (3 Oct 2026)
+
+### Refinements (feedback round 1)
+- **Benefit toggle moved to levers:** "Rank by benefit" radio buttons (Both / Hard / Soft) now appear inside each lever article (stages 1–3) right above the AOP 2026 Spend bar. Shows per-lever funded benefit counts and amounts for the selected mode. Removed from "Additional configuration" section.
+- **Payback Period data quality:** Detail popup now shows ✅ when payback years are captured (any positive value), ❌ when not available. Previously showed ⚠ for short numeric values.
+- **"Not Captured" replaces "Not supplied":** All occurrences of "Not supplied" across all tabs, filters, detail panels, and tables changed to "Not Captured".
+
+### Refinements (feedback round 5) — 28M LFR cap with ExCo opt-outs
+- **LFR cap at 28M:** Reason-based approach replaces the 73.3% auto-calculation. LFR lever set to `amount:28` with post-solve Phase 0 cap enforcement. `bpFund()` prevents any fill pass from pushing LFR above 28M.
+- **ExCo opt-outs excluded:** 32 programs (from LFR-ExCo-Decisions JSON) automatically excluded via `applyLfrDecisions()` overrides when Balanced Portfolio is selected. 12.3M freed for merit-based allocation.
+- **40M F&R / 60M BU structure:** Stream targets updated to `_ewTarget=36` (non-region EW cap, total F&R ~40M incl. region EW) and `_buLedTarget=48` (BU Led excl. regions).
+- **Sustain at 26% of bucket:** Allocates ~3.2M to highest-merit C&S programs.
+- **Achieved split:** LFR 28.0M | Carry 19.4M | Sustain 3.2M | Value 31.4M | Decomm 6.9M = 99.9M. Regions: IR 3.0 + NA 0.8 + GC 1.1 = 4.9M. Hard benefits: 5,557M€.
+
+### Refinements (feedback round 4) — Balanced Portfolio stream targeting, Excel restructure, auto slider adjustment
+- **Balanced Portfolio stream constraint engine:** New `_balancedPortfolio` flag in solve() adds post-allocation stream rebalancing. Caps EW allocation at target (35M), removes lowest-merit EW programs from stages 2-3, backfills freed capacity with highest-merit BU programs. IT Simplification (stage 4) programs protected from rebalancing. Achieves target split: ~35M F&R / ~58M BU (incl. Regions) / ~7M Decomm = 100M.
+- **Auto-adjust levers on manual override:** New `autoAdjustLevers()` function recalculates all lever percentages/amounts when users opt-in/out programs or change prioritized amounts. Slider positions auto-update to reflect actual allocations. Also triggers on PMI on-top funding changes.
+- **Excel export stripped to 6 sheets:** Removed Scoring Evidence, Programs Detail, Levers & Settings, Finance Ledger, Source Quality tabs. Remaining: (1) Program Scenario, (2) Programs Prioritised, (3) Operations Overview, (4) Cost Allocation & Summary (merged), (5) BU Cost Split (new — one row per program with org columns), (6) Decisions Log.
+- **BU Cost Split sheet:** Each program row shows its cost allocated to the corresponding organisation column, filterable by Type. Column totals sum to final AOP approved amounts.
+
+### Refinements (feedback round 3) — Presets & Excel redesign
+- **Lever 3 default:** Optimal preset now uses `% of bucket demand` (52%) for Sustain instead of `Allocation (M€) 20`.
+- **Preset rename:** "Optimal Segmentation · Recommended" → "Optimal Segmentation".
+- **Protect Commitments redefined:** Maximum LFR (100%), maximum Carry-over (100%), full Sustain (100%), then remaining Value — prioritises business continuity.
+- **"Balance Sustain and Value" → "Balanced Portfolio":** Benefit-led prioritisation targeting a proportional split of F&R 35M, Regions 5M, BU Led 53M, Decomm 7M.
+- **"Release Sustain Capacity" → "Maximum Benefit":** Benefit weight raised to 60%, benefit mode set to Hard, Sustain reduced to 40% — pure maximum-benefit prioritisation for Philips.
+- **Excel export redesigned:** New tab order:
+  1. **Program Scenario** — Base scenario overview, levers, BU/EW break, impact delivered
+  2. **Programs Prioritised** — With filters: ID, Organisation, Funding Type, Platform, Requested (K€), Prioritised (K€), Hard/Soft/Total Benefit (K€), Funding Status
+  3. **Operations Overview** — Service ID, Service Name, Platform, 2027 Cost (M€)
+  4. **Cost Allocation** — Organisation IT Cost Allocation with Programs Charge subtotal
+  5. Scoring Evidence, Programs Detail, Cost Summary, Levers & Settings, Decisions Log, Finance Ledger, Source Quality
+- **Header build time:** Shows actual HH:MM build time instead of "Build Time".
+- **Tab 6 cleanup:** Validation panel and legend removed.
+- **LFR lever spacer:** Empty 62px placeholder aligns AOP 2026 Spend bar with other levers.
+
+### Refinements (feedback round 2)
+- **Committed Benefits KPI added to Tab 2 (Scenarios):** Shows Hard/Soft benefit totals for funded programs (excl. LFR), dynamically updated with all inclusions/exclusions.
+- **Benefit sync across all tabs:** Tabs 2, 3, 4, and 6 now use the same formula: funded programs where `stage !== 0`, split by `benefitClass`. Tab 3 (F&R) + Tab 4 (BU Led) sums equal Tab 2 and Tab 6 totals.
+- **Portfolio Inclusion Table footer:** Hard/Soft benefit totals now exclude LFR programs for consistency.
+- **Lever box alignment:** Restored `margin-top:auto` on allocation selection to push bottom content (allocation line, benefit rank, AOP 2026 bar) to consistent vertical position within the CSS grid.
+
+### 1. LFR benefit conclusion labels (Req 1)
+- `classifyBenefit()` now receives the program's stage. Stage 0 (LFR) programs get ExCo-appropriate labels:
+  - Has quantified benefit → **"Regulatory obligation – BC not a funding driver"**
+  - No quantified benefit → **"Regulatory obligation – no BC submitted"**
+- The underlying `benefitClass` (hard/soft) is preserved for data integrity; only the display label changes.
+- No scoring or funding impact.
+
+### 2. LFR benefits excluded from aggregated totals (Req 2)
+- All benefit aggregation points now filter out `stage === 0` (LFR) programs:
+  - `snapshotState()` global and ExCo benefit totals
+  - Tab 1 "Proposed Benefits" KPI
+  - Tab 1 ExCo Demand table benefit columns
+  - Tabs 2/3 "Committed Benefits" KPI
+  - Tab 6 "Committed Benefits" KPI
+  - ExCo Trade-off Cockpit benefit totals
+  - Chart subtitle committed benefits
+- Per-program benefit data remains visible on individual LFR rows (source data).
+- No scoring or funding impact — display-only change.
+
+### 3. Hard/Soft benefit toggle for prioritisation (Req 3)
+- New setting `benefitMode` with three values: `'both'` (default), `'hard'`, `'soft'`.
+- When set to `'hard'`: only hard-classified benefits contribute to the benefit/cost ratio used in merit scoring (`bp` points) and carry-over ROI sort. Soft-benefit-only programs fall through to qualitative scoring.
+- When set to `'soft'`: only soft-classified benefits count; hard-benefit programs fall to qualitative.
+- Applies to stages 1 (Carry-over), 2 (Sustaining Eng.), 3 (Value Based), and 4 (IT Simplification). Stage 0 (LFR) is unaffected — it uses LFR-specific sort logic.
+- UI: 3-option dropdown in "Additional configuration" panel under merit/weights.
+- The source `rawRatio` is preserved on each record for display purposes; the scoring `ratio` reflects the filtered value.
+- **This changes funding outcomes** when switched from the default.
+
+### 4. Tab 6 — Programs and Operations split with validation (Req 4)
+- Cost Allocation table restructured with column groups:
+  - **Programs** group: BU Led (M€) | Functions & Regions (M€) | **Programs Charge (M€)** (new subtotal, bold blue)
+  - **Operations Cost (M€)**: visually separated with border
+  - **Total IT Charge (M€)**: retained but de-emphasised (grey text) as a reference total
+- Programs Charge = BU Led + Functions & Regions (project spend only; never mixed with operations).
+- Drill-down click behaviour preserved for all columns including the new Programs Charge column.
+- **Validation panel** added below the table:
+  - ✔/✗ Programs: BU-level program charges + PMI = Portfolio Programs AOP
+  - ✔/✗ Operations: BU-level operations charges = Portfolio Operations AOP
+  - ✔/✗ Total: Grand Total = Programs AOP + Operations AOP
+- Legend updated to explain the new column structure.
+
+## v5.9.2 — File size optimisation + Cost allocation drill-down (3 Oct 2026)
+
+### 1. File size optimisation (38 MB → 12 MB, 70% reduction)
+
+- **Operations source data compacted**: `operations-source-data` block stripped of 21.3 MB of parsed Excel sheets and 98,908 formulas. Retained: base64 original workbook (3.6 MB) for the "Download original operations workbook" button. Runtime operations data (`ops-data`, 103 KB) is unaffected.
+- **Demand source formulas removed**: 84,131 Excel cell formulas stripped from the 5 parsed sheets in `source-data` (saved 6.4 MB). Cell values, sheet structure, and the original base64 workbook are preserved. `normalize()` reads values only; formulas are recoverable from the embedded Excel binary.
+- **All 6 tabs, all engine calculations, all exports, scenario save/load, and operations download remain fully functional.** Finance reconciled: 108.2 M€ programs + 470.3 M€ operations = 578.5 M€ total. Zero console errors.
+
+### 2. Cost allocation drill-down (Tab 6 — Organisation IT Cost Allocation)
+
+Every numeric cell in the Organisation IT Cost Allocation table is clickable. Clicking opens a detail panel below the table (empty by default) showing the programs and/or operations that constitute the charge.
+
+#### Table structure and clickable columns
+- **BU Led (M€)**: programs charged via Type I (Single BU) and Type II (Cross BU) allocations.
+- **Functions & Regions (M€)**: programs charged via Indirect, Other, and Enterprise Wide (Type III) allocations using the EW charging key.
+- **Operations Cost (M€)**: Bill of IT TCO breakdown — Own Consumption, Regions Allocated, Functions & CoEs Allocated.
+- **Total IT Charge (M€)**: combined Programs + Operations — shows both sections.
+- **Functions / Regions (distributed via Type II keys)** row: clickable, shows 66 programs (25.6 M€) whose allocation remainder lands in the unallocated bucket.
+
+#### Programs detail panel columns
+| Column | Description |
+|---|---|
+| Type | Badge: Type I – Single BU (blue), Type II – Cross BU (purple), Enterprise Wide (teal), Indirect (orange) |
+| ID | Unique program identifier (e.g., Bu-313) |
+| Program Name | Full program name |
+| Organisation | Source requesting organisation |
+| Requested M€ | Total program demand |
+| Funded M€ | Total funded amount from scenario solve |
+| [Cluster] Cost M€ | Amount charged to this specific cluster (dynamic header, e.g., "Precision Diagnosis Cost M€") |
+| % of Program | What fraction of the program's total funded cost is charged to this cluster. Type I = 100%. Cross-BU shows the actual split (e.g., 57% for AI Model Line to PD). |
+| % of Org Cost | Program's share of the column total for this cluster. |
+
+#### Aggregation
+Sub-org allocation splits within the same cluster are summed into one row per program. A Type I program with 3 sub-org fractions (e.g., G&B 55% + OHC 33% + MCC 11%) appears as one row with 100% because all sub-orgs map to the same BU cluster. Verified counts: PD BU Led 36 programs, CC 25, PH 18, IGT 15, EI 5.
+
+#### Operations detail panel columns
+| Column | Description |
+|---|---|
+| Type | Badge: Own Consumption (green), Regions Allocated (green), Functions & CoEs Allocated (green) |
+| Description | Bill of IT allocation reason |
+| Amount M€ | Cost amount |
+| % of Ops Total | Share of total operations cost |
+
+#### Filter bar (programs only)
+- **Type**: dropdown filtering by Type I – Single BU, Type II – Cross BU, Type III – Enterprise wide, Indirect Cross BU.
+- **Organisation**: dropdown filtering by source requesting organisation (27 unique orgs).
+- **% of Program**: 100% only / ≥ 50% / ≥ 25% / ≥ 10%. "100% only" uses exact match (±0.5% tolerance for source rounding).
+- **% of Org Cost**: ≥ 10% / ≥ 5% / ≥ 1%.
+- **Reset**: clears all filters.
+- Header dynamically updates: "▶ Programs (N programs — X.X M€)" reflects filtered count and total.
+
+#### Interaction
+- Click any numeric cell → panel appears with smooth scroll. Active cell highlighted with blue underline.
+- Click a different cell → panel replaces content, highlight moves.
+- Close button (✕) → panel clears, highlight removed.
+- Panel is empty by default until a cell is clicked.
+
+#### Per-cluster drill-down summary
+| Cluster | BU Led Programs | F&R Programs | Ops Entries | Total IT Charge |
+|---|---|---|---|---|
+| Precision Diagnosis | 36 | 62 | 3 | 162.6 M€ |
+| Connected Care | 25 | 62 | 3 | 130.9 M€ |
+| Image Guided Therapy | 15 | 62 | 3 | 104.4 M€ |
+| Personal Health | 18 | 62 | 3 | 89.3 M€ |
+| EI | 5 | 62 | 3 | 41.4 M€ |
+| Innovation & Design | 0 | 0 | 3 | 9.8 M€ |
+| Int. Property & Standards | 0 | 62 | 3 | 5.0 M€ |
+| F&R distributed (unallocated) | — | 66 | — | 27.0 M€ |
 
 ## v5.9.1 patch 3 — Tab 1 Proposed Benefits, Tab 2 column toggle, Tab 3/4 simplified status (2 Oct 2026)
 

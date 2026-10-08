@@ -1,0 +1,442 @@
+{
+  "checks": [
+    {
+      "id": "UI-01",
+      "status": "PASS",
+      "detail": "Six tabs in expected order"
+    },
+    {
+      "id": "UI-1920-demand",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1920-scenario",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1920-ew",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1920-bu",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1920-operations",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1920-overview",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1366-demand",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1366-scenario",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1366-ew",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1366-bu",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1366-operations",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-1366-overview",
+      "status": "PASS",
+      "detail": "Rendered content, no page-level horizontal overflow"
+    },
+    {
+      "id": "UI-FIN-01",
+      "status": "PASS",
+      "detail": "Total IT and Operations KPIs follow exact refreshed values with upward display rounding"
+    },
+    {
+      "id": "UI-FIN-02",
+      "status": "PASS",
+      "detail": "Missing F&R charging key and PMI are separate allocation rows"
+    },
+    {
+      "id": "UI-FIN-03",
+      "status": "PASS",
+      "detail": "Finance QA has no arithmetic failures; business warnings retained"
+    },
+    {
+      "id": "UI-OPS-01",
+      "status": "PASS",
+      "detail": "182 services and one footer"
+    },
+    {
+      "id": "UI-OPS-02",
+      "status": "PASS",
+      "detail": "Operations hierarchy expands"
+    },
+    {
+      "id": "UI-OPS-03",
+      "status": "PASS",
+      "detail": "Operations navigation does not affect funding"
+    },
+    {
+      "id": "UI-LEVER-01",
+      "status": "PASS",
+      "detail": "IT Simplification toggle activates fifth bucket"
+    },
+    {
+      "id": "UI-LEVER-02",
+      "status": "PASS",
+      "detail": "Budget edit commits"
+    },
+    {
+      "id": "UI-LEVER-03",
+      "status": "PASS",
+      "detail": "New Scenario resets to 100 M€"
+    },
+    {
+      "id": "UI-FILTER-ew",
+      "status": "PASS",
+      "detail": "ExCo selection narrows view without altering funding"
+    },
+    {
+      "id": "UI-EDIT-ew",
+      "status": "PASS",
+      "detail": "Independent program edit persisted: EW-28"
+    },
+    {
+      "id": "UI-POPUP-ew",
+      "status": "PASS",
+      "detail": "Program detail opens with evidence lineage"
+    },
+    {
+      "id": "UI-FILTER-bu",
+      "status": "PASS",
+      "detail": "ExCo selection narrows view without altering funding"
+    },
+    {
+      "id": "UI-EDIT-bu",
+      "status": "PASS",
+      "detail": "Independent program edit persisted: Bu-68"
+    },
+    {
+      "id": "UI-POPUP-bu",
+      "status": "PASS",
+      "detail": "Program detail opens with evidence lineage"
+    },
+    {
+      "id": "UI-LIFE-01",
+      "status": "PASS",
+      "detail": "Save/reload retains decisions and event history"
+    },
+    {
+      "id": "UI-EXPORT-export-json",
+      "status": "PASS",
+      "detail": "Browser download saved portable.json"
+    },
+    {
+      "id": "UI-EXPORT-export-full",
+      "status": "PASS",
+      "detail": "Browser download saved full-export.xlsx"
+    },
+    {
+      "id": "UI-EXPORT-export-inclusions",
+      "status": "PASS",
+      "detail": "Browser download saved inclusions-export.xlsx"
+    },
+    {
+      "id": "PORTABLE-01",
+      "status": "PASS",
+      "detail": "Portable checksum verified independently"
+    },
+    {
+      "id": "PORTABLE-02",
+      "status": "PASS",
+      "detail": "Portable import in clean browser restores overrides"
+    },
+    {
+      "id": "PORTABLE-03",
+      "status": "PASS",
+      "detail": "Corrupted portable rejected without replacing session"
+    },
+    {
+      "id": "UI-LIFE-02",
+      "status": "PASS",
+      "detail": "Finalise from One Portfolio works"
+    },
+    {
+      "id": "UI-LIFE-03",
+      "status": "PASS",
+      "detail": "Finalised UI has no active program edit controls"
+    },
+    {
+      "id": "UI-LIFE-04",
+      "status": "PASS",
+      "detail": "New working version creates draft with parent lineage"
+    },
+    {
+      "id": "EXTRACT-COLS-0",
+      "status": "PASS",
+      "detail": "Programs: 34 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-1",
+      "status": "PASS",
+      "detail": "Operations services: 15 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-2",
+      "status": "PASS",
+      "detail": "Operations consumption: 8 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-3",
+      "status": "PASS",
+      "detail": "Operations TCO: 9 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-4",
+      "status": "PASS",
+      "detail": "Operations raw AOP2027 Bill of IT: 206 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-5",
+      "status": "PASS",
+      "detail": "Operations formulas AOP2027 Bill of IT: 2 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-6",
+      "status": "PASS",
+      "detail": "Operations raw Platform Mapping : 3 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-7",
+      "status": "PASS",
+      "detail": "Operations raw Platform Service List: 7 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-8",
+      "status": "PASS",
+      "detail": "Operations raw Comparable AOP2027: 19 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-9",
+      "status": "PASS",
+      "detail": "Operations formulas Comparable AOP2027: 2 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-10",
+      "status": "PASS",
+      "detail": "Operations raw AOP Svc. Costs (21.09): 8 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-11",
+      "status": "PASS",
+      "detail": "Excluded Programs: 8 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-12",
+      "status": "PASS",
+      "detail": "EW charging key: 7 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-13",
+      "status": "PASS",
+      "detail": "Finance ledger: 23 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-14",
+      "status": "PASS",
+      "detail": "Recipient IT allocation: 11 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-15",
+      "status": "PASS",
+      "detail": "Scenario results: 9 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-16",
+      "status": "PASS",
+      "detail": "Programs raw BU: 201 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-17",
+      "status": "PASS",
+      "detail": "Programs formulas BU: 2 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-18",
+      "status": "PASS",
+      "detail": "Programs raw EW: 67 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-19",
+      "status": "PASS",
+      "detail": "Programs formulas EW: 2 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-20",
+      "status": "PASS",
+      "detail": "Source manifest: 3 column filters"
+    },
+    {
+      "id": "EXTRACT-COLS-21",
+      "status": "PASS",
+      "detail": "Allocation exceptions: 3 column filters"
+    },
+    {
+      "id": "EXTRACT-NUMERIC",
+      "status": "PASS",
+      "detail": "Numeric greater-than filter independently reconciles"
+    },
+    {
+      "id": "EXTRACT-AND",
+      "status": "PASS",
+      "detail": "Numeric and exact text filters combine"
+    },
+    {
+      "id": "EXTRACT-MISSING",
+      "status": "PASS",
+      "detail": "Active extract excludes missing requests"
+    },
+    {
+      "id": "EXTRACT-CSV",
+      "status": "PASS",
+      "detail": "Filtered CSV includes matching missing-amount program"
+    },
+    {
+      "id": "UI-CONSOLE",
+      "status": "PASS",
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "filterReport": [
+    {
+      "name": "Programs",
+      "columns": 34,
+      "ok": true
+    },
+    {
+      "name": "Operations services",
+      "columns": 15,
+      "ok": true
+    },
+    {
+      "name": "Operations consumption",
+      "columns": 8,
+      "ok": true
+    },
+    {
+      "name": "Operations TCO",
+      "columns": 9,
+      "ok": true
+    },
+    {
+      "name": "Operations raw AOP2027 Bill of IT",
+      "columns": 206,
+      "ok": true
+    },
+    {
+      "name": "Operations formulas AOP2027 Bill of IT",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Operations raw Platform Mapping ",
+      "columns": 3,
+      "ok": true
+    },
+    {
+      "name": "Operations raw Platform Service List",
+      "columns": 7,
+      "ok": true
+    },
+    {
+      "name": "Operations raw Comparable AOP2027",
+      "columns": 19,
+      "ok": true
+    },
+    {
+      "name": "Operations formulas Comparable AOP2027",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Operations raw AOP Svc. Costs (21.09)",
+      "columns": 8,
+      "ok": true
+    },
+    {
+      "name": "Excluded Programs",
+      "columns": 8,
+      "ok": true
+    },
+    {
+      "name": "EW charging key",
+      "columns": 7,
+      "ok": true
+    },
+    {
+      "name": "Finance ledger",
+      "columns": 23,
+      "ok": true
+    },
+    {
+      "name": "Recipient IT allocation",
+      "columns": 11,
+      "ok": true
+    },
+    {
+      "name": "Scenario results",
+      "columns": 9,
+      "ok": true
+    },
+    {
+      "name": "Programs raw BU",
+      "columns": 201,
+      "ok": true
+    },
+    {
+      "name": "Programs formulas BU",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Programs raw EW",
+      "columns": 67,
+      "ok": true
+    },
+    {
+      "name": "Programs formulas EW",
+      "columns": 2,
+      "ok": true
+    },
+    {
+      "name": "Source manifest",
+      "columns": 3,
+      "ok": true
+    },
+    {
+      "name": "Allocation exceptions",
+      "columns": 3,
+      "ok": true
+    }
+  ]
+}

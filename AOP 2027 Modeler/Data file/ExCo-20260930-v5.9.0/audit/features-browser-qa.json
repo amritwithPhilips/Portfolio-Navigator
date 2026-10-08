@@ -1,0 +1,309 @@
+{
+  "checks": [
+    {
+      "name": "Deeptha Khanna filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Shez Partovi filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Julia Strandberg filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jie Xue filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bert van Meurs filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wim Appelo filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Özlem Fidanci filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Jeff DiLullo filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Ling Liu filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Charlotte Hanneman filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Laura Matz filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Heidy Schein filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Steve C de Baca filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carla Rosana Goulart Silva Peron filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Filip Koek filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Marnix van Ginneken filter sync and visible scope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "All-priority edit workspace",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "hard chart points match filtered data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "demand chart points match filtered data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard bubble opens source evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Added dependency column",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Raw source column selected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Column panel stays open during customization",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Independent leader column layout",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Leader column preference restored",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Preferences survive save reload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Workbench multiple-leader selection sync",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew preview does not commit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew review committed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew tab request reflects ExCo edit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ew workbench edit reflects ExCo rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu preview does not commit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu review committed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu tab request reflects ExCo edit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bu workbench edit reflects ExCo rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bulk exclusion synchronized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bulk return to automatic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Settings preview includes new envelope",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Company settings synchronized into tab 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up preview states claims and recipient impact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up cancellation is non-mutating",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up budget and other leaders protected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up synchronized demand",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up synchronized scenario",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up synchronized ew",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up synchronized bu",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up synchronized operations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Top-up synchronized overview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Retained funding can return to automatic with preview",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Finalised top-up disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Finalised review and bulk disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Fork retains ExCo preferences",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1366 company",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1366 portfolio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1366 decisions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1366 opportunities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1920 company",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1920 portfolio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1920 decisions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Layout 1920 opportunities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

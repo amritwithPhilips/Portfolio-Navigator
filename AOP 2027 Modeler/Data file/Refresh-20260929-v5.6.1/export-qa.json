@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "id": "FULL-ROWS",
+      "status": "PASS",
+      "detail": {
+        "actual": 464,
+        "expected": 464
+      }
+    },
+    {
+      "id": "FULL-VALUES",
+      "status": "PASS",
+      "detail": {
+        "differences": []
+      }
+    },
+    {
+      "id": "FULL-EVIDENCE",
+      "status": "PASS",
+      "detail": "Scoring rows match selected export scope"
+    },
+    {
+      "id": "FULL-SOURCE",
+      "status": "PASS",
+      "detail": "Every exported record has full source hash, sheet and row"
+    },
+    {
+      "id": "FULL-SUMMARY",
+      "status": "PASS",
+      "detail": {
+        "programFunding": 105.17399999999999,
+        "programDemand": 287.1229,
+        "totalIT": 575.4884630385122
+      }
+    },
+    {
+      "id": "FULL-ALLOCATION",
+      "status": "PASS",
+      "detail": "Allocation table includes pending BU/F&R and PMI rows and reconciles to total IT"
+    },
+    {
+      "id": "FULL-COST-SUMMARY",
+      "status": "PASS",
+      "detail": "Cost-summary allocation independently reconciles to total IT"
+    },
+    {
+      "id": "FULL-OPS",
+      "status": "PASS",
+      "detail": "All 182 exported service IDs/costs match source"
+    },
+    {
+      "id": "FULL-ERRORS",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "id": "INCLUDED-ROWS",
+      "status": "PASS",
+      "detail": {
+        "actual": 170,
+        "expected": 170
+      }
+    },
+    {
+      "id": "INCLUDED-VALUES",
+      "status": "PASS",
+      "detail": {
+        "differences": []
+      }
+    },
+    {
+      "id": "INCLUDED-EVIDENCE",
+      "status": "PASS",
+      "detail": "Scoring rows match selected export scope"
+    },
+    {
+      "id": "INCLUDED-SOURCE",
+      "status": "PASS",
+      "detail": "Every exported record has full source hash, sheet and row"
+    },
+    {
+      "id": "INCLUDED-SUMMARY",
+      "status": "PASS",
+      "detail": {
+        "programFunding": 105.17399999999999,
+        "programDemand": 287.1229,
+        "totalIT": 575.4884630385122
+      }
+    },
+    {
+      "id": "INCLUDED-ALLOCATION",
+      "status": "PASS",
+      "detail": "Allocation table includes pending BU/F&R and PMI rows and reconciles to total IT"
+    },
+    {
+      "id": "INCLUDED-COST-SUMMARY",
+      "status": "PASS",
+      "detail": "Cost-summary allocation independently reconciles to total IT"
+    },
+    {
+      "id": "INCLUDED-OPS",
+      "status": "PASS",
+      "detail": "All 182 exported service IDs/costs match source"
+    },
+    {
+      "id": "INCLUDED-ERRORS",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "id": "FINAL-BROWSER",
+      "status": "PASS",
+      "detail": "No console error after export/display repairs"
+    },
+    {
+      "id": "FINAL-UI-ALLOCATION",
+      "status": "PASS",
+      "detail": {
+        "programExact": "105.174",
+        "operationsExact": "470.31446303851226",
+        "totalExact": "575.4884630385122",
+        "expectedExact": "575.4884630385121"
+      }
+    }
+  ]
+}
